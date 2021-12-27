@@ -57,7 +57,12 @@ const Video = () => {
       <span className="text-4xl font-extrabold text-brandDark">
         Testimonials from our happy couples.
       </span>
-      <Carousel responsive={responsive} ssr={true} infinite={true}>
+      <Carousel
+        responsive={responsive}
+        ssr={true}
+        infinite={true}
+        thumbnail={true}
+      >
         {data.map((item) => {
           return (
             <div

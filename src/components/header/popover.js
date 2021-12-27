@@ -1,6 +1,7 @@
 import { Popover, Transition } from "@headlessui/react";
 import { HiChevronDown } from "react-icons/hi";
 import { Fragment } from "react";
+import Link from "next/link";
 
 const solutions = [
   {
@@ -17,6 +18,27 @@ const solutions = [
   },
   {
     name: "Reports",
+    description: "Keep track of your growth",
+    href: "##",
+    icon: IconThree,
+  },
+];
+const Resources = [
+  {
+    name: "Blogs",
+    description:
+      "Our Blogs and Articles regarding Infertility, treatment and parenthood",
+    href: "/blogs",
+    icon: IconOne,
+  },
+  {
+    name: "Diagnostics",
+    description: "Create your own targeted content",
+    href: "##",
+    icon: IconTwo,
+  },
+  {
+    name: "Treatments",
     description: "Keep track of your growth",
     href: "##",
     icon: IconThree,
@@ -190,24 +212,22 @@ export function KnowledgeCenter() {
             <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
               <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
-                  {solutions.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                    >
-                      <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                        <item.icon aria-hidden="true" />
-                      </div>
-                      <div className="ml-4">
-                        <p className="text-sm font-medium text-gray-900">
-                          {item.name}
-                        </p>
-                        <p className="text-sm text-gray-500">
-                          {item.description}
-                        </p>
-                      </div>
-                    </a>
+                  {Resources.map((item) => (
+                    <Link key={item.name} href={item.href} passHref>
+                      <a className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
+                        <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
+                          <item.icon aria-hidden="true" />
+                        </div>
+                        <div className="ml-4">
+                          <p className="text-sm font-medium text-gray-900">
+                            {item.name}
+                          </p>
+                          <p className="text-sm text-gray-500">
+                            {item.description}
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
                   ))}
                 </div>
                 <div className="p-4 bg-gray-50">
@@ -217,11 +237,11 @@ export function KnowledgeCenter() {
                   >
                     <span className="flex items-center">
                       <span className="text-sm font-medium text-gray-900">
-                        Documentation
+                        Value Added Services
                       </span>
                     </span>
                     <span className="block text-sm text-gray-500">
-                      Start integrating products and tools
+                      Our Value Added Services, Offers and CSR Initiatives
                     </span>
                   </a>
                 </div>

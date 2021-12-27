@@ -94,19 +94,34 @@ const Doctor = ({ doctor }) => {
                     </div>
                   </div>
                 </div>
-                <div className="text-center mt-12">
+                <div className="text-center mt-12 font-content">
                   <h3 className="text-4xl font-semibold leading-normal mb-2 text-gray-800">
                     {doctor.name}
                   </h3>
-                  <div className="text-sm leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase">
-                    Los Angeles, California
+                  <div className="leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase text-xl">
+                    {doctor.qualification}
                   </div>
-                  <div className="mb-2 text-gray-700 mt-10">
-                    Solution Manager - Creative Tim Officer
-                  </div>
+                  <div className="mb-2 text-gray-700">{doctor.designation}</div>
                   <div className="mb-2 text-gray-700">
-                    University of Computer Science
+                    Medical Registration Number (KMC) :{" "}
+                    <span className="font-bold underline">
+                      {doctor.medicalRegNo}
+                    </span>
                   </div>
+                  <button
+                    className="bg-pink-500 active:bg-pink-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1"
+                    type="button"
+                    style={{ transition: "all .15s ease" }}
+                  >
+                    <a href="#">Book an Appointment</a>
+                  </button>
+                  <button
+                    className="bg-pink-500 active:bg-pink-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 mx-4 rounded outline-none focus:outline-none sm:mr-2 mb-1"
+                    type="button"
+                    style={{ transition: "all .15s ease" }}
+                  >
+                    <a href="#">Call</a>
+                  </button>
                 </div>
                 <div className="mt-10 py-10 border-t border-gray-300">
                   <div className="flex justify-center">

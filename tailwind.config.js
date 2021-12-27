@@ -288,6 +288,9 @@ module.exports = {
       inter: "Inter",
       kan: "Benne",
       Noto: "Noto Sans Display",
+      qs: "Quicksand",
+      heading: "B612",
+      content: "DM Sans",
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],
@@ -552,6 +555,7 @@ module.exports = {
       "5xl": "64rem",
       "6xl": "72rem",
       "7xl": "80rem",
+      "8xl": "96rem",
       full: "100%",
       min: "min-content",
       max: "max-content",
