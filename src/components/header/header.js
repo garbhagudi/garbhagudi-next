@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
@@ -23,12 +22,10 @@ const Nav = () => {
               <div className="flex-shrink-0 pt-4">
                 <Link href="/" passHref>
                   <a>
-                    <Image
-                      className="h-full w-60 "
+                    <img
+                      className="h-full w-64 "
                       src="https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg"
                       alt="logo"
-                      height="60"
-                      width="250"
                     />
                   </a>
                 </Link>

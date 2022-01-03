@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { GraphQLClient, gql } from "graphql-request";
 import Link from "next/link";
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const url = process.env.ENDPOINT;
   const graphQLClient = new GraphQLClient(url, {
     headers: {
@@ -71,7 +71,7 @@ const Blogs = ({ blogs }) => {
               <Link href={`/blogs/${item.node.slug}`} passHref>
                 <div className="flex-shrink-0">
                   <img
-                    className="h-40 w-full object-fit rounded-2xl cursor-pointer"
+                    className="h-72 w-full object-contain rounded-2xl cursor-pointer"
                     src={item.node.image.url}
                     alt=""
                   />
