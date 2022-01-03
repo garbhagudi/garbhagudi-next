@@ -5,6 +5,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=B612&family=DM+Sans:wght@500&display=swap");
 
-@tailwind base;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwind/utilities";
+
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
