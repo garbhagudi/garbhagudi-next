@@ -1,8 +1,8 @@
 import React from "react";
-import Nav from "components/header/header";
 import "../styles/globals.css";
 import Footer from "components/footer/footer";
 import Banner from "components/header/banner";
+import Nav from "components/header/header";
 
 function MyApp({ Component, pageProps }) {
   return (
