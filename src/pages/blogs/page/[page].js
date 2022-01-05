@@ -107,52 +107,52 @@ function ProductPage({
   );
 }
 
-export const getStaticPaths = async () => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const query = gql`
-    {
-      blogsConnection {
-        aggregate {
-          count
-        }
-      }
-    }
-  `;
-  const { blogsConnection } = await graphQLClient.request(query);
+// export const getStaticPaths = async () => {
+//   const url = process.env.ENDPOINT;
+//   const graphQLClient = new GraphQLClient(url, {
+//     headers: {
+//       Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
+//     },
+//   });
+//   const query = gql`
+//     {
+//       blogsConnection {
+//         aggregate {
+//           count
+//         }
+//       }
+//     }
+//   `;
+//   const { blogsConnection } = await graphQLClient.request(query);
 
-  function* numberOfPages({ total, limit }) {
-    let page = 1;
-    let offset = 0;
+//   function* numberOfPages({ total, limit }) {
+//     let page = 1;
+//     let offset = 0;
 
-    while (offset < total) {
-      yield page;
+//     while (offset < total) {
+//       yield page;
 
-      page++;
-      offset += limit;
-    }
-  }
+//       page++;
+//       offset += limit;
+//     }
+//   }
 
-  const paths = [
-    ...numberOfPages({
-      total: blogsConnection.aggregate.count,
-      limit,
-    }),
-  ].map((page) => ({
-    params: { page: String(page) },
-  }));
+//   const paths = [
+//     ...numberOfPages({
+//       total: blogsConnection.aggregate.count,
+//       limit,
+//     }),
+//   ].map((page) => ({
+//     params: { page: String(page) },
+//   }));
 
-  return {
-    paths,
-    fallback: false,
-  };
-};
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const url = process.env.ENDPOINT;
   const graphQLClient = new GraphQLClient(url, {
     headers: {
