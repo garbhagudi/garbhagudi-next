@@ -9,13 +9,11 @@
     "export": "next export"
   },
   "dependencies": {
-    "@apollo/react-hooks": "^4.0.0",
     "@graphcms/rich-text-react-renderer": "^0.4.0",
     "@headlessui/react": "^1.4.2",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/typography": "^0.5.0",
-    "apollo-boost": "^0.4.9",
     "graphql": "^16.1.0",
     "graphql-request": "^3.7.0",
     "markdown-to-jsx": "^7.1.5",
@@ -24,8 +22,7 @@
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
     "react-lite-youtube-embed": "^2.1.0",
-    "react-multi-carousel": "^2.6.5",
-    "swr": "^1.1.2-beta.0"
+    "react-multi-carousel": "^2.6.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.1",

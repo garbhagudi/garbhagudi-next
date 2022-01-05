@@ -66,36 +66,9 @@ export default function Footer() {
       <h2 id="footerHeading" className="sr-only">
         Footer
       </h2>
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div className="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:py-8 lg:px-8 border-t">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-5 xl:col-span-1">
-            <Link href="/" passHref>
-              <a>
-                <Image
-                  src="https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg"
-                  alt="logo"
-                  height="80"
-                  width="320"
-                />
-              </a>
-            </Link>
-            <p className="text-gray-700 text-sm">
-              Making the dreams of parenthood come true <br /> 1 baby at a time
-            </p>
-            <div className="flex space-x-6 ">
-              {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-400 hover:text-gray-700"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <span className="h-8 w-8">{item.icon}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-full text-center">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">
@@ -170,11 +143,11 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-gray-200 pt-8">
-          <p className="text-base text-gray-900 xl:text-center">
-            &copy; 2021 GarbhaGudi IVF Centre, Inc. All rights reserved.
-          </p>
-        </div>
+      </div>
+      <div className="max-w-7xl mx-auto border-t border-gray-200 ">
+        <p className="text-base text-gray-900 xl:text-center py-8">
+          &copy; 2021 GarbhaGudi IVF Centre, Inc. All rights reserved.
+        </p>
       </div>
     </footer>
   );

@@ -28,7 +28,7 @@ const Resources = [
     name: "Blogs",
     description:
       "Our Blogs and Articles regarding Infertility, treatment and parenthood",
-    href: "/blogs",
+    href: "/blogs/page/1",
     icon: IconOne,
   },
   {

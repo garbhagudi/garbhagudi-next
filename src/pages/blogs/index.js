@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { GraphQLClient, gql } from "graphql-request";
 import Link from "next/link";
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const url = process.env.ENDPOINT;
   const graphQLClient = new GraphQLClient(url, {
     headers: {
@@ -11,7 +11,7 @@ export const getServerSideProps = async () => {
   });
   const query = gql`
     query {
-      blogsConnection(orderBy: publishedOn_DESC) {
+      blogsConnection(orderBy: publishedOn_DESC, first: 6) {
         edges {
           node {
             title
@@ -73,7 +73,7 @@ const Blogs = ({ blogs }) => {
                   <img
                     className="h-72 w-full object-contain rounded-2xl cursor-pointer"
                     src={item.node.image.url}
-                    alt=""
+                    alt={item.node.title}
                   />
                 </div>
               </Link>
@@ -97,7 +97,7 @@ const Blogs = ({ blogs }) => {
                         <img
                           className="h-10 w-10 rounded-full"
                           src={item.node.doctor.image.url}
-                          alt=""
+                          alt={item.node.doctor.name}
                         />
                       </a>
                     </Link>
@@ -120,9 +120,11 @@ const Blogs = ({ blogs }) => {
           ))}
         </div>
         <div className="flex justify-center ">
-          <button className="my-8 rounded-xl py-4 px-6 bg-brandPink font-qs font-semibold text-white">
-            See More
-          </button>
+          <Link href="/blogs/2" passHref>
+            <button className="my-8 rounded-xl py-4 px-6 bg-brandPink font-qs font-semibold text-white">
+              Next Page
+            </button>
+          </Link>
         </div>
       </div>
     </div>
