@@ -18,12 +18,12 @@ const Nav = () => {
       <nav className="border-b pb-4 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center align-middle cursor-pointer ">
+            <div className="flex items-center justify-between align-middle cursor-pointer">
               <div className="flex-shrink-0 pt-4">
                 <Link href="/" passHref>
                   <a>
                     <img
-                      className="h-full w-64 "
+                      className="h-full w-52 xl:w-64 "
                       src="https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg"
                       alt="logo"
                     />
@@ -32,7 +32,7 @@ const Nav = () => {
               </div>
 
               <div className="hidden xl:block">
-                <div className="ml-14 flex items-baseline space-x-4 pt-4">
+                <div className=" ml-20 flex items-baseline space-x-4 pt-4">
                   <Link href="/" passHref>
                     <span
                       className={
@@ -81,7 +81,7 @@ const Nav = () => {
               <button className="mt-6 mr-4">
                 <a
                   href="#"
-                  className="bg-brandPink hover:bg-gray-900 text-white px-3 py-2 rounded-2xl text-sm font-bold font-inter"
+                  className="bg-brandPink hover:bg-gray-900 text-white px-3 py-2 rounded-2xl text-xs font-bold font-inter"
                 >
                   Book Now
                 </a>

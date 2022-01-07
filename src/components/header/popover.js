@@ -34,13 +34,13 @@ const Resources = [
   {
     name: "Diagnostics",
     description: "Create your own targeted content",
-    href: "##",
+    href: "/resources/diagnosis",
     icon: IconTwo,
   },
   {
     name: "Treatments",
     description: "Keep track of your growth",
-    href: "##",
+    href: "/resources/treatments",
     icon: IconThree,
   },
 ];

@@ -62,16 +62,16 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white font-inter" aria-labelledby="footerHeading">
+    <footer className="bg-white font-content" aria-labelledby="footerHeading">
       <h2 id="footerHeading" className="sr-only">
         Footer
       </h2>
       <div className="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:py-8 lg:px-8 border-t">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-full text-center">
+          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-full text-center antialiased">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">
+                <h3 className="text-sm font-semibold text-brandliteGray tracking-wider uppercase">
                   About
                 </h3>
                 <ul className="mt-4 space-y-2 text-sm">
@@ -79,7 +79,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className=" text-gray-700 hover:text-brandPink hover:underline"
+                        className=" text-brandDark hover:text-brandPink hover:underline"
                       >
                         {item.name}
                       </a>
@@ -88,7 +88,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">
+                <h3 className="text-sm font-semibold text-brandliteGray tracking-wider uppercase">
                   Support
                 </h3>
                 <ul className="mt-4 space-y-2 text-sm">
@@ -96,7 +96,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-gray-700 hover:text-brandPink hover:underline"
+                        className="text-brandDark hover:text-brandPink hover:underline"
                       >
                         {item.name}
                       </a>
@@ -107,7 +107,7 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">
+                <h3 className="text-sm font-semibold text-brandliteGray tracking-wider uppercase">
                   Company
                 </h3>
                 <ul className="mt-4 space-y-2 text-sm">
@@ -115,7 +115,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className=" text-gray-700 hover:text-brandPink hover:underline"
+                        className=" text-brandDark hover:text-brandPink hover:underline"
                       >
                         {item.name}
                       </a>
@@ -124,7 +124,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">
+                <h3 className="text-sm font-semibold text-brandliteGray tracking-wider uppercase">
                   Legal
                 </h3>
                 <ul className="mt-4 space-y-2 text-sm">
@@ -132,7 +132,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className=" text-gray-700 hover:text-brandPink hover:underline"
+                        className=" text-brandDark hover:text-brandPink hover:underline"
                       >
                         {item.name}
                       </a>
@@ -145,7 +145,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto border-t border-gray-200 ">
-        <p className="text-base text-gray-900 xl:text-center py-8">
+        <p className="font-content text-gray-900 xl:text-center py-8">
           &copy; 2021 GarbhaGudi IVF Centre, Inc. All rights reserved.
         </p>
       </div>
