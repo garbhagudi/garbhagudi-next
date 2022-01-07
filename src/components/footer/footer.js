@@ -145,7 +145,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto border-t border-gray-200 ">
-        <p className="font-content text-gray-900 xl:text-center py-8">
+        <p className="font-content text-gray-900 text-center py-8">
           &copy; 2021 GarbhaGudi IVF Centre, Inc. All rights reserved.
         </p>
       </div>

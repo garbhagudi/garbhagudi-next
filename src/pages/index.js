@@ -17,10 +17,10 @@ const Home = ({ doctors }) => {
         <div className="max-w-7xl mx-auto py-16 px-4 text-center sm:px-6 lg:px-8 lg:py-12">
           <div className="space-y-12">
             <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-brandDark">
-                Meet our team
+              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-brandDark font-heading">
+                Meet our Superheroes
               </h2>
-              <p className="text-xl text-brandliteGray">
+              <p className="text-xl text-brandliteGray font-content">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
                 aperiam officiis ut voluptatibus nostrum non!
               </p>
@@ -39,13 +39,13 @@ const Home = ({ doctors }) => {
                           />
                           <div className="space-y-4">
                             <div className="text-lg leading-6 font-medium space-y-1">
-                              <h3 className="text-brandDark font-intter">
+                              <h3 className="text-brandDark font-content">
                                 {item.name}
                               </h3>
-                              <p className="text-brandPurple text-sm font-Noto">
+                              <p className="text-brandPurple text-sm font-content">
                                 {item.qualification}
                               </p>
-                              <p className="text-brandPink text-sm font-Noto">
+                              <p className="text-brandPink text-sm font-content">
                                 {item.designation}
                               </p>
                             </div>

@@ -33,13 +33,13 @@ const Resources = [
   },
   {
     name: "Diagnostics",
-    description: "Create your own targeted content",
+    description: "Tests for Infertility Diagnosis",
     href: "/resources/diagnosis",
     icon: IconTwo,
   },
   {
     name: "Treatments",
-    description: "Keep track of your growth",
+    description: "Treatment Options",
     href: "/resources/treatments",
     icon: IconThree,
   },

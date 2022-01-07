@@ -144,38 +144,38 @@ const Nav = () => {
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a
-                  href="#"
-                  className="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-sm font-inter"
-                >
-                  Home
-                </a>
-                <span className="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md">
+                <Link href="/">
+                  <a className="text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content">
+                    Home
+                  </a>
+                </Link>
+                <span className="text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content">
                   <About />
                 </span>
 
-                <span className="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md">
+                <span className="text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content">
                   <Treatment />
                 </span>
-                <span className="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md">
+                <span className="text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content">
                   <KnowledgeCenter />
                 </span>
-
-                <a
-                  href="#"
-                  className="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-sm font-inter"
-                >
-                  Blogs
-                </a>
-                <span className="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md">
+                <span className="text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content">
                   <Contact />
                 </span>
-                <a
-                  href="#"
-                  className="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-sm font-inter"
-                >
-                  Book an Appointment
-                </a>
+                <span className="text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content">
+                  <Locations />
+                </span>
+                <Link href="/book-appointment" passHref>
+                  <span
+                    className={
+                      router.pathname == "/book-appointment"
+                        ? "bg-brandPurple text-white px-3 py-2 rounded-2xl text-sm font-inter"
+                        : "text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content cursor-pointer"
+                    }
+                  >
+                    Book an Appointment
+                  </span>
+                </Link>
               </div>
             </div>
           )}
