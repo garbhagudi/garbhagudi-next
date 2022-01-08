@@ -3,26 +3,26 @@ import React from "react";
 const metrics = [
   {
     id: 1,
-    stat: "8K+",
-    emphasis: "lorem",
+    stat: "7000+",
+    emphasis: "Happy Families",
     rest: "use laoreet amet lacus nibh integer quis.",
   },
   {
     id: 2,
-    stat: "25K+",
-    emphasis: "Lorem ipsum dolor sit.",
+    stat: "100+",
+    emphasis: "Free Fertility Awareness Camps",
     rest: "lacus nibh integer quis.",
   },
   {
     id: 3,
-    stat: "98%",
-    emphasis: "Lorem, ipsum dolor.",
+    stat: "66%",
+    emphasis: "IVF Success Rate",
     rest: "laoreet amet lacus nibh integer quis.",
   },
   {
     id: 4,
-    stat: "12M+",
-    emphasis: "Lorem, ipsum dolor.",
+    stat: "5",
+    emphasis: "Centres Across Bangalore",
     rest: "lacus nibh integer quis.",
   },
 ];
@@ -47,13 +47,13 @@ const Stat = () => {
       </div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
         <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
-          <h2 className="text-sm font-semibold text-brandPurple tracking-wide uppercase">
+          <h2 className="text-sm font-semibold text-brandPurple tracking-wide uppercase font-content">
             Lorem, ipsum.
           </h2>
-          <p className="mt-3 text-3xl font-extrabold text-brandDark">
+          <p className="mt-3 text-3xl font-extrabold text-brandDark font-content">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
-          <p className="mt-5 text-lg text-brandliteGray">
+          <p className="mt-5 text-lg text-brandliteGray font-qs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
             laudantium nisi! Corrupti assumenda cupiditate neque, quae
             voluptates quod omnis? Architecto, ad magni numquam nemo omnis quo
@@ -69,6 +69,7 @@ const Stat = () => {
                 <span className="mt-1 block text-base text-brandliteGray">
                   <span className="font-medium text-brandDark">
                     {item.emphasis}
+                    <br />
                   </span>{" "}
                   {item.rest}
                 </span>

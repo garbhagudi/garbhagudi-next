@@ -7,6 +7,14 @@ export const generateDiceBearBottts = (seed) =>
 
 const data = [
   {
+    id: "3",
+    name: "Venu Athipatla",
+    quote:
+      "We are feeling so happy and blessed to knew about this place and its amazing hospital with fabulous doctor and staff. Thank you so much to Dr Sophia mam and all the staff members and team. They are very caring and treated very well and all the staff are well behaved. All the test results are accurate and helpful to know the issue and starts treatment within no time. A big thank you to all.",
+    logo: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1639556290/logos/google_aenn30.svg",
+    profile: generateDiceBearBottts(Math.random()),
+  },
+  {
     id: "1",
     name: "Jesudas Antonyraj",
     quote:
@@ -22,14 +30,7 @@ const data = [
     logo: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1639556290/logos/google_aenn30.svg",
     profile: generateDiceBearBottts(Math.random()),
   },
-  {
-    id: "3",
-    name: "Venu Athipatla",
-    quote:
-      "We are feeling so happy and blessed to knew about this place and its amazing hospital with fabulous doctor and staff. Thank you so much to Dr Sophia mam and all the staff members and team. They are very caring and treated very well and all the staff are well behaved. All the test results are accurate and helpful to know the issue and starts treatment within no time. A big thank you to all.",
-    logo: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1639556290/logos/google_aenn30.svg",
-    profile: generateDiceBearBottts(Math.random()),
-  },
+
   {
     id: "4",
     name: "Lorem, ipsum.",
@@ -50,7 +51,6 @@ const data = [
 
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
     items: 2,
   },
@@ -72,48 +72,13 @@ const Testimonial = () => {
   return (
     <section className="py-12 bg-gray-50 overflow-hidden md:py-20 lg:py-24">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <svg
-          className="absolute top-full right-full transform translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2"
-          width={404}
-          height={404}
-          fill="none"
-          viewBox="0 0 404 404"
-          role="img"
-          aria-labelledby="svg-workcation"
-        >
-          <title id="svg-workcation">Workcation</title>
-          <defs>
-            <pattern
-              id="ad119f34-7694-4c31-947f-5c9d249b21f3"
-              x={0}
-              y={0}
-              width={20}
-              height={20}
-              patternUnits="userSpaceOnUse"
-            >
-              <rect
-                x={0}
-                y={0}
-                width={4}
-                height={4}
-                className="text-gray-200"
-                fill="currentColor"
-              />
-            </pattern>
-          </defs>
-          <rect
-            width={404}
-            height={404}
-            fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)"
-          />
-        </svg>
         <Carousel responsive={responsive} ssr={true} infinite={true}>
           {data.map((item) => {
             return (
               <div className="relative" key={item.id}>
                 <img className="mx-auto h-8" src={item.logo} alt="Workcation" />
                 <blockquote className="mt-10">
-                  <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900 font-Noto">
+                  <div className="max-w-3xl mx-auto text-center text-2xl tracking-tight leading-9 font-medium text-gray-900 font-content">
                     <p>{item.quote}</p>
                   </div>
                   <footer className="mt-8">
@@ -126,7 +91,7 @@ const Testimonial = () => {
                         />
                       </div>
                       <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-                        <div className="font-inter font-medium text-gray-900">
+                        <div className="font-qs font-semibold text-gray-900">
                           {item.name}
                         </div>
                       </div>

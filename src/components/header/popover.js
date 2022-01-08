@@ -45,6 +45,46 @@ const Resources = [
   },
 ];
 
+const aboutUs = [
+  {
+    name: "About Us",
+    description:
+      "Our Blogs and Articles regarding Infertility, treatment and parenthood",
+    href: "/blogs/page/1",
+    icon: IconOne,
+  },
+  {
+    name: "Mission & Vision",
+    description: "Tests for Infertility Diagnosis",
+    href: "/resources/diagnosis",
+    icon: IconTwo,
+  },
+  {
+    name: "Dr Asha S Vijay",
+    description: "Treatment Options",
+    href: "/resources/treatments",
+    icon: IconThree,
+  },
+  {
+    name: "Founders & Directors",
+    description: "Treatment Options",
+    href: "/resources/treatments",
+    icon: IconThree,
+  },
+  {
+    name: "Fertility Experts",
+    description: "Treatment Options",
+    href: "/resources/treatments",
+    icon: IconThree,
+  },
+  {
+    name: "Awards & Accolades",
+    description: "Treatment Options",
+    href: "/resources/treatments",
+    icon: IconThree,
+  },
+];
+
 export function About() {
   return (
     <Popover className="relative">
@@ -71,7 +111,7 @@ export function About() {
             <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
               <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-2">
-                  {solutions.map((item) => (
+                  {aboutUs.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
@@ -84,27 +124,12 @@ export function About() {
                         <p className="text-sm font-medium text-gray-900">
                           {item.name}
                         </p>
-                        <p className="text-sm text-gray-500">
+                        <p className="text-xs text-gray-500">
                           {item.description}
                         </p>
                       </div>
                     </a>
                   ))}
-                </div>
-                <div className="p-4 bg-gray-50">
-                  <a
-                    href="##"
-                    className="flow-root px-2 py-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                  >
-                    <span className="flex items-center">
-                      <span className="text-sm font-medium text-gray-900">
-                        Documentation
-                      </span>
-                    </span>
-                    <span className="block text-sm text-gray-500">
-                      Start integrating products and tools
-                    </span>
-                  </a>
                 </div>
               </div>
             </Popover.Panel>
@@ -209,9 +234,9 @@ export function KnowledgeCenter() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
+            <Popover.Panel className="absolute z-10 w-96 px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
               <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
+                <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-1">
                   {Resources.map((item) => (
                     <Link key={item.name} href={item.href} passHref>
                       <a className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
@@ -222,7 +247,7 @@ export function KnowledgeCenter() {
                           <p className="text-sm font-medium text-gray-900">
                             {item.name}
                           </p>
-                          <p className="text-sm text-gray-500">
+                          <p className="text-xs text-gray-500">
                             {item.description}
                           </p>
                         </div>
@@ -240,7 +265,7 @@ export function KnowledgeCenter() {
                         Value Added Services
                       </span>
                     </span>
-                    <span className="block text-sm text-gray-500">
+                    <span className="block text-xs text-gray-500">
                       Our Value Added Services, Offers and CSR Initiatives
                     </span>
                   </a>
