@@ -45,30 +45,110 @@ const Resources = [
   },
 ];
 
+const Location = [
+  {
+    name: "Hanumanthanagar",
+    description:
+      "Our Blogs and Articles regarding Infertility, treatment and parenthood",
+    href: "/locations/hanumanthanagar",
+    icon: IconOne,
+  },
+  {
+    name: "Kalyan Nagar",
+    description: "Tests for Infertility Diagnosis",
+    href: "/locations/kalyan-nagar",
+    icon: IconTwo,
+  },
+  {
+    name: "Jayanagar",
+    description: "Treatment Options",
+    href: "/locations/jayanagar",
+    icon: IconThree,
+  },
+  {
+    name: "Electronic City",
+    description: "Treatment Options",
+    href: "/locations/electronic-city",
+    icon: IconThree,
+  },
+  {
+    name: "Marathahalli",
+    description: "Treatment Options",
+    href: "/locations/marathahalli",
+    icon: IconThree,
+  },
+];
+
+const valueAddedServices = [
+  {
+    name: "Financial Options",
+    description:
+      "Our Blogs and Articles regarding Infertility, treatment and parenthood",
+    href: "/vas/financial-options",
+    icon: IconOne,
+  },
+  {
+    name: "Success Rate of IVF",
+    description: "Tests for Infertility Diagnosis",
+    href: "/vas/success-rates-of-ivf",
+    icon: IconTwo,
+  },
+  {
+    name: "IVF from Home",
+    description: "Tests for Infertility Diagnosis",
+    href: "/vas/ivf-from-home",
+    icon: IconTwo,
+  },
+  {
+    name: "Paripoorna",
+    description: "Treatment Options",
+    href: "/vas/paripoorna",
+    icon: IconThree,
+  },
+  {
+    name: "Partnership",
+    description: "Treatment Options",
+    href: "/vas/partnership",
+    icon: IconThree,
+  },
+  {
+    name: "Training Program",
+    description: "Treatment Options",
+    href: "https://ggirhr.com",
+    icon: IconThree,
+  },
+  {
+    name: "GarbhaGriha",
+    description: "Treatment Options",
+    href: "/vas/garbhagriha",
+    icon: IconThree,
+  },
+];
+
 const aboutUs = [
   {
     name: "About Us",
     description:
       "Our Blogs and Articles regarding Infertility, treatment and parenthood",
-    href: "/blogs/page/1",
+    href: "/about/overview",
     icon: IconOne,
   },
   {
     name: "Mission & Vision",
     description: "Tests for Infertility Diagnosis",
-    href: "/resources/diagnosis",
+    href: "/about/vision-and-mission",
     icon: IconTwo,
   },
   {
     name: "Dr Asha S Vijay",
     description: "Treatment Options",
-    href: "/resources/treatments",
+    href: "/doctors/dr-asha-s-vijay",
     icon: IconThree,
   },
   {
     name: "Founders & Directors",
     description: "Treatment Options",
-    href: "/resources/treatments",
+    href: "/about/overview",
     icon: IconThree,
   },
   {
@@ -80,7 +160,7 @@ const aboutUs = [
   {
     name: "Awards & Accolades",
     description: "Treatment Options",
-    href: "/resources/treatments",
+    href: "/about/best-ivf-fertility-hospital-in-india",
     icon: IconThree,
   },
 ];
@@ -167,7 +247,7 @@ export function Treatment() {
             <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
               <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
-                  {solutions.map((item) => (
+                  {valueAddedServices.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
@@ -180,27 +260,12 @@ export function Treatment() {
                         <p className="text-sm font-medium text-gray-900">
                           {item.name}
                         </p>
-                        <p className="text-sm text-gray-500">
+                        <p className="text-xs text-gray-500">
                           {item.description}
                         </p>
                       </div>
                     </a>
                   ))}
-                </div>
-                <div className="p-4 bg-gray-50">
-                  <a
-                    href="##"
-                    className="flow-root px-2 py-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                  >
-                    <span className="flex items-center">
-                      <span className="text-sm font-medium text-gray-900">
-                        Documentation
-                      </span>
-                    </span>
-                    <span className="block text-sm text-gray-500">
-                      Start integrating products and tools
-                    </span>
-                  </a>
                 </div>
               </div>
             </Popover.Panel>
@@ -254,21 +319,6 @@ export function KnowledgeCenter() {
                       </a>
                     </Link>
                   ))}
-                </div>
-                <div className="p-4 bg-gray-50">
-                  <a
-                    href="##"
-                    className="flow-root px-2 py-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                  >
-                    <span className="flex items-center">
-                      <span className="text-sm font-medium text-gray-900">
-                        Value Added Services
-                      </span>
-                    </span>
-                    <span className="block text-xs text-gray-500">
-                      Our Value Added Services, Offers and CSR Initiatives
-                    </span>
-                  </a>
                 </div>
               </div>
             </Popover.Panel>
@@ -372,10 +422,10 @@ export function Locations() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
+            <Popover.Panel className="absolute z-10 w-96 px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
               <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-2">
-                  {solutions.map((item) => (
+                <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-1">
+                  {Location.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
@@ -388,27 +438,9 @@ export function Locations() {
                         <p className="text-sm font-medium text-gray-900">
                           {item.name}
                         </p>
-                        <p className="text-sm text-gray-500">
-                          {item.description}
-                        </p>
                       </div>
                     </a>
                   ))}
-                </div>
-                <div className="p-4 bg-gray-50">
-                  <a
-                    href="##"
-                    className="flow-root px-2 py-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                  >
-                    <span className="flex items-center">
-                      <span className="text-sm font-medium text-gray-900">
-                        Documentation
-                      </span>
-                    </span>
-                    <span className="block text-sm text-gray-500">
-                      Start integrating products and tools
-                    </span>
-                  </a>
                 </div>
               </div>
             </Popover.Panel>
