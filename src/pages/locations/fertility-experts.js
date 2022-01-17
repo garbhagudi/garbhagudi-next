@@ -12,7 +12,7 @@ const IndexPage = ({ doctors }) => {
     <div>
       <div className="max-w-7xl mx-auto">
         <div className="text-center text-4xl font-heading pt-12 font-semibold">
-          Locations
+          Our Fertility Experts
         </div>
 
         <div className="w-full max-w-7xl px-2 py-16 sm:px-0 ">

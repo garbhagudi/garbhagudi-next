@@ -3,21 +3,27 @@ import { HiChevronDown } from "react-icons/hi";
 import { Fragment } from "react";
 import Link from "next/link";
 
-const solutions = [
+const contact = [
   {
-    name: "Insights",
+    name: "Upcoming Camps",
     description: "Measure actions your users take",
     href: "##",
     icon: IconOne,
   },
   {
-    name: "Automations",
+    name: "Careers",
     description: "Create your own targeted content",
-    href: "##",
+    href: "/careers",
     icon: IconTwo,
   },
   {
-    name: "Reports",
+    name: "Events and Webinars",
+    description: "Keep track of your growth",
+    href: "##",
+    icon: IconThree,
+  },
+  {
+    name: "Locations",
     description: "Keep track of your growth",
     href: "##",
     icon: IconThree,
@@ -32,7 +38,13 @@ const Resources = [
     icon: IconOne,
   },
   {
-    name: "Diagnostics",
+    name: "Causes",
+    description: "The Major Causes for Infertility",
+    href: "/resources/causes/",
+    icon: IconOne,
+  },
+  {
+    name: "Diagnosis",
     description: "Tests for Infertility Diagnosis",
     href: "/resources/diagnosis",
     icon: IconTwo,
@@ -154,7 +166,7 @@ const aboutUs = [
   {
     name: "Fertility Experts",
     description: "Treatment Options",
-    href: "/resources/treatments",
+    href: "/locations",
     icon: IconThree,
   },
   {
@@ -352,10 +364,10 @@ export function Contact() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
+            <Popover.Panel className="absolute z-10 w-96 px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
               <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-4 lg:grid-cols-2">
-                  {solutions.map((item) => (
+                <div className="relative grid gap-8 bg-white p-4 lg:grid-cols-1">
+                  {contact.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
@@ -374,21 +386,6 @@ export function Contact() {
                       </div>
                     </a>
                   ))}
-                </div>
-                <div className="p-4 bg-gray-50">
-                  <a
-                    href="##"
-                    className="flow-root px-2 py-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                  >
-                    <span className="flex items-center">
-                      <span className="text-sm font-medium text-gray-900">
-                        Documentation
-                      </span>
-                    </span>
-                    <span className="block text-sm text-gray-500">
-                      Start integrating products and tools
-                    </span>
-                  </a>
                 </div>
               </div>
             </Popover.Panel>

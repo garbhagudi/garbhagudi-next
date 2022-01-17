@@ -13,7 +13,7 @@ const IndexPage = ({ treatments }) => {
       <div className="text-center text-4xl font-heading pt-12 font-semibold">
         Treatment Options
       </div>
-      <p className="max-w-7xl mx-auto text-center pt-6 font-semibold">
+      <p className="max-w-7xl mx-auto text-center pt-6 font-semibold font-qs">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod eaque
         alias illo delectus harum recusandae.
       </p>

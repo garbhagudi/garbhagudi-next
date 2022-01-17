@@ -88,18 +88,21 @@ function ProductPage({
           <div className="flex justify-center space-x-4 text-center mt-10">
             {hasPreviousPage ? (
               <Link href={`/blogs/page/${currentPageNumber - 1}`}>
-                <a className="my-8 rounded-xl w-40 py-4 px-6 bg-brandPink font-qs font-semibold text-white">
-                  Previous page
+                <a className="my-8 rounded-xl w-44 py-4 px-6 bg-brandPink font-qs font-semibold text-white">
+                  {"< "}Previous page
                 </a>
               </Link>
             ) : null}
             {hasNextPage ? (
               <Link href={`/blogs/page/${currentPageNumber + 1}`}>
-                <a className="my-8 rounded-xl py-4 w-40 px-6 bg-brandPink font-qs font-semibold text-white">
-                  Next page
+                <a className="my-8 rounded-xl py-4 w-44 px-6 bg-brandPink font-qs font-semibold text-white">
+                  Next page {">"}
                 </a>
               </Link>
             ) : null}
+          </div>
+          <div className="text-center font-qs text-xl font-semibold">
+            Page: {currentPageNumber}
           </div>
         </div>
       </div>

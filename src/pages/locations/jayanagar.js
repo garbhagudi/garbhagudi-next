@@ -7,7 +7,7 @@ const Jayanagar = ({ doctors }) => {
     <div>
       <section className="text-gray-600 body-font relative max-w-7xl mx-auto">
         <h1 className="text-center text-2xl md:text-4xl font-heading pt-8 font-bold">
-          Jayanagar
+          South End Circle
         </h1>
         <div>
           <img
@@ -16,7 +16,46 @@ const Jayanagar = ({ doctors }) => {
             className="rounded-xl mt-4"
           />
         </div>
-        <div className="py-12 flex flex-wrap lg:flex-nowrap inset-0 ">
+        <div className="py-6 flex flex-wrap lg:flex-nowrap inset-0 ">
+          <div className="lg:w-1/2 md:w-full bg-white flex flex-col md:ml-auto w-full pb-8 md:mt-0 min-h-max">
+            <p className="text-center font-qs text-2xl font-semibold mb-10 mt-7 lg:mt-0">
+              Fertility Specialists at South End Circle
+            </p>
+            <div className="mx-auto space-y-0 grid grid-cols-2 sm:gap-y-10 sm:gap-x-32 sm:space-y-0 lg:grid-cols-2 lg:max-w-7xl col-span-full">
+              {doctors.map((item) => {
+                if (item.location.includes("Jayanagar")) {
+                  return (
+                    <div className="text-center" key={item.id}>
+                      <Link href={`/doctors/${item.slug}`} passHref>
+                        <a>
+                          <div className="space-y-4">
+                            <img
+                              className="mx-auto h-40 w-40 my-auto rounded-full mt-4"
+                              src={item.image.url}
+                              alt={item.name}
+                            />
+                            <div className="space-y-4">
+                              <div className="text-lg leading-6 font-medium space-y-1">
+                                <h3 className="text-brandDark font-content">
+                                  {item.name}
+                                </h3>
+                                <p className="text-brandPurple text-sm font-content">
+                                  {item.qualification}
+                                </p>
+                                <p className="text-brandPink text-sm font-content">
+                                  {item.designation}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </Link>
+                    </div>
+                  );
+                }
+              })}
+            </div>
+          </div>
           <div className="lg:w-1/2 bg-gray-300 rounded-3xl overflow-hidden p-2 lg:p-10 flex items-end justify-start relative h-[44rem] md:ml-auto w-full">
             <iframe
               width="100%"
@@ -70,45 +109,6 @@ const Jayanagar = ({ doctors }) => {
                   </a>
                 </p>
               </div>
-            </div>
-          </div>
-          <div className="lg:w-1/2 md:w-full bg-white flex flex-col md:ml-auto w-full md:py-8 md:mt-0 min-h-max">
-            <p className="text-center font-qs text-xl font-semibold mb-10 mt-7 lg:mt-0">
-              Fertility Specialists at Jayanagar
-            </p>
-            <div className="mx-auto space-y-0 grid grid-cols-2 sm:gap-y-10 sm:gap-x-32 sm:space-y-0 lg:grid-cols-2 lg:max-w-7xl col-span-full">
-              {doctors.map((item) => {
-                if (item.location.includes("Jayanagar")) {
-                  return (
-                    <div className="text-center" key={item.id}>
-                      <Link href={`/doctors/${item.slug}`} passHref>
-                        <a>
-                          <div className="space-y-4">
-                            <img
-                              className="mx-auto h-40 w-40 my-auto rounded-full mt-4"
-                              src={item.image.url}
-                              alt={item.name}
-                            />
-                            <div className="space-y-4">
-                              <div className="text-lg leading-6 font-medium space-y-1">
-                                <h3 className="text-brandDark font-content">
-                                  {item.name}
-                                </h3>
-                                <p className="text-brandPurple text-sm font-content">
-                                  {item.qualification}
-                                </p>
-                                <p className="text-brandPink text-sm font-content">
-                                  {item.designation}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </Link>
-                    </div>
-                  );
-                }
-              })}
             </div>
           </div>
         </div>
