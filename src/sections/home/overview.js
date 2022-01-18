@@ -64,19 +64,24 @@ const Overview = () => {
                     >
                       <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                     </svg>
-                    <p className="relative">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Sed, fuga! Officia id labore aliquid corporis at
-                      perferendis est voluptas obcaecati temporibus delectus
-                      officiis, sit in dolorem nulla quas sint rerum odit beatae
-                      suscipit? Quis nobis hic et repellendus earum, id aut
-                      blanditiis, dolore ex mollitia nam dolores accusantium.
-                      Laborum consectetur minus vitae dignissimos quod beatae.
+                    <p className="relative text-sm font-qs font-semibold">
+                      GarbhaGudi is a world-class organization built on a solid
+                      set of value systems, efficient processes, visionary
+                      leaders and technological forays. Most importantly, with a
+                      fantastic team of doctors, embryologists and staff. <br />
+                      <br /> The centre has been instrumental in creating happy
+                      endings in more than 7000 + couples’ lives by ensuring
+                      they have their biological child. With our strong team of
+                      experts and cutting-edge medical technologies, GarbhaGudi
+                      has achieved high success rates in the field of
+                      infertility. We remain dedicated to our vision and leave
+                      no stone unturned to ensure that the couple can take home
+                      a healthy baby and enjoy parenthood
                     </p>
                   </div>
 
                   <footer className="mt-4">
-                    <p className="text-base font-semibold text-indigo-200">
+                    <p className="text-base font-semibold text-purple-300 font-qs">
                       Dr Asha S Vjay, Medical Director at GarbhaGudi
                     </p>
                   </footer>
@@ -91,18 +96,22 @@ const Overview = () => {
             <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl font-heading">
               Why GarbhaGudi?
             </h2>
-            <div className="mt-6 text-gray-500 space-y-6 font-content">
-              <p className="text-base leading-7 lg:text-xl lg:leading-loose">
-                At GarbhaGudi, we understand that infertility can be soul
-                crushing. But take courage that help is at hand. We have been
-                delivering miracles every day for over ten years now. We have on
-                board a team of fertility specialists like gynecologists,
-                embryologists, technicians and staff who work closely with you
-                to develop a personalized infertility treatment plan. We offer
-                infertility treatments like IUI, IVF, Egg donation and more. As
-                a leading destination for fertility treatments for Indians and
-                foreigners, our fertility center offers hope to patients around
-                the world.
+            <div className="mt-6 text-gray-500 space-y-4 font-qs font-semibold">
+              <p className="text-md lg:text-xl">
+                Spanning over a decade, GarbhaGudi has served as a beacon of
+                hope to thousands of infertile couples. Our experienced and
+                dedicated specialists, nurses, and embryologists work to cater
+                for your needs and respond to them quickly, professionally and
+                warmly. With the unparalleled treatments offered by skilled and
+                renowned infertility specialists since 2011, our pioneering work
+                has led to the progression and implementation of the latest
+                medical technologies and methods to overcome female and male
+                infertility. GarbhaGudi IVF is the place where couples come if
+                treatment at all other centres fails. So, there are umpteen
+                cases where couples have conceived at GarbhaGudi when they have
+                been told that there is no hope, and our centre has been helping
+                couples from every corner of the world fulfil their ardent
+                desire to have a baby.
               </p>
             </div>
           </div>

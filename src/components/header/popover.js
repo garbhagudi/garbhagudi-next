@@ -16,16 +16,23 @@ const contact = [
     href: "/careers",
     icon: IconTwo,
   },
-  {
-    name: "Events and Webinars",
-    description: "Keep track of your growth",
-    href: "##",
-    icon: IconThree,
-  },
+
   {
     name: "Locations",
     description: "Keep track of your growth",
-    href: "##",
+    href: "/locations/fertility-experts",
+    icon: IconThree,
+  },
+  {
+    name: "Partnership",
+    description: "Treatment Options",
+    href: "/contact/partnership",
+    icon: IconThree,
+  },
+  {
+    name: "Training Program",
+    description: "Treatment Options",
+    href: "https://ggirhr.com",
     icon: IconThree,
   },
 ];
@@ -53,6 +60,12 @@ const Resources = [
     name: "Treatments",
     description: "Treatment Options",
     href: "/resources/treatments",
+    icon: IconThree,
+  },
+  {
+    name: "Events and Webinars",
+    description: "Keep track of your growth",
+    href: "##",
     icon: IconThree,
   },
 ];
@@ -96,43 +109,31 @@ const valueAddedServices = [
     name: "Financial Options",
     description:
       "Our Blogs and Articles regarding Infertility, treatment and parenthood",
-    href: "/vas/financial-options",
+    href: "/features/financial-options",
     icon: IconOne,
   },
   {
     name: "Success Rate of IVF",
     description: "Tests for Infertility Diagnosis",
-    href: "/vas/success-rates-of-ivf",
+    href: "/features/success-rates-of-ivf",
     icon: IconTwo,
   },
   {
     name: "IVF from Home",
     description: "Tests for Infertility Diagnosis",
-    href: "/vas/ivf-from-home",
+    href: "/features/ivf-from-home",
     icon: IconTwo,
   },
   {
     name: "Paripoorna",
     description: "Treatment Options",
-    href: "/vas/paripoorna",
-    icon: IconThree,
-  },
-  {
-    name: "Partnership",
-    description: "Treatment Options",
-    href: "/vas/partnership",
-    icon: IconThree,
-  },
-  {
-    name: "Training Program",
-    description: "Treatment Options",
-    href: "https://ggirhr.com",
+    href: "/features/paripoorna",
     icon: IconThree,
   },
   {
     name: "GarbhaGriha",
     description: "Treatment Options",
-    href: "/vas/garbhagriha",
+    href: "/features/garbhagriha",
     icon: IconThree,
   },
 ];
@@ -166,7 +167,7 @@ const aboutUs = [
   {
     name: "Fertility Experts",
     description: "Treatment Options",
-    href: "/locations",
+    href: "/locations/fertility-experts",
     icon: IconThree,
   },
   {
@@ -258,7 +259,7 @@ export function Treatment() {
           >
             <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
               <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
+                <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-3">
                   {valueAddedServices.map((item) => (
                     <a
                       key={item.name}

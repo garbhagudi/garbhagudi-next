@@ -23,7 +23,7 @@ const IndexPage = ({ careers }) => {
           <li className="flex flex-col">
             {careers.map((items) => (
               <div
-                className="select-none flex flex-1 items-center p-6 transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-3xl border-2 hover:shadow-2xl border-brandPink mt-4"
+                className="select-none flex flex-1 items-center p-6 transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-3xl border-2 hover:shadow-2xl border-brandPink mt-4 hover:bg-neutral-200"
                 key={items.id}
               >
                 <div className="flex-1 pl-1 mr-16">
@@ -38,7 +38,7 @@ const IndexPage = ({ careers }) => {
                   </div>
                 </div>
                 <Link href={`careers/${items.slug}`} passhref>
-                  <a className="w-2/ text-wrap text-center flex text-white text-bold flex-col rounded-3xl bg-brandPink justify-center items-center mr-7 px-3 py-2">
+                  <a className="w-2/ text-wrap text-center flex text-white text-bold flex-col rounded-3xl bg-brandPink justify-center items-center mr-7 px-3 py-2 font-qs hover:bg-brandPurple">
                     Apply Now
                   </a>
                 </Link>

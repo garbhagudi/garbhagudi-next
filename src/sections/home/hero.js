@@ -27,10 +27,13 @@ const Hero = () => {
                   of Being Complete
                 </span>
               </h1>
-              <p className="mt-3 text-base text-brandliteGray sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat aliqua ad ad non deserunt sunt.
+              <p className="mt-3 text-brandDark font-semibold sm:mt-5 sm:text-xl lg:text-lg xl:text-base text-base font-qs">
+                GarbhaGudi is a chain of new generation infertility treatment
+                hospitals equipped with state-of-the-art infrastructure and
+                cutting-edge technology to address this ever-increasing
+                infertility problem. It was founded by a team of committed
+                entrepreneurs and healthcare specialists, led by Dr. Asha S
+                Vijay, a renowned gynaecologist and fertility specialist.
               </p>
             </div>
           </div>

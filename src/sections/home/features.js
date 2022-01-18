@@ -77,16 +77,14 @@ const Features = () => {
   return (
     <div className="relative bg-white py-8 sm:py-18">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-        <h2 className="text-base font-semibold tracking-wider text-brandPurple uppercase font-qs">
-          Lorem, ipsum.
-        </h2>
-        <p className="mt-2 text-3xl font-extrabold text-brandDark tracking-tight sm:text-4xl font-content">
-          Lorem ipsum dolor sit amet.
+        <p className="mt-2 text-3xl font-extrabold text-brandDark tracking-tight sm:text-4xl font-heading">
+          Our Versatile Approach
         </p>
-        <p className="mt-5 max-w-prose mx-auto text-xl text-brandliteGray font-qs">
-          Phasellus lorem quam molestie id quisque diam aenean nulla in.
-          Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
-          condimentum id viverra nulla.
+        <p className="mt-5 max-w-prose mx-auto text-xl text-brandDark font-semibold font-qs">
+          At GarbhaGudi, we understand that fertility treatments can be mentally
+          and physically stressful. We are always committed to providing a world
+          of options and bringing a new ray of hope to many who are trying to
+          conceive. So, you can expect:
         </p>
         <div className="mt-12">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -105,7 +103,7 @@ const Features = () => {
                     <h3 className="mt-8 text-lg font-semibold text-brandDark tracking-tight font-heading">
                       {feature.name}
                     </h3>
-                    <p className="mt-5 text-brandDark font-qs font-thin min-h-[80px]">
+                    <p className="mt-5 text-brandDark font-semibold font-qs min-h-[80px]">
                       {feature.content}
                     </p>
                   </div>

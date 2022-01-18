@@ -32,7 +32,6 @@ export const getServerSideProps = async (pageContext) => {
 
   const data = await graphQLClient.request(query, variables);
   const valueAddedService = data.valueAddedService;
-  console.log(valueAddedService);
   return {
     props: {
       valueAddedService,

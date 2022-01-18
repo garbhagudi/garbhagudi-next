@@ -5,25 +5,21 @@ const metrics = [
     id: 1,
     stat: "7000+",
     emphasis: "Happy Families",
-    rest: "use laoreet amet lacus nibh integer quis.",
   },
   {
     id: 2,
     stat: "100+",
     emphasis: "Free Fertility Awareness Camps",
-    rest: "lacus nibh integer quis.",
   },
   {
     id: 3,
     stat: "66%",
     emphasis: "IVF Success Rate",
-    rest: "laoreet amet lacus nibh integer quis.",
   },
   {
     id: 4,
     stat: "5",
     emphasis: "Centres Across Bangalore",
-    rest: "lacus nibh integer quis.",
   },
 ];
 
@@ -47,18 +43,15 @@ const Stat = () => {
       </div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
         <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
-          <h2 className="text-sm font-semibold text-brandPurple tracking-wide uppercase font-content">
-            Lorem, ipsum.
-          </h2>
-          <p className="mt-3 text-3xl font-extrabold text-brandDark font-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <p className="mt-3 text-3xl font-extrabold text-brandDark font-heading">
+            Our Never-ending Success
           </p>
-          <p className="mt-5 text-lg text-brandliteGray font-qs">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-            laudantium nisi! Corrupti assumenda cupiditate neque, quae
-            voluptates quod omnis? Architecto, ad magni numquam nemo omnis quo
-            quas iste laboriosam veniam, praesentium, consequatur autem?
-            Provident, fugit.
+          <p className="mt-5 text-lg text-brandDark font-semibold font-qs">
+            GarbhaGudi is a place where dreams come alive, hopes never fade, and
+            possibilities never end. We ceaselessly work to help you cherish the
+            golden moment of holding your little bundles of joy. Along with our
+            quality of treatment and care, some of the other contributing
+            factors for achieving high success rates are:
           </p>
           <div className="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
             {metrics.map((item) => (
@@ -71,7 +64,6 @@ const Stat = () => {
                     {item.emphasis}
                     <br />
                   </span>{" "}
-                  {item.rest}
                 </span>
               </p>
             ))}

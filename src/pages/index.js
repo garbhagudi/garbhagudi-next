@@ -18,11 +18,12 @@ const Home = ({ doctors }) => {
           <div className="space-y-12">
             <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-brandDark font-heading">
-                Meet our Superheroes
+                Meet our Experts
               </h2>
-              <p className="text-xl text-brandliteGray font-content">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
-                aperiam officiis ut voluptatibus nostrum non!
+              <p className="text-md lg:text-xl text-brandDark font-semibold font-qs">
+                Our team of fertility specialists has been known for their
+                extensive clinical experience and research contributions and
+                their success in treating the most challenging fertility cases.
               </p>
             </div>
             <ul className="mx-auto space-y-0 grid grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl">

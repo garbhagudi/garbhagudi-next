@@ -54,7 +54,7 @@ const responsive = {
 const Video = () => {
   return (
     <div className="container mx-auto text-center py-8">
-      <span className="text-4xl font-extrabold text-brandDark">
+      <span className="text-2xl lg:text-4xl font-extrabold text-brandDark font-heading">
         Testimonials from our happy couples.
       </span>
       <Carousel
