@@ -66,7 +66,7 @@ const Video = () => {
         {data.map((item) => {
           return (
             <div
-              className="w-11/12 md:w-1/2 mx-auto aspect-w-21 aspect-h-10 mt-8 border-1"
+              className="w-11/12 md:w-1/2 mx-auto aspect-w-21 aspect-h-10 mt-8 border-1 overflow-hidden rounded-3xl"
               key={item.id}
             >
               <LiteYouTubeEmbed

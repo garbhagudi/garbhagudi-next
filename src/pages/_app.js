@@ -7,7 +7,6 @@ import Nav from "components/header/header";
 function MyApp({ Component, pageProps }) {
   return (
     <div>
-      <Banner />
       <Nav />
       <main className="min-h-screen">
         <Component {...pageProps} />

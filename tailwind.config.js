@@ -390,11 +390,12 @@ module.exports = {
         "monospace",
       ],
       inter: "Inter",
-      kan: "Benne",
+      kan: "Baloo Tamma 2",
       Noto: "Noto Sans Display",
       qs: "Quicksand",
       heading: "B612",
       content: "DM Sans",
+      benne: "Benne",
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],

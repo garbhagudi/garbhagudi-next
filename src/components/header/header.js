@@ -32,34 +32,34 @@ const Nav = () => {
               </div>
 
               <div className="hidden xl:block">
-                <div className=" ml-20 flex items-baseline space-x-4 pt-4">
+                <div className=" ml-16 flex items-baseline space-x-4 pt-4">
                   <Link href="/" passHref>
                     <span
                       className={
                         router.pathname == "/"
-                          ? "bg-brandPurple text-white px-3 py-2 rounded-2xl text-sm font-inter"
-                          : "text-gray-700 hover:bg-brandPurple hover:text-white px-3 py-2 rounded-2xl text-sm font-inter cursor-pointer"
+                          ? "bg-brandPink text-white px-3 py-2 rounded-2xl text-sm font-inter"
+                          : "text-gray-700 hover:bg-brandPink hover:text-white px-3 py-2 rounded-2xl text-sm font-inter cursor-pointer"
                       }
                     >
                       Home
                     </span>
                   </Link>
 
-                  <span className="text-gray-700 hover:bg-brandPurple hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
+                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
                     <About />
                   </span>
 
-                  <span className=" text-gray-700 hover:bg-brandPurple hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
+                  <span className=" text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
                     <Treatment />
                   </span>
 
-                  <span className=" text-gray-700 hover:bg-brandPurple hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
+                  <span className=" text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
                     <KnowledgeCenter />
                   </span>
-                  <span className="text-gray-700 hover:bg-brandPurple hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
+                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
                     <Contact />
                   </span>
-                  <span className="text-gray-700 hover:bg-brandPurple hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
+                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
                     <Locations />
                   </span>
 
@@ -68,7 +68,7 @@ const Nav = () => {
                       className={
                         router.pathname == "/book-appointment"
                           ? "bg-brandPurple text-white px-3 py-2 rounded-2xl text-sm font-inter"
-                          : "text-white hover:bg-brandPurple bg-brandPink font-semibold px-3 py-2 rounded-2xl text-sm font-inter cursor-pointer"
+                          : "text-white bg-brandPink font-semibold px-3 py-2 rounded-2xl text-sm font-inter cursor-pointer"
                       }
                     >
                       Book an Appointment
@@ -142,7 +142,7 @@ const Nav = () => {
           leaveTo="opacity-0 scale-95"
         >
           {(ref) => (
-            <div className="md:hidden" id="mobile-menu">
+            <div className="xl:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <Link href="/">
                   <a className="text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content">

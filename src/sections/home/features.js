@@ -80,7 +80,7 @@ const Features = () => {
         <p className="mt-2 text-3xl font-extrabold text-brandDark tracking-tight sm:text-4xl font-heading">
           Our Versatile Approach
         </p>
-        <p className="mt-5 max-w-prose mx-auto text-xl text-brandDark font-semibold font-qs">
+        <p className="mt-5 max-w-prose mx-auto text-xl text-brandDark font-content">
           At GarbhaGudi, we understand that fertility treatments can be mentally
           and physically stressful. We are always committed to providing a world
           of options and bringing a new ray of hope to many who are trying to
@@ -103,7 +103,7 @@ const Features = () => {
                     <h3 className="mt-8 text-lg font-semibold text-brandDark tracking-tight font-heading">
                       {feature.name}
                     </h3>
-                    <p className="mt-5 text-brandDark font-semibold font-qs min-h-[80px]">
+                    <p className="mt-5 text-brandDark antialiased font-content min-h-[80px]">
                       {feature.content}
                     </p>
                   </div>

@@ -46,7 +46,7 @@ const Stat = () => {
           <p className="mt-3 text-3xl font-extrabold text-brandDark font-heading">
             Our Never-ending Success
           </p>
-          <p className="mt-5 text-lg text-brandDark font-semibold font-qs">
+          <p className="mt-5 text-lg text-brandDark font-content">
             GarbhaGudi is a place where dreams come alive, hopes never fade, and
             possibilities never end. We ceaselessly work to help you cherish the
             golden moment of holding your little bundles of joy. Along with our
@@ -62,7 +62,6 @@ const Stat = () => {
                 <span className="mt-1 block text-base text-brandliteGray">
                   <span className="font-medium text-brandDark">
                     {item.emphasis}
-                    <br />
                   </span>{" "}
                 </span>
               </p>

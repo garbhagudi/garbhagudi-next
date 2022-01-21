@@ -9,6 +9,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@brainhubeu/react-carousel": "^2.0.4",
     "@graphcms/rich-text-react-renderer": "^0.4.0",
     "@headlessui/react": "^1.4.2",
     "@tailwindcss/aspect-ratio": "^0.4.0",
