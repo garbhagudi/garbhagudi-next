@@ -42,63 +42,57 @@ const Resources = [
     description:
       "Our Blogs and Articles regarding Infertility, treatment and parenthood",
     href: "/blogs/page/1",
-    icon: IconOne,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839773/Icons/Resources/Blogs_duatrt.svg",
   },
   {
     name: "Causes",
     description: "The Major Causes for Infertility",
     href: "/resources/causes/",
-    icon: IconOne,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839775/Icons/Resources/Causes_cfivce.svg",
   },
   {
     name: "Diagnosis",
     description: "Tests for Infertility Diagnosis",
     href: "/resources/diagnosis",
-    icon: IconTwo,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839791/Icons/Resources/Diagnosis_psjq8s.svg",
   },
   {
     name: "Treatments",
     description: "Treatment Options",
     href: "/resources/treatments",
-    icon: IconThree,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839802/Icons/Resources/Treatments_kcqops.svg",
   },
   {
     name: "Events and Webinars",
-    description: "Keep track of your growth",
+    description: "Live Events",
     href: "##",
-    icon: IconThree,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839833/Icons/Resources/Events_Webinars_buec8s.svg",
   },
 ];
 
 const Location = [
   {
     name: "Hanumanthanagar",
-    description:
-      "Our Blogs and Articles regarding Infertility, treatment and parenthood",
     href: "/locations/hanumanthanagar",
     icon: IconOne,
   },
   {
     name: "Kalyan Nagar",
-    description: "Tests for Infertility Diagnosis",
     href: "/locations/kalyan-nagar",
     icon: IconTwo,
   },
   {
-    name: "Jayanagar",
-    description: "Treatment Options",
+    name: "South-End Circle",
     href: "/locations/jayanagar",
     icon: IconThree,
   },
   {
     name: "Electronic City",
-    description: "Treatment Options",
     href: "/locations/electronic-city",
     icon: IconThree,
   },
   {
     name: "Marathahalli",
-    description: "Treatment Options",
     href: "/locations/marathahalli",
     icon: IconThree,
   },
@@ -106,75 +100,72 @@ const Location = [
 
 const valueAddedServices = [
   {
-    name: "Financial Options",
-    description:
-      "Our Blogs and Articles regarding Infertility, treatment and parenthood",
-    href: "/features/financial-options",
-    icon: IconOne,
+    name: "High Success Rates",
+    href: "/features/success-rates-of-ivf",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841374/Icons/Why%20GarbhaGudi/Success_Rate_abmaf0.svg",
   },
   {
-    name: "Success Rate of IVF",
-    description: "Tests for Infertility Diagnosis",
+    name: "World Class Care",
     href: "/features/success-rates-of-ivf",
-    icon: IconTwo,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841377/Icons/Why%20GarbhaGudi/World_Class_Fertility_Care_khs8nb.svg",
+  },
+  {
+    name: "Financial Options",
+    href: "/features/financial-options",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841383/Icons/Why%20GarbhaGudi/Financial_Options_gcu75h.svg",
+  },
+  {
+    name: "Holistic Approach",
+    href: "/features/holistic-approach",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841451/Icons/Why%20GarbhaGudi/Holistic_Approach_sxh54y.svg",
   },
   {
     name: "IVF from Home",
-    description: "Tests for Infertility Diagnosis",
     href: "/features/ivf-from-home",
-    icon: IconTwo,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841462/Icons/Why%20GarbhaGudi/IVF_from_Home_qriw7n.svg",
   },
   {
     name: "Paripoorna",
-    description: "Treatment Options",
     href: "/features/paripoorna",
-    icon: IconThree,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841468/Icons/Why%20GarbhaGudi/Paripoorna_nikziu.svg",
   },
   {
     name: "GarbhaGriha",
-    description: "Treatment Options",
     href: "/features/garbhagriha",
-    icon: IconThree,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841473/Icons/Why%20GarbhaGudi/GarbhaGriha_gyai6w.svg",
   },
 ];
 
 const aboutUs = [
   {
     name: "About Us",
-    description:
-      "Our Blogs and Articles regarding Infertility, treatment and parenthood",
     href: "/about/overview",
-    icon: IconOne,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
   {
     name: "Mission & Vision",
-    description: "Tests for Infertility Diagnosis",
     href: "/about/vision-and-mission",
-    icon: IconTwo,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839038/Icons/About/Vision_jaxu8d.svg",
   },
   {
     name: "Dr Asha S Vijay",
-    description: "Treatment Options",
     href: "/doctors/dr-asha-s-vijay",
-    icon: IconThree,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/Asha_Vijay_zpq05s.svg",
   },
   {
     name: "Founders & Directors",
-    description: "Treatment Options",
     href: "/about/overview",
-    icon: IconThree,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839222/Icons/About/Directors_w3497h.svg",
   },
   {
-    name: "Fertility Experts",
-    description: "Treatment Options",
+    name: "Our Fertility Experts",
     href: "/locations/fertility-experts",
-    icon: IconThree,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839012/Icons/About/Our_Fertility_Experts_bxsrrh.svg",
   },
   {
     name: "Awards & Accolades",
-    description: "Treatment Options",
     href: "/about/best-ivf-fertility-hospital-in-india",
-    icon: IconThree,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/Awards_Accorlads_z68rlr.svg",
   },
 ];
 
@@ -201,23 +192,23 @@ export function About() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
-              <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+            <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
+              <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-2">
                   {aboutUs.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-3xl hover:bg-gray-50 focus:outline-none"
                     >
                       <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                        <item.icon aria-hidden="true" />
+                        <img src={item.icon} alt={item.name} />
                       </div>
                       <div className="ml-4">
-                        <p className="text-sm font-medium text-gray-900">
+                        <p className="text-sm font-medium text-gray-900 font-content">
                           {item.name}
                         </p>
-                        <p className="text-xs text-gray-500">
+                        <p className="text-xs text-gray-600 font-content">
                           {item.description}
                         </p>
                       </div>
@@ -257,17 +248,17 @@ export function Treatment() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
+            <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
               <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-3">
                   {valueAddedServices.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-2xl hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                     >
                       <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                        <item.icon aria-hidden="true" />
+                        <img src={item.icon} alt={item.name} />
                       </div>
                       <div className="ml-4">
                         <p className="text-sm font-medium text-gray-900">
@@ -319,7 +310,7 @@ export function KnowledgeCenter() {
                     <Link key={item.name} href={item.href} passHref>
                       <a className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
                         <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                          <item.icon aria-hidden="true" />
+                          <img src={item.icon} alt={item.name} />
                         </div>
                         <div className="ml-4">
                           <p className="text-sm font-medium text-gray-900">

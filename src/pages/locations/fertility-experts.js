@@ -49,7 +49,7 @@ const IndexPage = ({ doctors }) => {
                 }
               >
                 <div className="mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
-                  Jayanagar
+                  South-End Circle
                 </div>
               </Tab>
               <Tab

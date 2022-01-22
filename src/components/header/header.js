@@ -23,7 +23,7 @@ const Nav = () => {
                 <Link href="/" passHref>
                   <a>
                     <img
-                      className="h-full w-52 xl:w-64 "
+                      className="h-full w-48 xl:w-64 "
                       src="https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg"
                       alt="logo"
                     />

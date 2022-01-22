@@ -19,7 +19,7 @@ const IndexPage = ({ diagnoses }) => {
               <div className="border-brandPink w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
                 <div className="w-1/3">
                   <img
-                    className="w-24 h-24 object-cover rounded-full"
+                    className="w-24 h-24 object-cover rounded-2xl"
                     src={item.icon.url}
                     alt={item.title}
                   />

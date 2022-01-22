@@ -3,7 +3,7 @@ import React from "react";
 const Overview = () => {
   return (
     <div className="relative bg-white">
-      <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
+      <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start mt-10 md:mt-0">
         <div className="relative sm:py-16 lg:py-0">
           <div
             aria-hidden="true"
@@ -48,11 +48,11 @@ const Overview = () => {
             <div className="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden">
               <img
                 className="absolute inset-0 h-full w-full object-cover"
-                src="https://images.unsplash.com/photo-1521510895919-46920266ddb3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&fp-x=0.5&fp-y=0.6&fp-z=3&width=1440&height=1440&sat=-100"
+                src="https://images.unsplash.com/photo-1642787929971-9a1fc0e58eaf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                 alt=""
               />
-              <div className="absolute inset-0 bg-brandPink mix-blend-multiply" />
-              <div className="absolute inset-0 bg-gradient-to-t from-brandPurple via-brandPurple mix-blend-multiply opacity-90" />
+              <div className="absolute inset-0 bg-gray-200 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brandPink via-gray-400 mix-blend-multiply" />
               <div className="relative px-8">
                 <blockquote className="mt-8">
                   <div className="relative text-lg font-medium text-white md:flex-grow">

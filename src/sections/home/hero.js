@@ -39,9 +39,9 @@ const Hero = () => {
           </div>
           <div className="sm:mt-16 lg:mt-0 lg:col-span-6 hidden md:block">
             <div className="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
-              <div className="mt-6">
+              <div className="my-6">
                 <img
-                  src="https://dummyimage.com/600x400/e0e0e0/000000"
+                  src="https://images.unsplash.com/photo-1494178270175-e96de2971df9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHN1Y2Nlc3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
                   alt="dummy"
                   className="object-cover rounded-xl"
                 />

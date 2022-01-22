@@ -31,12 +31,12 @@ const Stat = () => {
           <div className="h-full xl:relative xl:col-start-2">
             <img
               className="h-full w-full object-cover opacity-40 xl:absolute xl:inset-0"
-              src="https://image.freepik.com/free-psd/couple-valentine-day-celebrating-victory_1368-26773.jpg"
+              src="https://images.unsplash.com/photo-1501901609772-df0848060b33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
               alt="People working on laptops"
             />
             <div
               aria-hidden="true"
-              className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r"
+              className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white to-transparent xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r"
             />
           </div>
         </div>

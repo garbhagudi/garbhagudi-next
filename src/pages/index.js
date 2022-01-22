@@ -65,7 +65,7 @@ const Home = ({ homeData }) => {
               </p>
             </div>
             <ul className="mx-auto space-y-0 grid grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl">
-              {homeData.doctors.map((item) => {
+              {homeData?.doctors.map((item) => {
                 return (
                   <li key={item.id}>
                     <Link href={`/doctors/${item.slug}`} passHref>
@@ -73,19 +73,19 @@ const Home = ({ homeData }) => {
                         <div className="space-y-4">
                           <img
                             className="mx-auto h-32 w-32 my-auto rounded-full xl:w-44 xl:h-44 mt-4"
-                            src={item.image.url}
-                            alt={item.name}
+                            src={item?.image.url}
+                            alt={item?.name}
                           />
                           <div className="space-y-4">
                             <div className="text-lg leading-6 font-medium space-y-1">
                               <h3 className="text-brandDark font-content">
-                                {item.name}
+                                {item?.name}
                               </h3>
                               <p className="text-brandPurple text-sm font-content">
-                                {item.qualification}
+                                {item?.qualification}
                               </p>
                               <p className="text-brandPink text-sm font-content">
-                                {item.designation}
+                                {item?.designation}
                               </p>
                             </div>
                           </div>
