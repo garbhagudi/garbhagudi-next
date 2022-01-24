@@ -106,7 +106,7 @@ const valueAddedServices = [
   },
   {
     name: "World Class Care",
-    href: "/features/success-rates-of-ivf",
+    href: "/features/world-class-fertility-care",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841377/Icons/Why%20GarbhaGudi/World_Class_Fertility_Care_khs8nb.svg",
   },
   {
@@ -172,7 +172,7 @@ const aboutUs = [
 export function About() {
   return (
     <Popover className="relative">
-      {({ open }) => (
+      {({ open, setOpen }) => (
         <>
           <Popover.Button
             className={`
@@ -192,14 +192,15 @@ export function About() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
+            <Popover.Panel className="absolute z-10 w-96 max-w-sm px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
               <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-2">
+                <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-1">
                   {aboutUs.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
                       className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-3xl hover:bg-gray-50 focus:outline-none"
+                      onClick={() => setOpen(false)}
                     >
                       <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
                         <img src={item.icon} alt={item.name} />

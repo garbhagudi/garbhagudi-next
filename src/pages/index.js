@@ -125,7 +125,7 @@ export const getServerSideProps = async () => {
         id
         designation
       }
-      banners {
+      banners(orderBy: order_ASC) {
         title
         id
         order

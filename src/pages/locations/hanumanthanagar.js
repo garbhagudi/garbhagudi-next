@@ -182,7 +182,7 @@ const HanumanthaNagar = ({ doctors }) => {
 
 export default HanumanthaNagar;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const url = process.env.ENDPOINT;
   const graphQLClient = new GraphQLClient(url, {
     headers: {

@@ -63,7 +63,7 @@ const Nav = () => {
                     <Locations />
                   </span>
 
-                  <Link href="/book-appointment" passHref>
+                  <Link href="https://garbhagudi-ivf.com/contact-us" passHref>
                     <span
                       className={
                         router.pathname == "/book-appointment"
@@ -145,32 +145,32 @@ const Nav = () => {
             <div className="xl:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <Link href="/">
-                  <a className="text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content">
+                  <a className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-md font-content">
                     Home
                   </a>
                 </Link>
-                <span className="text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content">
+                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-md font-content">
                   <About />
                 </span>
 
-                <span className="text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content">
+                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-md font-content">
                   <Treatment />
                 </span>
-                <span className="text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content">
+                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-md font-content">
                   <KnowledgeCenter />
                 </span>
-                <span className="text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content">
+                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-md font-content">
                   <Contact />
                 </span>
-                <span className="text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content">
+                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-md font-content">
                   <Locations />
                 </span>
                 <Link href="/book-appointment" passHref>
                   <span
                     className={
                       router.pathname == "/book-appointment"
-                        ? "bg-brandPurple text-white px-3 py-2 rounded-2xl text-sm font-inter"
-                        : "text-brandDark hover:bg-brandPurple hover:text-white block px-3 py-2 rounded-md text-md font-content cursor-pointer"
+                        ? "bg-brandPink text-white px-3 py-2 rounded-2xl text-sm font-inter"
+                        : "text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-md font-content cursor-pointer"
                     }
                   >
                     Book an Appointment
