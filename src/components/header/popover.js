@@ -166,7 +166,7 @@ const aboutUs = [
 export function About() {
   return (
     <Popover className="relative">
-      {({ open, setOpen }) => (
+      {({ open }) => (
         <>
           <Popover.Button
             className={`
@@ -194,7 +194,6 @@ export function About() {
                       key={item.name}
                       href={item.href}
                       className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-3xl hover:bg-gray-50 focus:outline-none"
-                      onClick={() => setOpen(false)}
                     >
                       <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
                         <img src={item.icon} alt={item.name} />
