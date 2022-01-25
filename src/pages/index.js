@@ -58,7 +58,7 @@ const Home = ({ homeData }) => {
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-brandDark font-heading">
                 Meet our Experts
               </h2>
-              <p className="text-md lg:text-xl text-brandDark font-semibold font-qs">
+              <p className="text-md text-brandDark font-content">
                 Our team of fertility specialists has been known for their
                 extensive clinical experience and research contributions and
                 their success in treating the most challenging fertility cases.

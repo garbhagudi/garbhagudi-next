@@ -8,19 +8,6 @@ const Hero = () => {
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
             <div>
-              {/* <a
-                href="#"
-                className="inline-flex items-center text-white bg-brandDark rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
-              >
-                <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-brandPink rounded-full">
-                  We&apos;re hiring
-                </span>
-                <span className="ml-4 text-sm">Visit our careers page</span>
-                <BsChevronRight
-                  className="ml-2 w-5 h-5 text-gray-500"
-                  aria-hidden="true"
-                />
-              </a> */}
               <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-brandDark sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
                 <span className="md:block">Experience the Joy</span>{" "}
                 <span className="text-brandPink md:block">

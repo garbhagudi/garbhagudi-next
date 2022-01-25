@@ -16,23 +16,16 @@ const contact = [
     href: "/careers",
     icon: IconTwo,
   },
-
   {
-    name: "Locations",
-    description: "Keep track of your growth",
-    href: "/locations/fertility-experts",
+    name: "Training Program",
+    description: "Treatment Options",
+    href: "https://ggirhr.com",
     icon: IconThree,
   },
   {
     name: "Partnership",
     description: "Treatment Options",
     href: "/contact/partnership",
-    icon: IconThree,
-  },
-  {
-    name: "Training Program",
-    description: "Treatment Options",
-    href: "https://ggirhr.com",
     icon: IconThree,
   },
 ];
@@ -66,6 +59,12 @@ const Resources = [
     name: "Events and Webinars",
     description: "Live Events",
     href: "##",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839833/Icons/Resources/Events_Webinars_buec8s.svg",
+  },
+  {
+    name: "FAQ",
+    description: "Frequently Asked Questions",
+    href: "/resources/faq",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839833/Icons/Resources/Events_Webinars_buec8s.svg",
   },
 ];
@@ -105,14 +104,9 @@ const valueAddedServices = [
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841374/Icons/Why%20GarbhaGudi/Success_Rate_abmaf0.svg",
   },
   {
-    name: "World Class Care",
-    href: "/features/world-class-fertility-care",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841377/Icons/Why%20GarbhaGudi/World_Class_Fertility_Care_khs8nb.svg",
-  },
-  {
-    name: "Financial Options",
-    href: "/features/financial-options",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841383/Icons/Why%20GarbhaGudi/Financial_Options_gcu75h.svg",
+    name: "Afforbable Treatments",
+    href: "/features/garbhagriha",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840310/Icons/Features/Affordable_Treatment_lwaaku.svg",
   },
   {
     name: "Holistic Approach",

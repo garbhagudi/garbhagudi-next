@@ -7,19 +7,20 @@ import "react-multi-carousel/lib/styles.css";
 const data = [
   {
     id: 1,
-    videoId: "YVyaYhk8Hbk",
+    videoId: "xIvoIRASbgg",
   },
   {
     id: 2,
-    videoId: "fWxE9RgqV3s",
+    videoId: "YVyaYhk8Hbk",
   },
+
   {
     id: 3,
-    videoId: "roacYWKHT-A",
+    videoId: "Te1R9a0cc40",
   },
   {
     id: 4,
-    videoId: "vKZvYIjmRZI",
+    videoId: "jlDAsrZWinI",
   },
   {
     id: 5,
@@ -27,7 +28,7 @@ const data = [
   },
   {
     id: 6,
-    videoId: "j738P57hje4",
+    videoId: "VaGyOFVn4H4",
   },
 ];
 
@@ -59,6 +60,8 @@ const Video = () => {
       </span>
       <Carousel
         responsive={responsive}
+        partialVisbile={true}
+        focusOnSelect={true}
         ssr={true}
         infinite={true}
         thumbnail={true}
@@ -66,13 +69,13 @@ const Video = () => {
         {data.map((item) => {
           return (
             <div
-              className="w-11/12 md:w-1/2 mx-auto aspect-w-21 aspect-h-10 mt-8 border-1 overflow-hidden rounded-3xl"
+              className="md:w-3/4 mx-auto aspect-video mt-8 overflow-hidden rounded-3xl"
               key={item.id}
             >
               <LiteYouTubeEmbed
                 id={item.videoId}
                 title="Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay"
-                poster="hqdefault"
+                poster="maxresdefault"
               />
             </div>
           );

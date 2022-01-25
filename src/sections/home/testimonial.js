@@ -33,17 +33,17 @@ const data = [
 
   {
     id: "4",
-    name: "Lorem, ipsum.",
+    name: "Close 2 Coast.",
     quote:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum magnam nihil amet, laboriosam temporibus laudantium? Lorem ipsum dolor sit amet.",
+      "Organized hospital where the team are well disciplined and efficient in carrying out the treatments of its patients. Appointments are booked proactively by the team which ensure time to time planned appointments to take place at the the right time. They also respond to calls whenever you have a doubt or a query regarding medicine or the treatments. Treatment was carried out with transparency and integrity and all the details were shared with us by the doctor which enabled us to get the treatment effectively..",
     logo: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1639556290/logos/google_aenn30.svg",
     profile: generateDiceBearBottts(Math.random()),
   },
   {
     id: "5",
-    name: "Lorem, ipsum.",
+    name: "Harshitha Ashwin.",
     quote:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum magnam nihil amet, laboriosam temporibus laudantium? Lorem ipsum dolor sit amet.",
+      "Good response with all doctors n I was suffering from last 5years was gone through for 2 hospital but I didn't get any success rate After some of my friend suggested to go garbhagudi n I was successfully got success with doctor dr Maheshwari.",
     logo: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1639556290/logos/google_aenn30.svg",
     profile: generateDiceBearBottts(Math.random()),
   },
@@ -78,7 +78,7 @@ const Testimonial = () => {
               <div className="relative" key={item.id}>
                 <img className="mx-auto h-8" src={item.logo} alt={item.name} />
                 <blockquote className="mt-10">
-                  <div className="max-w-3xl mx-auto text-center text-2xl tracking-tight leading-9 font-medium text-gray-900 font-content">
+                  <div className="max-w-3xl mx-auto text-center text-xl tracking-tight leading-9 font-medium text-gray-900 font-content">
                     <p>{item.quote}</p>
                   </div>
                   <footer className="mt-8">

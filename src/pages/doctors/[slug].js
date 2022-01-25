@@ -113,14 +113,16 @@ const Doctor = ({ doctor }) => {
                     type="button"
                     style={{ transition: "all .15s ease" }}
                   >
-                    <a href="#">Book an Appointment</a>
+                    <a href="https://garbhagudi-ivf.com/contact-us">
+                      Book an Appointment
+                    </a>
                   </button>
                   <button
                     className="bg-pink-500 active:bg-pink-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 mx-4 rounded outline-none focus:outline-none sm:mr-2 mb-1"
                     type="button"
                     style={{ transition: "all .15s ease" }}
                   >
-                    <a href="#">Call</a>
+                    <a href="tel:+918880000909">Call</a>
                   </button>
                 </div>
                 <div className="mt-10 py-10 border-t border-gray-300">

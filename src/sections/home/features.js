@@ -82,7 +82,7 @@ const Features = () => {
         <p className="mt-2 text-3xl font-extrabold text-brandDark tracking-tight sm:text-4xl font-heading">
           Our Versatile Approach
         </p>
-        <p className="mt-5 max-w-prose mx-auto text-xl text-brandDark font-content">
+        <p className="mt-5 max-w-prose mx-auto text-md text-brandDark font-content">
           At GarbhaGudi, we understand that fertility treatments can be mentally
           and physically stressful. We are always committed to providing a world
           of options and bringing a new ray of hope to many who are trying to
