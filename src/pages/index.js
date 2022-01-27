@@ -38,13 +38,12 @@ const Home = ({ homeData }) => {
         ssr={true}
         infinite={true}
         thumbnail={true}
+        autoPlay={true}
+        autoPlaySpeed={5000}
       >
         {homeData.banners.map((items) => (
-          <div
-            className="mx-auto aspect-w-21 aspect-h-10 border-1 overflow-hidden "
-            key={items.id}
-          >
-            <a href="">
+          <div className="" key={items.id}>
+            <a href={items.url}>
               <img src={items.image.url} alt={items.title} />
             </a>
           </div>
@@ -128,6 +127,7 @@ export const getServerSideProps = async () => {
       banners(orderBy: order_ASC) {
         title
         id
+        url
         order
         image {
           url

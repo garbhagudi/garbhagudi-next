@@ -8,27 +8,28 @@ const contact = [
     name: "Upcoming Camps",
     description: "Measure actions your users take",
     href: "##",
-    icon: IconOne,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264796/Icons/Contact/Up_coming_camps_pczhfy.svg",
   },
   {
     name: "Careers",
     description: "Create your own targeted content",
     href: "/careers",
-    icon: IconTwo,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264774/Icons/Contact/Careers_cgpaic.svg",
   },
   {
     name: "Training Program",
     description: "Treatment Options",
     href: "https://ggirhr.com",
-    icon: IconThree,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264793/Icons/Contact/Training_Program_dh9imv.svg",
   },
   {
     name: "Partnership",
     description: "Treatment Options",
     href: "/contact/partnership",
-    icon: IconThree,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264809/Icons/Contact/Partnership_srnnr9.svg",
   },
 ];
+
 const Resources = [
   {
     name: "Blogs",
@@ -65,7 +66,7 @@ const Resources = [
     name: "FAQ",
     description: "Frequently Asked Questions",
     href: "/resources/faq",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839833/Icons/Resources/Events_Webinars_buec8s.svg",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264858/Icons/Resources/FAQs_x8rsvf.svg",
   },
 ];
 
@@ -73,27 +74,27 @@ const Location = [
   {
     name: "Hanumanthanagar",
     href: "/locations/hanumanthanagar",
-    icon: IconOne,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264727/Icons/Locations/Hanumanthanagar_erb1wp.svg",
   },
   {
     name: "Kalyan Nagar",
     href: "/locations/kalyan-nagar",
-    icon: IconTwo,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264732/Icons/Locations/Kalyan_Nagar_hddo2g.svg",
   },
   {
     name: "South-End Circle",
     href: "/locations/jayanagar",
-    icon: IconThree,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264743/Icons/Locations/South_End_Circle_hooc8w.svg",
   },
   {
     name: "Electronic City",
     href: "/locations/electronic-city",
-    icon: IconThree,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264724/Icons/Locations/Electronic_City_datd3q.svg",
   },
   {
     name: "Marathahalli",
     href: "/locations/marathahalli",
-    icon: IconThree,
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264737/Icons/Locations/Marathahalli_io6mbb.svg",
   },
 ];
 
@@ -105,7 +106,7 @@ const valueAddedServices = [
   },
   {
     name: "Afforbable Treatments",
-    href: "/features/garbhagriha",
+    href: "/features/affordable-treatments",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840310/Icons/Features/Affordable_Treatment_lwaaku.svg",
   },
   {
@@ -193,7 +194,7 @@ export function About() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-3xl hover:bg-gray-50 focus:outline-none"
+                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-3xl hover:bg-pink-100 focus:outline-none"
                     >
                       <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
                         <img src={item.icon} alt={item.name} />
@@ -302,7 +303,7 @@ export function KnowledgeCenter() {
                 <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-1">
                   {Resources.map((item) => (
                     <Link key={item.name} href={item.href} passHref>
-                      <a className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
+                      <a className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
                         <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
                           <img src={item.icon} alt={item.name} />
                         </div>
@@ -357,10 +358,10 @@ export function Contact() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                     >
                       <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                        <item.icon aria-hidden="true" />
+                        <img src={item.icon} alt={item.name} />
                       </div>
                       <div className="ml-4">
                         <p className="text-sm font-medium text-gray-900">
@@ -412,10 +413,10 @@ export function Locations() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                     >
                       <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                        <item.icon aria-hidden="true" />
+                        <img src={item.icon} alt={item.name} />
                       </div>
                       <div className="ml-4">
                         <p className="text-sm font-medium text-gray-900">
@@ -431,84 +432,5 @@ export function Locations() {
         </>
       )}
     </Popover>
-  );
-}
-
-function IconOne() {
-  return (
-    <svg
-      width="48"
-      height="48"
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect width="48" height="48" rx="8" fill="#FFEDD5" />
-      <path
-        d="M24 11L35.2583 17.5V30.5L24 37L12.7417 30.5V17.5L24 11Z"
-        stroke="#FB923C"
-        strokeWidth="2"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M16.7417 19.8094V28.1906L24 32.3812L31.2584 28.1906V19.8094L24 15.6188L16.7417 19.8094Z"
-        stroke="#FDBA74"
-        strokeWidth="2"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M20.7417 22.1196V25.882L24 27.7632L27.2584 25.882V22.1196L24 20.2384L20.7417 22.1196Z"
-        stroke="#FDBA74"
-        strokeWidth="2"
-      />
-    </svg>
-  );
-}
-
-function IconTwo() {
-  return (
-    <svg
-      width="48"
-      height="48"
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect width="48" height="48" rx="8" fill="#FFEDD5" />
-      <path
-        d="M28.0413 20L23.9998 13L19.9585 20M32.0828 27.0001L36.1242 34H28.0415M19.9585 34H11.8755L15.9171 27"
-        stroke="#FB923C"
-        strokeWidth="2"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M18.804 30H29.1963L24.0001 21L18.804 30Z"
-        stroke="#FDBA74"
-        strokeWidth="2"
-      />
-    </svg>
-  );
-}
-
-function IconThree() {
-  return (
-    <svg
-      width="48"
-      height="48"
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect width="48" height="48" rx="8" fill="#FFEDD5" />
-      <rect x="13" y="32" width="2" height="4" fill="#FDBA74" />
-      <rect x="17" y="28" width="2" height="8" fill="#FDBA74" />
-      <rect x="21" y="24" width="2" height="12" fill="#FDBA74" />
-      <rect x="25" y="20" width="2" height="16" fill="#FDBA74" />
-      <rect x="29" y="16" width="2" height="20" fill="#FB923C" />
-      <rect x="33" y="12" width="2" height="24" fill="#FB923C" />
-    </svg>
   );
 }

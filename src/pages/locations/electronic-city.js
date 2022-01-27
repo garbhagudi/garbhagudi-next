@@ -11,7 +11,7 @@ const ElectronicCity = ({ doctors }) => {
         </h1>
         <div>
           <img
-            src="https://dummyimage.com/1280x500/000/fff.jpg&text=1280x500"
+            src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277077/Locations/1201x501_EC_g4kioe.jpg"
             alt="banner"
             className="rounded-xl mt-4"
           />
@@ -23,27 +23,27 @@ const ElectronicCity = ({ doctors }) => {
             </p>
             <div className="mx-auto space-y-0 grid grid-cols-2 sm:gap-y-10 sm:gap-x-32 sm:space-y-0 lg:grid-cols-2 lg:max-w-7xl col-span-full">
               {doctors.map((item) => {
-                if (item.location.includes("ElectronicCity")) {
+                if (item.location?.includes("ElectronicCity")) {
                   return (
-                    <div className="text-center" key={item.id}>
-                      <Link href={`/doctors/${item.slug}`} passHref>
+                    <div className="text-center" key={item?.id}>
+                      <Link href={`/doctors/${item?.slug}`} passHref>
                         <a>
                           <div className="space-y-4">
                             <img
                               className="mx-auto h-40 w-40 my-auto rounded-full mt-4"
-                              src={item.image.url}
-                              alt={item.name}
+                              src={item?.image.url}
+                              alt={item?.name}
                             />
                             <div className="space-y-4">
                               <div className="text-lg leading-6 font-medium space-y-1">
                                 <h3 className="text-brandDark font-content">
-                                  {item.name}
+                                  {item?.name}
                                 </h3>
                                 <p className="text-brandPurple text-sm font-content">
-                                  {item.qualification}
+                                  {item?.qualification}
                                 </p>
                                 <p className="text-brandPink text-sm font-content">
-                                  {item.designation}
+                                  {item?.designation}
                                 </p>
                               </div>
                             </div>

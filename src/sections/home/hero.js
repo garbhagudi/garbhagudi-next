@@ -28,7 +28,7 @@ const Hero = () => {
             <div className="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
               <div className="my-6">
                 <img
-                  src="https://images.unsplash.com/photo-1494178270175-e96de2971df9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHN1Y2Nlc3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643272918/Home/Home-Experience_the_Joy_kvdfwj.webp"
                   alt="dummy"
                   className="object-cover rounded-xl"
                 />

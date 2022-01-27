@@ -32,12 +32,12 @@ const Nav = () => {
               </div>
 
               <div className="hidden xl:block">
-                <div className=" ml-16 flex items-baseline space-x-4 pt-4">
+                <div className=" ml-16 flex items-baseline space-x-4 pt-4 ">
                   <Link href="/" passHref>
                     <span
                       className={
                         router.pathname == "/"
-                          ? "bg-brandPink text-white px-3 py-2 rounded-2xl text-sm font-inter"
+                          ? "bg-brandPink text-white px-3 py-2 rounded-2xl text-sm font-content"
                           : "text-gray-700 hover:bg-brandPink hover:text-white px-3 py-2 rounded-2xl text-sm font-inter cursor-pointer"
                       }
                     >
@@ -45,32 +45,26 @@ const Nav = () => {
                     </span>
                   </Link>
 
-                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
+                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-content">
                     <About />
                   </span>
 
-                  <span className=" text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
+                  <span className=" text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-content">
                     <Treatment />
                   </span>
 
-                  <span className=" text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
+                  <span className=" text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-content">
                     <KnowledgeCenter />
                   </span>
-                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
+                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-content">
                     <Contact />
                   </span>
-                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-inter">
+                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-3 py-2 text-sm font-content">
                     <Locations />
                   </span>
 
                   <Link href="https://garbhagudi-ivf.com/contact-us" passHref>
-                    <span
-                      className={
-                        router.pathname == "/book-appointment"
-                          ? "bg-brandPurple text-white px-3 py-2 rounded-2xl text-sm font-inter"
-                          : "text-white bg-brandPink font-semibold px-3 py-2 rounded-2xl text-sm font-inter cursor-pointer"
-                      }
-                    >
+                    <span className="text-white bg-brandPink font-semibold px-3 py-2 rounded-2xl text-sm font-content cursor-pointer hover:bg-brandPink3">
                       Book an Appointment
                     </span>
                   </Link>
@@ -145,34 +139,28 @@ const Nav = () => {
             <div className="xl:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <Link href="/">
-                  <a className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-md font-content">
+                  <a className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
                     Home
                   </a>
                 </Link>
-                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-md font-content">
+                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
                   <About />
                 </span>
 
-                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-md font-content">
+                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
                   <Treatment />
                 </span>
-                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-md font-content">
+                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
                   <KnowledgeCenter />
                 </span>
-                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-md font-content">
+                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
                   <Contact />
                 </span>
-                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-md font-content">
+                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
                   <Locations />
                 </span>
-                <Link href="/book-appointment" passHref>
-                  <span
-                    className={
-                      router.pathname == "/book-appointment"
-                        ? "bg-brandPink text-white px-3 py-2 rounded-2xl text-sm font-inter"
-                        : "text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-md font-content cursor-pointer"
-                    }
-                  >
+                <Link href="https://garbhagudi-ivf.com/contact-us" passHref>
+                  <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content cursor-pointer">
                     Book an Appointment
                   </span>
                 </Link>

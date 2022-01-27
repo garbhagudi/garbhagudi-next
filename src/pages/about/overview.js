@@ -37,7 +37,7 @@ const Overview = ({ directors }) => {
                           </p>
                         </div>
                         <div className="text-lg">
-                          <p className="text-gray-500 font-qs">
+                          <p className="text-gray-500 font-content">
                             {item.description}
                           </p>
                           <p className="mt-3 text-brandPurple underline text-sm hover:text-brandPink cursor-pointer">

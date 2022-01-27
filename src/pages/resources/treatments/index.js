@@ -19,15 +19,15 @@ const IndexPage = ({ treatments }) => {
       </p>
       <div className="w-full max-w-7xl px-2 py-16 sm:px-0">
         <Tab.Group>
-          <Tab.List className={"flex p-1 space-x-1 bg-brandDark rounded-xl"}>
+          <Tab.List className={"flex p-1 space-x-1 bg-brandPink rounded-xl"}>
             <Tab
               className={({ selected }) =>
                 classNames(
-                  "w-full py-2.5 text-sm  font-medium text-brandPink rounded-lg",
+                  "w-full py-2.5 text-sm font-medium text-brandPink rounded-lg",
                   "focus:outline-none",
                   selected
-                    ? "bg-gray-100 ring-2 ring-brandPink shadow"
-                    : "text-gray-200 hover:bg-brandliteGray hover:text-white"
+                    ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
+                    : "text-gray-100 hover:bg-brandPink3 hover:text-white"
                 )
               }
             >
@@ -41,8 +41,8 @@ const IndexPage = ({ treatments }) => {
                   "w-full py-2.5 text-sm  font-medium text-brandPink rounded-lg",
                   "focus:outline-none",
                   selected
-                    ? "bg-gray-100 ring-2 ring-brandPink shadow"
-                    : "text-gray-200 hover:bg-brandliteGray hover:text-white"
+                    ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
+                    : "text-gray-100 hover:bg-brandPink3 hover:text-white"
                 )
               }
             >
@@ -56,8 +56,8 @@ const IndexPage = ({ treatments }) => {
                   "w-full py-2.5 text-sm font-medium text-brandPink rounded-lg",
                   "focus:outline-none",
                   selected
-                    ? "bg-gray-100 ring-2 ring-brandPink shadow-xl"
-                    : "text-gray-200 hover:bg-brandliteGray  hover:text-white"
+                    ? "bg-gray-100 ring-2 ring-brandPink2 shadow-xl"
+                    : "text-gray-100 hover:bg-brandPink3  hover:text-white"
                 )
               }
             >

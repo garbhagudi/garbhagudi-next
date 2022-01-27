@@ -7,17 +7,18 @@ const VisionMission = () => {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -mx-4 -mb-10 text-center">
             <div className="sm:w-1/2 mb-10 px-4">
-              <div className="rounded-lg h-64 overflow-hidden">
-                <img
-                  alt="content"
-                  className="object-cover object-center h-full w-full"
-                  src="https://dummyimage.com/1201x501"
-                />
-              </div>
               <h2 className="title-font text-3xl font-heading font-semibold text-brandliteGray mt-6 mb-3">
                 Vision
               </h2>
-              <p className="leading-relaxed text-lg font-qs text-left text-brandDark">
+              <div className="rounded-lg h-64 overflow-hidden">
+                <img
+                  alt="content"
+                  className="object-cover object-center h-full w-full mb-2"
+                  src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643278927/About/1201x501_Vision_c6ds1h.jpg"
+                />
+              </div>
+
+              <p className="leading-relaxed text-lg font-content text-left text-brandDark mt-2">
                 A mission followed by dedication and hard work turns into a
                 vision. Enormous amount of hard work goes into reaching out to
                 more and more people and create an awareness about infertility
@@ -29,17 +30,18 @@ const VisionMission = () => {
               </p>
             </div>
             <div className="sm:w-1/2 mb-10 px-4">
-              <div className="rounded-lg h-64 overflow-hidden">
-                <img
-                  alt="content"
-                  className="object-cover object-center h-full w-full"
-                  src="https://dummyimage.com/1202x502"
-                />
-              </div>
               <h2 className="title-font text-3xl text-brandliteGray mt-6 mb-3 font-heading font-semibold">
                 Mission
               </h2>
-              <p className="leading-relaxed font-qs text-lg text-left text-brandDark">
+              <div className="rounded-lg h-64 overflow-hidden">
+                <img
+                  alt="content"
+                  className="object-cover object-center h-full w-full mb-2"
+                  src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643278945/About/1201x501_Mission_wcctgt.jpg"
+                />
+              </div>
+
+              <p className="leading-relaxed font-content text-lg text-left text-brandDark mt-2">
                 Dr. Asha S. Vijay, a post graduate in Obstetrics &amp;
                 Gynecology from the prestigious Bangalore Medical College,
                 started her career with Kidwai Institute of Oncology, Bangalore

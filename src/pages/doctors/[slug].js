@@ -51,12 +51,12 @@ const Doctor = ({ doctor }) => {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')",
+                "url('https://res.cloudinary.com/garbhagudiivf/image/upload/v1643286880/Banner/Behind_Doctors_fssazq.jpg')",
             }}
           >
             <span
               id="blackOverlay"
-              className="w-full h-full absolute opacity-50 bg-black"
+              className="w-full h-full absolute opacity-30 bg-black"
             ></span>
           </div>
           <div

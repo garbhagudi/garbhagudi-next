@@ -29,22 +29,22 @@ const IndexPage = ({ careers }) => {
           <li className="flex flex-col">
             {careers.map((items) => (
               <div
-                className="select-none flex flex-1 items-center p-6 transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-3xl border-2 hover:shadow-2xl border-brandPink mt-4 hover:bg-neutral-100"
+                className="select-none flex flex-1 items-center p-6 transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-3xl border-2 hover:shadow-2xl border-brandPink4 mt-4 hover:bg-pink-50"
                 key={items.id}
               >
                 <div className="flex-1 pl-1 mr-16">
-                  <div className="font-qs font-semibold text-2xl">
+                  <div className="font-content font-semibold text-2xl">
                     {items.position}
                   </div>
-                  <div className="font-qs font-semibold text-xs mt-2">
+                  <div className="font-content font-semibold text-xs mt-2">
                     Location: {items.location}
                   </div>
-                  <div className="font-qs font-semibold text-xs mt-2">
+                  <div className="font-content font-semibold text-xs mt-2">
                     Experience: {items.experience}
                   </div>
                 </div>
                 <Link href={`careers/${items.slug}`} passhref>
-                  <a className="w-2/ text-wrap text-center flex text-white text-bold flex-col rounded-3xl bg-brandPink justify-center items-center mr-7 px-3 py-2 font-qs hover:bg-brandPurple">
+                  <a className="w-2/ text-wrap text-center flex text-white text-bold flex-col rounded-3xl bg-brandPink justify-center items-center mr-7 px-3 py-2 font-qs hover:bg-brandPink3">
                     Apply Now
                   </a>
                 </Link>

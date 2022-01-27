@@ -8,7 +8,7 @@ const metrics = [
   },
   {
     id: 2,
-    stat: "100+",
+    stat: "111+",
     emphasis: "Free Fertility Awareness Camps",
   },
   {
@@ -30,8 +30,8 @@ const Stat = () => {
         <div className="h-full w-full xl:grid xl:grid-cols-2">
           <div className="h-full xl:relative xl:col-start-2">
             <img
-              className="h-full w-full object-cover opacity-40 xl:absolute xl:inset-0"
-              src="https://images.unsplash.com/photo-1501901609772-df0848060b33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              className="h-full w-full object-cover opacity-70 xl:absolute xl:inset-0"
+              src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643272924/Home/Our_never_ending_s0dbde.webp"
               alt="People working on laptops"
             />
             <div
@@ -60,7 +60,7 @@ const Stat = () => {
                   {item.stat}
                 </span>
                 <span className="mt-1 block text-base text-brandliteGray">
-                  <span className="font-medium text-brandDark">
+                  <span className="font-medium text-brandDark font-content">
                     {item.emphasis}
                   </span>{" "}
                 </span>

@@ -19,7 +19,7 @@ const IndexPage = ({ doctors }) => {
           <Tab.Group vertical>
             <Tab.List
               className={
-                "flex flex-wrap lg:flex-nowrap md:space-x-1 bg-brandDark rounded-xl"
+                "flex flex-wrap lg:flex-nowrap md:space-x-1 bg-brandPink rounded-xl p-1"
               }
             >
               <Tab
@@ -28,8 +28,8 @@ const IndexPage = ({ doctors }) => {
                     "w-full py-2.5 text-sm  font-medium text-brandPink rounded-lg",
                     "focus:outline-none",
                     selected
-                      ? "bg-gray-100 ring-2 ring-brandPink shadow"
-                      : "text-gray-200 hover:bg-brandliteGray hover:text-white"
+                      ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
+                      : "text-gray-100 hover:bg-brandPink3 hover:text-white"
                   )
                 }
               >
@@ -43,8 +43,8 @@ const IndexPage = ({ doctors }) => {
                     "w-full py-2.5 text-sm  font-medium text-brandPink rounded-lg",
                     "focus:outline-none",
                     selected
-                      ? "bg-gray-100 ring-2 ring-brandPink shadow"
-                      : "text-gray-200 hover:bg-brandliteGray hover:text-white"
+                      ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
+                      : "text-gray-100 hover:bg-brandPink3 hover:text-white"
                   )
                 }
               >
@@ -58,8 +58,8 @@ const IndexPage = ({ doctors }) => {
                     "w-full py-2.5 text-sm font-medium text-brandPink rounded-lg",
                     "focus:outline-none",
                     selected
-                      ? "bg-gray-100 ring-2 ring-brandPink shadow-xl"
-                      : "text-gray-200 hover:bg-brandliteGray  hover:text-white"
+                      ? "bg-gray-100 ring-2 ring-brandPink2 shadow-xl"
+                      : "text-gray-100 hover:bg-brandPink3  hover:text-white"
                   )
                 }
               >
@@ -73,8 +73,8 @@ const IndexPage = ({ doctors }) => {
                     "w-full py-2.5 text-sm font-medium text-brandPink rounded-lg",
                     "focus:outline-none",
                     selected
-                      ? "bg-gray-100 ring-2 ring-brandPink shadow-xl"
-                      : "text-gray-200 hover:bg-brandliteGray  hover:text-white"
+                      ? "bg-gray-100 ring-2 ring-brandPink2 shadow-xl"
+                      : "text-gray-100 hover:bg-brandPink3  hover:text-white"
                   )
                 }
               >
@@ -88,8 +88,8 @@ const IndexPage = ({ doctors }) => {
                     "w-full py-2.5 text-sm font-medium text-brandPink rounded-lg",
                     "focus:outline-none",
                     selected
-                      ? "bg-gray-100 ring-2 ring-brandPink shadow-xl"
-                      : "text-gray-200 hover:bg-brandliteGray  hover:text-white"
+                      ? "bg-gray-100 ring-2 ring-brandPink2 shadow-xl"
+                      : "text-gray-200 hover:bg-brandPink3  hover:text-white"
                   )
                 }
               >
@@ -108,6 +108,7 @@ const IndexPage = ({ doctors }) => {
                         height="100%"
                         className="absolute inset-0"
                         frameBorder="0"
+                        loading="lazy"
                         title="map"
                         marginHeight="0"
                         marginWidth="0"
@@ -166,25 +167,25 @@ const IndexPage = ({ doctors }) => {
                         {doctors.map((item) => {
                           if (item.location.includes("HanumanthaNagar")) {
                             return (
-                              <div className="text-center" key={item.id}>
-                                <Link href={`/doctors/${item.slug}`} passHref>
+                              <div className="text-center" key={item?.id}>
+                                <Link href={`/doctors/${item?.slug}`} passHref>
                                   <a>
                                     <div className="space-y-4">
                                       <img
                                         className="mx-auto h-40 w-40 my-auto rounded-full mt-4"
-                                        src={item.image.url}
-                                        alt={item.name}
+                                        src={item?.image.url}
+                                        alt={item?.name}
                                       />
                                       <div className="space-y-4">
                                         <div className="text-lg leading-6 font-medium space-y-1">
                                           <h3 className="text-brandDark font-content">
-                                            {item.name}
+                                            {item?.name}
                                           </h3>
                                           <p className="text-brandPurple text-sm font-content">
-                                            {item.qualification}
+                                            {item?.qualification}
                                           </p>
                                           <p className="text-brandPink text-sm font-content">
-                                            {item.designation}
+                                            {item?.designation}
                                           </p>
                                         </div>
                                       </div>
@@ -209,6 +210,7 @@ const IndexPage = ({ doctors }) => {
                         height="100%"
                         className="absolute inset-0"
                         frameBorder="0"
+                        loading="lazy"
                         title="map"
                         marginHeight="0"
                         marginWidth="0"
@@ -309,6 +311,7 @@ const IndexPage = ({ doctors }) => {
                         height="100%"
                         className="absolute inset-0"
                         frameBorder="0"
+                        loading="lazy"
                         title="map"
                         marginHeight="0"
                         marginWidth="0"
@@ -410,6 +413,7 @@ const IndexPage = ({ doctors }) => {
                         height="100%"
                         className="absolute inset-0"
                         frameBorder="0"
+                        loading="lazy"
                         title="map"
                         marginHeight="0"
                         marginWidth="0"
@@ -511,6 +515,7 @@ const IndexPage = ({ doctors }) => {
                         height="100%"
                         className="absolute inset-0"
                         frameBorder="0"
+                        loading="lazy"
                         title="map"
                         marginHeight="0"
                         marginWidth="0"
