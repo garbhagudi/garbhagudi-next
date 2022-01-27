@@ -74,8 +74,8 @@ const Nav = () => {
             <div className="-mr-2 flex xl:hidden">
               <button className="mt-6 mr-4">
                 <a
-                  href="#"
-                  className="bg-brandPink hover:bg-gray-900 text-white px-3 py-2 rounded-2xl text-xs font-bold font-inter"
+                  href="https://garbhagudi-ivf.com/contact-us"
+                  className="bg-brandPink hover:bg-gray-800 text-white px-3 py-2 rounded-2xl text-xs font-bold font-content"
                 >
                   Book Now
                 </a>

@@ -406,7 +406,7 @@ module.exports = {
       inter: "Inter",
       kan: "Baloo Tamma 2",
       Noto: "Noto Sans Display",
-      qs: "Quicksand",
+      qs: "Nunito",
       heading: "B612",
       content: "Nunito",
       benne: "Benne",
