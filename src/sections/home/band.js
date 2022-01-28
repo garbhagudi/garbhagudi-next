@@ -6,7 +6,7 @@ const Band = () => {
       <span className="text-xl md:text-2xl block text-center mx-auto font-benne font-bold">
         <span className="block md:inline-block">
           <span className="text-brandPink">ಬಾಳಿಗೊಂದು ಬೇಕು </span>{" "}
-          <span className="text-brandPurple"> ಕರುಳಿನ ಕುಡಿ </span>{" "}
+          <span className="text-brandPurple"> ಕರುಳಿನಾ ಕುಡಿ </span>{" "}
         </span>{" "}
         <span className="block md:inline-block">
           <span className="text-brandPink">ನಿಮ್ಮ ಕನಸನ್ನು ನನಸಾಗಿಸುತ್ತದೆ </span>{" "}

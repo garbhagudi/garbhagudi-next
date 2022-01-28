@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "sections/about/header";
+import CoreVision from "sections/about/coreVision";
 import { gql, GraphQLClient } from "graphql-request";
 import Link from "next/link";
 
@@ -51,6 +52,7 @@ const Overview = ({ directors }) => {
               </ul>
             </div>
           </div>
+          <CoreVision />
         </div>
       </div>
     </div>

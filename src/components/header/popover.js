@@ -5,26 +5,28 @@ import Link from "next/link";
 
 const contact = [
   {
-    name: "Upcoming Camps",
-    description: "Measure actions your users take",
+    name: "GG Care",
     href: "##",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264796/Icons/Contact/Up_coming_camps_pczhfy.svg",
   },
+
   {
     name: "Careers",
-    description: "Create your own targeted content",
     href: "/careers",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264774/Icons/Contact/Careers_cgpaic.svg",
   },
   {
     name: "Training Program",
-    description: "Treatment Options",
     href: "https://ggirhr.com",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264793/Icons/Contact/Training_Program_dh9imv.svg",
   },
   {
+    name: "Upcoming Camps",
+    href: "##",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264796/Icons/Contact/Up_coming_camps_pczhfy.svg",
+  },
+  {
     name: "Partnership",
-    description: "Treatment Options",
     href: "/contact/partnership",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264809/Icons/Contact/Partnership_srnnr9.svg",
   },
@@ -74,27 +76,27 @@ const Location = [
   {
     name: "Hanumanthanagar",
     href: "/locations/hanumanthanagar",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264727/Icons/Locations/Hanumanthanagar_erb1wp.svg",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351546/Icons/Locations/Hanumanthanagar_ykripm.svg",
   },
   {
     name: "Kalyan Nagar",
     href: "/locations/kalyan-nagar",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264732/Icons/Locations/Kalyan_Nagar_hddo2g.svg",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351546/Icons/Locations/Kalyan_Nagar_ivtier.svg",
   },
   {
     name: "South-End Circle",
     href: "/locations/jayanagar",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264743/Icons/Locations/South_End_Circle_hooc8w.svg",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/South_End_Circle_l3ffwj.svg",
   },
   {
     name: "Electronic City",
     href: "/locations/electronic-city",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264724/Icons/Locations/Electronic_City_datd3q.svg",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/Electronic_City_xntwob.svg",
   },
   {
     name: "Marathahalli",
     href: "/locations/marathahalli",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264737/Icons/Locations/Marathahalli_io6mbb.svg",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/Marathahalli_p99ljc.svg",
   },
 ];
 
@@ -103,6 +105,16 @@ const valueAddedServices = [
     name: "High Success Rates",
     href: "/features/success-rates-of-ivf",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841374/Icons/Why%20GarbhaGudi/Success_Rate_abmaf0.svg",
+  },
+  {
+    name: "World-Class Care",
+    href: "/features/world-class-fertility-care",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840286/Icons/Features/World_Class_Fertility_Care_un83f6.svg",
+  },
+  {
+    name: "Top Fertility Specialists",
+    href: "/locations/fertility-experts",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840305/Icons/Features/Top_Fertility_Specialists_zkyl9x.svg",
   },
   {
     name: "Afforbable Treatments",
@@ -115,9 +127,24 @@ const valueAddedServices = [
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841451/Icons/Why%20GarbhaGudi/Holistic_Approach_sxh54y.svg",
   },
   {
+    name: "Financing Options",
+    href: "/features/financing-options",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840329/Icons/Features/Financial_Options_rrv8hi.svg",
+  },
+  {
+    name: "Treatment Protocols",
+    href: "/features/treatment-protocols",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840329/Icons/Features/Financial_Options_rrv8hi.svg",
+  },
+  {
     name: "IVF from Home",
     href: "/features/ivf-from-home",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841462/Icons/Why%20GarbhaGudi/IVF_from_Home_qriw7n.svg",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840352/Icons/Features/Treatment_Protocols_hll4cu.svg",
+  },
+  {
+    name: "Best in Class Facilities",
+    href: "/features/best-in-class-facilities",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840352/Icons/Features/Treatment_Protocols_hll4cu.svg",
   },
   {
     name: "Paripoorna",
@@ -158,6 +185,16 @@ const aboutUs = [
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839012/Icons/About/Our_Fertility_Experts_bxsrrh.svg",
   },
   {
+    name: "Media",
+    href: "/locations/media",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839012/Icons/About/Our_Fertility_Experts_bxsrrh.svg",
+  },
+  {
+    name: "Corporate Social Responsibility",
+    href: "https://garbhagnan.org",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839012/Icons/About/Our_Fertility_Experts_bxsrrh.svg",
+  },
+  {
     name: "Awards & Accolades",
     href: "/about/best-ivf-fertility-hospital-in-india",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/Awards_Accorlads_z68rlr.svg",
@@ -187,9 +224,9 @@ export function About() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-96 max-w-sm px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
+            <Popover.Panel className="absolute z-10 w-screen max-w-md px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
               <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-1">
+                <div className="relative grid gap-8 bg-white p-5 grid-cols-2 lg:grid-cols-2">
                   {aboutUs.map((item) => (
                     <a
                       key={item.name}
@@ -243,9 +280,9 @@ export function Treatment() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
-              <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-3">
+            <Popover.Panel className="absolute z-10 w-screen max-w-lg px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
+              <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
+                <div className="relative grid gap-8 bg-white p-7 grid-cols-2 lg:grid-cols-3">
                   {valueAddedServices.map((item) => (
                     <a
                       key={item.name}
@@ -298,8 +335,8 @@ export function KnowledgeCenter() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-96 px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
-              <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+            <Popover.Panel className="absolute z-10 w-96 px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
+              <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-1">
                   {Resources.map((item) => (
                     <Link key={item.name} href={item.href} passHref>
@@ -351,8 +388,8 @@ export function Contact() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-96 px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
-              <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+            <Popover.Panel className="absolute z-10 w-96 px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
+              <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-4 lg:grid-cols-1">
                   {contact.map((item) => (
                     <a
@@ -366,9 +403,6 @@ export function Contact() {
                       <div className="ml-4">
                         <p className="text-sm font-medium text-gray-900">
                           {item.name}
-                        </p>
-                        <p className="text-sm text-gray-500">
-                          {item.description}
                         </p>
                       </div>
                     </a>
@@ -406,8 +440,8 @@ export function Locations() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-96 px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
-              <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+            <Popover.Panel className="absolute z-10 w-96 px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
+              <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-1">
                   {Location.map((item) => (
                     <a
