@@ -9,7 +9,6 @@
     "export": "next export"
   },
   "dependencies": {
-    "@brainhubeu/react-carousel": "^2.0.4",
     "@graphcms/rich-text-react-renderer": "^0.4.0",
     "@headlessui/react": "^1.4.2",
     "@tailwindcss/aspect-ratio": "^0.4.0",
@@ -23,7 +22,8 @@
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
     "react-lite-youtube-embed": "^2.1.0",
-    "react-multi-carousel": "^2.6.5"
+    "react-multi-carousel": "^2.6.5",
+    "react-social-icons": "^5.9.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.1",
