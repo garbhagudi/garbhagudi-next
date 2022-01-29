@@ -2,14 +2,14 @@ import { HiNewspaper, HiPhone, HiSupport } from "react-icons/hi";
 
 const supportLinks = [
   {
-    name: "Blogs",
+    name: "Chat Support",
     href: "#",
     description:
       "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
     icon: HiNewspaper,
   },
   {
-    name: "Online Consultation",
+    name: "Call Support",
     href: "#",
     description:
       "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="absolute inset-0">
           <img
             className="w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
+            src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643459251/Banner/GG_Care_vgti5c.webp"
             alt=""
           />
           <div
@@ -41,13 +41,12 @@ const Hero = () => {
           />
         </div>
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl font-heading">
-            Support
+          <h1 className="text-xl font-extrabold tracking-normal text-white md:text-3xl lg:text-5xl font-heading">
+            GG CARE | Committed to Couple Delight
           </h1>
           <p className="mt-6 max-w-3xl text-xl text-gray-300 font-content">
-            Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate
-            id malesuada non. Cras aliquet purus dui laoreet diam sed lacus,
-            fames. Dui, amet, nec sit pulvinar.
+            Reach out with your questions, concerns and challenges. Or just to
+            say hi. We{`'`}re always standing by and eager to help.
           </p>
         </div>
       </div>

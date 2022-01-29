@@ -7,12 +7,14 @@ import Overview from "sections/home/overview";
 import Testimonial from "sections/home/testimonial";
 import Video from "sections/home/video";
 import Stat from "../sections/home/stat";
+import Band2 from "./home/band2";
 
 const HomeComponent = () => {
   return (
     <div>
       <Band />
       <Hero />
+      <Band2 />
       <Overview />
       <Video />
       <Features />

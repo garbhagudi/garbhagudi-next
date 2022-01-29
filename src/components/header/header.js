@@ -63,7 +63,10 @@ const Nav = () => {
                     <Locations />
                   </span>
 
-                  <Link href="https://garbhagudi-ivf.com/contact-us" passHref>
+                  <Link
+                    href="https://consult.bestdocapp.com/home/GARBHAGUDI"
+                    passHref
+                  >
                     <span className="text-white bg-brandPink font-semibold px-3 py-2 rounded-2xl text-sm font-content cursor-pointer hover:bg-brandPink3">
                       Book an Appointment
                     </span>
@@ -74,7 +77,7 @@ const Nav = () => {
             <div className="-mr-2 flex xl:hidden">
               <button className="mt-6 mr-4">
                 <a
-                  href="https://garbhagudi-ivf.com/contact-us"
+                  href="https://consult.bestdocapp.com/home/GARBHAGUDI"
                   className="bg-brandPink hover:bg-gray-800 text-white px-3 py-2 rounded-2xl text-xs font-bold font-content"
                 >
                   Book Now
@@ -159,7 +162,10 @@ const Nav = () => {
                 <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
                   <Locations />
                 </span>
-                <Link href="https://garbhagudi-ivf.com/contact-us" passHref>
+                <Link
+                  href="https://consult.bestdocapp.com/home/GARBHAGUDI"
+                  passHref
+                >
                   <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content cursor-pointer">
                     Book an Appointment
                   </span>

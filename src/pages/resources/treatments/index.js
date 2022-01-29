@@ -13,10 +13,6 @@ const IndexPage = ({ treatments }) => {
       <div className="text-center text-4xl font-heading pt-12 font-semibold">
         Treatment Options
       </div>
-      <p className="max-w-7xl mx-auto text-center pt-6 font-semibold font-qs">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod eaque
-        alias illo delectus harum recusandae.
-      </p>
       <div className="w-full max-w-7xl px-2 py-16 sm:px-0">
         <Tab.Group>
           <Tab.List className={"flex p-1 space-x-1 bg-brandPink rounded-xl"}>

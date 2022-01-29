@@ -8,9 +8,9 @@ const IndexPage = ({ diagnoses }) => {
       <div className="max-w-7xl mx-auto text-center text-4xl font-heading pt-12 font-semibold">
         Diagnosis
       </div>
-      <p className="max-w-7xl mx-auto text-center pt-6 font-semibold">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod eaque
-        alias illo delectus harum recusandae.
+      <p className="max-w-7xl mx-auto text-center pt-6 font-semibold font-content px-2">
+        There are a number of diagnostic tools available to help pinpoint the
+        cause of infertility. Some of them may include:
       </p>
       <div className="max-w-7xl mx-auto py-6 flex sm:py-12">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-10 mx-auto">

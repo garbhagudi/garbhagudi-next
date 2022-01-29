@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const contact = [
   {
-    name: "GG Care",
+    name: "GG CARE",
     href: "/gg-care",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264796/Icons/Contact/Up_coming_camps_pczhfy.svg",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643459544/Icons/Contact/GG_Care_e7e1pc.svg",
   },
 
   {

@@ -4,26 +4,29 @@ import { SocialIcon } from "react-social-icons";
 
 const navigation = {
   about: [
-    { name: "Vision & Mission", href: "#" },
-    { name: "Directors", href: "#" },
-    { name: "Awards & Accolades", href: "#" },
-    { name: "Dr Asha S Vijay", href: "#" },
+    { name: "Vision & Mission", href: "/about/vision-and-mission" },
+    { name: "Directors", href: "/about/overview" },
+    {
+      name: "Awards & Accolades",
+      href: "/about/best-ivf-fertility-hospital-in-india",
+    },
+    { name: "Dr Asha S Vijay", href: "https://drashasvijay.com" },
   ],
   support: [
-    { name: "GG Care", href: "#" },
-    { name: "Resources", href: "#" },
-    { name: "Contact Us", href: "#" },
+    { name: "GG CARE", href: "/gg-care" },
+    { name: "Diagnosis Options", href: "/resources/diagnosis" },
+    { name: "Treatment Options", href: "/resources/treatments" },
+    { name: "Contact Us", href: "/gg-care" },
   ],
   company: [
-    { name: "GarbhaGudi IVF", href: "#" },
-    { name: "GGIRHR", href: "#" },
-    { name: "GarbhaGudi Pharma", href: "#" },
-    { name: "GarbhaGnan Foundation", href: "#" },
+    { name: "GarbhaGudi IVF", href: "/about/overview" },
+    { name: "GGIRHR", href: "https://ggirhr.com" },
+    { name: "GarbhaGnan Foundation", href: "https://garbhagnan.org" },
   ],
   legal: [
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
-    { name: "Refunds", href: "#" },
+    { name: "Privacy", href: "/terms/privacy-policy" },
+    { name: "Terms", href: "/terms/terms-and-conditions" },
+    { name: "Refunds", href: "/terms/refunds" },
   ],
 };
 
@@ -47,12 +50,11 @@ export default function Footer() {
                 <ul className="mt-4 space-y-2 text-sm">
                   {navigation.about.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className=" text-brandDark hover:text-brandPink hover:underline"
-                      >
-                        {item.name}
-                      </a>
+                      <Link href={item.href} passHref>
+                        <span className=" text-brandDark hover:text-brandPink hover:underline cursor-pointer">
+                          {item.name}
+                        </span>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -64,12 +66,11 @@ export default function Footer() {
                 <ul className="mt-4 space-y-2 text-sm">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-brandDark hover:text-brandPink hover:underline"
-                      >
-                        {item.name}
-                      </a>
+                      <Link passHref href={item.href}>
+                        <span className=" text-brandDark hover:text-brandPink hover:underline cursor-pointer">
+                          {item.name}
+                        </span>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -78,17 +79,16 @@ export default function Footer() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold text-brandliteGray tracking-wider uppercase">
-                  Company
+                  Organisation
                 </h3>
                 <ul className="mt-4 space-y-2 text-sm">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className=" text-brandDark hover:text-brandPink hover:underline"
-                      >
-                        {item.name}
-                      </a>
+                      <Link passHref href={item.href}>
+                        <span className=" text-brandDark hover:text-brandPink hover:underline cursor-pointer">
+                          {item.name}
+                        </span>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -100,12 +100,11 @@ export default function Footer() {
                 <ul className="mt-4 space-y-2 text-sm">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className=" text-brandDark hover:text-brandPink hover:underline"
-                      >
-                        {item.name}
-                      </a>
+                      <Link passHref href={item.href}>
+                        <span className=" text-brandDark hover:text-brandPink hover:underline cursor-pointer">
+                          {item.name}
+                        </span>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -125,7 +124,7 @@ export default function Footer() {
             style={{ width: "40px", height: "40px" }}
           />
           <SocialIcon
-            url="https://in.linkedin.com/company/garbhagudi-ivf-center"
+            url="https://www.linkedin.com/company/garbagudi"
             style={{ width: "40px", height: "40px" }}
           />
           <SocialIcon

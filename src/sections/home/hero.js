@@ -8,9 +8,9 @@ const Hero = () => {
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
             <div>
-              <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-brandDark sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
+              <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-brandDark sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl font-heading">
                 <span className="md:block">Experience the Joy</span>{" "}
-                <span className="text-brandPink md:block">
+                <span className="text-brandPink md:block md:mt-2">
                   of Being Complete
                 </span>
               </h1>

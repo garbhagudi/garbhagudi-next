@@ -8,9 +8,10 @@ const IndexPage = ({ causes }) => {
       <div className="max-w-7xl mx-auto text-center text-4xl font-heading pt-12 font-semibold">
         Causes of Infertility
       </div>
-      <p className="max-w-7xl mx-auto text-center pt-6 font-semibold">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod eaque
-        alias illo delectus harum recusandae.
+      <p className="max-w-7xl mx-auto text-center pt-6 font-semibold font-content">
+        Infertility may be caused by a number of different factors, in either
+        the male or female reproductive systems. However, it is sometimes not
+        possible to explain the causes of infertility.
       </p>
       <div className="max-w-7xl mx-auto py-6 flex sm:py-12">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-10 mx-auto">
