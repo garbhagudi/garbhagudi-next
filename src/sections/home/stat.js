@@ -13,7 +13,7 @@ const metrics = [
   },
   {
     id: 3,
-    stat: "66%",
+    stat: "65-73%",
     emphasis: "IVF Success Rate",
   },
   {
@@ -44,7 +44,7 @@ const Stat = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
         <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
           <p className="mt-3 text-3xl font-extrabold text-brandDark font-heading">
-            Our Never-ending Success
+            Our Ever-Growing Success
           </p>
           <p className="mt-5 text-lg text-brandDark font-content">
             GarbhaGudi is a place where dreams come alive, hopes never fade, and

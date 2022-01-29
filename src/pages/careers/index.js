@@ -8,18 +8,20 @@ const IndexPage = ({ careers }) => {
       <div className="text-center text-4xl font-heading pt-12 font-semibold">
         Careers at GarbhaGudi
       </div>
-      <p className="max-w-7xl mx-auto py-2 mt-4 font-content text-lg">
-        At GarbhaGudi, we’re all on a mission to transform the way infertility
-        is treated, one patient at a time.{" "}
-      </p>
-      <div className="max-w-7xl mx-auto mt-2 font-content text-lg">
-        We go against the status quo and make actual transformation in patients’
-        lives. All our employees are empowered to do the best work of their
-        lives by making daily impact and growing quickly.
-      </div>
-      <div className="max-w-7xl mx-auto mt-2 font-content text-lg">
-        If you feel that you need an organization where you can do your best
-        work, call us now!
+      <div className="px-2">
+        <p className="max-w-7xl mx-auto py-2 mt-4 font-content text-lg">
+          At GarbhaGudi, we’re all on a mission to transform the way infertility
+          is treated, one patient at a time.{" "}
+        </p>
+        <div className="max-w-7xl mx-auto mt-2 font-content text-lg">
+          We go against the status quo and make actual transformation in
+          patients’ lives. All our employees are empowered to do the best work
+          of their lives by making daily impact and growing quickly.
+        </div>
+        <div className="max-w-7xl mx-auto mt-2 font-content text-lg">
+          If you feel that you need an organization where you can do your best
+          work, call us now!
+        </div>
       </div>
       <div className="text-center text-2xl font-heading pt-8 font-semibold">
         Current Opportunities

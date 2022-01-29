@@ -48,7 +48,7 @@ const features = [
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840329/Icons/Features/Financial_Options_rrv8hi.svg",
     content:
       "0% interest for patients when they cannot manage the finances to meet the cost of procedures.",
-    link: "/features/financial-options",
+    link: "/features/financing-options",
   },
   {
     id: 7,
