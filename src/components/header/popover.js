@@ -6,7 +6,7 @@ import Link from "next/link";
 const contact = [
   {
     name: "GG Care",
-    href: "##",
+    href: "/gg-care",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264796/Icons/Contact/Up_coming_camps_pczhfy.svg",
   },
 
@@ -187,12 +187,12 @@ const aboutUs = [
   {
     name: "Media",
     href: "/locations/media",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839012/Icons/About/Our_Fertility_Experts_bxsrrh.svg",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643442839/Icons/About/Media_nyook4.svg",
   },
   {
-    name: "Corporate Social Responsibility",
+    name: "CSR",
     href: "https://garbhagnan.org",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839012/Icons/About/Our_Fertility_Experts_bxsrrh.svg",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643442833/Icons/About/CSR_qjlfzx.svg",
   },
   {
     name: "Awards & Accolades",

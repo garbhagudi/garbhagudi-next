@@ -1,12 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaYoutube,
-  FaMailBulk,
-} from "react-icons/fa";
+import { SocialIcon } from "react-social-icons";
 
 const navigation = {
   about: [
@@ -31,38 +25,14 @@ const navigation = {
     { name: "Terms", href: "#" },
     { name: "Refunds", href: "#" },
   ],
-  social: [
-    {
-      name: "Facebook",
-      href: "#",
-      icon: <FaFacebookF />,
-    },
-    {
-      name: "Instagram",
-      href: "#",
-      icon: <FaInstagram />,
-    },
-    {
-      name: "Twitter",
-      href: "#",
-      icon: <FaTwitter />,
-    },
-    {
-      name: "YouTube",
-      href: "#",
-      icon: <FaYoutube />,
-    },
-    {
-      name: "E-mail",
-      href: "#",
-      icon: <FaMailBulk />,
-    },
-  ],
 };
 
 export default function Footer() {
   return (
-    <footer className="bg-white font-content" aria-labelledby="footerHeading">
+    <footer
+      className="bg-neutral-50 font-content"
+      aria-labelledby="footerHeading"
+    >
       <h2 id="footerHeading" className="sr-only">
         Footer
       </h2>
@@ -145,8 +115,35 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto border-t border-gray-200 ">
+        <div className="mt-8 space-x-2 flex items-ceter justify-center">
+          <SocialIcon
+            url="https://www.youtube.com/c/GarbhaGudiIVFCentre"
+            style={{ width: "40px", height: "40px" }}
+          />
+          <SocialIcon
+            url="https://www.facebook.com/garbhagudiIVF/"
+            style={{ width: "40px", height: "40px" }}
+          />
+          <SocialIcon
+            url="https://in.linkedin.com/company/garbhagudi-ivf-center"
+            style={{ width: "40px", height: "40px" }}
+          />
+          <SocialIcon
+            url="https://api.whatsapp.com/send/?phone=918884183338&text=Hi."
+            style={{ width: "40px", height: "40px" }}
+          />
+          <SocialIcon
+            url="https://twitter.com/garbhagudiivf"
+            style={{ width: "40px", height: "40px" }}
+          />
+          <SocialIcon
+            url="mailto:dreams@garbhagudi.com"
+            style={{ width: "40px", height: "40px" }}
+          />
+        </div>
         <p className="font-content text-gray-900 text-center py-8">
-          &copy; 2021 GarbhaGudi IVF Centre, Inc. All rights reserved.
+          &copy; {new Date().getFullYear()} GarbhaGudi IVF Centre, Inc. All
+          rights reserved.
         </p>
       </div>
     </footer>
