@@ -15,11 +15,22 @@ const Contact = () => {
                 <dl className="mt-2 text-base text-gray-500">
                   <div>
                     <dt className="sr-only">Email</dt>
-                    <dd>dreams@garbhagudi.com</dd>
+                    <dd>
+                      <a
+                        href="mailto:dreams@garbhagudi.com"
+                        className="text-purple-800"
+                      >
+                        dreams@garbhagudi.com
+                      </a>
+                    </dd>
                   </div>
                   <div className="mt-1">
                     <dt className="sr-only">Phone number</dt>
-                    <dd>+1 (555) 123-4567</dd>
+                    <dd>
+                      <a href="+918880000909" className="text-brandPink2">
+                        +91 888 000 0909
+                      </a>
+                    </dd>
                   </div>
                 </dl>
               </div>
@@ -80,8 +91,16 @@ const Contact = () => {
                   Hanumanthanagar
                 </h3>
                 <div className="mt-2 text-base text-gray-500">
-                  <p>4556 Brendan Ferry</p>
-                  <p className="mt-1">Los Angeles, CA 90210</p>
+                  <p className="mt-1">
+                    <a href="tel:+91" className="text-brandPink2">
+                      +91
+                    </a>
+                  </p>
+                  <p>
+                    Subhasri Complex, 210/A, Kumaraswamy Temple Rd, 2nd Block,
+                    Phase 1, Banashankari Stage I, Banashankari,
+                  </p>
+                  <p className="mt-1">Bengaluru, Karnataka 560050</p>
                 </div>
               </div>
               <div>
@@ -89,8 +108,16 @@ const Contact = () => {
                   Kalyan Nagar
                 </h3>
                 <div className="mt-2 text-base text-gray-500">
-                  <p>886 Walter Streets</p>
-                  <p className="mt-1">New York, NY 12345</p>
+                  <p className="mt-1">
+                    <a href="tel:+91" className="text-brandPink2">
+                      +91
+                    </a>
+                  </p>
+                  <p>
+                    Park Landing, 5AC-709, Outer Ring Rd, Balachandra Layout,
+                    HRBR Layout 2nd Block, Chelekare, Extension,
+                  </p>
+                  <p className="mt-1">Bengaluru, Karnataka 560043</p>
                 </div>
               </div>
               <div>
@@ -98,8 +125,15 @@ const Contact = () => {
                   South End Circle
                 </h3>
                 <div className="mt-2 text-base text-gray-500">
-                  <p>7363 Cynthia Pass</p>
-                  <p className="mt-1">Toronto, ON N3Y 4H8</p>
+                  <p className="mt-1">
+                    <a href="tel:+91" className="text-brandPink2">
+                      +91
+                    </a>
+                  </p>
+                  <p>
+                    South End Circle, 26, Pattalamma Temple Rd, Basavanagudi,
+                  </p>
+                  <p className="mt-1">Bengaluru, Karnataka 560004</p>
                 </div>
               </div>
               <div>
@@ -107,8 +141,16 @@ const Contact = () => {
                   Electromic City
                 </h3>
                 <div className="mt-2 text-base text-gray-500">
-                  <p>726 Mavis Island</p>
-                  <p className="mt-1">Chicago, IL 60601</p>
+                  <p className="mt-1">
+                    <a href="tel:+91" className="text-brandPink2">
+                      +91
+                    </a>
+                  </p>
+                  <p>
+                    Ganesh Towers,3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra
+                    Bank, Konappana Agrahara, Electronic City,
+                  </p>
+                  <p className="mt-1">Bengaluru, Karnataka 560100</p>
                 </div>
               </div>
               <div>
@@ -116,8 +158,16 @@ const Contact = () => {
                   Marathahalli
                 </h3>
                 <div className="mt-2 text-base text-gray-500">
-                  <p>726 Mavis Island</p>
-                  <p className="mt-1">Chicago, IL 60601</p>
+                  <p className="mt-1">
+                    <a href="tel:+91" className="text-brandPink2">
+                      +91
+                    </a>
+                  </p>
+                  <p>
+                    4TH floor, Chirag Towers, Born Babies Building, 24 & 64,
+                    Service Rd, next to कलामंदिर, Marathahalli,
+                  </p>
+                  <p className="mt-1">Bengaluru, Karnataka 560037</p>
                 </div>
               </div>
             </div>

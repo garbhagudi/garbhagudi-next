@@ -24,9 +24,9 @@ const navigation = {
     { name: "GarbhaGnan Foundation", href: "https://garbhagnan.org" },
   ],
   legal: [
-    { name: "Privacy", href: "/terms/privacy-policy" },
-    { name: "Terms", href: "/terms/terms-and-conditions" },
-    { name: "Refunds", href: "/terms/refunds" },
+    { name: "Privacy", href: "/legal/privacy-policy" },
+    { name: "Terms", href: "/legal/terms-and-conditions" },
+    { name: "Refund Policy", href: "/legal/refund-policy" },
   ],
 };
 
