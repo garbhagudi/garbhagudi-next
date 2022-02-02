@@ -1,6 +1,7 @@
 import React from "react";
 import { GraphQLClient, gql } from "graphql-request";
 import { RichText } from "@graphcms/rich-text-react-renderer";
+import Head from "next/head";
 
 export const getServerSideProps = async (pageContext) => {
   const url = process.env.ENDPOINT;
@@ -44,6 +45,52 @@ export const getServerSideProps = async (pageContext) => {
 const Career = ({ career }) => {
   return (
     <div>
+      <Head>
+        {/* Primary Tags */}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title> {`${career.position} | GarbhaGudi IVF Centre`}</title>
+        <meta name="title" content=" | GarbhaGudi IVF Centre" />
+        <meta
+          name="description"
+          content="At GarbhaGudi, we’re all on a mission to transform the way infertility is treated, one patient at a time. If you feel that you need an organization where you can do your best work, call us now!"
+        />
+
+        {/* Open Graph / Facebook */}
+
+        <meta
+          property="og:title"
+          content={`${career?.position}| GarbhaGudi IVF Centre`}
+        />
+        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
+        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta
+          property="og:description"
+          content="At GarbhaGudi, we’re all on a mission to transform the way infertility is treated, one patient at a time. If you feel that you need an organization where you can do your best work, call us now!"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Careers_vpudat.jpg"
+        />
+
+        {/* Twitter*/}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta
+          name="twitter:title"
+          content={`${career.position}| GarbhaGudi IVF Centre`}
+        />
+        <meta
+          name="twitter:description"
+          content="At GarbhaGudi, we’re all on a mission to transform the way infertility is treated, one patient at a time. If you feel that you need an organization where you can do your best work, call us now!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Careers_vpudat.jpg"
+        />
+      </Head>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-8 mx-auto flex flex-col">
           <div className="lg:w-4/6 mx-auto">
@@ -65,7 +112,7 @@ const Career = ({ career }) => {
             </div>
             <div className="flex flex-col sm:flex-row mt-10">
               <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                <div className="w-44 h-44 lg:w-48 lg:h-48 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
+                <div className="w-44 h-44 lg:w-48 lg:h-48 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400 border-2 border-brandPink3">
                   <img
                     src={career.image.url}
                     alt={career.position}

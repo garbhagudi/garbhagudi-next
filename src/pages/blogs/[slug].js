@@ -78,7 +78,7 @@ const Blog = ({ blog }) => {
           name="twitter:description"
           content={blog?.content?.text.slice(0, 160)}
         />
-        <meta name="twitter:image" content="URL_FOR_YOUR_IMAGE" />
+        <meta name="twitter:image" content={blog?.image?.url} />
       </Head>
       <div className="relative py-16 bg-white overflow-hidden">
         <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
@@ -188,11 +188,11 @@ const Blog = ({ blog }) => {
           {blog?.title ? (
             <div className="max-w-7xl mx-auto">
               <h1>
-                <span className="block text-base text-center text-brandPink font-semibold tracking-wide uppercase">
-                  {blog?.doctor?.name}
-                </span>
                 <span className="mt-4 block text-2xl text-center leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl font-heading">
                   {blog?.title}
+                </span>
+                <span className="block text-base text-center text-brandPink font-semibold tracking-wide uppercase mt-4">
+                  {blog?.doctor?.name}
                 </span>
               </h1>
               <figure>

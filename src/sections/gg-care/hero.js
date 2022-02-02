@@ -1,26 +1,26 @@
-import { HiNewspaper, HiPhone, HiSupport } from "react-icons/hi";
+import { HiChatAlt, HiPhone, HiCalendar } from "react-icons/hi";
 
 const supportLinks = [
   {
     name: "Chat Support",
     href: "#",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
-    icon: HiNewspaper,
+      "Chat online with our team now from anywhere. We provide you with a seamless and hassle-free online chat experience from the comfort of your home. Get the proper assistance now!",
+    icon: HiChatAlt,
   },
   {
     name: "Call Support",
     href: "#",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
-    icon: HiSupport,
+      "Reach out to us with your questions, concerns, or challenges. We’ll be happy to help you at any time, and we’re always trying to make things easier for you!",
+    icon: HiPhone,
   },
   {
     name: "Book an Appointment",
     href: "#",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
-    icon: HiPhone,
+      "Now book an appointment with any of your nearest locations of GarbhaGudi IVF Centre, and get the best fertility treatments from our experts!",
+    icon: HiCalendar,
   },
 ];
 

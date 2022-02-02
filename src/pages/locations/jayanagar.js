@@ -1,10 +1,57 @@
 import React from "react";
 import { gql, GraphQLClient } from "graphql-request";
 import Link from "next/link";
+import Head from "next/head";
 
 const Jayanagar = ({ doctors }) => {
   return (
     <div>
+      <Head>
+        {/* Primary Tags */}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>South End Circle | GarbhaGudi</title>
+        <meta name="title" content="South End Circle | GarbhaGudi IVF Centre" />
+        <meta
+          name="description"
+          content="GarbhaGudi is a place where dreams come alive, hopes never fade, and possibilities never end. We ceaselessly work to help you cherish the golden moment of holding your little bundles of joy."
+        />
+
+        {/* Open Graph / Facebook */}
+
+        <meta
+          property="og:title"
+          content="South End Circle | GarbhaGudi IVF Centre"
+        />
+        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
+        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta
+          property="og:description"
+          content="GarbhaGudi is a place where dreams come alive, hopes never fade, and possibilities never end. We ceaselessly work to help you cherish the golden moment of holding your little bundles of joy."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277102/Locations/1201x501_SE_sziwh5.jpg"
+        />
+
+        {/* Twitter*/}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta
+          name="twitter:title"
+          content="South End Circle | GarbhaGudi IVF Centre"
+        />
+        <meta
+          name="twitter:description"
+          content="GarbhaGudi is a place where dreams come alive, hopes never fade, and possibilities never end. We ceaselessly work to help you cherish the golden moment of holding your little bundles of joy."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277102/Locations/1201x501_SE_sziwh5.jpg"
+        />
+      </Head>
       <section className="text-gray-600 body-font relative max-w-7xl mx-auto">
         <h1 className="text-center text-2xl md:text-4xl font-heading pt-8 font-bold">
           South End Circle
@@ -116,12 +163,6 @@ const Jayanagar = ({ doctors }) => {
         <h1 className="text-center text-2xl md:text-4xl font-heading py-8 font-bold mx-auto">
           Virtual Tour
         </h1>
-        <p className="text-center font-qs font-semibold">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aut
-          tenetur cumque accusantium ab, ea possimus itaque. Optio quaerat,
-          incidunt, ex eligendi impedit doloremque adipisci, eveniet nulla
-          quibusdam laudantium quam.
-        </p>
         <ul className="mx-auto space-y-0 grid grid-cols-1 sm:gap-x-10 py-8 px-2 lg:grid-cols-3 max-w-7xl">
           <li>
             <div>

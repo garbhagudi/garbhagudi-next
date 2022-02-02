@@ -1,10 +1,60 @@
 import React from "react";
 import { gql, GraphQLClient } from "graphql-request";
 import Link from "next/link";
+import Head from "next/head";
 
 const IndexPage = ({ causes }) => {
   return (
     <div>
+      <Head>
+        {/* Primary Tags */}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Causes for Infertility | GarbhaGudi</title>
+        <meta
+          name="title"
+          content="Causes for Infertility | GarbhaGudi IVF Centre"
+        />
+        <meta
+          name="description"
+          content="Treatment options, procedure details and advanced treatment options for male and female infertility treatment available at GarbhaGudi"
+        />
+
+        {/* Open Graph / Facebook */}
+
+        <meta
+          property="og:title"
+          content="Causes for Infertility | GarbhaGudi IVF Centre"
+        />
+        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
+        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta
+          property="og:description"
+          content="Treatment options, procedure details and advanced treatment options for male and female infertility treatment available at GarbhaGudi"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Cau_Diag_Treat_d0t3vx.jpg"
+        />
+
+        {/* Twitter*/}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta
+          name="twitter:title"
+          content="Causes for Infertility | GarbhaGudi IVF Centre"
+        />
+        <meta
+          name="twitter:description"
+          content="Treatment options, procedure details and advanced treatment options for male and female infertility treatment available at GarbhaGudi"
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Cau_Diag_Treat_d0t3vx.jpg"
+        />
+      </Head>
       <div className="max-w-7xl mx-auto text-center text-4xl font-heading pt-12 font-semibold">
         Causes of Infertility
       </div>

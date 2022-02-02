@@ -20,11 +20,11 @@ const contact = [
     href: "https://ggirhr.com",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264793/Icons/Contact/Training_Program_dh9imv.svg",
   },
-  {
-    name: "Upcoming Camps",
-    href: "##",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264796/Icons/Contact/Up_coming_camps_pczhfy.svg",
-  },
+  // {
+  //   name: "Upcoming Camps",
+  //   href: "##",
+  //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264796/Icons/Contact/Up_coming_camps_pczhfy.svg",
+  // },
   {
     name: "Partnership",
     href: "/contact/partnership",
@@ -58,18 +58,18 @@ const Resources = [
     href: "/resources/treatments",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839802/Icons/Resources/Treatments_kcqops.svg",
   },
-  {
-    name: "Events and Webinars",
-    description: "Live Events",
-    href: "##",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839833/Icons/Resources/Events_Webinars_buec8s.svg",
-  },
-  {
-    name: "FAQ",
-    description: "Frequently Asked Questions",
-    href: "/resources/faq",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264858/Icons/Resources/FAQs_x8rsvf.svg",
-  },
+  // {
+  //   name: "Events and Webinars",
+  //   description: "Live Events",
+  //   href: "##",
+  //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839833/Icons/Resources/Events_Webinars_buec8s.svg",
+  // },
+  // {
+  //   name: "FAQ",
+  //   description: "Frequently Asked Questions",
+  //   href: "/resources/faq",
+  //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264858/Icons/Resources/FAQs_x8rsvf.svg",
+  // },
 ];
 
 const Location = [
@@ -184,11 +184,11 @@ const aboutUs = [
     href: "/locations/fertility-experts",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839012/Icons/About/Our_Fertility_Experts_bxsrrh.svg",
   },
-  {
-    name: "Media",
-    href: "/locations/media",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643442839/Icons/About/Media_nyook4.svg",
-  },
+  // {
+  //   name: "Media",
+  //   href: "/locations/media",
+  //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643442839/Icons/About/Media_nyook4.svg",
+  // },
   {
     name: "CSR",
     href: "https://garbhagnan.org",
@@ -280,7 +280,7 @@ export function Treatment() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-screen max-w-lg px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
+            <Popover.Panel className="absolute z-10 w-screen max-w-lg px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl overflow-auto">
               <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-7 grid-cols-2 lg:grid-cols-3">
                   {valueAddedServices.map((item) => (

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Tab } from "@headlessui/react";
 import { gql, GraphQLClient } from "graphql-request";
+import Head from "next/head";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -10,6 +11,55 @@ function classNames(...classes) {
 const IndexPage = ({ doctors }) => {
   return (
     <div>
+      <Head>
+        {/* Primary Tags */}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Our Fertility Experts | GarbhaGudi</title>
+        <meta
+          name="title"
+          content="Our Fertility Experts | GarbhaGudi IVF Centre"
+        />
+        <meta
+          name="description"
+          content="Our team of fertility specialists has been known for their extensive clinical experience and research contributions and their success in treating the most challenging fertility cases."
+        />
+
+        {/* Open Graph / Facebook */}
+
+        <meta
+          property="og:title"
+          content="Our Fertility Experts | GarbhaGudi IVF Centre"
+        />
+        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
+        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta
+          property="og:description"
+          content="Our team of fertility specialists has been known for their extensive clinical experience and research contributions and their success in treating the most challenging fertility cases."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
+        />
+
+        {/* Twitter*/}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta
+          name="twitter:title"
+          content="Our Fertility Experts | GarbhaGudi IVF Centre"
+        />
+        <meta
+          name="twitter:description"
+          content="Our team of fertility specialists has been known for their extensive clinical experience and research contributions and their success in treating the most challenging fertility cases."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
+        />
+      </Head>
       <div className="max-w-7xl mx-auto">
         <div className="text-center text-4xl font-heading pt-12 font-semibold">
           Our Fertility Experts

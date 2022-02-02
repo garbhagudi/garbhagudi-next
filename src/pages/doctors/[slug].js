@@ -1,6 +1,7 @@
 import React from "react";
 import { GraphQLClient, gql } from "graphql-request";
 import { RichText } from "@graphcms/rich-text-react-renderer";
+import Head from "next/head";
 
 export const getServerSideProps = async (pageContext) => {
   const url = process.env.ENDPOINT;
@@ -18,6 +19,7 @@ export const getServerSideProps = async (pageContext) => {
         name
         bio {
           raw
+          text
         }
         slug
         image {
@@ -45,6 +47,46 @@ export const getServerSideProps = async (pageContext) => {
 const Doctor = ({ doctor }) => {
   return (
     <div>
+      <Head>
+        {/* Primary Tags */}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{doctor?.name} | GarbhaGudi</title>
+        <meta
+          name="title"
+          content={`${doctor?.name} | GarbhaGudi IVF Centre`}
+        />
+        <meta name="description" content={doctor?.bio?.text.slice(0, 180)} />
+
+        {/* Open Graph / Facebook */}
+
+        <meta
+          property="og:title"
+          content={`${doctor?.name} | GarbhaGudi IVF Centre`}
+        />
+        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
+        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta
+          property="og:description"
+          content={doctor?.bio?.text.slice(0, 180)}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={doctor?.image.url} />
+
+        {/* Twitter*/}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta
+          name="twitter:title"
+          content={`${doctor?.name} | GarbhaGudi IVF Centre`}
+        />
+        <meta
+          name="twitter:description"
+          content={doctor?.bio?.text.slice(0, 180)}
+        />
+        <meta name="twitter:image" content={doctor?.image.url} />
+      </Head>
       <main className="profile-page">
         <section className="relative block" style={{ height: "500px" }}>
           <div

@@ -18,7 +18,7 @@ const Contact = () => {
                     <dd>
                       <a
                         href="mailto:dreams@garbhagudi.com"
-                        className="text-purple-800"
+                        className="text-purple-800 hover:underline"
                       >
                         dreams@garbhagudi.com
                       </a>
@@ -27,7 +27,10 @@ const Contact = () => {
                   <div className="mt-1">
                     <dt className="sr-only">Phone number</dt>
                     <dd>
-                      <a href="+918880000909" className="text-brandPink2">
+                      <a
+                        href="tel:+918880000909"
+                        className="text-brandPink2 hover:underline"
+                      >
                         +91 888 000 0909
                       </a>
                     </dd>
@@ -41,11 +44,25 @@ const Contact = () => {
                 <dl className="mt-2 text-base text-gray-500">
                   <div>
                     <dt className="sr-only">Email</dt>
-                    <dd>greivences@garbhagudi.com</dd>
+                    <dd>
+                      <a
+                        href="mailto:dreams@garbhagudi.com"
+                        className="text-purple-800 hover:underline"
+                      >
+                        grievance@garbhagudi.com
+                      </a>
+                    </dd>
                   </div>
                   <div className="mt-1">
                     <dt className="sr-only">Phone number</dt>
-                    <dd>+1 (555) 123-4567</dd>
+                    <dd>
+                      <a
+                        href="tel:+918880000909"
+                        className="text-brandPink2 hover:underline"
+                      >
+                        +91 888 000 0909
+                      </a>
+                    </dd>
                   </div>
                 </dl>
               </div>
@@ -56,11 +73,25 @@ const Contact = () => {
                 <dl className="mt-2 text-base text-gray-500">
                   <div>
                     <dt className="sr-only">Email</dt>
-                    <dd>hr@garbhagudi.com</dd>
+                    <dd>
+                      <a
+                        href="mailto:dreams@garbhagudi.com"
+                        className="text-purple-800 hover:underline"
+                      >
+                        hr@garbhagudi.com
+                      </a>
+                    </dd>
                   </div>
                   <div className="mt-1">
                     <dt className="sr-only">Phone number</dt>
-                    <dd>+1 (555) 123-4567</dd>
+                    <dd>
+                      <a
+                        href="tel:+919606002999"
+                        className="text-brandPink2 hover:underline"
+                      >
+                        +91 96060 02999
+                      </a>
+                    </dd>
                   </div>
                 </dl>
               </div>
@@ -71,11 +102,25 @@ const Contact = () => {
                 <dl className="mt-2 text-base text-gray-500">
                   <div>
                     <dt className="sr-only">Email</dt>
-                    <dd>jayaram@garbhagudi.com</dd>
+                    <dd>
+                      <a
+                        href="mailto:dreams@garbhagudi.com"
+                        className="text-purple-800 hover:underline"
+                      >
+                        jayaram@garbhagudi.com
+                      </a>
+                    </dd>
                   </div>
                   <div className="mt-1">
                     <dt className="sr-only">Phone number</dt>
-                    <dd>+1 (555) 123-4567</dd>
+                    <dd>
+                      <a
+                        href="tel:+919980997111"
+                        className="text-brandPink2 hover:underline"
+                      >
+                        +91 99809 97111
+                      </a>
+                    </dd>
                   </div>
                 </dl>
               </div>
@@ -92,8 +137,11 @@ const Contact = () => {
                 </h3>
                 <div className="mt-2 text-base text-gray-500">
                   <p className="mt-1">
-                    <a href="tel:+91" className="text-brandPink2">
-                      +91
+                    <a
+                      href="tel:+919886915556"
+                      className="text-brandPink2 hover:underline"
+                    >
+                      +91 98869 15556
                     </a>
                   </p>
                   <p>
@@ -109,8 +157,11 @@ const Contact = () => {
                 </h3>
                 <div className="mt-2 text-base text-gray-500">
                   <p className="mt-1">
-                    <a href="tel:+91" className="text-brandPink2">
-                      +91
+                    <a
+                      href="tel:+918861433339"
+                      className="text-brandPink2 hover:underline"
+                    >
+                      +91 88614 33339
                     </a>
                   </p>
                   <p>
@@ -126,8 +177,11 @@ const Contact = () => {
                 </h3>
                 <div className="mt-2 text-base text-gray-500">
                   <p className="mt-1">
-                    <a href="tel:+91" className="text-brandPink2">
-                      +91
+                    <a
+                      href="tel:+919972463355"
+                      className="text-brandPink2 hover:underline"
+                    >
+                      +91 99724 63355
                     </a>
                   </p>
                   <p>
@@ -142,8 +196,11 @@ const Contact = () => {
                 </h3>
                 <div className="mt-2 text-base text-gray-500">
                   <p className="mt-1">
-                    <a href="tel:+91" className="text-brandPink2">
-                      +91
+                    <a
+                      href="tel:+918861811116"
+                      className="text-brandPink2 hover:underline"
+                    >
+                      +91 88618 11116
                     </a>
                   </p>
                   <p>
@@ -159,8 +216,11 @@ const Contact = () => {
                 </h3>
                 <div className="mt-2 text-base text-gray-500">
                   <p className="mt-1">
-                    <a href="tel:+91" className="text-brandPink2">
-                      +91
+                    <a
+                      href="tel:+918105181515"
+                      className="text-brandPink2 hover:underline"
+                    >
+                      +91 81051 81515
                     </a>
                   </p>
                   <p>
