@@ -18,14 +18,14 @@ const BlogFooter = () => {
               <div className="max-h-96">
                 <img
                   className="object-cover object-center rounded-3xl shadow-2xl max-h-96 w-96"
-                  src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80"
+                  src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643701776/About/garbhagudi-ivf-center-bangalore-5f3b94a8e4de6_kk97e4.jpg"
                   alt=""
                 />
               </div>
             </div>
           </div>
 
-          <div className="relative bg-brandliteGray lg:col-start-3 lg:row-start-1 lg:col-span-10 rounded-3xl lg:grid lg:grid-cols-10 lg:items-center">
+          <div className="relative bg-brandPurpleDark lg:col-start-3 lg:row-start-1 lg:col-span-10 rounded-3xl lg:grid lg:grid-cols-10 lg:items-center">
             <div
               className="hidden absolute inset-0 overflow-hidden rounded-3xl lg:block"
               aria-hidden="true"
