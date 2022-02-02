@@ -14,13 +14,19 @@ const IndexPage = () => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>GG CARE | GarbhaGudi</title>
-        <meta name="title" content="GG CARE | GarbhaGudi IVF Centre" />
+        <title>GG CARE - Committed to Couple Delight | GarbhaGudi</title>
+        <meta
+          name="title"
+          content="GG CARE - Committed to Couple Delight | GarbhaGudi IVF Centre"
+        />
         <meta name="description" content="" />
 
         {/* Open Graph / Facebook */}
 
-        <meta property="og:title" content=" | GarbhaGudi IVF Centre" />
+        <meta
+          property="og:title"
+          content="GG CARE - Committed to Couple Delight | GarbhaGudi IVF Centre"
+        />
         <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
@@ -37,7 +43,10 @@ const IndexPage = () => {
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@garbhagudiivf" />
-        <meta name="twitter:title" content="GG CARE | GarbhaGudi IVF Centre" />
+        <meta
+          name="twitter:title"
+          content="GG CARE - Committed to Couple Delight | GarbhaGudi IVF Centre"
+        />
         <meta
           name="twitter:description"
           content="Reach out with your questions, concerns and challenges. Or just to say hi. We're always standing by and eager to help."

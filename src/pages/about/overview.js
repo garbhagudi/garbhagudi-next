@@ -38,7 +38,7 @@ const Overview = ({ directors }) => {
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@garbhagudiivf" />
-        <meta name="twitter:title" content=" | GarbhaGudi IVF Centre" />
+        <meta name="twitter:title" content="About | GarbhaGudi IVF Centre" />
         <meta
           name="twitter:description"
           content="GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing problem of infertility."
