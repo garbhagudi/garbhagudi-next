@@ -32,6 +32,7 @@ export const getServerSideProps = async (pageContext) => {
         }
         content {
           raw
+          text
         }
         publishedOn
       }
@@ -58,32 +59,26 @@ const Blog = ({ blog }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{blog?.title} | GarbhaGudi</title>
         <meta name="title" content={`${blog?.title} | GarbhaGudi`} />
-        <meta
-          name="description"
-          content={blog?.content?.raw.children.slice(0, 160)}
-        />
+        <meta name="description" content={blog?.content?.text.slice(0, 160)} />
         {/* Open Graph / Facebook */}
         <meta property="og:title" content={blog?.title} />
         <meta property="og:site_name" content="GarbhaGudi IVF Center" />
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"
-          content={blog?.content?.raw.children.slice(0, 160)}
+          content={blog?.content?.text.slice(0, 160)}
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={blog?.image.url} />
         {/* Twitter*/}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://garbhagudi.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta name="twitter:title" content={`${blog?.title} | GarbhaGudi`} />
         <meta
-          property="twitter:title"
-          content={`${blog?.title} | GarbhaGudi IVF Center`}
+          name="twitter:description"
+          content={blog?.content?.text.slice(0, 160)}
         />
-        <meta
-          property="twitter:description"
-          content={blog?.content?.raw.children.slice(0, 160)}
-        />
-        <meta property="twitter:image" content={blog?.image.url} />
+        <meta name="twitter:image" content="URL_FOR_YOUR_IMAGE" />
       </Head>
       <div className="relative py-16 bg-white overflow-hidden">
         <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
