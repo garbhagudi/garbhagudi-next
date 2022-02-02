@@ -60,28 +60,28 @@ const Blog = ({ blog }) => {
         <meta name="title" content={`${blog?.title} | GarbhaGudi`} />
         <meta
           name="description"
-          content={blog?.content?.raw.children.slice(160)}
+          content={blog?.content?.raw.children.slice(0, 160)}
         />
         {/* Open Graph / Facebook */}
-        <meta property="og:title" content={blog.title} />
+        <meta property="og:title" content={blog?.title} />
         <meta property="og:site_name" content="GarbhaGudi IVF Center" />
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"
-          content={blog?.content?.raw.children.slice(160)}
+          content={blog?.content?.raw.children.slice(0, 160)}
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={blog.image.url} />
+        <meta property="og:image" content={blog?.image.url} />
         {/* Twitter*/}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://garbhagudi.com" />
         <meta
           property="twitter:title"
-          content={`${blog.title} | GarbhaGudi IVF Center`}
+          content={`${blog?.title} | GarbhaGudi IVF Center`}
         />
         <meta
           property="twitter:description"
-          content={blog?.content?.raw.children.slice(160)}
+          content={blog?.content?.raw.children.slice(0, 160)}
         />
         <meta property="twitter:image" content={blog?.image.url} />
       </Head>
@@ -205,8 +205,6 @@ const Blog = ({ blog }) => {
                   className="w-full rounded-lg mt-10 mb-5"
                   src={blog?.image.url}
                   alt={blog?.title}
-                  width={1310}
-                  height={873}
                 />
               </figure>
               <div>

@@ -159,14 +159,11 @@ const Vas = ({ valueAddedService }) => {
                 className="w-full rounded-lg mt-10 mb-5"
                 src={valueAddedService?.image.url}
                 alt={valueAddedService?.title}
-                width={1310}
-                height={873}
               />
             </figure>
             <div>
               <RichText content={valueAddedService?.content.raw.children} />
             </div>
-            <div></div>
           </div>
         ) : (
           <Error statusCode={404} />
