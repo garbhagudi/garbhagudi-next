@@ -27,7 +27,7 @@ const supportLinks = [
       "Now book an appointment with any of your nearest locations of GarbhaGudi IVF Centre, and get the best fertility treatments from our experts!",
     icon: HiCalendar,
     ctaAction: "Book an Appointment",
-    ctaLink: "https://garbhagudi-ivf.com/contact-us",
+    ctaLink: "https://consult.bestdocapp.com/home/GARBHAGUDI",
   },
 ];
 
@@ -38,8 +38,8 @@ const Hero = () => {
       <div className="relative pb-32 bg-gray-800">
         <div className="absolute inset-0">
           <img
-            className="w-full h-full object-cover"
-            src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643459251/Banner/GG_Care_vgti5c.webp"
+            className="w-full h-full object-contain"
+            src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg"
             alt=""
           />
           <div
@@ -60,7 +60,7 @@ const Hero = () => {
 
       {/* Overlapping cards */}
       <section
-        className="-mt-32 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
+        className="-mt-20 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
         aria-labelledby="contact-heading"
       >
         <h2 className="sr-only" id="contact-heading">
