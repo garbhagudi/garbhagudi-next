@@ -67,6 +67,12 @@ const Home = ({ homeData }) => {
           name="twitter:image"
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
         />
+
+        {/* Google */}
+        <meta
+          name="google-site-verification"
+          content="mzhcIRsJx6D4QkbJJp3Tepas8Lyv6sJLWmGb0DvKOrw"
+        />
       </Head>
       <Carousel
         responsive={responsive}
@@ -101,7 +107,7 @@ const Home = ({ homeData }) => {
             <ul className="mx-auto space-y-0 grid grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl">
               {homeData?.doctors.map((item) => {
                 return (
-                  <li key={item.id}>
+                  <li key={item?.id}>
                     <Link href={`/doctors/${item.slug}`} passHref>
                       <a>
                         <div className="space-y-4">
