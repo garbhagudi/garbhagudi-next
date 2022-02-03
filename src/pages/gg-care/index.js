@@ -5,7 +5,6 @@ import Stats from "sections/gg-care/stats";
 import Cta from "sections/gg-care/cta";
 import Video from "sections/gg-care/workflow";
 import Head from "next/head";
-222222222;
 
 const IndexPage = () => {
   return (

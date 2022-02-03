@@ -61,7 +61,13 @@ const AwardsAccolades = () => {
           GarbhaGudi Recognised as Best IVF & Fertility Hospital in India{" "}
         </div>
         <div>
-          <div className="font-extrabold">
+          <img
+            src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643872367/Banner/2022_Web_Banner-3_kuhr4g.webp"
+            alt="Best IVF Center Award Banner"
+          />
+        </div>
+        <div>
+          <div className="font-extrabold mt-10">
             “The roots of true achievement lie in the will to become the best
             that you can become” – Harold Taylor
           </div>

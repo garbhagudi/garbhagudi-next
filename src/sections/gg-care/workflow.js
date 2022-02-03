@@ -14,10 +14,10 @@ const Video = () => {
               </span>
             </h1>
             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-content">
-              &quot;To provide reproductive health care of
-              exceptional quality, within reach of every aspiring couple. We
-              remain steadfast to achieving success and excellence in education,
-              research, and healthcare for the welfare of humanity.&quot;
+              &quot;To provide reproductive health care of exceptional quality,
+              within reach of every aspiring couple. We remain steadfast to
+              achieving success and excellence in education, research, and
+              healthcare for the welfare of humanity.&quot;
             </p>
           </div>
           <div className="mt-12 relative sm:max-w-fit sm:mx-auto lg:mt-0 lg:max-w-fit lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
@@ -25,7 +25,7 @@ const Video = () => {
               <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/sB34sRehUvU"
+                src="https://www.youtube.com/embed/YnLULpvPIec"
                 title="YouTube video player"
                 frameBorder="0"
                 loading="lazy"

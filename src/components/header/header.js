@@ -63,14 +63,15 @@ const Nav = () => {
                     <Locations />
                   </span>
 
-                  <Link
+                  <a
                     href="https://consult.bestdocapp.com/home/GARBHAGUDI"
-                    passHref
+                    target={"_blank"}
+                    rel="noreferrer"
                   >
                     <span className="text-white bg-brandPink font-semibold px-3 py-2 rounded-2xl text-sm font-content cursor-pointer hover:bg-brandPink3">
                       Book an Appointment
                     </span>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -79,6 +80,8 @@ const Nav = () => {
                 <a
                   href="https://consult.bestdocapp.com/home/GARBHAGUDI"
                   className="bg-brandPink hover:bg-gray-800 text-white px-3 py-2 rounded-2xl text-xs font-bold font-content"
+                  target={"_blank"}
+                  rel="noreferrer"
                 >
                   Book Now
                 </a>
@@ -162,14 +165,15 @@ const Nav = () => {
                 <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
                   <Locations />
                 </span>
-                <Link
+                <a
                   href="https://consult.bestdocapp.com/home/GARBHAGUDI"
-                  passHref
+                  target={"_blank"}
+                  rel="noreferrer"
                 >
                   <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content cursor-pointer">
                     Book an Appointment
                   </span>
-                </Link>
+                </a>
               </div>
             </div>
           )}

@@ -7,6 +7,9 @@ const supportLinks = [
     description:
       "Chat online with our team now from anywhere. We provide you with a seamless and hassle-free online chat experience from the comfort of your home. Get the proper assistance now!",
     icon: HiChatAlt,
+    ctaAction: "Chat Now",
+    ctaLink:
+      "https://salesiq.zoho.com/signaturesupport.ls?widgetcode=93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0",
   },
   {
     name: "Call Support",
@@ -14,6 +17,8 @@ const supportLinks = [
     description:
       "Reach out to us with your questions, concerns, or challenges. We’ll be happy to help you at any time, and we’re always trying to make things easier for you!",
     icon: HiPhone,
+    ctaAction: "Call Now",
+    ctaLink: "tel:+918880000909",
   },
   {
     name: "Book an Appointment",
@@ -21,6 +26,8 @@ const supportLinks = [
     description:
       "Now book an appointment with any of your nearest locations of GarbhaGudi IVF Centre, and get the best fertility treatments from our experts!",
     icon: HiCalendar,
+    ctaAction: "Book an Appointment",
+    ctaLink: "https://garbhagudi-ivf.com/contact-us",
   },
 ];
 
@@ -79,6 +86,11 @@ const Hero = () => {
                   {link.description}
                 </p>
               </div>
+              <button className="px-4  py-2 bg-brandPink3 rounded-b-2xl font-content text-white font-semibold">
+                <a href={link.ctaLink} target="_blank" rel="noreferrer">
+                  {link.ctaAction}
+                </a>
+              </button>
             </div>
           ))}
         </div>

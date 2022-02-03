@@ -164,12 +164,6 @@ const KalyanNagar = ({ doctors }) => {
         <h1 className="text-center text-2xl md:text-4xl font-heading py-8 font-bold mx-auto">
           Virtual Tour
         </h1>
-        <p className="text-center font-qs font-semibold">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aut
-          tenetur cumque accusantium ab, ea possimus itaque. Optio quaerat,
-          incidunt, ex eligendi impedit doloremque adipisci, eveniet nulla
-          quibusdam laudantium quam.
-        </p>
         <ul className="mx-auto grid grid-cols-1 sm:gap-x-0 py-8 px-2 lg:grid-cols-3 max-w-7xl">
           <li>
             <div className="space-y-4">

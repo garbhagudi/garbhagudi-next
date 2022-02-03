@@ -84,11 +84,11 @@ export default function Footer() {
                 <ul className="mt-4 space-y-2 text-sm">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <Link passHref href={item.href}>
+                      <a href={item.href} rel="noreferrer" target={"_blank"}>
                         <span className=" text-brandDark hover:text-brandPink hover:underline cursor-pointer">
                           {item.name}
                         </span>
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -118,26 +118,32 @@ export default function Footer() {
           <SocialIcon
             url="https://www.youtube.com/c/GarbhaGudiIVFCentre"
             style={{ width: "40px", height: "40px" }}
+            target="_blank"
           />
           <SocialIcon
             url="https://www.facebook.com/garbhagudiIVF/"
             style={{ width: "40px", height: "40px" }}
+            target="_blank"
           />
           <SocialIcon
             url="https://www.linkedin.com/company/garbagudi"
             style={{ width: "40px", height: "40px" }}
+            target="_blank"
           />
           <SocialIcon
             url="https://api.whatsapp.com/send/?phone=918884183338&text=Hi."
             style={{ width: "40px", height: "40px" }}
+            target="_blank"
           />
           <SocialIcon
             url="https://twitter.com/garbhagudiivf"
             style={{ width: "40px", height: "40px" }}
+            target="_blank"
           />
           <SocialIcon
             url="mailto:dreams@garbhagudi.com"
             style={{ width: "40px", height: "40px" }}
+            target="_blank"
           />
         </div>
         <p className="font-content text-gray-900 text-center py-8">

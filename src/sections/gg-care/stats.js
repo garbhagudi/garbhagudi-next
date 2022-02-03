@@ -41,7 +41,7 @@ const Stats = () => {
               1M+
             </dd>
             <dd className="order-3  text-lg leading-6 font-medium text-white font-content">
-              Questions answered
+              Questions Answered
             </dd>
           </div>
           <div className="flex flex-col mt-10 sm:mt-0">

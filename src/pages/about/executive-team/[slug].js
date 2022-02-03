@@ -18,6 +18,7 @@ export const getServerSideProps = async (pageContext) => {
         id
         name
         details
+        link
         image {
           url
         }
@@ -106,24 +107,29 @@ const ExecutiveTeam = ({ director }) => {
               <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
                 <div className="w-72 md:w-64 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
                   <img
-                    src={director.image.url}
-                    alt={director.name}
+                    src={director?.image.url}
+                    alt={director?.name}
                     className="rounded-full"
                   />
                 </div>
                 <div className="flex flex-col items-center text-center justify-center">
                   <h2 className="title-font mt-4 text-gray-900 text-2xl font-semibold font-heading">
-                    {director.name}
+                    {director?.name}
                   </h2>
                   <div className="w-12 h-1 bg-brandPink rounded mt-2 mb-4 "></div>
                   <p className="text-base font-content font-semibold">
-                    {director.details}
+                    {director?.details}
                   </p>
+                  <button className="px-4 py-2 mt-6 bg-brandPink2 text-white font-semibold font-content rounded-md">
+                    <a href={director?.link} target="_blank" rel="noreferrer">
+                      Connect
+                    </a>
+                  </button>
                 </div>
               </div>
               <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 sm:text-left px-5">
                 <p className="leading-relaxed text-lg mb-4 text-brandDark">
-                  <RichText content={director.bio.raw.children} />
+                  <RichText content={director?.bio?.raw.children} />
                 </p>
               </div>
             </div>
