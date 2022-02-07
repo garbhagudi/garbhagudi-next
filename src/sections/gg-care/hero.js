@@ -38,12 +38,12 @@ const Hero = () => {
       <div className="relative pb-32 bg-gray-800">
         <div className="absolute inset-0">
           <img
-            className="w-full h-full object-contain"
-            src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg"
+            className="w-full h-full object-cover"
+            src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1644049097/Banner/GG_Care_Web_Banner-6_iyxanu.webp"
             alt=""
           />
           <div
-            className="absolute inset-0 bg-gray-800 mix-blend-multiply"
+            className="absolute inset-0 bg-gray-500 mix-blend-multiply"
             aria-hidden="true"
           />
         </div>

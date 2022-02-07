@@ -3,6 +3,7 @@ import { gql, GraphQLClient } from "graphql-request";
 import Link from "next/link";
 import { Tab } from "@headlessui/react";
 import Head from "next/head";
+import BreadCrumbs from "components/breadcrumbs";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -54,6 +55,12 @@ const IndexPage = ({ treatments }) => {
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Cau_Diag_Treat_d0t3vx.jpg"
         />
       </Head>
+      <BreadCrumbs
+        link1="/resources/treatments"
+        text1="Resources"
+        text2="Treatments"
+        link2="/resources/treatments"
+      />
       <div className="max-w-7xl mx-auto">
         <div className="text-center text-4xl font-heading pt-12 font-semibold">
           Treatment Options

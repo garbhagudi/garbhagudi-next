@@ -2,6 +2,7 @@ import React from "react";
 import { GraphQLClient, gql } from "graphql-request";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
+import BreadCrumbs from "components/breadcrumbs";
 
 export const getServerSideProps = async (pageContext) => {
   const url = process.env.ENDPOINT;
@@ -93,6 +94,14 @@ const ExecutiveTeam = ({ director }) => {
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Directors_jbvcep.jpg"
         />
       </Head>
+      <BreadCrumbs
+        text1="About"
+        link1="/about/overview"
+        text2="Executive Team"
+        link2="/about/overview"
+        text3={director?.name}
+        link3="#"
+      />
       <section className="text-gray-600 body-font">
         <div className="md:px-5 py-24 mx-auto flex flex-col">
           <div className="lg:w-4/6 mx-auto">

@@ -77,7 +77,7 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="relative bg-white py-8 sm:py-18">
+    <div className="relative bg-white py-8 sm:py-18" id="features">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <p className="mt-2 text-3xl font-extrabold text-brandDark tracking-tight sm:text-4xl font-heading">
           Our Versatile Approach

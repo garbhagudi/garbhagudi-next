@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import BreadCrumbs from "components/breadcrumbs";
 
 const VisionMission = () => {
   return (
@@ -8,8 +9,11 @@ const VisionMission = () => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Vision & Mission | GarbhaGudi</title>
-        <meta name="title" content="Vision & Mission | GarbhaGudi IVF Centre" />
+        <title>Vision &amp; Mission | GarbhaGudi</title>
+        <meta
+          name="title"
+          content="Vision &amp; Mission | GarbhaGudi IVF Centre"
+        />
         <meta
           name="description"
           content="Spanning over a decade, GarbhaGudi has served as a beacon of hope to thousands of infertile couples. Our experienced and dedicated specialists, nurses, and embryologists work to cater for your needs and respond to them quickly, professionally and warmly. "
@@ -47,6 +51,12 @@ const VisionMission = () => {
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
         />
       </Head>
+      <BreadCrumbs
+        text1="About"
+        link1="/about/overview"
+        text2="Mission &amp; Vision"
+        link2="#"
+      />
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -mx-4 -mb-10 text-center">

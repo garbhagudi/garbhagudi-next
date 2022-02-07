@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { gql, GraphQLClient } from "graphql-request";
 import Head from "next/head";
+import BreadCrumbs from "components/breadcrumbs";
 
 const limit = 6;
 
@@ -60,6 +61,12 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
             content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Blog_Index_nqj7cm.jpg"
           />
         </Head>
+        <BreadCrumbs
+          link1="/blogs/page/1"
+          text1="Blogs"
+          text2={`Page ${currentPageNumber}`}
+          link2={`/blogs/page/${currentPageNumber}`}
+        />
         <div className="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
           <div className="absolute inset-0">
             <div className="bg-white h-1/3 sm:h-2/3" />

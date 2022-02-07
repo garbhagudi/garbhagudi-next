@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import BreadCrumbs from "components/breadcrumbs";
 
 const AwardsAccolades = () => {
   return (
@@ -56,11 +57,17 @@ const AwardsAccolades = () => {
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
         />
       </Head>
+      <BreadCrumbs
+        text1="About"
+        link1={"/about/overview"}
+        text2={"Awards & Accolades"}
+        link2={"#"}
+      />
       <div className="container max-w-7xl mx-auto text-lg font-qs text-gray-800 px-4 sm:px-6">
-        <div className="text-3xl font-heading tracking-tighter text-center my-8 font-semibold underline">
+        <div className="text-3xl font-heading tracking-tighter text-center my-8 font-semibold underline text-brandDark">
           GarbhaGudi Recognised as Best IVF & Fertility Hospital in India{" "}
         </div>
-        <div>
+        <div className="rounded-3xl overflow-hidden">
           <img
             src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643872367/Banner/2022_Web_Banner-3_kuhr4g.webp"
             alt="Best IVF Center Award Banner"
@@ -101,7 +108,7 @@ const AwardsAccolades = () => {
             ambience create positivity and confidence. It believes in treating
             patients with compassion. Every patient that steps into GarbhaGudi
             becomes a part of GarbhaGudi family. Our motto is{" "}
-            <span className="font-semibold">
+            <span className="font-bold tracking-tighter">
               “Every person who walks in will walk out with a smile”.
             </span>
           </div>

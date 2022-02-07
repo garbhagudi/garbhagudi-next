@@ -2,6 +2,7 @@ import React from "react";
 import { gql, GraphQLClient } from "graphql-request";
 import Link from "next/link";
 import Head from "next/head";
+import BreadCrumbs from "components/breadcrumbs";
 
 const Marathahalli = ({ doctors }) => {
   return (
@@ -52,6 +53,12 @@ const Marathahalli = ({ doctors }) => {
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277077/Locations/1201x501_MH_jqxxsh.jpg"
         />
       </Head>
+      <BreadCrumbs
+        text1="Locations"
+        link1="/locations/fertility-experts"
+        text2="Marathahalli"
+        link2="#"
+      />
       <section className="text-gray-600 body-font relative max-w-7xl mx-auto">
         <h1 className="text-center text-2xl md:text-4xl font-heading pt-8 font-bold">
           Marathahalli

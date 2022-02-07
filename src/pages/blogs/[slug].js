@@ -4,6 +4,7 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 import BlogFooter from "components/blogFooter";
 import Error from "next/error";
 import Head from "next/head";
+import BreadCrumbs from "components/breadcrumbs";
 
 export const getServerSideProps = async (pageContext) => {
   const url = process.env.ENDPOINT;
@@ -80,6 +81,12 @@ const Blog = ({ blog }) => {
         />
         <meta name="twitter:image" content={blog?.image?.url} />
       </Head>
+      <BreadCrumbs
+        link1="/blogs/page/1"
+        text1="Blogs"
+        text2={blog.title}
+        link2="#"
+      />
       <div className="relative py-16 bg-white overflow-hidden">
         <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
           <div

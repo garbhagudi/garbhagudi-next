@@ -83,15 +83,15 @@ const Home = ({ homeData }) => {
         autoPlaySpeed={5000}
       >
         {homeData.banners.map((items) => (
-          <div className="" key={items.id}>
+          <div className="" key={items?.id}>
             <a href={items?.url}>
-              <img src={items.image.url} alt={items.title} />
+              <img src={items?.image?.url} alt={items?.title} />
             </a>
           </div>
         ))}
       </Carousel>
       <HomeComponent />
-      <div className="bg-white">
+      <div className="bg-white" id="ourTeam">
         <div className="max-w-7xl mx-auto py-16 px-4 text-center sm:px-6 lg:px-8 lg:py-12">
           <div className="space-y-12">
             <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
@@ -108,12 +108,12 @@ const Home = ({ homeData }) => {
               {homeData?.doctors.map((item) => {
                 return (
                   <li key={item?.id}>
-                    <Link href={`/doctors/${item.slug}`} passHref>
+                    <Link href={`/doctors/${item?.slug}`} passHref>
                       <a>
                         <div className="space-y-4">
                           <img
                             className="mx-auto h-32 w-32 my-auto rounded-full xl:w-44 xl:h-44 mt-4"
-                            src={item?.image.url}
+                            src={item?.image?.url}
                             alt={item?.name}
                           />
                           <div className="space-y-4">

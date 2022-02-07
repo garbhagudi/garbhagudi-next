@@ -3,6 +3,7 @@ import { GraphQLClient, gql } from "graphql-request";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Error from "next/error";
 import Head from "next/head";
+import BreadCrumbs from "components/breadcrumbs";
 
 export const getServerSideProps = async (pageContext) => {
   const url = process.env.ENDPOINT;
@@ -88,6 +89,12 @@ const Vas = ({ valueAddedService }) => {
         />
         <meta name="twitter:image" content={valueAddedService?.image.url} />
       </Head>
+      <BreadCrumbs
+        link1="/#features"
+        text1="Features"
+        link2={valueAddedService.title}
+        text2={valueAddedService.title}
+      />
       <div className="relative py-16 bg-white overflow-hidden">
         <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
           <div

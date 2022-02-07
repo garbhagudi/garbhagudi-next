@@ -1,4 +1,5 @@
 import Head from "next/head";
+import BreadCrumbs from "components/breadcrumbs";
 
 const Refund = () => {
   return (
@@ -52,6 +53,12 @@ const Refund = () => {
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
         />
       </Head>
+      <BreadCrumbs
+        text1="Legal"
+        link1="/#footer"
+        text2="Cancellation & Refund Policy"
+        link2="#"
+      />
       <div className="relative py-8 bg-white overflow-hidden">
         <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
           <div

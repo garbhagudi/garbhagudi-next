@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Tab } from "@headlessui/react";
 import { gql, GraphQLClient } from "graphql-request";
 import Head from "next/head";
+import BreadCrumbs from "components/breadcrumbs";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -60,6 +61,12 @@ const IndexPage = ({ doctors }) => {
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
         />
       </Head>
+      <BreadCrumbs
+        text1="About"
+        link1="/about/overview"
+        text2="Our Fertility Experts"
+        link2="#"
+      />
       <div className="max-w-7xl mx-auto">
         <div className="text-center text-4xl font-heading pt-12 font-semibold">
           Our Fertility Experts

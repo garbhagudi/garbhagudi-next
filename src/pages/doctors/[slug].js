@@ -2,6 +2,7 @@ import React from "react";
 import { GraphQLClient, gql } from "graphql-request";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
+import BreadCrumbs from "components/breadcrumbs";
 
 export const getServerSideProps = async (pageContext) => {
   const url = process.env.ENDPOINT;
@@ -87,6 +88,12 @@ const Doctor = ({ doctor }) => {
         />
         <meta name="twitter:image" content={doctor?.image.url} />
       </Head>
+      <BreadCrumbs
+        text1={"Our Team"}
+        link1="/#ourTeam"
+        text2={doctor?.name}
+        link2="#"
+      />
       <main className="profile-page">
         <section className="relative block" style={{ height: "500px" }}>
           <div

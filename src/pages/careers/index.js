@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { gql, GraphQLClient } from "graphql-request";
 import Head from "next/head";
+import BreadCrumbs from "components/breadcrumbs";
 
 const IndexPage = ({ careers }) => {
   return (
@@ -46,6 +47,7 @@ const IndexPage = ({ careers }) => {
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Careers_vpudat.jpg"
         />
       </Head>
+      <BreadCrumbs text1="Careers" link1={"/careers"} />
       <div className="max-w-7xl mx-auto">
         <div className="text-center text-4xl font-heading pt-12 font-semibold">
           Careers at GarbhaGudi

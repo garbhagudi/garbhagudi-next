@@ -196,7 +196,7 @@ const aboutUs = [
   },
   {
     name: "Awards & Accolades",
-    href: "/about/best-ivf-fertility-hospital-in-india",
+    href: "/about/awards-and-accolades",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/Awards_Accorlads_z68rlr.svg",
   },
 ];

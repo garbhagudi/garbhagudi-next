@@ -2,6 +2,7 @@ import React from "react";
 import { gql, GraphQLClient } from "graphql-request";
 import Link from "next/link";
 import Head from "next/head";
+import BreadCrumbs from "components/breadcrumbs";
 
 const IndexPage = ({ causes }) => {
   return (
@@ -55,6 +56,12 @@ const IndexPage = ({ causes }) => {
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Cau_Diag_Treat_d0t3vx.jpg"
         />
       </Head>
+      <BreadCrumbs
+        link1="/resources/causes"
+        text1="Resources"
+        text2="Causes"
+        link2="/resources/causes"
+      />
       <div className="max-w-7xl mx-auto text-center text-4xl font-heading pt-12 font-semibold">
         Causes of Infertility
       </div>

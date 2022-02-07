@@ -4,6 +4,7 @@ import CoreVision from "sections/about/coreVision";
 import { gql, GraphQLClient } from "graphql-request";
 import Link from "next/link";
 import Head from "next/head";
+import BreadCrumbs from "components/breadcrumbs";
 
 const Overview = ({ directors }) => {
   return (
@@ -48,6 +49,7 @@ const Overview = ({ directors }) => {
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
         />
       </Head>
+      <BreadCrumbs text1="About" link1="/about/overview" />
       <Header />
       <div className="bg-white">
         <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
@@ -63,9 +65,9 @@ const Overview = ({ directors }) => {
                   <li key={item.id}>
                     <Link href={`/about/executive-team/${item.slug}`} passHref>
                       <div className="space-y-4">
-                        <div className="aspect-w-3 aspect-w-2">
+                        <div className="aspect-square">
                           <img
-                            className="object-fit shadow-2xl rounded-3xl"
+                            className="object-fit shadow-2xl rounded-3xl w-96 h-96"
                             src={item.image.url}
                             alt={item.name}
                           />
@@ -82,7 +84,7 @@ const Overview = ({ directors }) => {
                           <p className="text-gray-500 font-content">
                             {item.description}
                           </p>
-                          <p className="mt-3 text-brandPurple underline text-sm hover:text-brandPink cursor-pointer">
+                          <p className="mt-3 text-brandPurple underline text-sm hover:text-brandPink cursor-pointer font-content">
                             Read More {">"}{" "}
                           </p>
                         </div>

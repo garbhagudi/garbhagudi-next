@@ -35,6 +35,7 @@ export default function Footer() {
     <footer
       className="bg-neutral-50 font-content"
       aria-labelledby="footerHeading"
+      id="footer"
     >
       <h2 id="footerHeading" className="sr-only">
         Footer
