@@ -29,7 +29,6 @@ export const getServerSideProps = async (pageContext) => {
         qualification
         designation
         medicalRegNo
-        hanumanthanagar
       }
     }
   `;
@@ -47,7 +46,6 @@ export const getServerSideProps = async (pageContext) => {
 };
 
 const Doctor = ({ doctor }) => {
-  console.log(doctor.hanumanthanagar);
   return (
     <div>
       <Head>
@@ -158,7 +156,6 @@ const Doctor = ({ doctor }) => {
                     <span className="font-bold underline">
                       {doctor.medicalRegNo}
                     </span>
-                    <span>{doctor?.hanumanthanagar}</span>
                   </div>
                   <button
                     className="bg-pink-500 active:bg-pink-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1"
