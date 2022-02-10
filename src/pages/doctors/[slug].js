@@ -167,10 +167,15 @@ const Doctor = ({ doctor }) => {
                     <span className="font-bold underline">
                       {doctor.medicalRegNo}
                     </span>
+                    <div>
+                      <button className="px-4 py-2 bg-brandPink hover:bg-brandPink3 text-white font-bold font-content rounded-md mt-6">
+                        <a href="tel:+918880000909">Give us a Call</a>
+                      </button>
+                    </div>
                   </div>
                   <section className="antialiased text-gray-600 mt-8 font-content overflow-hidden">
                     <div className="flex flex-col justify-center h-full">
-                      <div className="w-full max-w-3xl mx-auto bg-white shadow-lg rounded-2xl border border-gray-200">
+                      <div className="w-full max-w-2xl mx-auto bg-white shadow-xl rounded-2xl border border-gray-200">
                         <header className="px-5 py-2">
                           <h2 className="font-semibold text-gray-800">
                             Book Your Appointment
@@ -182,8 +187,13 @@ const Doctor = ({ doctor }) => {
                               <thead className="text-sm font-bold uppercase text-brandDark bg-brandPink">
                                 <tr>
                                   <th className="p-2 whitespace-nowrap ">
-                                    <div className="font-bold text-left">
+                                    <div className="font-bold text-left ml-1">
                                       Branch
+                                    </div>
+                                  </th>
+                                  <th className="p-2 whitespace-nowrap">
+                                    <div className="font-bold text-left">
+                                      Physical
                                     </div>
                                   </th>
                                   <th className="p-2 whitespace-nowrap">
@@ -191,14 +201,9 @@ const Doctor = ({ doctor }) => {
                                       Online
                                     </div>
                                   </th>
-                                  <th className="p-2 whitespace-nowrap">
-                                    <div className="font-bold text-left">
-                                      In-Person
-                                    </div>
-                                  </th>
                                 </tr>
                               </thead>
-                              <tbody className="text-sm divide-y divide-gray-100">
+                              <tbody className="text-sm divide-y divide-pink-100">
                                 {doctor.hanumanthaNagarOnline &&
                                   doctor.hanumanthaNagarPhysical && (
                                     <tr>
@@ -225,14 +230,15 @@ const Doctor = ({ doctor }) => {
                                           </div>
                                         </div>
                                       </td>
+
                                       <td className="p-2 whitespace-nowrap">
-                                        <div className="text-left">
+                                        <div className="text-left font-medium text-brandPink2">
                                           <button>
                                             <a
                                               href={
-                                                doctor.hanumanthaNagarOnline
+                                                doctor.hanumanthaNagarPhysical
                                               }
-                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              className="font-semibold text-brandPink"
                                               target="_blank"
                                               rel="noreferrer"
                                             >
@@ -242,13 +248,13 @@ const Doctor = ({ doctor }) => {
                                         </div>
                                       </td>
                                       <td className="p-2 whitespace-nowrap">
-                                        <div className="text-left font-medium text-brandPink2">
+                                        <div className="text-left">
                                           <button>
                                             <a
                                               href={
-                                                doctor.hanumanthaNagarPhysical
+                                                doctor.hanumanthaNagarOnline
                                               }
-                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              className="font-semibold text-brandPink"
                                               target="_blank"
                                               rel="noreferrer"
                                             >
@@ -287,12 +293,13 @@ const Doctor = ({ doctor }) => {
                                           </div>
                                         </div>
                                       </td>
+
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-left">
                                           <button>
                                             <a
-                                              href={doctor.kalyanNagarOnline}
-                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              href={doctor.kalyanNagarPhysical}
+                                              className="font-semibold text-brandPink"
                                               target="_blank"
                                               rel="noreferrer"
                                             >
@@ -308,7 +315,7 @@ const Doctor = ({ doctor }) => {
                                               href={doctor.kalyanNagarOnline}
                                               target="_blank"
                                               rel="noreferrer"
-                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              className="font-semibold text-brandPink"
                                             >
                                               Book Now
                                             </a>
@@ -345,12 +352,13 @@ const Doctor = ({ doctor }) => {
                                           </div>
                                         </div>
                                       </td>
+
                                       <td className="p-2 whitespace-nowrap">
-                                        <div className="text-left">
+                                        <div className="text-left font-medium text-brandPink2">
                                           <button>
                                             <a
-                                              href={doctor.jayanagarOnline}
-                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              href={doctor.jayanagarPhysical}
+                                              className="font-semibold text-brandPink"
                                               target="_blank"
                                               rel="noreferrer"
                                             >
@@ -360,11 +368,11 @@ const Doctor = ({ doctor }) => {
                                         </div>
                                       </td>
                                       <td className="p-2 whitespace-nowrap">
-                                        <div className="text-left font-medium text-brandPink2">
+                                        <div className="text-left">
                                           <button>
                                             <a
-                                              href={doctor.jayanagarPhysical}
-                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              href={doctor.jayanagarOnline}
+                                              className="font-semibold text-brandPink"
                                               target="_blank"
                                               rel="noreferrer"
                                             >
@@ -388,7 +396,7 @@ const Doctor = ({ doctor }) => {
                                                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/Electronic_City_xntwob.svg"
                                                   width="40"
                                                   height="40"
-                                                  alt="Alex Shatov"
+                                                  alt="Electronic City"
                                                 />
                                               </div>
                                               <Link
@@ -403,20 +411,7 @@ const Doctor = ({ doctor }) => {
                                           </div>
                                         </div>
                                       </td>
-                                      <td className="p-2 whitespace-nowrap">
-                                        <div className="text-left">
-                                          <button>
-                                            <a
-                                              href={doctor.electronicCityOnline}
-                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
-                                              target="_blank"
-                                              rel="noreferrer"
-                                            >
-                                              Book Now
-                                            </a>
-                                          </button>
-                                        </div>
-                                      </td>
+
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-left font-medium text-brandPink2">
                                           <button>
@@ -426,7 +421,21 @@ const Doctor = ({ doctor }) => {
                                               }
                                               target="_blank"
                                               rel="noreferrer"
-                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              className="font-semibold text-brandPink"
+                                            >
+                                              Book Now
+                                            </a>
+                                          </button>
+                                        </div>
+                                      </td>
+                                      <td className="p-2 whitespace-nowrap">
+                                        <div className="text-left">
+                                          <button>
+                                            <a
+                                              href={doctor.electronicCityOnline}
+                                              className="font-semibold text-brandPink"
+                                              target="_blank"
+                                              rel="noreferrer"
                                             >
                                               Book Now
                                             </a>
@@ -461,20 +470,7 @@ const Doctor = ({ doctor }) => {
                                           </div>
                                         </div>
                                       </td>
-                                      <td className="p-2 whitespace-nowrap">
-                                        <div className="text-left">
-                                          <button>
-                                            <a
-                                              href={doctor.marathahalliOnline}
-                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
-                                              target="_blank"
-                                              rel="noreferrer"
-                                            >
-                                              Book Now
-                                            </a>
-                                          </button>
-                                        </div>
-                                      </td>
+
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-left font-medium text-brandPink2">
                                           <button>
@@ -482,7 +478,21 @@ const Doctor = ({ doctor }) => {
                                               href={doctor.marathahalliPhysical}
                                               target="_blank"
                                               rel="noreferrer"
-                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              className="text-left font-medium text-brandPink2"
+                                            >
+                                              Book Now
+                                            </a>
+                                          </button>
+                                        </div>
+                                      </td>
+                                      <td className="p-2 whitespace-nowrap">
+                                        <div className="text-left">
+                                          <button>
+                                            <a
+                                              href={doctor.marathahalliOnline}
+                                              className="text-left font-medium text-brandPink2"
+                                              target="_blank"
+                                              rel="noreferrer"
                                             >
                                               Book Now
                                             </a>
@@ -498,7 +508,7 @@ const Doctor = ({ doctor }) => {
                       </div>
                     </div>
                     <p className="text-xs mt-5">
-                      *Appointment is subject to doctor availability. Please,
+                      *Appointments are subject to doctor availability. Please,
                       make sure you have given your registered number if you
                       have already visited GarbhaGudi.
                     </p>
