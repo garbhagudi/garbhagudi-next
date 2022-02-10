@@ -100,8 +100,8 @@ const Doctor = ({ doctor }) => {
         <meta name="twitter:image" content={doctor?.image.url} />
       </Head>
       <BreadCrumbs
-        text1={"Our Team"}
-        link1="/#ourTeam"
+        text1={"Our Fertility Experts"}
+        link1="/locations/fertility-experts"
         text2={doctor?.name}
         link2="#"
       />
