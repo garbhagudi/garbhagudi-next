@@ -43,24 +43,16 @@ const Hero = () => {
             alt=""
           />
           <div
-            className="absolute inset-0 bg-gray-500 mix-blend-multiply"
+            className="absolute inset-0 bg-gray-400 mix-blend-multiply"
             aria-hidden="true"
           />
         </div>
-        <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-          <h1 className="text-xl font-extrabold tracking-normal text-white md:text-3xl lg:text-5xl font-heading">
-            GG CARE | Committed to Couple Delight
-          </h1>
-          <p className="mt-6 max-w-3xl text-xl text-gray-300 font-content">
-            Reach out with your questions, concerns and challenges. Or just to
-            say hi. We{`'`}re always standing by and eager to help.
-          </p>
-        </div>
+        <div className="relative max-w-7xl mx-auto py-24 px-4 xl:py-56 sm:px-6 lg:px-8"></div>
       </div>
 
       {/* Overlapping cards */}
       <section
-        className="-mt-20 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
+        className="md:-mt-12 -mt-8 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
         aria-labelledby="contact-heading"
       >
         <h2 className="sr-only" id="contact-heading">
