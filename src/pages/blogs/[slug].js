@@ -205,7 +205,7 @@ const Blog = ({ blog }) => {
               <figure>
                 <img
                   className="w-full rounded-lg mt-10 mb-5"
-                  src={blog?.image.url}
+                  src={blog?.image?.url}
                   alt={blog?.title}
                 />
               </figure>

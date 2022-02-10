@@ -85,7 +85,7 @@ const Location = [
   },
   {
     name: "South-End Circle",
-    href: "/locations/jayanagar",
+    href: "/locations/south-end-circle",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/South_End_Circle_l3ffwj.svg",
   },
   {

@@ -27,6 +27,7 @@ export const getServerSideProps = async (pageContext) => {
         experience
         description
         location
+        link
       }
     }
   `;
@@ -141,7 +142,9 @@ const Career = ({ career }) => {
                     Location: {career.location}
                   </p>
                   <button className="mt-4 py-2 px-4 rounded-3xl text-white font-qs font-semibold bg-brandPink">
-                    Apply Now
+                    <a href={career.link} target="_blank" rel="noreferrer">
+                      Apply Now
+                    </a>
                   </button>
                 </div>
               </div>
