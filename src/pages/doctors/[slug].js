@@ -232,7 +232,9 @@ const Doctor = ({ doctor }) => {
                                               href={
                                                 doctor.hanumanthaNagarOnline
                                               }
-                                              className="text-brandPink2"
+                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              target="_blank"
+                                              rel="noreferrer"
                                             >
                                               Book Now
                                             </a>
@@ -246,7 +248,9 @@ const Doctor = ({ doctor }) => {
                                               href={
                                                 doctor.hanumanthaNagarPhysical
                                               }
-                                              className="text-brandPink2"
+                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              target="_blank"
+                                              rel="noreferrer"
                                             >
                                               Book Now
                                             </a>
@@ -276,7 +280,7 @@ const Doctor = ({ doctor }) => {
                                                 passHref
                                               >
                                                 <span className="cursor-pointer">
-                                                  KalyanNagar
+                                                  Kalyan Nagar
                                                 </span>
                                               </Link>
                                             </div>
@@ -288,7 +292,9 @@ const Doctor = ({ doctor }) => {
                                           <button>
                                             <a
                                               href={doctor.kalyanNagarOnline}
-                                              className="text-brandPink2"
+                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              target="_blank"
+                                              rel="noreferrer"
                                             >
                                               Book Now
                                             </a>
@@ -296,9 +302,14 @@ const Doctor = ({ doctor }) => {
                                         </div>
                                       </td>
                                       <td className="p-2 whitespace-nowrap">
-                                        <div className="text-left font-medium text-brandPink2">
+                                        <div className="text-black font-semibold text-left">
                                           <button>
-                                            <a href={doctor.kalyanNagarOnline}>
+                                            <a
+                                              href={doctor.kalyanNagarOnline}
+                                              target="_blank"
+                                              rel="noreferrer"
+                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                            >
                                               Book Now
                                             </a>
                                           </button>
@@ -339,7 +350,9 @@ const Doctor = ({ doctor }) => {
                                           <button>
                                             <a
                                               href={doctor.jayanagarOnline}
-                                              className="text-brandPink2"
+                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              target="_blank"
+                                              rel="noreferrer"
                                             >
                                               Book Now
                                             </a>
@@ -351,7 +364,9 @@ const Doctor = ({ doctor }) => {
                                           <button>
                                             <a
                                               href={doctor.jayanagarPhysical}
-                                              className="text-brandPink2"
+                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              target="_blank"
+                                              rel="noreferrer"
                                             >
                                               Book Now
                                             </a>
@@ -376,7 +391,14 @@ const Doctor = ({ doctor }) => {
                                                   alt="Alex Shatov"
                                                 />
                                               </div>
-                                              <span>Electronic City</span>
+                                              <Link
+                                                href="/locations/south-end-circle"
+                                                passHref
+                                              >
+                                                <span className="cursor-pointer">
+                                                  Electronic City
+                                                </span>
+                                              </Link>
                                             </div>
                                           </div>
                                         </div>
@@ -386,7 +408,9 @@ const Doctor = ({ doctor }) => {
                                           <button>
                                             <a
                                               href={doctor.electronicCityOnline}
-                                              className="text-brandPink2"
+                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              target="_blank"
+                                              rel="noreferrer"
                                             >
                                               Book Now
                                             </a>
@@ -400,6 +424,9 @@ const Doctor = ({ doctor }) => {
                                               href={
                                                 doctor.electronicCityPhysical
                                               }
+                                              target="_blank"
+                                              rel="noreferrer"
+                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
                                             >
                                               Book Now
                                             </a>
@@ -423,7 +450,14 @@ const Doctor = ({ doctor }) => {
                                                 alt="Alex Shatov"
                                               />
                                             </div>
-                                            <span>Marathahalli</span>
+                                            <Link
+                                              href="/locations/south-end-circle"
+                                              passHref
+                                            >
+                                              <span className="cursor-pointer">
+                                                Marathahalli
+                                              </span>
+                                            </Link>
                                           </div>
                                         </div>
                                       </td>
@@ -432,7 +466,9 @@ const Doctor = ({ doctor }) => {
                                           <button>
                                             <a
                                               href={doctor.marathahalliOnline}
-                                              className="text-brandPink2"
+                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
+                                              target="_blank"
+                                              rel="noreferrer"
                                             >
                                               Book Now
                                             </a>
@@ -444,6 +480,9 @@ const Doctor = ({ doctor }) => {
                                           <button>
                                             <a
                                               href={doctor.marathahalliPhysical}
+                                              target="_blank"
+                                              rel="noreferrer"
+                                              className="text-black font-semibold bg-brandPink px-3 py-1 rounded-xl hover:text-white hover:bg-brandPink2"
                                             >
                                               Book Now
                                             </a>
