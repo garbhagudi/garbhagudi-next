@@ -140,9 +140,9 @@ const Doctor = ({ doctor }) => {
           </div>
         </section>
         <section className="relative py-16 bg-gray-300">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto md:px-4">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-3xl -mt-64">
-              <div className="px-6" key={doctor.id}>
+              <div className="px-2 md:px-6" key={doctor.id}>
                 <div className="flex flex-wrap justify-center">
                   <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
                     <div className="relative">
@@ -175,7 +175,7 @@ const Doctor = ({ doctor }) => {
                   </div>
                   <section className="antialiased text-gray-600 mt-8 font-content overflow-hidden">
                     <div className="flex flex-col justify-center h-full">
-                      <div className="w-full max-w-2xl mx-auto bg-white shadow-xl rounded-2xl border border-gray-200">
+                      <div className="w-full max-w-3xl mx-auto bg-white shadow-xl rounded-2xl border border-pink-200">
                         <header className="px-5 py-2">
                           <h2 className="font-semibold text-gray-800">
                             Book Your Appointment
@@ -210,7 +210,7 @@ const Doctor = ({ doctor }) => {
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="flex items-center">
                                           <div className="font-medium text-gray-800 flex items-center justify-center">
-                                            <div className="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3">
+                                            <div className="w-10 h-10 flex-shrink-0 mr-2">
                                               <img
                                                 className="rounded-sm"
                                                 src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351546/Icons/Locations/Hanumanthanagar_ykripm.svg"
@@ -517,7 +517,7 @@ const Doctor = ({ doctor }) => {
                 <div className="mt-10 py-10 border-t border-gray-300">
                   <div className="flex justify-center">
                     <div className="w-full lg:w-9/12 px-4">
-                      <p className="text-base mb-4 text-gray-800">
+                      <p className="mb-4 text-gray-800 prose">
                         <RichText content={doctor.bio.raw.children} />
                       </p>
                     </div>

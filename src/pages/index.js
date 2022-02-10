@@ -32,8 +32,14 @@ const Home = ({ homeData }) => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Home | GarbhaGudi IVF Centre</title>
-        <meta name="title" content="Home | GarbhaGudi IVF Centre" />
+        <title>
+          GarbhaGudi IVF Centre | Awarded as the Best IVF & Fertility Hospital
+          in India
+        </title>
+        <meta
+          name="title"
+          content="GarbhaGudi IVF Centre | Awarded as the Best IVF & Fertility Hospital in India"
+        />
         <meta
           name="description"
           content="GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem."
@@ -41,7 +47,10 @@ const Home = ({ homeData }) => {
 
         {/* Open Graph / Facebook */}
 
-        <meta property="og:title" content="Home | GarbhaGudi IVF Centre" />
+        <meta
+          property="og:title"
+          content="GarbhaGudi IVF Centre | Awarded as the Best IVF & Fertility Hospital in India"
+        />
         <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
@@ -58,7 +67,10 @@ const Home = ({ homeData }) => {
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@garbhagudiivf" />
-        <meta name="twitter:title" content="Home | GarbhaGudi IVF Centre" />
+        <meta
+          name="twitter:title"
+          content="GarbhaGudi IVF Centre | Awarded as the Best IVF & Fertility Hospital in India"
+        />
         <meta
           name="twitter:description"
           content="GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem."
