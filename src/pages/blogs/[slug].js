@@ -69,7 +69,12 @@ const Blog = ({ blog }) => {
           property="og:description"
           content={blog?.content?.text.slice(0, 160)}
         />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:article:published_time"
+          content={blog?.publishedOn}
+        />
+        <meta property="og:article:author" content={blog?.doctor?.name} />
         <meta property="og:image" content={blog?.image.url} />
         {/* Twitter*/}
         <meta name="twitter:card" content="summary_large_image" />
