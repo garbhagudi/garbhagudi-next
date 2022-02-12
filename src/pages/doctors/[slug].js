@@ -165,7 +165,7 @@ const Doctor = ({ doctor }) => {
                   <div className="mb-2 text-gray-700">
                     Medical Registration Number (KMC) :{" "}
                     <span className="font-bold underline">
-                      {doctor.medicalRegNo}
+                      {doctor?.medicalRegNo}
                     </span>
                     <div>
                       <button className="px-4 py-2 bg-brandPink hover:bg-brandPink3 text-white font-bold font-content rounded-md mt-6">
@@ -518,7 +518,7 @@ const Doctor = ({ doctor }) => {
                   <div className="flex justify-center">
                     <div className="w-full lg:w-9/12 px-4">
                       <p className="mb-4 text-gray-800 prose">
-                        <RichText content={doctor.bio.raw.children} />
+                        <RichText content={doctor?.bio?.raw?.children} />
                       </p>
                     </div>
                   </div>

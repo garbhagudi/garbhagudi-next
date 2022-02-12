@@ -33,12 +33,11 @@ const Home = ({ homeData }) => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>
-          GarbhaGudi IVF Centre | Awarded as the Best IVF & Fertility Hospital
-          in India
+          GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India
         </title>
         <meta
           name="title"
-          content="GarbhaGudi IVF Centre | Awarded as the Best IVF & Fertility Hospital in India"
+          content="GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India"
         />
         <meta
           name="description"
@@ -49,7 +48,7 @@ const Home = ({ homeData }) => {
 
         <meta
           property="og:title"
-          content="GarbhaGudi IVF Centre | Awarded as the Best IVF & Fertility Hospital in India"
+          content="GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India"
         />
         <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
         <meta property="og:url" content="https://garbhagudi.com" />
@@ -69,7 +68,7 @@ const Home = ({ homeData }) => {
         <meta name="twitter:site" content="@garbhagudiivf" />
         <meta
           name="twitter:title"
-          content="GarbhaGudi IVF Centre | Awarded as the Best IVF & Fertility Hospital in India"
+          content="GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India"
         />
         <meta
           name="twitter:description"
