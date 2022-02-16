@@ -192,7 +192,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-lg leading-6 font-medium text-gray-900">
-                  Electromic City
+                  Electronic City
                 </h3>
                 <div className="mt-2 text-base text-gray-500">
                   <p className="mt-1">

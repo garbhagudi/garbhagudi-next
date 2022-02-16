@@ -238,7 +238,7 @@ const Doctor = ({ doctor }) => {
                                               href={
                                                 doctor.hanumanthaNagarPhysical
                                               }
-                                              className="font-semibold text-brandPink"
+                                              className="font-semibold text-brandPink hover:underline"
                                               target="_blank"
                                               rel="noreferrer"
                                             >
@@ -254,7 +254,7 @@ const Doctor = ({ doctor }) => {
                                               href={
                                                 doctor.hanumanthaNagarOnline
                                               }
-                                              className="font-semibold text-brandPink"
+                                              className="font-semibold text-brandPink hover:underline"
                                               target="_blank"
                                               rel="noreferrer"
                                             >
@@ -299,7 +299,7 @@ const Doctor = ({ doctor }) => {
                                           <button>
                                             <a
                                               href={doctor.kalyanNagarPhysical}
-                                              className="font-semibold text-brandPink"
+                                              className="font-semibold text-brandPink hover:underline"
                                               target="_blank"
                                               rel="noreferrer"
                                             >
@@ -315,7 +315,7 @@ const Doctor = ({ doctor }) => {
                                               href={doctor.kalyanNagarOnline}
                                               target="_blank"
                                               rel="noreferrer"
-                                              className="font-semibold text-brandPink"
+                                              className="font-semibold text-brandPink hover:underline"
                                             >
                                               Book Now
                                             </a>
@@ -358,7 +358,7 @@ const Doctor = ({ doctor }) => {
                                           <button>
                                             <a
                                               href={doctor.jayanagarPhysical}
-                                              className="font-semibold text-brandPink"
+                                              className="font-semibold text-brandPink hover:underline"
                                               target="_blank"
                                               rel="noreferrer"
                                             >
@@ -372,7 +372,7 @@ const Doctor = ({ doctor }) => {
                                           <button>
                                             <a
                                               href={doctor.jayanagarOnline}
-                                              className="font-semibold text-brandPink"
+                                              className="font-semibold text-brandPink hover:underline"
                                               target="_blank"
                                               rel="noreferrer"
                                             >
@@ -421,7 +421,7 @@ const Doctor = ({ doctor }) => {
                                               }
                                               target="_blank"
                                               rel="noreferrer"
-                                              className="font-semibold text-brandPink"
+                                              className="font-semibold text-brandPink hover:underline"
                                             >
                                               Book Now
                                             </a>
@@ -433,7 +433,7 @@ const Doctor = ({ doctor }) => {
                                           <button>
                                             <a
                                               href={doctor.electronicCityOnline}
-                                              className="font-semibold text-brandPink"
+                                              className="font-semibold text-brandPink hover:underline"
                                               target="_blank"
                                               rel="noreferrer"
                                             >
@@ -478,7 +478,7 @@ const Doctor = ({ doctor }) => {
                                               href={doctor.marathahalliPhysical}
                                               target="_blank"
                                               rel="noreferrer"
-                                              className="text-left font-medium text-brandPink2"
+                                              className="text-left font-medium text-brandPink2 hover:underline"
                                             >
                                               Book Now
                                             </a>
@@ -490,7 +490,7 @@ const Doctor = ({ doctor }) => {
                                           <button>
                                             <a
                                               href={doctor.marathahalliOnline}
-                                              className="text-left font-medium text-brandPink2"
+                                              className="text-left font-medium text-brandPink2 hover:underline"
                                               target="_blank"
                                               rel="noreferrer"
                                             >

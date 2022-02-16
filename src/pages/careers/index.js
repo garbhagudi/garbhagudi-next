@@ -64,7 +64,7 @@ const IndexPage = ({ careers }) => {
           </div>
           <div className="max-w-7xl mx-auto mt-2 font-content text-lg">
             If you feel that you need an organization where you can do your best
-            work, call us now!
+            work, apply now!
           </div>
         </div>
         <div className="text-center text-2xl font-heading pt-8 font-semibold">

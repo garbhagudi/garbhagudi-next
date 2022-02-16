@@ -116,7 +116,7 @@ const Career = ({ career }) => {
             </div>
             <div className="max-w-7xl mx-auto mt-2 font-content text-lg">
               If you feel that you need an organization where you can do your
-              best work, call us now!
+              best work, apply now!
             </div>
             <div className="flex flex-col sm:flex-row mt-10">
               <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">

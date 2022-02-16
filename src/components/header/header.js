@@ -76,7 +76,7 @@ const Nav = () => {
               </div>
             </div>
             <div className="-mr-2 flex xl:hidden">
-              <button className="mt-6 mr-4">
+              <button className="mt-4 mr-4">
                 <a
                   href="https://consult.bestdocapp.com/home/GARBHAGUDI"
                   className="bg-brandPink hover:bg-gray-800 text-white px-3 py-2 rounded-2xl text-xs font-bold font-content"
@@ -89,7 +89,7 @@ const Nav = () => {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-gray-900 inline-flex items-center justify-center p-2 mt-6 rounded-full text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                className="bg-gray-900 inline-flex items-center justify-center p-2 mt-4 rounded-full text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >

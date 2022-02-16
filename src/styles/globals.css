@@ -8,7 +8,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-root {
+html,
+body {
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
