@@ -46,7 +46,7 @@ const Contact = () => {
                     <dt className="sr-only">Email</dt>
                     <dd>
                       <a
-                        href="mailto:dreams@garbhagudi.com"
+                        href="mailto:grievance@garbhagudi.com"
                         className="text-purple-800 hover:underline"
                       >
                         grievance@garbhagudi.com
@@ -75,7 +75,7 @@ const Contact = () => {
                     <dt className="sr-only">Email</dt>
                     <dd>
                       <a
-                        href="mailto:dreams@garbhagudi.com"
+                        href="mailto:hr@garbhagudi.com"
                         className="text-purple-800 hover:underline"
                       >
                         hr@garbhagudi.com
@@ -104,7 +104,7 @@ const Contact = () => {
                     <dt className="sr-only">Email</dt>
                     <dd>
                       <a
-                        href="mailto:dreams@garbhagudi.com"
+                        href="mailto:jayaram@garbhagudi.com"
                         className="text-purple-800 hover:underline"
                       >
                         jayaram@garbhagudi.com
@@ -192,7 +192,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-lg leading-6 font-medium text-gray-900">
-                  Electromic City
+                  Electronic City
                 </h3>
                 <div className="mt-2 text-base text-gray-500">
                   <p className="mt-1">

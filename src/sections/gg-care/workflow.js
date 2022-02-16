@@ -25,7 +25,7 @@ const Video = () => {
               <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/YnLULpvPIec"
+                src="https://www.youtube.com/embed/3l4gWsVlhE4"
                 title="YouTube video player"
                 frameBorder="0"
                 loading="lazy"

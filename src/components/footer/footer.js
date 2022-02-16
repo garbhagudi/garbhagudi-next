@@ -8,7 +8,7 @@ const navigation = {
     { name: "Directors", href: "/about/overview" },
     {
       name: "Awards & Accolades",
-      href: "/about/best-ivf-fertility-hospital-in-india",
+      href: "/about/awards-and-accolades",
     },
     { name: "Dr Asha S Vijay", href: "https://drashasvijay.com" },
   ],
