@@ -20,11 +20,10 @@ const Video = () => {
               healthcare for the welfare of humanity.&quot;
             </p>
           </div>
-          <div className="mt-12 relative sm:max-w-fit sm:mx-auto lg:mt-0 lg:max-w-fit lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-            <div className="relative mx-auto w-full aspect-video shadow-lg lg:max-w-fit rounded-3xl overflow-hidden">
+          <div className="mt-12 relative sm:max-w-xl sm:mx-auto lg:mt-0 lg:max-w-xl lg:mx-0 lg:col-span-6">
+            <div className="relative mx-auto w-full aspect-video shadow-lg rounded-3xl overflow-hidden">
               <iframe
-                width="560"
-                height="315"
+                className="w-full h-full"
                 src="https://www.youtube.com/embed/3l4gWsVlhE4"
                 title="YouTube video player"
                 frameBorder="0"
