@@ -240,9 +240,6 @@ export function About() {
                         <p className="text-sm font-medium text-gray-900 font-content">
                           {item.name}
                         </p>
-                        <p className="text-xs text-gray-600 font-content">
-                          {item.description}
-                        </p>
                       </div>
                     </a>
                   ))}
@@ -295,9 +292,6 @@ export function Treatment() {
                       <div className="ml-4">
                         <p className="text-sm font-medium text-gray-900">
                           {item.name}
-                        </p>
-                        <p className="text-xs text-gray-500">
-                          {item.description}
                         </p>
                       </div>
                     </a>
