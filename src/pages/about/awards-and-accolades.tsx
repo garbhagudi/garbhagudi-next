@@ -69,7 +69,7 @@ const AwardsAccolades = () => {
       />
       <div className="container max-w-7xl mx-auto text-lg font-qs text-gray-800 px-4 sm:px-6">
         <div className="text-3xl font-heading tracking-tighter text-center my-8 font-semibold underline text-brandDark">
-          GarbhaGudi Recognised as Best IVF & Fertility Hospital in India{" "}
+          GarbhaGudi Recognised as Best IVF &amp; Fertility Hospital in India{" "}
         </div>
         <div className="rounded-3xl overflow-hidden">
           <img
@@ -93,7 +93,7 @@ const AwardsAccolades = () => {
           </div>
           <div className="mt-5">
             Being conferred with the most prestigious award as being one of the
-            Best IVF & Fertility Hospital in India in the whole nation tells
+            Best IVF &amp; Fertility Hospital in India in the whole nation tells
             that we have been successful in what we dreamt. To be chosen as the
             best among multiple nominations is not an easy task. It means that
             GarbhaGudi is unique and our uniqueness is what brought us this
@@ -132,8 +132,7 @@ const AwardsAccolades = () => {
             related to the body, it is also associated with mind and soul. With
             a holistic approach to treatment, GarbhaGudi makes sure to heal the
             mind and soul which is also very important in dealing with
-            infertility issues.import BreadCrumbs from
-            './../../components/breadcrumbs';
+            infertility issues.
           </div>
         </div>
         <div className="text-2xl font-heading tracking-tighter font-semibold my-5">
@@ -214,7 +213,7 @@ const AwardsAccolades = () => {
             This is just a glimpse of GarbhaGudi. There is a lot more that makes
             it unique which is impossible to convey through words. This is the
             story behind the success of GarbhaGudi and the reason that we have
-            been awarded the Best IVF & Fertility Hospital in India by the
+            been awarded the Best IVF &amp; Fertility Hospital in India by the
             National Quality Achievement Awards.{" "}
           </div>{" "}
           <div className="mt-5 mb-10">
