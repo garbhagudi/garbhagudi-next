@@ -49,7 +49,16 @@ const Overview = ({ directors }) => {
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
         />
       </Head>
-      <BreadCrumbs text1="About" link1="/about/overview" />
+      <BreadCrumbs
+        text1="About"
+        link1="/about/overview"
+        link2={""}
+        text2={""}
+        link3={""}
+        text3={""}
+        link4={""}
+        text4={""}
+      />
       <Header />
       <div className="bg-white">
         <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
