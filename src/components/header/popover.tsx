@@ -64,12 +64,12 @@ const Resources = [
   //   href: "##",
   //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839833/Icons/Resources/Events_Webinars_buec8s.svg",
   // },
-  // {
-  //   name: "FAQ",
-  //   description: "Frequently Asked Questions",
-  //   href: "/resources/faq",
-  //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264858/Icons/Resources/FAQs_x8rsvf.svg",
-  // },
+  {
+    name: "FAQ",
+    description: "Frequently Asked Questions",
+    href: "/resources/faq",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264858/Icons/Resources/FAQs_x8rsvf.svg",
+  },
 ];
 
 const Location = [

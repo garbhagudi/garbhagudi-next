@@ -1,5 +1,5 @@
 import React from "react";
-import Faq from "sections/faq";
+import Faq from "sections/Faq/faq";
 
 const faq = () => {
   return (
