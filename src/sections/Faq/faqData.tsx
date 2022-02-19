@@ -37,19 +37,19 @@ export const maleInfertility = [
             <th className="w-48">Paramater</th>
             <th className="w-48">WHO 2010</th>
           </tr>
-          <tr>
+          <tr className="text-sm md:text-lg">
             <td>Volume</td>
             <td>1.5 ml</td>
           </tr>
-          <tr>
+          <tr className="text-sm md:text-lg">
             <td>Concentration</td>
             <td>15 million/ml</td>
           </tr>
-          <tr>
+          <tr className="text-sm md:text-lg">
             <td>Progressive motility</td>
             <td>32%</td>
           </tr>
-          <tr>
+          <tr className="text-sm md:text-lg">
             <td>Normal forms</td>
             <td>4%</td>
           </tr>

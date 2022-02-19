@@ -18,12 +18,16 @@ const Faq = () => {
         and its treatment options.
       </div>
       <div className="w-full max-w-7xl px-2 py-16 sm:px-0">
-        <Tab.Group>
-          <Tab.List className={"flex p-1 space-x-1 bg-brandPink rounded-xl"}>
+        <Tab.Group vertical>
+          <Tab.List
+            className={
+              "flex flex-wrap md:flex-nowrap md:space-x-1 bg-brandPink rounded-xl p-1"
+            }
+          >
             <Tab
               className={({ selected }) =>
                 classNames(
-                  "w-full py-2.5 text-sm font-medium text-brandPink rounded-lg",
+                  "w-full py-2.5 text-sm  font-medium text-brandPink rounded-lg",
                   "focus:outline-none",
                   selected
                     ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
@@ -31,14 +35,14 @@ const Faq = () => {
                 )
               }
             >
-              <div className="max-w-7xl mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
+              <div className="mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
                 Male Infertility
               </div>
             </Tab>
             <Tab
               className={({ selected }) =>
                 classNames(
-                  "w-full py-2.5 text-sm font-medium text-brandPink rounded-lg",
+                  "w-full py-2.5 text-sm  font-medium text-brandPink rounded-lg",
                   "focus:outline-none",
                   selected
                     ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
@@ -46,23 +50,23 @@ const Faq = () => {
                 )
               }
             >
-              <div className="max-w-7xl mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
+              <div className="mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
                 Female Infertility
               </div>
             </Tab>
             <Tab
               className={({ selected }) =>
                 classNames(
-                  "w-full py-2.5 text-sm font-medium text-brandPink rounded-lg",
+                  "w-full py-2.5 text-sm  font-medium text-brandPink rounded-lg",
                   "focus:outline-none",
                   selected
-                    ? "bg-gray-100 ring-2 ring-brandPink2 shadow-xl"
-                    : "text-gray-100 hover:bg-brandPink3  hover:text-white"
+                    ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
+                    : "text-gray-100 hover:bg-brandPink3 hover:text-white"
                 )
               }
             >
-              <div className="max-w-7xl mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
-                IVF & IUI Procedures
+              <div className="mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
+                IUI &amp; IVF Procedures
               </div>
             </Tab>
           </Tab.List>
