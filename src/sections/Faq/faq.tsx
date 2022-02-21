@@ -10,10 +10,10 @@ function classNames(...classes) {
 const Faq = () => {
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="text-center text-4xl font-heading pt-12 font-semibold">
+      <h1 className="text-center text-4xl font-heading pt-12 font-semibold">
         Frequently Asked Questions
-      </div>
-      <div className="text-lg font-content mt-8 text-center">
+      </h1>
+      <div className="text-lg font-contents mt-8 text-center">
         Here are some of the most frequently asked questions about infertility
         and its treatment options.
       </div>
@@ -31,7 +31,7 @@ const Faq = () => {
                   "focus:outline-none",
                   selected
                     ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
-                    : "text-gray-100 hover:bg-brandPink3 hover:text-white"
+                    : "text-gray-100 hover:bg-brandPink4 hover:text-white"
                 )
               }
             >
@@ -46,7 +46,7 @@ const Faq = () => {
                   "focus:outline-none",
                   selected
                     ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
-                    : "text-gray-100 hover:bg-brandPink3 hover:text-white"
+                    : "text-gray-100 hover:bg-brandPink4 hover:text-white"
                 )
               }
             >
@@ -61,12 +61,12 @@ const Faq = () => {
                   "focus:outline-none",
                   selected
                     ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
-                    : "text-gray-100 hover:bg-brandPink3 hover:text-white"
+                    : "text-gray-100 hover:bg-brandPink4 hover:text-white"
                 )
               }
             >
               <div className="mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
-                IUI &amp; IVF Procedures
+                Treatments
               </div>
             </Tab>
           </Tab.List>
@@ -78,14 +78,14 @@ const Faq = () => {
                     <Disclosure key={items.id}>
                       {({ open }) => (
                         <>
-                          <Disclosure.Button className="flex justify-between w-full my-2 px-4 py-2 text-sm font-medium text-left text-brandDark bg-brandPink bg-opacity-20 rounded-lg hover:bg-opacity-70 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                          <Disclosure.Button className="flex justify-between w-full my-3 px-4 text-sm font-medium text-left text-brandDark bg-brandDark bg-opacity-10 rounded-lg hover:bg-opacity-80 hover:text-white focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                             <span className="text-xl font-qs font-semibold py-3">
-                              {items.question}
+                              {items.title}
                             </span>
                             <HiChevronRight
                               className={`${
                                 open ? "transform rotate-90" : ""
-                              } w-5 h-5 text-brandPink my-4`}
+                              } w-5 h-5 text-brandDark my-4`}
                             />
                           </Disclosure.Button>
                           <Transition
@@ -96,8 +96,11 @@ const Faq = () => {
                             leaveFrom="transform scale-100 opacity-100"
                             leaveTo="transform scale-95 opacity-0"
                           >
-                            <Disclosure.Panel className="px-4 pt-4 pb-2 text-gray-700 text-lg font-qs">
-                              {items.answer}
+                            <Disclosure.Panel
+                              static
+                              className="px-4 pt-4 pb-2 text-gray-700 text-lg font-qs"
+                            >
+                              {items.contents}
                             </Disclosure.Panel>
                           </Transition>
                         </>
@@ -114,14 +117,14 @@ const Faq = () => {
                     <Disclosure key={items.id}>
                       {({ open }) => (
                         <>
-                          <Disclosure.Button className="flex justify-between w-full my-2 px-4 py-2 text-sm font-medium text-left rounded-lg text-brandDark bg-brandPink bg-opacity-20 hover:bg-opacity-60 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                          <Disclosure.Button className="flex justify-between w-full my-2 px-4 text-sm font-medium text-left rounded-lg text-brandDark bg-brandDark bg-opacity-20 hover:bg-opacity-80 hover:text-white focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                             <span className="text-xl font-qs font-semibold py-3">
-                              {items.question}
+                              {items.title}
                             </span>
                             <HiChevronRight
                               className={`${
                                 open ? "transform rotate-90" : ""
-                              } w-5 h-5 text-brandPink my-4`}
+                              } w-5 h-5 text-brandDark my-4`}
                             />
                           </Disclosure.Button>
                           <Transition
@@ -133,7 +136,7 @@ const Faq = () => {
                             leaveTo="transform scale-95 opacity-0"
                           >
                             <Disclosure.Panel className="px-4 pt-4 pb-2 text-gray-700 text-lg font-qs">
-                              {items.answer}
+                              {items.contents}
                             </Disclosure.Panel>
                           </Transition>
                         </>
@@ -150,14 +153,14 @@ const Faq = () => {
                     <Disclosure key={items.id}>
                       {({ open }) => (
                         <>
-                          <Disclosure.Button className="flex justify-between w-full my-2 px-4 py-2 text-sm font-medium text-left text-brandDark bg-brandPink bg-opacity-20 hover:bg-opacity-60 rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                          <Disclosure.Button className="flex justify-between w-full my-2 px-4 text-sm font-medium text-left text-brandDark bg-brandDark bg-opacity-20 hover:bg-opacity-80 hover:text-white rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                             <span className="text-xl font-qs font-semibold py-3">
-                              {items.question}
+                              {items.title}
                             </span>
                             <HiChevronRight
                               className={`${
                                 open ? "transform rotate-90" : ""
-                              } w-5 h-5 text-brandPink my-4`}
+                              } w-5 h-5 text-brandDark my-4`}
                             />
                           </Disclosure.Button>
                           <Transition
@@ -169,7 +172,7 @@ const Faq = () => {
                             leaveTo="transform scale-95 opacity-0"
                           >
                             <Disclosure.Panel className="px-4 pt-4 pb-2 text-gray-700 text-lg font-qs">
-                              {items.answer}
+                              {items.contents}
                             </Disclosure.Panel>
                           </Transition>
                         </>

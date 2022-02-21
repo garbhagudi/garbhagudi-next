@@ -1,8 +1,8 @@
 export const maleInfertility = [
   {
     id: "1",
-    question: "What are the common causes of male infertility?",
-    answer: (
+    title: "What are the common causes of male infertility?",
+    contents: (
       <div>
         The common causes for male infertility could be several medical reasons
         such as varicocele, infections, prior surgeries, and lifestyle factors
@@ -12,8 +12,8 @@ export const maleInfertility = [
   },
   {
     id: "2",
-    question: "Can it be treated",
-    answer: (
+    title: "Can it be treated",
+    contents: (
       <div>
         Yes, it can be treated in most cases. <br />
         <br />
@@ -27,8 +27,8 @@ export const maleInfertility = [
   },
   {
     id: "3",
-    question: "What are normal semen parameters?",
-    answer: (
+    title: "What are normal semen parameters?",
+    contents: (
       <div>
         World Health Organization (WHO) has recommended the following as
         guidelines for typical semen Parameters.
@@ -59,9 +59,9 @@ export const maleInfertility = [
   },
   {
     id: "4",
-    question:
+    title:
       "Will the semen parameters and sperm count become normal after treatment?",
-    answer: (
+    contents: (
       <div>
         There are chances it may become normal after treatment. It depends upon
         the cause of male infertility. Severe cases may not become normal after
@@ -71,8 +71,8 @@ export const maleInfertility = [
   },
   {
     id: "5",
-    question: "Which diet modification will improve sperm count?",
-    answer: (
+    title: "Which diet modification will improve sperm count?",
+    contents: (
       <div>
         <ol className="list-decimal ml-5">
           <li>Increased intake of fruits and vegetables.</li>
@@ -91,9 +91,9 @@ export const maleInfertility = [
   },
   {
     id: "6",
-    question:
+    title:
       "What are the differences between male infertility, impotence, erectile dysfunction, and premature ejaculation?",
-    answer: (
+    contents: (
       <div>
         Infertility is defined as the inability to establish a pregnancy after
         trying to conceive for one year. Impotence or erectile dysfunction is
@@ -109,8 +109,8 @@ export const maleInfertility = [
 export const femaleInfertility = [
   {
     id: "1",
-    question: "What is female infertility?",
-    answer: (
+    title: "What is female infertility?",
+    contents: (
       <div>
         Infertility is the inability to conceive after one year of unprotected
         sex. One-third of causes of infertility are due to a male problem; one
@@ -122,8 +122,8 @@ export const femaleInfertility = [
   },
   {
     id: "2",
-    question: "How common is female infertility?",
-    answer: (
+    title: "How common is female infertility?",
+    contents: (
       <div>
         Infertility is a prevalent challenge faced by couples. A minimum of 10%
         of females have infertility issues of some kind. The probability of
@@ -133,8 +133,8 @@ export const femaleInfertility = [
   },
   {
     id: "3",
-    question: "What causes female infertility?",
-    answer: (
+    title: "What causes female infertility?",
+    contents: (
       <div>
         <article>
           <span className="font-semibold">
@@ -177,8 +177,8 @@ export const femaleInfertility = [
   },
   {
     id: "4",
-    question: "Can it be treated?",
-    answer: (
+    title: "Can it be treated?",
+    contents: (
       <div>
         Female infertility is undoubtedly manageable in all cases and curable in
         most cases. Remember, you are not alone. Our specialist will diagnose
@@ -190,8 +190,8 @@ export const femaleInfertility = [
   },
   {
     id: "5",
-    question: "What is the outlook for female infertility?",
-    answer: (
+    title: "What is the outlook for female infertility?",
+    contents: (
       <div>
         The prognosis for female infertility depends on the individual and the
         underlying explanation. In cases where medication can help treat the
@@ -211,8 +211,8 @@ export const femaleInfertility = [
 export const ivfProcedures = [
   {
     id: "1",
-    question: "What is IUI?",
-    answer: (
+    title: "What is IUI?",
+    contents: (
       <div>
         Intrauterine insemination (IUI) is a procedure in which sperm are washed
         and placed directly inside the woman’s uterus through a catheter, which
@@ -226,8 +226,8 @@ export const ivfProcedures = [
   },
   {
     id: "2",
-    question: "Is IUI painful? How is it performed?",
-    answer: (
+    title: "Is IUI painful? How is it performed?",
+    contents: (
       <div>
         A speculum is inserted into the woman’s vagina, and a catheter with, an
         attached syringe containing the washed sperm, is inserted through the
@@ -239,8 +239,8 @@ export const ivfProcedures = [
   },
   {
     id: "3",
-    question: "Will I be successful with the IUI for the first time?",
-    answer: (
+    title: "Will I be successful with the IUI for the first time?",
+    contents: (
       <div>
         A few cycles of IUI may be necessary before you are successful.
         Sometimes, doing two inseminations back to back (double insemination) in
@@ -250,8 +250,8 @@ export const ivfProcedures = [
   },
   {
     id: "4",
-    question: "How successful is IUI?",
-    answer: (
+    title: "How successful is IUI?",
+    contents: (
       <div>
         Everybody’s history and response are different. Approximately, natural
         IUI without medications has 6-10% success rate, while IUI with fertility
@@ -261,8 +261,8 @@ export const ivfProcedures = [
   },
   {
     id: "5",
-    question: "Are there any risks associated with IUI?",
-    answer: (
+    title: "Are there any risks associated with IUI?",
+    contents: (
       <div>
         IUI is the least stressful fertility treatment on a woman’s body,
         especially if the patient is not taking fertility medications. It has
@@ -273,8 +273,8 @@ export const ivfProcedures = [
   },
   {
     id: "6",
-    question: "What is IVF?",
-    answer: (
+    title: "What is IVF?",
+    contents: (
       <div>
         In vitro fertilization (IVF) is more simply explained as ’test-tube
         baby.’ In the IVF process, eggs are removed from the ovaries of the
@@ -287,8 +287,8 @@ export const ivfProcedures = [
   },
   {
     id: "7",
-    question: "Is the treatment guaranteed? If not, why?",
-    answer: (
+    title: "Is the treatment guaranteed? If not, why?",
+    contents: (
       <div>
         It is tough to give a guarantee in treating any medical conditions. If
         anyone does, they are misleading you. The success rate depends upon the
@@ -300,8 +300,8 @@ export const ivfProcedures = [
   },
   {
     id: "8",
-    question: "What is ICSI?",
-    answer: (
+    title: "What is ICSI?",
+    contents: (
       <div>
         ICSI is a technique in which a single sperm is directly injected to
         fertilize an egg, and the fertilized egg (embryo) is transferred to the
@@ -312,8 +312,8 @@ export const ivfProcedures = [
   },
   {
     id: "9",
-    question: "What is laser-assisted hatching?",
-    answer: (
+    title: "What is laser-assisted hatching?",
+    contents: (
       <div>
         Laser Assisted Hatching is a technique in which the embryo’s outer layer
         is slightly opened and weakened from one point through a Laser to
@@ -323,8 +323,8 @@ export const ivfProcedures = [
   },
   {
     id: "10",
-    question: "What is blastocyst culture?",
-    answer: (
+    title: "What is blastocyst culture?",
+    contents: (
       <div>
         Blastocyst Culture and Transfer is a technique in which an embryo is
         developed in the laboratory for 4-6 days after fertilization before
@@ -337,8 +337,8 @@ export const ivfProcedures = [
   },
   {
     id: "11",
-    question: "How long does it take for an IVF treatment?",
-    answer: (
+    title: "How long does it take for an IVF treatment?",
+    contents: (
       <div>
         The overall duration of IVF Treatment is 3-4 months. During your visit,
         you will consult with the doctor, and after the consultation, the
@@ -350,8 +350,8 @@ export const ivfProcedures = [
   },
   {
     id: "12",
-    question: "What should I carry with me when visiting for the first time?",
-    answer: (
+    title: "What should I carry with me when visiting for the first time?",
+    contents: (
       <div>
         You need to carry the ID Proof and Passport size photograph of you and
         your partner. Also, if you have undergone checkups anytime in the past,
@@ -361,8 +361,8 @@ export const ivfProcedures = [
   },
   {
     id: "13",
-    question: "What tests would be done during the first visit?",
-    answer: (
+    title: "What tests would be done during the first visit?",
+    contents: (
       <div>
         When you visit for the first time, Blood Tests of both, Ultrasound and
         Semen Analysis will be done.
@@ -371,9 +371,9 @@ export const ivfProcedures = [
   },
   {
     id: "14",
-    question:
+    title:
       "We have failed more than two attempts of IVF. What should we do now?",
-    answer: (
+    contents: (
       <div>
         If you have already attempted IVF, we suggest you visit our hospital
         with all your previous reports. Doctors will tell you why your past IVF
