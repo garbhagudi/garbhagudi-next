@@ -21,7 +21,7 @@ const navigation = {
     { name: "GarbhaGudi IVF", href: "/about/overview" },
     { name: "GGIRHR", href: "https://ggirhr.com" },
     { name: "GarbhaGnan Foundation", href: "https://garbhagnan.org" },
-    { name: "Garbhagudi Pharma", href: "#" },
+    { name: "GarbhaGudi Pharma", href: "#" },
   ],
   legal: [
     { name: "Privacy", href: "/legal/privacy-policy" },
