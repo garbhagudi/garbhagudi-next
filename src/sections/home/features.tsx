@@ -92,8 +92,8 @@ const Features = () => {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature) => (
               <Link href={feature.link} key={feature.id} passHref>
-                <div className=" pt-6 cursor-pointer">
-                  <div className=" flow-root bg-gray-50 rounded-lg px-6 pb-8 ">
+                <div className=" pt-6 cursor-pointer ">
+                  <div className=" flow-root bg-gray-50 rounded-lg px-6 pb-8 hover:shadow-2xl">
                     <div className="-mt-6">
                       <div>
                         <span className="inline-flex items-center justify-center p-2 bg-brandPink rounded-full shadow-xl">

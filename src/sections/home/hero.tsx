@@ -29,8 +29,8 @@ const Hero = () => {
               <div className="my-6">
                 <img
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643272918/Home/Home-Experience_the_Joy_kvdfwj.webp"
-                  alt="dummy"
-                  className="object-cover rounded-xl"
+                  alt="Experience the joy of being complete"
+                  className="object-cover rounded-2xl"
                 />
               </div>
             </div>

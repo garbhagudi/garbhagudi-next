@@ -4,7 +4,7 @@ import CoreVision from "sections/about/coreVision";
 import { gql, GraphQLClient } from "graphql-request";
 import Link from "next/link";
 import Head from "next/head";
-import BreadCrumbs from "components/breadcrumbs";
+// import BreadCrumbs from "components/breadcrumbs";
 
 const Overview = ({ directors }) => {
   return (
@@ -49,7 +49,7 @@ const Overview = ({ directors }) => {
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
         />
       </Head>
-      <BreadCrumbs
+      {/* <BreadCrumbs
         text1="About"
         link1="/about/overview"
         link2={""}
@@ -58,7 +58,7 @@ const Overview = ({ directors }) => {
         text3={""}
         link4={""}
         text4={""}
-      />
+      /> */}
       <Header />
       <div className="bg-white">
         <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
