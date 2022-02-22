@@ -117,7 +117,10 @@ const Home = ({ homeData }) => {
             <ul className="mx-auto space-y-0 grid grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl">
               {homeData?.doctors.map((item) => {
                 return (
-                  <li key={item?.id}>
+                  <li
+                    key={item?.id}
+                    className="transition-all duration-500 hover:shadow-2xl rounded-xl mb-2 "
+                  >
                     <Link href={`/doctors/${item?.slug}`} passHref>
                       <a>
                         <div className="space-y-4">
@@ -131,10 +134,10 @@ const Home = ({ homeData }) => {
                               <h3 className="text-brandDark font-content">
                                 {item?.name}
                               </h3>
-                              <p className="text-brandPurple text-sm font-content">
+                              <p className="text-brandPurpleDark text-sm font-content">
                                 {item?.qualification}
                               </p>
-                              <p className="text-brandPink text-sm font-content">
+                              <p className="text-brandPink text-sm font-content pb-2">
                                 {item?.designation}
                               </p>
                             </div>

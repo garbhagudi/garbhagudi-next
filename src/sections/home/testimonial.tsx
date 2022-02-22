@@ -70,7 +70,7 @@ const responsive = {
 
 const Testimonial = () => {
   return (
-    <section className="py-12 bg-gray-50 overflow-hidden md:py-20 lg:py-24">
+    <section className="py-12 bg-gray-50 overflow-hidden md:py-16 lg:py-16">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Carousel responsive={responsive} ssr={true} infinite={true}>
           {data.map((item) => {
@@ -79,7 +79,7 @@ const Testimonial = () => {
                 <img className="mx-auto h-8" src={item.logo} alt={item.name} />
                 <blockquote className="mt-10">
                   <div className="max-w-3xl mx-auto text-center text-xl tracking-tight leading-9 font-medium text-gray-900 font-content">
-                    <p>{item.quote}</p>
+                    <p>&quot;{item.quote}&quot;</p>
                   </div>
                   <footer className="mt-8">
                     <div className="md:flex md:items-center md:justify-center">

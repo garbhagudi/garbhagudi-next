@@ -16,12 +16,12 @@ const navigation = {
     { name: "GG CARE", href: "/gg-care" },
     { name: "Diagnosis Options", href: "/resources/diagnosis" },
     { name: "Treatment Options", href: "/resources/treatments" },
-    { name: "Contact Us", href: "/gg-care" },
   ],
   company: [
     { name: "GarbhaGudi IVF", href: "/about/overview" },
     { name: "GGIRHR", href: "https://ggirhr.com" },
     { name: "GarbhaGnan Foundation", href: "https://garbhagnan.org" },
+    { name: "Garbhagudi Pharma", href: "#" },
   ],
   legal: [
     { name: "Privacy", href: "/legal/privacy-policy" },
