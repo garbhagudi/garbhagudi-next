@@ -119,7 +119,9 @@ const BlogFooter = () => {
               </p>
               <a
                 className="block w-full py-3 px-5 text-center bg-white border border-transparent rounded-md shadow-md text-base font-medium text-brandDark hover:bg-brandDark hover:text-gray-100 sm:inline-block sm:w-auto"
-                href="#"
+                href="https://salesiq.zoho.com/signaturesupport.ls?widgetcode=93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0"
+                target={"_blank"}
+                rel="noreferrer"
               >
                 Contact Us
               </a>
