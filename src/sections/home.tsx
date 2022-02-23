@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Band from "sections/home/band";
 import Features from "sections/home/features";
 import Hero from "sections/home/hero";
