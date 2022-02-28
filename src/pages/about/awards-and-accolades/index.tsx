@@ -4,7 +4,7 @@ import Link from "next/link";
 import BreadCrumbs from "components/breadcrumbs";
 import Head from "next/head";
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const url = process.env.ENDPOINT;
   const graphQLClient = new GraphQLClient(url, {
     headers: {
