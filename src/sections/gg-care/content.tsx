@@ -10,7 +10,7 @@ const Contact = () => {
             <div className="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2 font-content">
               <div>
                 <h3 className="text-lg leading-6 font-medium text-gray-900">
-                  Appointments
+                  Appointments & Queries
                 </h3>
                 <dl className="mt-2 text-base text-gray-500">
                   <div>
@@ -39,7 +39,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-lg leading-6 font-medium text-gray-900">
-                  Queries and Complaints
+                  Feedback & Complaints
                 </h3>
                 <dl className="mt-2 text-base text-gray-500">
                   <div>
