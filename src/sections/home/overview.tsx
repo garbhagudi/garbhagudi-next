@@ -82,7 +82,7 @@ const Overview = () => {
 
                   <footer className="mt-4">
                     <p className="text-base font-semibold text-purple-300 font-content">
-                      Dr Asha S Vjay, Founder & Medical Director at GarbhaGudi
+                      Dr Asha S Vijay, Founder & Medical Director at GarbhaGudi
                     </p>
                   </footer>
                 </blockquote>
