@@ -12,7 +12,7 @@ import { useRouter } from "next/router";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   useEffect(() => {
-    const handleRouteChange = (url) => {
+    const handleRouteChange = (url: any) => {
       ga.pageview(url);
     };
     router.events.on("routeChangeComplete", handleRouteChange);

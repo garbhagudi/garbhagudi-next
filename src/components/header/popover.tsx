@@ -231,7 +231,7 @@ export function About() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-3xl hover:bg-pink-100 focus:outline-none"
+                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none"
                     >
                       <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
                         <img src={item.icon} alt={item.name} />
@@ -277,14 +277,14 @@ export function Treatment() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-screen max-w-lg px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl overflow-auto">
+            <Popover.Panel className="absolute z-10 w-screen max-w-md px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
               <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-7 grid-cols-2 lg:grid-cols-3">
+                <div className="relative grid gap-8 bg-white p-5 grid-cols-2 lg:grid-cols-3">
                   {valueAddedServices.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-2xl hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                     >
                       <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
                         <img src={item.icon} alt={item.name} />
@@ -329,9 +329,9 @@ export function KnowledgeCenter() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-96 px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
+            <Popover.Panel className="absolute z-10 w-96 px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
               <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-1">
+                <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-1">
                   {Resources.map((item) => (
                     <Link key={item.name} href={item.href} passHref>
                       <a className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
@@ -382,9 +382,9 @@ export function Contact() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-96 px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
+            <Popover.Panel className="absolute z-10 w-96 px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
               <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-4 lg:grid-cols-1">
+                <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-1">
                   {contact.map((item) => (
                     <a
                       key={item.name}

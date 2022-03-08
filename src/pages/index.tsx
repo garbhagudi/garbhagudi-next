@@ -94,7 +94,7 @@ const Home = ({ homeData }) => {
       >
         {homeData.banners.map((items) => (
           <div className="" key={items?.id}>
-            <a href={items?.url}>
+            <a href={items?.url} target="_blank" rel="noreferrer">
               <img src={items?.image?.url} alt={items?.title} />
             </a>
           </div>

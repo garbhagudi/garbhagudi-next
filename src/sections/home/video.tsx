@@ -54,7 +54,7 @@ const responsive = {
 
 const Video = () => {
   return (
-    <div className="container mx-auto text-center py-8">
+    <div className="container mx-auto text-center my-8">
       <span className="text-2xl lg:text-4xl font-extrabold text-brandDark font-heading">
         Testimonials from our happy couples
       </span>
@@ -68,7 +68,7 @@ const Video = () => {
         {data.map((item) => {
           return (
             <div
-              className="md:w-3/4 mx-auto aspect-video mt-8 overflow-hidden rounded-3xl"
+              className="md:w-4/6 mx-auto aspect-video mt-8 overflow-hidden rounded-3xl"
               key={item.id}
             >
               <LiteYouTubeEmbed
