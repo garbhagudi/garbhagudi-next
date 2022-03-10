@@ -20,6 +20,23 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
+
+  useEffect(() => {
+    import("react-facebook-pixel")
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init("2326481447668134");
+        ReactPixel.pageView();
+        router.events.on("routeChangeComplete", () => {
+          ReactPixel.pageView();
+          return () => {
+            router.events.off("routeChangeComplete", () => {
+              ReactPixel.pageView();
+            });
+          };
+        });
+      });
+  }, [router.events]);
   return (
     <div>
       <Script
