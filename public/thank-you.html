@@ -293,5 +293,61 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
+    <script type="text/javascript" id="VisitorTracking">
+      var $zoho = $zoho || {};
+      $zoho.salesiq = $zoho.salesiq || {
+        widgetcode:
+          "35074a07bf996fd88e4ad7bf8493642fb081008ce54deb21426241464ccb8de2d075f5a1390755f53a6849185aa83b0e",
+        values: {},
+        ready: function () {},
+      };
+      var d = document;
+      s = d.createElement("script");
+      s.type = "text/javascript";
+      s.id = "zsiqscript";
+      s.defer = true;
+      s.src = "https://salesiq.zoho.com/widget";
+      t = d.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(s, t);
+      function trackVisitor() {
+        try {
+          if ($zoho) {
+            var LDTuvidObj =
+              document.forms["WebToLeads3505252000085291164"]["LDTuvid"];
+            if (LDTuvidObj) {
+              LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid();
+            }
+            var firstnameObj =
+              document.forms["WebToLeads3505252000085291164"]["First Name"];
+            if (firstnameObj) {
+              name = firstnameObj.value + " " + name;
+            }
+            $zoho.salesiq.visitor.name(name);
+            var emailObj =
+              document.forms["WebToLeads3505252000085291164"]["Email"];
+            if (emailObj) {
+              email = emailObj.value;
+              $zoho.salesiq.visitor.email(email);
+            }
+          }
+        } catch (e) {}
+      }
+    </script>
+    <div
+      class="fixed w-8 h-8 md:w-14 md:h-14 text-black hover:text-white bottom-20 right-6 md:bottom-20 md:right-3.5 px-2 py-3 bg-pink-500 rounded-full flex items-center justify-center opacity-40 hover:opacity-100 transition-opacity duration-500 ease-linear"
+    >
+      <a href="tel:+918880000909"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+          />
+        </svg>
+      </a>
+    </div>
   </body>
 </html>
