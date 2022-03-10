@@ -53,20 +53,20 @@
     />
 
     <title>Thank You!</title>
-    <!-- Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-179098406-1"
+    ></script>
     <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-NT9BZ69");
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-179098406-1");
     </script>
-    <!-- End Google Tag Manager -->
   </head>
   <body
     class="antialiased text-gray-600 min-h-full flex flex-col relative bg-gray-100"
@@ -246,26 +246,6 @@
       site="SOXJJCZQ"
       defer
     ></script>
-    <!-- toobla pixel code -->
-    <script type="text/javascript">
-      window._tfa = window._tfa || [];
-      window._tfa.push({ notify: "event", name: "page_view", id: 1307940 });
-      !(function (t, f, a, x) {
-        if (!document.getElementById(x)) {
-          t.async = 1;
-          t.src = a;
-          t.id = x;
-          f.parentNode.insertBefore(t, f);
-        }
-      })(
-        document.createElement("script"),
-        document.getElementsByTagName("script")[0],
-        "//cdn.taboola.com/libtrc/unip/1307940/tfa.js",
-        "tb_tfa_script"
-      );
-    </script>
-    <!-- tooble pixel code end -->
-
     <!-- Facebook Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
@@ -304,30 +284,6 @@
         src="https://www.facebook.com/tr?id=2326481447668134&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
-    <!-- Bing -->
-    <script>
-      (function (w, d, t, r, u) {
-        var f, n, i;
-        (w[u] = w[u] || []),
-          (f = function () {
-            var o = { ti: "134602556" };
-            (o.q = w[u]), (w[u] = new UET(o)), w[u].push("pageLoad");
-          }),
-          (n = d.createElement(t)),
-          (n.src = r),
-          (n.async = 1),
-          (n.onload = n.onreadystatechange =
-            function () {
-              var s = this.readyState;
-              (s && s !== "loaded" && s !== "complete") ||
-                (f(), (n.onload = n.onreadystatechange = null));
-            }),
-          (i = d.getElementsByTagName(t)[0]),
-          i.parentNode.insertBefore(n, i);
-      })(window, document, "script", "//bat.bing.com/bat.js", "uetq");
-    </script>
-    <!-- bing end -->
-
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -337,27 +293,5 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Global site tag (gtag.js) - Google Ads: 688708404 -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-688708404"
-    ></script>
-    <!-- <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "AW-688708404");
-    </script>
-    <script>
-      gtag("event", "conversion", {
-        send_to: "AW-688708404/u7mHCPyes4MDELS2s8gC",
-        value: 1.0,
-        currency: "USD",
-      });
-    </script> -->
   </body>
 </html>
