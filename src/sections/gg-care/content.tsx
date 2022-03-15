@@ -148,7 +148,15 @@ const Contact = () => {
                     Subhasri Complex, 210/A, Kumaraswamy Temple Rd, 2nd Block,
                     Phase 1, Banashankari Stage I, Banashankari,
                   </p>
-                  <p className="mt-1">Bengaluru, Karnataka 560050</p>
+                  <p className="mt-1 mb-5">Bengaluru, Karnataka 560050</p>
+                  <a
+                    href="https://g.page/GG1-HN?share"
+                    className="py-2 px-3 bg-brandPink text-white font-semibold rounded-3xl hover:bg-brandPink2"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    Directions
+                  </a>
                 </div>
               </div>
               <div>
@@ -168,7 +176,15 @@ const Contact = () => {
                     Park Landing, 5AC-709, Outer Ring Rd, Balachandra Layout,
                     HRBR Layout 2nd Block, Chelekare, Extension,
                   </p>
-                  <p className="mt-1">Bengaluru, Karnataka 560043</p>
+                  <p className="mt-1 mb-5">Bengaluru, Karnataka 560043</p>
+                  <a
+                    href="https://g.page/GarbhaGudi-IVF-Bangalore?share"
+                    className="py-2 px-3 bg-brandPink text-white font-semibold rounded-3xl hover:bg-brandPink2"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    Directions
+                  </a>
                 </div>
               </div>
               <div>
@@ -187,7 +203,15 @@ const Contact = () => {
                   <p>
                     South End Circle, 26, Pattalamma Temple Rd, Basavanagudi,
                   </p>
-                  <p className="mt-1">Bengaluru, Karnataka 560004</p>
+                  <p className="mt-1 mb-5">Bengaluru, Karnataka 560004</p>
+                  <a
+                    href="https://g.page/ggivf?share"
+                    className="py-2 px-3 bg-brandPink text-white font-semibold rounded-3xl hover:bg-brandPink2"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    Directions
+                  </a>
                 </div>
               </div>
               <div>
@@ -207,7 +231,15 @@ const Contact = () => {
                     Ganesh Towers,3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra
                     Bank, Konappana Agrahara, Electronic City,
                   </p>
-                  <p className="mt-1">Bengaluru, Karnataka 560100</p>
+                  <p className="mt-1 mb-5">Bengaluru, Karnataka 560100</p>
+                  <a
+                    href="https://g.page/GG4-EC?share"
+                    className="py-2 px-3 bg-brandPink text-white font-semibold rounded-3xl hover:bg-brandPink2"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    Directions
+                  </a>
                 </div>
               </div>
               <div>
@@ -227,7 +259,15 @@ const Contact = () => {
                     4TH floor, Chirag Towers, Born Babies Building, 24 & 64,
                     Service Rd, next to कलामंदिर, Marathahalli,
                   </p>
-                  <p className="mt-1">Bengaluru, Karnataka 560037</p>
+                  <p className="mt-1 mb-5">Bengaluru, Karnataka 560037</p>
+                  <a
+                    href="https://goo.gl/maps/kxhfM5SCZuq6EDnE9"
+                    className="py-2 px-3 bg-brandPink text-white font-semibold rounded-3xl hover:bg-brandPink2"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    Directions
+                  </a>
                 </div>
               </div>
             </div>
