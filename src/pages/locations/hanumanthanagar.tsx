@@ -73,6 +73,27 @@ const HanumanthaNagar = ({ doctors }) => {
             alt="banner"
             className="rounded-xl mt-4"
           />
+          <p className="my-10 text-md sm:text-lg font-content mx-auto px-6 sm:px-0">
+            GarbhaGudi is one of the most reputed IVF hospitals, providing
+            people access to every possible infertility treatment and
+            world-class amenities. We take pride in our reproductive healthcare
+            teams, including trained and experienced gynecologists,
+            andrologists, nurses, counselors, embryologists, and lab
+            technologists. Each member of the GarbhaGudi family excels in their
+            respective fields and provides healthcare treatments and solutions
+            with utmost care and precision. The center is recognized for its
+            integrated care network, assessment, diagnosis, success rates,
+            advanced scientific techniques, and counseling support. GarbhaGudi
+            deals with advanced technologies, such as oocyte/embryo culture,
+            blastocyst culture and transfer, ICSI, embryo cryopreservation, and
+            laser-assisted hatching. In addition to the core procedures such as
+            IUI, IVF, ICSI, and andrology services, the Centre offers several
+            state-of-the-art technologies to improve the chances of pregnancy
+            following IVF and ICSI, even in patients who have had multiple
+            failures previously. The center’s ultimate aim is to provide
+            advanced Assisted Reproductive Technology (ART) in India at par with
+            what is available globally.
+          </p>
         </div>
         <div className="py-6 flex flex-wrap lg:flex-nowrap inset-0 ">
           <div className="lg:w-1/2 md:w-full bg-white flex flex-col md:ml-auto w-full pb-8 md:mt-0 min-h-max">

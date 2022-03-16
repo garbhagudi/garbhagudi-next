@@ -73,6 +73,24 @@ const Marathahalli = ({ doctors }) => {
             alt="banner"
             className="rounded-xl mt-4"
           />
+          <p className="my-10 text-md sm:text-lg font-content mx-auto px-6 sm:px-0">
+            GarbhaGudi is a top player in the IVF industry in India. The center
+            acts as a one-stop destination for infertile couples across and
+            beyond the nation. Also, GarbhaGudi IVF has established a firm
+            foothold in the infertility industry throughout its journey. We are
+            also continually emerging as the fastest growing and trusted
+            fertility chain in India, providing a wide range of infertility
+            treatments to help couples start their families. The center's
+            treatment quality, costs, and success rates proved to be the reason
+            to garner a vast base of patients, which continues to grow by the
+            day. We stick to a personalized and proven approach to providing
+            comprehensive and consistent planning toward diagnosing and treating
+            gynecologic and fertility issues. GarbhaGudi’s progression and
+            implementation of the latest medical technologies and methods to
+            overcome female and male infertility have been helping couples from
+            every corner of the world fulfill their ardent desire to have a
+            baby.
+          </p>
         </div>
         <div className="py-6 flex flex-wrap lg:flex-nowrap inset-0 ">
           <div className="lg:w-1/2 md:w-full bg-white flex flex-col md:ml-auto w-full pb-8 md:mt-0 min-h-max">
