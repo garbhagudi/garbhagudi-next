@@ -73,6 +73,24 @@ const Jayanagar = ({ doctors }) => {
             alt="banner"
             className="rounded-xl mt-4"
           />
+          <p className="my-10 text-md sm:text-lg font-content mx-auto px-6 sm:px-0">
+            GarbhaGudi is a popular IVF destination for couples across the
+            nation. The center is dedicated to providing a range of fertility
+            and reproductive care services in a personalized and friendly
+            ambiance, from simple medical management to surgical treatments and
+            ART procedures under one roof. Backed with 10+ years of fruitful
+            experience in treating a wide range of infertility issues,
+            GarbhaGudi stands for its track record of several thousand
+            successful IVF pregnancies, achieved through a unique combination of
+            cutting edge science and humane touch. Our high-quality, reliable
+            fertility treatment helps you achieve your dream of having a
+            biological child. We provide the best possible care. Our dedicated
+            team of skilled doctors works in partnership with you to provide a
+            personalized treatment plan that increases your chances of
+            conception and helps you fulfill your ardent desire. The center also
+            provides a comfortable atmosphere and holistic approach to ensure
+            unsurpassed satisfaction of every couple.
+          </p>
         </div>
         <div className="py-6 flex flex-wrap lg:flex-nowrap inset-0 ">
           <div className="lg:w-1/2 md:w-full bg-white flex flex-col md:ml-auto w-full pb-8 md:mt-0 min-h-max">

@@ -73,6 +73,25 @@ const KalyanNagar = ({ doctors }) => {
             alt="banner"
             className="rounded-xl mt-4"
           />
+          <p className="my-10 text-md sm:text-lg font-content mx-auto px-6 sm:px-0">
+            GarbhaGudi is a well-known IVF center that offers the complete gamut
+            of assisted reproductive techniques to ensure a treatment option for
+            almost every couple to address all causes of infertility. Our
+            doctors are renowned Gynecologists with vast experience in IVF, and
+            we have an in-house team of trained and experienced Embryologists.
+            This helps us to provide advanced embryological services like ICSI
+            and more. We also follow the best practices in our embryology
+            laboratory. The technologies and personnel continuously monitor
+            laboratory parameters to ensure the best possible outcomes. The
+            center has achieved remarkable success rates due to its exceptional
+            quality of treatment, reasonable costs, and hospitality. We are
+            committed to providing unparalleled care for patients facing
+            infertility and other reproductive health issues. Our experts and
+            staff are dedicated to providing you with the greatest level of care
+            and compassion. GarbhaGudi offers the best access and excellent care
+            to every patient with multiple branches and plans to expand further
+            across the nation.
+          </p>
         </div>
         <div className="py-6 flex flex-wrap lg:flex-nowrap inset-0 ">
           <div className="lg:w-1/2 md:w-full bg-white flex flex-col md:ml-auto w-full pb-8 md:mt-0 min-h-max">

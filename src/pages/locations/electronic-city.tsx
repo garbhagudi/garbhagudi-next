@@ -73,6 +73,23 @@ const ElectronicCity = ({ doctors }) => {
             alt="banner"
             className="rounded-xl mt-4"
           />
+          <p className="my-10 text-md sm:text-lg font-content mx-auto px-6 sm:px-0">
+            GarbhaGudi is a chain of new-generation infertility treatment
+            hospitals equipped with state-of-the-art infrastructure and
+            cutting-edge technology to address the ever-increasing problem of
+            infertility. It was founded by a team of committed entrepreneurs and
+            healthcare specialists and is known for its top-class treatments and
+            unparalleled services, with the commitment to offer standardized and
+            ethical infertility treatment and address the urgent need for an
+            organized set-up for fertility treatment. At GarbhaGudi, we want you
+            to cherish one of life’s greatest joys, and having been in the
+            industry for men’s and women’s health for so long, we always
+            prioritize a stable and sustainable pregnancy, and we will leave no
+            stone unturned when it comes to giving you the best results.
+            GarbhaGudi’s expertise in handling infertility, phenomenal success
+            rates, and patient care has made the organization to become one of
+            the fastest-growing chains of fertility hospitals in India.
+          </p>
         </div>
         <div className="py-6 flex flex-wrap lg:flex-nowrap inset-0 ">
           <div className="lg:w-1/2 md:w-full bg-white flex flex-col md:ml-auto w-full pb-8 md:mt-0 min-h-max">
