@@ -1,4 +1,5 @@
 import React from "react";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 
 const Video = () => {
@@ -22,15 +23,11 @@ const Video = () => {
           </div>
           <div className="mt-12 relative sm:max-w-xl sm:mx-auto lg:mt-0 lg:max-w-xl lg:mx-0 lg:col-span-6">
             <div className="relative mx-auto w-full aspect-video shadow-lg rounded-3xl overflow-hidden">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/3l4gWsVlhE4"
-                title="YouTube video player"
-                frameBorder="0"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed
+                id="3l4gWsVlhE4"
+                title="Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay"
+                poster="maxresdefault"
+              />
             </div>
           </div>
         </div>

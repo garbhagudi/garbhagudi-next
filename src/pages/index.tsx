@@ -109,7 +109,7 @@ const Home = ({ homeData }) => {
                 Meet our Experts
               </h2>
               <p className="text-md text-brandDark font-content">
-                Our team of fertility specialists has been known for their
+                Our team of fertility specialists have been known for their
                 extensive clinical experience and research contributions and
                 their success in treating the most challenging fertility cases.
               </p>
