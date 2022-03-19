@@ -5,31 +5,16 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 const data = [
-  {
-    id: 1,
-    videoId: "xIvoIRASbgg",
-  },
-  {
-    id: 2,
-    videoId: "YVyaYhk8Hbk",
-  },
-
-  {
-    id: 3,
-    videoId: "Te1R9a0cc40",
-  },
-  {
-    id: 4,
-    videoId: "jlDAsrZWinI",
-  },
-  {
-    id: 5,
-    videoId: "QJLHWn1P_-Y",
-  },
-  {
-    id: 6,
-    videoId: "VaGyOFVn4H4",
-  },
+  { id: 1, videoId: "xIvoIRASbgg" },
+  { id: 2, videoId: "1chyB0TjnrM" },
+  { id: 3, videoId: "IfhN2YhkEyU" },
+  { id: 4, videoId: "yM439ewxSks" },
+  { id: 5, videoId: "YVyaYhk8Hbk" },
+  { id: 6, videoId: "Te1R9a0cc40" },
+  { id: 7, videoId: "jlDAsrZWinI" },
+  { id: 8, videoId: "QJLHWn1P_-Y" },
+  { id: 9, videoId: "VaGyOFVn4H4" },
+  { id: 10, videoId: "Djje6h177kU" },
 ];
 
 const responsive = {
@@ -60,10 +45,14 @@ const Video = () => {
       </span>
       <Carousel
         responsive={responsive}
+        autoPlaySpeed={360000}
         partialVisbile={true}
         focusOnSelect={true}
         ssr={true}
         infinite={true}
+        showDots={true}
+        swipeable={true}
+        draggable={true}
       >
         {data.map((item) => {
           return (
