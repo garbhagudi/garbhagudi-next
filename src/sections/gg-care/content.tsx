@@ -1,4 +1,4 @@
-import { MdAlternateEmail, MdPhone } from "react-icons/Md";
+import { MdAlternateEmail, MdPhone } from "react-icons/md";
 
 const Contact = () => {
   return (
