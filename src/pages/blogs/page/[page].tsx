@@ -178,7 +178,7 @@ export async function getServerSideProps({ params }) {
     },
   });
   const query = gql`
-    query productPageQuery($limit: Int!, $offset: Int!) {
+    query blogListQuery($limit: Int!, $offset: Int!) {
       blogsConnection(orderBy: publishedOn_DESC, first: $limit, skip: $offset) {
         blogs: edges {
           node {

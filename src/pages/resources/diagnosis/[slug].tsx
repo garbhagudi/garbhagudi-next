@@ -1,21 +1,14 @@
 import React from "react";
-import { GraphQLClient, gql } from "graphql-request";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
+import graphcms from "lib/graphcms";
 
-export const getServerSideProps = async (pageContext) => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const pageSlug = pageContext.query.slug;
-
-  const query = gql`
-    query ($pageSlug: String!) {
-      diagnosis(where: { slug: $pageSlug }) {
+export const getStaticProps = async ({ params }) => {
+  const { diagnosis } = await graphcms.request(
+    `
+    query ($slug: String!) {
+      diagnosis(where: { slug: $slug }) {
         id
         title
         image {
@@ -27,18 +20,33 @@ export const getServerSideProps = async (pageContext) => {
         }
       }
     }
-  `;
-
-  const variables = {
-    pageSlug,
-  };
-
-  const data = await graphQLClient.request(query, variables);
-  const diagnosis = data.diagnosis;
+  `,
+    {
+      slug: params.slug,
+    }
+  );
   return {
     props: {
       diagnosis,
     },
+  };
+};
+
+export const getStaticPaths = async () => {
+  const { diagnoses } = await graphcms.request(
+    `
+    query {
+      diagnoses {
+        title
+        slug
+      }
+    }
+    `
+  );
+
+  return {
+    paths: diagnoses.map(({ slug }) => ({ params: { slug } })),
+    fallback: false,
   };
 };
 

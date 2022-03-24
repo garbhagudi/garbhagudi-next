@@ -1,13 +1,16 @@
-import { Disclosure, Transition } from "@headlessui/react";
-import { HiChevronRight } from "react-icons/hi";
 import { Tab } from "@headlessui/react";
 import { maleInfertility, femaleInfertility, ivfProcedures } from "./faqData";
+import AccordionLayout from "./FaqLayout";
+import React from "react";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 const Faq = () => {
+  const [activeIndex1, setActiveIndex1] = React.useState(1);
+  const [activeIndex2, setActiveIndex2] = React.useState(1);
+  const [activeIndex3, setActiveIndex3] = React.useState(1);
   return (
     <div className="max-w-7xl mx-auto">
       <h1 className="text-center text-4xl font-heading pt-12 font-semibold">
@@ -72,114 +75,48 @@ const Faq = () => {
           </Tab.List>
           <Tab.Panels>
             <Tab.Panel>
-              <div className="w-full px-4 py-16">
-                <div className="w-full max-w-xl lg:max-w-7xl p-2 mx-auto rounded-2xl">
-                  {maleInfertility.map((items) => (
-                    <Disclosure key={items.id}>
-                      {({ open }) => (
-                        <>
-                          <Disclosure.Button className="flex justify-between w-full my-3 px-4 text-sm font-medium text-left text-brandDark bg-brandDark bg-opacity-10 rounded-lg hover:bg-opacity-80 hover:text-white focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                            <span className="text-xl font-qs font-semibold py-3">
-                              {items.title}
-                            </span>
-                            <HiChevronRight
-                              className={`${
-                                open ? "transform rotate-90" : ""
-                              } w-5 h-5 text-brandDark my-4`}
-                            />
-                          </Disclosure.Button>
-                          <Transition
-                            enter="transition duration-100 ease-out"
-                            enterFrom="transform scale-95 opacity-0"
-                            enterTo="transform scale-100 opacity-100"
-                            leave="transition duration-75 ease-out"
-                            leaveFrom="transform scale-100 opacity-100"
-                            leaveTo="transform scale-95 opacity-0"
-                          >
-                            <Disclosure.Panel
-                              static
-                              className="px-4 pt-4 pb-2 text-gray-700 text-lg font-qs"
-                            >
-                              {items.contents}
-                            </Disclosure.Panel>
-                          </Transition>
-                        </>
-                      )}
-                    </Disclosure>
-                  ))}
-                </div>
+              <div className="flex flex-col justify-center max-w-6xl mx-auto mt-10">
+                {maleInfertility.map((items) => (
+                  <AccordionLayout
+                    title={items.title}
+                    key={items.id}
+                    index={items.id}
+                    activeIndex={activeIndex1}
+                    setActiveIndex={setActiveIndex1}
+                  >
+                    {items.contents}
+                  </AccordionLayout>
+                ))}
               </div>
             </Tab.Panel>
             <Tab.Panel>
-              <div className="w-full px-4 py-16">
-                <div className="w-full max-w-xl lg:max-w-7xl p-2 mx-auto rounded-2xl">
-                  {femaleInfertility.map((items) => (
-                    <Disclosure key={items.id}>
-                      {({ open }) => (
-                        <>
-                          <Disclosure.Button className="flex justify-between w-full my-2 px-4 text-sm font-medium text-left rounded-lg text-brandDark bg-brandDark bg-opacity-20 hover:bg-opacity-80 hover:text-white focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                            <span className="text-xl font-qs font-semibold py-3">
-                              {items.title}
-                            </span>
-                            <HiChevronRight
-                              className={`${
-                                open ? "transform rotate-90" : ""
-                              } w-5 h-5 text-brandDark my-4`}
-                            />
-                          </Disclosure.Button>
-                          <Transition
-                            enter="transition duration-100 ease-out"
-                            enterFrom="transform scale-95 opacity-0"
-                            enterTo="transform scale-100 opacity-100"
-                            leave="transition duration-75 ease-out"
-                            leaveFrom="transform scale-100 opacity-100"
-                            leaveTo="transform scale-95 opacity-0"
-                          >
-                            <Disclosure.Panel className="px-4 pt-4 pb-2 text-gray-700 text-lg font-qs">
-                              {items.contents}
-                            </Disclosure.Panel>
-                          </Transition>
-                        </>
-                      )}
-                    </Disclosure>
-                  ))}
-                </div>
+              <div className="flex flex-col justify-center max-w-6xl mx-auto mt-10">
+                {femaleInfertility.map((items) => (
+                  <AccordionLayout
+                    title={items.title}
+                    key={items.id}
+                    index={items.id}
+                    activeIndex={activeIndex2}
+                    setActiveIndex={setActiveIndex2}
+                  >
+                    {items.contents}
+                  </AccordionLayout>
+                ))}
               </div>
             </Tab.Panel>
             <Tab.Panel>
-              <div className="w-full px-4 py-16">
-                <div className="w-full max-w-xl lg:max-w-7xl p-2 mx-auto rounded-2xl">
-                  {ivfProcedures.map((items) => (
-                    <Disclosure key={items.id}>
-                      {({ open }) => (
-                        <>
-                          <Disclosure.Button className="flex justify-between w-full my-2 px-4 text-sm font-medium text-left text-brandDark bg-brandDark bg-opacity-20 hover:bg-opacity-80 hover:text-white rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                            <span className="text-xl font-qs font-semibold py-3">
-                              {items.title}
-                            </span>
-                            <HiChevronRight
-                              className={`${
-                                open ? "transform rotate-90" : ""
-                              } w-5 h-5 text-brandDark my-4`}
-                            />
-                          </Disclosure.Button>
-                          <Transition
-                            enter="transition duration-100 ease-out"
-                            enterFrom="transform scale-95 opacity-0"
-                            enterTo="transform scale-100 opacity-100"
-                            leave="transition duration-75 ease-out"
-                            leaveFrom="transform scale-100 opacity-100"
-                            leaveTo="transform scale-95 opacity-0"
-                          >
-                            <Disclosure.Panel className="px-4 pt-4 pb-2 text-gray-700 text-lg font-qs">
-                              {items.contents}
-                            </Disclosure.Panel>
-                          </Transition>
-                        </>
-                      )}
-                    </Disclosure>
-                  ))}
-                </div>
+              <div className="flex flex-col justify-center max-w-6xl mx-auto mt-10">
+                {ivfProcedures.map((items) => (
+                  <AccordionLayout
+                    title={items.title}
+                    key={items.id}
+                    index={items.id}
+                    activeIndex={activeIndex3}
+                    setActiveIndex={setActiveIndex3}
+                  >
+                    {items.contents}
+                  </AccordionLayout>
+                ))}
               </div>
             </Tab.Panel>
           </Tab.Panels>

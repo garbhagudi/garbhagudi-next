@@ -1,22 +1,15 @@
 import React from "react";
-import { GraphQLClient, gql } from "graphql-request";
+import graphcms from "lib/graphcms";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Error from "next/error";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 
-export const getServerSideProps = async (pageContext) => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const pageSlug = pageContext.query.slug;
-
-  const query = gql`
-    query ($pageSlug: String!) {
-      valueAddedService(where: { slug: $pageSlug }) {
+export const getStaticProps = async ({ params }) => {
+  const { valueAddedService } = await graphcms.request(
+    `
+    query ($slug: String!) {
+      valueAddedService(where: { slug: $slug }) {
         id
         title
         image {
@@ -28,18 +21,33 @@ export const getServerSideProps = async (pageContext) => {
         }
       }
     }
-  `;
+  `,
+    {
+      slug: params.slug,
+    }
+  );
 
-  const variables = {
-    pageSlug,
-  };
-
-  const data = await graphQLClient.request(query, variables);
-  const valueAddedService = data.valueAddedService;
   return {
     props: {
       valueAddedService,
     },
+  };
+};
+
+export const getStaticPaths = async () => {
+  const { valueAddedServices } = await graphcms.request(
+    `
+      query{
+        valueAddedServices {
+          title
+          slug
+        }
+      }
+    `
+  );
+  return {
+    paths: valueAddedServices.map(({ slug }) => ({ params: { slug } })),
+    fallback: false,
   };
 };
 

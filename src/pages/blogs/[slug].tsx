@@ -58,7 +58,7 @@ const Blog = ({ blog }) => {
       <Head>
         {/* Primary Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{blog?.title} | GarbhaGudi</title>
+        <title>{blog?.title} | GarbhaGudi IVF Center</title>
         <meta name="title" content={`${blog?.title} | GarbhaGudi`} />
         <meta name="description" content={blog?.content?.text.slice(0, 160)} />
         {/* Open Graph / Facebook */}
@@ -79,7 +79,10 @@ const Blog = ({ blog }) => {
         {/* Twitter*/}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@garbhagudiivf" />
-        <meta name="twitter:title" content={`${blog?.title} | GarbhaGudi`} />
+        <meta
+          name="twitter:title"
+          content={`${blog?.title} | GarbhaGudi IVF Center`}
+        />
         <meta
           name="twitter:description"
           content={blog?.content?.text.slice(0, 160)}

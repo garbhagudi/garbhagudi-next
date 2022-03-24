@@ -1,21 +1,14 @@
 import React from "react";
-import { GraphQLClient, gql } from "graphql-request";
+import graphcms from "lib/graphcms";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 
-export const getServerSideProps = async (pageContext) => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const pageSlug = pageContext.query.slug;
-
-  const query = gql`
-    query ($pageSlug: String!) {
-      director(where: { slug: $pageSlug }) {
+export const getStaticProps = async ({ params }) => {
+  const { director } = await graphcms.request(
+    `
+    query ($slug: String!) {
+      director(where: { slug: $slug }) {
         id
         name
         details
@@ -28,17 +21,33 @@ export const getServerSideProps = async (pageContext) => {
         }
       }
     }
-  `;
-  const variables = {
-    pageSlug,
-  };
+  `,
+    {
+      slug: params.slug,
+    }
+  );
 
-  const data = await graphQLClient.request(query, variables);
-  const director = data.director;
   return {
     props: {
       director,
     },
+  };
+};
+
+export const getStaticPaths = async () => {
+  const { directors } = await graphcms.request(
+    `
+      query{
+        directors {
+          name
+          slug
+        }
+      }
+    `
+  );
+  return {
+    paths: directors.map(({ slug }) => ({ params: { slug } })),
+    fallback: false,
   };
 };
 

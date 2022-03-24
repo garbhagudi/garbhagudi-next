@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "sections/about/header";
 import CoreVision from "sections/about/coreVision";
-import { gql, GraphQLClient } from "graphql-request";
+import graphcms from "lib/graphcms";
 import Link from "next/link";
 import Head from "next/head";
 // import BreadCrumbs from "components/breadcrumbs";
@@ -114,13 +114,7 @@ const Overview = ({ directors }) => {
 export default Overview;
 
 export const getServerSideProps = async () => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const query = gql`
+  const { directors } = await graphcms.request(`
     query {
       directors {
         name
@@ -133,10 +127,7 @@ export const getServerSideProps = async () => {
         description
       }
     }
-  `;
-
-  const data = await graphQLClient.request(query);
-  const directors = data.directors;
+  `);
   return {
     props: {
       directors,
