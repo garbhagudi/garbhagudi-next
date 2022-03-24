@@ -1,60 +1,64 @@
 import React from "react";
-import { GraphQLClient, gql } from "graphql-request";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import Link from "next/link";
+import graphcms from "lib/graphcms";
 
-export const getServerSideProps = async (pageContext) => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const pageSlug = pageContext.query.slug;
-
-  const query = gql`
-    query ($pageSlug: String!) {
-      doctor(where: { slug: $pageSlug }) {
-        id
-        name
-        bio {
-          raw
-          text
+export const getStaticProps = async ({ params }) => {
+  const { doctor } = await graphcms.request(
+    `query doctorPageQuery($slug: String!) {
+        doctor(where: { slug: $slug }) {
+          id
+          name
+          bio {
+            raw
+            text
+          }
+          slug
+          image {
+            url
+          }
+          qualification
+          designation
+          medicalRegNo
+          hanumanthaNagarOnline
+          hanumanthaNagarPhysical
+          kalyanNagarOnline
+          kalyanNagarPhysical
+          jayanagarOnline
+          jayanagarPhysical
+          electronicCityOnline
+          electronicCityPhysical
+          marathahalliOnline
+          marathahalliPhysical
         }
-        slug
-        image {
-          url
-        }
-        qualification
-        designation
-        medicalRegNo
-        hanumanthaNagarOnline
-        hanumanthaNagarPhysical
-        kalyanNagarOnline
-        kalyanNagarPhysical
-        jayanagarOnline
-        jayanagarPhysical
-        electronicCityOnline
-        electronicCityPhysical
-        marathahalliOnline
-        marathahalliPhysical
-      }
+      }`,
+    {
+      slug: params.slug,
     }
-  `;
-  const variables = {
-    pageSlug,
-  };
+  );
 
-  const data = await graphQLClient.request(query, variables);
-  const doctor = data.doctor;
   return {
     props: {
       doctor,
     },
   };
 };
+
+export async function getStaticPaths() {
+  const { doctors } = await graphcms.request(`{
+    doctors {
+      slug
+      name
+    }
+  }`);
+
+  return {
+    paths: doctors.map(({ slug }) => ({ params: { slug } })),
+    fallback: false,
+  };
+}
 
 const Doctor = ({ doctor }) => {
   return (
@@ -63,10 +67,12 @@ const Doctor = ({ doctor }) => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{doctor?.name} | GarbhaGudi</title>
+        <title>
+          {doctor?.name} - Fertility Specialist | GarbhaGudi IVF Centre
+        </title>
         <meta
           name="title"
-          content={`${doctor?.name} | GarbhaGudi IVF Centre`}
+          content={`${doctor?.name} - Fertility Specialist | GarbhaGudi IVF Centre`}
         />
         <meta name="description" content={doctor?.bio?.text.slice(0, 180)} />
 
@@ -74,7 +80,7 @@ const Doctor = ({ doctor }) => {
 
         <meta
           property="og:title"
-          content={`${doctor?.name} | GarbhaGudi IVF Centre`}
+          content={`${doctor?.name} - Fertility Specialist | GarbhaGudi IVF Centre`}
         />
         <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
         <meta property="og:url" content="https://garbhagudi.com" />
@@ -91,7 +97,7 @@ const Doctor = ({ doctor }) => {
         <meta name="twitter:site" content="@garbhagudiivf" />
         <meta
           name="twitter:title"
-          content={`${doctor?.name} | GarbhaGudi IVF Centre`}
+          content={`${doctor?.name} - Fertility Specialist | GarbhaGudi IVF Centre`}
         />
         <meta
           name="twitter:description"

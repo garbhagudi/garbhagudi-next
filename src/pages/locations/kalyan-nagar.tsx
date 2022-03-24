@@ -11,8 +11,15 @@ const KalyanNagar = ({ doctors }) => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Kalyan Nagar | GarbhaGudi</title>
-        <meta name="title" content="Kalyan Nagar | GarbhaGudi IVF Centre" />
+        <title>
+          GarbhaGudi IVF Centre, Kalyan Nagar | Best IVF & Fertility Hospital in
+          India
+        </title>
+        <meta
+          name="title"
+          content="GarbhaGudi IVF Centre, Kalyan Nagar | Best IVF & Fertility Hospital in
+          India"
+        />
         <meta
           name="description"
           content="GarbhaGudi is a place where dreams come alive, hopes never fade, and possibilities never end. We ceaselessly work to help you cherish the golden moment of holding your little bundles of joy."
@@ -22,7 +29,8 @@ const KalyanNagar = ({ doctors }) => {
 
         <meta
           property="og:title"
-          content="Kalyan Nagar | GarbhaGudi IVF Centre"
+          content="GarbhaGudi IVF Centre, Kalyan Nagar | Best IVF & Fertility Hospital in
+          India"
         />
         <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
         <meta property="og:url" content="https://garbhagudi.com" />
@@ -42,7 +50,8 @@ const KalyanNagar = ({ doctors }) => {
         <meta name="twitter:site" content="@garbhagudiivf" />
         <meta
           name="twitter:title"
-          content="Kalyan Nagar | GarbhaGudi IVF Centre"
+          content="GarbhaGudi IVF Centre, Kalyan Nagar | Best IVF & Fertility Hospital in
+          India"
         />
         <meta
           name="twitter:description"
@@ -249,7 +258,7 @@ const KalyanNagar = ({ doctors }) => {
 
 export default KalyanNagar;
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const url = process.env.ENDPOINT;
   const graphQLClient = new GraphQLClient(url, {
     headers: {

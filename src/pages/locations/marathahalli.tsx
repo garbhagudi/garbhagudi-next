@@ -11,7 +11,10 @@ const Marathahalli = ({ doctors }) => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Marathahalli | GarbhaGudi</title>
+        <title>
+          GarbhaGudi IVF Centre, Marathahalli | Best IVF & Fertility Hospital in
+          India
+        </title>
         <meta name="title" content="Marathahalli | GarbhaGudi IVF Centre" />
         <meta
           name="description"
@@ -22,7 +25,8 @@ const Marathahalli = ({ doctors }) => {
 
         <meta
           property="og:title"
-          content="Marathahalli | GarbhaGudi IVF Centre"
+          content="GarbhaGudi IVF Centre, Marathahalli | Best IVF & Fertility Hospital in
+          India"
         />
         <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
         <meta property="og:url" content="https://garbhagudi.com" />
@@ -42,7 +46,8 @@ const Marathahalli = ({ doctors }) => {
         <meta name="twitter:site" content="@garbhagudiivf" />
         <meta
           name="twitter:title"
-          content="Marathahalli | GarbhaGudi IVF Centre"
+          content="GarbhaGudi IVF Centre, Marathahalli | Best IVF & Fertility Hospital in
+          India"
         />
         <meta
           name="twitter:description"
@@ -195,7 +200,7 @@ const Marathahalli = ({ doctors }) => {
 
 export default Marathahalli;
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const url = process.env.ENDPOINT;
   const graphQLClient = new GraphQLClient(url, {
     headers: {

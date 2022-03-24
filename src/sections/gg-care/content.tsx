@@ -1,3 +1,5 @@
+import { MdAlternateEmail, MdPhone } from "react-icons/md";
+
 const Contact = () => {
   return (
     <div className="bg-white">
@@ -20,6 +22,7 @@ const Contact = () => {
                         href="mailto:dreams@garbhagudi.com"
                         className="text-purple-800 hover:underline"
                       >
+                        <MdAlternateEmail className="inline-flex" />{" "}
                         dreams@garbhagudi.com
                       </a>
                     </dd>
@@ -31,7 +34,8 @@ const Contact = () => {
                         href="tel:+918880000909"
                         className="text-brandPink2 hover:underline"
                       >
-                        +91 888 000 0909
+                        <MdPhone className="inline-block w-5 h-5" /> +91 888 000
+                        0909
                       </a>
                     </dd>
                   </div>
@@ -49,6 +53,7 @@ const Contact = () => {
                         href="mailto:grievance@garbhagudi.com"
                         className="text-purple-800 hover:underline"
                       >
+                        <MdAlternateEmail className="inline-flex" />{" "}
                         grievance@garbhagudi.com
                       </a>
                     </dd>
@@ -60,7 +65,8 @@ const Contact = () => {
                         href="tel:+918880000909"
                         className="text-brandPink2 hover:underline"
                       >
-                        +91 888 000 0909
+                        <MdPhone className="inline-block w-5 h-5" /> +91 888 000
+                        0909
                       </a>
                     </dd>
                   </div>
@@ -78,6 +84,7 @@ const Contact = () => {
                         href="mailto:hr@garbhagudi.com"
                         className="text-purple-800 hover:underline"
                       >
+                        <MdAlternateEmail className="inline-flex" />{" "}
                         hr@garbhagudi.com
                       </a>
                     </dd>
@@ -89,7 +96,8 @@ const Contact = () => {
                         href="tel:+919606002999"
                         className="text-brandPink2 hover:underline"
                       >
-                        +91 96060 02999
+                        <MdPhone className="inline-block w-5 h-5" /> +91 96060
+                        02999
                       </a>
                     </dd>
                   </div>
@@ -107,6 +115,7 @@ const Contact = () => {
                         href="mailto:jayaram@garbhagudi.com"
                         className="text-purple-800 hover:underline"
                       >
+                        <MdAlternateEmail className="inline-flex" />{" "}
                         jayaram@garbhagudi.com
                       </a>
                     </dd>
@@ -118,7 +127,8 @@ const Contact = () => {
                         href="tel:+919980997111"
                         className="text-brandPink2 hover:underline"
                       >
-                        +91 99809 97111
+                        <MdPhone className="inline-block w-5 h-5" /> +91 99809
+                        97111
                       </a>
                     </dd>
                   </div>
@@ -141,7 +151,8 @@ const Contact = () => {
                       href="tel:+919886915556"
                       className="text-brandPink2 hover:underline"
                     >
-                      +91 98869 15556
+                      <MdPhone className="inline-block w-5 h-5" /> +91 98869
+                      15556
                     </a>
                   </p>
                   <p>
@@ -169,7 +180,8 @@ const Contact = () => {
                       href="tel:+918861433339"
                       className="text-brandPink2 hover:underline"
                     >
-                      +91 88614 33339
+                      <MdPhone className="inline-block w-5 h-5" /> +91 88614
+                      33339
                     </a>
                   </p>
                   <p>
@@ -197,7 +209,8 @@ const Contact = () => {
                       href="tel:+919972463355"
                       className="text-brandPink2 hover:underline"
                     >
-                      +91 99724 63355
+                      <MdPhone className="inline-block w-5 h-5" /> +91 99724
+                      63355
                     </a>
                   </p>
                   <p>
@@ -224,7 +237,8 @@ const Contact = () => {
                       href="tel:+918861811116"
                       className="text-brandPink2 hover:underline"
                     >
-                      +91 88618 11116
+                      <MdPhone className="inline-block w-5 h-5" /> +91 88618
+                      11116
                     </a>
                   </p>
                   <p>
@@ -252,7 +266,8 @@ const Contact = () => {
                       href="tel:+918105181515"
                       className="text-brandPink2 hover:underline"
                     >
-                      +91 81051 81515
+                      <MdPhone className="inline-block w-5 h-5" /> +91 81051
+                      81515
                     </a>
                   </p>
                   <p>

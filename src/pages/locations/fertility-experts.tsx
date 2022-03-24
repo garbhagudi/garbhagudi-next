@@ -16,7 +16,7 @@ const IndexPage = ({ doctors }) => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Our Fertility Experts | GarbhaGudi</title>
+        <title>Our Fertility Experts | GarbhaGudi IVF Center</title>
         <meta
           name="title"
           content="Our Fertility Experts | GarbhaGudi IVF Centre"
@@ -669,7 +669,7 @@ const IndexPage = ({ doctors }) => {
 
 export default IndexPage;
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const url = process.env.ENDPOINT;
   const graphQLClient = new GraphQLClient(url, {
     headers: {

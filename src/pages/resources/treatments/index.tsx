@@ -1,5 +1,5 @@
 import React from "react";
-import { gql, GraphQLClient } from "graphql-request";
+import graphcms from "lib/graphcms";
 import Link from "next/link";
 import { Tab } from "@headlessui/react";
 import Head from "next/head";
@@ -225,14 +225,8 @@ const IndexPage = ({ treatments }) => {
 
 export default IndexPage;
 
-export const getServerSideProps = async () => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const query = gql`
+export const getStaticProps = async () => {
+  const { treatments } = await graphcms.request(`
     query {
       treatments {
         category
@@ -244,10 +238,8 @@ export const getServerSideProps = async () => {
         slug
       }
     }
-  `;
+  `);
 
-  const data = await graphQLClient.request(query);
-  const treatments = data.treatments;
   return {
     props: {
       treatments,

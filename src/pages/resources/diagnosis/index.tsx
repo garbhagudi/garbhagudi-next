@@ -1,8 +1,8 @@
 import React from "react";
-import { gql, GraphQLClient } from "graphql-request";
 import Link from "next/link";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
+import graphcms from "lib/graphcms";
 
 const IndexPage = ({ diagnoses }) => {
   return (
@@ -100,14 +100,8 @@ const IndexPage = ({ diagnoses }) => {
 
 export default IndexPage;
 
-export const getServerSideProps = async () => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const query = gql`
+export const getStaticProps = async () => {
+  const { diagnoses } = await graphcms.request(`
     query {
       diagnoses {
         title
@@ -118,10 +112,8 @@ export const getServerSideProps = async () => {
         slug
       }
     }
-  `;
+  `);
 
-  const data = await graphQLClient.request(query);
-  const diagnoses = data.diagnoses;
   return {
     props: {
       diagnoses,
