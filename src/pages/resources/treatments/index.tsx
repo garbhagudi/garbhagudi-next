@@ -244,5 +244,6 @@ export const getStaticProps = async () => {
     props: {
       treatments,
     },
+    revalidate: 10,
   };
 };

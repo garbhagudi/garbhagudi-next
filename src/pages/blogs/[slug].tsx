@@ -1,23 +1,17 @@
 import React from "react";
-import { GraphQLClient, gql } from "graphql-request";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import BlogFooter from "components/blogFooter";
 import Error from "next/error";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
+import graphcms from "lib/graphcms";
+import { useRouter } from "next/router";
 
-export const getServerSideProps = async (pageContext) => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const pageSlug = pageContext.query.slug;
-
-  const query = gql`
-    query ($pageSlug: String!) {
-      blog(where: { slug: $pageSlug }) {
+export const getStaticProps = async ({ params }) => {
+  const { blog } = await graphcms.request(
+    `
+    query ($slug: String!) {
+      blog(where: { slug: $slug }) {
         id
         title
         image {
@@ -38,22 +32,43 @@ export const getServerSideProps = async (pageContext) => {
         publishedOn
       }
     }
-  `;
-  const variables = {
-    pageSlug,
-  };
+  `,
+    {
+      slug: params.slug,
+    }
+  );
 
-  const data = await graphQLClient.request(query, variables);
-  const blog = data.blog;
   return {
     props: {
       blog,
     },
+    revalidate: 10,
   };
 };
 
+export async function getStaticPaths() {
+  const { blogs } = await graphcms.request(`{
+      blogs {
+        slug
+        title
+      }
+  }`);
+
+  return {
+    paths: blogs.map(({ slug }) => ({ params: { slug } })),
+    fallback: true,
+  };
+}
 
 const Blog = ({ blog }) => {
+  const router = useRouter();
+  if (router.isFallback) {
+    return (
+      <div className="h-screen text-brandPink flex items-center justify-center text-content animate-ping">
+        Loading...
+      </div>
+    );
+  }
   return (
     <div>
       <Head>
@@ -222,7 +237,7 @@ const Blog = ({ blog }) => {
                   alt={blog?.title}
                 />
               </figure>
-              <hr className="h-[3px] bg-gradient-to-r from-pink-200 via-brandPink to-pink-200" />
+              <hr className="h-[6px] bg-gradient-to-r from-white  via-brandPurpleDark to-white rounded-3xl" />
               <div>
                 <RichText content={blog?.content?.raw.children} />
               </div>

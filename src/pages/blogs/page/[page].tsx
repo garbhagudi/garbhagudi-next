@@ -1,13 +1,23 @@
 import React from "react";
 import Link from "next/link";
-import { gql, GraphQLClient } from "graphql-request";
+import { gql } from "graphql-request";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
+import graphcms from "lib/graphcms";
+import { useRouter } from "next/router";
 const limit = 6;
 
-function BlogPage(
-  { currentPageNumber, hasNextPage, hasPreviousPage, blogs }
-) {
+function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return (
+      <div className="h-screen text-brandPink flex items-center justify-center text-content animate-ping">
+        Loading...
+      </div>
+    );
+  }
+
   return (
     <React.Fragment>
       <div>
@@ -171,13 +181,9 @@ function BlogPage(
   );
 }
 
-export async function getServerSideProps({ params }) {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
+export default BlogPage;
+
+export async function getStaticProps({ params }) {
   const query = gql`
     query blogListQuery($limit: Int!, $offset: Int!) {
       blogsConnection(orderBy: publishedOn_DESC, first: $limit, skip: $offset) {
@@ -210,7 +216,7 @@ export async function getServerSideProps({ params }) {
 
   const {
     blogsConnection: { blogs, pageInfo },
-  } = await graphQLClient.request(query, {
+  } = await graphcms.request(query, {
     limit,
     offset: Number((params.page - 1) * limit),
   });
@@ -221,7 +227,43 @@ export async function getServerSideProps({ params }) {
       blogs,
       ...pageInfo,
     },
+    revalidate: 10,
   };
 }
 
-export default BlogPage;
+export const getStaticPaths = async () => {
+  const query = gql`
+    query {
+      blogsConnection {
+        aggregate {
+          count
+        }
+      }
+    }
+  `;
+
+  const { blogsConnection } = await graphcms.request(query);
+  function* numberOfPages({ total, limit }) {
+    let page = 1;
+    let offset = 0;
+    while (offset < total) {
+      yield page;
+      page++;
+      offset += limit;
+    }
+  }
+
+  const paths = [
+    ...numberOfPages({
+      total: blogsConnection.aggregate.count,
+      limit,
+    }),
+  ].map((page) => ({
+    params: { page: String(page) },
+  }));
+
+  return {
+    paths,
+    fallback: true,
+  };
+};

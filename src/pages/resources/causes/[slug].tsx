@@ -3,6 +3,7 @@ import graphcms from "lib/graphcms";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
+import { useRouter } from "next/router";
 
 export const getStaticProps = async ({ params }) => {
   const { cause } = await graphcms.request(
@@ -29,6 +30,7 @@ export const getStaticProps = async ({ params }) => {
     props: {
       cause,
     },
+    revalidate: 10,
   };
 };
 
@@ -45,11 +47,20 @@ export const getStaticPaths = async () => {
   );
   return {
     paths: causes.map(({ slug }) => ({ params: { slug } })),
-    fallback: false,
+    fallback: true,
   };
 };
 
 const Blog = ({ cause }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return (
+      <div className="h-screen text-brandPink flex items-center justify-center text-content animate-ping">
+        Loading...
+      </div>
+    );
+  }
   return (
     <div>
       <Head>

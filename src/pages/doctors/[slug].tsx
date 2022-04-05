@@ -4,6 +4,7 @@ import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import Link from "next/link";
 import graphcms from "lib/graphcms";
+import { useRouter } from "next/router";
 
 export const getStaticProps = async ({ params }) => {
   const { doctor } = await graphcms.request(
@@ -43,6 +44,7 @@ export const getStaticProps = async ({ params }) => {
     props: {
       doctor,
     },
+    revalidate: 10,
   };
 };
 
@@ -56,11 +58,20 @@ export async function getStaticPaths() {
 
   return {
     paths: doctors.map(({ slug }) => ({ params: { slug } })),
-    fallback: false,
+    fallback: true,
   };
 }
 
 const Doctor = ({ doctor }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return (
+      <div className="h-screen text-brandPink flex items-center justify-center text-content animate-ping">
+        Loading...
+      </div>
+    );
+  }
   return (
     <div>
       <Head>
