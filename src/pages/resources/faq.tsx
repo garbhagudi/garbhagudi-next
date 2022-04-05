@@ -2,7 +2,9 @@ import React from "react";
 import Faq from "sections/Faq/faq";
 import Head from "next/head";
 
-const faq = () => {
+export const config = { amp: "hybrid" };
+
+const faq = (props: any) => {
   return (
     <div>
       <Head>

@@ -4,6 +4,8 @@ import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import graphcms from "lib/graphcms";
 
+export const config = { amp: "hybrid" };
+
 export const getStaticProps = async ({ params }) => {
   const { diagnosis } = await graphcms.request(
     `
@@ -50,7 +52,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-const Blog = ({ diagnosis }) => {
+const Blog = ({ diagnosis }, props: any) => {
   return (
     <div>
       <Head>

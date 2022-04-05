@@ -5,6 +5,8 @@ import BreadCrumbs from "components/breadcrumbs";
 import Link from "next/link";
 import graphcms from "lib/graphcms";
 
+export const config = { amp: "hybrid" };
+
 export const getStaticProps = async ({ params }) => {
   const { doctor } = await graphcms.request(
     `query doctorPageQuery($slug: String!) {
@@ -60,7 +62,7 @@ export async function getStaticPaths() {
   };
 }
 
-const Doctor = ({ doctor }) => {
+const Doctor = ({ doctor }, props: any) => {
   return (
     <div>
       <Head>

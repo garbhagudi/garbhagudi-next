@@ -4,7 +4,9 @@ import { gql, GraphQLClient } from "graphql-request";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 
-const IndexPage = ({ careers }) => {
+export const config = { amp: "hybrid" };
+
+const IndexPage = ({ careers }, props: any) => {
   return (
     <div>
       <Head>
