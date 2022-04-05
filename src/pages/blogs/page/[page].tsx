@@ -3,14 +3,10 @@ import Link from "next/link";
 import { gql, GraphQLClient } from "graphql-request";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
-
-export const config = { amp: "hybrid" };
-
 const limit = 6;
 
 function BlogPage(
-  { currentPageNumber, hasNextPage, hasPreviousPage, blogs },
-  props: any
+  { currentPageNumber, hasNextPage, hasPreviousPage, blogs }
 ) {
   return (
     <React.Fragment>

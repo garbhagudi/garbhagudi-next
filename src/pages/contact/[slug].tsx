@@ -4,8 +4,6 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 
-export const config = { amp: "hybrid" };
-
 export const getServerSideProps = async (pageContext) => {
   const url = process.env.ENDPOINT;
   const graphQLClient = new GraphQLClient(url, {
@@ -43,7 +41,7 @@ export const getServerSideProps = async (pageContext) => {
   };
 };
 
-const Vas = ({ valueAddedService }, props: any) => {
+const Vas = ({ valueAddedService }) => {
   return (
     <div>
       <Head>

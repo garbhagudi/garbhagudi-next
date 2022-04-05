@@ -4,9 +4,7 @@ import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import graphcms from "lib/graphcms";
 
-export const config = { amp: "hybrid" };
-
-const IndexPage = ({ causes }, props: any) => {
+const IndexPage = ({ causes }) => {
   return (
     <div>
       <Head>

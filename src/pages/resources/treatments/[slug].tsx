@@ -4,8 +4,6 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 
-export const config = { amp: "hybrid" };
-
 export const getStaticProps = async ({ params }) => {
   const { treatment } = await graphcms.request(
     `
@@ -51,7 +49,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-const treatment = ({ treatment }, props: any) => {
+const treatment = ({ treatment }) => {
   return (
     <div>
       <Head>

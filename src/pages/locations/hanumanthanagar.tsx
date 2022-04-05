@@ -4,9 +4,7 @@ import Link from "next/link";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 
-export const config = { amp: "hybrid" };
-
-const HanumanthaNagar = ({ doctors }, props: any) => {
+const HanumanthaNagar = ({ doctors }) => {
   return (
     <div>
       <Head>

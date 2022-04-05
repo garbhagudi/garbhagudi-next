@@ -52,9 +52,8 @@ export const getServerSideProps = async (pageContext) => {
   };
 };
 
-export const config = { amp: "hybrid" };
 
-const Blog = ({ blog }, props: any) => {
+const Blog = ({ blog }) => {
   return (
     <div>
       <Head>
