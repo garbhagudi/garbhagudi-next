@@ -6,7 +6,9 @@ import Cta from "sections/gg-care/cta";
 import Video from "sections/gg-care/workflow";
 import Head from "next/head";
 
-const IndexPage = () => {
+export const config = { amp: "hybrid" };
+
+const IndexPage = (props: any) => {
   return (
     <div>
       <Head>

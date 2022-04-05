@@ -5,11 +5,13 @@ import { Tab } from "@headlessui/react";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 
+export const config = { amp: "hybrid" };
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const IndexPage = ({ treatments }) => {
+const IndexPage = ({ treatments }, props: any) => {
   return (
     <div>
       <Head>

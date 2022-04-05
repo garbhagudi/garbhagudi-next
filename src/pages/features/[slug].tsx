@@ -5,6 +5,8 @@ import Error from "next/error";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 
+export const config = { amp: "hybrid" };
+
 export const getStaticProps = async ({ params }) => {
   const { valueAddedService } = await graphcms.request(
     `
@@ -51,7 +53,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-const Vas = ({ valueAddedService }) => {
+const Vas = ({ valueAddedService }, props: any) => {
   return (
     <div>
       <Head>

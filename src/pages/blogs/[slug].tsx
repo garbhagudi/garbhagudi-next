@@ -52,7 +52,9 @@ export const getServerSideProps = async (pageContext) => {
   };
 };
 
-const Blog = ({ blog }) => {
+export const config = { amp: "hybrid" };
+
+const Blog = ({ blog }, props: any) => {
   return (
     <div>
       <Head>
@@ -216,11 +218,12 @@ const Blog = ({ blog }) => {
               </h1>
               <figure>
                 <img
-                  className="w-full rounded-lg mt-10 mb-5"
+                  className="w-full rounded-3xl mt-10 mb-8"
                   src={blog?.image?.url}
                   alt={blog?.title}
                 />
               </figure>
+              <hr className="h-[3px] bg-gradient-to-r from-pink-200 via-brandPink to-pink-200" />
               <div>
                 <RichText content={blog?.content?.raw.children} />
               </div>

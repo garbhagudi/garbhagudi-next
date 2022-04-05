@@ -6,6 +6,8 @@ import { gql, GraphQLClient } from "graphql-request";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+export const config = { amp: "hybrid" };
+
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
@@ -25,7 +27,7 @@ const responsive = {
   },
 };
 
-const Home = ({ homeData }) => {
+const Home = ({ homeData }, props: any) => {
   return (
     <div>
       <Head>
