@@ -165,9 +165,9 @@ const Doctor = ({ doctor }) => {
                   </div>
                 </div>
                 <div className="text-center mt-12 font-content">
-                  <h3 className="text-4xl font-semibold leading-normal mb-2 text-gray-800">
+                  <h1 className="text-4xl font-semibold leading-normal mb-2 text-gray-800">
                     {doctor.name}
-                  </h3>
+                  </h1>
                   <div className="leading-normal mt-0 mb-2 textbrantext-brandPink2 font-bold uppercase text-xl">
                     {doctor.qualification}
                   </div>
@@ -179,7 +179,9 @@ const Doctor = ({ doctor }) => {
                     </span>
                     <div>
                       <button className="px-4 py-2 bg-brandPink hover:bg-brandPink3 text-white font-bold font-content rounded-md mt-6">
-                        <a href="tel:+918880000909">Give us a Call</a>
+                        <a href="tel:+918880000909" hrefLang="en-us">
+                          Give us a Call
+                        </a>
                       </button>
                     </div>
                   </div>
@@ -249,6 +251,7 @@ const Doctor = ({ doctor }) => {
                                                 doctor.hanumanthaNagarPhysical
                                               }
                                               className="font-semibold text-brandPink hover:underline"
+                                              hrefLang="en-us"
                                               target="_blank"
                                               rel="noreferrer"
                                             >
@@ -266,6 +269,7 @@ const Doctor = ({ doctor }) => {
                                               }
                                               className="font-semibold text-brandPink hover:underline"
                                               target="_blank"
+                                              hrefLang="en-us"
                                               rel="noreferrer"
                                             >
                                               Book Now
@@ -311,6 +315,7 @@ const Doctor = ({ doctor }) => {
                                               href={doctor.kalyanNagarPhysical}
                                               className="font-semibold text-brandPink hover:underline"
                                               target="_blank"
+                                              hrefLang="en-us"
                                               rel="noreferrer"
                                             >
                                               Book Now
@@ -324,6 +329,7 @@ const Doctor = ({ doctor }) => {
                                             <a
                                               href={doctor.kalyanNagarOnline}
                                               target="_blank"
+                                              hrefLang="en-us"
                                               rel="noreferrer"
                                               className="font-semibold text-brandPink hover:underline"
                                             >
@@ -370,6 +376,7 @@ const Doctor = ({ doctor }) => {
                                               href={doctor.jayanagarPhysical}
                                               className="font-semibold text-brandPink hover:underline"
                                               target="_blank"
+                                              hrefLang="en-us"
                                               rel="noreferrer"
                                             >
                                               Book Now
@@ -384,6 +391,7 @@ const Doctor = ({ doctor }) => {
                                               href={doctor.jayanagarOnline}
                                               className="font-semibold text-brandPink hover:underline"
                                               target="_blank"
+                                              hrefLang="en-us"
                                               rel="noreferrer"
                                             >
                                               Book Now
@@ -431,6 +439,7 @@ const Doctor = ({ doctor }) => {
                                               }
                                               target="_blank"
                                               rel="noreferrer"
+                                              hrefLang="en-us"
                                               className="font-semibold text-brandPink hover:underline"
                                             >
                                               Book Now
@@ -445,6 +454,7 @@ const Doctor = ({ doctor }) => {
                                               href={doctor.electronicCityOnline}
                                               className="font-semibold text-brandPink hover:underline"
                                               target="_blank"
+                                              hrefLang="en-us"
                                               rel="noreferrer"
                                             >
                                               Book Now
@@ -488,6 +498,7 @@ const Doctor = ({ doctor }) => {
                                               href={doctor.marathahalliPhysical}
                                               target="_blank"
                                               rel="noreferrer"
+                                              hrefLang="en-us"
                                               className="text-left font-medium text-brandPink2 hover:underline"
                                             >
                                               Book Now
@@ -502,6 +513,7 @@ const Doctor = ({ doctor }) => {
                                               href={doctor.marathahalliOnline}
                                               className="text-left font-medium text-brandPink2 hover:underline"
                                               target="_blank"
+                                              hrefLang="en-us"
                                               rel="noreferrer"
                                             >
                                               Book Now

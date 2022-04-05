@@ -82,7 +82,7 @@ const VisionMission = () => {
                 more and more people and create an awareness about infertility
                 and treatments for infertility. With a vision to help nurture
                 the happiest moments of life, our vision is to reach far and
-                wide, to have Garbhagudi as a globally renowned health
+                wide, to have GarbhaGudi as a globally renowned health
                 university with superlative success rate, strong scientific
                 approach, ethical values, and humane touch.
               </p>
