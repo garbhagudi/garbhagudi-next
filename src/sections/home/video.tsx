@@ -43,32 +43,34 @@ const Video = () => {
       <span className="text-2xl lg:text-4xl font-extrabold text-brandDark font-heading">
         Testimonials from our happy couples
       </span>
-      <Carousel
-        responsive={responsive}
-        autoPlaySpeed={360000}
-        partialVisbile={true}
-        focusOnSelect={true}
-        ssr={true}
-        infinite={true}
-        showDots={true}
-        swipeable={true}
-        draggable={true}
-      >
-        {data.map((item) => {
-          return (
-            <div
-              className="md:w-4/6 mx-auto aspect-video mt-8 overflow-hidden rounded-3xl"
-              key={item.id}
-            >
-              <LiteYouTubeEmbed
-                id={item.videoId}
-                title="Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay"
-                poster="maxresdefault"
-              />
-            </div>
-          );
-        })}
-      </Carousel>
+      <div className="px-3 sm:px-0">
+        <Carousel
+          responsive={responsive}
+          autoPlaySpeed={360000}
+          partialVisbile={true}
+          focusOnSelect={true}
+          ssr={true}
+          infinite={true}
+          showDots={true}
+          swipeable={true}
+          draggable={true}
+        >
+          {data.map((item) => {
+            return (
+              <div
+                className="md:w-4/6 mx-auto aspect-video mt-8 overflow-hidden rounded-3xl border-2 border-brandPink sm:px-0"
+                key={item.id}
+              >
+                <LiteYouTubeEmbed
+                  id={item.videoId}
+                  title="Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay"
+                  poster="maxresdefault"
+                />
+              </div>
+            );
+          })}
+        </Carousel>
+      </div>
     </div>
   );
 };

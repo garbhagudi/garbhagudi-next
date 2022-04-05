@@ -72,10 +72,14 @@ const IndexPage = ({ doctors }) => {
         text4={""}
       />
       <div className="max-w-7xl mx-auto">
-        <div className="text-center text-4xl font-heading pt-12 font-semibold">
+        <h1 className="text-center text-4xl font-heading pt-12 font-semibold">
           Our Fertility Experts
-        </div>
-
+        </h1>
+        <p className="text-md text-brandDark font-content max-w-4xl mx-auto text-center mt-4">
+          Our team of fertility specialists have been known for their extensive
+          clinical experience and research contributions and their success in
+          treating the most challenging fertility cases.
+        </p>
         <div className="w-full max-w-7xl px-2 py-16 sm:px-0 ">
           <Tab.Group vertical>
             <Tab.List

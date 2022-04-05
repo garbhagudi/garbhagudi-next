@@ -3,10 +3,11 @@ import Link from "next/link";
 import { gql, GraphQLClient } from "graphql-request";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
-
 const limit = 6;
 
-function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
+function BlogPage(
+  { currentPageNumber, hasNextPage, hasPreviousPage, blogs }
+) {
   return (
     <React.Fragment>
       <div>
