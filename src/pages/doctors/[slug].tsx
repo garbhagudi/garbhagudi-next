@@ -17,6 +17,7 @@ export const getStaticProps = async ({ params }) => {
             text
           }
           slug
+          languages
           image {
             url
           }
@@ -188,13 +189,19 @@ const Doctor = ({ doctor }) => {
                     <span className="font-bold underline">
                       {doctor?.medicalRegNo}
                     </span>
-                    <div>
-                      <button className="px-4 py-2 bg-brandPink hover:bg-brandPink3 text-white font-bold font-content rounded-md mt-6">
-                        <a href="tel:+918880000909" hrefLang="en-us">
-                          Give us a Call
-                        </a>
-                      </button>
-                    </div>
+                  </div>
+                  <div className="mb-2 text-gray-700">
+                    Languages Known :{" "}
+                    <span className="font-bold underline">
+                      {doctor?.languages}
+                    </span>
+                  </div>
+                  <div>
+                    <button className="px-4 py-2 bg-brandPink hover:bg-brandPink3 text-white font-bold font-content rounded-md mt-6">
+                      <a href="tel:+918880000909" hrefLang="en-us">
+                        Give us a Call
+                      </a>
+                    </button>
                   </div>
                   <section className="antialiased text-gray-600 mt-8 font-content overflow-hidden">
                     <div className="flex flex-col justify-center h-full">

@@ -98,7 +98,7 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
               </h2>
             </div>
             <div className="mt-12 max-w-xl mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none w">
-              {blogs?.map((item) => (
+              {blogs?.map((item: any) => (
                 <div
                   key={item?.node?.id}
                   className="flex flex-col rounded-2xl shadow-lg overflow-hidden"
