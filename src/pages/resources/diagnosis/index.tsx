@@ -118,5 +118,6 @@ export const getStaticProps = async () => {
     props: {
       diagnoses,
     },
+    revalidate: 10,
   };
 };

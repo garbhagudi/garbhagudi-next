@@ -4,6 +4,7 @@ import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import Link from "next/link";
 import graphcms from "lib/graphcms";
+import { useRouter } from "next/router";
 
 export const getStaticProps = async ({ params }) => {
   const { doctor } = await graphcms.request(
@@ -16,6 +17,7 @@ export const getStaticProps = async ({ params }) => {
             text
           }
           slug
+          languages
           image {
             url
           }
@@ -43,6 +45,7 @@ export const getStaticProps = async ({ params }) => {
     props: {
       doctor,
     },
+    revalidate: 10,
   };
 };
 
@@ -56,11 +59,20 @@ export async function getStaticPaths() {
 
   return {
     paths: doctors.map(({ slug }) => ({ params: { slug } })),
-    fallback: false,
+    fallback: true,
   };
 }
 
 const Doctor = ({ doctor }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return (
+      <div className="h-screen text-brandPink flex items-center justify-center text-content animate-ping">
+        Loading...
+      </div>
+    );
+  }
   return (
     <div>
       <Head>
@@ -177,13 +189,19 @@ const Doctor = ({ doctor }) => {
                     <span className="font-bold underline">
                       {doctor?.medicalRegNo}
                     </span>
-                    <div>
-                      <button className="px-4 py-2 bg-brandPink hover:bg-brandPink3 text-white font-bold font-content rounded-md mt-6">
-                        <a href="tel:+918880000909" hrefLang="en-us">
-                          Give us a Call
-                        </a>
-                      </button>
-                    </div>
+                  </div>
+                  <div className="mb-2 text-gray-700">
+                    Languages Known :{" "}
+                    <span className="font-bold underline">
+                      {doctor?.languages}
+                    </span>
+                  </div>
+                  <div>
+                    <button className="px-4 py-2 bg-brandPink hover:bg-brandPink3 text-white font-bold font-content rounded-md mt-6">
+                      <a href="tel:+918880000909" hrefLang="en-us">
+                        Give us a Call
+                      </a>
+                    </button>
                   </div>
                   <section className="antialiased text-gray-600 mt-8 font-content overflow-hidden">
                     <div className="flex flex-col justify-center h-full">
