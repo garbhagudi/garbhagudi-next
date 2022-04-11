@@ -227,7 +227,7 @@ export async function getStaticProps({ params }) {
       blogs,
       ...pageInfo,
     },
-    revalidate: 10,
+    revalidate: 180,
   };
 }
 
