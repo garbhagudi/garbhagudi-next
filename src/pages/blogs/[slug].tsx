@@ -75,8 +75,7 @@ export async function getStaticPaths() {
 // };
 
 const Blog = ({ blog }) => {
-  const [likes, setLikes] = useState(blog?.likes);
-  console.log(likes);
+  // const [likes, setLikes] = useState(blog?.likes);
 
   const router = useRouter();
   if (router.isFallback) {
