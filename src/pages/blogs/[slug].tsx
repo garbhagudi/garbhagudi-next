@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import BlogFooter from "components/blogFooter";
 import Error from "next/error";
@@ -6,6 +6,9 @@ import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import graphcms from "lib/graphcms";
 import { useRouter } from "next/router";
+import Share from "components/share";
+import Loading from "components/Loading";
+// import { HiOutlineHeart } from "react-icons/hi";
 
 export const getStaticProps = async ({ params }) => {
   const { blog } = await graphcms.request(
@@ -30,6 +33,7 @@ export const getStaticProps = async ({ params }) => {
           text
         }
         publishedOn
+        likes
       }
     }
   `,
@@ -60,14 +64,22 @@ export async function getStaticPaths() {
   };
 }
 
+// const UpdateLikes = async (slug: any, likes: any) => {
+//   await fetch("/api/updateLike", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application.json",
+//     },
+//     body: JSON.stringify({ slug, likes }),
+//   });
+// };
+
 const Blog = ({ blog }) => {
+  // const [likes, setLikes] = useState(blog?.likes);
+
   const router = useRouter();
   if (router.isFallback) {
-    return (
-      <div className="h-screen text-brandPink flex items-center justify-center text-content animate-ping">
-        Loading...
-      </div>
-    );
+    return <Loading />;
   }
   return (
     <div>
@@ -242,6 +254,18 @@ const Blog = ({ blog }) => {
                 <RichText content={blog?.content?.raw.children} />
               </div>
               <div>
+                {/* <div className="text-center mt-16 text-lg font-content flex items-center justify-center">
+                  {blog.likes && <p className=""> Likes: {blog.likes}</p>}
+                  <button
+                    onClick={() => {
+                      setLikes(likes + 1);
+                      UpdateLikes(blog.slug, likes);
+                    }}
+                  >
+                    <HiOutlineHeart className="w-8 h-8 ml-4" />
+                  </button>
+                </div> */}
+                <Share pinmedia={blog?.image?.url} />
                 <BlogFooter />
               </div>
             </div>

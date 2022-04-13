@@ -3,6 +3,7 @@ import graphcms from "lib/graphcms";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
+import Share from "components/share";
 
 export const getStaticProps = async ({ params }) => {
   const { director } = await graphcms.request(
@@ -150,6 +151,7 @@ const ExecutiveTeam = ({ director }) => (
             </div>
           </div>
         </div>
+        <Share pinmedia={director.image.url} />
       </div>
     </section>
   </div>

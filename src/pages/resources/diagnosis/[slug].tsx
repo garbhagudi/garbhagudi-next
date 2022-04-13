@@ -4,6 +4,8 @@ import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import graphcms from "lib/graphcms";
 import { useRouter } from "next/router";
+import Share from "components/share";
+import Loading from "components/Loading";
 
 export const getStaticProps = async ({ params }) => {
   const { diagnosis } = await graphcms.request(
@@ -56,11 +58,7 @@ const Diagnosis = ({ diagnosis }) => {
   const router = useRouter();
 
   if (router.isFallback) {
-    return (
-      <div className="h-screen text-brandPink flex items-center justify-center text-content animate-ping">
-        Loading...
-      </div>
-    );
+    return <Loading />;
   }
   return (
     <div>
@@ -113,7 +111,7 @@ const Diagnosis = ({ diagnosis }) => {
         link2={"/resources/diagnosis"}
         text2={"Diagnosis"}
         link3={"#"}
-        text3={diagnosis.title}
+        text3={diagnosis?.title}
         link4=""
         text4=""
       />
@@ -225,22 +223,24 @@ const Diagnosis = ({ diagnosis }) => {
           <div className="max-w-7xl mx-auto">
             <h1>
               <span className="mt-4 block text-2xl text-center leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl font-heading">
-                {diagnosis.title}
+                {diagnosis?.title}
               </span>
             </h1>
             <figure>
               <img
                 className="w-full rounded-lg mt-10 mb-5"
-                src={diagnosis.image.url}
-                alt={diagnosis.title}
+                src={diagnosis?.image?.url}
+                alt={diagnosis?.title}
                 width={1310}
                 height={873}
               />
             </figure>
             <div>
-              <RichText content={diagnosis.content.raw.children} />
+              <RichText content={diagnosis?.content?.raw?.children} />
             </div>
-            <div></div>
+            <div>
+              <Share pinmedia={diagnosis?.image?.url} />
+            </div>
           </div>
         </div>
       </div>
