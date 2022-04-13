@@ -3,6 +3,7 @@ import { gql, GraphQLClient } from "graphql-request";
 import Link from "next/link";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
+import Share from "components/share";
 
 const HanumanthaNagar = ({ doctors }) => {
   return (
@@ -200,6 +201,7 @@ const HanumanthaNagar = ({ doctors }) => {
             </div>
           </div>
         </div>
+        <Share pinmedia="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277077/Locations/1280x500_HN_wql2mm.jpg" />
         <h1 className="text-center text-2xl md:text-4xl font-heading py-8 font-bold mx-auto">
           Virtual Tour
         </h1>

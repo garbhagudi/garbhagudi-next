@@ -105,21 +105,6 @@ const IndexPage = ({ doctors }) => {
               <Tab
                 className={({ selected }) =>
                   classNames(
-                    "w-full py-2.5 text-sm  font-medium text-brandPink rounded-lg",
-                    "focus:outline-none",
-                    selected
-                      ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
-                      : "text-gray-100 hover:bg-brandPink3 hover:text-white"
-                  )
-                }
-              >
-                <div className="mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
-                  South-End Circle
-                </div>
-              </Tab>
-              <Tab
-                className={({ selected }) =>
-                  classNames(
                     "w-full py-2.5 text-sm font-medium text-brandPink rounded-lg",
                     "focus:outline-none",
                     selected
@@ -130,6 +115,21 @@ const IndexPage = ({ doctors }) => {
               >
                 <div className="max-w-7xl mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
                   Kalyan Nagar
+                </div>
+              </Tab>
+              <Tab
+                className={({ selected }) =>
+                  classNames(
+                    "w-full py-2.5 text-sm  font-medium text-brandPink rounded-lg",
+                    "focus:outline-none",
+                    selected
+                      ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
+                      : "text-gray-100 hover:bg-brandPink3 hover:text-white"
+                  )
+                }
+              >
+                <div className="mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
+                  South-End Circle
                 </div>
               </Tab>
               <Tab
@@ -276,105 +276,6 @@ const IndexPage = ({ doctors }) => {
                         loading="lazy"
                         title="map"
                         scrolling="no"
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15554.13494747385!2d77.5796657!3d12.9376617!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1f870d0e467c8c8a!2sGarbhaGudi%20IVF%20Centre%2C%20South%20End%20Circle.!5e0!3m2!1sen!2sin!4v1641897947020!5m2!1sen!2sin"
-                      ></iframe>
-                      <div className="bg-white relative flex flex-wrap py-6 rounded-3xl shadow-3xl">
-                        <div className="lg:w-1/2 px-6">
-                          <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs font-qs">
-                            ADDRESS
-                          </h2>
-                          <p className="mt-1 font-content">
-                            South End Circle, 26, Pattalamma Temple Rd,
-                            Basavanagudi, Bengaluru, Karnataka 560004
-                          </p>
-                        </div>
-                        <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                          <h2 className="font-semibold text-gray-900 tracking-widest text-xs font-qs">
-                            EMAIL
-                          </h2>
-                          <a className="text-indigo-500 leading-relaxed">
-                            <a
-                              href="mailto:dreams@garbhagudi.com"
-                              className="text-brandPink font-qs"
-                            >
-                              dreams@garbhagudi.com
-                            </a>
-                          </a>
-                          <h2 className="font-semibold text-gray-900 tracking-widest text-xs mt-4 font-qs">
-                            PHONE
-                          </h2>
-                          <p className="leading-relaxed font-qs">
-                            <a href="tel:+918880000909">+91 888 000 0909</a>
-                          </p>
-                          <h2 className="font-semibold text-gray-900 tracking-widest text-xs mt-4 font-qs">
-                            WhatsApp
-                          </h2>
-                          <p className="leading-relaxed font-qs">
-                            <a
-                              href="https://wa.me/918884183338?text=Hi."
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              +91 888 418 3338
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="lg:w-1/2 md:w-full bg-white flex flex-col md:ml-auto w-full md:py-8 md:mt-0 min-h-max">
-                      <p className="text-center font-qs text-xl font-semibold mb-10 mt-7 lg:mt-0">
-                        Fertility Specialists at South-End Circle
-                      </p>
-                      <div className="mx-auto space-y-0 grid grid-cols-2 sm:gap-y-10 sm:gap-x-32 sm:space-y-0 lg:grid-cols-2 lg:max-w-7xl col-span-full">
-                        {doctors.map((item) => {
-                          if (item.location.includes("Jayanagar")) {
-                            return (
-                              <div className="text-center" key={item.id}>
-                                <Link href={`/doctors/${item.slug}`} passHref>
-                                  <a>
-                                    <div className="space-y-4">
-                                      <img
-                                        className="mx-auto h-40 w-40 my-auto rounded-full mt-4"
-                                        src={item.image.url}
-                                        alt={item.name}
-                                      />
-                                      <div className="space-y-4">
-                                        <div className="text-lg leading-6 font-medium space-y-1">
-                                          <h3 className="text-brandDark font-content">
-                                            {item.name}
-                                          </h3>
-                                          <p className="text-brandPurple text-sm font-content">
-                                            {item.qualification}
-                                          </p>
-                                          <p className="text-brandPink text-sm font-content">
-                                            {item.designation}
-                                          </p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </a>
-                                </Link>
-                              </div>
-                            );
-                          }
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </Tab.Panel>
-              <Tab.Panel>
-                <section className="text-gray-600 body-font relative max-w-7xl mx-auto">
-                  <div className="py-12 flex flex-wrap lg:flex-nowrap inset-0 ">
-                    <div className="lg:w-1/2 bg-gray-300 rounded-3xl overflow-hidden p-2 lg:p-10 flex items-end justify-start relative h-[44rem] md:ml-auto w-full">
-                      <iframe
-                        width="100%"
-                        height="100%"
-                        className="absolute inset-0"
-                        frameBorder="0"
-                        loading="lazy"
-                        title="map"
-                        scrolling="no"
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7774.402186224549!2d77.64597804814905!3d13.022862590006048!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfb184afa11ae1fdd!2sGarbhaGudi%20IVF%20Centre%2C%20Kalyan%20Nagar.!5e0!3m2!1sen!2sin!4v1641899203760!5m2!1sen!2sin"
                       ></iframe>
                       <div className="bg-white relative flex flex-wrap py-6 rounded-3xl shadow-3xl">
@@ -428,6 +329,105 @@ const IndexPage = ({ doctors }) => {
                       <div className="mx-auto space-y-0 grid grid-cols-2 sm:gap-y-10 sm:gap-x-32 sm:space-y-0 lg:grid-cols-2 lg:max-w-7xl col-span-full">
                         {doctors.map((item) => {
                           if (item.location.includes("KalyanNagar")) {
+                            return (
+                              <div className="text-center" key={item.id}>
+                                <Link href={`/doctors/${item.slug}`} passHref>
+                                  <a>
+                                    <div className="space-y-4">
+                                      <img
+                                        className="mx-auto h-40 w-40 my-auto rounded-full mt-4"
+                                        src={item.image.url}
+                                        alt={item.name}
+                                      />
+                                      <div className="space-y-4">
+                                        <div className="text-lg leading-6 font-medium space-y-1">
+                                          <h3 className="text-brandDark font-content">
+                                            {item.name}
+                                          </h3>
+                                          <p className="text-brandPurple text-sm font-content">
+                                            {item.qualification}
+                                          </p>
+                                          <p className="text-brandPink text-sm font-content">
+                                            {item.designation}
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </a>
+                                </Link>
+                              </div>
+                            );
+                          }
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </Tab.Panel>
+              <Tab.Panel>
+                <section className="text-gray-600 body-font relative max-w-7xl mx-auto">
+                  <div className="py-12 flex flex-wrap lg:flex-nowrap inset-0 ">
+                    <div className="lg:w-1/2 bg-gray-300 rounded-3xl overflow-hidden p-2 lg:p-10 flex items-end justify-start relative h-[44rem] md:ml-auto w-full">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        className="absolute inset-0"
+                        frameBorder="0"
+                        loading="lazy"
+                        title="map"
+                        scrolling="no"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15554.13494747385!2d77.5796657!3d12.9376617!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1f870d0e467c8c8a!2sGarbhaGudi%20IVF%20Centre%2C%20South%20End%20Circle.!5e0!3m2!1sen!2sin!4v1641897947020!5m2!1sen!2sin"
+                      ></iframe>
+                      <div className="bg-white relative flex flex-wrap py-6 rounded-3xl shadow-3xl">
+                        <div className="lg:w-1/2 px-6">
+                          <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs font-qs">
+                            ADDRESS
+                          </h2>
+                          <p className="mt-1 font-content">
+                            South End Circle, 26, Pattalamma Temple Rd,
+                            Basavanagudi, Bengaluru, Karnataka 560004
+                          </p>
+                        </div>
+                        <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                          <h2 className="font-semibold text-gray-900 tracking-widest text-xs font-qs">
+                            EMAIL
+                          </h2>
+                          <a className="text-indigo-500 leading-relaxed">
+                            <a
+                              href="mailto:dreams@garbhagudi.com"
+                              className="text-brandPink font-qs"
+                            >
+                              dreams@garbhagudi.com
+                            </a>
+                          </a>
+                          <h2 className="font-semibold text-gray-900 tracking-widest text-xs mt-4 font-qs">
+                            PHONE
+                          </h2>
+                          <p className="leading-relaxed font-qs">
+                            <a href="tel:+918880000909">+91 888 000 0909</a>
+                          </p>
+                          <h2 className="font-semibold text-gray-900 tracking-widest text-xs mt-4 font-qs">
+                            WhatsApp
+                          </h2>
+                          <p className="leading-relaxed font-qs">
+                            <a
+                              href="https://wa.me/918884183338?text=Hi."
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              +91 888 418 3338
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="lg:w-1/2 md:w-full bg-white flex flex-col md:ml-auto w-full md:py-8 md:mt-0 min-h-max">
+                      <p className="text-center font-qs text-xl font-semibold mb-10 mt-7 lg:mt-0">
+                        Fertility Specialists at South-End Circle
+                      </p>
+                      <div className="mx-auto space-y-0 grid grid-cols-2 sm:gap-y-10 sm:gap-x-32 sm:space-y-0 lg:grid-cols-2 lg:max-w-7xl col-span-full">
+                        {doctors.map((item) => {
+                          if (item.location.includes("Jayanagar")) {
                             return (
                               <div className="text-center" key={item.id}>
                                 <Link href={`/doctors/${item.slug}`} passHref>

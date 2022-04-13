@@ -4,6 +4,8 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import { useRouter } from "next/router";
+import Share from "components/share";
+import Loading from "components/Loading";
 
 export const getStaticProps = async ({ params }) => {
   const { treatment } = await graphcms.request(
@@ -55,11 +57,7 @@ const Treatment = ({ treatment }) => {
   const router = useRouter();
 
   if (router.isFallback) {
-    return (
-      <div className="h-screen text-brandPink flex items-center justify-center text-content animate-ping">
-        Loading...
-      </div>
-    );
+    return <Loading />;
   }
   return (
     <div>
@@ -112,7 +110,7 @@ const Treatment = ({ treatment }) => {
         link2={"/resources/treatments"}
         text2={"Treatments"}
         link3={"#"}
-        text3={treatment.title}
+        text3={treatment?.title}
         link4={""}
         text4={""}
       />
@@ -224,22 +222,24 @@ const Treatment = ({ treatment }) => {
           <div className="max-w-7xl mx-auto">
             <h1>
               <span className="mt-4 block text-2xl text-center leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl font-heading">
-                {treatment.title}
+                {treatment?.title}
               </span>
             </h1>
             <figure>
               <img
                 className="w-full rounded-lg mt-10 mb-5"
-                src={treatment.image.url}
-                alt={treatment.title}
+                src={treatment?.image.url}
+                alt={treatment?.title}
                 width={1310}
                 height={873}
               />
             </figure>
             <div>
-              <RichText content={treatment.content.raw.children} />
+              <RichText content={treatment?.content?.raw?.children} />
             </div>
-            <div></div>
+            <div>
+              <Share pinmedia={treatment?.image?.url} />
+            </div>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import BreadCrumbs from "components/breadcrumbs";
 import Link from "next/link";
 import graphcms from "lib/graphcms";
 import { useRouter } from "next/router";
+import Share from "components/share";
 
 export const getStaticProps = async ({ params }) => {
   const { doctor } = await graphcms.request(
@@ -562,6 +563,7 @@ const Doctor = ({ doctor }) => {
                       </p>
                     </div>
                   </div>
+                  <Share pinmedia={doctor?.image?.url} />
                 </div>
               </div>
             </div>

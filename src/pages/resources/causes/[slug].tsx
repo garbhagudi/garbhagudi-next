@@ -4,6 +4,8 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import { useRouter } from "next/router";
+import Share from "components/share";
+import Loading from "components/Loading";
 
 export const getStaticProps = async ({ params }) => {
   const { cause } = await graphcms.request(
@@ -55,11 +57,7 @@ const Blog = ({ cause }) => {
   const router = useRouter();
 
   if (router.isFallback) {
-    return (
-      <div className="h-screen text-brandPink flex items-center justify-center text-content animate-ping">
-        Loading...
-      </div>
-    );
+    return <Loading />;
   }
   return (
     <div>
@@ -236,7 +234,7 @@ const Blog = ({ cause }) => {
             <div>
               <RichText content={cause.content.raw.children} />
             </div>
-            <div></div>
+            <Share pinmedia={cause?.image?.url} />
           </div>
         </div>
       </div>

@@ -5,17 +5,15 @@ import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import graphcms from "lib/graphcms";
 import { useRouter } from "next/router";
+import Loading from "components/Loading";
+
 const limit = 6;
 
 function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
   const router = useRouter();
 
   if (router.isFallback) {
-    return (
-      <div className="h-screen text-brandPink flex items-center justify-center text-content animate-ping">
-        Loading...
-      </div>
-    );
+    return <Loading />;
   }
 
   return (

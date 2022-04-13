@@ -3,6 +3,7 @@ import { GraphQLClient, gql } from "graphql-request";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
+import Share from "components/share";
 
 export const getServerSideProps = async (pageContext) => {
   const url = process.env.ENDPOINT;
@@ -164,6 +165,7 @@ const Career = ({ career }) => {
               </div>
             </div>
           </div>
+          <Share pinmedia="" />
         </div>
       </section>
     </div>

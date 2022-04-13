@@ -5,6 +5,7 @@ import BlogFooter from "components/blogFooter";
 import Error from "next/error";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
+import Share from "components/share";
 
 export const getServerSideProps = async (pageContext) => {
   const url = process.env.ENDPOINT;
@@ -208,6 +209,7 @@ const AwardPage = ({ award }) => {
                 <RichText content={award?.content?.raw.children} />
               </div>
               <div>
+                <Share pinmedia={award?.image?.url} />
                 <BlogFooter />
               </div>
             </div>
