@@ -15,18 +15,3 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
-
-@font-face {
-  font-family: "kan-bold";
-  src: url("/fonts/Nudi-03-e-Bold.ttf");
-}
-
-@font-face {
-  font-family: "kan-reg";
-  src: url("/fonts/Nudi-03-e-Regular.ttf");
-}
-
-@font-face {
-  font-family: "kan-alt-bold";
-  src: url("/fonts/Nudi-01-e-bold.ttf");
-}
