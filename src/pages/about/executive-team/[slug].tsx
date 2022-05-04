@@ -19,6 +19,7 @@ export const getStaticProps = async ({ params }) => {
         }
         bio {
           raw
+          text
         }
       }
     }
@@ -75,7 +76,7 @@ const ExecutiveTeam = ({ director }) => (
       <meta property="og:url" content="https://garbhagudi.com" />
       <meta
         property="og:description"
-        content={director?.bio?.raw.children.slice(0, 180)}
+        content={director?.bio?.text.slice(0, 180)}
       />
       <meta property="og:type" content="website" />
       <meta
