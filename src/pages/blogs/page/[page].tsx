@@ -6,6 +6,7 @@ import BreadCrumbs from "components/breadcrumbs";
 import graphcms from "lib/graphcms";
 import { useRouter } from "next/router";
 import Loading from "components/Loading";
+import SearchComponent from "components/search/searchComponent";
 
 const limit = 6;
 
@@ -95,6 +96,7 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
                 Blogs
               </h2>
             </div>
+            <SearchComponent />
             <div className="mt-12 max-w-xl mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none w">
               {blogs?.map((item: any) => (
                 <div
