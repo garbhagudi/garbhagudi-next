@@ -47,7 +47,6 @@ const Video = () => {
         <Carousel
           responsive={responsive}
           autoPlaySpeed={360000}
-          partialVisbile={true}
           focusOnSelect={true}
           ssr={true}
           infinite={true}
