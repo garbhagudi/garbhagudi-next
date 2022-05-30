@@ -76,37 +76,37 @@ const IndexPage = ({ careers }) => {
             work, apply now!
           </div>
         </div>
-        <div className="text-center text-2xl font-heading pt-8 font-semibold">
+        <div className="text-center text-3xl font-heading pt-8 font-semibold">
           Current Opportunities
         </div>
         <div className="container mb-2 flex mx-auto w-full items-center justify-center">
-          <ul className="flex flex-col p-4">
-            <li className="flex flex-col">
-              {careers.map((items) => (
-                <div
-                  className="select-none flex flex-1 items-center p-6 transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-3xl border-2 hover:shadow-2xl border-brandPink4 mt-4 hover:bg-pink-50"
-                  key={items.id}
-                >
-                  <div className="flex-1 pl-1 mr-16">
-                    <div className="font-content font-semibold text-2xl">
-                      {items.position}
+          <li className="flex flex-wrap gap-4 mx-auto mt-6">
+            {careers.map((items) => (
+              <Link href={`careers/${items?.slug}`} passHref key={items.id}>
+                <a className="bg-white rounded-lg border shadow-md hover:bg-gray-100 w-96 max-w-sm mx-auto">
+                  <div className="flex flex-col justify-between p-4 leading-normal ">
+                    <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 font-content">
+                      {items?.position}
+                    </h5>
+                    <div className="h-24">
+                      <p className="mb-1 font-content text-sm text-gray-900 ">
+                        Location: {items?.location}
+                      </p>
+                      <p className="mb-1 font-content text-sm text-gray-900 ">
+                        Experience: {items?.experience}
+                      </p>
+                      <p className="mb-1 font-content text-sm text-gray-900 ">
+                        Qualification: {items?.qualification}
+                      </p>
                     </div>
-                    <div className="font-content font-semibold text-xs mt-2">
-                      Location: {items.location}
-                    </div>
-                    <div className="font-content font-semibold text-xs mt-2">
-                      Experience: {items.experience}
-                    </div>
+                    <button className="font-content mt-4 rounded-3xl px-4 py-2 border font-semibold border-brandPink hover:bg-brandPink w-32">
+                      <Link href={`careers/${items?.slug}`}>Apply Now</Link>
+                    </button>
                   </div>
-                  <Link href={`careers/${items.slug}`}>
-                    <a className="w-2/ text-wrap text-center flex text-white text-bold flex-col rounded-3xl bg-brandPink justify-center items-center mr-7 px-3 py-2 font-qs hover:bg-brandPink3">
-                      Apply Now
-                    </a>
-                  </Link>
-                </div>
-              ))}
-            </li>
-          </ul>
+                </a>
+              </Link>
+            ))}
+          </li>
         </div>
       </div>
     </div>
@@ -124,13 +124,14 @@ export const getServerSideProps = async () => {
   });
   const query = gql`
     query {
-      careers {
+      careers(orderBy: publishedAt_DESC) {
         position
         slug
         isActive
         location
         id
         experience
+        qualification
       }
     }
   `;
