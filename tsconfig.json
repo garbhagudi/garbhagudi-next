@@ -23,7 +23,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/components/SalesIQ.js"
+    "src/components/SalesIQ.js",
+    "src/pages/tools/ovulation-calculator/index..jsx"
   ],
   "exclude": ["node_modules"]
 }

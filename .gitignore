@@ -12,6 +12,7 @@ node_modules
 # next.js
 /.next/
 /out/
+/.vscode/
 
 # production
 /build
@@ -27,7 +28,7 @@ node_modules
 # misc
 .DS_Store
 *.pem
-.vsode
+
 
 # debug
 npm-debug.log*
