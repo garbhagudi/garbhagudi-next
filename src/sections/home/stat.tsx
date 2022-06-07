@@ -81,7 +81,7 @@ export const Statistic = () => {
         <div className="grid rounded lg:col-span-3 grid-cols-3 lg:grid-cols-3">
           {metrics.map((items) => (
             <div
-              className={`flex flex-col justify-between rounded-lg p-8 sm:p-10 border hover:${items.bg} hover: transition-all `}
+              className={`hover:${items.bg} flex flex-col justify-between rounded-lg p-8 sm:p-10 border  hover: transition-all `}
               key={items?.id}
             >
               <div className="flex flex-col items-center justify-center">
