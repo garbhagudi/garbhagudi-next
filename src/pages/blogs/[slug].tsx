@@ -254,17 +254,6 @@ const Blog = ({ blog }) => {
                 <RichText content={blog?.content?.raw.children} />
               </div>
               <div>
-                {/* <div className="text-center mt-16 text-lg font-content flex items-center justify-center">
-                  {blog.likes && <p className=""> Likes: {blog.likes}</p>}
-                  <button
-                    onClick={() => {
-                      setLikes(likes + 1);
-                      UpdateLikes(blog.slug, likes);
-                    }}
-                  >
-                    <HiOutlineHeart className="w-8 h-8 ml-4" />
-                  </button>
-                </div> */}
                 <Share pinmedia={blog?.image?.url} />
                 <BlogFooter />
               </div>
