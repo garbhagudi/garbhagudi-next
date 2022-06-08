@@ -8,6 +8,7 @@ import Script from "next/script";
 import * as ga from "../lib/google-analytics";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import "styles/calendar.css";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
