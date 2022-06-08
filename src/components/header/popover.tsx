@@ -58,12 +58,13 @@ const Resources = [
     href: "/resources/treatments",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839802/Icons/Resources/Treatments_kcqops.svg",
   },
-  // {
-  //   name: "Events and Webinars",
-  //   description: "Live Events",
-  //   href: "##",
-  //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839833/Icons/Resources/Events_Webinars_buec8s.svg",
-  // },
+  {
+    name: "Ovulation and Due Date Calculator",
+    description:
+      "Know your next menstrual cycle, fertile window, and your due date with this handy calculator",
+    href: "/tools/ovulation-calculator",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839833/Icons/Resources/Events_Webinars_buec8s.svg",
+  },
   {
     name: "FAQ",
     description: "Frequently Asked Questions",
