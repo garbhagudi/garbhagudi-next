@@ -82,12 +82,6 @@ const IndexPage = () => {
             defaultValue={cycle}
             className="border rounded-lg w-36 text-center"
           >
-            <option value="28">22 Days</option>
-            <option value="29">23 Days</option>
-            <option value="30">24 Days</option>
-            <option value="31">25 Days</option>
-            <option value="32">26 Days</option>
-            <option value="33">27 Days</option>
             <option value="28">28 Days</option>
             <option value="29">29 Days</option>
             <option value="30">30 Days</option>
@@ -151,7 +145,7 @@ const IndexPage = () => {
               </div>
             </div>
             <div className="mx-auto mt-3 p-3 text-center rounded-2xl border text-base shadow-2xl w-96">
-              <p> Approximate Pregnancy Test Day :</p>
+              <p> Approximate Pregnancy Test :</p>
               <div className="font-bold">
                 <Moment format="DD MMMM YYYY" add={{ days: cycleLength + 1 }}>
                   {date}
