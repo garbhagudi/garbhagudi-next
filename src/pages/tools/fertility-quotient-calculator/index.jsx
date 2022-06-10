@@ -1,5 +1,5 @@
 import React from "react";
-import { Average, Good, Low, Best, Poor } from "./results";
+import { Average, Good, Low, Best, Poor } from "sections/tools/fqc/results";
 import Head from "next/head";
 
 const IndexPage = () => {
