@@ -2,6 +2,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { HiChevronDown } from "react-icons/hi";
 import { Fragment } from "react";
 import Link from "next/link";
+import { HiCalendar, HiCalculator } from "react-icons/hi";
 
 const contact = [
   {
@@ -59,11 +60,18 @@ const Resources = [
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839802/Icons/Resources/Treatments_kcqops.svg",
   },
   {
+    name: "Fertility Quotient Calculator",
+    description:
+      "Calculator your Fertility Quotient based on toye Age, BMI, AFC and AMH values",
+    href: "/tools/fertility-quotient-calculator",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1654849032/Icons/Resources/Calculator_bxkdl9.svg",
+  },
+  {
     name: "Ovulation and Due Date Calculator",
     description:
       "Know your next menstrual cycle, fertile window, and your due date with this handy calculator",
     href: "/tools/ovulation-calculator",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839833/Icons/Resources/Events_Webinars_buec8s.svg",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1654849032/Icons/Resources/Calendar_tvq9bm.svg",
   },
   {
     name: "FAQ",

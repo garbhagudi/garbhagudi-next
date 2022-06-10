@@ -84,25 +84,19 @@ const IndexPage = () => {
 
     document.getElementById("result").classList.remove("hidden");
     document.getElementById("form").classList.add("hidden");
-    document.getElementById("score").innerHTML = score;
+    document.getElementById("score").innerHTML = `${score}/50`;
     document.getElementById("percent").innerHTML = `${percent}%`;
 
-    const lowFertility = document.getElementById("low-fertility");
-    const poorFertility = document.getElementById("poor-fertility");
-    const averageFertility = document.getElementById("average-fertility");
-    const goodFertility = document.getElementById("good-fertility");
-    const bestFertility = document.getElementById("best-fertility");
-
     if (score <= 18) {
-      poorFertility.classList.remove("hidden");
+      document.getElementById("poor-fertility").classList.remove("hidden");
     } else if (score > 18 && score <= 27) {
-      lowFertility.classList.remove("hidden");
+      document.getElementById("low-fertility").classList.remove("hidden");
     } else if (score > 27 && score <= 34) {
-      averageFertility.classList.remove("hidden");
+      document.getElementById("average-fertility").classList.remove("hidden");
     } else if (score > 34 && score <= 42) {
-      goodFertility.classList.remove("hidden");
+      document.getElementById("good-fertility").classList.remove("hidden");
     } else if (score > 42 && score <= 50) {
-      bestFertility.classList.remove("hidden");
+      document.getElementById("best-fertility").classList.remove("hidden");
     } else {
       document.getElementById("overflow").classList.remove("hidden");
       document.getElementById("score").classList.add("hidden");
