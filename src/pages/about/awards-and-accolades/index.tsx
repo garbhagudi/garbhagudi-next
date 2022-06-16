@@ -57,7 +57,7 @@ const Awards = ({ award }) => {
           property="og:title"
           content={`Awards & Accolades GarbhaGudi IVF Centre`}
         />
-        <meta property="og:site_name" content="GarbhaGudi IVF Center" />
+        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"

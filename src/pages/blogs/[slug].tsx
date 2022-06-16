@@ -86,12 +86,12 @@ const Blog = ({ blog }) => {
       <Head>
         {/* Primary Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{blog?.title} | GarbhaGudi IVF Center</title>
+        <title>{blog?.title} | GarbhaGudi IVF Centre</title>
         <meta name="title" content={`${blog?.title} | GarbhaGudi`} />
         <meta name="description" content={blog?.content?.text.slice(0, 160)} />
         {/* Open Graph / Facebook */}
         <meta property="og:title" content={blog?.title} />
-        <meta property="og:site_name" content="GarbhaGudi IVF Center" />
+        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"
@@ -109,7 +109,7 @@ const Blog = ({ blog }) => {
         <meta name="twitter:site" content="@garbhagudiivf" />
         <meta
           name="twitter:title"
-          content={`${blog?.title} | GarbhaGudi IVF Center`}
+          content={`${blog?.title} | GarbhaGudi IVF Centre`}
         />
         <meta
           name="twitter:description"

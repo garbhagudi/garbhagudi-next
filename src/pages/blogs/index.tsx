@@ -70,7 +70,7 @@ const Blogs = ({ blogs }) => {
           property="og:title"
           content={`Blogs | Page - 1 | GarbhaGudi IVF Centre`}
         />
-        <meta property="og:site_name" content="GarbhaGudi IVF Center" />
+        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"

@@ -30,7 +30,7 @@ const CareerOrBaby = (props: Props) => {
           property="og:title"
           content={`Career or Baby? | GarbhaGudi IVF Centre`}
         />
-        <meta property="og:site_name" content="GarbhaGudi IVF Center" />
+        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"

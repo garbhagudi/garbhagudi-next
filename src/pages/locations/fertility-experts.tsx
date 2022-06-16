@@ -16,7 +16,7 @@ const IndexPage = ({ doctors }) => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Our Fertility Experts | GarbhaGudi IVF Center</title>
+        <title>Our Fertility Experts | GarbhaGudi IVF Centre</title>
         <meta
           name="title"
           content="Our Fertility Experts | GarbhaGudi IVF Centre"
