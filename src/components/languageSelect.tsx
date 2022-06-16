@@ -34,32 +34,33 @@ export default function LanguageSelect() {
           >
             <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
               {people.map((person, personIdx) => (
-                <Listbox.Option
-                  key={personIdx}
-                  className={({ active }) =>
-                    `relative cursor-default select-none text-sm py-2 px-4 pr-4  rounded-lg ${
-                      active
-                        ? "bg-brandPink4 text-brandDark font-bold"
-                        : "text-gray-900 font-bold"
-                    }`
-                  }
-                  value={person}
-                >
-                  {({ selected }) => (
-                    <>
-                      <span
-                        className={`block truncate ${
-                          selected ? "font-medium" : "font-normal"
-                        }`}
-                      >
-                        <Link href={person.link}>{person.name}</Link>
-                      </span>
-                      {selected ? (
-                        <span className="absolute inset-y-0 left-0 flex items-center text-amber-600"></span>
-                      ) : null}
-                    </>
-                  )}
-                </Listbox.Option>
+                <Link href={person.link} passHref key={personIdx}>
+                  <Listbox.Option
+                    className={({ active }) =>
+                      `relative cursor-default select-none text-sm py-2 px-4 pr-4  rounded-lg ${
+                        active
+                          ? "bg-brandPink4 text-brandDark font-bold"
+                          : "text-gray-900 font-bold"
+                      }`
+                    }
+                    value={person}
+                  >
+                    {({ selected }) => (
+                      <>
+                        <span
+                          className={`block truncate ${
+                            selected ? "font-medium" : "font-normal"
+                          }`}
+                        >
+                          {person.name}
+                        </span>
+                        {selected ? (
+                          <span className="absolute inset-y-0 left-0 flex items-center text-amber-600"></span>
+                        ) : null}
+                      </>
+                    )}
+                  </Listbox.Option>
+                </Link>
               ))}
             </Listbox.Options>
           </Transition>
