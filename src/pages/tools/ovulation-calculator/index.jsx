@@ -103,11 +103,11 @@ const IndexPage = () => {
           </select>
         </div>
         <div className="pt-8 text-center grid grid-cols-1 md:grid-cols-2">
-          <div className="scale-90 lg:scale-100">
+          <div className="scale-75 md:scale-100">
             <p className="text-center text-lg">
               Select the first day of your last period
             </p>
-            <div className="flex justify-center px-1 sm:px-0">
+            <div className="flex justify-center">
               <Calendar
                 onChange={onChange}
                 value={value}
