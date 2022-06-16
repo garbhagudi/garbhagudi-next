@@ -84,7 +84,7 @@ const KalyanNagar = ({ doctors }) => {
             className="rounded-xl mt-4"
           />
           <p className="my-10 text-md sm:text-lg font-content mx-auto px-6 sm:px-0">
-            GarbhaGudi is a well-known IVF center that offers the complete gamut
+            GarbhaGudi is a well-known IVF Centre that offers the complete gamut
             of assisted reproductive techniques to ensure a treatment option for
             almost every couple to address all causes of infertility. Our
             doctors are renowned Gynecologists with vast experience in IVF, and

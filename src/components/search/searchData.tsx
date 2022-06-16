@@ -391,7 +391,7 @@ export const terms = [
     slug: "what-to-expect-after-the-embryo-transfer",
   },
   {
-    title: "How to select the best IVF center",
+    title: "How to select the best IVF Centre",
     slug: "how-to-select-the-best-ivf-center",
   },
   {
