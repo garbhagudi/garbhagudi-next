@@ -227,7 +227,7 @@ export function About() {
         <>
           <Popover.Button
             className={`
-                ${close ? "" : "text-opacity-90"}
+                ${close ? "w-screen text-left sm:w-full" : "text-opacity-90"}
                  `}
           >
             <span>
@@ -280,10 +280,10 @@ export function Treatment() {
         <>
           <Popover.Button
             className={`
-                  ${close ? "" : "text-opacity-90"}
+                  ${close ? "w-screen text-left sm:w-full" : "text-opacity-90"}
                    `}
           >
-            <span>
+            <span className="w-full">
               Why GarbhaGudi
               <HiChevronDown className="inline-block" />
             </span>
@@ -334,10 +334,10 @@ export function KnowledgeCenter() {
         <>
           <Popover.Button
             className={`
-                  ${close ? "" : "text-opacity-90"}
+                  ${close ? "w-screen text-left sm:w-full" : "text-opacity-90"}
                   `}
           >
-            <span>
+            <span className="w-full">
               Resources <HiChevronDown className="inline-block" />
             </span>
           </Popover.Button>
@@ -390,10 +390,10 @@ export function Contact() {
         <>
           <Popover.Button
             className={`
-                  ${close ? "" : "text-opacity-90"}
+                  ${close ? "w-screen text-left sm:w-full" : "text-opacity-90"}
                   `}
           >
-            <span>
+            <span className="w-full">
               Contact <HiChevronDown className="inline-block" />
             </span>
           </Popover.Button>
@@ -443,10 +443,10 @@ export function Locations() {
         <>
           <Popover.Button
             className={`
-                ${close ? "" : "text-opacity-90"}
+                ${close ? "w-screen text-left sm:w-full" : "text-opacity-90"}
                  `}
           >
-            <span>
+            <span className="w-full">
               Locations <HiChevronDown className="inline-block" />
             </span>
           </Popover.Button>
@@ -496,10 +496,10 @@ export function Language() {
         <>
           <Popover.Button
             className={`
-                ${open ? "" : "text-opacity-90"}
+                ${open ? "w-screen text-left sm:w-full" : "text-opacity-90"}
                  `}
           >
-            <span>
+            <span className="w-full">
               Language <HiChevronDown className="inline-block" />
             </span>
           </Popover.Button>
