@@ -54,7 +54,7 @@ const Nav = () => {
                       className={
                         router.pathname == "/"
                           ? "bg-brandPink text-white px-2 py-2 rounded-2xl text-sm font-content"
-                          : "text-gray-700 hover:bg-brandPink hover:text-white px-1 py-2 rounded-2xl text-sm font-inter cursor-pointer"
+                          : "text-gray-700 hover:bg-brandPink hover:text-white px-2 py-2 rounded-2xl text-sm font-inter cursor-pointer"
                       }
                     >
                       Home
@@ -165,20 +165,19 @@ const Nav = () => {
         >
           {(ref) => (
             <div className="xl:hidden" id="mobile-menu">
-              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <div ref={ref} className="px-2 pt-2 pb-3 sm:px-3">
                 <Link href="/">
                   <a
-                    className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content"
+                    className="text-brandDark hover:bg-brandPink  hover:text-white block px-3 py-2 rounded-md text-sm font-content"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     Home
                   </a>
                 </Link>
-                <span
-                  className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content"
-                  onClick={() => setIsOpen(!isOpen)}
-                >
-                  <About />
+                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
+                  <span className="w-44" onClick={() => setIsOpen(!isOpen)}>
+                    <About />
+                  </span>
                 </span>
 
                 <span
@@ -199,10 +198,7 @@ const Nav = () => {
                 >
                   <Contact />
                 </span>
-                <span
-                  className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content"
-                  onClick={() => setIsOpen(!isOpen)}
-                >
+                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
                   <Locations />
                 </span>
                 <a

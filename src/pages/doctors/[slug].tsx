@@ -264,36 +264,40 @@ const Doctor = ({ doctor }) => {
 
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-left font-medium text-brandPink2">
-                                          <button>
-                                            <a
-                                              href={
-                                                doctor.hanumanthaNagarPhysical
-                                              }
-                                              className="font-semibold text-brandPink hover:underline"
-                                              hrefLang="en-us"
-                                              target="_blank"
-                                              rel="noreferrer"
-                                            >
-                                              Book Now
-                                            </a>
-                                          </button>
+                                          {doctor.hanumanthaNagarPhysical && (
+                                            <button>
+                                              <a
+                                                href={
+                                                  doctor.hanumanthaNagarPhysical
+                                                }
+                                                className="font-semibold text-brandPink hover:underline"
+                                                hrefLang="en-us"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          )}
                                         </div>
                                       </td>
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-left">
-                                          <button>
-                                            <a
-                                              href={
-                                                doctor.hanumanthaNagarOnline
-                                              }
-                                              className="font-semibold text-brandPink hover:underline"
-                                              target="_blank"
-                                              hrefLang="en-us"
-                                              rel="noreferrer"
-                                            >
-                                              Book Now
-                                            </a>
-                                          </button>
+                                          {doctor.hanumanthaNagarOnline && (
+                                            <button>
+                                              <a
+                                                href={
+                                                  doctor.hanumanthaNagarOnline
+                                                }
+                                                className="font-semibold text-brandPink hover:underline"
+                                                target="_blank"
+                                                hrefLang="en-us"
+                                                rel="noreferrer"
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          )}
                                         </div>
                                       </td>
                                     </tr>
@@ -329,32 +333,38 @@ const Doctor = ({ doctor }) => {
 
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-left">
-                                          <button>
-                                            <a
-                                              href={doctor.kalyanNagarPhysical}
-                                              className="font-semibold text-brandPink hover:underline"
-                                              target="_blank"
-                                              hrefLang="en-us"
-                                              rel="noreferrer"
-                                            >
-                                              Book Now
-                                            </a>
-                                          </button>
+                                          {doctor.kalyanNagarPhysical && (
+                                            <button>
+                                              <a
+                                                href={
+                                                  doctor.kalyanNagarPhysical
+                                                }
+                                                className="font-semibold text-brandPink hover:underline"
+                                                target="_blank"
+                                                hrefLang="en-us"
+                                                rel="noreferrer"
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          )}
                                         </div>
                                       </td>
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-black font-semibold text-left">
-                                          <button>
-                                            <a
-                                              href={doctor.kalyanNagarOnline}
-                                              target="_blank"
-                                              hrefLang="en-us"
-                                              rel="noreferrer"
-                                              className="font-semibold text-brandPink hover:underline"
-                                            >
-                                              Book Now
-                                            </a>
-                                          </button>
+                                          {doctor.kalyanNagarOnline && (
+                                            <button>
+                                              <a
+                                                href={doctor.kalyanNagarOnline}
+                                                target="_blank"
+                                                hrefLang="en-us"
+                                                rel="noreferrer"
+                                                className="font-semibold text-brandPink hover:underline"
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          )}
                                         </div>
                                       </td>
                                     </tr>
@@ -390,32 +400,36 @@ const Doctor = ({ doctor }) => {
 
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-left font-medium text-brandPink2">
-                                          <button>
-                                            <a
-                                              href={doctor.jayanagarPhysical}
-                                              className="font-semibold text-brandPink hover:underline"
-                                              target="_blank"
-                                              hrefLang="en-us"
-                                              rel="noreferrer"
-                                            >
-                                              Book Now
-                                            </a>
-                                          </button>
+                                          {doctor.jayanagarPhysical && (
+                                            <button>
+                                              <a
+                                                href={doctor.jayanagarPhysical}
+                                                className="font-semibold text-brandPink hover:underline"
+                                                target="_blank"
+                                                hrefLang="en-us"
+                                                rel="noreferrer"
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          )}
                                         </div>
                                       </td>
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-left">
-                                          <button>
-                                            <a
-                                              href={doctor.jayanagarOnline}
-                                              className="font-semibold text-brandPink hover:underline"
-                                              target="_blank"
-                                              hrefLang="en-us"
-                                              rel="noreferrer"
-                                            >
-                                              Book Now
-                                            </a>
-                                          </button>
+                                          {doctor.jayanagarOnline && (
+                                            <button>
+                                              <a
+                                                href={doctor.jayanagarOnline}
+                                                className="font-semibold text-brandPink hover:underline"
+                                                target="_blank"
+                                                hrefLang="en-us"
+                                                rel="noreferrer"
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          )}
                                         </div>
                                       </td>
                                     </tr>
@@ -451,40 +465,46 @@ const Doctor = ({ doctor }) => {
 
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-left font-medium text-brandPink2">
-                                          <button>
-                                            <a
-                                              href={
-                                                doctor.electronicCityPhysical
-                                              }
-                                              target="_blank"
-                                              rel="noreferrer"
-                                              hrefLang="en-us"
-                                              className="font-semibold text-brandPink hover:underline"
-                                            >
-                                              Book Now
-                                            </a>
-                                          </button>
+                                          {doctor.electronicCityPhysical && (
+                                            <button>
+                                              <a
+                                                href={
+                                                  doctor.electronicCityPhysical
+                                                }
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                hrefLang="en-us"
+                                                className="font-semibold text-brandPink hover:underline"
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          )}
                                         </div>
                                       </td>
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-left">
-                                          <button>
-                                            <a
-                                              href={doctor.electronicCityOnline}
-                                              className="font-semibold text-brandPink hover:underline"
-                                              target="_blank"
-                                              hrefLang="en-us"
-                                              rel="noreferrer"
-                                            >
-                                              Book Now
-                                            </a>
-                                          </button>
+                                          {doctor.electronicCityOnline && (
+                                            <button>
+                                              <a
+                                                href={
+                                                  doctor.electronicCityOnline
+                                                }
+                                                className="font-semibold text-brandPink hover:underline"
+                                                target="_blank"
+                                                hrefLang="en-us"
+                                                rel="noreferrer"
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          )}
                                         </div>
                                       </td>
                                     </tr>
                                   )}
-                                {doctor.marathahalliOnline &&
-                                  doctor.marathahalliPhysical && (
+                                {doctor.marathahalliOnline ||
+                                  (doctor.marathahalliPhysical && (
                                     <tr>
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="flex items-center">
@@ -512,36 +532,42 @@ const Doctor = ({ doctor }) => {
 
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-left font-medium text-brandPink2">
-                                          <button>
-                                            <a
-                                              href={doctor.marathahalliPhysical}
-                                              target="_blank"
-                                              rel="noreferrer"
-                                              hrefLang="en-us"
-                                              className="text-left font-medium text-brandPink2 hover:underline"
-                                            >
-                                              Book Now
-                                            </a>
-                                          </button>
+                                          {doctor.marathahalliPhysical && (
+                                            <button>
+                                              <a
+                                                href={
+                                                  doctor.marathahalliPhysical
+                                                }
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                hrefLang="en-us"
+                                                className="text-left font-medium text-brandPink2 hover:underline"
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          )}
                                         </div>
                                       </td>
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-left">
-                                          <button>
-                                            <a
-                                              href={doctor.marathahalliOnline}
-                                              className="text-left font-medium text-brandPink2 hover:underline"
-                                              target="_blank"
-                                              hrefLang="en-us"
-                                              rel="noreferrer"
-                                            >
-                                              Book Now
-                                            </a>
-                                          </button>
+                                          {doctor.marathahalliOnline && (
+                                            <button>
+                                              <a
+                                                href={doctor.marathahalliOnline}
+                                                className="text-left font-medium text-brandPink2 hover:underline"
+                                                target="_blank"
+                                                hrefLang="en-us"
+                                                rel="noreferrer"
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          )}
                                         </div>
                                       </td>
                                     </tr>
-                                  )}
+                                  ))}
                               </tbody>
                             </table>
                           </div>
