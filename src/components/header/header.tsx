@@ -61,24 +61,24 @@ const Nav = () => {
                     </span>
                   </Link>
 
-                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-1 py-2 text-sm font-content">
+                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-2 py-2 text-sm font-content">
                     <About />
                   </span>
 
-                  <span className=" text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-1 py-2 text-sm font-content">
+                  <span className=" text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-2 py-2 text-sm font-content">
                     <Treatment />
                   </span>
 
-                  <span className=" text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-1 py-2 text-sm font-content">
+                  <span className=" text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-2 py-2 text-sm font-content">
                     <KnowledgeCenter />
                   </span>
-                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-1 py-2 text-sm font-content">
+                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-2 py-2 text-sm font-content">
                     <Contact />
                   </span>
-                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-1 py-2 text-sm font-content">
+                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-2 py-2 text-sm font-content">
                     <Locations />
                   </span>
-                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-1 py-2 text-sm font-content">
+                  <span className="text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl px-2 py-2 text-sm font-content">
                     <Language />
                   </span>
 
@@ -167,30 +167,49 @@ const Nav = () => {
             <div className="xl:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <Link href="/">
-                  <a className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
+                  <a
+                    className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
                     Home
                   </a>
                 </Link>
-                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
+                <span
+                  className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
                   <About />
                 </span>
 
-                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
+                <span
+                  className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
                   <Treatment />
                 </span>
-                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
+                <span
+                  className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
                   <KnowledgeCenter />
                 </span>
-                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
+                <span
+                  className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
                   <Contact />
                 </span>
-                <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content">
+                <span
+                  className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
                   <Locations />
                 </span>
                 <a
                   href="https://consult.bestdocapp.com/home/GARBHAGUDI"
                   target={"_blank"}
                   rel="noreferrer"
+                  onClick={() => setIsOpen(!isOpen)}
                 >
                   <span className="text-brandDark hover:bg-brandPink hover:text-white block px-3 py-2 rounded-md text-sm font-content cursor-pointer">
                     Book an Appointment
