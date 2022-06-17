@@ -2,7 +2,6 @@ import { Popover, Transition } from "@headlessui/react";
 import { HiChevronDown } from "react-icons/hi";
 import { Fragment } from "react";
 import Link from "next/link";
-import { HiCalendar, HiCalculator } from "react-icons/hi";
 
 const contact = [
   {
@@ -224,11 +223,11 @@ const aboutUs = [
 export function About() {
   return (
     <Popover className="relative">
-      {({ open }) => (
+      {({ close }) => (
         <>
           <Popover.Button
             className={`
-                ${open ? "" : "text-opacity-90"}
+                ${close ? "" : "text-opacity-90"}
                  `}
           >
             <span>
@@ -248,20 +247,21 @@ export function About() {
               <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-5 grid-cols-2 lg:grid-cols-2">
                   {aboutUs.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none"
-                    >
-                      <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                        <img src={item.icon} alt={item.name} />
-                      </div>
-                      <div className="ml-4">
-                        <p className="text-sm font-medium text-gray-900 font-content">
-                          {item.name}
-                        </p>
-                      </div>
-                    </a>
+                    <Link key={item.name} href={item.href}>
+                      <a
+                        onClick={() => close()}
+                        className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none"
+                      >
+                        <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
+                          <img src={item.icon} alt={item.name} />
+                        </div>
+                        <div className="ml-4">
+                          <p className="text-sm font-medium text-gray-900 font-content">
+                            {item.name}
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -276,11 +276,11 @@ export function About() {
 export function Treatment() {
   return (
     <Popover className="relative">
-      {({ open }) => (
+      {({ close }) => (
         <>
           <Popover.Button
             className={`
-                  ${open ? "" : "text-opacity-90"}
+                  ${close ? "" : "text-opacity-90"}
                    `}
           >
             <span>
@@ -301,20 +301,21 @@ export function Treatment() {
               <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-5 grid-cols-2 lg:grid-cols-3">
                   {valueAddedServices.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                    >
-                      <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                        <img src={item.icon} alt={item.name} />
-                      </div>
-                      <div className="ml-4">
-                        <p className="text-sm font-medium text-gray-900">
-                          {item.name}
-                        </p>
-                      </div>
-                    </a>
+                    <Link key={item.name} href={item.href} passHref>
+                      <a
+                        className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                        onClick={() => close()}
+                      >
+                        <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
+                          <img src={item.icon} alt={item.name} />
+                        </div>
+                        <div className="ml-4">
+                          <p className="text-sm font-medium text-gray-900">
+                            {item.name}
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -329,11 +330,11 @@ export function Treatment() {
 export function KnowledgeCenter() {
   return (
     <Popover className="relative">
-      {({ open }) => (
+      {({ close }) => (
         <>
           <Popover.Button
             className={`
-                  ${open ? "" : "text-opacity-90"}
+                  ${close ? "" : "text-opacity-90"}
                   `}
           >
             <span>
@@ -354,7 +355,10 @@ export function KnowledgeCenter() {
                 <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-1">
                   {Resources.map((item) => (
                     <Link key={item.name} href={item.href} passHref>
-                      <a className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
+                      <a
+                        className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                        onClick={() => close()}
+                      >
                         <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
                           <img src={item.icon} alt={item.name} />
                         </div>
@@ -382,11 +386,11 @@ export function KnowledgeCenter() {
 export function Contact() {
   return (
     <Popover className="relative">
-      {({ open }) => (
+      {({ close }) => (
         <>
           <Popover.Button
             className={`
-                  ${open ? "" : "text-opacity-90"}
+                  ${close ? "" : "text-opacity-90"}
                   `}
           >
             <span>
@@ -406,20 +410,21 @@ export function Contact() {
               <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-1">
                   {contact.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                    >
-                      <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                        <img src={item.icon} alt={item.name} />
-                      </div>
-                      <div className="ml-4">
-                        <p className="text-sm font-medium text-gray-900">
-                          {item.name}
-                        </p>
-                      </div>
-                    </a>
+                    <Link key={item.name} href={item.href} passHref>
+                      <a
+                        onClick={() => close()}
+                        className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                      >
+                        <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
+                          <img src={item.icon} alt={item.name} />
+                        </div>
+                        <div className="ml-4">
+                          <p className="text-sm font-medium text-gray-900">
+                            {item.name}
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -434,11 +439,11 @@ export function Contact() {
 export function Locations() {
   return (
     <Popover className="relative">
-      {({ open }) => (
+      {({ close }) => (
         <>
           <Popover.Button
             className={`
-                ${open ? "" : "text-opacity-90"}
+                ${close ? "" : "text-opacity-90"}
                  `}
           >
             <span>
@@ -458,20 +463,21 @@ export function Locations() {
               <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-1">
                   {Location.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                    >
-                      <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                        <img src={item.icon} alt={item.name} />
-                      </div>
-                      <div className="ml-4">
-                        <p className="text-sm font-medium text-gray-900">
-                          {item.name}
-                        </p>
-                      </div>
-                    </a>
+                    <Link key={item.name} href={item.href}>
+                      <a
+                        onClick={() => close()}
+                        className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                      >
+                        <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
+                          <img src={item.icon} alt={item.name} />
+                        </div>
+                        <div className="ml-4">
+                          <p className="text-sm font-medium text-gray-900">
+                            {item.name}
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
                   ))}
                 </div>
               </div>
