@@ -113,7 +113,7 @@ const Overview = ({ directors }) => {
 
 export default Overview;
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const { directors } = await graphcms.request(`
     query {
       directors {
@@ -132,5 +132,6 @@ export const getServerSideProps = async () => {
     props: {
       directors,
     },
+    revalidate: 180,
   };
 };
