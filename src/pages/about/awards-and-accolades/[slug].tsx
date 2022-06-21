@@ -1,24 +1,19 @@
 import React from "react";
-import { GraphQLClient, gql } from "graphql-request";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import BlogFooter from "components/blogFooter";
 import Error from "next/error";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import Share from "components/share";
+import graphcms from "lib/graphcms";
+import { useRouter } from "next/router";
+import Loading from "components/Loading";
 
-export const getServerSideProps = async (pageContext) => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const pageSlug = pageContext.query.slug;
-
-  const query = gql`
-    query ($pageSlug: String!) {
-      award(where: { slug: $pageSlug }) {
+export const getStaticProps = async ({ params }) => {
+  const { award } = await graphcms.request(
+    `
+    query ($slug: String!) {
+      award(where: { slug: $slug }) {
         id
         image {
           url
@@ -30,13 +25,12 @@ export const getServerSideProps = async (pageContext) => {
         title
       }
     }
-  `;
-  const variables = {
-    pageSlug,
-  };
+  `,
+    {
+      slug: params.slug,
+    }
+  );
 
-  const data = await graphQLClient.request(query, variables);
-  const award = data.award;
   return {
     props: {
       award,
@@ -44,7 +38,26 @@ export const getServerSideProps = async (pageContext) => {
   };
 };
 
+export const getStaticPaths = async () => {
+  const { awards } = await graphcms.request(`{
+    awards {
+      title
+      slug
+    }
+  }`);
+
+  return {
+    paths: awards.map(({ slug }) => ({ params: { slug } })),
+    fallback: true,
+  };
+};
+
 const AwardPage = ({ award }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loading />;
+  }
   return (
     <div>
       <Head>

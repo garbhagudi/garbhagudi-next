@@ -1,22 +1,17 @@
 import React from "react";
-import { GraphQLClient, gql } from "graphql-request";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import Share from "components/share";
+import graphcms from "lib/graphcms";
+import { useRouter } from "next/router";
+import Loading from "components/Loading";
 
-export const getServerSideProps = async (pageContext) => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const pageSlug = pageContext.query.slug;
-
-  const query = gql`
-    query ($pageSlug: String!) {
-      career(where: { slug: $pageSlug }) {
+export const getStaticProps = async ({ params }) => {
+  const { career } = await graphcms.request(
+    `
+    query ($slug: String!) {
+      career(where: { slug: $slug }) {
         position
         jobDescription {
           raw
@@ -31,21 +26,40 @@ export const getServerSideProps = async (pageContext) => {
         link
       }
     }
-  `;
-  const variables = {
-    pageSlug,
-  };
+  `,
+    {
+      slug: params.slug,
+    }
+  );
 
-  const data = await graphQLClient.request(query, variables);
-  const career = data.career;
   return {
     props: {
       career,
     },
+    revalidate: 180,
+  };
+};
+
+export const getStaticPaths = async () => {
+  const { careers } = await graphcms.request(`{
+    careers {
+      position
+      slug
+    }
+  }`);
+
+  return {
+    paths: careers.map(({ slug }) => ({ params: { slug } })),
+    fallback: true,
   };
 };
 
 const Career = ({ career }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loading />;
+  }
   return (
     <div>
       <Head>

@@ -158,7 +158,7 @@ const Home = ({ homeData }) => {
 
 export default Home;
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const url = process.env.ENDPOINT;
   const graphQLClient = new GraphQLClient(url, {
     headers: {
@@ -197,5 +197,6 @@ export const getServerSideProps = async () => {
     props: {
       homeData,
     },
+    revalidate: 10,
   };
 };

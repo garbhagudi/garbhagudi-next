@@ -115,7 +115,7 @@ const IndexPage = ({ careers }) => {
 
 export default IndexPage;
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const url = process.env.ENDPOINT;
   const graphQLClient = new GraphQLClient(url, {
     headers: {
@@ -141,5 +141,6 @@ export const getServerSideProps = async () => {
     props: {
       careers,
     },
+    revalidate: 180,
   };
 };
