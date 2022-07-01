@@ -46,8 +46,7 @@ const language = [
 const Resources = [
   {
     name: "Blogs",
-    description:
-      "Our Blogs and Articles regarding Infertility, treatment and parenthood",
+    description: "Blogs regarding Infertility, treatment and parenthood",
     href: "/blogs/page/1",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839773/Icons/Resources/Blogs_duatrt.svg",
   },
@@ -71,15 +70,13 @@ const Resources = [
   },
   {
     name: "Fertility Quotient Calculator",
-    description:
-      "Calculator your Fertility Quotient based on toye Age, BMI, AFC and AMH values",
+    description: "Calculate your Fertility Quotient",
     href: "/tools/fertility-quotient-calculator",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1654849032/Icons/Resources/Calculator_bxkdl9.svg",
   },
   {
-    name: "Ovulation and Due Date Calculator",
-    description:
-      "Know your next menstrual cycle, fertile window, and your due date with this handy calculator",
+    name: "Ovulation Calculator",
+    description: "Know your next menstrual cycle and fertile window",
     href: "/tools/ovulation-calculator",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1654849032/Icons/Resources/Calendar_tvq9bm.svg",
   },
@@ -88,6 +85,12 @@ const Resources = [
     description: "Frequently Asked Questions",
     href: "/resources/faq",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264858/Icons/Resources/FAQs_x8rsvf.svg",
+  },
+  {
+    name: "Myths & Facts",
+    description: "Common myths related to health and fertility.",
+    href: "/resources/myths-and-facts",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1656676913/Icons/Resources/MYTH_FACT_wdure8.svg",
   },
 ];
 
@@ -350,9 +353,9 @@ export function KnowledgeCenter() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-96 px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
+            <Popover.Panel className="absolute z-10 w-screen max-w-xl px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
               <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-1">
+                <div className="relative grid gap-8 bg-white p-5 grid-cols-2">
                   {Resources.map((item) => (
                     <Link key={item.name} href={item.href} passHref>
                       <a

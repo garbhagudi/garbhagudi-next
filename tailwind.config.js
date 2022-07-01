@@ -50,6 +50,7 @@ module.exports = {
       brandPink2: "#ec5d79",
       brandPink3: "#ee6f88",
       brandPink4: "#f08197",
+      brandPink5: "#fce6ea",
       brandPurpleDark: "#612a7b",
       brandPurple: "#b67e9f",
       brandPurple2: "#d3b4d7",
