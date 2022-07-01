@@ -87,6 +87,7 @@ const Home = ({ homeData }) => {
       </Head>
       <Carousel
         responsive={responsive}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
         ssr={true}
         infinite={true}
         autoPlay={true}
@@ -186,6 +187,14 @@ export const getStaticProps = async () => {
         image {
           url
         }
+      }
+      recents(orderBy: createdAt_ASC) {
+        videoThumbnail {
+          url
+        }
+        videoId
+        title
+        id
       }
     }
   `;
