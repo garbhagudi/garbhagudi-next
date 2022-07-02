@@ -10,6 +10,12 @@ const data = [
     desc: "The growth of ART clinics in India is among the highest in the world, and to regulate the rise in medical tourism, the government has passed ART & surrogacy bills recently. This is primarily to prohibit the practice of surrogacy in India by foreigners and to forbid commercial practices. In addition, a couple of other amendments are also mandated. Read this blog to know more about the latest ART & surrogacy bills!",
     link: "/blogs/all-about-the-latest-art-and-surrogacy-bill",
   },
+  {
+    id: 2,
+    title: "World IVF Day Offer",
+    desc: "This July, we are celebrating World IVF Day, and you may save up to 20% on IVF Day special packages, which are available throughout the month. For further information, please contact our GG-CARE team. T&C Apply",
+    link: "/contact.html",
+  },
 ];
 
 const responsive = {
