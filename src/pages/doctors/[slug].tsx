@@ -503,71 +503,69 @@ const Doctor = ({ doctor }) => {
                                       </td>
                                     </tr>
                                   )}
-                                {doctor.marathahalliOnline ||
-                                  (doctor.marathahalliPhysical && (
-                                    <tr>
-                                      <td className="p-2 whitespace-nowrap">
-                                        <div className="flex items-center">
-                                          <div className="font-medium text-gray-800 flex items-center justify-center">
-                                            <div className="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3 ">
-                                              <img
-                                                className="rounded-sm"
-                                                src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/Marathahalli_p99ljc.svg"
-                                                width="40"
-                                                height="40"
-                                                alt="Alex Shatov"
-                                              />
-                                            </div>
-                                            <Link
-                                              href="/locations/south-end-circle"
-                                              passHref
-                                            >
-                                              <span className="cursor-pointer">
-                                                Marathahalli
-                                              </span>
-                                            </Link>
+                                {(doctor.marathahalliOnline ||
+                                  doctor.marathahalliPhysical) && (
+                                  <tr>
+                                    <td className="p-2 whitespace-nowrap">
+                                      <div className="flex items-center">
+                                        <div className="font-medium text-gray-800 flex items-center justify-center">
+                                          <div className="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3 ">
+                                            <img
+                                              className="rounded-sm"
+                                              src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/Marathahalli_p99ljc.svg"
+                                              width="40"
+                                              height="40"
+                                              alt="Alex Shatov"
+                                            />
                                           </div>
+                                          <Link
+                                            href="/locations/south-end-circle"
+                                            passHref
+                                          >
+                                            <span className="cursor-pointer">
+                                              Marathahalli
+                                            </span>
+                                          </Link>
                                         </div>
-                                      </td>
+                                      </div>
+                                    </td>
 
+                                    {doctor?.marathahalliPhysical && (
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-left font-medium text-brandPink2">
-                                          {doctor.marathahalliPhysical && (
-                                            <button>
-                                              <a
-                                                href={
-                                                  doctor.marathahalliPhysical
-                                                }
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                hrefLang="en-us"
-                                                className="text-left font-medium text-brandPink2 hover:underline"
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          )}
+                                          <button>
+                                            <a
+                                              href={doctor.marathahalliPhysical}
+                                              target="_blank"
+                                              rel="noreferrer"
+                                              hrefLang="en-us"
+                                              className="text-left font-medium text-brandPink2 hover:underline"
+                                            >
+                                              Book Now
+                                            </a>
+                                          </button>
                                         </div>
                                       </td>
+                                    )}
+                                    {doctor?.marathahalliOnline && (
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="text-left">
-                                          {doctor.marathahalliOnline && (
-                                            <button>
-                                              <a
-                                                href={doctor.marathahalliOnline}
-                                                className="text-left font-medium text-brandPink2 hover:underline"
-                                                target="_blank"
-                                                hrefLang="en-us"
-                                                rel="noreferrer"
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          )}
+                                          <button>
+                                            <a
+                                              href={doctor.marathahalliOnline}
+                                              className="text-left font-medium text-brandPink2 hover:underline"
+                                              target="_blank"
+                                              hrefLang="en-us"
+                                              rel="noreferrer"
+                                            >
+                                              Book Now
+                                            </a>
+                                          </button>
                                         </div>
                                       </td>
-                                    </tr>
-                                  ))}
+                                    )}
+                                  </tr>
+                                )}
                               </tbody>
                             </table>
                           </div>
