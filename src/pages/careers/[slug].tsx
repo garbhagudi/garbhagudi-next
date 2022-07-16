@@ -6,6 +6,7 @@ import Share from "components/share";
 import graphcms from "lib/graphcms";
 import { useRouter } from "next/router";
 import Loading from "components/Loading";
+import Link from "next/link";
 
 export const getStaticProps = async ({ params }) => {
   const { career } = await graphcms.request(
@@ -121,21 +122,19 @@ const Career = ({ career }) => {
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-8 mx-auto flex flex-col">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center text-4xl font-heading pt-12 font-semibold">
-              Careers at GarbhaGudi
-            </div>
-            <p className="max-w-7xl mx-auto py-2 mt-4 font-content text-lg">
-              At GarbhaGudi, we’re all on a mission to transform the way
-              infertility is treated, one patient at a time.{" "}
-            </p>
-            <div className="max-w-7xl mx-auto mt-2 font-content text-lg">
-              We go against the status quo and make actual transformation in
-              patients’ lives. All our employees are empowered to do the best
-              work of their lives by making daily impact and growing quickly.
-            </div>
-            <div className="max-w-7xl mx-auto mt-2 font-content text-lg">
-              If you feel that you need an organization where you can do your
-              best work, apply now!
+            <div>
+              <h1 className="text-center text-2xl sm:text-4xl font-heading font-bold py-6">
+                GarbhaGudi – Certified Healthy Workplace
+              </h1>
+              <Link href="/about/awards-and-accolades/garbhagudi-certified-healthy-workplace">
+                <a>
+                  <img
+                    src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1657979955/Banner/Argoya_Silver_Award_Web_Bnr-min_bx7xeo.webp"
+                    alt="arogya world banner"
+                    className="rounded-xl"
+                  />
+                </a>
+              </Link>
             </div>
             <div className="flex flex-col sm:flex-row mt-10">
               <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
