@@ -58,10 +58,24 @@ const IndexPage = ({ careers }) => {
         text4={""}
       />
       <div className="max-w-7xl mx-auto">
-        <div className="text-center text-4xl font-heading pt-12 font-semibold">
-          Careers at GarbhaGudi
+        <div>
+          <h1 className="text-center text-2xl sm:text-4xl font-heading font-bold py-6">
+            GarbhaGudi – Certified Healthy Workplace
+          </h1>
+          <Link href="/about/awards-and-accolades/garbhagudi-certified-healthy-workplace">
+            <a>
+              <img
+                src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1657979955/Banner/Argoya_Silver_Award_Web_Bnr-min_bx7xeo.webp"
+                alt="arogya world banner"
+                className="rounded-xl"
+              />
+            </a>
+          </Link>
         </div>
         <div className="px-2">
+          <div className="text-center text-2xl sm:text-4xl mb-4 font-heading pt-12 font-semibold">
+            Careers at GarbhaGudi
+          </div>
           <p className="max-w-7xl mx-auto py-2 mt-4 font-content text-lg">
             At GarbhaGudi, we’re all on a mission to transform the way
             infertility is treated, one patient at a time.{" "}
