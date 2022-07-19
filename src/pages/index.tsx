@@ -103,7 +103,7 @@ const Home = ({ homeData }) => {
       </Carousel>
       <HomeComponent />
       <div className="bg-white" id="ourTeam">
-        <div className="max-w-7xl mx-auto py-16 px-4 text-center sm:px-6 lg:px-8 lg:py-12">
+        <div className="px-4 py-16 mx-auto text-center max-w-7xl sm:px-6 lg:px-8 lg:py-12">
           <div className="space-y-12">
             <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-brandDark font-heading">
@@ -115,30 +115,30 @@ const Home = ({ homeData }) => {
                 their success in treating the most challenging fertility cases.
               </p>
             </div>
-            <ul className="mx-auto space-y-0 grid grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl">
+            <ul className="grid grid-cols-2 mx-auto space-y-0 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl">
               {homeData?.doctors.map((item) => {
                 return (
                   <li
                     key={item?.id}
-                    className="transition-all duration-500 hover:shadow-2xl rounded-xl mb-2 "
+                    className="mb-2 transition-all duration-500 hover:shadow-2xl rounded-xl "
                   >
                     <Link href={`/doctors/${item?.slug}`} passHref>
                       <a>
                         <div className="space-y-4">
                           <img
-                            className="mx-auto h-32 w-32 my-auto rounded-full xl:w-44 xl:h-44 mt-4"
+                            className="w-32 h-32 mx-auto my-auto mt-4 rounded-full xl:w-44 xl:h-44"
                             src={item?.image?.url}
                             alt={item?.name}
                           />
                           <div className="space-y-4">
-                            <div className="text-lg leading-6 font-medium space-y-1">
+                            <div className="space-y-1 text-lg font-medium leading-6">
                               <h3 className="text-brandDark font-content">
                                 {item?.name}
                               </h3>
-                              <p className="text-brandPurpleDark text-sm font-content">
+                              <p className="text-sm text-brandPurpleDark font-content">
                                 {item?.qualification}
                               </p>
-                              <p className="text-brandPink text-sm font-content pb-2">
+                              <p className="pb-2 text-sm text-brandPink font-content">
                                 {item?.designation}
                               </p>
                             </div>
@@ -187,14 +187,6 @@ export const getStaticProps = async () => {
         image {
           url
         }
-      }
-      recents(orderBy: createdAt_ASC) {
-        videoThumbnail {
-          url
-        }
-        videoId
-        title
-        id
       }
     }
   `;
