@@ -206,11 +206,11 @@ const aboutUs = [
     href: "/locations/fertility-experts",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839012/Icons/About/Our_Fertility_Experts_bxsrrh.svg",
   },
-  // {
-  //   name: "Media",
-  //   href: "/locations/media",
-  //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643442839/Icons/About/Media_nyook4.svg",
-  // },
+  {
+    name: "Media",
+    href: "/media",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643442839/Icons/About/Media_nyook4.svg",
+  },
   {
     name: "CSR",
     href: "https://garbhagnan.org",
@@ -246,9 +246,9 @@ export function About() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-screen max-w-md px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
-              <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-5 grid-cols-2 lg:grid-cols-2">
+            <Popover.Panel className="absolute z-10 w-screen max-w-md px-4 transform -translate-x-1/2 mt-7 left-1/2 sm:px-0 lg:max-w-xl">
+              <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
+                <div className="relative grid grid-cols-2 gap-8 p-5 bg-white lg:grid-cols-2">
                   {aboutUs.map((item) => (
                     <Link key={item.name} href={item.href}>
                       <a
@@ -300,9 +300,9 @@ export function Treatment() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-screen max-w-md px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
-              <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-5 grid-cols-2 lg:grid-cols-3">
+            <Popover.Panel className="absolute z-10 w-screen max-w-md px-4 transform -translate-x-1/2 mt-7 left-1/2 sm:px-0 lg:max-w-3xl">
+              <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
+                <div className="relative grid grid-cols-2 gap-8 p-5 bg-white lg:grid-cols-3">
                   {valueAddedServices.map((item) => (
                     <Link key={item.name} href={item.href} passHref>
                       <a
@@ -353,9 +353,9 @@ export function KnowledgeCenter() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-screen max-w-xl px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
-              <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-5 grid-cols-2">
+            <Popover.Panel className="absolute z-10 w-screen max-w-xl px-4 transform -translate-x-1/2 mt-7 left-1/2 sm:px-0 lg:max-w-xl">
+              <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
+                <div className="relative grid grid-cols-2 gap-8 p-5 bg-white">
                   {Resources.map((item) => (
                     <Link key={item.name} href={item.href} passHref>
                       <a
@@ -409,9 +409,9 @@ export function Contact() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-96 px-4 mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
-              <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-1">
+            <Popover.Panel className="absolute z-10 px-4 transform -translate-x-1/2 w-96 mt-7 left-1/2 sm:px-0 lg:max-w-xl">
+              <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
+                <div className="relative grid gap-8 p-5 bg-white lg:grid-cols-1">
                   {contact.map((item) => (
                     <Link key={item.name} href={item.href} passHref>
                       <a
@@ -462,9 +462,9 @@ export function Locations() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-96 px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
-              <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-1">
+            <Popover.Panel className="absolute z-10 px-4 mt-3 transform -translate-x-1/2 w-96 left-1/2 sm:px-0 lg:max-w-xl">
+              <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
+                <div className="relative grid gap-8 p-5 bg-white lg:grid-cols-1">
                   {Location.map((item) => (
                     <Link key={item.name} href={item.href}>
                       <a
@@ -516,8 +516,8 @@ export function Language() {
             leaveTo="opacity-0 translate-y-1"
           >
             <Popover.Panel className="absolute z-10 w-32 px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
-              <div className="overflow-hidden rounded-xl shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 bg-white p-5 lg:grid-cols-1">
+              <div className="overflow-hidden shadow-lg rounded-xl ring-1 ring-black ring-opacity-5">
+                <div className="relative grid gap-8 p-5 bg-white lg:grid-cols-1">
                   {language.map((item) => (
                     <a
                       key={item.name}

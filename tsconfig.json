@@ -24,7 +24,10 @@
     "**/*.ts",
     "**/*.tsx",
     "src/components/SalesIQ.js",
-    "src/pages/tools/ovulation-calculator/index..jsx"
+    "src/pages/tools/ovulation-calculator/index..jsx",
+    "src/sections/media/videoplayer.jsx",
+    "src/sections/media/containers/Player.jsx",
+    "worker/index.js"
   ],
   "exclude": ["node_modules"]
 }

@@ -120,10 +120,10 @@ const Career = ({ career }) => {
         text4={""}
       />
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-8 mx-auto flex flex-col">
-          <div className="max-w-7xl mx-auto">
+        <div className="container flex flex-col px-5 py-8 mx-auto">
+          <div className="mx-auto max-w-7xl">
             <div>
-              <h1 className="text-center text-2xl sm:text-4xl font-heading font-bold py-6">
+              <h1 className="py-6 text-2xl font-bold text-center sm:text-4xl font-heading">
                 GarbhaGudi – Certified Healthy Workplace
               </h1>
               <Link href="/about/awards-and-accolades/garbhagudi-certified-healthy-workplace">
@@ -136,43 +136,43 @@ const Career = ({ career }) => {
                 </a>
               </Link>
             </div>
-            <div className="flex flex-col sm:flex-row mt-10">
-              <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                <div className="w-44 h-44 lg:w-48 lg:h-48 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400 border-2 border-brandPink3">
+            <div className="flex flex-col mt-10 sm:flex-row">
+              <div className="text-center sm:w-1/3 sm:pr-8 sm:py-8">
+                <div className="inline-flex items-center justify-center text-gray-400 bg-gray-200 border-2 rounded-full w-44 h-44 lg:w-48 lg:h-48 border-brandPink3">
                   <img
                     src={career.image.url}
                     alt={career.position}
                     className="rounded-full"
                   />
                 </div>
-                <div className="flex flex-col items-center text-center justify-center">
-                  <h2 className="title-font mt-4 text-gray-900 text-2xl font-semibold font-heading">
+                <div className="flex flex-col items-center justify-center text-center">
+                  <h2 className="mt-4 text-2xl font-semibold text-gray-900 title-font font-heading">
                     {career.position}
                   </h2>
-                  <div className="w-12 h-1 bg-brandPink rounded mt-2 mb-4 "></div>
-                  <p className="text-base font-qs font-semibold">
+                  <div className="w-12 h-1 mt-2 mb-4 rounded bg-brandPink "></div>
+                  <p className="text-base font-semibold font-qs">
                     Qualification: {career.qualification}
                   </p>
-                  <p className="text-base font-qs font-semibold">
+                  <p className="text-base font-semibold font-qs">
                     Experience: {career.experience}
                   </p>
-                  <p className="text-base font-qs font-semibold">
+                  <p className="text-base font-semibold font-qs">
                     Location: {career.location}
                   </p>
-                  <button className="mt-4 py-2 px-4 rounded-3xl text-white font-qs font-semibold bg-brandPink">
+                  <button className="px-4 py-2 mt-4 font-semibold text-white rounded-3xl font-qs bg-brandPink">
                     <a href={career.link} target="_blank" rel="noreferrer">
                       Apply Now
                     </a>
                   </button>
                 </div>
               </div>
-              <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 sm:text-left ">
-                <p className="font-content text-xl mb-4">Description</p>
+              <div className="pt-4 mt-4 border-t border-gray-200 sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l sm:border-t-0 sm:mt-0 sm:text-left ">
+                <p className="mb-4 text-xl font-content">Description</p>
                 <p className="text-base font-qs">{career.description}</p>
-                <p className="font-content text-xl mt-8">
+                <p className="mt-8 text-xl font-content">
                   Job Responsibilities
                 </p>
-                <p className="leading-relaxed text-md mb-4 text-brandDark font-qs">
+                <p className="mb-4 leading-relaxed text-md text-brandDark font-qs">
                   <RichText content={career.jobDescription.raw.children} />
                 </p>
               </div>
