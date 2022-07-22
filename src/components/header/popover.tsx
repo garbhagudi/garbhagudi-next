@@ -69,16 +69,16 @@ const Resources = [
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839802/Icons/Resources/Treatments_kcqops.svg",
   },
   {
-    name: "Fertility Quotient Calculator",
-    description: "Calculate your Fertility Quotient",
-    href: "/tools/fertility-quotient-calculator",
+    name: "Tools",
+    description: "Ovulation & Fertility Quotient Calculators",
+    href: "/resources/tools",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1654849032/Icons/Resources/Calculator_bxkdl9.svg",
   },
   {
-    name: "Ovulation Calculator",
-    description: "Know your next menstrual cycle and fertile window",
-    href: "/tools/ovulation-calculator",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1654849032/Icons/Resources/Calendar_tvq9bm.svg",
+    name: "Video Resources",
+    description: "Informational video from our social platforms",
+    href: "/resources/media",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643442839/Icons/About/Media_nyook4.svg",
   },
   {
     name: "FAQ",
@@ -206,11 +206,11 @@ const aboutUs = [
     href: "/locations/fertility-experts",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839012/Icons/About/Our_Fertility_Experts_bxsrrh.svg",
   },
-  {
-    name: "Media",
-    href: "/media",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643442839/Icons/About/Media_nyook4.svg",
-  },
+  // {
+  //   name: "Media",
+  //   href: "/media",
+  //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643442839/Icons/About/Media_nyook4.svg",
+  // },
   {
     name: "CSR",
     href: "https://garbhagnan.org",
