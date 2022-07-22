@@ -77,7 +77,7 @@ const Resources = [
   {
     name: "Video Resources",
     description: "Informational video from our social platforms",
-    href: "/resources/media",
+    href: "/resources/video-resources",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643442839/Icons/About/Media_nyook4.svg",
   },
   {
