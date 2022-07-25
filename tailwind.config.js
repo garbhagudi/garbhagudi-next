@@ -409,6 +409,7 @@ module.exports = {
       content: "Nunito",
       benne: "Benne",
       dm: "DM Sans",
+      kan: "'Noto Sans Kannada'",
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],
