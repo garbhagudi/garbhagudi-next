@@ -409,6 +409,7 @@ module.exports = {
       content: "Nunito",
       benne: "Benne",
       dm: "DM Sans",
+      kan: "'Noto Sans Kannada'",
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],
@@ -986,5 +987,8 @@ module.exports = {
     "active",
     "disabled",
   ],
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/forms"), require("tailwind-scrollbar")],
+  variants: {
+    scrollbar: ["rounded"],
+  },
 };
