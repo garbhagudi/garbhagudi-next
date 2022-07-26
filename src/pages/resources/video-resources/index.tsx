@@ -3,6 +3,7 @@ import { Tab } from "@headlessui/react";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import Head from "next/head";
+import Link from "next/link";
 
 const YOUTUBE_PLAYLIST_ITEMS_API =
   "https://www.googleapis.com/youtube/v3/playlistItems";
@@ -20,14 +21,20 @@ export async function getServerSideProps() {
     `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
+  const res4 = await fetch(
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+  );
+
   const data = await res.json();
   const data2 = await res2.json();
   const data3 = await res3.json();
+  const data4 = await res4.json();
   return {
     props: {
       data,
       data2,
       data3,
+      data4,
     },
   };
 }
@@ -36,10 +43,11 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const IndexPage = ({ data, data2, data3 }) => {
+const IndexPage = ({ data, data2, data3, data4 }) => {
   let [url, setUrl] = useState(data?.items[0].snippet.resourceId.videoId);
   let [url2, setUrl2] = useState(data2?.items[0].snippet.resourceId.videoId);
   let [url3, setUrl3] = useState(data3?.items[0].snippet.resourceId.videoId);
+  let [url4, setUrl4] = useState(data4?.items[0].snippet.resourceId.videoId);
 
   const renderLoadButton = (image, url, label, by) => {
     return (
@@ -122,6 +130,33 @@ const IndexPage = ({ data, data2, data3 }) => {
     );
   };
 
+  const renderLoadButton4 = (image, url4, label, by) => {
+    return (
+      <div className="grid w-full grid-cols-4">
+        <img
+          src={image}
+          alt={label}
+          className="w-48 col-span-1 rounded-lg sm:w-32 xl:w-48"
+        />
+        <div className="col-span-3">
+          <div className="flex flex-col items-start justify-center">
+            <div
+              onClick={() => {
+                setUrl4(url4);
+              }}
+              className="ml-4 text-sm font-semibold text-left cursor-pointer"
+            >
+              {label}
+            </div>
+            <div className="mt-2 ml-4 text-xs italic font-bold underline font-heading">
+              {by}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <>
       <Head>
@@ -174,7 +209,7 @@ const IndexPage = ({ data, data2, data3 }) => {
           </h1>
         </div>
         <Tab.Group>
-          <Tab.List className="grid grid-cols-1 mx-auto rounded-lg md:grid-cols-3 bg-brandPink4 max-w-7xl">
+          <Tab.List className="grid grid-cols-2 mx-auto rounded-lg md:grid-cols-2 lg:grid-cols-4 bg-brandPink4 max-w-7xl">
             <Tab
               className={({ selected }) =>
                 classNames(
@@ -215,6 +250,19 @@ const IndexPage = ({ data, data2, data3 }) => {
             >
               TV Appearances
             </Tab>
+            <Tab
+              className={({ selected }) =>
+                classNames(
+                  "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-brandPink",
+                  "focus:outline-none",
+                  selected
+                    ? "bg-white shadow focus:ring-2 focus:ring-brandPink"
+                    : "text-pink-100 hover:bg-white/[0.12] hover:text-white"
+                )
+              }
+            >
+              Testimonials
+            </Tab>
           </Tab.List>
           <Tab.Panels className={"px-3 lg:px-4 xl:px-10"}>
             <Tab.Panel>
@@ -227,22 +275,33 @@ const IndexPage = ({ data, data2, data3 }) => {
                       poster="maxresdefault"
                     />
                   </div>
-                  {data?.items?.map((item) => {
-                    const { id, snippet = {} } = item;
-                    const { title } = snippet;
-                    return (
-                      url === snippet.resourceId.videoId && (
-                        <div key={id}>
-                          <div className="mt-2 ml-1 text-xl font-bold font-heading">
-                            {title}
-                          </div>
-                          <div className="mt-2 ml-1 font-semibold font-content">
-                            {snippet.channelTitle}
-                          </div>
-                        </div>
-                      )
-                    );
-                  })}
+                  <div className="flex flex-col items-start justify-start md:items-center md:flex-row md:justify-between">
+                    <div>
+                      {data?.items?.map((item) => {
+                        const { id, snippet = {} } = item;
+                        const { title } = snippet;
+                        return (
+                          url === snippet.resourceId.videoId && (
+                            <div key={id}>
+                              <div className="mt-2 ml-1 text-xl font-bold font-heading">
+                                {title}
+                              </div>
+                              <div className="mt-2 ml-1 font-semibold font-content">
+                                {snippet.channelTitle}
+                              </div>
+                            </div>
+                          )
+                        );
+                      })}
+                    </div>
+                    <div className="mt-4 md:mt-0">
+                      <Link href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1">
+                        <a className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
+                          Subscribe
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
                 </section>
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
@@ -283,22 +342,33 @@ const IndexPage = ({ data, data2, data3 }) => {
                       poster="maxresdefault"
                     />
                   </div>
-                  {data2?.items.map((item) => {
-                    const { id, snippet = {} } = item;
-                    const { title } = snippet;
-                    return (
-                      url2 === snippet.resourceId.videoId && (
-                        <div key={id}>
-                          <div className="mt-2 ml-1 text-xl font-bold font-heading">
-                            {title}
-                          </div>
-                          <div className="mt-2 ml-1 font-semibold font-content">
-                            {snippet.channelTitle}
-                          </div>
-                        </div>
-                      )
-                    );
-                  })}
+                  <div className="flex flex-col items-start justify-start md:items-center md:flex-row md:justify-between">
+                    <div>
+                      {data2?.items?.map((item) => {
+                        const { id, snippet = {} } = item;
+                        const { title } = snippet;
+                        return (
+                          url2 === snippet.resourceId.videoId && (
+                            <div key={id}>
+                              <div className="mt-2 ml-1 text-xl font-bold font-heading">
+                                {title}
+                              </div>
+                              <div className="mt-2 ml-1 font-semibold font-content">
+                                {snippet.channelTitle}
+                              </div>
+                            </div>
+                          )
+                        );
+                      })}
+                    </div>
+                    <div className="mt-4 md:mt-0">
+                      <Link href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1">
+                        <a className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
+                          Subscribe
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
                 </section>
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
@@ -336,25 +406,36 @@ const IndexPage = ({ data, data2, data3 }) => {
                     <LiteYouTubeEmbed
                       id={url3}
                       title="Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay"
-                      poster="maxresdefault"
+                      poster={"maxresdefault"}
                     />
                   </div>
-                  {data3?.items.map((item) => {
-                    const { id, snippet = {} } = item;
-                    const { title } = snippet;
-                    return (
-                      url3 === snippet.resourceId.videoId && (
-                        <div key={id}>
-                          <div className="mt-3 ml-1 text-2xl font-bold font-kan">
-                            {title}
-                          </div>
-                          <div className="mt-2 ml-1 font-semibold font-content">
-                            {snippet.channelTitle}
-                          </div>
-                        </div>
-                      )
-                    );
-                  })}
+                  <div className="flex flex-col items-start justify-start md:items-center md:flex-row md:justify-between">
+                    <div>
+                      {data3?.items?.map((item) => {
+                        const { id, snippet = {} } = item;
+                        const { title } = snippet;
+                        return (
+                          url3 === snippet.resourceId.videoId && (
+                            <div key={id}>
+                              <div className="mt-2 ml-1 text-xl font-bold font-kan">
+                                {title}
+                              </div>
+                              <div className="mt-2 ml-1 font-semibold font-conten">
+                                {snippet.channelTitle}
+                              </div>
+                            </div>
+                          )
+                        );
+                      })}
+                    </div>
+                    <div className="mt-4 md:mt-0">
+                      <Link href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1">
+                        <a className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
+                          Subscribe
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
                 </section>
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
@@ -372,6 +453,73 @@ const IndexPage = ({ data, data2, data3 }) => {
                             key={id}
                           >
                             {renderLoadButton3(
+                              medium.url,
+                              snippet.resourceId.videoId,
+                              title,
+                              snippet.channelTitle
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </Tab.Panel>
+            <Tab.Panel>
+              <div className="grid grid-cols-1 mx-auto lg:grid-cols-5">
+                <section className="col-span-5 lg:col-span-3">
+                  <div className="mt-8 overflow-hidden border-2 rounded-xl border-brandPink">
+                    <LiteYouTubeEmbed
+                      id={url4}
+                      title="Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay"
+                      poster={"maxresdefault"}
+                    />
+                  </div>
+                  <div className="flex flex-col items-start justify-start md:items-center md:flex-row md:justify-between">
+                    <div>
+                      {data4?.items?.map((item) => {
+                        const { id, snippet = {} } = item;
+                        const { title } = snippet;
+                        return (
+                          url4 === snippet.resourceId.videoId && (
+                            <div key={id}>
+                              <div className="mt-2 ml-1 text-xl font-bold font-kan">
+                                {title}
+                              </div>
+                              <div className="mt-2 ml-1 font-semibold font-conten">
+                                {snippet.channelTitle}
+                              </div>
+                            </div>
+                          )
+                        );
+                      })}
+                    </div>
+                    <div className="mt-4 md:mt-0">
+                      <Link href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1">
+                        <a className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
+                          Subscribe
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                </section>
+                <div className="md:ml-10 lg:col-span-2">
+                  <section className="flex items-center justify-center mt-8 ">
+                    <div className="flex flex-col mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-gray-600 lg:max-h-[38rem]">
+                      <div className="px-3 py-4 font-bold text-center text-md font-heading">
+                        GarbhaSandesha
+                      </div>
+                      {data4?.items.map((item) => {
+                        const { id, snippet = {} } = item;
+                        const { title, thumbnails } = snippet;
+                        const { medium = {} } = thumbnails;
+                        return (
+                          <div
+                            className="max-w-md md:max-w-lg xl:max-w-xl "
+                            key={id}
+                          >
+                            {renderLoadButton4(
                               medium.url,
                               snippet.resourceId.videoId,
                               title,
