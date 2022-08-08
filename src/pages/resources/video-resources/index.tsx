@@ -9,32 +9,32 @@ const YOUTUBE_PLAYLIST_ITEMS_API =
   "https://www.googleapis.com/youtube/v3/playlistItems";
 
 export async function getServerSideProps() {
-  const res = await fetch(
+  const recommendedData = await fetch(
     `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
-  const res3 = await fetch(
+  const tvAppearanceData = await fetch(
     `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
-  const res2 = await fetch(
+  const garbhasandeshaData = await fetch(
     `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
-  const res4 = await fetch(
+  const testimonialData = await fetch(
     `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
-  const data = await res.json();
-  const data2 = await res2.json();
-  const data3 = await res3.json();
-  const data4 = await res4.json();
+  const recommended = await recommendedData.json();
+  const garbhasandesha = await garbhasandeshaData.json();
+  const tvAppearance = await tvAppearanceData.json();
+  const testimonials = await testimonialData.json();
   return {
     props: {
-      data,
-      data2,
-      data3,
-      data4,
+      recommended,
+      garbhasandesha,
+      tvAppearance,
+      testimonials,
     },
   };
 }
@@ -43,13 +43,26 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const IndexPage = ({ data, data2, data3, data4 }) => {
-  let [url, setUrl] = useState(data?.items[0].snippet.resourceId.videoId);
-  let [url2, setUrl2] = useState(data2?.items[0].snippet.resourceId.videoId);
-  let [url3, setUrl3] = useState(data3?.items[0].snippet.resourceId.videoId);
-  let [url4, setUrl4] = useState(data4?.items[0].snippet.resourceId.videoId);
+const IndexPage = ({
+  recommended,
+  garbhasandesha,
+  tvAppearance,
+  testimonials,
+}) => {
+  let [url, setUrl] = useState(
+    recommended?.items[0].snippet.resourceId.videoId
+  );
+  let [url2, setUrl2] = useState(
+    garbhasandesha?.items[0].snippet.resourceId.videoId
+  );
+  let [url3, setUrl3] = useState(
+    tvAppearance?.items[0].snippet.resourceId.videoId
+  );
+  let [url4, setUrl4] = useState(
+    testimonials?.items[0].snippet.resourceId.videoId
+  );
 
-  const renderLoadButton = (image, url, label, by) => {
+  const renderRecommended = (image, url, label, by) => {
     return (
       <div className="grid w-full grid-cols-4">
         <img
@@ -58,7 +71,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
           className="w-48 col-span-1 rounded-lg sm:w-32 xl:w-48"
         />
         <div className="col-span-3">
-          <div className="flex flex-col items-start justify-center">
+          <div className="flex flex-col items-start justify-">
             <div
               onClick={() => {
                 setUrl(url);
@@ -76,7 +89,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
     );
   };
 
-  const renderLoadButton2 = (image, url2, label, by) => {
+  const renderGarbhaSandesha = (image, url2, label, by) => {
     return (
       <div className="grid w-full grid-cols-4">
         <img
@@ -103,7 +116,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
     );
   };
 
-  const renderLoadButton3 = (image, url3, label, by) => {
+  const renderTvAppreances = (image, url3, label, by) => {
     return (
       <div className="grid w-full grid-cols-4">
         <img
@@ -130,7 +143,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
     );
   };
 
-  const renderLoadButton4 = (image, url4, label, by) => {
+  const renderTestimonials = (image, url4, label, by) => {
     return (
       <div className="grid w-full grid-cols-4">
         <img
@@ -277,7 +290,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
                   </div>
                   <div className="flex flex-col items-start justify-start md:items-center md:flex-row md:justify-between">
                     <div>
-                      {data?.items?.map((item) => {
+                      {recommended?.items?.map((item) => {
                         const { id, snippet = {} } = item;
                         const { title } = snippet;
                         return (
@@ -286,7 +299,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
                               <div className="mt-2 ml-1 text-xl font-bold font-heading">
                                 {title}
                               </div>
-                              <div className="mt-2 ml-1 font-semibold font-content">
+                              <div className="mt-2 ml-1 text-sm font-bold font-content">
                                 {snippet.channelTitle}
                               </div>
                             </div>
@@ -309,7 +322,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
                       <div className="px-3 py-4 font-bold text-center text-md font-heading">
                         Recommended
                       </div>
-                      {data?.items.map((item) => {
+                      {recommended?.items.map((item) => {
                         const { id, snippet = {} } = item;
                         const { title, thumbnails } = snippet;
                         const { medium = {} } = thumbnails;
@@ -318,7 +331,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
                             className="max-w-md md:max-w-lg xl:max-w-xl"
                             key={id}
                           >
-                            {renderLoadButton(
+                            {renderRecommended(
                               medium.url,
                               snippet.resourceId.videoId,
                               title,
@@ -344,7 +357,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
                   </div>
                   <div className="flex flex-col items-start justify-start md:items-center md:flex-row md:justify-between">
                     <div>
-                      {data2?.items?.map((item) => {
+                      {garbhasandesha?.items?.map((item) => {
                         const { id, snippet = {} } = item;
                         const { title } = snippet;
                         return (
@@ -376,7 +389,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
                       <div className="px-3 py-4 font-bold text-center text-md font-heading">
                         GarbhaSandesha
                       </div>
-                      {data2.items.map((item) => {
+                      {garbhasandesha.items.map((item) => {
                         const { id, snippet = {} } = item;
                         const { title, thumbnails } = snippet;
                         const { medium = {} } = thumbnails;
@@ -385,7 +398,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
                             className="max-w-md md:max-w-lg xl:max-w-xl"
                             key={id}
                           >
-                            {renderLoadButton2(
+                            {renderGarbhaSandesha(
                               medium.url,
                               snippet.resourceId.videoId,
                               title,
@@ -411,7 +424,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
                   </div>
                   <div className="flex flex-col items-start justify-start md:items-center md:flex-row md:justify-between">
                     <div>
-                      {data3?.items?.map((item) => {
+                      {tvAppearance?.items?.map((item) => {
                         const { id, snippet = {} } = item;
                         const { title } = snippet;
                         return (
@@ -441,9 +454,9 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
                   <section className="flex items-center justify-center mt-8 ">
                     <div className="flex flex-col mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-gray-600 lg:max-h-[38rem]">
                       <div className="px-3 py-4 font-bold text-center text-md font-heading">
-                        GarbhaSandesha
+                        TV Appearances
                       </div>
-                      {data3?.items.map((item) => {
+                      {tvAppearance?.items.map((item) => {
                         const { id, snippet = {} } = item;
                         const { title, thumbnails } = snippet;
                         const { medium = {} } = thumbnails;
@@ -452,7 +465,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
                             className="max-w-md md:max-w-lg xl:max-w-xl "
                             key={id}
                           >
-                            {renderLoadButton3(
+                            {renderTvAppreances(
                               medium.url,
                               snippet.resourceId.videoId,
                               title,
@@ -478,7 +491,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
                   </div>
                   <div className="flex flex-col items-start justify-start md:items-center md:flex-row md:justify-between">
                     <div>
-                      {data4?.items?.map((item) => {
+                      {testimonials?.items?.map((item) => {
                         const { id, snippet = {} } = item;
                         const { title } = snippet;
                         return (
@@ -508,9 +521,9 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
                   <section className="flex items-center justify-center mt-8 ">
                     <div className="flex flex-col mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-gray-600 lg:max-h-[38rem]">
                       <div className="px-3 py-4 font-bold text-center text-md font-heading">
-                        GarbhaSandesha
+                        Testimonials
                       </div>
-                      {data4?.items.map((item) => {
+                      {testimonials?.items.map((item) => {
                         const { id, snippet = {} } = item;
                         const { title, thumbnails } = snippet;
                         const { medium = {} } = thumbnails;
@@ -519,7 +532,7 @@ const IndexPage = ({ data, data2, data3, data4 }) => {
                             className="max-w-md md:max-w-lg xl:max-w-xl "
                             key={id}
                           >
-                            {renderLoadButton4(
+                            {renderTestimonials(
                               medium.url,
                               snippet.resourceId.videoId,
                               title,
