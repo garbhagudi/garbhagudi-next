@@ -7,14 +7,26 @@ const data = [
   {
     id: 1,
     title: "All about the latest ART & Surrogacy Bill!",
-    desc: "The growth of ART clinics in India is among the highest in the world, and to regulate the rise in medical tourism, the government has passed ART & surrogacy bills recently. This is primarily to prohibit the practice of surrogacy in India by foreigners and to forbid commercial practices. In addition, a couple of other amendments are also mandated. Read this blog to know more about the latest ART & surrogacy bills!",
+    desc: "The growth of ART clinics in India is among the highest in the world, and to regulate the rise in medical tourism, the government has passed ART & surrogacy bills recently. This is primarily to prohibit the practice of surrogacy in India by foreigners and to forbid commercial practices. In addition, a couple of other amendments are also mandated.",
     link: "/blogs/all-about-the-latest-art-and-surrogacy-bill",
   },
   {
     id: 2,
-    title: "World IVF Day Offer",
-    desc: "This July, we are celebrating World IVF Day, and you may save up to 20% on IVF Day special packages, which are available throughout the month. For further information, please contact our GG-CARE team. T&C Apply",
-    link: "/contact.html",
+    title: "Freedom From Infertility",
+    desc: (
+      <div>
+        This Independence Month, Garbhagudi is happy to announce IVF Packages
+        that fit all your individual needs. To know more, book a free
+        appointment or visit{" "}
+        <Link href={"/gg-care"}>
+          <a className="font-semibold text-blue-600 hover:text-brandPink hover:underline">
+            GG CARE
+          </a>
+        </Link>{" "}
+        and talk to one of our executives.
+      </div>
+    ),
+    link: "/gg-care",
   },
 ];
 
@@ -41,9 +53,9 @@ const News = () => {
   return (
     <div>
       <div className="hidden lg:block">
-        <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto gap-4 px-4 my-8 sm:px-0">
+        <div className="grid grid-cols-1 gap-4 px-4 mx-auto my-8 md:grid-cols-2 max-w-7xl sm:px-0">
           <div>
-            <p className="text-center text-lg font-heading font-semibold pb-4">
+            <p className="pb-4 text-lg font-semibold text-center font-heading">
               In The News
             </p>
             <Carousel
@@ -60,21 +72,25 @@ const News = () => {
               autoPlaySpeed={10000}
             >
               {data.map((item) => (
-                <Link href={item.link} key={item.id} passHref>
-                  <div className="flex flex-col p-6 bg-white rounded-lg border border-gray-200 text-center hover:bg-gray-100 h-64 items-center justify-center cursor-pointer">
-                    <h5 className="mb-2 text-lg font-heading font-bold tracking-tight text-gray-900 ">
-                      {item.title}
-                    </h5>
-                    <p className="text-sm font-content text-gray-700">
-                      {item.desc}
-                    </p>
+                <div
+                  key={item.id}
+                  className="flex flex-col items-center justify-center h-64 p-6 text-center bg-white border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-100"
+                >
+                  <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 font-heading ">
+                    {item.title}
+                  </h5>
+                  <p className="text-sm text-gray-700 font-content">
+                    {item.desc}
+                  </p>
+                  <div className="px-3 py-2 mt-8 font-semibold text-white border w-28 bg-brandPink rounded-xl">
+                    <Link href={item.link}>Know More</Link>
                   </div>
-                </Link>
+                </div>
               ))}
             </Carousel>
           </div>
           <div>
-            <p className="text-center font-heading text-lg font-semibold pb-4">
+            <p className="pb-4 text-lg font-semibold text-center font-heading">
               Myths and Facts
             </p>
             <Carousel
@@ -92,16 +108,16 @@ const News = () => {
             >
               {MythsData.map((item) => (
                 <div
-                  className="flex flex-col p-6 bg-white rounded-lg border border-gray-200  hover:bg-gray-100 h-64 items-center justify-center"
+                  className="flex flex-col items-center justify-center h-64 p-6 bg-white border border-gray-200 rounded-lg hover:bg-gray-100"
                   key={item.id}
                 >
-                  <h5 className="mb-2 text-lg text-left font-bold font-heading tracking-tight text-gray-900">
+                  <h5 className="mb-2 text-lg font-bold tracking-tight text-left text-gray-900 font-heading">
                     {item.myth}
                   </h5>
                   <p className="text-sm text-gray-700 font-content">
                     {item.fact}
                   </p>
-                  <div className="px-3 py-2 border bg-brandPink w-24 text-white font-semibold rounded-xl mt-8">
+                  <div className="w-24 px-3 py-2 mt-8 font-semibold text-white border bg-brandPink rounded-xl">
                     <Link href="/resources/myths-and-facts">See More</Link>
                   </div>
                 </div>
