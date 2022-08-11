@@ -3,12 +3,12 @@ import React from "react";
 const metrics = [
   {
     id: 1,
-    stat: "7000+",
+    stat: "8500+",
     emphasis: "Happy Families",
   },
   {
     id: 2,
-    stat: "111+",
+    stat: "150+",
     emphasis: "Free Fertility Awareness Camps",
   },
   {
@@ -25,12 +25,12 @@ const metrics = [
 
 const Stat = () => {
   return (
-    <div className="relative max-w-7xl mx-auto">
-      <div className="h-80 w-full absolute bottom-0 xl:inset-0 xl:h-full">
-        <div className="h-full w-full xl:grid xl:grid-cols-2">
+    <div className="relative mx-auto max-w-7xl">
+      <div className="absolute bottom-0 w-full h-80 xl:inset-0 xl:h-full">
+        <div className="w-full h-full xl:grid xl:grid-cols-2">
           <div className="h-full xl:relative xl:col-start-2">
             <img
-              className="h-full w-full object-cover opacity-70 xl:absolute xl:inset-0"
+              className="object-cover w-full h-full opacity-70 xl:absolute xl:inset-0"
               src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643272924/Home/Our_never_ending_s0dbde.webp"
               alt="People working on laptops"
             />
@@ -41,7 +41,7 @@ const Stat = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
+      <div className="max-w-4xl px-4 mx-auto sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
         <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
           <p className="mt-3 text-3xl font-extrabold text-brandDark font-heading">
             Our Ever-Growing Success
@@ -53,13 +53,13 @@ const Stat = () => {
             quality of treatment and care, some of the other contributing
             factors for achieving high success rates are:
           </p>
-          <div className="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
+          <div className="grid grid-cols-1 mt-12 gap-y-12 gap-x-6 sm:grid-cols-2">
             {metrics.map((item) => (
               <p key={item.id}>
                 <span className="block text-2xl font-bold text-brandDark">
                   {item.stat}
                 </span>
-                <span className="mt-1 block text-base text-brandliteGray">
+                <span className="block mt-1 text-base text-brandliteGray">
                   <span className="font-medium text-brandDark font-content">
                     {item.emphasis}
                   </span>{" "}

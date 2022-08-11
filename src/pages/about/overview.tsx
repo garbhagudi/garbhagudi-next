@@ -14,7 +14,7 @@ const Overview = ({ directors }) => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>About | GarbhaGudi</title>
-        <meta name="title" content=" | GarbhaGudi IVF Centre" />
+        <meta name="title" content="About | GarbhaGudi IVF Centre" />
         <meta
           name="description"
           content="GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing problem of infertility."
@@ -61,10 +61,10 @@ const Overview = ({ directors }) => {
       /> */}
       <Header />
       <div className="bg-white">
-        <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+        <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24">
           <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
             <div className="space-y-5 sm:space-y-4">
-              <h2 className="text-4xl tracking-tight sm:text-5xl md:text-6xl font-content font-bold text-brandliteGray">
+              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl font-content text-brandliteGray">
                 Founders and Directors
               </h2>
             </div>
@@ -76,16 +76,16 @@ const Overview = ({ directors }) => {
                       <div className="space-y-4">
                         <div className="aspect-square">
                           <img
-                            className="object-fit shadow-2xl rounded-3xl w-96 h-96"
+                            className="shadow-2xl object-fit rounded-3xl w-96 h-96"
                             src={item.image.url}
                             alt={item.name}
                           />
                         </div>
-                        <div className="text-lg leading-6 font-medium space-y-2">
+                        <div className="space-y-2 text-lg font-medium leading-6">
                           <h3 className="text-2xl font-semibold font-heading text-brandDark">
                             {item.name}
                           </h3>
-                          <p className="font-qs font-semibold text-brandPink text-sm">
+                          <p className="text-sm font-semibold font-qs text-brandPink">
                             {item.details}
                           </p>
                         </div>
@@ -93,7 +93,7 @@ const Overview = ({ directors }) => {
                           <p className="text-gray-500 font-content">
                             {item.description}
                           </p>
-                          <p className="mt-3 text-brandPurple underline text-sm hover:text-brandPink cursor-pointer font-content">
+                          <p className="mt-3 text-sm underline cursor-pointer text-brandPurple hover:text-brandPink font-content">
                             Read More {">"}{" "}
                           </p>
                         </div>
