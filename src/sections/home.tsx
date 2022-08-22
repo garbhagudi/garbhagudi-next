@@ -5,9 +5,11 @@ import Hero from "sections/home/hero";
 import Overview from "sections/home/overview";
 import Testimonial from "sections/home/testimonial";
 import Video from "sections/home/video";
-import Stat from "./home/stat";
+// import Stat from "./home/stat";
+import Stats from "./home/stats/stats";
 import Band2 from "./home/band2";
 import News from "sections/home/news";
+import Stat from "./home/stat";
 
 const HomeComponent = () => {
   return (
@@ -19,6 +21,7 @@ const HomeComponent = () => {
       <Overview />
       <Video />
       <Features />
+      <Stats />
       <Stat />
       <Testimonial />
     </div>

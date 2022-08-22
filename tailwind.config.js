@@ -130,6 +130,7 @@ module.exports = {
     animation: {
       none: "none",
       spin: "spin 1s linear infinite",
+      spinSlow: "spin 45s linear infinite",
       ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
       pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       bounce: "bounce 1s infinite",
@@ -801,12 +802,14 @@ module.exports = {
     scale: {
       0: "0",
       50: ".5",
+      60: ".6",
       75: ".75",
       90: ".9",
       95: ".95",
       100: "1",
       105: "1.05",
       110: "1.1",
+      115: "1.15",
       125: "1.25",
       150: "1.5",
     },
