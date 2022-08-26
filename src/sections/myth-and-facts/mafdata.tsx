@@ -104,11 +104,11 @@ export const MythsData = [
     myth: "A woman can get pregnant only on a particular day of ovulation.",
     fact: "The fertile window is the six days that end on the day of ovulation. Pregnancy is most likely to occur with unprotected sex within the three days before ovulation. ",
   },
-  {
-    id: "22",
-    myth: "Women who take birth control pills become infertile",
-    fact: "There are no methods of contraception that cause infertility. Some women get pregnant soon after stopping birth control, even within the first month.",
-  },
+  // {
+  //   id: "22",
+  //   myth: "Women who take birth control pills become infertile",
+  //   fact: "There are no methods of contraception that cause infertility. Some women get pregnant soon after stopping birth control, even within the first month.",
+  // },
   {
     id: "23",
     myth: "Irregular menstrual cycle is a big sign of infertility",
