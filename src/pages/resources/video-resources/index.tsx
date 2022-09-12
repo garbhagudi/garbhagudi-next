@@ -318,7 +318,7 @@ const IndexPage = ({
                 </section>
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
-                    <div className="flex flex-col mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-gray-600 lg:max-h-[38rem]">
+                    <div className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-gray-600 lg:max-h-[38rem]">
                       <div className="px-3 py-4 font-bold text-center text-md font-heading">
                         Recommended
                       </div>
@@ -328,7 +328,11 @@ const IndexPage = ({
                         const { medium = {} } = thumbnails;
                         return (
                           <div
-                            className="max-w-md md:max-w-lg xl:max-w-xl"
+                            className={
+                              url === snippet.resourceId.videoId
+                                ? "max-w-md md:max-w-lg xl:max-w-xl text-brandPink"
+                                : "max-w-md md:max-w-lg xl:max-w-xl hover:text-brandPink4"
+                            }
                             key={id}
                           >
                             {renderRecommended(
@@ -385,7 +389,7 @@ const IndexPage = ({
                 </section>
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
-                    <div className="flex flex-col mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-gray-600 lg:max-h-[38rem]">
+                    <div className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-gray-600 lg:max-h-[38rem]">
                       <div className="px-3 py-4 font-bold text-center text-md font-heading">
                         GarbhaSandesha
                       </div>
@@ -395,7 +399,11 @@ const IndexPage = ({
                         const { medium = {} } = thumbnails;
                         return (
                           <div
-                            className="max-w-md md:max-w-lg xl:max-w-xl"
+                            className={
+                              url2 === snippet.resourceId.videoId
+                                ? "max-w-md md:max-w-lg xl:max-w-xl text-brandPink"
+                                : "max-w-md md:max-w-lg xl:max-w-xl hover:text-brandPink4"
+                            }
                             key={id}
                           >
                             {renderGarbhaSandesha(
@@ -452,7 +460,7 @@ const IndexPage = ({
                 </section>
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
-                    <div className="flex flex-col mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-gray-600 lg:max-h-[38rem]">
+                    <div className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-gray-600 lg:max-h-[38rem]">
                       <div className="px-3 py-4 font-bold text-center text-md font-heading">
                         TV Appearances
                       </div>
@@ -462,7 +470,11 @@ const IndexPage = ({
                         const { medium = {} } = thumbnails;
                         return (
                           <div
-                            className="max-w-md md:max-w-lg xl:max-w-xl "
+                            className={
+                              url3 === snippet.resourceId.videoId
+                                ? "max-w-md md:max-w-lg xl:max-w-xl text-brandPink"
+                                : "max-w-md md:max-w-lg xl:max-w-xl hover:text-brandPink4"
+                            }
                             key={id}
                           >
                             {renderTvAppreances(
@@ -519,7 +531,7 @@ const IndexPage = ({
                 </section>
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
-                    <div className="flex flex-col mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-gray-600 lg:max-h-[38rem]">
+                    <div className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-gray-600 lg:max-h-[38rem]">
                       <div className="px-3 py-4 font-bold text-center text-md font-heading">
                         Testimonials
                       </div>
@@ -529,7 +541,11 @@ const IndexPage = ({
                         const { medium = {} } = thumbnails;
                         return (
                           <div
-                            className="max-w-md md:max-w-lg xl:max-w-xl "
+                            className={
+                              url4 === snippet.resourceId.videoId
+                                ? "max-w-md md:max-w-lg xl:max-w-xl text-brandPink"
+                                : "max-w-md md:max-w-lg xl:max-w-xl hover:text-brandPink4"
+                            }
                             key={id}
                           >
                             {renderTestimonials(
