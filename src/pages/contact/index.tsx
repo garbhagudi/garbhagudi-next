@@ -8,7 +8,7 @@ const IndexPage = (props: Props) => {
       <img
         src="https://media.graphassets.com/eDbmNcAUTOSyWhDpPu2Z"
         alt="formBanner"
-        className="max-w-md md:max-w-2xl mt-4 mx-auto rounded-lg"
+        className="md:max-w-2xl mt-4 mx-auto rounded-lg"
       />
       <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSePYwPkXxUwfyaGO3vSFMcUYCrnN4a4VFiR4TkzE0S0qJEEUA/viewform?embedded=true"
