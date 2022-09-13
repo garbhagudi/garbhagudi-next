@@ -13,7 +13,7 @@
     "@graphcms/rich-text-react-renderer": "^0.4.2",
     "@headlessui/react": "^1.5.0",
     "@tailwindcss/forms": "^0.5.0",
-    "@tailwindcss/typography": "^0.5.2",
+    "@tailwindcss/typography": "^0.5.7",
     "axios": "^0.27.2",
     "graphql": "^16.3.0",
     "graphql-request": "^4.0.0",
