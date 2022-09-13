@@ -925,18 +925,18 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@graphcms/rich-text-react-renderer@^0.4.2":
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/@graphcms/rich-text-react-renderer/-/rich-text-react-renderer-0.4.3.tgz#c93075908eaad79718edc6bc3473ce82855b7609"
-  integrity sha512-Ny/pl3/oKsdQ6aJG4iSCpJUZpqrFR7Vile5YmpOgxRqeGRjS/Qx+1SAe7feeCoNKizaLRuWZpu09L3FztSDveA==
+"@graphcms/rich-text-react-renderer@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@graphcms/rich-text-react-renderer/-/rich-text-react-renderer-0.6.1.tgz#eabbc24a914896c0235e2873994b283a95ae9df8"
+  integrity sha512-w0OtKf9Fzmf0vI5bzgR502AndRLEeRlmb8x6nxUweDhfNRVKTOiwSEQKetMPpodSZUnXO+PI8J7rqxQvJof2kA==
   dependencies:
-    "@graphcms/rich-text-types" "^0.3.1"
+    "@graphcms/rich-text-types" "^0.5.0"
     escape-html "^1.0.3"
 
-"@graphcms/rich-text-types@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@graphcms/rich-text-types/-/rich-text-types-0.3.1.tgz#ee8cec326f42e710970f372b9fde2f70e34c5e9c"
-  integrity sha512-BCZ8ZombSXnGy9g83guTgqX9sezEUSijR1HhEaals3N70zZ3futZ0YfPdC7/DGQEH7itAJGf7HT+KjHBCsepPg==
+"@graphcms/rich-text-types@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@graphcms/rich-text-types/-/rich-text-types-0.5.0.tgz#9a8707de62d7c9e63b8912e269cf7cb912d13495"
+  integrity sha512-3oKVp2V1f9zYn9dYpLvePeu/8w8nQhZyv3FWm7yUtY/AlVXRwU3HJtIXvvdwAkmTuNANNhcDkBOzfkZaKJNADw==
   dependencies:
     tslib "^2.0.0"
 
