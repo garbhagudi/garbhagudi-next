@@ -49,7 +49,7 @@ const IndexPage = (props: Props) => {
 
       <div className="max-w-7xl mx-auto ">
         <img
-          src="https://media.graphassets.com/eDbmNcAUTOSyWhDpPu2Z"
+          src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1663403546/Banner/Google_Form_Header-min_tjenif.jpg"
           alt="formBanner"
           className="md:max-w-2xl mt-4 mx-auto rounded-lg"
         />
