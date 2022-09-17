@@ -29,7 +29,7 @@ const IndexPage = (props: Props) => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://media.graphassets.com/eDbmNcAUTOSyWhDpPu2Z"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1663403546/Banner/Google_Form_Header-min_tjenif.jpg"
         />
 
         {/* Twitter*/}
@@ -43,7 +43,7 @@ const IndexPage = (props: Props) => {
         />
         <meta
           name="twitter:image"
-          content="https://media.graphassets.com/eDbmNcAUTOSyWhDpPu2Z"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1663403546/Banner/Google_Form_Header-min_tjenif.jpg"
         />
       </Head>
 
