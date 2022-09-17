@@ -79,9 +79,9 @@ const News = () => {
                   <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 font-heading ">
                     {item.title}
                   </h5>
-                  <p className="text-sm text-gray-700 font-content">
+                  <div className="text-sm text-gray-700 font-content">
                     {item.desc}
-                  </p>
+                  </div>
                   <div className="px-3 py-2 mt-8 font-semibold text-white border w-28 bg-brandPink rounded-xl">
                     <Link href={item.link}>Know More</Link>
                   </div>
