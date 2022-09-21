@@ -583,9 +583,9 @@ const IndexPage = ({ doctors }) => {
                             ADDRESS
                           </h2>
                           <p className="mt-1 font-content">
-                            4TH floor, Chirag Towers, Born Babies Building, 24 &
-                            64, Service Rd, next to कलामंदिर, Marathahalli,
-                            Bengaluru, Karnataka 560037
+                            4TH floor, Chirag Towers, 24 & 64, Service Rd, Next
+                            to Kalamandir, Marathahalli, Bengaluru, Karnataka
+                            560037
                           </p>
                         </div>
                         <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
