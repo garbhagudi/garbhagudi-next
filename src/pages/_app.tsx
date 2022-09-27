@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import "styles/calendar.css";
 import Loading from "components/Loading";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -59,6 +60,13 @@ function MyApp({ Component, pageProps }) {
   });
   return (
     <>
+      <Head>
+        <link
+          rel="alternative"
+          href={`https://garbhagudi.com${router.pathname}`}
+          hrefLang="en-us"
+        />
+      </Head>
       {loading ? (
         <Loading />
       ) : (
