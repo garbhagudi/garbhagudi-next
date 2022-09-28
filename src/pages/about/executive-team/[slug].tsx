@@ -58,7 +58,7 @@ export const getStaticPaths = async () => {
 
 const ExecutiveTeam = ({ director }) => {
   const router = useRouter();
-
+  const title = `${director.name} | GarbhaGudi IVF Centre`;
   if (router.isFallback) {
     return <Loading />;
   }
@@ -68,7 +68,7 @@ const ExecutiveTeam = ({ director }) => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title> {`${director.name} | GarbhaGudi IVF Centre`}</title>
+        <title> {title}</title>
         <meta
           name="title"
           content={`${director.name} | GarbhaGudi IVF Centre`}

@@ -66,6 +66,7 @@ export async function getStaticPaths() {
 
 const Doctor = ({ doctor }) => {
   const router = useRouter();
+  const title = `${doctor?.name} - Fertility Specialist | GarbhaGudi IVF Centre`;
 
   if (router.isFallback) {
     return (
@@ -80,9 +81,7 @@ const Doctor = ({ doctor }) => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>
-          {doctor?.name} - Fertility Specialist | GarbhaGudi IVF Centre
-        </title>
+        <title>{title}</title>
         <meta
           name="title"
           content={`${doctor?.name} - Fertility Specialist | GarbhaGudi IVF Centre`}

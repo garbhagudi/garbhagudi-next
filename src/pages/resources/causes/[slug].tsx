@@ -55,7 +55,7 @@ export const getStaticPaths = async () => {
 
 const Blog = ({ cause }) => {
   const router = useRouter();
-
+  const title = `${cause?.title} | GarbhaGudi`;
   if (router.isFallback) {
     return <Loading />;
   }
@@ -65,7 +65,7 @@ const Blog = ({ cause }) => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{cause?.title} | GarbhaGudi</title>
+        <title>{title}</title>
         <meta
           name="title"
           content={`${cause?.title} | GarbhaGudi IVF Centre`}

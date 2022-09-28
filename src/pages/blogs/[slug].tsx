@@ -76,7 +76,7 @@ export async function getStaticPaths() {
 
 const Blog = ({ blog }) => {
   // const [likes, setLikes] = useState(blog?.likes);
-
+  const title = `${blog?.title} | GarbhaGudi IVF Centre`;
   const router = useRouter();
   if (router.isFallback) {
     return <Loading />;
@@ -86,7 +86,7 @@ const Blog = ({ blog }) => {
       <Head>
         {/* Primary Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{blog?.title} | GarbhaGudi IVF Centre</title>
+        <title>{title}</title>
         <meta name="title" content={`${blog?.title} | GarbhaGudi`} />
         <meta name="description" content={blog?.content?.text.slice(0, 160)} />
         {/* Open Graph / Facebook */}

@@ -14,7 +14,7 @@ const ElectronicCity = ({ doctors }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>
           GarbhaGudi IVF Centre, Electronic City | Best IVF & Fertility Hospital
-          in India{" "}
+          in India
         </title>
         <meta
           name="title"
