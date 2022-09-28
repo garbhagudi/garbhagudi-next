@@ -57,10 +57,12 @@ export const getStaticPaths = async () => {
 
 const Career = ({ career }) => {
   const router = useRouter();
-  const title = `${career.position} | GarbhaGudi IVF Centre`;
   if (router.isFallback) {
     return <Loading />;
   }
+
+  const title = `${career.position} | GarbhaGudi IVF Centre`;
+
   return (
     <div>
       <Head>
