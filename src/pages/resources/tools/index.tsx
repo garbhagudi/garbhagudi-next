@@ -147,14 +147,14 @@ const Data = [
   {
     id: 1,
     name: "Ovulation Calculator",
-    link: "/ovulation-calculator",
+    link: "ovulation-calculator",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1654849032/Icons/Resources/Calendar_tvq9bm.svg",
     description: "Know your next menstrual cycle and fertile window",
   },
   {
     id: 1,
     name: "Fertility Quotient Calculator",
-    link: "/fertility-quotient-calculator",
+    link: "fertility-quotient-calculator",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1654849032/Icons/Resources/Calculator_bxkdl9.svg",
     description: "Calculate your Fertility Quotient",
   },
