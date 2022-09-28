@@ -58,17 +58,19 @@ export const getStaticPaths = async () => {
 
 const ExecutiveTeam = ({ director }) => {
   const router = useRouter();
-  const title = `${director.name} | GarbhaGudi IVF Centre`;
+
   if (router.isFallback) {
     return <Loading />;
   }
+
+  const title = `${director.name} | GarbhaGudi IVF Centre`;
   return (
     <div>
       <Head>
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title> {title}</title>
+        <title>{title}</title>
         <meta
           name="title"
           content={`${director.name} | GarbhaGudi IVF Centre`}
@@ -147,9 +149,9 @@ const ExecutiveTeam = ({ director }) => {
                     {director?.name}
                   </h2>
                   <div className="w-12 h-1 bg-brandPink rounded mt-2 mb-4 "></div>
-                  <p className="text-base font-content font-semibold">
+                  <div className="text-base font-content font-semibold">
                     {director?.details}
-                  </p>
+                  </div>
                   <button className="px-4 py-2 mt-6 bg-brandPink2 text-white font-semibold font-content rounded-md">
                     <a href={director?.link} target="_blank" rel="noreferrer">
                       Connect
@@ -158,9 +160,9 @@ const ExecutiveTeam = ({ director }) => {
                 </div>
               </div>
               <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 sm:text-left px-5">
-                <p className="leading-relaxed text-lg mb-4 text-brandDark">
+                <div className="leading-relaxed text-lg mb-4 text-brandDark">
                   <RichText content={director?.bio?.raw.children} />
-                </p>
+                </div>
               </div>
             </div>
           </div>

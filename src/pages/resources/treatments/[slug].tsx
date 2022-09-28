@@ -55,10 +55,12 @@ export const getStaticPaths = async () => {
 
 const Treatment = ({ treatment }) => {
   const router = useRouter();
-  const title = `${treatment?.title} | GarbhaGudi`;
   if (router.isFallback) {
     return <Loading />;
   }
+
+  const title = `${treatment?.title} | GarbhaGudi`;
+
   return (
     <div>
       <Head>

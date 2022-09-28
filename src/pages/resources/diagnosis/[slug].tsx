@@ -56,10 +56,12 @@ export const getStaticPaths = async () => {
 
 const Diagnosis = ({ diagnosis }) => {
   const router = useRouter();
-  const title = `${diagnosis?.title} | GarbhaGudi`;
+
   if (router.isFallback) {
     return <Loading />;
   }
+
+  const title = `${diagnosis?.title} | GarbhaGudi`;
   return (
     <div>
       <Head>
