@@ -53,50 +53,35 @@ export const getStaticPaths = async () => {
 };
 
 const Vas = ({ valueAddedService }) => {
+  const title = `${valueAddedService?.title} | GarbhaGudi IVF Centre}`;
+  const desc = `${valueAddedService?.content.text.slice(0, 180)}`;
+  const image = `${valueAddedService?.image.url}`;
   return (
     <div>
       <Head>
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{valueAddedService?.title} | GarbhaGudi</title>
-        <meta
-          name="title"
-          content={`${valueAddedService?.title} | GarbhaGudi IVF Centre`}
-        />
-        <meta
-          name="description"
-          content={valueAddedService?.content.text.slice(0, 180)}
-        />
+        <title>{title}</title>
+        <meta name="title" content={title} />
+        <meta name="description" content={desc} />
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property="og:title"
-          content={`${valueAddedService?.title} | GarbhaGudi IVF Centre`}
-        />
+        <meta property="og:title" content={title} />
         <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
         <meta property="og:url" content="https://garbhagudi.com" />
-        <meta
-          property="og:description"
-          content={valueAddedService?.content.text.slice(0, 180)}
-        />
+        <meta property="og:description" content={desc} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={valueAddedService?.image.url} />
+        <meta property="og:image" content={image} />
 
         {/* Twitter*/}
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@garbhagudiivf" />
-        <meta
-          name="twitter:title"
-          content={`${valueAddedService?.title} | GarbhaGudi IVF Centre`}
-        />
-        <meta
-          name="twitter:description"
-          content={valueAddedService?.content.text.slice(0, 180)}
-        />
-        <meta name="twitter:image" content={valueAddedService?.image.url} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={desc} />
+        <meta name="twitter:image" content={image} />
       </Head>
       <BreadCrumbs
         link1="/#features"

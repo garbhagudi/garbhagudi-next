@@ -55,17 +55,19 @@ export const getStaticPaths = async () => {
 
 const Treatment = ({ treatment }) => {
   const router = useRouter();
-
   if (router.isFallback) {
     return <Loading />;
   }
+
+  const title = `${treatment?.title} | GarbhaGudi`;
+
   return (
     <div>
       <Head>
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{treatment?.title} | GarbhaGudi</title>
+        <title>{title}</title>
         <meta
           name="title"
           content={`${treatment?.title} | GarbhaGudi IVF Centre`}

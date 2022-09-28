@@ -12,6 +12,7 @@ const limit = 6;
 
 function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
   const router = useRouter();
+  const title = `Blogs | Page ${currentPageNumber} | GarbhaGudi IVF Centre`;
 
   if (router.isFallback) {
     return <Loading />;
@@ -24,9 +25,7 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
           {/* Primary Tags */}
 
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>
-            Blogs | Page {currentPageNumber} | GarbhaGudi IVF Centre
-          </title>
+          <title>{title}</title>
           <meta
             name="title"
             content={`Blogs | Page - ${currentPageNumber} | GarbhaGudi IVF Centre`}

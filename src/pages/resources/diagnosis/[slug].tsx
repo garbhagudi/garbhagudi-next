@@ -60,13 +60,15 @@ const Diagnosis = ({ diagnosis }) => {
   if (router.isFallback) {
     return <Loading />;
   }
+
+  const title = `${diagnosis?.title} | GarbhaGudi`;
   return (
     <div>
       <Head>
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{diagnosis?.title} | GarbhaGudi</title>
+        <title>{title}</title>
         <meta
           name="title"
           content={`${diagnosis?.title} | GarbhaGudi IVF Centre`}

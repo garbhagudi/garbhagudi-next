@@ -59,13 +59,15 @@ const Blog = ({ cause }) => {
   if (router.isFallback) {
     return <Loading />;
   }
+
+  const title = `${cause?.title} | GarbhaGudi`;
   return (
     <div>
       <Head>
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{cause?.title} | GarbhaGudi</title>
+        <title>{title}</title>
         <meta
           name="title"
           content={`${cause?.title} | GarbhaGudi IVF Centre`}
