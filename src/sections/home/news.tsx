@@ -12,12 +12,11 @@ const data = [
   },
   {
     id: 2,
-    title: "Freedom From Infertility",
+    title: "IVF Packages",
     desc: (
       <div>
-        This Independence Month, Garbhagudi is happy to announce IVF Packages
-        that fit all your individual needs. To know more, book a free
-        appointment or visit{" "}
+        Garbhagudi is delighted to announce IVF Packages that fit all your
+        individual needs. To know more, book a free appointment or visit{" "}
         <Link href={"/gg-care"}>
           <a className="font-semibold text-blue-600 hover:text-brandPink hover:underline">
             GG CARE
