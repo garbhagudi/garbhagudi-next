@@ -13,12 +13,12 @@ const Jayanagar = ({ doctors }) => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>
-          GarbhaGudi IVF Centre, South End Circle | Best IVF & Fertility
-          Hospital in India
+          GarbhaGudi IVF Centre, Jayanagar | Best IVF & Fertility Hospital in
+          India
         </title>
         <meta
           name="title"
-          content="GarbhaGudi IVF Centre, South End Circle | Best IVF & Fertility
+          content="GarbhaGudi IVF Centre, Jayanagar | Best IVF & Fertility
           Hospital in India"
         />
         <meta
@@ -30,7 +30,7 @@ const Jayanagar = ({ doctors }) => {
 
         <meta
           property="og:title"
-          content="GarbhaGudi IVF Centre, South End Circle | Best IVF & Fertility
+          content="GarbhaGudi IVF Centre, Jayanagar | Best IVF & Fertility
           Hospital in India"
         />
         <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
@@ -51,7 +51,7 @@ const Jayanagar = ({ doctors }) => {
         <meta name="twitter:site" content="@garbhagudiivf" />
         <meta
           name="twitter:title"
-          content="GarbhaGudi IVF Centre, South End Circle | Best IVF & Fertility
+          content="GarbhaGudi IVF Centre, Jayanagar | Best IVF & Fertility
           Hospital in India"
         />
         <meta
@@ -66,7 +66,7 @@ const Jayanagar = ({ doctors }) => {
       <BreadCrumbs
         text1="Locations"
         link1="/locations/fertility-experts"
-        text2="South End Circle"
+        text2="Jayanagar"
         link2="#"
         link3={""}
         text3={""}
@@ -75,7 +75,7 @@ const Jayanagar = ({ doctors }) => {
       />
       <section className="text-gray-600 body-font relative max-w-7xl mx-auto">
         <h1 className="text-center text-2xl md:text-4xl font-heading pt-8 font-bold">
-          South End Circle
+          Jayanagar
         </h1>
         <div>
           <img
@@ -105,7 +105,7 @@ const Jayanagar = ({ doctors }) => {
         <div className="py-6 flex flex-wrap lg:flex-nowrap inset-0 ">
           <div className="lg:w-1/2 md:w-full bg-white flex flex-col md:ml-auto w-full pb-8 md:mt-0 min-h-max">
             <p className="text-center font-qs text-2xl font-semibold mb-10 mt-7 lg:mt-0">
-              Fertility Specialists at South End Circle
+              Fertility Specialists at Jayanagar
             </p>
             <div className="mx-auto space-y-0 grid grid-cols-2 sm:gap-y-10 sm:gap-x-32 sm:space-y-0 lg:grid-cols-2 lg:max-w-7xl col-span-full">
               {doctors.map((item) => {
@@ -159,8 +159,8 @@ const Jayanagar = ({ doctors }) => {
                   ADDRESS
                 </h2>
                 <p className="mt-1 font-content">
-                  South End Circle, 26, Pattalamma Temple Rd, Basavanagudi,
-                  Bengaluru, Karnataka 560004
+                  Jayanagar, 26, Pattalamma Temple Rd, Basavanagudi, Bengaluru,
+                  Karnataka 560004
                 </p>
               </div>
               <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">

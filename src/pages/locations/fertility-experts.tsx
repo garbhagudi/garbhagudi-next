@@ -384,8 +384,8 @@ const IndexPage = ({ doctors }) => {
                             ADDRESS
                           </h2>
                           <p className="mt-1 font-content">
-                            South End Circle, 26, Pattalamma Temple Rd,
-                            Basavanagudi, Bengaluru, Karnataka 560004
+                            South End Circle, 26, Pattalamma Temple Rd, Basavanagudi, jayanagar, 
+                            Bengaluru, Karnataka 560004
                           </p>
                         </div>
                         <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">

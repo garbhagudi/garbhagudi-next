@@ -214,7 +214,7 @@ const Doctor = ({ doctor }) => {
                         <div className="">
                           <div className="overflow-x-auto">
                             <table className="table-auto w-full">
-                              <thead className="text-sm font-bold uppercase text-brandDark bg-brandPink">
+                              <thead className="text-sm font-bold uppercase text-white bg-brandPink">
                                 <tr>
                                   <th className="p-2 whitespace-nowrap ">
                                     <div className="font-bold text-left ml-1">
@@ -378,18 +378,18 @@ const Doctor = ({ doctor }) => {
                                               <div className="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3 ">
                                                 <img
                                                   className="rounded-sm"
-                                                  src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/South_End_Circle_l3ffwj.svg"
+                                                  src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1665574596/Icons/Locations/JN_Icon_ysrrvv.svg"
                                                   width="40"
                                                   height="40"
                                                   alt="Alex Shatov"
                                                 />
                                               </div>
                                               <Link
-                                                href="/locations/south-end-circle"
+                                                href="/locations/jayanagar"
                                                 passHref
                                               >
                                                 <span className="cursor-pointer">
-                                                  South End Circle
+                                                  Jayanagar
                                                 </span>
                                               </Link>
                                             </div>
@@ -450,7 +450,7 @@ const Doctor = ({ doctor }) => {
                                                 />
                                               </div>
                                               <Link
-                                                href="/locations/south-end-circle"
+                                                href="/locations/electronic-city"
                                                 passHref
                                               >
                                                 <span className="cursor-pointer">
@@ -518,7 +518,7 @@ const Doctor = ({ doctor }) => {
                                             />
                                           </div>
                                           <Link
-                                            href="/locations/south-end-circle"
+                                            href="/locations/marathahalli"
                                             passHref
                                           >
                                             <span className="cursor-pointer">
