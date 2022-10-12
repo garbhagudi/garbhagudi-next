@@ -16,20 +16,6 @@ const nextConfig = {
         source: "/public/contact.html",
         destination: "/src/pages/api/contact.tsx",
       },
-      {
-        source: "/src/pages/locations/south-end-circle.tsx",
-        destination: "/src/pages/locations/jayanagar.tsx",
-        permanent: "true",
-      },
-    ];
-  },
-  async redirects() {
-    return [
-      {
-        source: "/src/pages/locations/south-end-circle",
-        destination: "/src/pages/locations/jayanagar",
-        permanent: "true",
-      },
     ];
   },
 };
