@@ -106,9 +106,9 @@ const Location = [
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351546/Icons/Locations/Kalyan_Nagar_ivtier.svg",
   },
   {
-    name: "South-End Circle",
-    href: "/locations/south-end-circle",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/South_End_Circle_l3ffwj.svg",
+    name: "Jayanagar",
+    href: "/locations/jayanagar",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1665574596/Icons/Locations/JN_Icon_ysrrvv.svg",
   },
   {
     name: "Electronic City",

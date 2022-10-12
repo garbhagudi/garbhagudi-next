@@ -4,6 +4,20 @@ const nextConfig = {
   images: {
     domains: ["res.cloudinary.com"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/locations/south-end-circle",
+        destination: "/locations/jayanagar",
+        permanent: true,
+      },
+      {
+        source: "/kn",
+        destination: "https://kannada.garbhagudi.com",
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     return [
       {
@@ -11,8 +25,8 @@ const nextConfig = {
         destination: "/src/pages/api/contact.tsx",
       },
       {
-        source: "/public/contact.html",
-        destination: "/src/pages/api/contact.tsx",
+        source: "/public/thank-you.html",
+        destination: "/src/pages/api/thank-you.tsx",
       },
     ];
   },

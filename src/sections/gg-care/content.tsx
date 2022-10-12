@@ -201,7 +201,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-lg leading-6 font-medium text-gray-900">
-                  South End Circle
+                  Jayanagar
                 </h3>
                 <div className="mt-2 text-base text-gray-500">
                   <p className="mt-1">
@@ -215,6 +215,7 @@ const Contact = () => {
                   </p>
                   <p>
                     South End Circle, 26, Pattalamma Temple Rd, Basavanagudi,
+                    Jayanagar
                   </p>
                   <p className="mt-1 mb-5">Bengaluru, Karnataka 560004</p>
                   <a

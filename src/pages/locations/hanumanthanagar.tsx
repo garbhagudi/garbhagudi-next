@@ -171,14 +171,14 @@ const HanumanthaNagar = ({ doctors }) => {
                 <h2 className="font-semibold text-gray-900 tracking-widest text-xs font-qs">
                   EMAIL
                 </h2>
-                <a className="text-indigo-500 leading-relaxed">
+                <div className="text-indigo-500 leading-relaxed">
                   <a
                     href="mailto:dreams@garbhagudi.com"
                     className="text-brandPink font-qs"
                   >
                     dreams@garbhagudi.com
                   </a>
-                </a>
+                </div>
                 <h2 className="font-semibold text-gray-900 tracking-widest text-xs mt-4 font-qs">
                   PHONE
                 </h2>
