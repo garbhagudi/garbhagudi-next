@@ -129,7 +129,7 @@ const IndexPage = ({ doctors }) => {
                 }
               >
                 <div className="mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
-                  South-End Circle
+                  Jayanagar
                 </div>
               </Tab>
               <Tab
@@ -423,7 +423,7 @@ const IndexPage = ({ doctors }) => {
                     </div>
                     <div className="lg:w-1/2 md:w-full bg-white flex flex-col md:ml-auto w-full md:py-8 md:mt-0 min-h-max">
                       <p className="text-center font-qs text-xl font-semibold mb-10 mt-7 lg:mt-0">
-                        Fertility Specialists at South-End Circle
+                        Fertility Specialists at Jayanagar
                       </p>
                       <div className="mx-auto space-y-0 grid grid-cols-2 sm:gap-y-10 sm:gap-x-32 sm:space-y-0 lg:grid-cols-2 lg:max-w-7xl col-span-full">
                         {doctors.map((item) => {
