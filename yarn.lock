@@ -3054,10 +3054,10 @@ next-pwa@^5.6.0:
     workbox-webpack-plugin "^6.5.4"
     workbox-window "^6.5.4"
 
-next-share@^0.18.2:
-  version "0.18.2"
-  resolved "https://registry.yarnpkg.com/next-share/-/next-share-0.18.2.tgz#e6f90d4149a4b373b1cac372a41d6e5c67fcaacd"
-  integrity sha512-PaQ1roWAdCKGRIcKySUQhorKazkRZv3LiIu9J76L6s6/bwM5TZns9vlVqFB6RrhsO+ijPpVhay4HpcMfNPD9rQ==
+next-share@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/next-share/-/next-share-0.19.0.tgz#780d81317561be99e976e41f53fdb02ba80dfdd9"
+  integrity sha512-egqNtBkyoP/takhLK7yxcuXIOMnj55hQfBCdpq5iBkruqJM4JXcdtvQ7HvxYvLKrbWQ99ayKEcsv9dXwSdTd8g==
   dependencies:
     jsonp "^0.2.1"
 
