@@ -206,11 +206,11 @@ const aboutUs = [
     href: "/locations/fertility-experts",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839012/Icons/About/Our_Fertility_Experts_bxsrrh.svg",
   },
-  // {
-  //   name: "Media",
-  //   href: "/media",
-  //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643442839/Icons/About/Media_nyook4.svg",
-  // },
+  {
+    name: "Media",
+    href: "/media",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643442839/Icons/About/Media_nyook4.svg",
+  },
   {
     name: "CSR",
     href: "https://garbhagnan.org",

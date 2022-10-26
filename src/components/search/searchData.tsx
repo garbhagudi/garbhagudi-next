@@ -391,7 +391,7 @@ export const terms = [
     slug: "what-to-expect-after-the-embryo-transfer",
   },
   {
-    title: "How to select the best IVF Centre",
+    title: "How to select the best IVF center",
     slug: "how-to-select-the-best-ivf-center",
   },
   {
@@ -565,7 +565,7 @@ export const terms = [
     slug: "beware-of-miscarriage",
   },
   {
-    title: "Breastfeeding and its benefits",
+    title: "Breastfeeding and Its Benefits",
     slug: "breastfeeding-and-its-benefits",
   },
   {
@@ -617,8 +617,8 @@ export const terms = [
     slug: "know-your-ovulation-window",
   },
   {
-    title: "Motherhood vs. Career",
-    slug: "motherhood-vs-career",
+    title: "Learn to Increase Your Sperm Count Naturally!",
+    slug: "learn-to-increase-your-sperm-count-naturally",
   },
   {
     title: "Sperm Freezing - A Good News for You!",
@@ -635,5 +635,85 @@ export const terms = [
   {
     title: "All about the latest ART & Surrogacy Bill!",
     slug: "all-about-the-latest-art-and-surrogacy-bill",
+  },
+  {
+    title: "All You Need to Know About The UPT",
+    slug: "all-you-need-to-know-about-the-upt",
+  },
+  {
+    title: "An Overview of Premature Ejaculation",
+    slug: "an-overview-of-premature-ejaculation",
+  },
+  {
+    title: "Does IVF Yield Healthy Babies?",
+    slug: "does-ivf-yield-healthy-babies",
+  },
+  {
+    title: "Ways to Reduce Your Chances of Having a C-Section",
+    slug: "ways-to-reduce-your-chances-of-having-a-c-section",
+  },
+  {
+    title: "Never Miss Your Premarital Screening",
+    slug: "never-miss-your-premarital-screening",
+  },
+  {
+    title: "All You Need to Know About ERA Test!",
+    slug: "all-you-need-to-know-about-era-test",
+  },
+  {
+    title: "Know What You Can Ask Your IVF Expert",
+    slug: "know-what-you-can-ask-your-ivf-expert",
+  },
+  {
+    title: "How does laptops affect male fertility?",
+    slug: "how-does-laptops-affect-male-fertility",
+  },
+  {
+    title: "Erectile Dysfunction & Ways to Overcome",
+    slug: "erectile-dysfunction-and-ways-to-overcome",
+  },
+  {
+    title: "Alert: Low Amniotic Fluid Requires Special Attention",
+    slug: "low-amniotic-fluid-requires-special-attention",
+  },
+  {
+    title: "All You Need to Know About Dilation & Curettage (D & C)",
+    slug: "all-you-need-to-know-about-dilation-and-curettage",
+  },
+  {
+    title: "All You Need to Know About Follicular Study",
+    slug: "all-you-need-to-know-about-follicular-study",
+  },
+  {
+    title: "Foods to Avoid During Pregnancy",
+    slug: "foods-to-avoid-during-pregnancy",
+  },
+  {
+    title: "Know About the Less Known Condition – Adenomyosis",
+    slug: "know-about-the-less-known-condition-adenomyosis",
+  },
+  {
+    title: "Learn About Nuchal Translucency (The NT Scan)",
+    slug: "learn-about-nuchal-translucency-the-nt-scan",
+  },
+  {
+    title: "Learn How Hormonal Imbalance Affects Pregnancy",
+    slug: "learn-how-hormonal-imbalance-affects-pregnancy",
+  },
+  {
+    title: "Progesterone & Your Pregnancy",
+    slug: "progesterone-and-your-pregnancy",
+  },
+  {
+    title: "The Amazing Benefits of Prenatal Yoga",
+    slug: "the-amazing-benefits-of-prenatal-yoga",
+  },
+  {
+    title: "Ways to Cope with Unexplained Infertility",
+    slug: "ways-to-cope-with-unexplained-infertility",
+  },
+  {
+    title: "What are Fibroids? Symptoms & Treatments  l",
+    slug: "what-are-fibroids-symptoms-and-treatments",
   },
 ];
