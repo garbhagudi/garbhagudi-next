@@ -13,7 +13,7 @@ const Cta = () => {
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md shadow">
             <a
-              href="https://garbhagudi-ivf.com/contact-us"
+              href="https://garbhagudi.com/contact.html"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center px-5 py-3 border border-transparent font-content text-base font-medium rounded-md text-white bg-brandPink hover:bg-brandPink4"
