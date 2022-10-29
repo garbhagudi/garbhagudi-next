@@ -194,11 +194,12 @@
      - It is important that you test the modified form before going live.-->
   <div
     id="crmWebToEntityForm"
-    class="zcwf_lblLeft crmWebToEntityForm bg-gray-100"
+    class="zcwf_lblLeft crmWebToEntityForm"
     style="color: black; max-width: 600px; margin-top: 50px"
   >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <form
       action="https://crm.zoho.com/crm/WebToLeadForm"
       name="WebToLeads3505252000085291164"
@@ -229,7 +230,7 @@
         type="text"
         style="display: none"
         name="returnURL"
-        value="https&#x3a;&#x2f;&#x2f;garbhagudi.com&#x2f;thank-you.html"
+        value="https&#x3a;&#x2f;&#x2f;garbhagudi.com&#x2f;thank-you"
       />
       <!-- Do not remove this code. -->
       <input type="text" style="display: none" id="ldeskuid" name="ldeskuid" />
@@ -403,6 +404,7 @@
           display: block;
           clear: both;
         }
+
         @media all {
           .zcwf_lblLeft .zcwf_col_lab,
           .zcwf_lblLeft .zcwf_col_fld {
@@ -576,6 +578,28 @@
           <div class="zcwf_col_help"></div>
         </div>
       </div>
+      <div class="zcwf_row flex items-center justify-center flex-col">
+        <div class="zcwf_col_lab"></div>
+        <div
+          class="zcwf_col_fld mx-auto flex items-center justify-center flex-col"
+        >
+          <div
+            class="g-recaptcha"
+            data-sitekey="6Ldj-cEiAAAAAGlIzcJ8tb_ZIlSAasrStOj6eN5R"
+            data-theme="light"
+            data-callback="rccallback3505252000085291164"
+            captcha-verified="false"
+            id="recap3505252000085291164"
+          ></div>
+          <div
+            id="recapErr3505252000085291164"
+            style="font-size: 12px; color: red; visibility: hidden"
+          >
+            Captcha validation failed. If you are not a robot then please try
+            again.
+          </div>
+        </div>
+      </div>
       <div class="zcwf_row">
         <div class="zcwf_col_lab"></div>
         <div class="zcwf_col_fld">
@@ -594,24 +618,40 @@
           />
         </div>
       </div>
-      <div class="text-center mt-10">
-        <button class="">
-          <a href="https://garbhagudi.com" class="underline text-pink-600"
-            >&larr; Home
-          </a>
-        </button>
-      </div>
-      <footer
-        class="flex-none pb-6 flex items-start justify-center text-gray-400 px-4 sm:px-6 lg:px-8"
-      >
-        <div class="mt-8 text-center" style="font-family: Nunito">
-          &copy; GarbhaGudi IVF Centre -
-          <script>
-            document.write(/\d{4}/.exec(Date())[0]);
-          </script>
-        </div>
-      </footer>
       <script>
+        /* Do not remove this code. */
+        function rccallback3505252000085291164() {
+          if (
+            document.getElementById("recap3505252000085291164") != undefined
+          ) {
+            document
+              .getElementById("recap3505252000085291164")
+              .setAttribute("captcha-verified", true);
+          }
+          if (
+            document.getElementById("recapErr3505252000085291164") !=
+              undefined &&
+            document.getElementById("recapErr3505252000085291164").style
+              .visibility == "visible"
+          ) {
+            document.getElementById(
+              "recapErr3505252000085291164"
+            ).style.visibility = "hidden";
+          }
+        }
+        function reCaptchaAlert3505252000085291164() {
+          var recap = document.getElementById("recap3505252000085291164");
+          if (
+            recap != undefined &&
+            recap.getAttribute("captcha-verified") == "false"
+          ) {
+            document.getElementById(
+              "recapErr3505252000085291164"
+            ).style.visibility = "visible";
+            return false;
+          }
+          return true;
+        }
         function validateEmail3505252000085291164() {
           var form = document.forms["WebToLeads3505252000085291164"];
           var emailFld = form.querySelectorAll("[ftype=email]");
@@ -673,8 +713,12 @@
               } catch (e) {}
             }
           }
-          trackVisitor();
+          trackVisitor3505252000085291164();
           if (!validateEmail3505252000085291164()) {
+            return false;
+          }
+
+          if (!reCaptchaAlert3505252000085291164()) {
             return false;
           }
           document
@@ -713,7 +757,7 @@
         s.src = "https://salesiq.zoho.com/widget";
         t = d.getElementsByTagName("script")[0];
         t.parentNode.insertBefore(s, t);
-        function trackVisitor() {
+        function trackVisitor3505252000085291164() {
           try {
             if ($zoho) {
               var LDTuvidObj =
@@ -740,7 +784,7 @@
       <!-- Do not remove this --- Analytics Tracking code starts -->
       <script
         id="wf_anal"
-        src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=61bba0cba3c8377c6a5dd6a5d5678a36b0c0af8489b97450a29344c095d7fdebgid17730c4e7d6442ffce68a431e6d754713eb2b12b9ac7777050f2773ec54ed2d2gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513"
+        src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=61bba0cba3c8377c6a5dd6a5d5678a36b0c0af8489b97450a29344c095d7fdebgid17730c4e7d6442ffce68a431e6d754713eb2b12b9ac7777050f2773ec54ed2d2gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513&tw=61690b96c1d0471b638f31426f38e68aa67fb7ed6da86f32dc10ad817fe55a0a"
       ></script>
       <!-- Do not remove this --- Analytics Tracking code ends. -->
     </form>

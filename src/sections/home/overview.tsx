@@ -70,7 +70,7 @@ const Overview = () => {
                       leaders and technological forays. Most importantly, with a
                       fantastic team of doctors, embryologists and staff. <br />
                       <br /> The centre has been instrumental in creating happy
-                      endings in more than 7000 + couples’ lives by ensuring
+                      endings in more than 8500 + couples’ lives by ensuring
                       they have their biological child. With our strong team of
                       experts and cutting-edge medical technologies, GarbhaGudi
                       has achieved high success rates in the field of
