@@ -128,7 +128,10 @@ const Career = ({ career }) => {
               <h1 className="py-6 text-2xl font-bold text-center sm:text-4xl font-heading">
                 GarbhaGudi – Certified Healthy Workplace
               </h1>
-              <Link href="/about/awards-and-accolades/garbhagudi-certified-healthy-workplace">
+              <Link
+                legacyBehavior
+                href="/about/awards-and-accolades/garbhagudi-certified-healthy-workplace"
+              >
                 <a>
                   <img
                     src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1657979955/Banner/Argoya_Silver_Award_Web_Bnr-min_bx7xeo.webp"

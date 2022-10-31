@@ -23,7 +23,7 @@ const Nav = () => {
             <div className="flex items-center justify-between align-middle cursor-pointer">
               <div className="flex-shrink-0 pt-4 ">
                 <div className="hidden sm:block">
-                  <Link href="/" passHref>
+                  <Link legacyBehavior href="/" passHref>
                     <a>
                       <img
                         className="w-48 h-full xl:w-64 "
@@ -35,7 +35,7 @@ const Nav = () => {
                 </div>
 
                 <div className="block sm:hidden">
-                  <Link href="/" passHref>
+                  <Link legacyBehavior href="/" passHref>
                     <a>
                       <img
                         className="w-20"

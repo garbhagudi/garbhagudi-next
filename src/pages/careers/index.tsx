@@ -62,7 +62,10 @@ const IndexPage = ({ careers }) => {
           <h1 className="text-center text-2xl sm:text-4xl font-heading font-bold py-6">
             GarbhaGudi – Certified Healthy Workplace
           </h1>
-          <Link href="/about/awards-and-accolades/garbhagudi-certified-healthy-workplace">
+          <Link
+            legacyBehavior
+            href="/about/awards-and-accolades/garbhagudi-certified-healthy-workplace"
+          >
             <a>
               <img
                 src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1657979955/Banner/Argoya_Silver_Award_Web_Bnr-min_bx7xeo.webp"
@@ -96,7 +99,12 @@ const IndexPage = ({ careers }) => {
         <div className="container mb-2 flex mx-auto w-full items-center justify-center">
           <li className="flex flex-wrap gap-4 mx-auto mt-6">
             {careers.map((items) => (
-              <Link href={`careers/${items?.slug}`} passHref key={items.id}>
+              <Link
+                legacyBehavior
+                href={`careers/${items?.slug}`}
+                passHref
+                key={items.id}
+              >
                 <a className="bg-white rounded-lg border shadow-md hover:bg-gray-100 w-96 max-w-sm mx-auto">
                   <div className="flex flex-col justify-between p-4 leading-normal ">
                     <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 font-content">

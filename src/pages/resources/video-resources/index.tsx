@@ -308,7 +308,10 @@ const IndexPage = ({
                       })}
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <Link href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1">
+                      <Link
+                        legacyBehavior
+                        href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1"
+                      >
                         <a className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
                           Subscribe
                         </a>
@@ -379,7 +382,10 @@ const IndexPage = ({
                       })}
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <Link href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1">
+                      <Link
+                        legacyBehavior
+                        href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1"
+                      >
                         <a className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
                           Subscribe
                         </a>
@@ -450,7 +456,10 @@ const IndexPage = ({
                       })}
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <Link href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1">
+                      <Link
+                        legacyBehavior
+                        href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1"
+                      >
                         <a className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
                           Subscribe
                         </a>
@@ -521,7 +530,7 @@ const IndexPage = ({
                       })}
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <Link href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1">
+                      <Link legacyBehavior href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1">
                         <a className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
                           Subscribe
                         </a>

@@ -122,7 +122,11 @@ const Home = ({ homeData }) => {
                     key={item?.id}
                     className="mb-2 transition-all duration-500 hover:shadow-2xl rounded-xl "
                   >
-                    <Link href={`/doctors/${item?.slug}`} passHref>
+                    <Link
+                      legacyBehavior
+                      href={`/doctors/${item?.slug}`}
+                      passHref
+                    >
                       <a>
                         <div className="space-y-4">
                           <img

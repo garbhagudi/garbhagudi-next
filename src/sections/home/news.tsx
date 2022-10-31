@@ -17,7 +17,7 @@ const data = [
       <div>
         Garbhagudi is delighted to announce IVF Packages that fit all your
         individual needs. To know more, book a free appointment or visit{" "}
-        <Link href={"/gg-care"}>
+        <Link legacyBehavior href={"/gg-care"}>
           <a className="font-semibold text-blue-600 hover:text-brandPink hover:underline">
             GG CARE
           </a>
@@ -82,7 +82,9 @@ const News = () => {
                     {item.desc}
                   </div>
                   <div className="px-3 py-2 mt-8 font-semibold text-white border w-28 bg-brandPink rounded-xl">
-                    <Link href={item.link}>Know More</Link>
+                    <Link legacyBehavior href={item.link}>
+                      Know More
+                    </Link>
                   </div>
                 </div>
               ))}

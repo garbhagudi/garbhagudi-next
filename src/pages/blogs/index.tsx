@@ -144,7 +144,11 @@ const Blogs = ({ blogs }) => {
                   </div>
                   <div className="mt-6 flex items-center">
                     <div className="flex-shrink-0">
-                      <Link href={`/doctors/${item.node.doctor.slug}`} passHref>
+                      <Link
+                        legacyBehavior
+                        href={`/doctors/${item.node.doctor.slug}`}
+                        passHref
+                      >
                         <a>
                           <span className="sr-only">
                             {item.node.doctor.name}
@@ -159,7 +163,10 @@ const Blogs = ({ blogs }) => {
                     </div>
                     <div className="ml-3">
                       <p className="text-sm font-medium text-gray-900">
-                        <Link href={`/doctors/${item.node.doctor.slug}`}>
+                        <Link
+                          legacyBehavior
+                          href={`/doctors/${item.node.doctor.slug}`}
+                        >
                           <a className="font-qs font-semibold">
                             {item.node.doctor.name}
                           </a>
