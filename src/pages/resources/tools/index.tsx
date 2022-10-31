@@ -88,47 +88,50 @@ const IndexPage = () => {
         </p>
         <ul className="mx-auto mt-4 space-y-4 font-semibold list-disc list-inside text-md font-content">
           <li>
-            <Link href="/blogs/page/1">
+            <Link legacyBehavior href="/blogs/page/1">
               <a className="hover:underline underline-offset-2">Blogs</a>
             </Link>
           </li>
           <li>
-            <Link href="/resources/causes">
+            <Link legacyBehavior href="/resources/causes">
               <a className="hover:underline underline-offset-2">
                 Causes of Infertility
               </a>
             </Link>
           </li>
           <li>
-            <Link href="/resources/diagnosis">
+            <Link legacyBehavior href="/resources/diagnosis">
               <a className="hover:underline underline-offset-2">
                 Diagnosis Methods
               </a>
             </Link>
           </li>
           <li>
-            <Link href="/resources/treatments">
+            <Link legacyBehavior href="/resources/treatments">
               <a className="hover:underline underline-offset-2">
                 Treatment Options
               </a>
             </Link>
           </li>
           <li>
-            <Link href="/resources/myths-and-facts">
+            <Link legacyBehavior href="/resources/myths-and-facts">
               <a className="hover:underline underline-offset-2">
                 Myths and Facts
               </a>
             </Link>
           </li>
           <li>
-            <Link href="https://consult.bestdocapp.com/home/GARBHAGUDI">
+            <Link
+              legacyBehavior
+              href="https://consult.bestdocapp.com/home/GARBHAGUDI"
+            >
               <a className="hover:underline underline-offset-2">
                 Book an Appointment
               </a>
             </Link>
           </li>
           <li>
-            <Link href="tel:+918880000909">
+            <Link legacyBehavior href="tel:+918880000909">
               <a className="hover:underline underline-offset-2">
                 Speak to our Executives
               </a>

@@ -250,7 +250,7 @@ export function About() {
               <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
                 <div className="relative grid grid-cols-2 gap-8 p-5 bg-white lg:grid-cols-2">
                   {aboutUs.map((item) => (
-                    <Link key={item.name} href={item.href}>
+                    <Link legacyBehavior key={item.name} href={item.href}>
                       <a
                         onClick={() => close()}
                         className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none"
@@ -304,7 +304,12 @@ export function Treatment() {
               <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
                 <div className="relative grid grid-cols-2 gap-8 p-5 bg-white lg:grid-cols-3">
                   {valueAddedServices.map((item) => (
-                    <Link key={item.name} href={item.href} passHref>
+                    <Link
+                      legacyBehavior
+                      key={item.name}
+                      href={item.href}
+                      passHref
+                    >
                       <a
                         className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                         onClick={() => close()}
@@ -357,7 +362,12 @@ export function KnowledgeCenter() {
               <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
                 <div className="relative grid grid-cols-2 gap-8 p-5 bg-white">
                   {Resources.map((item) => (
-                    <Link key={item.name} href={item.href} passHref>
+                    <Link
+                      legacyBehavior
+                      key={item.name}
+                      href={item.href}
+                      passHref
+                    >
                       <a
                         className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                         onClick={() => close()}
@@ -413,7 +423,12 @@ export function Contact() {
               <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 p-5 bg-white lg:grid-cols-1">
                   {contact.map((item) => (
-                    <Link key={item.name} href={item.href} passHref>
+                    <Link
+                      legacyBehavior
+                      key={item.name}
+                      href={item.href}
+                      passHref
+                    >
                       <a
                         onClick={() => close()}
                         className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
@@ -466,7 +481,7 @@ export function Locations() {
               <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 p-5 bg-white lg:grid-cols-1">
                   {Location.map((item) => (
-                    <Link key={item.name} href={item.href}>
+                    <Link legacyBehavior key={item.name} href={item.href}>
                       <a
                         onClick={() => close()}
                         className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"

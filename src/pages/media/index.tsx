@@ -48,7 +48,7 @@ const IndexPage = ({ medias }) => {
                 {items.description}
               </div>
               <div className="mt-4">
-                <Link href={items.articleLink}>
+                <Link legacyBehavior href={items.articleLink}>
                   <a
                     target={"_blank"}
                     className="font-content text-lg text-center flex items-center justify-center px-3 py-2 border text-white font-extrabold bg-brandPink4 hover:bg-brandPink rounded-md"

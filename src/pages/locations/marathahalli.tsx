@@ -109,7 +109,11 @@ const Marathahalli = ({ doctors }) => {
                   if (item.location?.includes("Marathahalli")) {
                     return (
                       <div className="text-center" key={item?.id}>
-                        <Link href={`/doctors/${item?.slug}`} passHref>
+                        <Link
+                          legacyBehavior
+                          href={`/doctors/${item?.slug}`}
+                          passHref
+                        >
                           <a>
                             <div className="space-y-4">
                               <img

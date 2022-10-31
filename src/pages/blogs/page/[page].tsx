@@ -122,6 +122,7 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
                     <div className="mt-6 flex items-center">
                       <div className="flex-shrink-0">
                         <Link
+                          legacyBehavior
                           href={`/doctors/${item?.node?.doctor?.slug}`}
                           passHref
                         >
@@ -139,7 +140,10 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
                       </div>
                       <div className="ml-3">
                         <p className="text-sm font-medium text-gray-900">
-                          <Link href={`/doctors/${item?.node?.doctor?.slug}`}>
+                          <Link
+                            legacyBehavior
+                            href={`/doctors/${item?.node?.doctor?.slug}`}
+                          >
                             <a className="font-qs font-semibold">
                               {item?.node?.doctor?.name}
                             </a>
@@ -156,14 +160,20 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
             </div>
             <div className="flex justify-center space-x-4 text-center mt-10">
               {hasPreviousPage ? (
-                <Link href={`/blogs/page/${currentPageNumber - 1}`}>
+                <Link
+                  legacyBehavior
+                  href={`/blogs/page/${currentPageNumber - 1}`}
+                >
                   <a className="my-8 rounded-xl w-44 py-4 px-6 bg-brandPink font-qs font-semibold text-white">
                     {"< "}Previous page
                   </a>
                 </Link>
               ) : null}
               {hasNextPage ? (
-                <Link href={`/blogs/page/${currentPageNumber + 1}`}>
+                <Link
+                  legacyBehavior
+                  href={`/blogs/page/${currentPageNumber + 1}`}
+                >
                   <a className="my-8 rounded-xl py-4 w-44 px-6 bg-brandPink font-qs font-semibold text-white">
                     Next page {">"}
                   </a>
