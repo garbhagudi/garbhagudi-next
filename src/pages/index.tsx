@@ -124,7 +124,7 @@ const Home = ({ homeData }) => {
                   >
                     <Link
                       legacyBehavior
-                      href={`/doctors/${item?.slug}`}
+                      href={`/fertility-experts/${item?.slug}`}
                       passHref
                     >
                       <a>

@@ -119,7 +119,7 @@ const Doctor = ({ doctor }) => {
       </Head>
       <BreadCrumbs
         text1={"Our Fertility Experts"}
-        link1="/locations/fertility-experts"
+        link1="/fertility-experts"
         text2={doctor?.name}
         link2="#"
         link3={""}
@@ -581,9 +581,9 @@ const Doctor = ({ doctor }) => {
                 <div className="mt-10 py-10 border-t border-gray-300">
                   <div className="flex justify-center">
                     <div className="w-full lg:w-9/12 px-4">
-                      <p className="mb-4 text-gray-800 prose">
+                      <div className="mb-4 text-gray-800 prose">
                         <RichText content={doctor?.bio?.raw?.children} />
-                      </p>
+                      </div>
                     </div>
                   </div>
                   <Share pinmedia={doctor?.image?.url} />

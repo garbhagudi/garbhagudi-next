@@ -24,7 +24,7 @@ const features = [
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840305/Icons/Features/Top_Fertility_Specialists_zkyl9x.svg",
     content:
       "Team of fertility specialists like gynecologists, embryologists, technicians and staff to help you conceive.",
-    link: "/locations/fertility-experts",
+    link: "/fertility-experts",
   },
   {
     id: 4,

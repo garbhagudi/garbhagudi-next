@@ -1,23 +1,11 @@
 const nextConfig = {
   reactStrictMode: true,
+  trailingSlash: true,
   swcMinify: true,
   images: {
     domains: ["res.cloudinary.com"],
   },
-  async redirects() {
-    return [
-      {
-        source: "/locations/south-end-circle",
-        destination: "/locations/jayanagar",
-        permanent: true,
-      },
-      {
-        source: "/kn",
-        destination: "https://kannada.garbhagudi.com",
-        permanent: true,
-      },
-    ];
-  },
+
   async rewrites() {
     return [
       {
@@ -30,9 +18,37 @@ const nextConfig = {
       },
     ];
   },
-};
 
-module.exports = nextConfig;
+  async redirects() {
+    return [
+      {
+        source: "/locations/south-end-circle/",
+        destination: "/locations/jayanagar",
+        permanent: true,
+      },
+      {
+        source: "/resources/treatments/",
+        destination: "/treatments",
+        permanent: true,
+      },
+      {
+        source: "/resources/treatments/:slug",
+        destination: "/treatments/:slug",
+        permanent: true,
+      },
+      {
+        source: "/doctors/:slug/",
+        destination: "/fertility-experts/:slug",
+        permanent: true,
+      },
+      {
+        source: "/kn/",
+        destination: "https://kannada.garbhagudi.com",
+        permanent: true,
+      },
+    ];
+  },
+};
 
 const withPWA = require("next-pwa")({
   dest: "public",
@@ -42,6 +58,4 @@ const withPWA = require("next-pwa")({
   sw: "service-worker.js",
 });
 
-module.exports = withPWA({
-  // next.js config
-});
+module.exports = withPWA(nextConfig);
