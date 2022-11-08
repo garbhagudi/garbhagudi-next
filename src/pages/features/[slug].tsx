@@ -84,7 +84,7 @@ const Vas = ({ valueAddedService }) => {
         <meta name="twitter:image" content={image} />
       </Head>
       <BreadCrumbs
-        link1="/#features"
+        link1="/features"
         text1="Features"
         link2={valueAddedService.title}
         text2={valueAddedService.title}

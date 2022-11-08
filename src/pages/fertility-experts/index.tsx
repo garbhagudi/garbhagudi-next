@@ -62,10 +62,10 @@ const IndexPage = ({ doctors }) => {
         />
       </Head>
       <BreadCrumbs
-        text1="About"
-        link1="/about/overview"
-        text2="Our Fertility Experts"
-        link2="#"
+        text1="Our Fertility Experts"
+        link1="/fertility-experts"
+        text2=""
+        link2=""
         link3={""}
         text3={""}
         link4={""}
@@ -233,7 +233,7 @@ const IndexPage = ({ doctors }) => {
                               <div className="text-center" key={item?.id}>
                                 <Link
                                   legacyBehavior
-                                  href={`/doctors/${item?.slug}`}
+                                  href={`/fertility-experts/${item?.slug}`}
                                   passHref
                                 >
                                   <a>
@@ -337,7 +337,7 @@ const IndexPage = ({ doctors }) => {
                               <div className="text-center" key={item.id}>
                                 <Link
                                   legacyBehavior
-                                  href={`/doctors/${item.slug}`}
+                                  href={`/fertility-experts/${item.slug}`}
                                   passHref
                                 >
                                   <a>
@@ -440,7 +440,7 @@ const IndexPage = ({ doctors }) => {
                               <div className="text-center" key={item.id}>
                                 <Link
                                   legacyBehavior
-                                  href={`/doctors/${item.slug}`}
+                                  href={`/fertility-experts/${item.slug}`}
                                   passHref
                                 >
                                   <a>
@@ -544,7 +544,7 @@ const IndexPage = ({ doctors }) => {
                               <div className="text-center" key={item.id}>
                                 <Link
                                   legacyBehavior
-                                  href={`/doctors/${item.slug}`}
+                                  href={`/fertility-experts/${item.slug}`}
                                   passHref
                                 >
                                   <a>
@@ -648,7 +648,7 @@ const IndexPage = ({ doctors }) => {
                               <div className="text-center" key={item.id}>
                                 <Link
                                   legacyBehavior
-                                  href={`/doctors/${item.slug}`}
+                                  href={`/fertility-experts/${item.slug}`}
                                   passHref
                                 >
                                   <a>

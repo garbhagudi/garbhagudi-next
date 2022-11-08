@@ -107,12 +107,12 @@ const Treatment = ({ treatment }) => {
         <meta name="twitter:image" content={treatment?.image.url} />
       </Head>
       <BreadCrumbs
-        link1="/resources/treatments"
-        text1="Resources"
-        link2={"/resources/treatments"}
-        text2={"Treatments"}
-        link3={"#"}
-        text3={treatment?.title}
+        link1="/treatments"
+        text1="Treatments"
+        link2={"#"}
+        text2={treatment?.title}
+        link3={""}
+        text3=""
         link4={""}
         text4={""}
       />

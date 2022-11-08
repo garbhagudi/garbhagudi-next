@@ -57,9 +57,9 @@ const IndexPage = ({ treatments }) => {
       </Head>
       <BreadCrumbs
         link1="/resources/treatments"
-        text1="Resources"
-        text2="Treatments"
-        link2="/resources/treatments"
+        text1="Treatments"
+        text2=""
+        link2=""
         link3={""}
         text3={""}
         link4={""}

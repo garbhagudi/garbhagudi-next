@@ -4,11 +4,12 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   About,
-  Treatment,
+  WhyGarbhaGudi,
+  Treatments,
   KnowledgeCenter,
-  Contact,
+  Contacts,
   Locations,
-  Language,
+  Languages,
 } from "components/header/popover";
 import LanguageSelect from "components/languageSelect";
 
@@ -49,7 +50,7 @@ const Nav = () => {
 
               <div className="hidden xl:block">
                 <div className="flex items-baseline pt-4 ml-16 space-x-4 ">
-                  <Link href="/" passHref>
+                  {/* <Link href="/" passHref>
                     <span
                       className={
                         router.pathname == "/"
@@ -57,29 +58,33 @@ const Nav = () => {
                           : "text-gray-700 hover:bg-brandPink hover:text-white px-2 py-2 rounded-2xl text-sm font-inter cursor-pointer"
                       }
                     >
-                      Home
+                      Treatments
                     </span>
-                  </Link>
+                  </Link> */}
+
+                  <span className="px-2 py-2 text-sm text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
+                    <Treatments />
+                  </span>
 
                   <span className="px-2 py-2 text-sm text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
                     <About />
                   </span>
 
                   <span className="px-2 py-2 text-sm text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
-                    <Treatment />
+                    <WhyGarbhaGudi />
                   </span>
 
                   <span className="px-2 py-2 text-sm text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
                     <KnowledgeCenter />
                   </span>
                   <span className="px-2 py-2 text-sm text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
-                    <Contact />
+                    <Contacts />
                   </span>
                   <span className="px-2 py-2 text-sm text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
                     <Locations />
                   </span>
                   <span className="px-2 py-2 text-sm text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
-                    <Language />
+                    <Languages />
                   </span>
 
                   <a
@@ -166,16 +171,22 @@ const Nav = () => {
           {(ref) => (
             <div className="mt-6 xl:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 sm:px-3">
-                <Link href="/">
+                {/* <Link href="/" legacyBehavior>
                   <a
                     className="block px-3 py-2 text-sm rounded-md text-brandDark hover:bg-brandPink hover:text-white font-content"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     Home
                   </a>
-                </Link>
+                </Link> */}
                 <span className="block px-3 py-2 text-sm rounded-md text-brandDark hover:bg-brandPink hover:text-white font-content">
-                  <span className="w-44" onClick={() => setIsOpen(!isOpen)}>
+                  <span>
+                    <Treatments />
+                  </span>
+                </span>
+
+                <span className="block px-3 py-2 text-sm rounded-md text-brandDark hover:bg-brandPink hover:text-white font-content">
+                  <span onClick={() => setIsOpen(!isOpen)}>
                     <About />
                   </span>
                 </span>
@@ -184,7 +195,7 @@ const Nav = () => {
                   className="block px-3 py-2 text-sm rounded-md text-brandDark hover:bg-brandPink hover:text-white font-content"
                   onClick={() => setIsOpen(!isOpen)}
                 >
-                  <Treatment />
+                  <WhyGarbhaGudi />
                 </span>
                 <span
                   className="block px-3 py-2 text-sm rounded-md text-brandDark hover:bg-brandPink hover:text-white font-content"
@@ -196,7 +207,7 @@ const Nav = () => {
                   className="block px-3 py-2 text-sm rounded-md text-brandDark hover:bg-brandPink hover:text-white font-content"
                   onClick={() => setIsOpen(!isOpen)}
                 >
-                  <Contact />
+                  <Contacts />
                 </span>
                 <span className="block px-3 py-2 text-sm rounded-md text-brandDark hover:bg-brandPink hover:text-white font-content">
                   <Locations />
