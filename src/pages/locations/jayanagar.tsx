@@ -65,7 +65,7 @@ const Jayanagar = ({ doctors }) => {
       </Head>
       <BreadCrumbs
         text1="Locations"
-        link1="/locations/fertility-experts"
+        link1="/fertility-experts"
         text2="Jayanagar"
         link2="#"
         link3={""}
@@ -113,7 +113,7 @@ const Jayanagar = ({ doctors }) => {
                   return (
                     <div className="text-center" key={item?.id}>
                       <Link
-                        href={`/doctors/${item?.slug}`}
+                        href={`/fertility-experts/${item?.slug}`}
                         passHref
                         legacyBehavior
                       >
