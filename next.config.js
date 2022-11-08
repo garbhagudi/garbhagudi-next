@@ -1,6 +1,5 @@
 const nextConfig = {
   reactStrictMode: true,
-  trailingSlash: true,
   swcMinify: true,
   images: {
     domains: ["res.cloudinary.com"],
@@ -22,12 +21,17 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/locations/south-end-circle/",
+        source: "/locations/south-end-circle",
         destination: "/locations/jayanagar",
         permanent: true,
       },
       {
-        source: "/resources/treatments/",
+        source: "/locations/fertility-experts",
+        destination: "/fertility-experts",
+        permanent: true,
+      },
+      {
+        source: "/resources/treatments",
         destination: "/treatments",
         permanent: true,
       },
@@ -37,12 +41,12 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/doctors/:slug/",
+        source: "/doctors/:slug",
         destination: "/fertility-experts/:slug",
         permanent: true,
       },
       {
-        source: "/kn/",
+        source: "/kn",
         destination: "https://kannada.garbhagudi.com",
         permanent: true,
       },
