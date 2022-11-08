@@ -65,7 +65,7 @@ const HanumanthaNagar = ({ doctors }) => {
       </Head>
       <BreadCrumbs
         text1="Locations"
-        link1="/locations/fertility-experts"
+        link1="/fertility-experts"
         text2="Hanumanthanagar"
         link2="#"
         link3={""}
@@ -108,7 +108,7 @@ const HanumanthaNagar = ({ doctors }) => {
         <div className="py-6 flex flex-wrap lg:flex-nowrap inset-0 ">
           <div className="lg:w-1/2 md:w-full bg-white flex flex-col md:ml-auto w-full pb-8 md:mt-0 min-h-max">
             <p className="text-center font-qs text-2xl font-semibold mb-10 mt-7 lg:mt-0">
-              Fertility Specialists at HanumanthaNagar
+              Fertility Specialists at Hanumanthanagar
             </p>
             <div className="mx-auto space-y-0 grid grid-cols-2 sm:gap-y-10 sm:gap-x-32 sm:space-y-0 lg:grid-cols-2 lg:max-w-7xl col-span-full">
               {doctors.map((item) => {
@@ -117,7 +117,7 @@ const HanumanthaNagar = ({ doctors }) => {
                     <div className="text-center" key={item?.id}>
                       <Link
                         legacyBehavior
-                        href={`/doctors/${item?.slug}`}
+                        href={`/fertility-experts/${item?.slug}`}
                         passHref
                       >
                         <a>

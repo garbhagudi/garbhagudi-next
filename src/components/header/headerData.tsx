@@ -311,7 +311,7 @@ export const AboutUs = [
   },
   {
     name: "Dr Asha S Vijay",
-    href: "/doctors/dr-asha-s-vijay",
+    href: "/fertility-experts/dr-asha-s-vijay",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/Asha_Vijay_zpq05s.svg",
   },
   {
