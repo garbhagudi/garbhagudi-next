@@ -67,6 +67,11 @@ function MyApp({ Component, pageProps }) {
           href={`https://garbhagudi.com${router.pathname}`}
           hrefLang="en-us"
         />
+
+        <link
+          rel="canonical"
+          href={`https://garbhagudi.com${router.pathname}`}
+        />
       </Head>
       {loading ? (
         <Loading />
