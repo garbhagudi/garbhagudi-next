@@ -79,9 +79,9 @@ const Features = () => {
   return (
     <div className="relative bg-white py-8 sm:py-18" id="features">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-        <p className="mt-2 text-3xl font-extrabold text-brandDark tracking-tight sm:text-4xl font-heading">
+        <h1 className="mt-2 text-3xl font-extrabold text-brandDark tracking-tight sm:text-4xl font-heading">
           Our Versatile Approach
-        </p>
+        </h1>
         <p className="mt-5 max-w-prose mx-auto text-md text-brandDark font-content">
           At GarbhaGudi, we understand that fertility treatments can be mentally
           and physically stressful. We are always committed to providing a world

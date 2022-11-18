@@ -66,9 +66,9 @@ const IndexPage = ({ treatments }) => {
         text4={""}
       />
       <div className="max-w-7xl mx-auto">
-        <div className="text-center text-4xl font-heading pt-12 font-semibold">
+        <h1 className="text-center text-4xl font-heading pt-12 font-semibold">
           Treatment Options
-        </div>
+        </h1>
         <div className="w-full max-w-7xl px-2 py-16 sm:px-0">
           <Tab.Group>
             <Tab.List className={"flex p-1 space-x-1 bg-brandPink rounded-xl"}>

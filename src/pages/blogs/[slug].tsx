@@ -242,13 +242,13 @@ const Blog = ({ blog }) => {
                   {blog?.doctor?.name}
                 </span>
               </h1>
-              <figure>
-                <img
-                  className="w-full rounded-3xl mt-10 mb-8"
-                  src={blog?.image?.url}
-                  alt={blog?.title}
-                />
-              </figure>
+
+              <img
+                className="w-full rounded-3xl mt-10 mb-8"
+                src={blog?.image?.url}
+                alt={blog?.title}
+              />
+
               <hr className="h-[6px] bg-gradient-to-r from-white  via-brandPurpleDark to-white rounded-3xl" />
               <div>
                 <RichText content={blog?.content?.raw.children} />

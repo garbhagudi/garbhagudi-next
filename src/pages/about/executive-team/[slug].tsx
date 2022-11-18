@@ -77,7 +77,7 @@ const ExecutiveTeam = ({ director }) => {
         />
         <meta
           name="description"
-          content={director?.bio?.raw.children.slice(0, 180)}
+          content={director?.bio?.raw.children.slice(0, 160)}
         />
 
         {/* Open Graph / Facebook */}
@@ -90,7 +90,7 @@ const ExecutiveTeam = ({ director }) => {
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"
-          content={director?.bio?.text.slice(0, 180)}
+          content={director?.bio?.text.slice(0, 160)}
         />
         <meta property="og:type" content="website" />
         <meta
@@ -108,7 +108,7 @@ const ExecutiveTeam = ({ director }) => {
         />
         <meta
           name="twitter:description"
-          content={director?.bio?.raw.children.slice(0, 180)}
+          content={director?.bio?.raw.children.slice(0, 160)}
         />
         <meta
           name="twitter:image"
@@ -145,9 +145,9 @@ const ExecutiveTeam = ({ director }) => {
                   />
                 </div>
                 <div className="flex flex-col items-center text-center justify-center">
-                  <h2 className="title-font mt-4 text-gray-900 text-2xl font-semibold font-heading">
+                  <h1 className="title-font mt-4 text-gray-900 text-2xl font-semibold font-heading">
                     {director?.name}
-                  </h2>
+                  </h1>
                   <div className="w-12 h-1 bg-brandPink rounded mt-2 mb-4 "></div>
                   <div className="text-base font-content font-semibold">
                     {director?.details}

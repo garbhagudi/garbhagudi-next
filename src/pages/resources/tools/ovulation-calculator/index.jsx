@@ -63,9 +63,9 @@ const IndexPage = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <div className="container text-center mx-auto">
-            <h4 className="pt-8 text-3xl sm:text-4xl font-bold font-heading">
+            <h1 className="pt-8 text-3xl sm:text-4xl font-bold font-heading">
               Ovulation and Pregnancy Due Date Calculator
-            </h4>
+            </h1>
             <p className="text-sm mt-3 px-2 sm:px-0">
               Menstrual periods are different from woman to woman and month to
               month. Use this calculator to see when you may be ovulating to

@@ -72,7 +72,7 @@ const Blog = ({ cause }) => {
           name="title"
           content={`${cause?.title} | GarbhaGudi IVF Centre`}
         />
-        <meta name="description" content={cause?.content?.text.slice(0, 180)} />
+        <meta name="description" content={cause?.content?.text.slice(0, 160)} />
 
         {/* Open Graph / Facebook */}
 
@@ -84,7 +84,7 @@ const Blog = ({ cause }) => {
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"
-          content={cause?.content?.text.slice(0, 180)}
+          content={cause?.content?.text.slice(0, 160)}
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={cause?.image.url} />
@@ -99,7 +99,7 @@ const Blog = ({ cause }) => {
         />
         <meta
           name="twitter:description"
-          content={cause?.content?.text.slice(0, 180)}
+          content={cause?.content?.text.slice(0, 160)}
         />
         <meta name="twitter:image" content={cause?.image.url} />
       </Head>
