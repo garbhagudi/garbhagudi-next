@@ -16,23 +16,6 @@ function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = React.useState(false);
 
   useEffect(() => {
-    import("react-facebook-pixel")
-      .then((x) => x.default)
-      .then((ReactPixel) => {
-        ReactPixel.init("2326481447668134");
-        ReactPixel.pageView();
-        router.events.on("routeChangeComplete", () => {
-          ReactPixel.pageView();
-          return () => {
-            router.events.off("routeChangeComplete", () => {
-              ReactPixel.pageView();
-            });
-          };
-        });
-      });
-  }, [router.events]);
-
-  useEffect(() => {
     TagManager.initialize({ gtmId: "GTM-5T77DVZ" });
   }, []);
 
