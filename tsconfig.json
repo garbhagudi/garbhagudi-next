@@ -18,16 +18,11 @@
     "jsx": "preserve"
   },
   "include": [
-    "src/lib/google-analytics/index.js",
-    "src/components/breadcrumbs.js",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "src/components/SalesIQ.js",
-    "src/pages/tools/ovulation-calculator/index..jsx",
-    "src/sections/media/videoplayer.jsx",
-    "src/sections/media/containers/Player.jsx",
-    "worker/index.js"
+    "src/pages/tools/ovulation-calculator/index..jsx"
   ],
   "exclude": ["node_modules"]
 }
