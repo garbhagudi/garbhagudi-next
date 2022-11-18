@@ -74,7 +74,7 @@ const Treatment = ({ treatment }) => {
         />
         <meta
           name="description"
-          content={treatment?.content?.text.slice(0, 180)}
+          content={treatment?.content?.text.slice(0, 160)}
         />
 
         {/* Open Graph / Facebook */}
@@ -87,7 +87,7 @@ const Treatment = ({ treatment }) => {
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"
-          content={treatment?.content?.text.slice(0, 180)}
+          content={treatment?.content?.text.slice(0, 160)}
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={treatment?.image.url} />
@@ -102,7 +102,7 @@ const Treatment = ({ treatment }) => {
         />
         <meta
           name="twitter:description"
-          content={treatment?.content?.text.slice(0, 180)}
+          content={treatment?.content?.text.slice(0, 160)}
         />
         <meta name="twitter:image" content={treatment?.image.url} />
       </Head>

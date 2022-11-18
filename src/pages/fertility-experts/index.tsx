@@ -23,7 +23,7 @@ const IndexPage = ({ doctors }) => {
         />
         <meta
           name="description"
-          content="Our team of fertility specialists has been known for their extensive clinical experience and research contributions and their success in treating the most challenging fertility cases."
+          content="Our team of fertility specialists are known for their extensive clinical experience, research & their success in treating the most challenging cases."
         />
 
         {/* Open Graph / Facebook */}
@@ -36,7 +36,7 @@ const IndexPage = ({ doctors }) => {
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"
-          content="Our team of fertility specialists has been known for their extensive clinical experience and research contributions and their success in treating the most challenging fertility cases."
+          content="Our team of fertility specialists are known for their extensive clinical experience, research & their success in treating the most challenging cases."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -54,7 +54,7 @@ const IndexPage = ({ doctors }) => {
         />
         <meta
           name="twitter:description"
-          content="Our team of fertility specialists has been known for their extensive clinical experience and research contributions and their success in treating the most challenging fertility cases."
+          content="Our team of fertility specialists are known for their extensive clinical experience, research & their success in treating the most challenging cases."
         />
         <meta
           name="twitter:image"

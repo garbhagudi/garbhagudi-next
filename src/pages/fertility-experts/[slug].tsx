@@ -86,7 +86,7 @@ const Doctor = ({ doctor }) => {
           name="title"
           content={`${doctor?.name} - Fertility Specialist | GarbhaGudi IVF Centre`}
         />
-        <meta name="description" content={doctor?.bio?.text.slice(0, 180)} />
+        <meta name="description" content={doctor?.bio?.text.slice(0, 160)} />
 
         {/* Open Graph / Facebook */}
 
@@ -98,7 +98,7 @@ const Doctor = ({ doctor }) => {
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"
-          content={doctor?.bio?.text.slice(0, 180)}
+          content={doctor?.bio?.text.slice(0, 160)}
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={doctor?.image.url} />
@@ -113,7 +113,7 @@ const Doctor = ({ doctor }) => {
         />
         <meta
           name="twitter:description"
-          content={doctor?.bio?.text.slice(0, 180)}
+          content={doctor?.bio?.text.slice(0, 160)}
         />
         <meta name="twitter:image" content={doctor?.image.url} />
       </Head>

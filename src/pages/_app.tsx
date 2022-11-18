@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
           href={`https://garbhagudi.com${router.pathname}`}
           hrefLang="en-us"
         />
-
+        <meta http-equiv="content-language" content="en-gb"></meta>
         <link
           rel="canonical"
           href={`https://garbhagudi.com${router.pathname}`}

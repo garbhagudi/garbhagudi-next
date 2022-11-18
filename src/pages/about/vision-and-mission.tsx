@@ -16,7 +16,7 @@ const VisionMission = () => {
         />
         <meta
           name="description"
-          content="Spanning over a decade, GarbhaGudi has served as a beacon of hope to thousands of infertile couples. Our experienced and dedicated specialists, nurses, and embryologists work to cater for your needs and respond to them quickly, professionally and warmly. "
+          content="GarbhaGudi has served as a beacon of hope to thousands of infertile couples. Our experienced specialists, nurses, & embryologists work to cater for your needs"
         />
 
         {/* Open Graph / Facebook */}
@@ -29,7 +29,7 @@ const VisionMission = () => {
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"
-          content="Spanning over a decade, GarbhaGudi has served as a beacon of hope to thousands of infertile couples. Our experienced and dedicated specialists, nurses, and embryologists work to cater for your needs and respond to them quickly, professionally and warmly. "
+          content="GarbhaGudi has served as a beacon of hope to thousands of infertile couples. Our experienced specialists, nurses, & embryologists work to cater for your needs"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -44,7 +44,7 @@ const VisionMission = () => {
         <meta name="twitter:title" content=" | GarbhaGudi IVF Centre" />
         <meta
           name="twitter:description"
-          content="Spanning over a decade, GarbhaGudi has served as a beacon of hope to thousands of infertile couples. Our experienced and dedicated specialists, nurses, and embryologists work to cater for your needs and respond to them quickly, professionally and warmly. "
+          content="GarbhaGudi has served as a beacon of hope to thousands of infertile couples. Our experienced specialists, nurses, & embryologists work to cater for your needs"
         />
         <meta
           name="twitter:image"
@@ -63,6 +63,9 @@ const VisionMission = () => {
       />
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
+          <h1 className="text-4xl lg:text-5xl font-heading text-center pb-16 font-bold underline">
+            Mission & Vision of GarbhaGudi
+          </h1>
           <div className="flex flex-wrap -mx-4 -mb-10 text-center">
             <div className="sm:w-1/2 mb-10 px-4">
               <h2 className="title-font text-3xl font-heading font-semibold text-brandliteGray mt-6 mb-3">

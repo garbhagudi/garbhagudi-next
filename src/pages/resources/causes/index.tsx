@@ -66,9 +66,9 @@ const IndexPage = ({ causes }) => {
         link4={""}
         text4={""}
       />
-      <div className="max-w-7xl mx-auto text-center text-4xl font-heading pt-12 font-semibold">
+      <h1 className="max-w-7xl mx-auto text-center text-4xl font-heading pt-12 font-semibold">
         Causes of Infertility
-      </div>
+      </h1>
       <p className="max-w-7xl mx-auto text-center pt-6 font-semibold font-content">
         Infertility may be caused by a number of different factors, in either
         the male or female reproductive systems. However, it is sometimes not

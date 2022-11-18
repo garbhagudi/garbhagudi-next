@@ -64,9 +64,9 @@ const IndexPage = ({ diagnoses }) => {
           link4={""}
           text4={""}
         />
-        <div className="max-w-7xl mx-auto text-center text-4xl font-heading pt-12 font-semibold">
+        <h1 className="max-w-7xl mx-auto text-center text-4xl font-heading pt-12 font-semibold">
           Diagnosis
-        </div>
+        </h1>
         <p className="max-w-7xl mx-auto text-center pt-6 font-semibold font-content px-2">
           There are a number of diagnostic tools available to help pinpoint the
           cause of infertility. Some of them may include:

@@ -15,7 +15,7 @@ const IndexPage = ({ careers }) => {
         <meta name="title" content="Careers | GarbhaGudi IVF Centre" />
         <meta
           name="description"
-          content="At GarbhaGudi, we’re all on a mission to transform the way infertility is treated, one patient at a time. If you feel that you need an organization where you can do your best work, call us now!"
+          content="We’re all on a mission to transform the way infertility is treated. If you feel that you need an organization where you can do your best work, call us now!"
         />
 
         {/* Open Graph / Facebook */}
@@ -25,7 +25,7 @@ const IndexPage = ({ careers }) => {
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"
-          content="At GarbhaGudi, we’re all on a mission to transform the way infertility is treated, one patient at a time. If you feel that you need an organization where you can do your best work, call us now!"
+          content="We’re all on a mission to transform the way infertility is treated. If you feel that you need an organization where you can do your best work, call us now!"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -40,7 +40,7 @@ const IndexPage = ({ careers }) => {
         <meta name="twitter:title" content="Career | GarbhaGudi IVF Centre" />
         <meta
           name="twitter:description"
-          content="At GarbhaGudi, we’re all on a mission to transform the way infertility is treated, one patient at a time. If you feel that you need an organization where you can do your best work, call us now!"
+          content="We’re all on a mission to transform the way infertility is treated. If you feel that you need an organization where you can do your best work, call us now!"
         />
         <meta
           name="twitter:image"

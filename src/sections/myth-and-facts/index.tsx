@@ -5,9 +5,9 @@ const IndexPage = () => {
     <div className="bg-white ">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
         <div className="max-w-2xl lg:mx-auto lg:text-center">
-          <h2 className="text-3xl font-bold tracking-tight font-heading text-gray-900 sm:text-4xl">
+          <h1 className="text-3xl font-bold tracking-tight font-heading text-gray-900 sm:text-4xl">
             Mythbusters
-          </h2>
+          </h1>
           <p className="mt-4 text-brandDark">
             Here are some of the most common myths related to health and
             fertility and the associated facts.
