@@ -8,7 +8,6 @@ import graphcms from "lib/graphcms";
 import { useRouter } from "next/router";
 import Share from "components/share";
 import Loading from "components/Loading";
-// import { HiOutlineHeart } from "react-icons/hi";
 
 export const getStaticProps = async ({ params }) => {
   const { blog } = await graphcms.request(
@@ -33,7 +32,6 @@ export const getStaticProps = async ({ params }) => {
           text
         }
         publishedOn
-        likes
       }
     }
   `,
@@ -64,20 +62,48 @@ export async function getStaticPaths() {
   };
 }
 
-// const UpdateLikes = async (slug: any, likes: any) => {
-//   await fetch("/api/updateLike", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application.json",
-//     },
-//     body: JSON.stringify({ slug, likes }),
-//   });
-// };
-
 const Blog = ({ blog }) => {
-  // const [likes, setLikes] = useState(blog?.likes);
   const title = `${blog?.title} | GarbhaGudi IVF Centre`;
   const router = useRouter();
+
+  function addBlogJsonLd() {
+    return {
+      __html: `
+      {
+        "@context": "https://schema.org/",
+        "@type": "Article",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://garbhagudi.com/blogs/${blog?.slug}"
+        },
+        "headline": "${blog?.title}",
+        "description": "${blog?.content?.text.slice(0, 160)}",
+        "image": {
+          "@type": "ImageObject",
+          "url": "${blog?.image?.url}",
+          "width": "1200",
+          "height": "630"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "${blog?.doctor?.name}"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "GarbhaGudi IVF Centre",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
+            "width": "256",
+            "height": "54"
+          }
+        },
+        "datePublished": "${blog?.publishedOn}"
+      }
+      `,
+    };
+  }
+
   if (router.isFallback) {
     return <Loading />;
   }
@@ -89,6 +115,15 @@ const Blog = ({ blog }) => {
         <title>{title}</title>
         <meta name="title" content={`${blog?.title} | GarbhaGudi`} />
         <meta name="description" content={blog?.content?.text.slice(0, 160)} />
+
+        {/* Ld+JSON Data */}
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addBlogJsonLd()}
+          key="org-jsonld"
+        />
+
         {/* Open Graph / Facebook */}
         <meta property="og:title" content={blog?.title} />
         <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
