@@ -69,11 +69,6 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
             name="twitter:image"
             content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Blog_Index_nqj7cm.jpg"
           />
-          <script
-            async
-            defer
-            src="https://cse.google.com/cse.js?cx=819a1e2fdaa884717"
-          ></script>
         </Head>
         <BreadCrumbs
           link1="/blogs/page/1"

@@ -68,6 +68,23 @@ const Doctor = ({ doctor }) => {
   const router = useRouter();
   const title = `${doctor?.name} - Fertility Specialist | GarbhaGudi IVF Centre`;
 
+  function addDocJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        "name": "${doctor?.name}",
+        "url": "https://garbhagudi.com/fertility-experts/${doctor?.slug}",
+        "image": "${doctor?.image?.url}",
+        "jobTitle": "${doctor?.designation}",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "GarbhaGudi IVF Centre"
+        }
+      }`,
+    };
+  }
+
   if (router.isFallback) {
     return (
       <div className="h-screen text-brandPink flex items-center justify-center text-content animate-ping">
@@ -87,6 +104,14 @@ const Doctor = ({ doctor }) => {
           content={`${doctor?.name} - Fertility Specialist | GarbhaGudi IVF Centre`}
         />
         <meta name="description" content={doctor?.bio?.text.slice(0, 160)} />
+
+        {/* Ld+JSON Data */}
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addDocJsonLd()}
+          key="org-jsonld"
+        />
 
         {/* Open Graph / Facebook */}
 

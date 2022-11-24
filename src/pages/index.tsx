@@ -26,6 +26,42 @@ const responsive = {
 };
 
 const Home = ({ homeData }) => {
+  function addOrgJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "GarbhaGudi IVF Centre Pvt Ltd",
+        "url": "https://garbhagudi.com",
+        "logo": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
+        "alternateName": "GarbhaGudi",
+        "sameAs": [
+          "https://twitter.com/garbhagudiivf",
+          "https://www.youtube.com/c/GarbhaGudiIVFCentre",
+          "https://www.linkedin.com/company/garbagudi",
+          "https://www.facebook.com/garbhagudiIVF/",
+          "https://api.whatsapp.com/send/?phone=918884183338&text=Hi."
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+918880000909",
+            "contactType": "customer service",
+            "email": "dreams@garbhagudi.com",
+            "areaServed": "IN",
+            "availableLanguage": [
+              "en",
+              "hi",
+              "kn",
+              "ml",
+              "te",
+              "ta"
+            ]
+          }
+        ]
+      }`,
+    };
+  }
   return (
     <div>
       <Head>
@@ -42,6 +78,13 @@ const Home = ({ homeData }) => {
         <meta
           name="description"
           content="GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art cutting-edge technology to address infertility."
+        />
+        {/* Ld+JSON Data */}
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addOrgJsonLd()}
+          key="org-jsonld"
         />
 
         {/* Open Graph / Facebook */}

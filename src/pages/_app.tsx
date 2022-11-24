@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeComplete", end);
       router.events.off("routeChangeError", end);
     };
-  });
+  }, [router.events]);
   return (
     <>
       <Head>
@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
           href={`https://garbhagudi.com${router.pathname}`}
           hrefLang="en-us"
         />
-        <meta http-equiv="content-language" content="en-gb"></meta>
+        <meta httpEquiv="content-language" content="en-gb"></meta>
         <link
           rel="canonical"
           href={`https://garbhagudi.com${router.pathname}`}

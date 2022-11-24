@@ -19,7 +19,7 @@ const BlogFooter = () => {
                 <img
                   className="object-cover object-center rounded-3xl shadow-2xl max-h-96 w-96"
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643701776/About/garbhagudi-ivf-center-bangalore-5f3b94a8e4de6_kk97e4.jpg"
-                  alt=""
+                  alt="gg logo"
                 />
               </div>
             </div>
