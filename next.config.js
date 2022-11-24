@@ -5,6 +5,21 @@ const nextConfig = {
     domains: ["res.cloudinary.com"],
   },
 
+  async headers() {
+    return [
+      {
+        source: "/:all*(svg|jpg|png|webp)",
+        locale: false,
+        headers: [
+          {
+            key: "cache-control",
+            value: "public, max-age=9999999999, must-revalidate",
+          },
+        ],
+      },
+    ];
+  },
+
   async rewrites() {
     return [
       {

@@ -16,6 +16,7 @@ export const getStaticProps = async ({ params }) => {
       blog(where: { slug: $slug }) {
         id
         title
+        slug
         image {
           url
         }
