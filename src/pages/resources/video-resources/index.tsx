@@ -321,7 +321,10 @@ const IndexPage = ({
                 </section>
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
-                    <div className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4 scrollbar-track-gray-600 lg:max-h-[38rem]">
+                    <div
+                      className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto customScrollbar lg:max-h-[38rem]"
+                      id="style-4"
+                    >
                       <div className="px-3 py-4 font-bold text-center text-md font-heading">
                         Recommended
                       </div>
@@ -395,7 +398,10 @@ const IndexPage = ({
                 </section>
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
-                    <div className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4 scrollbar-track-gray-600 lg:max-h-[38rem]">
+                    <div
+                      className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto customScrollbar lg:max-h-[38rem]"
+                      id="style-4"
+                    >
                       <div className="px-3 py-4 font-bold text-center text-md font-heading">
                         GarbhaSandesha
                       </div>
@@ -469,7 +475,10 @@ const IndexPage = ({
                 </section>
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
-                    <div className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4  scrollbar-track-gray-600 lg:max-h-[38rem]">
+                    <div
+                      className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto customScrollbar lg:max-h-[38rem]"
+                      id="style-4"
+                    >
                       <div className="px-3 py-4 font-bold text-center text-md font-heading">
                         TV Appearances
                       </div>
@@ -543,7 +552,10 @@ const IndexPage = ({
                 </section>
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
-                    <div className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto scrollbar-thin scrollbar-thumb-brandPink4 scrollbar-track-gray-600 lg:max-h-[38rem]">
+                    <div
+                      className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto customScrollbar lg:max-h-[38rem]"
+                      id="style-4"
+                    >
                       <div className="px-3 py-4 font-bold text-center text-md font-heading">
                         Testimonials
                       </div>

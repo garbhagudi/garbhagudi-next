@@ -7,6 +7,12 @@ module.exports = {
   presets: [],
   darkMode: "media", // or 'class'
   theme: {
+    extend: {
+      backgroundImage: {
+        celebrationImage:
+          "url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1669459462/Banner/cute-christmas-background-with-bokeh_oicilc.webp')",
+      },
+    },
     screens: {
       sm: "640px",
       md: "768px",
@@ -990,8 +996,4 @@ module.exports = {
     "active",
     "disabled",
   ],
-  plugins: [require("@tailwindcss/forms"), require("tailwind-scrollbar")],
-  variants: {
-    scrollbar: ["rounded"],
-  },
 };

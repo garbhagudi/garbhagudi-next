@@ -1,5 +1,5 @@
 import React from "react";
-import { BsChevronRight } from "react-icons/bs";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -27,10 +27,12 @@ const Hero = () => {
           <div className="sm:mt-16 lg:mt-0 lg:col-span-6 hidden md:block">
             <div className="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
               <div className="my-6">
-                <img
+                <Image
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643272918/Home/Home-Experience_the_Joy_kvdfwj.webp"
                   alt="Experience the joy of being complete"
                   className="object-cover rounded-2xl"
+                  width={1024}
+                  height={768}
                 />
               </div>
             </div>

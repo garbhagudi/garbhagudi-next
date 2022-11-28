@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const features = [
   {
@@ -97,9 +98,11 @@ const Features = () => {
                     <div className="-mt-6">
                       <div>
                         <span className="inline-flex items-center justify-center p-2 bg-brandPink rounded-full shadow-xl">
-                          <img
+                          <Image
                             src={feature.icon}
                             alt={feature.name}
+                            width="36"
+                            height={36}
                             className="h-9 w-9"
                             aria-hidden="true"
                           />

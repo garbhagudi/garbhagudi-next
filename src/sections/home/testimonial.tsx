@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Image from "next/image";
 
 export const generateDiceBearBottts = (seed) =>
   `https://avatars.dicebear.com/api/jdenticon/${seed}.svg`;
@@ -76,7 +77,13 @@ const Testimonial = () => {
           {data.map((item) => {
             return (
               <div className="relative" key={item.id}>
-                <img className="mx-auto h-8" src={item.logo} alt={item.name} />
+                <Image
+                  className="mx-auto h-8"
+                  src={item.logo}
+                  alt={item.name}
+                  width={120}
+                  height={32}
+                />
                 <blockquote className="mt-10">
                   <div className="max-w-3xl mx-auto text-center text-xl tracking-tight leading-9 font-medium text-gray-900 font-content">
                     <p>&quot;{item.quote}&quot;</p>
@@ -84,10 +91,12 @@ const Testimonial = () => {
                   <footer className="mt-8">
                     <div className="md:flex md:items-center md:justify-center">
                       <div className="md:flex-shrink-0">
-                        <img
+                        <Image
                           className="mx-auto h-14 w-14 rounded-full"
                           src={item.profile}
                           alt={item.name}
+                          width={56}
+                          height={56}
                         />
                       </div>
                       <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">

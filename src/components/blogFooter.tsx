@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const BlogFooter = () => {
   return (
@@ -16,10 +17,12 @@ const BlogFooter = () => {
             />
             <div className="max-w-md mx-auto px-8 sm:max-w-max lg:max-w-none lg:p-0 hidden lg:block">
               <div className="max-h-96">
-                <img
+                <Image
                   className="object-cover object-center rounded-3xl shadow-2xl max-h-96 w-96"
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643701776/About/garbhagudi-ivf-center-bangalore-5f3b94a8e4de6_kk97e4.jpg"
                   alt="gg logo"
+                  width={500}
+                  height={500}
                 />
               </div>
             </div>

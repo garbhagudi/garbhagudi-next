@@ -5,6 +5,7 @@ import Link from "next/link";
 import { gql, GraphQLClient } from "graphql-request";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Image from "next/image";
 
 const responsive = {
   superLargeDesktop: {
@@ -139,7 +140,13 @@ const Home = ({ homeData }) => {
         {homeData.banners.map((items) => (
           <div className="" key={items?.id}>
             <a href={items?.url} target="_blank" rel="noreferrer">
-              <img src={items?.image?.url} alt={items?.title} />
+              <Image
+                src={items?.image?.url}
+                alt={items?.title}
+                width={1920}
+                height={630}
+                className="w-full h-full"
+              />
             </a>
           </div>
         ))}
@@ -172,10 +179,12 @@ const Home = ({ homeData }) => {
                     >
                       <a>
                         <div className="space-y-4">
-                          <img
+                          <Image
                             className="w-32 h-32 mx-auto my-auto mt-4 transition-all duration-500 rounded-full xl:w-44 xl:h-44 hover:scale-110"
                             src={item?.image?.url}
                             alt={item?.name}
+                            width={500}
+                            height={500}
                           />
                           <div className="space-y-4">
                             <div className="space-y-1 text-lg font-medium leading-6">
