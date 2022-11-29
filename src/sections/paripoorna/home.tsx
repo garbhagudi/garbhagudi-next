@@ -22,18 +22,20 @@ const Home = () => {
             </div>
 
             <div className="font-content text-lg">
-              Our intention is to serve couple who are missing parenthood. With
-              our experience, we know that not every couple can afford IVF.
-              Keeping this in mind, GarbhaGudi IVF Centre in association with
-              GarbhaGnan Foundation, initiated a program called{" "}
+              Our intention is to serve maximum number of couples who are
+              missing out on experiencing the joy of parenthood. We know that
+              many couples cannot afford IVF. Keeping this in mind, GarbhaGudi
+              IVF Centre in association with GarbhaGnan Foundation, has
+              initiated this program called{" "}
               <span className="font-bold underline">PARIPOORNA-2022. </span>
               <br />
               <br />
               This December, celebrate the season of parenthood, with
               Paripoorna. GarbhaGudi IVF Centre is offering upto{" "}
-              <span className="font-bold underline">₹30,000/-</span> Visit the
-              GarbhaGudi branch nearest to you to avail the offer and take the
-              first steps in your journey towards completeness.
+              <span className="font-bold underline">₹30,000/-</span> off on your
+              IVF cycle cost. Visit the GarbhaGudi branch nearest to you to
+              avail the offer and take the first steps in your journey towards
+              completeness.
               <div className="mt-10 flex items-start md:items-center justify-between flex-col lg:flex-row space-y-3 lg:space-y-0">
                 <div className="font-content px-3 py-2 bg-brandPink text-white font-bold rounded-xl">
                   <WatchVideo />

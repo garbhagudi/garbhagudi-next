@@ -6,30 +6,30 @@ const TermsConditions = () => {
       <h3 className="text-3xl lg:text-4xl font-heading font-bold text-center py-10 lg:py-16">
         Terms and Conditions
       </h3>
-      <div className="max-w-7xl mx-auto font-content pb-10">
+      <div className="max-w-5xl mx-auto font-content pb-10 text-sm">
         The GarbhaGnan Foundation is one of the foremost foundations in the
-        country that offers specialised and the latest health care for women.
-        with growing rates of infertility across the globe due to varying diets,
-        lesser physical exertion, and so on. The GarbhaGnan Foundation remains
-        steadfast in helping women get unparalleled care from experienced
-        specialists.
+        country that offers specialised and the latest healthcare for women.
+        with growing rates of infertility across the globe due to various
+        reasons, The GarbhaGnan Foundation remains steadfast in helping in
+        helping couples experience the joy of parenthood and the bliss of family
+        life.
         <br />
         <br />
-        In its pursuit of rendering service to couples looking for progeny, the
+        In its pursuit of rendering service to couples looking for progeny,
         Garbhagnan Foundation has decided to offer{" "}
         <span className="font-bold">&quot;PARIPOORNA 2022&quot;</span>, where
-        the discount offered by the GarbhaGudi IVF Center is being borne by the
+        the discount offered by the GarbhaGudi IVF Center is being borne by
         GarbhaGnan Foundation as a part of its CSR activity. <br />
         <br />
         Deserving couples are selected by a committee put in place by the
-        GarbhaGnan Foundation. The selection process and merits are defined by
-        the GarbhaGnan Foundation and cannot be contested by any couple.
+        Foundation. The selection process and merits are defined by the
+        GarbhaGnan Foundation and the decision of the committee is final.
       </div>
       <ul role="list" className="space-y-3">
         {items.map((item) => (
           <li
             key={item.id}
-            className="bg-white shadow overflow-hidden px-4 py-4 sm:px-6 rounded-md text-left max-w-2xl mx-auto font-content"
+            className="bg-white text-sm shadow overflow-hidden px-4 py-4 sm:px-6 rounded-md text-left max-w-2xl mx-auto font-content"
           >
             {item.title}
           </li>
@@ -53,21 +53,39 @@ const items = [
     title:
       "Paripoorna cannot be combined with any other benefit plans provided at GarbhaGudi",
   },
-  { id: 3, title: "GarbhaGnan Foundation's decision awading is final" },
   {
-    id: 3,
+    id: 4,
+    title:
+      "Benefits will be decided by an internal committee and their decision is final",
+  },
+  {
+    id: 5,
     title:
       "Paripoorna Benefit plan is non-transferrable. Strictly, the benefit plan ends on the mentioned date, unless extended by the committee",
   },
   {
-    id: 3,
+    id: 6,
     title:
-      "On approval an amount of 50,000 to be paid to GarbhaGudi in Advance. Payment to be done fully by the suggested date. All the terms and conditions are subjected to change without notice which is at the sole discretion of the GarbhaGnan Foundation.",
+      "The benefit plan ends on the mentioned date, unless extended by the committee",
   },
   {
     id: 7,
     title:
-      "Other Terms and Conditions Apply, Please refer to the PARIPOORNA - 2022 Application form for more information",
+      "On approval an amount of 50,000 to be paid to GarbhaGudi in Advance. ",
+  },
+  {
+    id: 8,
+    title: "Advance payment has to be done within the suggested date.",
+  },
+  {
+    id: 9,
+    title:
+      "All the terms and conditions are subjected to change without notice which is at the sole discretion of the GarbhaGudi IVF Centre & GarbhaGnan Foundation.",
+  },
+  {
+    id: 10,
+    title:
+      "*Additional terms and conditions may apply. Please refer to the 'PARIPOORNA - 2022 Application form' for more information",
   },
 
   // More items...
