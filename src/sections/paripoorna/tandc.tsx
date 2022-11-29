@@ -25,11 +25,11 @@ const TermsConditions = () => {
         Foundation. The selection process and merits are defined by the
         GarbhaGnan Foundation and the decision of the committee is final.
       </div>
-      <ul role="list" className="space-y-3">
+      <ul role="list" className="pb-8">
         {items.map((item) => (
           <li
             key={item.id}
-            className="bg-white text-sm shadow overflow-hidden px-4 py-4 sm:px-6 rounded-md text-left max-w-2xl mx-auto font-content"
+            className="text-sm list-outside list-disc py-2 sm:px-6 rounded-md text-left max-w-5xl ml-4 lg:mx-auto font-content"
           >
             {item.title}
           </li>

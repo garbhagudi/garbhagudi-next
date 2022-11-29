@@ -11,8 +11,8 @@ const Paripoorna = () => {
     <div className="bg-[url('https://res.cloudinary.com/garbhagudiivf/image/upload/v1669643962/Banner/Bunting_kgdona.webp')] bg-no-repeat bg-contain overflow-x-hidden">
       <Home />
       <Steps />
-      <TermsConditions />
       <FAQ />
+      <TermsConditions />
       <Cta />
     </div>
   );
