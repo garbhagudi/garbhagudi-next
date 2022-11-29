@@ -3,6 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import Link from "next/link";
+import Image from "next/image";
 
 const Home = () => {
   return (
@@ -13,6 +14,13 @@ const Home = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="flex items-start justify-center flex-col px-3 lg:px-0">
+            <div className="font-heading text-2xl py-8 text-brandPink font-bold">
+              &quot;Get upto 30,000/-* off on your IVF Treatments&quot;
+              <span className="block text-right text-black text-xs">
+                *Terms and conditions apply
+              </span>
+            </div>
+
             <div className="font-content text-lg">
               Our intention is to serve couple who are missing parenthood. With
               our experience, we know that not every couple can afford IVF.
@@ -44,10 +52,12 @@ const Home = () => {
             </div>
           </div>
           <div className="flex items-center justify-center lg:ml-10">
-            <img
-              src="https://res.cloudinary.com/garbhagudi/image/upload/v1638004896/garbhagudi-ivf/Banners/papu_033_oz4xlk.webp"
+            <Image
+              src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1669644730/paripoorna/Paripoorna_Logo_Eng-min_tetlth.png"
               alt="pp logo"
-              className="scale-75 lg:scale-100"
+              width={500}
+              height={500}
+              className="aspect-square mx-auto scale-90 lg:scale-105"
             />
           </div>
         </div>

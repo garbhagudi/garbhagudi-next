@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Steps = () => {
   return (
@@ -86,10 +87,12 @@ const Steps = () => {
           </div>
         </div>
         <div className="relative md:col-span-2 lg:col-span-2">
-          <img
-            className="inset-0 object-cover object-bottom w-full h-56 rounded shadow-lg lg:absolute lg:h-full"
-            src="https://images.pexels.com/photos/3182759/pexels-photo-3182759.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-            alt=""
+          <Image
+            className="inset-0 object-cover object-bottom w-full rounded shadow-lg lg:absolute"
+            width={1024}
+            height={1024}
+            src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1669644725/paripoorna/Paripoorna_2022_Couple_Hor-min-compressed_xhckqj.jpg"
+            alt="couple with baby picture"
           />
         </div>
       </div>

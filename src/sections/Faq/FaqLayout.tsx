@@ -17,7 +17,7 @@ const AccordionLayout = ({
         onClick={() => handleSetIndex(index)}
         className="flex w-full justify-between px-3 sm:px-6 py-3 mt-3 rounded-xl text-brandDark bg-brandDark bg-opacity-20 hover:bg-opacity-80 hover:text-white hover:cursor-pointer"
       >
-        <div className="flexitems-center justify-center font-semibold text-md sm:text-xl ">
+        <div className="flexitems-center justify-center font-semibold text-md sm:text-lg ">
           <div className="font-content">{title}</div>
         </div>
 
