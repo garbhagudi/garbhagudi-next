@@ -69,6 +69,11 @@ const nextConfig = {
         destination: "https://kannada.garbhagudi.com",
         permanent: true,
       },
+      {
+        source: "/features/paripoorna",
+        destination: "/features/paripoorna-2022",
+        permanent: true,
+      },
     ];
   },
 };
