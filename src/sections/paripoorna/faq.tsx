@@ -105,12 +105,4 @@ const Data = [
       </div>
     ),
   },
-  {
-    title: `If I am taking treatment at another hospital (non GarbhaGudi hospital), can I still avail the offer to continue my treatment outside?    `,
-    contents: (
-      <div>
-        No, the PARIPOORNA benefit plan is valid only at GarbhaGudi IVF Centre.
-      </div>
-    ),
-  },
 ];
