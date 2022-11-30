@@ -60,8 +60,7 @@ const items = [
   },
   {
     id: 5,
-    title:
-      "Paripoorna Benefit plan is non-transferrable. Strictly, the benefit plan ends on the mentioned date, unless extended by the committee",
+    title: "Paripoorna Benefit plan is non-transferrable.",
   },
   {
     id: 6,
