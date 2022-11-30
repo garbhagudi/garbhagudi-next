@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Overview = () => {
   return (
@@ -46,10 +47,12 @@ const Overview = () => {
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
             {/* Testimonial card*/}
             <div className="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden">
-              <img
+              <Image
                 className="absolute inset-0 h-full w-full object-cover"
                 src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643273193/Home/Why_GarbhaGudi_oa1nv7.webp"
-                alt=""
+                alt="Dr Asha S Vijay Picture"
+                width={1024}
+                height={1024}
               />
               <div className="absolute inset-0 bg-gray-200 mix-blend-multiply" />
               <div className="absolute inset-0 bg-gradient-to-t from-brandPink via-gray-400 mix-blend-multiply" />

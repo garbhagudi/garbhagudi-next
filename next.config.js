@@ -2,7 +2,26 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["res.cloudinary.com"],
+    domains: [
+      "res.cloudinary.com",
+      "media.graphassets.com",
+      "avatars.dicebear.com",
+    ],
+  },
+
+  async headers() {
+    return [
+      {
+        source: "/:all*(svg|jpg|png|webp)",
+        locale: false,
+        headers: [
+          {
+            key: "cache-control",
+            value: "public, max-age=9999999999, must-revalidate",
+          },
+        ],
+      },
+    ];
   },
 
   async rewrites() {
@@ -54,12 +73,4 @@ const nextConfig = {
   },
 };
 
-const withPWA = require("next-pwa")({
-  dest: "public",
-  disable: process.env.NODE_ENV === "development",
-  register: true,
-  scope: "/app",
-  sw: "service-worker.js",
-});
-
-module.exports = withPWA(nextConfig);
+module.exports = nextConfig;

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const metrics = [
   {
@@ -29,10 +30,12 @@ const Stat = () => {
       <div className="absolute bottom-0 w-full h-80 xl:inset-0 xl:h-full">
         <div className="w-full h-full xl:grid xl:grid-cols-2">
           <div className="h-full xl:relative xl:col-start-2">
-            <img
+            <Image
               className="object-cover w-full h-full opacity-70 xl:absolute xl:inset-0"
               src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643272924/Home/Our_never_ending_s0dbde.webp"
-              alt="People working on laptops"
+              alt="Happy Couple"
+              height={1024}
+              width={1024}
             />
             <div
               aria-hidden="true"

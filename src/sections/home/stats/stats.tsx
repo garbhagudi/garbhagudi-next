@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 type Props = {};
 
@@ -18,10 +19,12 @@ const StatsPC = (props: Props) => {
                 onMouseEnter={() => setTooltipStatus(1)}
                 onMouseLeave={() => setTooltipStatus(0)}
               >
-                <img
+                <Image
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830364/Icons/Why%20GarbhaGudi/11-Years_bvg1gg.png"
                   alt="11+ years"
                   className="hover:scale-115 transition-all duration-500"
+                  width={200}
+                  height={200}
                 />
 
                 {tooltipStatus == 1 && (
@@ -49,10 +52,12 @@ const StatsPC = (props: Props) => {
                 onMouseEnter={() => setTooltipStatus(2)}
                 onMouseLeave={() => setTooltipStatus(0)}
               >
-                <img
+                <Image
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Holistic-Approach_timeda.png"
-                  alt=""
+                  alt="Holostic Approach"
                   className="hover:scale-115 transition-all duration-500"
+                  width={200}
+                  height={200}
                 />
                 {tooltipStatus == 2 && (
                   <div className="absolute text-sm mt-44">
@@ -67,10 +72,12 @@ const StatsPC = (props: Props) => {
                 onMouseEnter={() => setTooltipStatus(3)}
                 onMouseLeave={() => setTooltipStatus(0)}
               >
-                <img
+                <Image
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Humane-Touch_qvniyh.png"
-                  alt=""
+                  alt="Humane Touch"
                   className="hover:scale-115 transition-all duration-500"
+                  width={200}
+                  height={200}
                 />
                 {tooltipStatus == 3 && (
                   <div className="absolute text-sm mt-44">Humane Touch</div>
@@ -83,10 +90,12 @@ const StatsPC = (props: Props) => {
                 onMouseEnter={() => setTooltipStatus(4)}
                 onMouseLeave={() => setTooltipStatus(0)}
               >
-                <img
+                <Image
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830505/Icons/Why%20GarbhaGudi/Successful-Pregnancy_1_xw1hbe.png"
-                  alt=""
+                  alt="High Success Rate"
                   className="hover:scale-115 transition-all duration-500"
+                  width={200}
+                  height={200}
                 />
                 {tooltipStatus == 4 && (
                   <div className="absolute text-sm mt-44">
@@ -101,10 +110,12 @@ const StatsPC = (props: Props) => {
                 onMouseEnter={() => setTooltipStatus(5)}
                 onMouseLeave={() => setTooltipStatus(0)}
               >
-                <img
+                <Image
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Reknowed-Doctor_x52vlx.png"
-                  alt=""
+                  alt="Top Fertility Specialists"
                   className="hover:scale-115 transition-all duration-500"
+                  width={200}
+                  height={200}
                 />
                 {tooltipStatus == 5 && (
                   <div className="absolute mt-44 text-sm">
@@ -119,10 +130,12 @@ const StatsPC = (props: Props) => {
                 onMouseEnter={() => setTooltipStatus(6)}
                 onMouseLeave={() => setTooltipStatus(0)}
               >
-                <img
+                <Image
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Trasparent-Billing_rbt5lj.png"
-                  alt=""
+                  alt="Transparent Pricing"
                   className="hover:scale-115 transition-all duration-500"
+                  width={200}
+                  height={200}
                 />
                 {tooltipStatus == 6 && (
                   <div className="absolute text-sm mt-44">
@@ -138,10 +151,12 @@ const StatsPC = (props: Props) => {
                 onMouseEnter={() => setTooltipStatus(7)}
                 onMouseLeave={() => setTooltipStatus(0)}
               >
-                <img
+                <Image
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/World-Class-Lab_yerlf1.png"
-                  alt=""
+                  alt="World Class Labs"
                   className="hover:scale-115 transition-all duration-500"
+                  width={200}
+                  height={200}
                 />
                 {tooltipStatus == 7 && (
                   <div className="absolute text-sm mt-44">
@@ -156,10 +171,12 @@ const StatsPC = (props: Props) => {
                 onMouseEnter={() => setTooltipStatus(8)}
                 onMouseLeave={() => setTooltipStatus(0)}
               >
-                <img
+                <Image
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Cutting-Edge_qpqb9w.png"
-                  alt=""
+                  alt="Cutting Edge Technologies"
                   className="hover:scale-115 transition-all duration-500"
+                  width={200}
+                  height={200}
                 />
                 {tooltipStatus == 8 && (
                   <div className="absolute text-sm mt-44 ">
