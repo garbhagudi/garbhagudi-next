@@ -8,7 +8,7 @@ const StatsPC = (props: Props) => {
   return (
     <div className="hidden lg:block">
       <p className="font-heading text-center text-4xl py-10 bg-brandPink5 font-bold">
-        This is why you can trust GarbhaGudi
+        This is why you can trust GarbhaGudi for your infertility treatments
       </p>
       <div className="max-w-lg md:max-w-4xl mx-auto align-middle mt-4">
         <div className="text-center ">

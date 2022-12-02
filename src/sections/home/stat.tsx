@@ -20,7 +20,7 @@ const metrics = [
   {
     id: 4,
     stat: "5",
-    emphasis: "Centres Across Bangalore",
+    emphasis: "Infertility Centres Across Bangalore",
   },
 ];
 
@@ -51,10 +51,11 @@ const Stat = () => {
           </p>
           <p className="mt-5 text-lg text-brandDark font-content">
             GarbhaGudi is a place where dreams come alive, hopes never fade, and
-            possibilities never end. We ceaselessly work to help you cherish the
-            golden moment of holding your little bundles of joy. Along with our
-            quality of treatment and care, some of the other contributing
-            factors for achieving high success rates are:
+            possibilities never end. As one of the finest IVF Centre in
+            Bangalore, we ceaselessly work to help you cherish the golden moment
+            of holding your little bundles of joy. Along with our quality of
+            treatment and care, some of the other contributing factors for
+            achieving high success rates are:
           </p>
           <div className="grid grid-cols-1 mt-12 gap-y-12 gap-x-6 sm:grid-cols-2">
             {metrics.map((item) => (

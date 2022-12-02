@@ -86,6 +86,4 @@ const items = [
     title:
       "*Additional terms and conditions may apply. Please refer to the 'PARIPOORNA - 2022 Application form' for more information",
   },
-
-  // More items...
 ];
