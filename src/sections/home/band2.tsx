@@ -8,9 +8,9 @@ const Band2 = () => {
         <span className="block md:inline-block">
           <Link href="/gg-care" passHref>
             <div className="text-brandPink cursor-pointer">
-              Garbhagudi Has Been Awarded as the Best IVF &amp; Fertility
+              GarbhaGudi Has Been Awarded as the Best IVF &amp; Fertility
               Hospital in India for It's High Success Rates &amp; Holistic
-              Approach to fertility Treatment
+              Approach to Fertility Treatment
               <button className="block mt-4 mx-auto px-3 py-2 bg-brandPink rounded-lg text-sm text-white">
                 Connect Now
               </button>
