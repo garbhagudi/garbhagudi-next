@@ -78,7 +78,7 @@ const Home = ({ homeData }) => {
         />
         <meta
           name="description"
-          content="GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art cutting-edge technology to address infertility."
+          content="GarbhaGudi is one of the best IVF Centre in Bangalore with a high success rate for infertility treatment. Get excellent treatment at affordable cost for your fertility issues. Visit the best IVF hospital now!"
         />
         {/* Ld+JSON Data */}
 
@@ -98,7 +98,7 @@ const Home = ({ homeData }) => {
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"
-          content="GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art cutting-edge technology to address infertility."
+          content="GarbhaGudi is one of the best IVF Centre in Bangalore with a high success rate for infertility treatment. Get excellent treatment at affordable cost for your fertility issues. Visit the best IVF hospital now!"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -116,7 +116,7 @@ const Home = ({ homeData }) => {
         />
         <meta
           name="twitter:description"
-          content="GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art cutting-edge technology to address infertility."
+          content="GarbhaGudi is one of the best IVF Centre in Bangalore with a high success rate for infertility treatment. Get excellent treatment at affordable cost for your fertility issues. Visit the best IVF hospital now!"
         />
         <meta
           name="twitter:image"
@@ -157,7 +157,7 @@ const Home = ({ homeData }) => {
           <div className="space-y-12">
             <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-brandDark font-heading">
-                Meet our Experts
+                Meet our Fertility Experts
               </h2>
               <p className="text-md text-brandDark font-content">
                 Our team of fertility specialists have been known for their

@@ -16,7 +16,7 @@ const features = [
     name: "World Class Fertility Care",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840286/Icons/Features/World_Class_Fertility_Care_un83f6.svg",
     content:
-      "Proud to have played a key role in bringing more than 8,500+ babies into the world since 2011.",
+      "GarbhaGudi is Proud to have played a key role in bringing more than 8,500+ babies into the world since 2011.",
     link: "/features/world-class-fertility-care",
   },
   {
@@ -32,7 +32,7 @@ const features = [
     name: "Affordable Treatments",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840310/Icons/Features/Affordable_Treatment_lwaaku.svg",
     content:
-      "Affordable treatment without any compromise on service or quality of medicines or services",
+      "GarbhaGudi offers Affordable Infertility treatment without any compromise on service or quality of medicines or services",
     link: "/features/affordable-treatments",
   },
   {
@@ -71,7 +71,7 @@ const features = [
     name: "Best in Class Facilities",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840357/Icons/Features/Best_in_Class_Facilities_fchmjr.svg",
     content:
-      "Centers are equipped to handle the most challenging cases with state of the art technology at our disposal",
+      "Our IVF Centers in Bangalore are equipped to handle the most challenging cases with state of the art technology at our disposal",
     link: "/features/best-in-class-facilities",
   },
 ];
@@ -80,9 +80,9 @@ const Features = () => {
   return (
     <div className="relative bg-white py-8 sm:py-18" id="features">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-        <h1 className="mt-2 text-3xl font-extrabold text-brandDark tracking-tight sm:text-4xl font-heading">
+        <h3 className="mt-2 text-3xl font-extrabold text-brandDark tracking-tight sm:text-4xl font-heading">
           Our Versatile Approach
-        </h1>
+        </h3>
         <p className="mt-5 max-w-prose mx-auto text-md text-brandDark font-content">
           At GarbhaGudi, we understand that fertility treatments can be mentally
           and physically stressful. We are always committed to providing a world
