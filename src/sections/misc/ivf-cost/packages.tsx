@@ -26,15 +26,21 @@ const tiers = [
 ];
 const sections = [
   {
-    name: "Procedures*",
+    name: "Services*",
     features: [
+      { id: 1, name: "Consultations", tiers: { Plus: true, Premium: true } },
       {
-        id: 1,
+        id: 2,
+        name: "Follicular Monitoring",
+        tiers: { Plus: true, Premium: true },
+      },
+      {
+        id: 3,
         name: "Stimulation Injections",
         tiers: { Plus: false, Essentials: false, Premium: true },
       },
       {
-        id: 2,
+        id: 4,
         name: (
           <span className="font-semibold">
             Investigations during Stimulation Cycle <br />
@@ -44,18 +50,18 @@ const sections = [
         tiers: { Plus: true, Essentials: false, Premium: true },
       },
       {
-        id: 3,
+        id: 5,
         name: "Other Specific Investiagtions",
         tiers: { Plus: false, Essentials: false, Premium: false },
       },
       {
-        id: 4,
+        id: 6,
         name: "FET",
         tiers: { Essentials: "1 Cycle", Premium: "1 Cycle", Plus: "1 Cycle" },
       },
-      { id: 5, name: "Blastocyst", tiers: { Premium: true, Plus: true } },
+      { id: 7, name: "Blastocyst", tiers: { Premium: true, Plus: true } },
       {
-        id: 6,
+        id: 8,
         name: (
           <span className="font-semibold">
             Freezing charges <br /> (1 Year)
@@ -64,12 +70,12 @@ const sections = [
         tiers: { Premium: true, Plus: true },
       },
       {
-        id: 7,
+        id: 9,
         name: "OPU Charges",
         tiers: { Plus: true, Essentials: true, Premium: true },
       },
       {
-        id: 8,
+        id: 10,
         name: "Ward Charges",
         tiers: { Plus: true, Essentials: true, Premium: true },
       },
@@ -85,9 +91,9 @@ const Packages = () => {
           IVF Packages at GarbhaGudi
         </h1>
         <p className="pt-4 font-content">
-          Here is a comprehensive comparison of the cost of IVF packages at
-          GarbhaGudi. No matter the financial status, we've got a package that
-          works for you.
+          Here is a brief comparison of the cost of IVF packages at GarbhaGudi.
+          No matter the financial status, we've got a package that works for
+          you.
         </p>
       </div>
       <div className="max-w-7xl mx-auto py-16 sm:pb-24 sm:px-6 lg:px-8">

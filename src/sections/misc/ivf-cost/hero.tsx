@@ -14,7 +14,7 @@ const Banner = () => {
               The price of in-vitro fertilisation (IVF) varies from person to
               person and depends on a variety of variables. In Bangalore,
               depending on the complexity of the case, a preliminary cost can
-              fall between ₹25,000 and ₹4,000,000.
+              fall between ₹1,00,000 and ₹4,00,000.
             </p>
             <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 font-semibold">
               <div className="flex flex-col items-start justify-center max-w-lg">
