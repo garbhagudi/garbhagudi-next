@@ -8,20 +8,16 @@ const tiers = [
     name: "Essentials",
     href: "/contact.html",
     priceMonthly: "90,000",
-    // description: "Quis suspendisse ut fermentum neque vivamus non tellus.",
   },
   {
     name: "Plus",
     href: "/contact.html",
     priceMonthly: "1,50,000",
-    // description: "Quis eleifend a tincidunt pellentesque. A tempor in sed.",
   },
   {
     name: "Premium",
     href: "/contact.html",
     priceMonthly: "2,20,000",
-    // description:
-    //   "Orci volutpat ut sed sed neque, dui eget. Quis tristique non.",
   },
 ];
 const sections = [
@@ -44,7 +40,9 @@ const sections = [
         name: (
           <span className="font-semibold">
             Investigations during Stimulation Cycle <br />
-            (E2 - 2, LH-2, P4 - 1)
+            (Estradiol,
+            <br /> Luteinizing Hormone, <br />
+            Progesterone)
           </span>
         ),
         tiers: { Plus: true, Essentials: false, Premium: true },
@@ -86,7 +84,7 @@ const sections = [
 const Packages = () => {
   return (
     <div className="font-content">
-      <div className="text-center py-10 lg:py-24 px-3">
+      <div className="text-center py-10 lg:py-16 px-3">
         <h1 className="font-heading font-bold text-3xl lg:text-5xl">
           IVF Packages at GarbhaGudi
         </h1>
@@ -213,7 +211,7 @@ const Packages = () => {
                 {tiers.map((tier) => (
                   <th
                     key={tier.name}
-                    className="w-1/4 pb-4 px-6 text-lg leading-6 font-bold font-heading text-gray-900 text-left"
+                    className="w-1/4 pb-4 px-6 text-lg leading-6 font-bold font-heading text-gray-900 text-center mx-auto"
                     scope="col"
                   >
                     {tier.name}
@@ -221,7 +219,7 @@ const Packages = () => {
                 ))}
               </tr>
             </thead>
-            <tbody className="border-t border-gray-200 divide-y divide-gray-200">
+            <tbody className="border-t border-gray-300 divide-y divide-gray-300">
               <tr>
                 <th
                   className="py-8 px-6 text-sm font-medium text-gray-900 text-left align-top"
@@ -232,7 +230,7 @@ const Packages = () => {
                 {tiers.map((tier) => (
                   <td key={tier.name} className="h-full py-8 px-6 align-top">
                     <div className="h-full ">
-                      <p>
+                      <p className="text-center">
                         <span className="text-4xl font-extrabold text-gray-900">
                           ₹{tier.priceMonthly}
                         </span>{" "}
@@ -242,9 +240,9 @@ const Packages = () => {
                       </p> */}
                       <a
                         href={tier.href}
-                        className="block w-full mt-4 bg-brandPink3 border border-brandPink3 rounded-md py-2 text-sm font-bold font-heading text-white text-center hover:bg-brandPink"
+                        className="block w-36 mx-auto mt-4 bg-brandPink3 border border-brandPink3 rounded-md py-2 text-sm font-bold font-heading text-white text-center hover:bg-brandPink"
                       >
-                        Know More About {tier.name}
+                        Know More
                       </a>
                     </div>
                   </td>
@@ -279,7 +277,7 @@ const Packages = () => {
                             <>
                               {feature.tiers[tier.name] === true ? (
                                 <HiCheck
-                                  className="h-5 text-green-500 mx-auto"
+                                  className="h-7 w-7 text-green-500 mx-auto"
                                   aria-hidden="true"
                                 />
                               ) : (
@@ -313,9 +311,9 @@ const Packages = () => {
                   <td key={tier.name} className="pt-5 px-6">
                     <a
                       href={tier.href}
-                      className="block w-full mt-4 bg-brandPink3 border border-brandPink3 rounded-md py-2 text-sm font-bold font-heading text-white text-center hover:bg-brandPink"
+                      className="block w-36 mx-auto mt-4 bg-brandPink3 border border-brandPink3 rounded-md py-2 text-sm font-bold font-heading text-white text-center hover:bg-brandPink"
                     >
-                      Know More About {tier.name}
+                      Know More
                     </a>
                   </td>
                 ))}
@@ -323,9 +321,10 @@ const Packages = () => {
             </tfoot>
           </table>
         </div>
-        <div className="text-xs text-center lg:text-right mt-2 font-semibold">
-          *Not all procedures are listed, for a detailed list of procedures
-          included in each plan, contact our executives
+        <div className="text-xs text-center lg:text mt-4 font-semibold">
+          *Any other procedures and tests recommended by the doctor may or may
+          not be included. Please contact the financial advisor at the centre
+          for more information.
         </div>
       </div>
     </div>

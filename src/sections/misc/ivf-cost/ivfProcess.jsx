@@ -98,7 +98,7 @@ const IvfProcess = () => {
   return (
     <div className="mx-auto">
       <div>
-        <h2 className="text-3xl lg:text-4xl font-heading font-bold text-center py-10 lg:py-24">
+        <h2 className="text-3xl lg:text-4xl font-heading font-bold text-center py-10 lg:py-16">
           Understanding In-Vitro Fertilization (IVF)
         </h2>
         <div className="max-w-7xl mx-auto">

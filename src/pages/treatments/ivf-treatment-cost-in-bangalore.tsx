@@ -15,7 +15,7 @@ const IvfCost = () => {
         <meta name="title" content={title} />
         <meta
           name="description"
-          content="The IVF treatment cost In Bangalore starts onwards Rs 25,000/- Click to book an appointment for affordable IVF costs and get the best IVF treatment in Bangalore"
+          content="The IVF treatment cost In Bangalore starts onwards Rs 90,000/- Click to book an appointment for affordable IVF costs and get the best IVF treatment in Bangalore"
         />
       </Head>
       <Image

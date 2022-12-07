@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Banner = () => {
   return (
     <div className="">
       <div className="mx-auto max-w-7xl">
-        <h1 className="text-3xl lg:text-5xl text-center font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-brandPink to-brandPurpleDark py-10 lg:py-24">
+        <h1 className="text-3xl lg:text-5xl text-center font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-brandPink to-brandPurpleDark py-10 lg:py-16">
           What is the Cost of IVF Treatment in Bangalore ?
         </h1>
         <div className="font-content max-w-7xl mx-auto relative px-3">
@@ -16,12 +17,11 @@ const Banner = () => {
               depending on the complexity of the case, a preliminary cost can
               fall between ₹1,00,000 and ₹4,00,000.
             </p>
-            <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 font-semibold">
-              <div className="flex flex-col items-start justify-center max-w-lg">
+            <div className="grid grid-cols-1 lg:grid-cols-2 font-semibold">
+              <div className=" mt-8 flex flex-col items-start justify-start max-w-lg">
                 At GarbhaGudi, we offer various packages starting from as low as
                 ₹90,000
                 <ul className="mt-4 list-outside list-disc space-y-2 ml-4">
-                  <li>GarbhaGudi has 5 branches across Bangalore</li>
                   <li>
                     GarbhaGudi has over a decade of experience treating the most
                     challenging cases of Infertility
@@ -36,11 +36,20 @@ const Banner = () => {
                     numerous awards in the field of infertility treatment{" "}
                   </li>
                 </ul>
-                <button className="text-lg px-3 py-2 border mt-4 rounded-lg bg-brandPurpleDark text-white hover:bg-opacity-80 font-bold mx-auto lg:mx-0">
-                  Get a Quote
-                </button>
+                <div className="space-x-3">
+                  <button className="text-lg px-3 py-2 border mt-4 rounded-lg bg-brandPurpleDark text-white hover:bg-opacity-80 font-bold mx-auto lg:mx-0">
+                    <Link href={"/gg-care"}>Get a Quote</Link>
+                  </button>
+                  <button className="text-lg px-3 py-2 border mt-4 rounded-lg bg-brandPurpleDark text-white hover:bg-opacity-80 font-bold mx-auto lg:mx-0">
+                    <Link
+                      href={"/blogs/what-is-the-cost-of-ivf-treatment-in-india"}
+                    >
+                      Read More on IVF Pricing
+                    </Link>
+                  </button>
+                </div>
               </div>
-              <div className="flex items-center justify-center py-10 lg:py-4">
+              <div className="flex items-center justify-center py-10 lg:py-2">
                 <svg
                   viewBox="0 0 200 200"
                   xmlns="http://www.w3.org/2000/svg"
@@ -52,10 +61,12 @@ const Banner = () => {
                     className="fill-brandPink3"
                   />
                 </svg>
-                <img
+                <Image
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1670411247/Misc/young-woman-hand-holding-pregnancy-test-min-removebg-min_ky0j37_2_-min_fjz9nw.webp"
                   alt="girl with pregnancy kit"
                   className="relative"
+                  width={1024}
+                  height={1024}
                 />
               </div>
             </div>

@@ -10,7 +10,7 @@ const faqs = [
   {
     question: "Is IVF Expensive?",
     answer:
-      "An IVF cycle might cost anywhere between Rs 25 thousand and Rs 4 lakhs on average. Additional medications and testing, as well as procedures such as Frozen Embryo Transfer, may be necessary, raising the overall cost.",
+      "An IVF cycle might cost anywhere between Rs 1 Lakh and Rs 4 lakhs on average. Additional medications and testing, as well as procedures such as Frozen Embryo Transfer, may be necessary, raising the overall cost.",
   },
   {
     question: "What is the average success rate of IVF?",
