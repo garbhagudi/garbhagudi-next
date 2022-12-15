@@ -6,7 +6,7 @@ const SalesIQ = (props) => {
 
   return hasCode ? (
     <Script
-      strategy="beforeInteractive"
+      strategy="lazyOnload"
       id="zsiqchat"
       dangerouslySetInnerHTML={{
         __html: `
