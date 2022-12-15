@@ -85,9 +85,9 @@ const Packages = () => {
   return (
     <div className="font-content">
       <div className="text-center py-10 lg:py-16 px-3">
-        <h1 className="font-heading font-bold text-3xl lg:text-5xl">
+        <h2 className="font-heading font-bold text-3xl lg:text-5xl">
           IVF Packages at GarbhaGudi
-        </h1>
+        </h2>
         <p className="pt-4 font-content">
           Here is a brief comparison of the cost of IVF packages at GarbhaGudi.
           No matter the financial status, we've got a package that works for
@@ -206,7 +206,7 @@ const Packages = () => {
                   scope="col"
                 >
                   <span className="sr-only">Feature by</span>
-                  <span>Plans</span>
+                  <span>IVF Treatment Plans</span>
                 </th>
                 {tiers.map((tier) => (
                   <th
@@ -225,7 +225,7 @@ const Packages = () => {
                   className="py-8 px-6 text-sm font-medium text-gray-900 text-left align-top"
                   scope="row"
                 >
-                  Pricing
+                  IVF Treatment Pricing
                 </th>
                 {tiers.map((tier) => (
                   <td key={tier.name} className="h-full py-8 px-6 align-top">
@@ -322,9 +322,9 @@ const Packages = () => {
           </table>
         </div>
         <div className="text-xs text-center lg:text mt-4 font-semibold">
-          *Any other procedures and tests recommended by the doctor may or may
-          not be included. Please contact the financial advisor at the centre
-          for more information.
+          *Any additional procedures and tests recommended by the doctor may or
+          may not be included. Please contact the financial advisor at the
+          centre for more information.
         </div>
       </div>
     </div>

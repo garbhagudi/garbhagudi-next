@@ -21,7 +21,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/components/SalesIQ.js",
+    "src/components/SalesIQ.jsx",
     "src/pages/tools/ovulation-calculator/index..jsx",
     "src/sections/misc/ivf-cost/ivfProcess.jsx"
   ],

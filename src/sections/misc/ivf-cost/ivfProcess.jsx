@@ -6,7 +6,6 @@ const IvfProcess = () => {
     {
       title: "Ovarian Stimulation",
       cardTitle: "Ovarian Stimulation",
-      url: "http://www.history.com",
       cardSubtitle:
         "Ovarian stimulation occurs with the administration of hormone medications (ovulation drugs) that stimulate the ovaries to produce multiple eggs. Sometimes called enhanced follicular recruitment or controlled ovarian stimulation.",
       media: {
@@ -19,7 +18,6 @@ const IvfProcess = () => {
     {
       title: "Oocyte Retrieval",
       cardTitle: "Transvaginal Oocyte Retrieval",
-      url: "http://www.history.com",
       cardSubtitle:
         "Eggs are removed from your ovaries during a process called oocyte retrieval. It is one of the procedures involved in in vitro fertilisation (IVF). The vagina is typically used during the operation. For the process, you will be asleep. After being removed from the ovaries, eggs can be fertilised in a laboratory.",
       media: {
@@ -32,7 +30,6 @@ const IvfProcess = () => {
     {
       title: "Egg & Sperm Preparation",
       cardTitle: "Egg & Sperm Preparation",
-      url: "http://www.history.com",
       cardSubtitle:
         "MWithin five hours of the egg retrieval, the lab will add your partner's healthy sperm sample to the eggs. The embryologist may decide to employ an intracytoplasmic sperm injection (ICSI) treatment to guarantee fertilisation occurs if the sperm quality is abnormal.",
       media: {
@@ -45,7 +42,6 @@ const IvfProcess = () => {
     {
       title: "Egg Fertilitzation",
       cardTitle: "Egg Fertilitzation",
-      url: "http://www.history.com",
       cardSubtitle:
         "Experts inspect the eggs once they are in the lab to assess their quality and maturity. After being removed from the incubator and placed into a particular culture medium, mature eggs are fertilised with sperm a few hours later.",
       media: {
@@ -58,7 +54,6 @@ const IvfProcess = () => {
     {
       title: "Embryo Culture",
       cardTitle: "Embryo Culture for 2-6 Days",
-      url: "http://www.history.com",
       cardSubtitle:
         "IVF requires embryo cultivation, which is a critical step. It describes the procedure in which partner or donor sperm is mixed with the extracted eggs from the ovaries in an artificial medium to produce a fertilised egg.",
       media: {
@@ -71,7 +66,6 @@ const IvfProcess = () => {
     {
       title: "Embryo Transfer",
       cardTitle: "Embryo Transfer",
-      url: "http://www.history.com",
       cardSubtitle:
         "Since embryo transfer is a straightforward procedure, sedation or anaesthesia are seldom used. The embryo or embryos are introduced into the uterus through the cervix using a long, thin catheter that is filled with the agreed-upon number of embryos and a tiny amount of fluid.",
       media: {
@@ -84,7 +78,6 @@ const IvfProcess = () => {
     {
       title: "Pregnancy",
       cardTitle: "Pregnancy",
-      url: "http://www.history.com",
       cardSubtitle:
         "For a pregnancy to begin, the embryo must then attach itself to the wall of her womb or uterus.",
       media: {

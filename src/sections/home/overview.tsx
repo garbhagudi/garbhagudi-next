@@ -49,10 +49,10 @@ const Overview = () => {
             <div className="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden">
               <Image
                 className="absolute inset-0 h-full w-full object-cover"
-                src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643273193/Home/Why_GarbhaGudi_oa1nv7.webp"
+                src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1670926732/Home/Why_GarbhaGudi_oa1nv7-min_z7p9jv.webp"
                 alt="Dr Asha S Vijay Picture"
-                width={1024}
-                height={1024}
+                width={360}
+                height={640}
               />
               <div className="absolute inset-0 bg-gray-200 mix-blend-multiply" />
               <div className="absolute inset-0 bg-gradient-to-t from-brandPink via-gray-400 mix-blend-multiply" />

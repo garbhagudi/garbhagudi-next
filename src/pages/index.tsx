@@ -63,6 +63,29 @@ const Home = ({ homeData }) => {
       }`,
     };
   }
+
+  function addWebJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org/", 
+        "@type": "Product", 
+        "name": "In-vitro Fertilization (IVF)",
+        "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
+        "description": "What is IVF and how does it work. IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
+        "brand": {
+          "@type": "Brand",
+          "name": "Garbha Gudi"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "604"
+        }
+      }`,
+    };
+  }
   return (
     <div>
       <Head>
@@ -86,6 +109,11 @@ const Home = ({ homeData }) => {
           type="application/ld+json"
           dangerouslySetInnerHTML={addOrgJsonLd()}
           key="org-jsonld"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addWebJsonLd()}
+          key="web-jsonld"
         />
 
         {/* Open Graph / Facebook */}
