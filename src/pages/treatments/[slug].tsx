@@ -14,6 +14,7 @@ export const getStaticProps = async ({ params }) => {
       treatment(where: { slug: $slug }) {
         id
         title
+        slug
         image {
           url
         }
@@ -59,6 +60,58 @@ const Treatment = ({ treatment }) => {
     return <Loading />;
   }
 
+  function addReviewJsonLd() {
+    return {
+      __html: `{
+            "@context": "https://schema.org/", 
+            "@type": "Product", 
+            "name": "${treatment?.title}",
+            "image": "${treatment?.image?.url}",
+            "description": "${treatment?.content?.text.slice(0, 160)}",
+            "brand": {
+              "@type": "Brand",
+              "name": "GarbhaGudi IVF Centre"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "bestRating": "5",
+              "worstRating": "1",
+              "ratingCount": "604"
+            }
+        }`,
+    };
+  }
+
+  function addProductJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org/", 
+        "@type": "Service", 
+        "name": "${treatment?.title}",
+        "image": "${treatment?.image?.url}",
+        "description": "${treatment?.content?.text.slice(0, 160)}",
+        "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://www.garbhagudi.com/treatments/${treatment?.slug}",
+        "priceCurrency": "INR",
+        "lowPrice": "90000",
+        "highPrice": "280000"
+        },
+        "aggregateRating": {
+        "@type": "AggregateRating",
+              "itemReviewed": {
+                "@type": "Hospital",
+                "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
+                "name": "GarbhaGudi IVF Centre",
+                "telephone": "+918880000909",
+                "priceRange": "90000 - 280000"
+          }
+        }
+      }`,
+    };
+  }
+
   const title = `${treatment?.title} | GarbhaGudi`;
 
   return (
@@ -75,6 +128,20 @@ const Treatment = ({ treatment }) => {
         <meta
           name="description"
           content={treatment?.content?.text.slice(0, 160)}
+        />
+
+        {/* Ld+JSON Data */}
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addReviewJsonLd()}
+          key="review-jsonld"
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addProductJsonLd()}
+          key="product-jsonld"
         />
 
         {/* Open Graph / Facebook */}

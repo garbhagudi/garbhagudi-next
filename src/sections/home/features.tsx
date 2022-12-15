@@ -95,15 +95,15 @@ const Features = () => {
               <Link href={feature.link} key={feature.id} passHref>
                 <div className=" pt-6 cursor-pointer ">
                   <div className=" flow-root bg-gray-50 rounded-lg px-6 pb-8 hover:shadow-2xl">
-                    <div className="-mt-6">
+                    <div className="-mt-8">
                       <div>
                         <span className="inline-flex items-center justify-center p-2 bg-brandPink rounded-full shadow-xl">
                           <Image
                             src={feature.icon}
                             alt={feature.name}
-                            width="36"
-                            height={36}
-                            className="h-9 w-9"
+                            width={48}
+                            height={48}
+                            className="h-12 w-12"
                             aria-hidden="true"
                           />
                         </span>

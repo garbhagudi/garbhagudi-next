@@ -4,19 +4,24 @@ import Link from "next/link";
 const Band2 = () => {
   return (
     <div className="max-w-7xl mx-auto px-3 my-4 sm:px-6 lg:px-4 border-b border-t border-gray-300 ">
-      <span className="text-lg block text-center mx-auto font-heading font-bold py-2">
-        <span className="block md:inline-block">
-          <Link href="/gg-care" passHref>
-            <div className="text-brandPink cursor-pointer">
-              GarbhaGudi Has Been Awarded as the Best IVF &amp; Fertility
-              Hospital in India for It's High Success Rates &amp; Holistic
-              Approach to Fertility Treatment
-              <button className="block mt-4 mx-auto px-3 py-2 bg-brandPink rounded-lg text-sm text-white">
-                Connect Now
-              </button>
-            </div>
-          </Link>
-        </span>
+      <span className="text-md block text-center mx-auto font-content font-bold py-2">
+        <div className="block md:inline-block">
+          <h1 className="text-gray-900">
+            GarbhaGudi IVF Centre in Bangalore Has Been Awarded as the Best IVF
+            &amp; Fertility Hospital for It's High Success Rates &amp; Holistic
+            Approach to Fertility Treatment
+          </h1>
+          <div className="space-x-3">
+            <button className="mt-4 mx-auto px-3 py-2 bg-brandPink rounded-lg text-sm text-white hover:bg-brandPink4">
+              <Link href={"/about/awards-and-accolades"}>
+                View Awards and Accolades
+              </Link>
+            </button>
+            <button className="mt-4 mx-auto px-3 py-2 bg-brandPink rounded-lg text-sm text-white hover:bg-brandPink4">
+              <Link href={"/gg-care"}>Connect Now</Link>
+            </button>
+          </div>
+        </div>
       </span>
     </div>
   );

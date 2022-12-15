@@ -17,15 +17,21 @@ const data = [
       <div>
         Garbhagudi is delighted to announce IVF Packages that fit all your
         individual needs. To know more, book a free appointment or visit{" "}
-        <Link legacyBehavior href={"/gg-care"}>
-          <a className="font-semibold text-blue-600 hover:text-brandPink hover:underline">
+        <Link href={"/gg-care"}>
+          <div className=" inline-block font-semibold text-blue-600 hover:text-brandPink hover:underline">
             GG CARE
-          </a>
+          </div>
         </Link>{" "}
         and talk to one of our executives.
       </div>
     ),
     link: "/gg-care",
+  },
+  {
+    id: 1,
+    title: "Paripoorna",
+    desc: "This December, celebrate the season of completeness without worrying about the money. Get Up to Rs. 30,000/- off on IVF treatment. ",
+    link: "/blogs/all-about-the-latest-art-and-surrogacy-bill",
   },
 ];
 
