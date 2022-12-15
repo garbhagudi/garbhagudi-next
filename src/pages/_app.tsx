@@ -3,7 +3,7 @@ import "../styles/globals.css";
 import Footer from "components/footer/footer";
 import Nav from "components/header/header";
 import FloatPhone from "components/FloatPhone";
-import SalesIQ from "components/SalesIQ";
+import Salesiq from "components/SalesIQ";
 import TagManager from "react-gtm-module";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
@@ -57,7 +57,12 @@ function MyApp({ Component, pageProps }) {
           <main className="min-h-screen">
             <Component {...pageProps} />
           </main>
-          <SalesIQ />
+          <Salesiq
+            widgetCode={
+              "93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0"
+            }
+            domain={"https://salesiq.zoho.com/widget"}
+          />
           <FloatPhone />
           <Footer />
         </div>
