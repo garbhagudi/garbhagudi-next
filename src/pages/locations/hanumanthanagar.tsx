@@ -18,12 +18,11 @@ const HanumanthaNagar = ({ doctors }) => {
         </title>
         <meta
           name="title"
-          content="GarbhaGudi IVF Centre, Hanumanthanagar | Best IVF & Fertility Hospital
-          in India"
+          content="Best IVF Centre in Hanumanthanagar | Infertility treatment and IVF Cost in Hanumanthanagar - GarbhaGudi"
         />
         <meta
           name="description"
-          content="GarbhaGudi is where dreams come alive, hopes never fade and possibilities never end. We work to help you cherish the golden moment of holding your bundle of joy"
+          content="GarbhaGudi IVF Centre in Hanumanthanagar offers full range of fertility treatments. Call now to book an appointment! Visit the best IVF Centre in Hamumanthanagar now."
         />
 
         {/* Open Graph / Facebook */}

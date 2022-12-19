@@ -16,10 +16,13 @@ const Marathahalli = ({ doctors }) => {
           GarbhaGudi IVF Centre, Marathahalli | Best IVF & Fertility Hospital in
           India
         </title>
-        <meta name="title" content="Marathahalli | GarbhaGudi IVF Centre" />
+        <meta
+          name="title"
+          content="Best IVF Centre in Marathahalli | Infertility treatment and IVF Cost in Marathahalli - Garbha Gudi"
+        />
         <meta
           name="description"
-          content="GarbhaGudi is where dreams come alive, hopes never fade and possibilities never end. We work to help you cherish the golden moment of holding your bundle of joy"
+          content="GarbhaGudi IVF Centre in Marathahalli offers full range of fertility treatments. Call now to book an appointment! Visit best IVF centre in Marathahalli now."
         />
 
         {/* Open Graph / Facebook */}

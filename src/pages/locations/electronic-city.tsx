@@ -18,11 +18,11 @@ const ElectronicCity = ({ doctors }) => {
         </title>
         <meta
           name="title"
-          content="GarbhaGudi IVF Centre, Electronic City | Best IVF & Fertility Hospital in India "
+          content="Best IVF Centre in Electronic City | Infertility treatment and IVF Cost in Electronic City - GarbhaGudi"
         />
         <meta
           name="description"
-          content="GarbhaGudi is where dreams come alive, hopes never fade and possibilities never end. We work to help you cherish the golden moment of holding your bundle of joy"
+          content="GarbhaGudi IVF Centre in Electronic City offers full range of fertility treatments. Call now to book an appointment! Visit best IVF centre in Electronic City now."
         />
 
         {/* Open Graph / Facebook */}
