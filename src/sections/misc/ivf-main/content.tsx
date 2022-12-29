@@ -2,7 +2,7 @@ import React from "react";
 
 const Content = () => {
   return (
-    <div className="">
+    <div className="" id="know-more">
       <div className="bg-white relative pt-10 lg:pt-24">
         <div className="relative container m-auto px-6 md:px-12 lg:px-6">
           <h2 className="mx-auto font-black text-4xl text-center 2xl:text-left lg:text-5xl font-heading">
@@ -56,7 +56,7 @@ const Content = () => {
                 for a future transfer (called frozen embryo transfer).
               </p>
             </div>
-            <div className="mt-12 md:mt-10 mx-auto 2xl:absolute -right-10 max-w-4xl">
+            <div className="mt-12 md:mt-10 mx-auto 2xl:absolute right-10 max-w-[50rem]">
               <div className="relative w-full">
                 <div
                   aria-hidden="true"

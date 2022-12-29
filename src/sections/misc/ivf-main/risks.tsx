@@ -22,7 +22,7 @@ const Risks = () => {
         <h2 className="text-2xl font-heading font-bold py-4">Risks</h2>
         <div className="font-content">
           <div className="pb-4">Potential Risks of IVF Include:</div>
-          <ul className="list-outside list-disc space-y-3 divide-y ">
+          <ul className="list-outside list-disc space-y-3">
             <li>
               <strong>Multiple births:</strong> If more than one embryo is
               transplanted to the uterus through IVF, the possibility of

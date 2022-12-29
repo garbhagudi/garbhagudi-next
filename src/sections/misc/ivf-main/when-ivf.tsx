@@ -37,7 +37,7 @@ const WhenIvf = () => {
             </div>
             <div className="mt-6 text-center lg:text-left">
               <Link
-                href="/gg-care"
+                href="/blogs/when-and-what-should-you-consider-to-evaluate-for-pregnancy"
                 className="inline-flex px-3 py-2 rounded bg-brandPink font-content font-bold text-white hover:bg-brandPink2"
               >
                 Know More
