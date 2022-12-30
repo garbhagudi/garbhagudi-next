@@ -19,7 +19,7 @@ const Nav = () => {
   return (
     <div className="sticky top-0 z-50">
       <nav className="pb-4 bg-white border-b shadow-xl">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-4">
           <div className="flex items-center justify-between h-[5rem] sm:h-16">
             <div className="flex items-center justify-between align-middle cursor-pointer">
               <div className="flex-shrink-0 pt-4 ">

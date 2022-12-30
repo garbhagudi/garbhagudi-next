@@ -3,13 +3,9 @@ import Link from "next/link";
 
 const WhenIvf = () => {
   return (
-    <div className="py-10 container mx-auto lg:py-16 px-6">
-      <div className="flex items-center justify-evenly flex-wrap">
-        <div className="max-w-xl relative">
-          <div
-            aria-hidden="true"
-            className="absolute mx-auto scale-100 xl:scale-110 lg:mt-36 inset-0 w-full h-full md:w-96 md:h-96 rounded-full bg-gradient-to-r from-brandPink5 to-gray-100 blur-3xl"
-          ></div>
+    <div className="py-10 container mx-auto lg:py-16 px-3">
+      <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="max-w-lg flex items-center justify-center mx-auto p-3 lg:p-10">
           <img
             src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1671190677/Misc/avn-min_jo63l5.png"
             alt="causes"
@@ -17,23 +13,48 @@ const WhenIvf = () => {
           />
         </div>
         <div>
-          <div className="mt-6">
-            <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 font-heading">
+          <div className="mt-6 max-w-2xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 font-heading ">
               When is IVF Recommended?
             </h2>
             <div className="mt-4 text-lg text-gray-900 font-content">
-              <ul className="list-inside list-disc">
-                <li>Blocked or defects in fallopian tubes</li>
-                <li>Ovulation disorder</li>
-                <li>Premature ovarian failure</li>
-                <li>Endometriosis</li>
-                <li>Uterine fibroids</li>
-                <li>Individuals with a genetic disorder</li>
-                <li>Male factor infertility</li>
+              Some common reasons for recommending IVF include:
+              <ul className="space-y-3 text-base mt-4">
                 <li>
-                  Fertility preservation for cancer or other health conditions
+                  <strong>Blocked or damaged fallopian tubes:</strong> If the
+                  fallopian tubes are blocked or damaged, the egg may not be
+                  able to travel from the ovaries to the uterus.
+                </li>
+                <li>
+                  <strong>Male fertility problems:</strong> If the male partner
+                  has a low sperm count or poor sperm quality, IVF may be
+                  recommended.
+                </li>
+                <li>
+                  <strong>Unexplained infertility:</strong> If the cause of
+                  infertility is unknown, IVF may be recommended.
+                </li>
+                <li>
+                  <strong>Ovulation disorders:</strong> If a woman is not
+                  ovulating regularly or at all, IVF may be recommended.
+                </li>
+                <li>
+                  <strong>Endometriosis:</strong> This is a condition in which
+                  the tissue that lines the uterus grows outside of the uterus,
+                  which can cause fertility problems.
+                </li>
+                <li>
+                  <strong>Advanced maternal age:</strong> As a woman gets older,
+                  her fertility decreases, and IVF may be recommended for women
+                  over the age of 35 who are trying to get pregnant.
                 </li>
               </ul>
+              <div className="mt-4 text-base">
+                It is important to note that IVF is a complex and expensive
+                procedure, and it is not always successful. It is important to
+                discuss all of the potential risks and benefits with a fertility
+                specialist before deciding whether or not to pursue IVF.
+              </div>
             </div>
             <div className="mt-6 text-center lg:text-left">
               <Link

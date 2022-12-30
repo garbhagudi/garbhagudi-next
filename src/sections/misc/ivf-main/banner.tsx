@@ -4,7 +4,7 @@ import Link from "next/link";
 const Banner = () => {
   return (
     <div>
-      <section className="relative bg-[url(https://img.freepik.com/free-photo/happy-pregnant-woman-late-pregnancy-stage-sitting-grass-lawn_1163-1681.jpg?w=1380&t=st=1671188420~exp=1671189020~hmac=152f6e66aa0641fa2a9d71939f6e7bb4be4184f5233f9d612cf5aa4271656dd4)] bg-cover bg-right sm:bg-center bg-no-repeat">
+      <section className="relative bg-[url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1672381537/Misc/happy-pregnant-woman-late-pregnancy-stage-sitting-grass-lawn-min_11zon_xkeac0.webp)] bg-cover bg-right sm:bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/90 sm:to-white/15"></div>
         <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
           <div className="max-w-xl text-center  sm:text-left">
@@ -16,7 +16,8 @@ const Banner = () => {
                 Journey towards Parenthood
               </strong>
               <span className="text-xs font-content font-semibold">
-                With In-Vitro Fertilization - GarbhaGudi IVF Centre, Bangalore.
+                With In-Vitro Fertilization (IVF) - GarbhaGudi IVF Centre,
+                Bangalore.
               </span>
             </h1>
             <h3 className="mt-4 max-w-lg sm:text-xl sm:leading-relaxed font-content">
@@ -37,7 +38,7 @@ const Banner = () => {
 
               <Link
                 href="#know-more"
-                className="block font-content w-full rounded bg-white px-12 py-3 text-sm font-bold text-brandPink shadow hover:text-brandPink2 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+                className="block scroll-smooth font-content w-full rounded bg-white px-12 py-3 text-sm font-bold text-brandPink shadow hover:text-brandPink2 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
               >
                 Learn More
               </Link>
