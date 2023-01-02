@@ -18,12 +18,11 @@ const KalyanNagar = ({ doctors }) => {
         </title>
         <meta
           name="title"
-          content="GarbhaGudi IVF Centre, Kalyan Nagar | Best IVF & Fertility Hospital in
-          India"
+          content="Best IVF Centre in Kalyan Nagar | Infertility treatment and IVF Cost in Kalyan Nagar - GarbhaGudi"
         />
         <meta
           name="description"
-          content="GarbhaGudi is where dreams come alive, hopes never fade and possibilities never end. We work to help you cherish the golden moment of holding your bundle of joy"
+          content="GarbhaGudi IVF Centre in Kalyan Nagar offers full range of fertility treatments. Call now to book an appointment! Visit best IVF centre in Kalyan Nagar now."
         />
 
         {/* Open Graph / Facebook */}

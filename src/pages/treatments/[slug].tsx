@@ -14,6 +14,8 @@ export const getStaticProps = async ({ params }) => {
       treatment(where: { slug: $slug }) {
         id
         title
+        metaTitle
+        metaDescription
         slug
         image {
           url
@@ -112,6 +114,34 @@ const Treatment = ({ treatment }) => {
     };
   }
 
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "HOME",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "treatments",
+              "item": "https://www.garbhagudi.com/treatments/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${treatment?.title}",
+              "item": "https://www.garbhagudi.com/treatments/${treatment?.slug}"
+            }
+          ]
+        }`,
+    };
+  }
   const title = `${treatment?.title} | GarbhaGudi`;
 
   return (
@@ -123,11 +153,15 @@ const Treatment = ({ treatment }) => {
         <title>{title}</title>
         <meta
           name="title"
-          content={`${treatment?.title} | GarbhaGudi IVF Centre`}
+          content={`${
+            treatment.metaTitle || treatment?.title
+          } | GarbhaGudi IVF Centre`}
         />
         <meta
           name="description"
-          content={treatment?.content?.text.slice(0, 160)}
+          content={
+            treatment.metaDescription || treatment?.content?.text.slice(0, 160)
+          }
         />
 
         {/* Ld+JSON Data */}
@@ -142,6 +176,12 @@ const Treatment = ({ treatment }) => {
           type="application/ld+json"
           dangerouslySetInnerHTML={addProductJsonLd()}
           key="product-jsonld"
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+          key="breadcrumbs-jsonld"
         />
 
         {/* Open Graph / Facebook */}

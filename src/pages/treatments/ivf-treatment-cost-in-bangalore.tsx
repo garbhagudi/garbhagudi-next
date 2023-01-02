@@ -17,6 +17,34 @@ const IvfCost = () => {
           name="description"
           content="The IVF treatment cost In Bangalore starts onwards Rs 90,000/- Click to book an appointment for affordable IVF costs and get the best IVF treatment in Bangalore"
         />
+        {/* Open Graph / Facebook */}
+
+        <meta property="og:title" content={title} />
+        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
+        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta
+          property="og:description"
+          content="The IVF treatment cost In Bangalore starts onwards Rs 90,000/- Click to book an appointment for affordable IVF costs and get the best IVF treatment in Bangalore"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
+        />
+
+        {/* Twitter*/}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta name="twitter:title" content={title} />
+        <meta
+          name="twitter:description"
+          content="The IVF treatment cost In Bangalore starts onwards Rs 90,000/- Click to book an appointment for affordable IVF costs and get the best IVF treatment in Bangalore"
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
+        />
       </Head>
       <Image
         src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1670318557/Misc/5564522_ef0kux.webp"

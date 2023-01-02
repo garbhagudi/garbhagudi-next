@@ -19,11 +19,11 @@ const IndexPage = ({ doctors }) => {
         <title>Our Fertility Experts | GarbhaGudi IVF Centre</title>
         <meta
           name="title"
-          content="Our Fertility Experts | GarbhaGudi IVF Centre"
+          content="Top Infertility Hospital and Centres with Best Fertility Doctors in Banglore | Garbha Gudi"
         />
         <meta
           name="description"
-          content="Our team of fertility specialists are known for their extensive clinical experience, research & their success in treating the most challenging cases."
+          content="GarbhaGudi is a well known and one of the best fertility hospitals in Bangalore and you can be sure of getting the best fertility care here. Our hospital specializes in IVF treatments and has helped hundreds of couples realize their dreams of parenthood."
         />
 
         {/* Open Graph / Facebook */}
@@ -36,7 +36,7 @@ const IndexPage = ({ doctors }) => {
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
           property="og:description"
-          content="Our team of fertility specialists are known for their extensive clinical experience, research & their success in treating the most challenging cases."
+          content="GarbhaGudi is a well known and one of the best fertility hospitals in Bangalore and you can be sure of getting the best fertility care here. Our hospital specializes in IVF treatments and has helped hundreds of couples realize their dreams of parenthood."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -54,7 +54,7 @@ const IndexPage = ({ doctors }) => {
         />
         <meta
           name="twitter:description"
-          content="Our team of fertility specialists are known for their extensive clinical experience, research & their success in treating the most challenging cases."
+          content="GarbhaGudi is a well known and one of the best fertility hospitals in Bangalore and you can be sure of getting the best fertility care here. Our hospital specializes in IVF treatments and has helped hundreds of couples realize their dreams of parenthood."
         />
         <meta
           name="twitter:image"
