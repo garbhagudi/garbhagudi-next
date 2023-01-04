@@ -1,13 +1,12 @@
 import React from "react";
-// import { HiOutlineMail, HiPhone } from "react-icons/hi";
+import { HiPhone } from "react-icons/hi";
 import Link from "next/link";
 
 const FloatPhone = () => {
   return (
-    <div className="fixed px-3 py-2 rounded-2xl font-bold font-content text-white bottom-20 right-0 md:bottom-20 md:right-3.5 bg-brandPink flex items-center justify-center transition-opacity duration-500 ease-linear cursor-pointer">
-      <Link href="/contact.html">
-        Contact Us
-        {/* <HiOutlineMail className="w-4 h-4 md:w-8 md:h-8 text-white" /> */}
+    <div className="fixed px-3 py-3 rounded-full font-bold font-content text-white bottom-3 left-3 md:bottom-3 md:left-3 bg-brandPink flex items-center justify-center opacity-40 hover:opacity-100 transition-opacity duration-500 ease-linear cursor-pointer">
+      <Link href="tel:+918880000909">
+        <HiPhone className="w-5 h-5 md:w-8 md:h-8 text-white" />
       </Link>
     </div>
   );
