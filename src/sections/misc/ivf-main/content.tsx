@@ -21,7 +21,7 @@ const Content = () => {
                   infertility and also in the prevention of genetic problems.
                 </p>
                 <h2 className="text-lg font-bold font-heading">
-                  A typical IVF cycle
+                  What is the Process of IVF Treatment in Bangalore?
                 </h2>
                 <div>
                   Here is a general overview of the steps involved in a typical

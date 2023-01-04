@@ -2,6 +2,9 @@
 
 module.exports = {
   siteUrl: process.env.SITE_URL || "https://www.garbhagudi.com",
-  generateRobotsTxt: true, // (optional)
-  sitemapSize: 20000,
+  generateRobotsTxt: true,
+  changefreq: weekly,
+  sitemapSize: 5000,
+  generateIndexSitemap: false,
+  priority: "0.8",
 };
