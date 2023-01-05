@@ -68,12 +68,12 @@ export const TreatmentHeader = {
       icon: "https://media.graphassets.com/jaf7RcbHQ5u6VHFrt4Ca",
       link: "/treatments/pesa-and-tesa",
     },
-    {
-      id: "2",
-      name: "Sperm Donation",
-      icon: "https://media.graphassets.com/qexkykouQyStG3SGpB6J",
-      link: "/treatments/sperm-donation",
-    },
+    // {
+    //   id: "2",
+    //   name: "Sperm Donation",
+    //   icon: "https://media.graphassets.com/qexkykouQyStG3SGpB6J",
+    //   link: "/treatments/sperm-donation",
+    // },
     {
       id: "3",
       name: "Semen Freezing",
