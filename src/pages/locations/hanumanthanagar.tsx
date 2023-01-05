@@ -41,7 +41,7 @@ const HanumanthaNagar = ({ doctors }) => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="GarbhaGudi is where dreams come alive, hopes never fade and possibilities never end. We work to help you cherish the golden moment of holding your bundle of joy"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277077/Locations/1280x500_HN_wql2mm.jpg"
         />
 
         {/* Twitter*/}
