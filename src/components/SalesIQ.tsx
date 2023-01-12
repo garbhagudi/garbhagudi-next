@@ -20,5 +20,3 @@ const SalesIQ = (props) => {
 };
 
 export default SalesIQ;
-
-//Sales IQ file
