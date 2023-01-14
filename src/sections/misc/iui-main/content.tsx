@@ -10,7 +10,7 @@ const Content = (props: Props) => {
         What Is IUI ?
       </h3>
       <div className="grid grid-cols-1 lg:grid-cols-4">
-        <div className="col-span-3 font-content px-3 max-w-prose ">
+        <div className="col-span-3 font-content px-3 max-w-4xl">
           <h3 className="text-lg font-heading font-bold pb-6">Introduction</h3>
           <div>
             IUI (Intrauterine Insemination) is a fertility treatment procedure
@@ -25,26 +25,26 @@ const Content = (props: Props) => {
             fertility treatments.
           </div>
         </div>
-        <div className="col-span-1 px-3">
+        <div className="col-span-1 px-3 bg-gray-300 lg:pt-7 pb-5 rounded-lg">
           <h3 className="text-lg font-heading font-bold pt-5 lg:pt-0 pb-6">
             Quick Links
           </h3>
           <div className="font-content">
-            <ul className="space-y-3">
-              <li className="hover:underline hover:text-brandPink">
+            <ul className="space-y-3 list-outside list-disc">
+              <li className="hover:underline hover:text-brandPink ml-4">
                 <Link href="#iui-centres-in-bangalore">
                   IUI Centres in Bangalore
                 </Link>
               </li>
-              <li className="hover:underline hover:text-brandPink">
+              <li className="hover:underline hover:text-brandPink ml-4">
                 <Link href="#cost-of-iui-in-bangalore">
                   Cost of IUI in Bangalore
                 </Link>
               </li>
-              <li className="hover:underline hover:text-brandPink">
+              <li className="hover:underline hover:text-brandPink ml-4">
                 <Link href="#procedure-of-iui">Procedure of IUI</Link>
               </li>
-              <li className="hover:underline hover:text-brandPink">
+              <li className="hover:underline hover:text-brandPink ml-4">
                 <Link href="#faq">Frequently asked questions on IUI</Link>
               </li>
             </ul>
