@@ -18,10 +18,10 @@ const Band = () => {
         <div className="text-lg font-content font-semibold bg-gray-300 px-4 py-2 rounded-xl w-96 mx-auto">
           For Appointments Call:{" "}
           <Link
-            href={"tel:+918880000909"}
+            href={"tel:+919741671113"}
             className="text-brandPink hover:underline"
           >
-            +918880000909
+            +919741671113
           </Link>
         </div>
       </div>
