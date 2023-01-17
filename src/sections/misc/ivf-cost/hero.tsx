@@ -62,7 +62,7 @@ const Banner = () => {
                   />
                 </svg>
                 <Image
-                  src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1670411247/Misc/young-woman-hand-holding-pregnancy-test-min-removebg-min_ky0j37_2_-min_fjz9nw.webp"
+                  src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1673683815/Misc/My_project-min_hjkrus.webp"
                   alt="girl with pregnancy kit"
                   className="relative"
                   width={1024}
