@@ -11,7 +11,7 @@ const ContentXtra = (props: Props) => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
         <div className="px-3">
           <h3 className="text-2xl lg:text-3xl font-bold font-heading py-4">
-            The Process of IUI
+            The Process of IUI Treatment
           </h3>
           <div className="font-content mt-4">
             IUI, or intrauterine insemination, is a fertility treatment
@@ -44,7 +44,7 @@ const ContentXtra = (props: Props) => {
         </div>
         <div className="px-3">
           <img
-            src="https://www.pngitem.com/pimgs/m/139-1398734_com-wp-process-png-iui-treatment-step-step.png"
+            src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112329/Misc/IUI-Process_01_lo7z7w.png"
             alt="IUI Info"
             className="rounded-lg"
           />

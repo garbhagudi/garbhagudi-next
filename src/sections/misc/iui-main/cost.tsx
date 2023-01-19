@@ -7,9 +7,9 @@ const Cost = () => {
       id="cost-of-iui-in-bangalore"
     >
       <div className="pt-10 lg:pt-16">
-        <h3 className="text-2xl lg:text-3xl font-heading text-center font-bold pb-6">
+        <h2 className="text-2xl lg:text-3xl font-heading text-center font-bold pb-6">
           IUI Treatment Cost in Bangalore
-        </h3>
+        </h2>
         <div className="text-xl font-content max-w-5xl mx-auto">
           IUI treatment in Bangalore can cost between
           <strong> INR 15,000 and INR 50,000 </strong>
