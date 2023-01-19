@@ -7,11 +7,13 @@ const Content = (props: Props) => {
   return (
     <div className="max-w-7xl mx-auto">
       <h3 className="text-2xl lg:text-3xl font-heading font-bold text-center py-10 lg:py-16">
-        What Is IUI ?
+        What Is IUI treatment?
       </h3>
       <div className="grid grid-cols-1 lg:grid-cols-4">
         <div className="col-span-3 font-content px-3 max-w-4xl">
-          <h3 className="text-lg font-heading font-bold pb-6">Introduction</h3>
+          <h3 className="text-lg font-heading font-bold pb-6">
+            Introduction to IUI
+          </h3>
           <div>
             IUI (Intrauterine Insemination) is a fertility treatment procedure
             in which sperm is placed directly inside a woman's uterus to
