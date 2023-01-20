@@ -27,12 +27,12 @@ const data = [
     ),
     link: "/gg-care",
   },
-  {
-    id: 1,
-    title: "Paripoorna",
-    desc: "This December, celebrate the season of completeness without worrying about the money. Get Up to Rs. 30,000/- off on IVF treatment. ",
-    link: "/blogs/all-about-the-latest-art-and-surrogacy-bill",
-  },
+  // {
+  //   id: 1,
+  //   title: "Paripoorna",
+  //   desc: "This December, celebrate the season of completeness without worrying about the money. Get Up to Rs. 30,000/- off on IVF treatment. ",
+  //   link: "/blogs/all-about-the-latest-art-and-surrogacy-bill",
+  // },
 ];
 
 const responsive = {
