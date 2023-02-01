@@ -2,24 +2,9 @@ import React from "react";
 import Link from "next/link";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 
-const MapSection = ({
-  doctors,
-  address,
-  maplink,
-  branch,
-  description,
-  branchImage,
-  title,
-}) => {
+const MapSection = ({ doctors, address, maplink, branch, description }) => {
   return (
     <div className="">
-      {/* <div className="">
-        <img
-          src={branchImage}
-          alt={title}
-          className="w-full h-[40vh] object-cover object-top"
-        />
-      </div> */}
       <div className="text-gray-600 body-font relative max-w-7xl mx-auto">
         <div className="py-6 flex flex-wrap lg:flex-nowrap inset-0 ">
           <div className="lg:w-1/2 bg-gray-300 rounded-3xl overflow-hidden p-2 lg:p-10 flex items-end justify-start relative h-[42rem] md:ml-auto w-full">
@@ -83,7 +68,7 @@ const MapSection = ({
             Fertility Specialists at {branch}
           </p>
           <div className="mx-auto space-y-0 grid grid-cols-2 sm:gap-y-10 sm:gap-x-32 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl col-span-full">
-            {doctors.map((item) => {
+            {doctors.map((item: any) => {
               return (
                 <div
                   className="text-center mb-2 transition-all duration-500 hover:shadow-2xl rounded-xl"
@@ -98,7 +83,7 @@ const MapSection = ({
                       <div className="space-y-4">
                         <img
                           className="mx-auto h-40 w-40 my-auto rounded-full mt-4"
-                          src={item?.image.url}
+                          src={item?.image?.url}
                           alt={item?.name}
                         />
                         <div className="space-y-4">

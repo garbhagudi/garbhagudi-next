@@ -19,8 +19,6 @@ const Branch = ({ branch }) => {
         maplink={branch?.mapLink}
         branch={branch?.title}
         description={branch?.about?.raw}
-        branchImage={branch?.branchPicture?.url}
-        title={branch?.title}
       />
       <Cta />
       <Faq branch={branch?.title} />
