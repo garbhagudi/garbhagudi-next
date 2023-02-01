@@ -23,7 +23,7 @@ export function About() {
                 ${close ? "w-screen text-left sm:w-full" : "text-opacity-90"}
                  `}
           >
-            <span>
+            <span className="">
               About <HiChevronDown className="inline-block" />
             </span>
           </Popover.Button>

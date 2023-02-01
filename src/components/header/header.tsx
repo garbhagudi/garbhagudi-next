@@ -17,8 +17,8 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   return (
-    <div className="sticky top-0 z-50">
-      <nav className="pb-4 bg-white border-b shadow-xl">
+    <div className="sticky top-0 z-50 bg-white shadow-xl">
+      <nav className="pb-4 border-b shadow-xl bg-[url('https://res.cloudinary.com/garbhagudiivf/image/upload/v1675172340/Misc/ezgif.com-gif-maker_viwnqk.gif')] bg-cover">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-4">
           <div className="flex items-center justify-between h-[5rem] sm:h-16">
             <div className="flex items-center justify-between align-middle cursor-pointer">
@@ -62,28 +62,28 @@ const Nav = () => {
                     </span>
                   </Link> */}
 
-                  <span className="px-2 py-2 text-sm text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
+                  <span className="px-2 py-2 text-sm font-bold text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
                     <Treatments />
                   </span>
 
-                  <span className="px-2 py-2 text-sm text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
+                  <span className="px-2 py-2 text-sm font-bold text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
                     <About />
                   </span>
 
-                  <span className="px-2 py-2 text-sm text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
+                  <span className="px-2 py-2 text-sm font-bold text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
                     <WhyGarbhaGudi />
                   </span>
 
-                  <span className="px-2 py-2 text-sm text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
+                  <span className="px-2 py-2 text-sm font-bold text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
                     <KnowledgeCenter />
                   </span>
-                  <span className="px-2 py-2 text-sm text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
+                  <span className="px-2 py-2 text-sm font-bold text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
                     <Contacts />
                   </span>
-                  <span className="px-2 py-2 text-sm text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
+                  <span className="px-2 py-2 text-sm font-bold text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
                     <Locations />
                   </span>
-                  <span className="px-2 py-2 text-sm text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
+                  <span className="px-2 py-2 text-sm font-bold text-gray-700 hover:bg-brandPink hover:text-white rounded-2xl font-content">
                     <Languages />
                   </span>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import BlogFooter from "components/blogFooter";
 import Error from "next/error";

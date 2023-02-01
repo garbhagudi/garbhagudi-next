@@ -65,23 +65,23 @@ const Treatment = ({ treatment }) => {
   function addReviewJsonLd() {
     return {
       __html: `{
-            "@context": "https://schema.org/", 
-            "@type": "Product", 
-            "name": "${treatment?.title}",
-            "image": "${treatment?.image?.url}",
-            "description": "${treatment?.content?.text.slice(0, 160)}",
-            "brand": {
-              "@type": "Brand",
-              "name": "GarbhaGudi IVF Centre"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "bestRating": "5",
-              "worstRating": "1",
-              "ratingCount": "604"
-            }
-        }`,
+        "@context": "https://schema.org/", 
+        "@type": "Product", 
+        "name": "${treatment?.title}",
+        "image": "${treatment?.image?.url}",
+        "description": "${treatment?.content?.text.slice(0, 160)}",
+        "brand": {
+          "@type": "Brand",
+          "name": "GarbhaGudi IVF Centre"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "bestRating": "5",
+          "worstRating": "1",
+          "reviewCount": "604"
+        }
+      }`,
     };
   }
 
@@ -102,12 +102,16 @@ const Treatment = ({ treatment }) => {
         },
         "aggregateRating": {
         "@type": "AggregateRating",
-              "itemReviewed": {
-                "@type": "Hospital",
-                "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
-                "name": "GarbhaGudi IVF Centre",
-                "telephone": "+918880000909",
-                "priceRange": "90000 - 280000"
+          "itemReviewed": {
+            "@type": "Hospital",
+            "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
+            "name": "GarbhaGudi IVF Centre",
+            "telephone": "+918880000909",
+            "priceRange": "90000 - 280000"
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "reviewCount": "604"
           }
         }
       }`,
