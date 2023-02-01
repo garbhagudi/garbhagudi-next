@@ -57,7 +57,7 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
             </div>
           </div>
           <div className="lg:w-1/2 px-6 font-content flex flex-col items-center">
-            <h3 className="py-10 text-4xl lg:text-3xl font-heading font-bold">
+            <h3 className="py-6 text-4xl lg:text-3xl font-heading font-bold">
               An Overview{" "}
             </h3>
             <RichText content={description} />
