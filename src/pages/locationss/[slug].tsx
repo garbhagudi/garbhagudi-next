@@ -16,7 +16,7 @@ const Branch = ({ branch }) => {
       <MapSection
         maplink={branch?.mapLink}
         address={branch?.address}
-        description={branch?.about?.raw}
+        description={branch?.about?.raw?.children}
         doctors={branch?.doctors}
         title={branch?.title}
       />
