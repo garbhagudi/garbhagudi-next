@@ -70,7 +70,7 @@ const Branch = ({ branch }) => {
               <h3 className="py-10 text-4xl lg:text-3xl font-heading font-bold">
                 An Overview{" "}
               </h3>
-              <RichText content={branch?.about?.raw} />
+              <RichText content={branch?.about?.raw.children} />
             </div>
           </div>
           <div className="w-full bg-white flex flex-col pb-8 md:mt-0">
