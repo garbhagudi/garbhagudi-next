@@ -31,7 +31,7 @@ const Home = ({ homeData }) => {
     return {
       __html: `{
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "MedicalOrganization",
         "name": "GarbhaGudi IVF Centre Pvt Ltd",
         "url": "https://garbhagudi.com",
         "logo": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
@@ -74,7 +74,7 @@ const Home = ({ homeData }) => {
         "description": "What is IVF and how does it work. IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
         "brand": {
           "@type": "Brand",
-          "name": "Garbha Gudi"
+          "name": "GarbhaGudi IVF Centre"
         },
         "aggregateRating": {
           "@type": "AggregateRating",
@@ -82,6 +82,7 @@ const Home = ({ homeData }) => {
           "bestRating": "5",
           "worstRating": "1",
           "ratingCount": "604"
+          
         }
       }`,
     };

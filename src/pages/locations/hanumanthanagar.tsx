@@ -78,7 +78,7 @@ const HanumanthaNagar = ({ doctors }) => {
         </h1>
         <div>
           <img
-            src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277077/Locations/1280x500_HN_wql2mm.jpg"
+            src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277077/Locations/1280x500_HN_wql2mm.webp"
             alt="banner"
             className="rounded-xl mt-4"
           />

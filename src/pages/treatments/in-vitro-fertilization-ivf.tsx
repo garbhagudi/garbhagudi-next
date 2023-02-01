@@ -20,14 +20,14 @@ const Ivf = () => {
           "description": "What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
           "brand": {
             "@type": "Brand",
-            "name": "GarbhaGudi"
+            "name": "GarbhaGudi IVF Centre"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.8",
             "bestRating": "5",
             "worstRating": "1",
-            "ratingCount": "604"
+            "reviewCount": "604"
           }
         }`,
     };
@@ -82,11 +82,53 @@ const Ivf = () => {
           "itemReviewed": {
           "@type": "Hospital",
           "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
-          "name": "Garbha Gudi",
+          "name": "GarbhaGudi IVF Centre",
           "telephone": "+918880000909",
           "priceRange": "90000 - 280000"
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "reviewCount": "604"
           }
         } 
+      }`,
+    };
+  }
+
+  function addFaqJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "What is the average IVF cost in Bangalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The cost of in vitro fertilization (IVF) can vary widely depending on various factors such as the location of the treatment, the specific IVF protocol being used, and the individual patient's medical history and fertility challenges. In general, the cost of IVF treatment in Bangalore can range from around INR 1,50,000 to INR 3,50,000 per cycle, although some clinics may charge more or less. It is important to note that the cost of IVF can add up quickly, as most patients require multiple cycles to achieve a successful pregnancy. Some patients may also require additional procedures or medications, which can further increase the overall cost of treatment."
+          }
+        },{
+          "@type": "Question",
+          "name": "IVF Treatment Centres in Bangalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GarbhaGudi is a place where dreams come alive, hopes never fade, and possibilities never end. We strive tirelessly to assist you to treasure the golden moment of holding your little bundles of joy. You no longer need to go long distances for fertility treatments! GarbhaGudi now has five strategically positioned branches in Bengaluru and wants to expand to additional places in the near future. Our branches are located in HanumanthaNagar, Kalyan Nagar, Electronic City, Jayanagar and Marathahalli"
+          }
+        },{
+          "@type": "Question",
+          "name": "What is Success rate and Risk percentage involved in IVF treatment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The success rate of in vitro fertilization (IVF) can vary widely depending on several factors, including the patient's age, the cause of infertility, and the quality of the embryos. In general, the overall success rate of IVF is about 35% for women under the age of 35, declining to about 10-20% for women over the age of 40. However, it is important to note that these are just estimates, and the actual success rate can vary widely from one patient to another. As for the risks involved in IVF treatment, they are generally minimal and most patients do not experience any serious complications. Some common side effects of IVF may include bloating, cramping, breast tenderness, and mood changes. More serious risks, such as bleeding or infection, are rare but can occur. Additionally, there is a small risk of multiple pregnancies, which can pose additional health risks for both the mother and the babies."
+          }
+        },{
+          "@type": "Question",
+          "name": "What are the additional costs related to IVF Treatment in Bangalore and nearby areas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There are several additional costs that can be associated with in vitro fertilization (IVF) treatment. These can include: Medications: The medications needed to stimulate egg production and prepare the uterus for pregnancy can be expensive. These medications are usually not covered by insurance. Genetic testing: Pre-implantation genetic testing (PGT) can be done to check the health of the embryos before they are transferred to the uterus. This can cost several thousand dollars Anesthesia: Some patients may need to be sedated for the egg retrieval procedure, which can add to the cost of the treatment. Storage of frozen embryos: If you have leftover embryos after the IVF cycle, you may choose to have them frozen for future use. This can cost several hundred dollars per year for storage fees. Multiple cycles: It is common for patients to need more than one cycle of IVF in order to become pregnant. Each additional cycle can add to the overall cost of treatment. Gestational surrogacy: If you are unable to carry a pregnancy to term, you may choose to use a gestational surrogate. This can add to the cost of the treatment, as you will need to pay the surrogate's fees as well as any additional medical expenses. It is important to discuss the potential costs of IVF treatment with your doctor and fertility clinic in order to fully understand the expenses you may incur."
+          }
+        }]
       }`,
     };
   }
@@ -177,6 +219,12 @@ const Ivf = () => {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={addHowToJsonLd()}
+          key="howto-jsonld"
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addFaqJsonLd()}
           key="howto-jsonld"
         />
 
