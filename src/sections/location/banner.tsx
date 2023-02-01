@@ -27,6 +27,7 @@ const Banner = () => {
             height={1920}
             width={1080}
             className="object-contain h-[40vh] mx-auto relative blur-sm md:blur-0"
+            priority
           />
         </div>
       </div>
