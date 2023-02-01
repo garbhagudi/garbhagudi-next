@@ -12,18 +12,18 @@ const Branch = ({ branch }) => {
   return (
     <div>
       <Banner />
-      <TreatmentOptions branch={branch.title} />
+      <TreatmentOptions branch={branch?.title} />
       <MapSection
-        doctors={branch.doctors}
-        address={branch.address}
-        maplink={branch.mapLink}
-        branch={branch.title}
-        description={branch.about.raw}
-        branchImage={branch.branchPicture.url}
-        title={branch.title}
+        doctors={branch?.doctors}
+        address={branch?.address}
+        maplink={branch?.mapLink}
+        branch={branch?.title}
+        description={branch?.about?.raw}
+        branchImage={branch?.branchPicture?.url}
+        title={branch?.title}
       />
       <Cta />
-      <Faq branch={branch.title} />
+      <Faq branch={branch?.title} />
       <VirtualTour
         link1={branch?.virtualTourLink1}
         link2={branch?.virtualTourLink2}
