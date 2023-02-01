@@ -9,8 +9,14 @@ import VirtualTour from "sections/location/virtualTour";
 import MapSection from "sections/location/mapSection";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import Loading from "components/Loading";
 
 const Branch = ({ branch }) => {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <Loading />;
+  }
   return (
     <div>
       <Banner />
