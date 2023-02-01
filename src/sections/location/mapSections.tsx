@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 
-const MapSection = ({ doctors, address, maplink, branch, description }) => {
+const MapSection = ({ address, maplink, branch, description }) => {
   return (
     <div className="">
       <div className="text-gray-600 body-font relative max-w-7xl mx-auto">
@@ -63,7 +63,7 @@ const MapSection = ({ doctors, address, maplink, branch, description }) => {
             <RichText content={description} />
           </div>
         </div>
-        <div className="w-full bg-white flex flex-col pb-8 md:mt-0">
+        {/* <div className="w-full bg-white flex flex-col pb-8 md:mt-0">
           <p className="text-center font-heading text-2xl font-semibold py-10 lg:mt-0">
             Fertility Specialists at {branch}
           </p>
@@ -106,7 +106,7 @@ const MapSection = ({ doctors, address, maplink, branch, description }) => {
               );
             })}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

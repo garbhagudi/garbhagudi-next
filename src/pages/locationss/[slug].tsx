@@ -14,7 +14,7 @@ const Branch = ({ branch }) => {
       <Banner />
       <TreatmentOptions branch={branch?.title} />
       <MapSection
-        doctors={branch?.doctors}
+        // doctors={branch?.doctors}
         address={branch?.address}
         maplink={branch?.mapLink}
         branch={branch?.title}

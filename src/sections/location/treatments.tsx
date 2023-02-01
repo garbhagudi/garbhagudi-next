@@ -11,13 +11,13 @@ const TreatmentOptions = ({ branch }) => {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-3 lg:gap-16 pb-10 lg:pb-16 px-2">
         {Data.map((items) => (
           <div
-            key={items.id}
+            key={items?.id}
             className="font-content border border-brandPink4 rounded-2xl flex items-center justify-between flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 hover:bg-pink-50"
           >
             <div className="w-28 h-28 -mt-14 mx-auto flex items-center justify-center rounded-full">
               <Image
-                src={items.image}
-                alt={items.treatent}
+                src={items?.image}
+                alt={items?.treatent}
                 width={100}
                 height={100}
                 className="w-20"
@@ -25,13 +25,13 @@ const TreatmentOptions = ({ branch }) => {
             </div>
             <div className="flex flex-col items-center justify-center py-2">
               <div className="text-xl font-heading text-center font-bold pb-2">
-                {items.treatent}
+                {items?.treatent}
               </div>
-              <div className="px-3 text-base text-center">{items.desc}</div>
+              <div className="px-3 text-base text-center">{items?.desc}</div>
             </div>
             <div className=" text-center border w-full bg-brandPink4 py-1 rounded-b-2xl">
               <Link
-                href={items.link}
+                href={items?.link}
                 className="font-bold text-white font-content"
               >
                 Learn More
