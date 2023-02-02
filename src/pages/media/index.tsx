@@ -95,11 +95,11 @@ const IndexPage = ({ medias }) => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <Link legacyBehavior href={`${items.articleLink}`}>
-                    <a className="font-content text-lg text-center flex items-center justify-center px-3 py-2 border text-white font-extrabold bg-brandPink4 hover:bg-brandPink rounded-md">
+                  <Link href={`${items.articleLink}`}>
+                    <div className="font-content text-lg text-center flex items-center justify-center px-3 py-2 border text-white font-extrabold bg-brandPink4 hover:bg-brandPink rounded-md">
                       Read More{" "}
                       <HiChevronRight className="inline-flex items-center justify-center" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>

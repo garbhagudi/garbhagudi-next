@@ -74,12 +74,8 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
                   className="text-center mb-2 transition-all duration-500 hover:shadow-2xl rounded-xl"
                   key={item?.id}
                 >
-                  <Link
-                    legacyBehavior
-                    href={`/fertility-experts/${item?.slug}`}
-                    passHref
-                  >
-                    <a>
+                  <Link href={`/fertility-experts/${item?.slug}`} passHref>
+                    <div>
                       <div className="space-y-4">
                         <img
                           className="mx-auto h-40 w-40 my-auto rounded-full mt-4"
@@ -100,7 +96,7 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </div>
                   </Link>
                 </div>
               );

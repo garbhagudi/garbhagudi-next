@@ -114,7 +114,6 @@ const Awards = ({ award }) => {
                 className="flex flex-col rounded-2xl shadow-lg overflow-hidden"
               >
                 <Link
-                  legacyBehavior
                   href={`/about/awards-and-accolades/${item?.slug}`}
                   passHref
                 >

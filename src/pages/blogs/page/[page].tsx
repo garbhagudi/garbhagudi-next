@@ -117,11 +117,10 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
                     <div className="mt-6 flex items-center">
                       <div className="flex-shrink-0">
                         <Link
-                          legacyBehavior
                           href={`/doctors/${item?.node?.doctor?.slug}`}
                           passHref
                         >
-                          <a>
+                          <div>
                             <span className="sr-only">
                               {item?.node?.doctor?.name}
                             </span>
@@ -130,20 +129,17 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
                               src={item?.node?.doctor?.image?.url}
                               alt={item?.node?.doctor?.name}
                             />
-                          </a>
+                          </div>
                         </Link>
                       </div>
                       <div className="ml-3">
-                        <p className="text-sm font-medium text-gray-900">
-                          <Link
-                            legacyBehavior
-                            href={`/doctors/${item?.node?.doctor?.slug}`}
-                          >
-                            <a className="font-qs font-semibold">
+                        <div className="text-sm font-medium text-gray-900">
+                          <Link href={`/doctors/${item?.node?.doctor?.slug}`}>
+                            <div className="font-qs font-semibold">
                               {item?.node?.doctor?.name}
-                            </a>
+                            </div>
                           </Link>
-                        </p>
+                        </div>
                         <div className="flex space-x-1 text-sm text-gray-500 font-qs">
                           <time>{item?.node?.publishedOn}</time>
                         </div>
@@ -155,23 +151,17 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
             </div>
             <div className="flex justify-center space-x-4 text-center mt-10">
               {hasPreviousPage ? (
-                <Link
-                  legacyBehavior
-                  href={`/blogs/page/${currentPageNumber - 1}`}
-                >
-                  <a className="my-8 rounded-xl w-44 py-4 px-6 bg-brandPink font-qs font-semibold text-white">
+                <Link href={`/blogs/page/${currentPageNumber - 1}`}>
+                  <div className="my-8 rounded-xl w-44 py-4 px-6 bg-brandPink font-qs font-semibold text-white">
                     {"< "}Previous page
-                  </a>
+                  </div>
                 </Link>
               ) : null}
               {hasNextPage ? (
-                <Link
-                  legacyBehavior
-                  href={`/blogs/page/${currentPageNumber + 1}`}
-                >
-                  <a className="my-8 rounded-xl py-4 w-44 px-6 bg-brandPink font-qs font-semibold text-white">
+                <Link href={`/blogs/page/${currentPageNumber + 1}`}>
+                  <div className="my-8 rounded-xl py-4 w-44 px-6 bg-brandPink font-qs font-semibold text-white">
                     Next page {">"}
-                  </a>
+                  </div>
                 </Link>
               ) : null}
             </div>

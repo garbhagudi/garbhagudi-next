@@ -62,17 +62,14 @@ const IndexPage = ({ careers }) => {
           <h1 className="text-center text-2xl sm:text-4xl font-heading font-bold py-6">
             GarbhaGudi – Certified Healthy Workplace
           </h1>
-          <Link
-            legacyBehavior
-            href="/about/awards-and-accolades/garbhagudi-certified-healthy-workplace"
-          >
-            <a>
+          <Link href="/about/awards-and-accolades/garbhagudi-certified-healthy-workplace">
+            <div>
               <img
                 src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1657979955/Banner/Argoya_Silver_Award_Web_Bnr-min_bx7xeo.webp"
                 alt="arogya world banner"
                 className="rounded-xl"
               />
-            </a>
+            </div>
           </Link>
         </div>
         <div className="px-2">
@@ -99,13 +96,8 @@ const IndexPage = ({ careers }) => {
         <div className="container mb-2 flex mx-auto w-full items-center justify-center">
           <li className="flex flex-wrap gap-4 mx-auto mt-6">
             {careers.map((items) => (
-              <Link
-                legacyBehavior
-                href={`careers/${items?.slug}`}
-                passHref
-                key={items.id}
-              >
-                <a className="bg-white rounded-lg border shadow-md hover:bg-gray-100 w-96 max-w-sm mx-auto">
+              <Link href={`careers/${items?.slug}`} passHref key={items.id}>
+                <div className="bg-white rounded-lg border shadow-md hover:bg-gray-100 w-96 max-w-sm mx-auto">
                   <div className="flex flex-col justify-between p-4 leading-normal ">
                     <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 font-content">
                       {items?.position}
@@ -125,7 +117,7 @@ const IndexPage = ({ careers }) => {
                       <Link href={`careers/${items?.slug}`}>Apply Now</Link>
                     </button>
                   </div>
-                </a>
+                </div>
               </Link>
             ))}
           </li>

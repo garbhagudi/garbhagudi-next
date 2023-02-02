@@ -7,8 +7,7 @@ import Cta from "sections/gg-care/cta";
 import QuickLinks from "sections/location/quickLinks";
 import VirtualTour from "sections/location/virtualTour";
 import MapSection from "sections/location/mapSection";
-import { RichText } from "@graphcms/rich-text-react-renderer";
-import Link from "next/link";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import Loading from "components/Loading";
 
@@ -17,8 +16,34 @@ const Branch = ({ branch }) => {
   if (router.isFallback) {
     return <Loading />;
   }
+  const title = `${branch.title} | GarbhaGudi IVF Centre`;
   return (
     <div>
+      <Head>
+        {/* Primary Tags */}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{title}</title>
+        <meta name="title" content={branch?.metaTitle} />
+        <meta name="description" content={branch?.metaDescription} />
+
+        {/* Open Graph / Facebook */}
+
+        <meta property="og:title" content={branch?.metaTitle} />
+        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
+        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta property="og:description" content={branch?.metaDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={branch?.branchPicture.url} />
+
+        {/* Twitter*/}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta name="twitter:title" content={branch?.metaTitle} />
+        <meta name="twitter:description" content={branch?.metaDescription} />
+        <meta name="twitter:image" content={branch?.branchPicture.url} />
+      </Head>
       <Banner />
       <TreatmentOptions branch={branch?.title} />
       <MapSection
@@ -55,6 +80,8 @@ export const getStaticProps = async ({ params }) => {
             raw
           }
           slug
+          metaTitle
+    metaDescription
           id
           mapLink
           branchPicture {

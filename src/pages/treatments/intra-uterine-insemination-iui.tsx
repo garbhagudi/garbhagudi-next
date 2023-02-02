@@ -146,7 +146,7 @@ const Iui = (props: Props) => {
           "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
           "name": "GarbhaGudi IVF Centre",
           "telephone": "+918880000909",
-          "priceRange": "90000 - 280000"
+          "priceRange": "90000 - 280000",
             "ratingValue": "4.8",
             "bestRating": "5",
             "worstRating": "1",

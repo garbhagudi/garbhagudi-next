@@ -2,10 +2,10 @@ import React from "react";
 import Head from "next/head";
 import HomeComponent from "sections/home";
 import Link from "next/link";
-import { gql, GraphQLClient } from "graphql-request";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
+import graphcms from "lib/graphcms";
 
 const responsive = {
   superLargeDesktop: {
@@ -98,11 +98,11 @@ const Home = ({ homeData }) => {
         </title>
         <meta
           name="title"
-          content="GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India"
+          content="Best IVF Centre in Bangalore | IVF Hospital in Bangalore | GarbhaGudi"
         />
         <meta
           name="description"
-          content="GarbhaGudi is one of the best IVF Centre in Bangalore with a high success rate for infertility treatment. Get excellent treatment at affordable cost for your fertility issues. Visit the best IVF hospital now!"
+          content="GarbhaGudi is one of the best IVF centres in Bangalore with a high success rate for IVF / infertility treatment. Book a Consultation now with the best IVF Doctor in Bangalore."
         />
         {/* Ld+JSON Data */}
 
@@ -166,17 +166,18 @@ const Home = ({ homeData }) => {
         autoPlay={true}
         autoPlaySpeed={5000}
       >
-        {homeData.banners.map((items) => (
+        {homeData?.banners.map((items: any) => (
           <div className="" key={items?.id}>
-            <a href={items?.url} target="_blank" rel="noreferrer">
+            <Link href={items?.url} target="_blank" rel="noreferrer">
               <Image
                 src={items?.image?.url}
                 alt={items?.title}
                 width={1920}
                 height={630}
                 className="w-full h-full"
+                priority
               />
-            </a>
+            </Link>
           </div>
         ))}
       </Carousel>
@@ -195,41 +196,35 @@ const Home = ({ homeData }) => {
               </p>
             </div>
             <ul className="grid grid-cols-2 mx-auto space-y-0 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl">
-              {homeData?.doctors.map((item) => {
+              {homeData?.doctors.map((item: any) => {
                 return (
                   <li
                     key={item?.id}
                     className="mb-2 transition-all duration-500 hover:shadow-2xl rounded-xl "
                   >
-                    <Link
-                      legacyBehavior
-                      href={`/fertility-experts/${item?.slug}`}
-                      passHref
-                    >
-                      <a>
+                    <Link href={`/fertility-experts/${item?.slug}`} passHref>
+                      <div className="space-y-4">
+                        <Image
+                          className="w-32 h-32 mx-auto my-auto mt-4 transition-all duration-500 rounded-full xl:w-44 xl:h-44 hover:scale-110"
+                          src={item?.image?.url}
+                          alt={item?.name}
+                          width={500}
+                          height={500}
+                        />
                         <div className="space-y-4">
-                          <Image
-                            className="w-32 h-32 mx-auto my-auto mt-4 transition-all duration-500 rounded-full xl:w-44 xl:h-44 hover:scale-110"
-                            src={item?.image?.url}
-                            alt={item?.name}
-                            width={500}
-                            height={500}
-                          />
-                          <div className="space-y-4">
-                            <div className="space-y-1 text-lg font-medium leading-6">
-                              <h3 className="text-brandDark font-content">
-                                {item?.name}
-                              </h3>
-                              <p className="text-sm text-brandPurpleDark font-content">
-                                {item?.qualification}
-                              </p>
-                              <p className="pb-2 text-sm text-brandPink font-content">
-                                {item?.designation}
-                              </p>
-                            </div>
+                          <div className="space-y-1 text-lg font-medium leading-6">
+                            <h3 className="text-brandDark font-content">
+                              {item?.name}
+                            </h3>
+                            <p className="text-sm text-brandPurpleDark font-content">
+                              {item?.qualification}
+                            </p>
+                            <p className="pb-2 text-sm text-brandPink font-content">
+                              {item?.designation}
+                            </p>
                           </div>
                         </div>
-                      </a>
+                      </div>
                     </Link>
                   </li>
                 );
@@ -245,14 +240,8 @@ const Home = ({ homeData }) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const query = gql`
-    query {
+  const homeData = await graphcms.request(
+    `query {
       doctors {
         name
         qualification
@@ -268,21 +257,17 @@ export const getStaticProps = async () => {
         title
         id
         url
-        order
-        image {
+        image{
           url
         }
       }
-    }
-  `;
-
-  const data = await graphQLClient.request(query);
-  const homeData = data;
+    }`
+  );
 
   return {
     props: {
       homeData,
     },
-    revalidate: 10,
+    revalidate: 180,
   };
 };

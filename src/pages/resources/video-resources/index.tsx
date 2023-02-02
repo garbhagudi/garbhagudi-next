@@ -308,13 +308,10 @@ const IndexPage = ({
                       })}
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <Link
-                        legacyBehavior
-                        href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1"
-                      >
-                        <a className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
+                      <Link href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1">
+                        <div className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
                           Subscribe
-                        </a>
+                        </div>
                       </Link>
                     </div>
                   </div>
@@ -385,13 +382,10 @@ const IndexPage = ({
                       })}
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <Link
-                        legacyBehavior
-                        href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1"
-                      >
-                        <a className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
+                      <Link href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1">
+                        <div className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
                           Subscribe
-                        </a>
+                        </div>
                       </Link>
                     </div>
                   </div>
@@ -462,13 +456,10 @@ const IndexPage = ({
                       })}
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <Link
-                        legacyBehavior
-                        href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1"
-                      >
-                        <a className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
+                      <Link href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1">
+                        <div className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
                           Subscribe
-                        </a>
+                        </div>
                       </Link>
                     </div>
                   </div>
@@ -511,7 +502,7 @@ const IndexPage = ({
             </Tab.Panel>
             <Tab.Panel>
               <div className="grid grid-cols-1 mx-auto lg:grid-cols-5">
-                <section className="col-span-5 lg:col-span-3">
+                <div className="col-span-5 lg:col-span-3">
                   <div className="mt-8 overflow-hidden border-2 rounded-xl border-brandPink">
                     <LiteYouTubeEmbed
                       id={url4}
@@ -539,19 +530,16 @@ const IndexPage = ({
                       })}
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <Link
-                        legacyBehavior
-                        href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1"
-                      >
-                        <a className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
+                      <Link href="https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1">
+                        <div className="px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content">
                           Subscribe
-                        </a>
+                        </div>
                       </Link>
                     </div>
                   </div>
-                </section>
+                </div>
                 <div className="md:ml-10 lg:col-span-2">
-                  <section className="flex items-center justify-center mt-8 ">
+                  <div className="flex items-center justify-center mt-8 ">
                     <div
                       className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto customScrollbar lg:max-h-[38rem]"
                       id="style-4"
@@ -582,7 +570,7 @@ const IndexPage = ({
                         );
                       })}
                     </div>
-                  </section>
+                  </div>
                 </div>
               </div>
             </Tab.Panel>
