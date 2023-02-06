@@ -5,9 +5,9 @@ import Link from "next/link";
 const TreatmentOptions = ({ branch }) => {
   return (
     <div className="container mx-auto">
-      <h3 className="py-16 lg:py-20 text-3xl lg:text-4xl font-heading text-center font-bold">
+      <h2 className="py-16 lg:py-20 text-2xl lg:text-3xl font-heading text-center font-bold">
         Treatment Options at {branch}
-      </h3>
+      </h2>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-3 lg:gap-16 pb-10 lg:pb-16 px-2">
         {Data.map((items) => (
           <div
@@ -107,7 +107,7 @@ const Data = [
     id: 8,
     treatent: "Semen Analysis / CASA",
     desc: "Get a detailed analysis of your semen and understand your fertility status with GarbhaGudi's advanced Semen Analysis/CASA service.",
-    link: "/resources/diagnosis/semen-analysi",
+    link: "/resources/diagnosis/semen-analysis",
     image:
       "https://res.cloudinary.com/garbhagudiivf/image/upload/v1674890580/Misc/ivf%20icons/semen_nqxd6s.webp",
   },

@@ -55,7 +55,7 @@ const IndexPage = ({ branches }) => {
         />
       </Head>
       <div className="">
-        <Banner />
+        <Banner branchTitle={""} />
         <h1 className="pt-10 lg:pt-16 text-center font-heading text-3xl lg:text-4xl font-bold">
           Our Branches
         </h1>

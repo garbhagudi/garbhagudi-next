@@ -44,7 +44,7 @@ const Branch = ({ branch }) => {
         <meta name="twitter:description" content={branch?.metaDescription} />
         <meta name="twitter:image" content={branch?.branchPicture.url} />
       </Head>
-      <Banner />
+      <Banner branchTitle={branch.title} />
       <TreatmentOptions branch={branch?.title} />
       <MapSection
         maplink={branch?.mapLink}

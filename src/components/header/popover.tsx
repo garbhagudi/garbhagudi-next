@@ -37,7 +37,7 @@ export function About() {
             leaveTo="opacity-0 translate-y-1"
           >
             <Popover.Panel className="absolute z-10 w-screen max-w-md px-4 transform -translate-x-1/2 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-xl">
-              <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
+              <div className="overflow-hidden shadow-lg rounded-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid grid-cols-2 gap-8 p-5 bg-white lg:grid-cols-2">
                   {AboutUs.map((item) => (
                     <Link key={item.name} href={item.href}>
@@ -91,7 +91,7 @@ export function WhyGarbhaGudi() {
             leaveTo="opacity-0 translate-y-1"
           >
             <Popover.Panel className="absolute z-10 w-screen max-w-md px-4 transform -translate-x-1/2 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-3xl">
-              <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
+              <div className="overflow-hidden shadow-lg rounded-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid grid-cols-2 gap-8 p-5 bg-white lg:grid-cols-3">
                   {ValueAddedServices.map((item) => (
                     <Link key={item.name} href={item.href} passHref>
@@ -144,7 +144,7 @@ export function KnowledgeCenter() {
             leaveTo="opacity-0 translate-y-1"
           >
             <Popover.Panel className="absolute z-10 w-screen max-w-xl px-4 transform -translate-x-1/2 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-xl">
-              <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
+              <div className="overflow-hidden shadow-lg rounded-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid grid-cols-2 gap-8 p-5 bg-white">
                   {Resources.map((item) => (
                     <Link key={item.name} href={item.href} passHref>
@@ -200,7 +200,7 @@ export function Contacts() {
             leaveTo="opacity-0 translate-y-1"
           >
             <Popover.Panel className="absolute z-10 px-4 transform -translate-x-1/2 w-96 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-xl">
-              <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
+              <div className="overflow-hidden shadow-lg rounded-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 p-5 bg-white lg:grid-cols-1">
                   {Contact.map((item) => (
                     <Link key={item.name} href={item.href} passHref>
@@ -253,7 +253,7 @@ export function Locations() {
             leaveTo="opacity-0 translate-y-1"
           >
             <Popover.Panel className="absolute z-10 px-4 transform mt-3 lg:mt-7 -translate-x-1/2 w-96 left-1/2 sm:px-0 lg:max-w-xl">
-              <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5">
+              <div className="overflow-hidden shadow-lg rounded-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 p-5 bg-white lg:grid-cols-1">
                   {Location.map((item) => (
                     <Link key={item.name} href={item.href}>
@@ -306,7 +306,7 @@ export function Languages() {
             leaveTo="opacity-0 translate-y-1"
           >
             <Popover.Panel className="absolute z-10 w-32 px-4 mt-3 lg:mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl">
-              <div className="overflow-hidden shadow-lg rounded-xl ring-1 ring-black ring-opacity-5">
+              <div className="overflow-hidden shadow-lg rounded-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 p-5 bg-white lg:grid-cols-1">
                   {Language.map((item) => (
                     <a
@@ -359,13 +359,13 @@ export function Treatments() {
             leaveTo="opacity-0 translate-y-1"
           >
             <Popover.Panel className="absolute z-10 px-4 mt-3 lg:mt-7 transform -translate-x-1/2 w-screen max-w-xl left-1/2 sm:px-0 lg:max-w-xl">
-              <div className="overflow-hidden shadow-lg rounded-3xl ring-1 ring-black ring-opacity-5 bg-white">
+              <div className="overflow-hidden shadow-lg rounded-lg ring-1 ring-black ring-opacity-5 bg-white">
                 <Tab.Group>
-                  <Tab.List className="flex items-center justify-between bg-brandPink text-white font-content font-bold px-3 lg:px-12 py-1.5 lg:py-2 rounded-t-3xl">
+                  <Tab.List className="flex items-center justify-between bg-brandPink text-white font-content font-bold px-3 lg:px-12 py-1.5 lg:py-2 rounded-t-lg">
                     <Tab
                       className={({ selected }) =>
                         classNames(
-                          "w-full py-1 text-sm text-brandPink rounded-3xl",
+                          "w-full py-1 text-sm text-brandPink rounded-lg",
                           "focus:outline-none",
                           selected
                             ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
@@ -378,7 +378,7 @@ export function Treatments() {
                     <Tab
                       className={({ selected }) =>
                         classNames(
-                          "w-full py-1 text-sm text-brandPink rounded-3xl",
+                          "w-full py-1 text-sm text-brandPink rounded-lg",
                           "focus:outline-none",
                           selected
                             ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
@@ -391,7 +391,7 @@ export function Treatments() {
                     <Tab
                       className={({ selected }) =>
                         classNames(
-                          "w-full py-1 text-sm text-brandPink rounded-3xl",
+                          "w-full py-1 text-sm text-brandPink rounded-lg",
                           "focus:outline-none",
                           selected
                             ? "bg-gray-100 ring-2 ring-brandPink2 shadow"
@@ -413,7 +413,7 @@ export function Treatments() {
                                 alt={items.name}
                                 className="w-10 h-10 mx-auto"
                               />
-                              <div className="font-content text-sm pt-2">
+                              <div className="font-content text-sm font-medium pt-2">
                                 {items.name}
                               </div>
                             </div>
@@ -431,7 +431,7 @@ export function Treatments() {
                                 alt={items.name}
                                 className="w-10 h-10 mx-auto"
                               />
-                              <div className="font-content text-md pt-2">
+                              <div className="font-content font-medium pt-2">
                                 {items.name}
                               </div>
                             </div>
@@ -449,7 +449,7 @@ export function Treatments() {
                                 alt={items.name}
                                 className="w-10 h-10 mx-auto"
                               />
-                              <div className="font-content text-md pt-2">
+                              <div className="font-content text-sm font-medium pt-2">
                                 {items.name}
                               </div>
                             </div>
