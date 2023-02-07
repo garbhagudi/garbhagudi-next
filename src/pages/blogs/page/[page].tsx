@@ -7,10 +7,17 @@ import graphcms from "lib/graphcms";
 import { useRouter } from "next/router";
 import Loading from "components/Loading";
 import SearchComponent from "components/search/searchComponent";
+import Pagination from "components/pagination";
 
 const limit = 6;
 
-function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
+function BlogPage({
+  currentPageNumber,
+  hasNextPage,
+  hasPreviousPage,
+  blogs,
+  aggregate,
+}) {
   const router = useRouter();
   const title = `Blogs | Page ${currentPageNumber} | GarbhaGudi IVF Centre`;
 
@@ -95,18 +102,18 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
               {blogs?.map((item: any) => (
                 <div
                   key={item?.node?.id}
-                  className="flex flex-col rounded-2xl shadow-lg overflow-hidden"
+                  className="flex flex-col rounded-lg shadow-lg overflow-hidden"
                 >
                   <Link href={`/blogs/${item.node.slug}`} passHref>
                     <div className="flex-shrink-0">
                       <img
-                        className="h-38 w-full object-contain rounded-2xl cursor-pointer"
+                        className="h-38 w-full object-contain rounded-t-lg cursor-pointer"
                         src={item?.node?.image?.url}
                         alt={item?.node?.title}
                       />
                     </div>
                   </Link>
-                  <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                  <div className="flex-1 bg-gradient-to-bl from-brandPink4 to-white via-pink-50 p-6 flex flex-col justify-between">
                     <div className="flex-1">
                       <Link href={`/blogs/${item?.node?.slug}`} passHref>
                         <p className="text-lg font-semibold text-gray-900 cursor-pointer font-heading">
@@ -117,11 +124,10 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
                     <div className="mt-6 flex items-center">
                       <div className="flex-shrink-0">
                         <Link
-                          legacyBehavior
                           href={`/doctors/${item?.node?.doctor?.slug}`}
                           passHref
                         >
-                          <a>
+                          <div>
                             <span className="sr-only">
                               {item?.node?.doctor?.name}
                             </span>
@@ -130,20 +136,17 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
                               src={item?.node?.doctor?.image?.url}
                               alt={item?.node?.doctor?.name}
                             />
-                          </a>
+                          </div>
                         </Link>
                       </div>
                       <div className="ml-3">
-                        <p className="text-sm font-medium text-gray-900">
-                          <Link
-                            legacyBehavior
-                            href={`/doctors/${item?.node?.doctor?.slug}`}
-                          >
-                            <a className="font-qs font-semibold">
+                        <div className="text-sm font-medium text-gray-900">
+                          <Link href={`/doctors/${item?.node?.doctor?.slug}`}>
+                            <div className="font-qs font-semibold">
                               {item?.node?.doctor?.name}
-                            </a>
+                            </div>
                           </Link>
-                        </p>
+                        </div>
                         <div className="flex space-x-1 text-sm text-gray-500 font-qs">
                           <time>{item?.node?.publishedOn}</time>
                         </div>
@@ -153,31 +156,37 @@ function BlogPage({ currentPageNumber, hasNextPage, hasPreviousPage, blogs }) {
                 </div>
               ))}
             </div>
-            <div className="flex justify-center space-x-4 text-center mt-10">
+
+            <Pagination
+              currentPage={currentPageNumber}
+              limitDefined={limit}
+              nextPage={currentPageNumber + 1}
+              previousPage={currentPageNumber - 1}
+              total={aggregate.count}
+              nextLink={`/blogs/page/${currentPageNumber + 1}`}
+              previousLink={`/blogs/page/${currentPageNumber - 1}`}
+              isNext={hasNextPage}
+              isPrev={hasPreviousPage}
+            />
+            {/* <div className="flex justify-center space-x-4 text-center mt-10">
               {hasPreviousPage ? (
-                <Link
-                  legacyBehavior
-                  href={`/blogs/page/${currentPageNumber - 1}`}
-                >
-                  <a className="my-8 rounded-xl w-44 py-4 px-6 bg-brandPink font-qs font-semibold text-white">
+                <Link href={`/blogs/page/${currentPageNumber - 1}`}>
+                  <div className="my-8 rounded-xl w-44 py-4 px-6 bg-brandPink font-qs font-semibold text-white">
                     {"< "}Previous page
-                  </a>
+                  </div>
                 </Link>
               ) : null}
               {hasNextPage ? (
-                <Link
-                  legacyBehavior
-                  href={`/blogs/page/${currentPageNumber + 1}`}
-                >
-                  <a className="my-8 rounded-xl py-4 w-44 px-6 bg-brandPink font-qs font-semibold text-white">
+                <Link href={`/blogs/page/${currentPageNumber + 1}`}>
+                  <div className="my-8 rounded-xl py-4 w-44 px-6 bg-brandPink font-qs font-semibold text-white">
                     Next page {">"}
-                  </a>
+                  </div>
                 </Link>
               ) : null}
-            </div>
-            <div className="text-center font-qs text-xl font-semibold">
+            </div> */}
+            {/* <div className="text-center font-qs text-xl font-semibold">
               Page: {currentPageNumber}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -214,12 +223,15 @@ export async function getStaticProps({ params }) {
           hasNextPage
           hasPreviousPage
         }
+        aggregate {
+          count
+        }
       }
     }
   `;
 
   const {
-    blogsConnection: { blogs, pageInfo },
+    blogsConnection: { blogs, pageInfo, aggregate },
   } = await graphcms.request(query, {
     limit,
     offset: Number((params.page - 1) * limit),
@@ -229,6 +241,7 @@ export async function getStaticProps({ params }) {
     props: {
       currentPageNumber: Number(params.page),
       blogs,
+      aggregate,
       ...pageInfo,
     },
     revalidate: 180,

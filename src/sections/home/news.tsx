@@ -88,9 +88,7 @@ const News = () => {
                     {item.desc}
                   </div>
                   <div className="px-3 py-2 mt-8 font-semibold text-white border w-28 bg-brandPink rounded-xl">
-                    <Link legacyBehavior href={item.link}>
-                      Know More
-                    </Link>
+                    <Link href={item.link}>Know More</Link>
                   </div>
                 </div>
               ))}

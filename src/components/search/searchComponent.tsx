@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
-import { HiCheck, HiSelector } from "react-icons/hi";
+import { HiCheck, HiOutlineSearch } from "react-icons/hi";
 import { terms } from "./searchData";
 import Link from "next/link";
 
@@ -8,7 +8,7 @@ export default function SearchComponent() {
   const [selected, setSelected] = useState(terms[0]);
   const [query, setQuery] = useState("");
 
-  const filteredPeople =
+  const searchTerms =
     query === ""
       ? terms
       : terms.filter((item) =>
@@ -24,12 +24,12 @@ export default function SearchComponent() {
         <div className="relative mt-1">
           <div className="relative w-full cursor-default overflow-hidden  text-left shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
             <Combobox.Input
-              className="w-full py-4 pl-3 font-content pr-10 text-lg rounded-xl bg-gray-50 leading-5 text-brandDark border-2 border-brandPink focus:outline-none focus:ring-0"
+              className="w-full py-3 px-3 font-content pr-10 text-lg rounded-xl bg-gray-50 leading-5 text-brandDark border-2 border-brandPink focus:outline-none focus:ring-0"
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Search"
             />
-            <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
-              <HiSelector
+            <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-4">
+              <HiOutlineSearch
                 className="h-5 w-5 text-gray-400"
                 aria-hidden="true"
               />
@@ -43,12 +43,12 @@ export default function SearchComponent() {
             afterLeave={() => setQuery("")}
           >
             <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-              {filteredPeople.length === 0 && query !== "" ? (
+              {searchTerms.length === 0 && query !== "" ? (
                 <div className="relative cursor-default select-none py-2 px-4 text-gray-700">
                   Nothing found.
                 </div>
               ) : (
-                filteredPeople.map((item) => (
+                searchTerms.map((item) => (
                   <Combobox.Option
                     key={item.title}
                     className={({ active }) =>

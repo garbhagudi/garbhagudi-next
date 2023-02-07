@@ -76,5 +76,3 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
-
-//Main file

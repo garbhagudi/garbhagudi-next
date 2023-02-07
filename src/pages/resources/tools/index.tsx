@@ -88,53 +88,50 @@ const IndexPage = () => {
         </p>
         <ul className="mx-auto mt-4 space-y-4 font-semibold list-disc list-inside text-md font-content">
           <li>
-            <Link legacyBehavior href="/blogs/page/1">
-              <a className="hover:underline underline-offset-2">Blogs</a>
+            <Link href="/blogs/page/1">
+              <div className="hover:underline underline-offset-2">Blogs</div>
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href="/resources/causes">
-              <a className="hover:underline underline-offset-2">
+            <Link href="/resources/causes">
+              <div className="hover:underline underline-offset-2">
                 Causes of Infertility
-              </a>
+              </div>
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href="/resources/diagnosis">
-              <a className="hover:underline underline-offset-2">
+            <Link href="/resources/diagnosis">
+              <div className="hover:underline underline-offset-2">
                 Diagnosis Methods
-              </a>
+              </div>
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href="/resources/treatments">
-              <a className="hover:underline underline-offset-2">
+            <Link href="/resources/treatments">
+              <div className="hover:underline underline-offset-2">
                 Treatment Options
-              </a>
+              </div>
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href="/resources/myths-and-facts">
-              <a className="hover:underline underline-offset-2">
+            <Link href="/resources/myths-and-facts">
+              <div className="hover:underline underline-offset-2">
                 Myths and Facts
-              </a>
+              </div>
             </Link>
           </li>
           <li>
-            <Link
-              legacyBehavior
-              href="https://consult.bestdocapp.com/home/GARBHAGUDI"
-            >
-              <a className="hover:underline underline-offset-2">
+            <Link href="https://consult.bestdocapp.com/home/GARBHAGUDI">
+              <div className="hover:underline underline-offset-2">
                 Book an Appointment
-              </a>
+              </div>
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href="tel:+918880000909">
-              <a className="hover:underline underline-offset-2">
+            <Link href="tel:+918880000909">
+              <div className="hover:underline underline-offset-2">
                 Speak to our Executives
-              </a>
+              </div>
             </Link>
           </li>
         </ul>

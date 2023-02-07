@@ -14,8 +14,8 @@ const Band = () => {
           <span className="text-brandPurpleDark"> ಗರ್ಭಗುಡಿ </span>
         </div>
       </div>
-      <div className="my-4 text-center ">
-        <div className="text-lg font-content font-semibold bg-gray-300 px-4 py-2 rounded-xl w-96 mx-auto">
+      <div className="pt-4 text-center ">
+        <div className="text-lg font-content font-semibold bg-gray-300 px-4 py-2 rounded-xl lg:w-96 mx-auto">
           For Appointments Call:{" "}
           <Link
             href={"tel:+919148499992"}

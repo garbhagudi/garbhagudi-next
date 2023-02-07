@@ -6,6 +6,7 @@ module.exports = {
   ],
   presets: [],
   darkMode: "media", // or 'class'
+  plugins: [require("@headlessui/tailwindcss")],
   theme: {
     extend: {
       backgroundImage: {

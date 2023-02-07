@@ -1,23 +1,27 @@
 import React from "react";
 import Link from "next/link";
+import { HiCheck } from "react-icons/hi";
 
 const QuickLinks = () => {
   return (
-    <div className="max-w-7xl mx-auto">
-      <h3 className="text-3xl lg:text-4xl font-heading text-center font-bold">
-        Quicklinks
-      </h3>
-      <div className="flex items-center justify-center flex-wrap gap-3 pt-10 pb-16">
-        {Data.map((items) => (
-          <div key={items.id}>
-            <Link
-              href={items.link}
-              className="text-base font-semibold text-white font-content px-3 py-1 bg-green-700 rounded-3xl"
-            >
-              {items.title}
-            </Link>
-          </div>
-        ))}
+    <div className="bg-brandPink5 mt-5 px-3">
+      <div className="flex flex-col lg:flex-row  items-start justify-evenly pt-10 pb-10 max-w-7xl mx-auto">
+        <h2 className="text-3xl lg:text-4qxl font-heading font-bold underline pb-6">
+          Quicklinks
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+          {Data.map((items) => (
+            <div key={items.id}>
+              <Link
+                href={items.link}
+                className="text-sm lg:text-base font-semibold font-content flex items-center hover:underline"
+              >
+                <HiCheck className="bg-green-700 text-white stroke-2 w-6 h-6 p-1 rounded-full mr-2" />
+                {items.title}
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -28,42 +32,42 @@ export default QuickLinks;
 const Data = [
   {
     id: 1,
-    title: "Other Branches",
+    title: "Our Other Branches",
     link: "/locations",
   },
   {
     id: 2,
-    title: "Hanumanthanagar",
+    title: "Best IVF Centre in Hanumanthanagar",
     link: "/locations/hanumanthanagar",
   },
   {
     id: 3,
-    title: "Kalyan Nagar",
+    title: "Best IVF Centre in Kalyan Nagar",
     link: "/locations/kalyan-nagar",
   },
   {
     id: 4,
-    title: "Jayanagar",
+    title: "Best IVF Centre in Jayanagar",
     link: "/locations/jayanagar",
   },
   {
     id: 5,
-    title: "Electronic City",
+    title: "Best IVF Centre in Electronic City",
     link: "/locations/electronic-city",
   },
   {
     id: 6,
-    title: "Marathahalli",
+    title: "Best IVF Centre in Marathahalli",
     link: "/locations/marathahalli",
   },
   {
     id: 7,
-    title: "In-vitro Fertilization",
+    title: "Best In-vitro Fertilization (IVF) centre in Bangalore",
     link: "/treatments/in-vitro-fertilization-ivf",
   },
   {
     id: 8,
-    title: "Intra-uterine Insemination",
+    title: "Best Intra-uterine Insemination (IUI) centre in Bangalore",
     link: "/treatments/intra-uterine-insemination-iui",
   },
   {
