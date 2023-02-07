@@ -100,7 +100,7 @@ const IndexPage = ({ branches }) => {
             </Tab.List>
             <Tab.Panels
               className={
-                "bg-gradient-to-br border from-brandPink4 to-white via-gray-50 rounded-lg lg:px-6"
+                "bg-gradient-to-br border from-brandPink4 to-white via-pink-50 rounded-lg lg:px-6 border-t-0"
               }
             >
               {branches.map((items: any) => (
