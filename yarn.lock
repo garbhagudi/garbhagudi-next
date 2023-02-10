@@ -2365,14 +2365,14 @@ react-calendar@^4.0.0:
     get-user-locale "^1.2.0"
     prop-types "^15.6.0"
 
-react-chrono@^1.21.1:
-  version "1.21.1"
-  resolved "https://registry.yarnpkg.com/react-chrono/-/react-chrono-1.21.1.tgz#87706260408267a84a1c0e3262d4d81bc8bdbea9"
-  integrity sha512-Ge/oileIz1yduwlYH7mPyYIQ4V3um+PSn0iHacFIZbAYjD8tT22tkOCMoLC9LU1wv3yq8COMEih9VCOAEWbGtA==
+react-chrono@^1.21.3:
+  version "1.21.3"
+  resolved "https://registry.yarnpkg.com/react-chrono/-/react-chrono-1.21.3.tgz#bc000ae003dcf0ab488fcaafae9314fd84c7dcea"
+  integrity sha512-z4vUeDFaOBcB59/KmKYilaKWqCFbo3hwhlw8M3YzXx7S2okKK1oaYdRbjiOld/OLLAlJgBgaz0vvz5eSZ9kLfA==
   dependencies:
     classnames "^2.3.2"
     focus-visible "^5.2.0"
-    sass "^1.57.1"
+    sass "^1.58.0"
     styled-components "^5.3.6"
 
 react-dom@^18.2.0:
@@ -2544,7 +2544,7 @@ run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
-sass@^1.57.1:
+sass@^1.58.0:
   version "1.58.0"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.58.0.tgz#ee8aea3ad5ea5c485c26b3096e2df6087d0bb1cc"
   integrity sha512-PiMJcP33DdKtZ/1jSjjqVIKihoDc6yWmYr9K/4r3fVVIEDAluD0q7XZiRKrNJcPK3qkLRF/79DND1H5q1LBjgg==
