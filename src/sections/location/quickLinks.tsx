@@ -31,11 +31,6 @@ export default QuickLinks;
 
 const Data = [
   {
-    id: 1,
-    title: "Our Other Branches",
-    link: "/locations",
-  },
-  {
     id: 2,
     title: "Best IVF Centre in Hanumanthanagar",
     link: "/locations/hanumanthanagar",
@@ -61,23 +56,13 @@ const Data = [
     link: "/locations/marathahalli",
   },
   {
-    id: 7,
-    title: "Best In-vitro Fertilization (IVF) centre in Bangalore",
-    link: "/treatments/in-vitro-fertilization-ivf",
-  },
-  {
-    id: 8,
-    title: "Best Intra-uterine Insemination (IUI) centre in Bangalore",
-    link: "/treatments/intra-uterine-insemination-iui",
-  },
-  {
-    id: 9,
-    title: "IVF Cost In Bangalore",
-    link: "/treatments/ivf-treatment-cost-in-bangalore",
-  },
-  {
-    id: 10,
+    id: 6,
     title: "About GarbhaGudi",
     link: "/about/overview",
+  },
+  {
+    id: 1,
+    title: "Our Other Branches",
+    link: "/locations",
   },
 ];

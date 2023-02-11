@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/globals.css";
 import Footer from "components/footer/footer";
 import Nav from "components/header/header";
 import FloatPhone from "components/FloatPhone";
 import Salesiq from "components/SalesIQ";
 import TagManager from "react-gtm-module";
-import { useEffect } from "react";
 import { useRouter } from "next/router";
 import "styles/calendar.css";
 import Loading from "components/Loading";
@@ -13,7 +12,7 @@ import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     TagManager.initialize({ gtmId: "GTM-5T77DVZ" });

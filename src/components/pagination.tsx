@@ -51,12 +51,12 @@ const Pagination = ({
             >
               <Link
                 href={previousLink}
-                className="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
+                className="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-brandPink focus:z-20"
               >
                 <span className="sr-only">Previous</span>
                 <HiChevronDoubleLeft className="h-5 w-5" aria-hidden="true" />
               </Link>
-              <div className="flex flex-wrap items-center justify-center space-x-2 px-3 border">
+              <div className="flex flex-wrap items-center justify-center space-x-1.5 px-3 border">
                 {pageNumbers.map((number) => (
                   <div
                     key={number}
@@ -73,7 +73,7 @@ const Pagination = ({
               </div>
               <Link
                 href={nextLink}
-                className="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20"
+                className="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-brandPink focus:z-20"
               >
                 <span className="sr-only">Next</span>
                 <HiChevronDoubleRight className="h-5 w-5" aria-hidden="true" />

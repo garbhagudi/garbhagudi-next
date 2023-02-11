@@ -102,7 +102,7 @@ function BlogPage({
               {blogs?.map((item: any) => (
                 <div
                   key={item?.node?.id}
-                  className="flex flex-col rounded-lg shadow-lg overflow-hidden"
+                  className="flex flex-col rounded-lg shadow-2xl overflow-hidden hover:translate-x-1 hover:translate-y-1 transition duration-200 hover:shadow-lg"
                 >
                   <Link href={`/blogs/${item.node.slug}`} passHref>
                     <div className="flex-shrink-0">
@@ -113,7 +113,7 @@ function BlogPage({
                       />
                     </div>
                   </Link>
-                  <div className="flex-1 bg-gradient-to-bl from-brandPink4 to-white via-pink-50 p-6 flex flex-col justify-between">
+                  <div className="flex-1 bg-gradient-to-bl from-pink-100 to-white via-pink-50 p-6 flex flex-col justify-between">
                     <div className="flex-1">
                       <Link href={`/blogs/${item?.node?.slug}`} passHref>
                         <p className="text-lg font-semibold text-gray-900 cursor-pointer font-heading">
@@ -168,25 +168,6 @@ function BlogPage({
               isNext={hasNextPage}
               isPrev={hasPreviousPage}
             />
-            {/* <div className="flex justify-center space-x-4 text-center mt-10">
-              {hasPreviousPage ? (
-                <Link href={`/blogs/page/${currentPageNumber - 1}`}>
-                  <div className="my-8 rounded-xl w-44 py-4 px-6 bg-brandPink font-qs font-semibold text-white">
-                    {"< "}Previous page
-                  </div>
-                </Link>
-              ) : null}
-              {hasNextPage ? (
-                <Link href={`/blogs/page/${currentPageNumber + 1}`}>
-                  <div className="my-8 rounded-xl py-4 w-44 px-6 bg-brandPink font-qs font-semibold text-white">
-                    Next page {">"}
-                  </div>
-                </Link>
-              ) : null}
-            </div> */}
-            {/* <div className="text-center font-qs text-xl font-semibold">
-              Page: {currentPageNumber}
-            </div> */}
           </div>
         </div>
       </div>

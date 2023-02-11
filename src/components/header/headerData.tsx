@@ -253,7 +253,7 @@ export const ValueAddedServices = [
   },
   {
     name: "Top Fertility Specialists",
-    href: "/locations/fertility-experts",
+    href: "/fertility-experts",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840305/Icons/Features/Top_Fertility_Specialists_zkyl9x.svg",
   },
   {

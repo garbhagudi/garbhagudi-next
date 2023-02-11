@@ -36,6 +36,7 @@ const Stat = () => {
               alt="Happy Couple"
               height={1024}
               width={1024}
+              loading="lazy"
             />
             <div
               aria-hidden="true"
