@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import Head from "next/head";
 import HomeComponent from "sections/home";
 import Link from "next/link";
@@ -15,6 +15,25 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 1,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+
+const responsive2 = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -195,7 +214,7 @@ const Home = ({ homeData }) => {
                 their success in treating the most challenging fertility cases.
               </p>
             </div>
-            <ul className="grid grid-cols-2 mx-auto space-y-0 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl">
+            <ul className="hidden md:grid grid-cols-2 mx-auto space-y-0 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl ">
               {homeData?.doctors.map((item: any) => {
                 return (
                   <li
@@ -210,6 +229,7 @@ const Home = ({ homeData }) => {
                           alt={item?.name}
                           width={500}
                           height={500}
+                          loading="lazy"
                         />
                         <div className="space-y-4">
                           <div className="space-y-1 text-lg font-medium leading-6">
@@ -230,6 +250,50 @@ const Home = ({ homeData }) => {
                 );
               })}
             </ul>
+            <div className="md:hidden">
+              <Carousel
+                responsive={responsive2}
+                ssr={true}
+                infinite={true}
+                autoPlay={true}
+                autoPlaySpeed={5000}
+              >
+                {homeData?.doctors.map((item: any) => {
+                  return (
+                    <li
+                      key={item?.id}
+                      className="mb-2 transition-all duration-500 rounded-xl "
+                    >
+                      <Link href={`/fertility-experts/${item?.slug}`} passHref>
+                        <div className="space-y-4">
+                          <Image
+                            className="w-56 h-56 mx-auto my-auto mt-4 transition-all duration-500 rounded-full xl:w-44 xl:h-44 hover:scale-110"
+                            src={item?.image?.url}
+                            alt={item?.name}
+                            width={500}
+                            height={500}
+                            loading="lazy"
+                          />
+                          <div className="space-y-4">
+                            <div className="space-y-1 text-lg font-medium leading-6">
+                              <h3 className="text-brandDark font-content">
+                                {item?.name}
+                              </h3>
+                              <p className="text-sm text-brandPurpleDark font-content">
+                                {item?.qualification}
+                              </p>
+                              <p className="pb-2 text-sm text-brandPink font-content">
+                                {item?.designation}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </Carousel>
+            </div>
           </div>
         </div>
       </div>

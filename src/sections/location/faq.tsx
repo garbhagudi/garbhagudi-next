@@ -34,17 +34,11 @@ const Faq = ({ branch }) => {
   const [answer5, setAnswer5] = useState("");
 
   useEffect(() => {
-    const randomIndex1 = Math.floor(Math.random() * q1Options.length);
-    const randomIndex2 = Math.floor(Math.random() * q2Options.length);
-    const randomIndex3 = Math.floor(Math.random() * q3Options.length);
-    const randomIndex4 = Math.floor(Math.random() * q4Options.length);
-    const randomIndex5 = Math.floor(Math.random() * q5Options.length);
-
-    setAnswer1(q1Options[randomIndex1]);
-    setAnswer2(q2Options[randomIndex2]);
-    setAnswer3(q3Options[randomIndex3]);
-    setAnswer4(q4Options[randomIndex4]);
-    setAnswer5(q5Options[randomIndex5]);
+    setAnswer1(q1Options[Math.floor(Math.random() * q1Options.length)]);
+    setAnswer2(q2Options[Math.floor(Math.random() * q2Options.length)]);
+    setAnswer3(q3Options[Math.floor(Math.random() * q3Options.length)]);
+    setAnswer4(q4Options[Math.floor(Math.random() * q4Options.length)]);
+    setAnswer5(q5Options[Math.floor(Math.random() * q5Options.length)]);
   }, []);
 
   return (

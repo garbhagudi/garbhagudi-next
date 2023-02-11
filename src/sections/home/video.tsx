@@ -19,7 +19,6 @@ const data = [
 
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
     items: 1,
   },
@@ -40,7 +39,7 @@ const responsive = {
 const Video = () => {
   return (
     <div className="container mx-auto text-center my-8">
-      <span className="text-2xl lg:text-4xl font-extrabold text-brandDark font-heading">
+      <span className="text-2xl lg:text-4xl max-w-5xl font-extrabold text-brandDark font-heading">
         Testimonials from our happy couples
       </span>
       <div className="px-3 sm:px-0">
@@ -48,6 +47,7 @@ const Video = () => {
           responsive={responsive}
           autoPlaySpeed={360000}
           focusOnSelect={true}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
           ssr={true}
           infinite={true}
           showDots={true}
@@ -57,7 +57,7 @@ const Video = () => {
           {data.map((item) => {
             return (
               <div
-                className="md:w-4/6 mx-auto aspect-video mt-8 overflow-hidden rounded-3xl border-2 border-brandPink sm:px-0"
+                className="md:w-8/12 mx-auto aspect-video mt-8 overflow-hidden rounded-3xl border-2 border-brandPink sm:px-0"
                 key={item.id}
               >
                 <LiteYouTubeEmbed

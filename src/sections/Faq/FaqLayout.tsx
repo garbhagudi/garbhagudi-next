@@ -1,5 +1,6 @@
 import React from "react";
 import { HiChevronDown } from "react-icons/hi";
+import { Transition } from "@headlessui/react";
 
 const AccordionLayout = ({
   title,
@@ -8,17 +9,22 @@ const AccordionLayout = ({
   activeIndex,
   setActiveIndex,
 }) => {
-  const handleSetIndex = (index: any) =>
+  const handleSetIndex = (index: any) => {
     activeIndex !== index && setActiveIndex(index);
+  };
 
   return (
     <>
       <div
         onClick={() => handleSetIndex(index)}
-        className="flex w-full justify-between items-center px-3 sm:px-6 py-3 mt-3 rounded-xl text-brandDark bg-brandDark bg-opacity-20 hover:bg-opacity-80 hover:text-white hover:cursor-pointer"
+        className={
+          activeIndex === index
+            ? `flex w-full justify-between items-center px-3 sm:px-6 py-2 mt-3 rounded-t-lg hover:cursor-pointer transition-all duration-300 text-md xl:text-xl bg-brandPink3 text-white font-heading`
+            : `flex w-full justify-between items-center px-3 sm:px-6 py-1 hover:py-3 mt-3 hover:rounded-lg hover:cursor-pointer transition-all duration-300 text-md hover:bg-brandPink5 sm:hover:text-lg xl:hover:text-xl border-b hover:border-b-0 border-gray-300 font-content`
+        }
       >
-        <div className="flexitems-center justify-center font-semibold text-md sm:text-lg ">
-          <div className="font-content">{title}</div>
+        <div className="flex items-center justify-center font-semibold ">
+          <div className="">{title}</div>
         </div>
         <div>
           {activeIndex === index ? (
@@ -28,12 +34,21 @@ const AccordionLayout = ({
           )}
         </div>
       </div>
-
-      {activeIndex === index && (
-        <div className="shadow-3xl rounded-2xl p-4 mb-6 font-content">
-          {children}
-        </div>
-      )}
+      <Transition
+        show={true}
+        enter="transition duration-100 ease-out"
+        enterFrom="transform scale-95 opacity-0"
+        enterTo="transform scale-100 opacity-100"
+        leave="transition duration-75 ease-out"
+        leaveFrom="transform scale-100 opacity-100"
+        leaveTo="transform scale-95 opacity-0"
+      >
+        {activeIndex === index && (
+          <div className="shadow-3xl rounded-b-lg p-4 font-content border-2 border-brandPink3 shadow-2xl">
+            {children}
+          </div>
+        )}
+      </Transition>
     </>
   );
 };

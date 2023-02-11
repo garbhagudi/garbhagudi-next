@@ -36,6 +36,7 @@ const Hero = () => {
                   className="object-cover rounded-2xl"
                   width={1024}
                   height={768}
+                  loading="lazy"
                 />
               </div>
             </div>

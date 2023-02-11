@@ -86,7 +86,7 @@ const IndexPage = () => {
         <p className="text-xl font-bold text-center font-heading">
           Other Useful Links
         </p>
-        <ul className="mx-auto mt-4 space-y-4 font-semibold list-disc list-inside text-md font-content">
+        <ul className="mx-auto mt-4 space-y-4 font-semibold list-disc text-md font-content">
           <li>
             <Link href="/blogs/page/1">
               <div className="hover:underline underline-offset-2">Blogs</div>

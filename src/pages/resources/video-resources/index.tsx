@@ -222,11 +222,11 @@ const IndexPage = ({
           </h1>
         </div>
         <Tab.Group>
-          <Tab.List className="grid grid-cols-2 mx-auto rounded-lg md:grid-cols-2 lg:grid-cols-4 bg-brandPink4 max-w-7xl">
+          <Tab.List className="grid grid-cols-2 mx-auto rounded-lg md:grid-cols-2 lg:grid-cols-4 bg-brandPink max-w-7xl">
             <Tab
               className={({ selected }) =>
                 classNames(
-                  "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-brandPink",
+                  "w-full rounded-lg py-2.5 text-base font-medium leading-5 text-brandPink",
                   "focus:outline-none focus:ring-2 focus:ring-brandPink",
                   selected
                     ? "bg-white shadow"
@@ -240,7 +240,7 @@ const IndexPage = ({
             <Tab
               className={({ selected }) =>
                 classNames(
-                  "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-brandPink",
+                  "w-full rounded-lg py-2.5 text-base font-medium leading-5 text-brandPink",
                   "focus:outline-none focus:ring-2 focus:ring-brandPink",
                   selected
                     ? "bg-white shadow"
@@ -253,7 +253,7 @@ const IndexPage = ({
             <Tab
               className={({ selected }) =>
                 classNames(
-                  "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-brandPink",
+                  "w-full rounded-lg py-2.5 text-base font-medium leading-5 text-brandPink",
                   "focus:outline-none",
                   selected
                     ? "bg-white shadow focus:ring-2 focus:ring-brandPink"
@@ -266,7 +266,7 @@ const IndexPage = ({
             <Tab
               className={({ selected }) =>
                 classNames(
-                  "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-brandPink",
+                  "w-full rounded-lg py-2.5 text-base font-medium leading-5 text-brandPink",
                   "focus:outline-none",
                   selected
                     ? "bg-white shadow focus:ring-2 focus:ring-brandPink"
@@ -281,7 +281,7 @@ const IndexPage = ({
             <Tab.Panel>
               <div className="grid grid-cols-1 mx-auto lg:grid-cols-5">
                 <section className="col-span-5 lg:col-span-3">
-                  <div className="mt-8 overflow-hidden border-2 rounded-xl border-brandPink">
+                  <div className="mt-8 overflow-hidden border-2 rounded-lg border-brandPink">
                     <LiteYouTubeEmbed
                       id={url}
                       title="Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay"
@@ -355,7 +355,7 @@ const IndexPage = ({
             <Tab.Panel id="garbhasandesha">
               <div className="grid grid-cols-1 mx-auto lg:grid-cols-5">
                 <section className="col-span-5 lg:col-span-3">
-                  <div className="mt-8 overflow-hidden border-2 rounded-xl border-brandPink">
+                  <div className="mt-8 overflow-hidden border-2 rounded-lg border-brandPink">
                     <LiteYouTubeEmbed
                       id={url2}
                       title="Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay"
@@ -429,7 +429,7 @@ const IndexPage = ({
             <Tab.Panel>
               <div className="grid grid-cols-1 mx-auto lg:grid-cols-5">
                 <section className="col-span-5 lg:col-span-3">
-                  <div className="mt-8 overflow-hidden border-2 rounded-xl border-brandPink">
+                  <div className="mt-8 overflow-hidden border-2 rounded-lg border-brandPink">
                     <LiteYouTubeEmbed
                       id={url3}
                       title="Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay"
@@ -503,7 +503,7 @@ const IndexPage = ({
             <Tab.Panel>
               <div className="grid grid-cols-1 mx-auto lg:grid-cols-5">
                 <div className="col-span-5 lg:col-span-3">
-                  <div className="mt-8 overflow-hidden border-2 rounded-xl border-brandPink">
+                  <div className="mt-8 overflow-hidden border-2 rounded-lg border-brandPink">
                     <LiteYouTubeEmbed
                       id={url4}
                       title="Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay"

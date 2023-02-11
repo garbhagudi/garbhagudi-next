@@ -7,21 +7,33 @@ const navigation = {
     { name: "Vision & Mission", href: "/about/vision-and-mission" },
     { name: "Directors", href: "/about/overview" },
     {
-      name: "Awards & Accolades",
+      name: "Awards",
       href: "/about/awards-and-accolades",
     },
     { name: "Dr Asha S Vijay", href: "https://drashasvijay.com" },
   ],
+  quickLinks: [
+    { name: "IVF Treatment", href: "/treatments/in-virto-fertilization-ivf" },
+    {
+      name: "IUI Treatment",
+      href: "/treatments/intra-uterine-insemination-iui",
+    },
+    {
+      name: "Treatment Pricing",
+      href: "/treatment/ivf-treatment-cost-in-bangalore",
+    },
+  ],
   support: [
     { name: "GG CARE", href: "/gg-care" },
-    { name: "Diagnosis Options", href: "/resources/diagnosis" },
-    { name: "Treatment Options", href: "/resources/treatments" },
+    { name: "Diagnosis", href: "/resources/diagnosis" },
+    { name: "Treatment", href: "/resources/treatments" },
+    { name: "Career", href: "/careers" },
   ],
   company: [
-    { name: "GarbhaGudi IVF", href: "/about/overview" },
+    { name: "GarbhaGudi", href: "/about/overview" },
     { name: "GGIRHR", href: "https://ggirhr.com" },
-    { name: "GarbhaGnan Foundation", href: "https://garbhagnan.org" },
-    { name: "GarbhaGudi Pharma", href: "#" },
+    { name: "GarbhaGnan", href: "https://garbhagnan.org" },
+    { name: "Pharmacy", href: "#" },
   ],
   legal: [
     { name: "Privacy", href: "/legal/privacy-policy" },
@@ -42,17 +54,17 @@ export default function Footer() {
       </h2>
       <div className="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:py-8 lg:px-8 border-t">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-full text-center antialiased">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
+          <div className="mt-12 grid grid-cols-1 xl:grid-cols-1 gap-8 xl:mt-0 xl:col-span-full text-center antialiased">
+            <div className="grid grid-cols-3 md:grid-cols-5 gap-5">
+              <div className="">
                 <h3 className="text-sm font-semibold text-brandliteGray tracking-wider uppercase">
                   About
                 </h3>
-                <ul className="mt-4 space-y-2 text-sm">
+                <ul className="mt-4 space-y-1">
                   {navigation.about.map((item) => (
                     <li key={item.name}>
                       <Link href={item.href} passHref>
-                        <span className=" text-brandDark hover:text-brandPink hover:underline cursor-pointer">
+                        <span className=" text-brandDark hover:text-brandPink hover:underline cursor-pointer text-xs hover:text-sm md:text-sm md:hover:text-base">
                           {item.name}
                         </span>
                       </Link>
@@ -60,15 +72,15 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
-              <div className="mt-12 md:mt-0">
+              <div className="">
                 <h3 className="text-sm font-semibold text-brandliteGray tracking-wider uppercase">
                   Support
                 </h3>
-                <ul className="mt-4 space-y-2 text-sm">
+                <ul className="mt-4 space-y-1">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
                       <Link passHref href={item.href}>
-                        <span className=" text-brandDark hover:text-brandPink hover:underline cursor-pointer">
+                        <span className=" text-brandDark hover:text-brandPink hover:underline cursor-pointer text-xs hover:text-sm md:text-sm md:hover:text-base">
                           {item.name}
                         </span>
                       </Link>
@@ -76,33 +88,47 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
+              <div className="">
                 <h3 className="text-sm font-semibold text-brandliteGray tracking-wider uppercase">
-                  Organisation
+                  Companies
                 </h3>
-                <ul className="mt-4 space-y-2 text-sm">
+                <ul className="mt-4 space-y-1">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} rel="noreferrer" target={"_blank"}>
-                        <span className=" text-brandDark hover:text-brandPink hover:underline cursor-pointer">
+                      <Link passHref href={item.href}>
+                        <span className=" text-brandDark hover:text-brandPink hover:underline cursor-pointer text-xs hover:text-sm md:text-sm md:hover:text-base">
                           {item.name}
                         </span>
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="mt-12 md:mt-0">
+              <div className="">
+                <h3 className="text-sm font-semibold text-brandliteGray tracking-wider uppercase">
+                  Quicklinks
+                </h3>
+                <ul className="mt-4 space-y-1">
+                  {navigation.quickLinks.map((item) => (
+                    <li key={item.name}>
+                      <Link href={item.href} passHref>
+                        <span className=" text-brandDark hover:text-brandPink hover:underline cursor-pointer text-xs hover:text-sm md:text-sm md:hover:text-base">
+                          {item.name}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="">
                 <h3 className="text-sm font-semibold text-brandliteGray tracking-wider uppercase">
                   Legal
                 </h3>
-                <ul className="mt-4 space-y-2 text-sm">
+                <ul className="mt-4 space-y-1">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
                       <Link passHref href={item.href}>
-                        <span className=" text-brandDark hover:text-brandPink hover:underline cursor-pointer">
+                        <span className=" text-brandDark hover:text-brandPink hover:underline cursor-pointer text-xs hover:text-sm md:text-sm md:hover:text-base">
                           {item.name}
                         </span>
                       </Link>

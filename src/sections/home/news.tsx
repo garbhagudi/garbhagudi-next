@@ -79,7 +79,7 @@ const News = () => {
               {data.map((item) => (
                 <div
                   key={item.id}
-                  className="flex flex-col items-center justify-center h-64 p-6 text-center bg-white border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-100"
+                  className="flex flex-col items-center justify-center p-6 text-center bg-white border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-100"
                 >
                   <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 font-heading ">
                     {item.title}

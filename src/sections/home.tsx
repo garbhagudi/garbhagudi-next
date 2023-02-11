@@ -17,7 +17,6 @@ const HomeComponent = () => {
       <Band />
       <Hero />
       <Band2 />
-      <News />
       <Overview />
       <Video />
       <Features />

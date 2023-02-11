@@ -25,6 +25,7 @@ const StatsPC = (props: Props) => {
                   className="hover:scale-115 transition-all duration-500"
                   width={200}
                   height={200}
+                  loading="lazy"
                 />
 
                 {tooltipStatus == 1 && (
@@ -45,6 +46,7 @@ const StatsPC = (props: Props) => {
                   className="h-64 w-64"
                   width={256}
                   height={256}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -60,6 +62,7 @@ const StatsPC = (props: Props) => {
                   className="hover:scale-115 transition-all duration-500"
                   width={200}
                   height={200}
+                  loading="lazy"
                 />
                 {tooltipStatus == 2 && (
                   <div className="absolute text-sm mt-44">
@@ -80,6 +83,7 @@ const StatsPC = (props: Props) => {
                   className="hover:scale-115 transition-all duration-500"
                   width={200}
                   height={200}
+                  loading="lazy"
                 />
                 {tooltipStatus == 3 && (
                   <div className="absolute text-sm mt-44">Humane Touch</div>
@@ -98,6 +102,7 @@ const StatsPC = (props: Props) => {
                   className="hover:scale-115 transition-all duration-500"
                   width={200}
                   height={200}
+                  loading="lazy"
                 />
                 {tooltipStatus == 4 && (
                   <div className="absolute text-sm mt-44">
@@ -118,6 +123,7 @@ const StatsPC = (props: Props) => {
                   className="hover:scale-115 transition-all duration-500"
                   width={200}
                   height={200}
+                  loading="lazy"
                 />
                 {tooltipStatus == 5 && (
                   <div className="absolute mt-44 text-sm">
@@ -138,6 +144,7 @@ const StatsPC = (props: Props) => {
                   className="hover:scale-115 transition-all duration-500"
                   width={200}
                   height={200}
+                  loading="lazy"
                 />
                 {tooltipStatus == 6 && (
                   <div className="absolute text-sm mt-44">
@@ -159,6 +166,7 @@ const StatsPC = (props: Props) => {
                   className="hover:scale-115 transition-all duration-500"
                   width={200}
                   height={200}
+                  loading="lazy"
                 />
                 {tooltipStatus == 7 && (
                   <div className="absolute text-sm mt-44">
@@ -179,6 +187,7 @@ const StatsPC = (props: Props) => {
                   className="hover:scale-115 transition-all duration-500"
                   width={200}
                   height={200}
+                  loading="lazy"
                 />
                 {tooltipStatus == 8 && (
                   <div className="absolute text-sm mt-44 ">
