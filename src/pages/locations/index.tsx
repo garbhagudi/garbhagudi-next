@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
 
-const IndexPage = ({ branches }) => {
+const Locations = ({ branches }) => {
   return (
     <div>
       <Head>
@@ -101,7 +101,7 @@ const IndexPage = ({ branches }) => {
   );
 };
 
-export default IndexPage;
+export default Locations;
 
 export const getStaticProps = async () => {
   const { branches } = await graphcms.request(

@@ -1,3 +1,4 @@
+import MyModal from "components/modal";
 import { BsWhatsapp } from "react-icons/bs";
 const Cta = () => {
   return (
@@ -12,14 +13,12 @@ const Cta = () => {
         </h2>
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md shadow">
-            <a
-              href="https://garbhagudi.com/contact.html"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent font-content text-base font-medium rounded-md text-white bg-brandPink hover:bg-brandPink4"
-            >
-              Contact Us
-            </a>
+            <MyModal
+              title={"Contact Us"}
+              clnm={
+                "inline-flex items-center justify-center px-5 py-3 border border-transparent font-content text-base font-medium rounded-md text-brandPink bg-white hover:bg-pink-50"
+              }
+            />
           </div>
           <div className="ml-3 inline-flex rounded-md shadow">
             <a
