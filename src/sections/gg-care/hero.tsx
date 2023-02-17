@@ -18,7 +18,7 @@ const supportLinks = [
       "Reach out to us with your questions, concerns, or challenges. We’ll be happy to help you at any time, and we’re always trying to make things easier for you!",
     icon: HiPhone,
     ctaAction: "Call Now",
-    ctaLink: "tel:+918880000909",
+    ctaLink: "tel:+919108910832",
   },
   {
     name: "Book an Appointment",

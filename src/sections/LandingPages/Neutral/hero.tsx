@@ -30,7 +30,11 @@ function HeroHome() {
                 className=" flex items-center  justify-center"
                 key={items.id}
               >
-                <img src={items.img} alt={items.title} className="w-full" />
+                <img
+                  src={items.img}
+                  alt={items.title}
+                  className="w-full hover:scale-150 transition-all duration-200"
+                />
               </div>
             ))}
           </div>

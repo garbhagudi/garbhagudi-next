@@ -128,7 +128,7 @@ const IndexPage = () => {
             </Link>
           </li>
           <li>
-            <Link href="tel:+918880000909">
+            <Link href="tel:+919108910832">
               <div className="hover:underline underline-offset-2">
                 Speak to our Executives
               </div>

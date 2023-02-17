@@ -139,8 +139,8 @@ const IndexPage = ({ branches }) => {
                               PHONE
                             </h2>
                             <div className="leading-relaxed font-qs">
-                              <Link href="tel:+918880000909">
-                                +91 888 000 0909
+                              <Link href="tel:+919108910832">
+                                +91 9108 9108 32
                               </Link>
                             </div>
                             <h2 className="font-semibold text-gray-900 tracking-widest text-xs mt-4 font-qs">

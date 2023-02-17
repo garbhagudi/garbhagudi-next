@@ -39,7 +39,7 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
                   PHONE
                 </div>
                 <p className="leading-relaxed font-qs text-sm">
-                  <Link href="tel:+918880000909">+91 888 000 0909</Link>
+                  <Link href="tel:+919108910832">+91 9108 9108 32</Link>
                 </p>
                 <div className="font-semibold text-gray-900 tracking-widest text-xs mt-4 font-qs">
                   WhatsApp
