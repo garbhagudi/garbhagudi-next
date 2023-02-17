@@ -17,7 +17,7 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="sticky top-0 bg-white z-50 shadow-xl">
-      <nav className=" shadow-2xl bg-[url('https://res.cloudinary.com/garbhagudiivf/image/upload/v1675172340/Misc/ezgif.com-gif-maker_viwnqk.gif')] lg:bg-cover">
+      <nav className="shadow-2xl">
         <nav className="px-4 lg:px-6 lg:py-2">
           <div className="flex justify-between items-center mx-auto max-w-screen-xl">
             <Link href="/" className="hidden xl:flex items-center">
