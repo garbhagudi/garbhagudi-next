@@ -65,7 +65,7 @@ const Home = ({ homeData }) => {
         "contactPoint": [
           {
             "@type": "ContactPoint",
-            "telephone": "+918880000909",
+            "telephone": "+919108910832",
             "contactType": "customer service",
             "email": "dreams@garbhagudi.com",
             "areaServed": "IN",

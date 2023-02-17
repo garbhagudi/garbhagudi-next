@@ -32,20 +32,20 @@ const Banner = () => {
                 <h3 className="mb-6 text-2xl font-heading font-bold text-gray-700">
                   Why choose GarbhaGudi?
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 text-gray-600 font-semibold gap-3 text-base">
-                  <div className="bg-gray-200 hover:bg-gray-300 pl-3 py-1 rounded-md">
+                <div className="grid grid-cols-1 md:grid-cols-2 text-gray-700 font-semibold gap-3 text-base cursor-pointer">
+                  <div className="bg-gray-200 hover:bg-gradient-to-l from-gray-400 via-gray-300 to-gray-300 pl-3 py-1.5 rounded-md hover:shadow-xl hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-200">
                     <span className="font-bold text-brandPink">8500+</span>{" "}
                     Happy Families
                   </div>
-                  <div className="bg-gray-200 hover:bg-gray-300 pl-3 py-1 rounded-md">
+                  <div className="bg-gray-200 hover:bg-gradient-to-l from-gray-400 via-gray-300 to-gray-300 pl-3 py-1.5 rounded-md hover:shadow-xl hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-200">
                     <span className="font-bold text-brandPink">12+</span> Years
                     of Experience
                   </div>
-                  <div className="bg-gray-200 hover:bg-gray-300 pl-3 py-1 rounded-md">
+                  <div className="bg-gray-200 hover:bg-gradient-to-l from-gray-400 via-gray-300 to-gray-300 pl-3 py-1.5 rounded-md hover:shadow-xl hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-200">
                     <span className="font-bold text-brandPink">65-73%</span> IVF
                     Success Rate
                   </div>
-                  <div className="bg-gray-200 hover:bg-gray-300 pl-3 py-1 rounded-md">
+                  <div className="bg-gray-200 hover:bg-gradient-to-l from-gray-400 via-gray-300 to-gray-300 pl-3 py-1.5 rounded-md hover:shadow-xl hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-200">
                     <span className="font-bold text-brandPink">5</span> Centres
                     Across Bangalore
                   </div>

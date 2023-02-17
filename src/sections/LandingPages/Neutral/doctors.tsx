@@ -1,55 +1,86 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import DoctorLayout from "components/doctorsLayout";
-import Carousel from "react-multi-carousel";
-
-const responsive2 = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 4,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
+import { Swiper, SwiperSlide } from "swiper/react";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import SwiperCore from "swiper";
+import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const FertilityExperts = () => {
   const [activeIndex, setActiveIndex] = React.useState(1);
+  const swiperRef = useRef<SwiperCore>();
+
+  const breakpoints = {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+    1601: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  };
+
   return (
-    <div>
-      <div className="max-w-7xl mx-auto py-10 lg:py-16">
+    <div className="">
+      <div className="bg-transparent mx-auto py-10 lg:py-16">
         <h1 className="text-2xl lg:text-3xl font-heading font-bold text-center pb-10 lg:pb-16">
           Our Fertility Experts
         </h1>
-        <Carousel responsive={responsive2} ssr={true} infinite={true}>
-          {doctors.map((items) => (
-            <DoctorLayout
-              index={items.id}
-              key={items.id}
-              imageComponent={
-                <ImageComponent
+        <div className="relative max-w-7xl mx-auto flex items-center justify-center">
+          <button
+            onClick={() => swiperRef.current?.slidePrev()}
+            className="bg-brandPink text-white rounded-full z-10 p-2 absolute left-0 ml-4"
+          >
+            <HiChevronLeft className="text-2xl" />
+          </button>
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={30}
+            modules={[Navigation]}
+            onBeforeInit={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            breakpoints={breakpoints}
+            className="max-w-6xl"
+          >
+            {doctors.map((items) => (
+              <SwiperSlide key={items.id}>
+                <DoctorLayout
+                  index={items.id}
+                  imageComponent={
+                    <ImageComponent
+                      name={items.name}
+                      image={items.image}
+                      qualification={items.qualification}
+                      designation={items.designation}
+                    />
+                  }
+                  activeIndex={activeIndex}
+                  docpic={items.image}
                   name={items.name}
-                  image={items.image}
-                  qualification={items.qualification}
-                  designation={items.designation}
-                />
-              }
-              activeIndex={activeIndex}
-              docpic={items.image}
-              name={items.name}
-              bio={items.bio}
-              setActiveIndex={setActiveIndex}
-            ></DoctorLayout>
-          ))}
-        </Carousel>
+                  bio={items.bio}
+                  setActiveIndex={setActiveIndex}
+                ></DoctorLayout>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <button
+            onClick={() => swiperRef.current?.slideNext()}
+            className="bg-brandPink text-white rounded-full p-2 z-10 absolute right-0 mr-4"
+          >
+            <HiChevronRight className="text-2xl" />
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -240,8 +271,8 @@ const doctors = [
     ),
   },
   {
-    id: "6",
-    name: "Dr Subha L",
+    id: "8",
+    name: "Dr Shubha L",
     designation: "Fertility Specialist",
     qualification: "MBBS, MS(OBG), DNB, FRM",
     location: "ElectronicCity",

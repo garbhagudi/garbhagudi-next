@@ -223,7 +223,7 @@ const Doctor = ({ doctor }) => {
                   </div>
                   <div>
                     <button className="px-4 py-2 bg-brandPink hover:bg-brandPink3 text-white font-bold font-content rounded-md mt-6">
-                      <a href="tel:+918880000909" hrefLang="en-us">
+                      <a href="tel:+919108910892" hrefLang="en-us">
                         Give us a Call
                       </a>
                     </button>

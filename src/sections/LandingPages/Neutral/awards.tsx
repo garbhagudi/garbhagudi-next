@@ -16,10 +16,10 @@ function FeaturesBlocks() {
             </p>
           </div>
 
-          <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-2 items-start md:max-w-2xl lg:max-w-none">
+          <div className="max-w-md mx-auto grid gap-4 md:grid-cols-2 lg:grid-cols-2 items-start md:max-w-2xl lg:max-w-none ">
             {Data.map((items) => (
               <div
-                className="relative flex flex-col items-center p-6 bg-white rounded shadow-2xl"
+                className="relative flex flex-col items-center p-6 bg-white rounded-lg  hover:shadow-2xl hover:-translate-x-2 hover:-translate-y-2 hover:border-0 transition-all duration-300"
                 key={items.id}
               >
                 <div className="bg-brandPink rounded-full">
