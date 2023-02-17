@@ -71,12 +71,12 @@ const IndexPage = () => {
       <div>
         <Banner />
         <About />
+        <HeroHome />
         <Stage />
         <YACta />
         <Treatments />
         <AshaSection />
         <FertilityExperts />
-        <HeroHome />
         <FeaturesBlocks />
         <div className="pt-10">
           <Video />

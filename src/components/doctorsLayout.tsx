@@ -25,7 +25,7 @@ const DoctorLayout = ({
       <div className="">
         <div
           onClick={() => handleSetIndex(index)}
-          className=" px-3 pt-4 flex items-center flex-col justify-center border rounded-lg bg-slate-50 hover:shadow-2xl transition duration-200 ease-in-out"
+          className=" px-3 pt-4 flex items-center mr-1 ml-1 justify-center border rounded-lg bg-slate-50 hover:shadow-2xl transition duration-200 ease-in-out"
         >
           <div className="">{imageComponent}</div>
         </div>

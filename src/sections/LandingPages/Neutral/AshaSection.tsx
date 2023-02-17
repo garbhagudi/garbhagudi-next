@@ -1,10 +1,12 @@
 import React from "react";
-import Link from "next/link";
 import MyModal from "components/modal";
 
 const AshaSection = () => {
   return (
-    <section className="pt-16 bg-blueGray-50">
+    <section className="pt-16 pb-10 bg-gray-50">
+      <h3 className="pb-16 text-3xl lg:text-4xl font-heading text-center font-bold text-gray-700">
+        Consult Dr. Asha S Vijay
+      </h3>
       <div className="w-full lg:max-w-2xl px-4 mx-auto">
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-2xl rounded-lg mt-16">
           <div className="px-6">

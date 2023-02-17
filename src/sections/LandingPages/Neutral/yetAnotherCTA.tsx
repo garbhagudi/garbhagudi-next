@@ -3,7 +3,7 @@ import React from "react";
 
 const YACta = () => {
   return (
-    <div className="bg-gray-200">
+    <div className="bg-gray-200 px-3">
       <div className="max-w-5xl mx-auto py-14">
         <div className="flex items-center justify-between flex-col md:flex-row mx-auto">
           <div className="font-content text-2xl lg:text-3xl">

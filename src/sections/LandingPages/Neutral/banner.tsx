@@ -10,12 +10,9 @@ const Banner = () => {
             <div className="mt-14">
               <div>
                 <div className="inline-flex space-x-4">
-                  <span className="text-center sm:text-left rounded bg-brandPink5 px-2 py-1 text-xs font-bold text-brandPink  uppercase">
-                    What's new
-                  </span>
-                  <div className="inline-flex items-center text-sm font-normal text-brandPink">
+                  <div className="inline-flex items-center text-sm text-center font-semibold text-brandPink px-3 py-1 bg-brandPink5 rounded-md">
                     <div>
-                      Get Free Fertility Screenig with Valentine's Day Offer
+                      Get Free Fertility Screening with Valentine's Day Offer
                     </div>
                   </div>
                 </div>
@@ -35,7 +32,7 @@ const Banner = () => {
                 <h3 className="mb-6 text-2xl font-heading font-bold text-gray-700">
                   Why choose GarbhaGudi?
                 </h3>
-                <div className="grid grid-cols-2 text-gray-600 font-semibold gap-3 text-sm md:text-base">
+                <div className="grid grid-cols-1 md:grid-cols-2 text-gray-600 font-semibold gap-3 text-base">
                   <div className="bg-gray-200 hover:bg-gray-300 pl-3 py-1 rounded-md">
                     <span className="font-bold text-brandPink">8500+</span>{" "}
                     Happy Families

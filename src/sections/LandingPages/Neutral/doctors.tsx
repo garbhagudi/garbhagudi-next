@@ -1,20 +1,39 @@
 import React from "react";
 import DoctorLayout from "components/doctorsLayout";
+import Carousel from "react-multi-carousel";
+
+const responsive2 = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
 
 const FertilityExperts = () => {
   const [activeIndex, setActiveIndex] = React.useState(1);
-
   return (
     <div>
       <div className="max-w-7xl mx-auto py-10 lg:py-16">
         <h1 className="text-2xl lg:text-3xl font-heading font-bold text-center pb-10 lg:pb-16">
           Our Fertility Experts
         </h1>
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 px-2">
+        <Carousel responsive={responsive2} ssr={true} infinite={true}>
           {doctors.map((items) => (
             <DoctorLayout
-              key={items.id}
               index={items.id}
+              key={items.id}
               imageComponent={
                 <ImageComponent
                   name={items.name}
@@ -30,7 +49,7 @@ const FertilityExperts = () => {
               setActiveIndex={setActiveIndex}
             ></DoctorLayout>
           ))}
-        </div>
+        </Carousel>
       </div>
     </div>
   );
@@ -56,69 +75,6 @@ const ImageComponent = ({ name, image, qualification, designation }) => {
 };
 
 const doctors = [
-  {
-    id: "1",
-    name: "Dr Asha S Vijay",
-    designation: "Medical Director",
-    qualification: "MBBS, DGO-DNB",
-    location: "HanumanthaNagar, Jayanagar, Marathahalli",
-    link: "",
-    image:
-      "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Asha-Madam_Profile_vunk51.webp",
-    bio: (
-      <div>
-        <div className="w-full lg:w-9/12 mx-auto flex justify-start">
-          <div className="mb-4 text-gray-800 prose">
-            <div className="text-center text-xl text-brandDark font-semibold my-4 font-heading">
-              <p>
-                Dr Asha S Vijay – A doyen in the field of infertility treatment,
-                a proficient academician, an accomplished entrepreneur and a
-                social visionary !!!
-              </p>
-            </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
-              <p>
-                Dr Asha has well over two decades of experience in the fields of
-                obstetrics, gynaecology and infertility. She is a well-known
-                name in infertility – both in treating patients and also in
-                infertility education. Many consider her as a medical genius
-                with an overarching vision to eradicate infertility.&nbsp;
-              </p>
-            </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
-              <p>
-                Dr Asha has been instrumental in creating happy endings in the
-                lives of more than 7000+ couples, by ensuring they have a child
-                of their own. With her immense knowledge, expertise, skills and
-                cutting-edge medical technology, she has been able to produce
-                extraordinary success rates in the field of infertility. She is
-                highly dedicated to her vision and leaves no stone unturned to
-                ensure that the couple can take home a healthy baby and enjoy
-                parenthood.
-              </p>
-            </div>
-            <div className="text-center text-lg text-brandDark font-semibold mt-3 font-heading">
-              <p>
-                Dr Asha S Vijay has undergone specialized training in the field
-                of infertility at the following Centers
-              </p>
-            </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
-              <p>
-                &gt; Bangalore Assisted Conception Center under the guidance of
-                Dr Kamini Rao.
-              </p>
-              <p>
-                &gt; Reliance ART Foundation under the guidance of Dr Ameet
-                Patki.
-              </p>
-              <p>&gt; Hands-on Training at EART Mumbai</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    ),
-  },
   {
     id: "2",
     name: "Dr Chaithra S.K",
@@ -253,14 +209,6 @@ const doctors = [
       </div>
     ),
   },
-  //   {
-  //     id: "6",
-  //     name: "Dr Swetha V",
-  //     designation: "Fertility Specialist",
-  //     qualification: "MBBS, DNB-OBG, FRM",
-  //     location: "Marathahalli",
-  //     image: "",
-  //   },
   {
     id: "7",
     name: "Dr Anitha Manoj",
@@ -284,6 +232,42 @@ const doctors = [
                 fertility experts in Bangalore, and practices at GarbhaGudi IVF
                 Centre, Bangalore. She is a member of FOGSI and the Indian
                 Medical Association (IMA).
+              </p>
+            </div>
+          </p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: "6",
+    name: "Dr Subha L",
+    designation: "Fertility Specialist",
+    qualification: "MBBS, MS(OBG), DNB, FRM",
+    location: "ElectronicCity",
+    image: "https://media.graphassets.com/xHvgevKDT4aNPxoPBWaK",
+    bio: (
+      <div>
+        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
+          <p className="mb-4 text-gray-800 prose">
+            <div className="text-md text-brandDark mt-3 font-qs">
+              <p>
+                Dr. Shubha L is a fertility specialist with 5 years of
+                experience in obstetrics and gynecology. She completed her MBBS
+                at JJMMC, davangere and MS from father muller medical college,
+                Mangalore. She worked as a senior registrar at St Martha’s
+                hospital and Owing to her great desire to specialize further,
+                she completed her fellowship in reproductive medicine from Craft
+                hospital, Kerala. She is a skilled professional, is completely
+                passionate about her job, and aims to provide the best treatment
+                for her patients. She is well-versed in ART procedures like IVF,
+                IUI, etc. Dr. Shubha l is known for the comfort and confidence
+                she elicits in her patients, and she believes in performing
+                fertility treatments with a scientific approach & in an ethical
+                manner. She also offers to counsel for infertility treatment
+                with dedication toward her patients. Her skills as a fertility
+                specialist made her a valued member of the team at GarbhaGudi
+                IVF Center.
               </p>
             </div>
           </p>
