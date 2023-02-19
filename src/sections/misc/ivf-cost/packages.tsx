@@ -91,7 +91,10 @@ const Packages = () => {
         </h2>
         <p className="pt-4 font-content">
           Here is a brief comparison of the{" "}
-          <Link href="/treatments/ivf-treatment-cost-in-bangalore" className="text-brandPink hover:underline>
+          <Link
+            href="/treatments/ivf-treatment-cost-in-bangalore"
+            className="text-brandPink hover:underline"
+          >
             cost of IVF
           </Link>{" "}
           packages at GarbhaGudi. No matter the financial status, we've got a
