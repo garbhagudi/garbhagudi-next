@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Overview = () => {
   return (
@@ -107,12 +108,16 @@ const Overview = () => {
                 for your needs and respond to them quickly, professionally and
                 warmly. <br />
                 <br />
-                GarbhaGudi IVF Hospital in Bangalore was founded in 2011, our
-                pioneering work has led to the progression and implementation of
-                the latest medical technologies and methods to overcome female
-                and male infertility. Our centre has been helping couples from
-                every corner of the world, to fulfil their ardent desire to have
-                a baby. It is our sincere wish that you will be our next success
+                GarbhaGudi{" "}
+                <Link href={"/"} className="text-brandPink hover:underline">
+                  IVF Hospital in Bangalore
+                </Link>{" "}
+                was founded in 2011, our pioneering work has led to the
+                progression and implementation of the latest medical
+                technologies and methods to overcome female and male
+                infertility. Our centre has been helping couples from every
+                corner of the world, to fulfil their ardent desire to have a
+                baby. It is our sincere wish that you will be our next success
                 story.
               </p>
             </div>

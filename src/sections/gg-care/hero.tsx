@@ -40,7 +40,7 @@ const Hero = () => {
           <img
             className="w-full h-full object-cover"
             src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1644049097/Banner/GG_Care_Web_Banner-6_iyxanu.webp"
-            alt=""
+            alt="gg care"
           />
           <div
             className="absolute inset-0 bg-gray-400 mix-blend-multiply"

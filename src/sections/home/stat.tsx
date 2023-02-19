@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const metrics = [
   {
@@ -52,9 +53,12 @@ const Stat = () => {
           </p>
           <p className="mt-5 text-lg text-brandDark font-content">
             GarbhaGudi is a place where dreams come alive, hopes never fade, and
-            possibilities never end. As one of the finest IVF Centre in
-            Bangalore, we ceaselessly work to help you cherish the golden moment
-            of holding your little bundles of joy. Along with our quality of
+            possibilities never end. As one of the finest{" "}
+            <Link href="/" className="text-brandPink hover:underline">
+              IVF Centre in Bangalore
+            </Link>
+            , we ceaselessly work to help you cherish the golden moment of
+            holding your little bundles of joy. Along with our quality of
             treatment and care, some of the other contributing factors for
             achieving high success rates are:
           </p>

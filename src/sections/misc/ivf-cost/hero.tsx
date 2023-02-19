@@ -32,8 +32,11 @@ const Banner = () => {
                     costs{" "}
                   </li>
                   <li>
-                    GarbhaGudi IVF centre has been nominated for and won
-                    numerous awards in the field of infertility treatment{" "}
+                    <Link href={"/"} className="text-brandPink hover:underline">
+                      GarbhaGudi
+                    </Link>{" "}
+                    IVF centre has been nominated for and won numerous awards in
+                    the field of infertility treatment{" "}
                   </li>
                 </ul>
                 <div className="space-x-3">

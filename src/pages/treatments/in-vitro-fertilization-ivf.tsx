@@ -84,7 +84,7 @@ const Ivf = () => {
           "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
           "name": "GarbhaGudi IVF Centre",
           "telephone": "+919108910832",
-          "priceRange": "90000 - 280000"
+          "priceRange": "90000 - 280000",
             "ratingValue": "4.8",
             "bestRating": "5",
             "worstRating": "1",
@@ -190,11 +190,11 @@ const Ivf = () => {
         <title>In-vitro Fertilization - IVF | GarbhaGudi</title>
         <meta
           name="title"
-          content="In-vitro Fertilization - IVF | GarbhaGudi"
+          content="Best IVF Treatment In Bangalore | IVF Cost In Bangalore - GarbhaGudi "
         />
         <meta
           name="description"
-          content="What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART)."
+          content="The IVF treatment cost In Bangalore starts onwards Rs 90,000/- Click to book an appointment for affordable IVF costs and get the best IVF treatment in Bangalore"
         />
 
         {/* Ld+JSON Data */}

@@ -2,6 +2,7 @@
 import { Fragment } from "react";
 import { HiCheck, HiMinus, HiChevronDown } from "react-icons/hi";
 import { Disclosure } from "@headlessui/react";
+import Link from "next/link";
 
 const tiers = [
   {
@@ -89,9 +90,12 @@ const Packages = () => {
           IVF Packages at GarbhaGudi
         </h2>
         <p className="pt-4 font-content">
-          Here is a brief comparison of the cost of IVF packages at GarbhaGudi.
-          No matter the financial status, we've got a package that works for
-          you.
+          Here is a brief comparison of the{" "}
+          <Link href="/treatments/ivf-treatment-cost-in-bangalore" className="text-brandPink hover:underline>
+            cost of IVF
+          </Link>{" "}
+          packages at GarbhaGudi. No matter the financial status, we've got a
+          package that works for you.
         </p>
       </div>
       <div className="max-w-7xl mx-auto py-16 sm:pb-24 sm:px-6 lg:px-8">

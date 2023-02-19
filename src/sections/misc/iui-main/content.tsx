@@ -20,14 +20,20 @@ const Content = (props: Props) => {
             increase the chance of pregnancy. It is a relatively simple and
             low-invasive procedure, often used in cases of infertility caused by
             issues with ovulation, sperm count, or cervical mucus. It may be
-            used alone or in combination with other fertility treatments, such
-            as ovulation induction medications. The success rate of IUI varies
-            depending on the individual patient's circumstances, and it is
-            typically more successful when performed in conjunction with other
-            fertility treatments.
+            used alone or in combination with other{" "}
+            <Link
+              href={"/treatments/infertility"}
+              className="text-brandPink hover:underline"
+            >
+              fertility treatments
+            </Link>
+            , such as ovulation induction medications. The success rate of IUI
+            varies depending on the individual patient's circumstances, and it
+            is typically more successful when performed in conjunction with
+            other fertility treatments.
           </div>
         </div>
-        <div className="col-span-1 px-3 bg-gray-300 lg:pt-7 pb-5 rounded-lg">
+        <div className="col-span-1 px-3 bg-gray-300 lg:pt-7 pb-5 rounded-lg mt-16 lg:mt-0">
           <h3 className="text-lg font-heading font-bold pt-5 lg:pt-0 pb-6">
             Quick Links
           </h3>
