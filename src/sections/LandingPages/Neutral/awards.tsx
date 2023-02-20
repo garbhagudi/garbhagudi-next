@@ -19,16 +19,10 @@ function FeaturesBlocks() {
           <div className="max-w-md mx-auto grid gap-4 md:grid-cols-2 lg:grid-cols-2 items-start md:max-w-2xl lg:max-w-none ">
             {Data.map((items) => (
               <div
-                className="relative flex flex-col items-center p-6 bg-white rounded-lg  hover:shadow-2xl hover:-translate-x-2 hover:-translate-y-2 hover:border-0 transition-all duration-300"
+                className="relative flex flex-col items-center p-3 bg-white rounded-lg  hover:shadow-2xl hover:-translate-x-2 hover:-translate-y-2 hover:border-0 transition-all duration-300"
                 key={items.id}
               >
-                <div className="bg-brandPink rounded-full">
-                  <img
-                    src={items.img}
-                    alt={items.title}
-                    className="rounded-lg"
-                  />
-                </div>
+                <img src={items.img} alt={items.title} className="rounded-lg" />
                 <h4 className="text-xl font-bold text-center leading-snug tracking-tight mb-1 mt-3">
                   {items.title}
                 </h4>

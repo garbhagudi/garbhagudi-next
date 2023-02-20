@@ -148,6 +148,44 @@ const IndexPage = ({ treatments }) => {
                         );
                       }
                     })}
+                    <Link
+                      href={`/treatments/in-vitro-fertilization-ivf`}
+                      passHref
+                    >
+                      <div className="border-brandPink w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
+                        <div className="w-1/3">
+                          <img
+                            className="w-16 h-16 object-cover rounded-full"
+                            src="https://media.graphassets.com/EwdJCRdtRiKDXeWF4toB"
+                            alt="IVF Icon"
+                          />
+                        </div>
+                        <div className="w-2/3 flex flex-col justify-center text-left">
+                          <p className="font-semibold text-lg font-qs">
+                            In-Vitro Fertilization
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link
+                      href={`/treatments/intra-uterine-insemination-iui`}
+                      passHref
+                    >
+                      <div className="border-brandPink w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
+                        <div className="w-1/3">
+                          <img
+                            className="w-16 h-16 object-cover rounded-full"
+                            src="https://media.graphassets.com/CpcAosCyRImJVMN1xA9O"
+                            alt="IUI Icon"
+                          />
+                        </div>
+                        <div className="w-2/3 flex flex-col justify-center text-left">
+                          <p className="font-semibold text-lg font-qs">
+                            Intra-Uterine Insemination
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </Tab.Panel>

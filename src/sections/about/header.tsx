@@ -35,7 +35,7 @@ const Header = () => {
         <img
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full "
           src="https://res.cloudinary.com/garbhagudiivf/image/upload/q_auto:eco/v1643461022/Banner/About_us_xg1b1l.webp"
-          alt=""
+          alt="GarbhaGudi IVF Centre"
         />
       </div>
     </div>

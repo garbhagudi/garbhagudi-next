@@ -55,9 +55,9 @@ const IndexPage = () => {
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg"
         />
       </Head>
-      <div className="pt-12 mx-auto text-4xl font-semibold text-center max-w-7xl font-heading">
+      <h1 className="pt-12 mx-auto text-4xl font-semibold text-center max-w-7xl font-heading">
         Tools and Calcualtors
-      </div>
+      </h1>
       <p className="px-2 pt-6 mx-auto font-semibold text-center max-w-7xl font-content"></p>
       <div className="flex py-6 mx-auto max-w-7xl sm:py-12">
         <div className="grid grid-cols-1 gap-10 mx-auto lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">

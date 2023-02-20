@@ -19,13 +19,20 @@ const Faq = () => {
                 depending on various factors such as the location of the
                 treatment, the specific IVF protocol being used, and the
                 individual patient's medical history and fertility challenges.
-                In general, the cost of IVF treatment in Bangalore can range
-                from around INR 1,50,000 to INR 3,50,000 per cycle, although
-                some clinics may charge more or less. It is important to note
-                that the cost of IVF can add up quickly, as most patients
-                require multiple cycles to achieve a successful pregnancy. Some
-                patients may also require additional procedures or medications,
-                which can further increase the overall cost of treatment.
+                In general, the{" "}
+                <Link
+                  href={"/treatments/ivf-treatment-cost-in-bangalore"}
+                  className="text-brandPink hover:underline"
+                >
+                  cost of IVF treatment in Bangalore
+                </Link>{" "}
+                can range from around INR 1,50,000 to INR 3,50,000 per cycle,
+                although some clinics may charge more or less. It is important
+                to note that the cost of IVF can add up quickly, as most
+                patients require multiple cycles to achieve a successful
+                pregnancy. Some patients may also require additional procedures
+                or medications, which can further increase the overall cost of
+                treatment.
               </p>
             </div>
             <div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
@@ -100,12 +107,18 @@ const Faq = () => {
                 just estimates, and the actual success rate can vary widely from
                 one patient to another. <br />
                 <br />
-                As for the risks involved in IVF treatment, they are generally
-                minimal and most patients do not experience any serious
-                complications. Some common side effects of IVF may include
-                bloating, cramping, breast tenderness, and mood changes. More
-                serious risks, such as bleeding or infection, are rare but can
-                occur. Additionally, there is a small risk of multiple
+                As for the risks involved in{" "}
+                <Link
+                  href={"/treatments/in-vitro-fertilization-ivf"}
+                  className="text-brandPink hover:underline"
+                >
+                  IVF treatment,{" "}
+                </Link>
+                they are generally minimal and most patients do not experience
+                any serious complications. Some common side effects of IVF may
+                include bloating, cramping, breast tenderness, and mood changes.
+                More serious risks, such as bleeding or infection, are rare but
+                can occur. Additionally, there is a small risk of multiple
                 pregnancies, which can pose additional health risks for both the
                 mother and the babies.
               </p>
@@ -156,7 +169,13 @@ const Faq = () => {
                     well as any additional medical expenses.
                   </li>
                 </ul>
-                It is important to discuss the potential costs of IVF treatment
+                It is important to discuss the potential{" "}
+                <Link
+                  href={"/treatments/ivf-treatment-cost-in-bangalore"}
+                  className="text-brandPink hover:underline"
+                >
+                  costs of IVF treatment
+                </Link>{" "}
                 with your doctor and fertility clinic in order to fully
                 understand the expenses you may incur.
               </div>

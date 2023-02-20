@@ -105,13 +105,13 @@ const ImageComponent = ({ name, image, qualification, designation }) => {
   );
 };
 
-const doctors = [
+export const doctors = [
   {
     id: "2",
     name: "Dr Chaithra S.K",
     designation: "Assistant Medical Director",
     qualification: "MBBS, MS – OBG, FRM",
-    location: "KalyanNagar, Marathahalli",
+    location: "Kalyan Nagar, Marathahalli",
     image:
       "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Chithra-SK_orc3cx.webp",
     bio: (
@@ -154,7 +154,7 @@ const doctors = [
     name: "Dr Maheshwari",
     designation: "Assistant Medical Director",
     qualification: "MBBS, MS-OBG, FRM",
-    location: "HanumanthaNagar",
+    location: "Hanumanthanagar",
     image:
       "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Maheshwari-new_rryrnt.webp",
     bio: (
@@ -215,7 +215,7 @@ const doctors = [
     name: "Dr Priyanka Rani",
     designation: "Fertility Specialist",
     qualification: "MBBS, DNB, FRM",
-    location: "ElectronicCity",
+    location: "Electronic City",
     image:
       "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Prianka-Rani_cllnrd.webp",
     bio: (
@@ -245,7 +245,7 @@ const doctors = [
     name: "Dr Anitha Manoj",
     designation: "Fertility Specialist",
     qualification: "MBBS, MS (OBG), FMAS, FRM",
-    location: "HanumanthaNagar",
+    location: "Hanumanthanagar",
     image:
       "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/anitha_oambb3.webp",
     bio: (
@@ -275,7 +275,7 @@ const doctors = [
     name: "Dr Shubha L",
     designation: "Fertility Specialist",
     qualification: "MBBS, MS(OBG), DNB, FRM",
-    location: "ElectronicCity",
+    location: "Electronic City",
     image: "https://media.graphassets.com/xHvgevKDT4aNPxoPBWaK",
     bio: (
       <div>
@@ -311,7 +311,7 @@ const doctors = [
     name: "Dr Srinivas B.V",
     designation: "Andrologist and Urologist",
     qualification: "MBBS, MS, DNB Urology, FAMH",
-    location: "HanumanthaNagar, KalyanNagar, Jayanagar, ElectronicCity",
+    location: "Hanumanthanagar, Kalyan Nagar, Jayanagar, Electronic City",
     image:
       "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/06_gq0pxk.webp",
     bio: (

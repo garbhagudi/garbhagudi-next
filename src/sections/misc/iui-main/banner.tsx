@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -12,14 +13,26 @@ const Banner = () => {
           <h3 className="text-base font-content mt-4 font-semibold">
             Where expert fertility care meets state-of-the-art technology.
           </h3>
-          <p className="text-sm xl:text-base font-content pt-5">
-            Experience the miracle of life with IUI treatment in Bangalore.
+          <p className="text-base font-content pt-5">
+            Experience the miracle of life with{" "}
+            <Link
+              href={"/treatments/intra-uterine-insemination-iui"}
+              className="text-brandPink hover:underline"
+            >
+              IUI treatment in Bangalore.
+            </Link>{" "}
             Nestled in the heart of the city, our state-of-the-art fertility
             clinic offers hope and a ray of sunshine for couples who are looking
             to start a family. Our team of expert fertility specialists and
             cutting-edge technology will guide you on your journey towards
             parenthood, every step of the way. Embrace the joy of holding your
-            bundle of love in your arms, with IUI treatment in Bangalore.
+            bundle of love in your arms, with{" "}
+            <Link
+              href={"/treatments/intra-uterine-insemination-iui"}
+              className="text-brandPink hover:underline"
+            >
+              IUI treatment in Bangalore.
+            </Link>{" "}
           </p>
           <button className="text-lg font-content font-semibold text-white px-3 py-2 bg-brandPink hover:bg-brandPink4 mt-5 rounded-lg">
             Consult Now

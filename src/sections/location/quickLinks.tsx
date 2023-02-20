@@ -7,7 +7,7 @@ const QuickLinks = () => {
     <div className="bg-brandPink5 mt-5 px-3">
       <div className="flex flex-col lg:flex-row  items-start justify-evenly pt-10 pb-10 max-w-7xl mx-auto">
         <h2 className="text-3xl lg:text-4qxl font-heading font-bold underline pb-6">
-          Quicklinks
+          Our Other Branches
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
           {Data.map((items) => (
@@ -54,15 +54,5 @@ const Data = [
     id: 6,
     title: "Best IVF Centre in Marathahalli",
     link: "/locations/marathahalli",
-  },
-  {
-    id: 6,
-    title: "About GarbhaGudi",
-    link: "/about/overview",
-  },
-  {
-    id: 1,
-    title: "Our Other Branches",
-    link: "/locations",
   },
 ];

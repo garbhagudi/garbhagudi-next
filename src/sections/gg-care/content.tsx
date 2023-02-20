@@ -107,7 +107,7 @@ const Contact = () => {
 
 export default Contact;
 
-const contactData = {
+export const contactData = {
   getInTouch: [
     {
       id: 1,

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -18,12 +19,24 @@ const Hero = () => {
                 ...with the best IVF Hospital in Bangalore
               </div>
               <p className="mt-3 text-brandDark sm:mt-5 sm:text-xl lg:text-lg xl:text-base text-base font-content">
-                GarbhaGudi is a chain of new generation infertility treatment
-                hospitals equipped with state-of-the-art infrastructure and
-                cutting-edge technology to address this ever-increasing
-                infertility problem. It was founded by a team of committed
-                entrepreneurs and healthcare specialists, led by Dr. Asha S
-                Vijay, a renowned gynaecologist and fertility specialist.
+                GarbhaGudi is a chain of new generation{" "}
+                <Link
+                  href={"/treatments/infertility"}
+                  className="text-brandPink hover:underline"
+                >
+                  infertility treatment hospitals
+                </Link>{" "}
+                equipped with state-of-the-art infrastructure and cutting-edge
+                technology to address this ever-increasing infertility problem.
+                It was founded by a team of committed entrepreneurs and
+                healthcare specialists, led by{" "}
+                <Link
+                  href={"/fertility-experts/dr-asha-s-vijay"}
+                  className="text-brandPink hover:underline"
+                >
+                  Dr. Asha S Vijay
+                </Link>
+                , a renowned gynaecologist and fertility specialist.
               </p>
             </div>
           </div>

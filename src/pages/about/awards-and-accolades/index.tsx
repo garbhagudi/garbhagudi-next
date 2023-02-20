@@ -103,9 +103,9 @@ const Awards = ({ award }) => {
         </div>
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center">
-            <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl font-heading">
+            <h1 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl font-heading">
               Awards and Accolades
-            </h2>
+            </h1>
           </div>
           <div className="mt-12 max-w-xl mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none w">
             {award?.map((item: any) => (

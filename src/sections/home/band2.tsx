@@ -7,9 +7,18 @@ const Band2 = () => {
       <span className="text-md block text-center mx-auto font-content font-bold py-2">
         <div className="block md:inline-block">
           <h1 className="text-gray-900">
-            GarbhaGudi IVF Centre in Bangalore Has Been Awarded as the Best IVF
-            &amp; Fertility Hospital for It's High Success Rates &amp; Holistic
-            Approach to Fertility Treatment
+            GarbhaGudi{" "}
+            <Link href={"/"} className="text-brandPink hover:underline">
+              IVF Centre in Bangalore
+            </Link>{" "}
+            Has Been Awarded as the Best IVF &amp; Fertility Hospital for It's
+            High Success Rates &amp; Holistic Approach to{" "}
+            <Link
+              href={"/infertility"}
+              className="text-brandPink hover:underline"
+            >
+              Fertility Treatment
+            </Link>
           </h1>
           <div className="space-x-3">
             <button className="mt-4 mx-auto px-3 py-2 bg-brandPink rounded-lg text-sm text-white hover:bg-brandPink4">

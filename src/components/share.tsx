@@ -25,9 +25,9 @@ const Share: React.FC<Props> = ({ pinmedia }) => {
   const router = useRouter();
   return (
     <div className="space-x-2 mx-auto text-center mt-16">
-      <h1 className="text-center font-content font-semibold text-xl mb-5">
+      <h3 className="text-center font-content font-semibold text-xl mb-5">
         Share this page
-      </h1>
+      </h3>
       <FacebookShareButton url={`https://garbhagudi.com${router.asPath}`}>
         <FacebookIcon size={44} round />
       </FacebookShareButton>
