@@ -39,13 +39,13 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link
           rel="alternative"
-          href={`https://www.garbhagudi.com${router.pathname}`}
+          href={`https://www.garbhagudi.com${router.asPath}`}
           hrefLang="en-us"
         />
         <meta httpEquiv="content-language" content="en-gb"></meta>
         <link
           rel="canonical"
-          href={`https://www.garbhagudi.com${router.pathname}`}
+          href={`https://www.garbhagudi.com${router.asPath}`}
         />
         <meta
           name="robots"
