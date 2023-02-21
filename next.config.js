@@ -75,7 +75,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/feed/",
+        source: "/feed",
         destination: "/",
         permanent: true,
       },
@@ -105,7 +105,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/events/2016-05-24/ical=1",
+        source: "/events/2016-05-24/:slug",
         destination: "/",
         permanent: true,
       },
@@ -120,12 +120,12 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/page/6/s=IUI&submit=Go",
+        source: "/page/6/:slug",
         destination: "/",
         permanent: true,
       },
       {
-        source: "/events/2016-07-23/ical=1",
+        source: "/events/2016-07-23/:slug",
         destination: "/",
         permanent: true,
       },
@@ -185,7 +185,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/about/",
+        source: "/about",
         destination: "/about/overview",
         permanent: true,
       },
