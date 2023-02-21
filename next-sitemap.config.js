@@ -6,4 +6,7 @@ module.exports = {
   generateRobotsTxt: true,
   sitemapSize: 5000,
   priority: "0.8",
+  robotsTxtOptions: {
+    policies: [{ userAgent: "*", allow: "/", disallow: "/?*" }],
+  },
 };
