@@ -33,10 +33,16 @@ const Banner = () => {
                   </li>
                   <li>
                     <Link href={"/"} className="text-brandPink hover:underline">
-                      GarbhaGudi
+                      GarbhaGudi IVF centre
                     </Link>{" "}
-                    IVF centre has been nominated for and won numerous awards in
-                    the field of infertility treatment{" "}
+                    has been nominated for and won numerous awards in the field
+                    of{" "}
+                    <Link
+                      href={"/treatments/infertility"}
+                      className="text-brandPink hover:underline"
+                    >
+                      infertility treatment
+                    </Link>{" "}
                   </li>
                 </ul>
                 <div className="space-x-3">
