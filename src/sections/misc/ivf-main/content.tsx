@@ -13,12 +13,16 @@ const Content = () => {
               <div className="relative font-content mt-8 md:mt-16 space-y-8 ml-0 mx-auto text-left md:max-w-lg lg:max-w-2xl">
                 <p className="">
                   IVF or In Vitro Fertilization is one of the more widely known
-                  types of Assisted Reproductive Techniques (ART). IVF works by
-                  using a combination of medicines and surgical procedures, to
-                  help the sperm fertilize an egg. Here the eggs are fertilized
-                  outside the human body and implanted in the uterus. These
-                  procedures can be used to help couples struggling with
-                  infertility and also in the prevention of genetic problems.
+                  types of Assisted Reproductive Techniques (ART). It involves
+                  retrieving eggs from the woman's ovaries and fertilizing them
+                  with sperm in a laboratory dish. The resulting embryos are
+                  then transferred back into the woman's uterus in the hope of
+                  achieving a successful pregnancy. GarbhaGudi IVF center offers
+                  state-of-the-art facilities and a team of experienced doctors
+                  and embryologists who work together to provide personalized
+                  care and support to couples undergoing IVF in Bangalore. With
+                  the help of IVF, couples struggling with infertility can have
+                  a chance to conceive and start a family.
                 </p>
                 <h2 className="text-lg font-bold font-heading">
                   What is the Process of IVF Treatment in Bangalore?
