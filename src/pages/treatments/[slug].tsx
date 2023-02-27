@@ -17,12 +17,10 @@ export const getStaticProps = async ({ params }) => {
         metaTitle
         metaDescription
         slug
-        jsonLd {
-          text
-        }
         image {
           url
         }
+        imageAlt
         content {
           raw
           text
@@ -406,7 +404,7 @@ const Treatment = ({ treatment }) => {
               <img
                 className="w-full rounded-lg mt-10 mb-5"
                 src={treatment?.image.url}
-                alt={treatment?.title}
+                alt={treatment?.imageAlt || treatment?.title}
                 width={1310}
                 height={873}
               />
