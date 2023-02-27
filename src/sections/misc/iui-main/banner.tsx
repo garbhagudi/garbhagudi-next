@@ -41,7 +41,7 @@ const Banner = () => {
         <div className="lg:py-10">
           <img
             src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.jpg"
-            alt="IUI"
+            alt="IUI treatment in Bangalore"
             className="rounded-xl"
           />
         </div>

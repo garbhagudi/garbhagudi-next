@@ -20,7 +20,7 @@ const navigation = {
     },
     {
       name: "Treatment Pricing",
-      href: "/treatment/ivf-treatment-cost-in-bangalore",
+      href: "/treatments/ivf-treatment-cost-in-bangalore",
     },
   ],
   support: [

@@ -63,6 +63,7 @@ const FertilityExperts = () => {
                       image={items.image}
                       qualification={items.qualification}
                       designation={items.designation}
+                      imageAlt={items.imageAlt}
                     />
                   }
                   activeIndex={activeIndex}
@@ -88,12 +89,18 @@ const FertilityExperts = () => {
 
 export default FertilityExperts;
 
-const ImageComponent = ({ name, image, qualification, designation }) => {
+const ImageComponent = ({
+  name,
+  image,
+  qualification,
+  designation,
+  imageAlt,
+}) => {
   return (
     <div className="flex items-center justify-center flex-col">
       <img
         src={image}
-        alt={name}
+        alt={imageAlt}
         className="h-36 w-36 md:h-44 md:w-44 rounded-full"
       />
       <div className="text-center">
@@ -114,6 +121,7 @@ export const doctors = [
     location: "Kalyan Nagar, Marathahalli",
     image:
       "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Chithra-SK_orc3cx.webp",
+    imageAlt: "IVF Specialist in Banglore - Dr Asha S Vijay",
     bio: (
       <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
         <p className="mb-4 text-gray-800 prose">
@@ -157,6 +165,7 @@ export const doctors = [
     location: "Hanumanthanagar",
     image:
       "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Maheshwari-new_rryrnt.webp",
+    imageAlt: "IVF Doctor in Hanumanthanagar - Dr Maheshwari",
     bio: (
       <div>
         <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
@@ -187,6 +196,7 @@ export const doctors = [
     location: "Jayanagar",
     image:
       "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Chinmaey_kz6etc.webp",
+    imageAlt: "IVF Specialist in Jayanagar - Dr Chinmayie",
     bio: (
       <div>
         <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
@@ -218,6 +228,7 @@ export const doctors = [
     location: "Electronic City",
     image:
       "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Prianka-Rani_cllnrd.webp",
+    imageAlt: "IVF Specialist in Electronic City - Dr Priyanka Rani",
     bio: (
       <div>
         <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
@@ -248,6 +259,7 @@ export const doctors = [
     location: "Hanumanthanagar",
     image:
       "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/anitha_oambb3.webp",
+    imageAlt: "IVF Specialist in Hanumanthanagar - Dr Anita Manoj",
     bio: (
       <div>
         <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
@@ -277,6 +289,7 @@ export const doctors = [
     qualification: "MBBS, MS(OBG), DNB, FRM",
     location: "Electronic City",
     image: "https://media.graphassets.com/xHvgevKDT4aNPxoPBWaK",
+    imageAlt: "IVF Specialist in Electronic City - Dr Shubha L",
     bio: (
       <div>
         <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
@@ -314,6 +327,7 @@ export const doctors = [
     location: "Hanumanthanagar, Kalyan Nagar, Jayanagar, Electronic City",
     image:
       "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/06_gq0pxk.webp",
+    imageAlt: "IVF & Fertility Doctor in Banglore - Dr Srinivas B.V",
     bio: (
       <div>
         <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">

@@ -226,7 +226,7 @@ const Home = ({ homeData }) => {
                         <Image
                           className="w-32 h-32 mx-auto my-auto mt-4 transition-all duration-500 rounded-full xl:w-44 xl:h-44 hover:scale-110"
                           src={item?.image?.url}
-                          alt={item?.name}
+                          alt={item?.imageAlt}
                           width={500}
                           height={500}
                           loading="lazy"
@@ -269,7 +269,7 @@ const Home = ({ homeData }) => {
                           <Image
                             className="w-56 h-56 mx-auto my-auto mt-4 transition-all duration-500 rounded-full xl:w-44 xl:h-44 hover:scale-110"
                             src={item?.image?.url}
-                            alt={item?.name}
+                            alt={item?.imageAlt}
                             width={500}
                             height={500}
                             loading="lazy"
@@ -313,6 +313,7 @@ export const getStaticProps = async () => {
         image {
           url
         }
+        imageAlt
         medicalRegNo
         id
         designation
