@@ -5,11 +5,11 @@ import Hero from "sections/home/hero";
 import Overview from "sections/home/overview";
 import Testimonial from "sections/home/testimonial";
 import Video from "sections/home/video";
-// import Stat from "./home/stat";
 import Stats from "./home/stats/stats";
 import Band2 from "./home/band2";
-import News from "sections/home/news";
 import Stat from "./home/stat";
+import TreatmentOptions from "./home/treatments";
+import WhyGG from "./home/whyGarbhaGudi";
 
 const HomeComponent = () => {
   return (
@@ -21,7 +21,9 @@ const HomeComponent = () => {
       <Video />
       <Features />
       <Stats />
+      <WhyGG />
       <Stat />
+      <TreatmentOptions />
       <Testimonial />
     </div>
   );

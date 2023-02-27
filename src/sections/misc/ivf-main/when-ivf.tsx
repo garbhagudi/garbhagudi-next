@@ -8,7 +8,7 @@ const WhenIvf = () => {
         <div className="max-w-lg flex items-center justify-center mx-auto p-3 lg:p-10">
           <img
             src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1671190677/Misc/avn-min_jo63l5.png"
-            alt="causes"
+            alt="When is IVF Treatment Recommended?"
             className="relative w-full"
           />
         </div>

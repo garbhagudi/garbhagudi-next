@@ -45,7 +45,7 @@ const ContentXtra = (props: Props) => {
         <div className="px-3">
           <img
             src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112329/Misc/IUI-Process_01_lo7z7w.png"
-            alt="IUI Info"
+            alt="IUI treatment Process"
             className="rounded-lg"
           />
         </div>

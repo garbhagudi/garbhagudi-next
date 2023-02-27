@@ -63,7 +63,7 @@ const Content = () => {
                   <img
                     src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1671177124/Misc/PNG_25_yoa08y.png"
                     className="relative  w-full"
-                    alt="wath illustration"
+                    alt="Process of IVF Treatment in Bangalore"
                     loading="lazy"
                   />
                 </div>

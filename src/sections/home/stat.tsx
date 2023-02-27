@@ -34,7 +34,7 @@ const Stat = () => {
             <Image
               className="object-cover w-full h-full opacity-70 xl:absolute xl:inset-0"
               src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643272924/Home/Our_never_ending_s0dbde.webp"
-              alt="Happy Couple"
+              alt="Successful IVF Treatment In Banglore"
               height={1024}
               width={1024}
               loading="lazy"

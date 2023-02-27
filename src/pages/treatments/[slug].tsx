@@ -17,6 +17,9 @@ export const getStaticProps = async ({ params }) => {
         metaTitle
         metaDescription
         slug
+        jsonLd {
+          text
+        }
         image {
           url
         }
@@ -146,6 +149,59 @@ const Treatment = ({ treatment }) => {
         }`,
     };
   }
+
+  function faqJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "What is Laparoscopic Surgery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Are you looking for a minimally invasive surgical option? Laparoscopic surgery, also known as keyhole surgery, is a surgical technique that uses small incisions and specialized tools to access the inside of the body. GarbhaGudi IVF Centre is the best Laparoscopic Surgery Hospital in Bangalore, equipped with the latest technology and experienced Laparoscopic Surgeons in Bangalore to perform safe and effective procedures. If you're looking for Laparoscopic Surgery in Bangalore, look no further than GarbhaGudi IVF Centre. A laparoscopy is a surgery that checks for problems in a female reproductive system or the abdomen. A doctor recommends laparoscopy to diagnose infertility or to treat some fertility problems. In this surgery, a thin tube called a laparoscope is slid into the affected area through a small incision. The laparoscope has a camera attached to it. The camera sends images to a video monitor."
+          }
+        },{
+          "@type": "Question",
+          "name": "Why is laparoscopic surgery done?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Laparoscopic surgery is a preferred option for many conditions such as gallbladder removal, appendectomy, hernia repair, and more. It's a safe and effective way to treat conditions that require surgery. If you're in Bangalore and looking for a Laparoscopic Surgeon in Bangalore, GarbhaGudi IVF Centre has the best doctors and state-of-the-art technology to provide the care you need."
+          }
+        },{
+          "@type": "Question",
+          "name": "When Laparoscopy Is Used",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You experience pain during sexual intercourse. You suffer from acute period cramps or pelvic pain. Moderate to severe endometriosis is suspected. Pelvic disease or severe pelvic adhesions are suspected. Your doctor suspects an extrauterine pregnancy (which is often life-threatening if left untreated) Hydrosalpinx is suspected. It is a selected blocked Fallopian tube. Removing the affected tubule can improve IVF success rates. Endometrial deposits are suspected of reducing your fertility. Surgery could also be ready to unblock or repair a Fallopian tube. Success rates vary when it comes to tubal repair. An ovarian cyst is suspected of causing pain or blocking the fallopian tubes. A fibroid is causing pain, distorting the cavity, or blocking your fallopian tubes. You have PCOS and the doctor recommends ovarian drilling."
+          }
+        },{
+          "@type": "Question",
+          "name": "What are the Benefits of Laparoscopic Surgery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Laparoscopic surgery has several benefits over traditional open surgery, including smaller incisions, less pain, reduced scarring, faster recovery, and shorter hospital stays. GarbhaGudi IVF Centre, a leading Laparoscopic Surgery Hospital in Bangalore, can offer you these benefits and more. With experienced Laparoscopic Surgeons in Bangalore and cutting-edge technology, you can trust GarbhaGudi IVF Centre for safe, effective, and minimally invasive surgical procedures."
+          }
+        },{
+          "@type": "Question",
+          "name": "What are the Side Effects of Laparoscopic Surgery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Like any surgery, Laparoscopic Surgery carries some risks, including bleeding, infection, and organ damage. However, the risks are lower with laparoscopic surgery compared to traditional open surgery. The experienced Laparoscopic Surgeons in Bangalore at GarbhaGudi IVF Centre take every precaution to minimize these risks and provide safe and effective care."
+          }
+        },{
+          "@type": "Question",
+          "name": "Laparoscopic Surgery Cost In Bangalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Laparoscopic Surgery Cost in Bangalore can vary based on factors such as the type of procedure, hospital charges, surgeon fees, and other expenses. At GarbhaGudi IVF Centre, we offer reasonable Laparoscopy cost in Bangalore with no compromise on the quality of care. We provide transparent Laparoscopy Cost Bangalore to our patients to make informed decisions. With our cost-effective Laparoscopic Surgery in Bangalore, you can trust us to provide the best care at a reasonable cost."
+          }
+        }]
+      }
+      `,
+    };
+  }
   const title = `${treatment?.title} | GarbhaGudi`;
 
   return (
@@ -187,6 +243,14 @@ const Treatment = ({ treatment }) => {
           dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
           key="breadcrumbs-jsonld"
         />
+
+        {treatment.slug === "laparoscopy" && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={faqJsonLd()}
+            key="faq-jsonld"
+          />
+        )}
 
         {/* Open Graph / Facebook */}
 
