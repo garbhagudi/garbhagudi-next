@@ -10,9 +10,13 @@ const Banner = ({ branchTitle }) => {
           <div className="h-[50vh] mx-auto max-w-5xl flex items-center">
             <div className="absolute z-10">
               <div className="text-center md:text-left w-full md:max-w-lg text-base px-3 mx-auto">
+                <span className="text-3xl lg:text-4xl font-heading font-bold leading-tight">
+                  Welcome to GarbhaGudi{" "}
+                </span>
                 <h1 className="text-3xl lg:text-4xl font-heading font-bold leading-tight">
-                  Welcome to GarbhaGudi IVF Centre! <br />
-                  <span className="text-brandPink">{branchTitle}</span>
+                  {" "}
+                  IVF Centre
+                  <span className="text-brandPink"> in {branchTitle}</span>
                 </h1>
                 <h3 className="mt-4 font-semibold font-content leading-7">
                   We are proud to offer infertility treatment at 5 locations

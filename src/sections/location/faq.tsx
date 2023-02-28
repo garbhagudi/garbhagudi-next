@@ -27,7 +27,7 @@ const Faq = ({ branch }) => {
                         >
                           <img
                             src={items.image}
-                            alt={items.name}
+                            alt={items.imageAlt}
                             className="w-28 rounded-full h-28"
                           />
                           <div className="font-heading font-bold text-base py-2 text-center">
