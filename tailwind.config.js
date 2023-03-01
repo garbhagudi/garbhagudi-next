@@ -142,6 +142,7 @@ module.exports = {
       pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       bounce: "bounce 1s infinite",
       shake: "shake 500ms cubic-bezier(.36,.07,.19,.97)",
+      wave: "wave 2s linear infinite",
     },
     aspectRatio: {
       auto: "auto",
@@ -637,6 +638,16 @@ module.exports = {
         "40%, 60%": {
           transform: "translate3d(4px, 0, 0)",
         },
+      },
+      wave: {
+        "0%": { transform: "rotate(0.0deg)" },
+        "10%": { transform: "rotate(14deg)" },
+        "20%": { transform: "rotate(-8deg)" },
+        "30%": { transform: "rotate(14deg)" },
+        "40%": { transform: "rotate(-4deg)" },
+        "50%": { transform: "rotate(10.0deg)" },
+        "60%": { transform: "rotate(0.0deg)" },
+        "100%": { transform: "rotate(0.0deg)" },
       },
     },
     letterSpacing: {
