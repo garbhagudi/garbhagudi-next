@@ -141,6 +141,7 @@ module.exports = {
       ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
       pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       bounce: "bounce 1s infinite",
+      shake: "shake 500ms cubic-bezier(.36,.07,.19,.97)",
     },
     aspectRatio: {
       auto: "auto",
@@ -621,6 +622,20 @@ module.exports = {
         "50%": {
           transform: "none",
           animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
+        },
+      },
+      shake: {
+        "10%, 90%": {
+          transform: "translate3d(-1px, 0, 0)",
+        },
+        "20%, 80%": {
+          transform: "translate3d(2px, 0, 0)",
+        },
+        "30%, 50%, 70%": {
+          transform: "translate3d(-4px, 0, 0)",
+        },
+        "40%, 60%": {
+          transform: "translate3d(4px, 0, 0)",
         },
       },
     },

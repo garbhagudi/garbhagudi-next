@@ -36,7 +36,7 @@ export default function MyModal({ title, clnm }) {
           </Transition.Child>
 
           <div className="fixed inset-0 overscroll-y-contain">
-            <div className="flex max-w-lg mx-auto min-h-full items-center justify-center text-center mt-14">
+            <div className="flex max-w-lg mx-auto min-h-full items-center justify-center text-center mt-10">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -55,7 +55,7 @@ export default function MyModal({ title, clnm }) {
                   </div>
                   <Form />
                   <div
-                    className="hidden my-4 items-center sm:block justify-center cursor-pointer px-3 py-1 bg-brandPink2 mx-auto w-20 text-white font-semibold rounded-lg"
+                    className="hidden my-4 hover:animate-shake items-center sm:block justify-center cursor-pointer px-3 py-1 bg-brandPink2 mx-auto w-20 text-white font-semibold rounded-lg"
                     onClick={closeModal}
                   >
                     Close

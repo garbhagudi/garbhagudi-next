@@ -12,7 +12,8 @@ const Banner = () => {
                 <div className="inline-flex space-x-4">
                   <div className="inline-flex items-center text-sm text-center font-semibold text-brandPink px-3 py-1 bg-brandPink5 rounded-md">
                     <div>
-                      Get Free Fertility Screening with Valentine's Day Offer
+                      Book Fertility Treatment for ₹5000/- Now & Get ₹11,000/-
+                      OFF on the IVF Treatment*
                     </div>
                   </div>
                 </div>
