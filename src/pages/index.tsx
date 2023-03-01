@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React from "react";
 import Head from "next/head";
 import HomeComponent from "sections/home";
 import Link from "next/link";

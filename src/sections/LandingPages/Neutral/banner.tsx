@@ -7,18 +7,14 @@ const Banner = () => {
       <div className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-36 font-content">
         <div className="mx-auto max-w-md px-3 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-20">
           <div>
-            <div className="mt-14">
-              <div>
-                <div className="inline-flex space-x-4">
-                  <div className="inline-flex items-center text-sm text-center font-semibold text-brandPink px-3 py-1 bg-brandPink5 rounded-md">
-                    <div>
-                      Book Fertility Treatment for ₹5000/- Now & Get ₹11,000/-
-                      OFF on the IVF Treatment*
-                    </div>
-                  </div>
+            <div className="">
+              <div className="color-pop rounded-lg">
+                <div className="inline-flex items-center text-base text-center font-bold text-white px-2.5 py-2 bg-transparent rounded-lg">
+                  Book Fertility Treatment for ₹5000/- Now & Get ₹11,000/- OFF
+                  on the IVF Treatment*
                 </div>
               </div>
-              <div className="mt-6 sm:max-w-xl">
+              <div className="mt-12 sm:max-w-xl">
                 <h1 className="text-4xl font-extrabold sm:text-5xl font-heading text-gray-700">
                   Welcome to the Best IVF Centre In Bangalore
                 </h1>
@@ -30,8 +26,11 @@ const Banner = () => {
                 </p>
               </div>
               <div className="mt-6">
-                <h3 className="mb-6 text-2xl font-heading font-bold text-gray-700">
-                  Why choose GarbhaGudi?
+                <h3 className="mb-6 text-2xl font-content font-medium">
+                  Why choose{" "}
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-brandPink2 to-brandPurpleDark">
+                    GarbhaGudi?
+                  </span>
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 text-gray-700 font-semibold gap-3 text-base cursor-pointer">
                   <div className="bg-gray-200 hover:bg-gradient-to-l from-gray-400 via-gray-300 to-gray-300 pl-3 py-1.5 rounded-md hover:shadow-xl hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-200">
@@ -86,11 +85,12 @@ const Banner = () => {
                     </span>
                   </div>
                 </div>
-                <div className="mt-6">
-                  <Link
-                    href={"tel:+919108910832"}
-                    className="text-base px-4 py-2 bg-brandPink text-white font-semibold rounded-lg hover:bg-brandPink3"
-                  >
+                <div className="glow px-3 py-2 mt-6 hover:shadow-sm hover:shadow-brandPink w-72 text-center hover:rounded-lg">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <Link href={"tel:+919108910832"} className="font-bold">
                     Book a free consultation
                   </Link>
                 </div>

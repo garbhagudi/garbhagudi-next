@@ -17,18 +17,132 @@ body {
 
 .background-animate {
   background-size: 400%;
-  -webkit-animation: AnimationName 5s ease infinite;
-  -moz-animation: AnimationName 5s ease infinite;
-  animation: AnimationName 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  -webkit-animation: shine 5s ease infinite;
+  -moz-animation: shine 5s ease infinite;
+  animation: shine 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
 }
 
-@keyframes AnimationName {
+@keyframes shine {
   0%,
   100% {
     background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
+  }
+}
+
+.color-pop {
+  background: linear-gradient(-45deg, #e73c7e, #23a6d5);
+  background-size: 400% 400%;
+  animation: flow 5s ease infinite;
+}
+
+@keyframes flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glow {
+  position: relative;
+  display: block;
+  color: #ea4b6a;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.glow:hover {
+  background: #ea4b6a;
+  color: white;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.glow:nth-child(1) {
+  filter: hue-rotate(270deg);
+}
+.glow span {
+  position: absolute;
+  display: block;
+}
+.glow span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ea4b6a);
+  animation: animate1 4s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+.glow span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ea4b6a);
+  animation: animate2 4s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+.glow span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #ea4b6a);
+  animation: animate3 4s linear infinite;
+  animation-delay: 2s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.glow span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #ea4b6a);
+  animation: animate4 4s linear infinite;
+  animation-delay: 3s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
   }
 }
 
