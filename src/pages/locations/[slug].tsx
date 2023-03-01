@@ -94,6 +94,7 @@ export const getStaticProps = async ({ params }) => {
             id
             name
             slug
+            imageAlt
             designation
             qualification
             image {

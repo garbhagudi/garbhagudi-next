@@ -80,7 +80,7 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
                         <img
                           className="mx-auto h-40 w-40 my-auto rounded-full mt-4"
                           src={item?.image?.url}
-                          alt={item?.name}
+                          alt={item?.imageAlt}
                         />
                         <div className="space-y-4">
                           <div className="text-lg leading-6 font-medium space-y-1">
