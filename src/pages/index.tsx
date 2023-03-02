@@ -214,17 +214,17 @@ const Home = ({ homeData }) => {
                 their success in treating the most challenging fertility cases.
               </p>
             </div>
-            <ul className="hidden md:grid grid-cols-2 mx-auto space-y-0 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl ">
+            <ul className="hidden md:grid grid-cols-2 mx-auto space-y-0 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl">
               {homeData?.doctors.map((item: any) => {
                 return (
                   <li
                     key={item?.id}
-                    className="mb-2 transition-all duration-500 hover:shadow-2xl rounded-xl "
+                    className="mb-2 transition-all duration-500 hover:shadow-2xl rounded-lg hover:scale-115"
                   >
                     <Link href={`/fertility-experts/${item?.slug}`} passHref>
                       <div className="space-y-4">
                         <Image
-                          className="w-32 h-32 mx-auto my-auto mt-4 transition-all duration-500 rounded-full xl:w-44 xl:h-44 hover:scale-110"
+                          className="w-32 h-32 mx-auto my-auto mt-4 shadow-3xl transition-all duration-500 rounded-full xl:w-44 xl:h-44 drop-shadow-2xl"
                           src={item?.image?.url}
                           alt={item?.imageAlt}
                           width={500}

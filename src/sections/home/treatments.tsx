@@ -40,6 +40,12 @@ const TreatmentOptions = () => {
           </div>
         ))}
       </div>
+      <Link
+        href={"/treatments"}
+        className="text-center mx-auto flex items-center justify-center px-3 py-2 bg-transparent w-32 font-content font-bold text-brandPink border-2 border-brandPink hover:bg-brandPink hover:text-white mb-6 rounded-lg hover:shadow-2xl hover:shadow-brandPink hover:transition-all hover:-translate-y-1 duration-300"
+      >
+        See More
+      </Link>
     </div>
   );
 };

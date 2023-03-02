@@ -10,7 +10,7 @@ const Band = () => {
           <span className="text-brandPurpleDark"> ಕರುಳಿನಾ ಕುಡಿ </span>{" "}
         </div>{" "}
         <div className="block md:inline-block">
-          <span className="text-brandPink">ನಿಮ್ಮ ಕನಸನ್ನು ನನಸಾಗಿಸುತ್ತದೆ </span>{" "}
+          <span className="text-brandPink">ನಿಮ್ಮ ಕನಸನ್ನು ನನಸಾಗಿಸುತ್ತದೆ</span>{" "}
           <span className="text-brandPurpleDark"> ಗರ್ಭಗುಡಿ </span>
         </div>
       </div>
@@ -19,7 +19,7 @@ const Band = () => {
           For Appointments Call:{" "}
           <Link
             href={"tel:+919108910832"}
-            className="text-brandPink hover:underline"
+            className="text-brandPink hover:underline block md:inline-flex"
           >
             +91 9108 9108 32
           </Link>
