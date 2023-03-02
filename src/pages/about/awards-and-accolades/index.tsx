@@ -103,7 +103,7 @@ const Awards = ({ award }) => {
         </div>
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl font-heading">
+            <h1 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl font-heading drop-shadow-xl">
               Awards and Accolades
             </h1>
           </div>
@@ -111,7 +111,7 @@ const Awards = ({ award }) => {
             {award?.map((item: any) => (
               <div
                 key={item?.id}
-                className="flex flex-col rounded-2xl shadow-lg overflow-hidden"
+                className="flex flex-col rounded-lg shadow-lg overflow-hidden hover:shadow-2xl hover:transition-all hover:-translate-x-2 hover:-translate-y-2 duration-300"
               >
                 <Link
                   href={`/about/awards-and-accolades/${item?.slug}`}
@@ -119,7 +119,7 @@ const Awards = ({ award }) => {
                 >
                   <div className="flex-shrink-0">
                     <img
-                      className="h-38 w-full object-contain rounded-2xl cursor-pointer"
+                      className="h-38 w-full object-contain rounded-t-lg cursor-pointer"
                       src={item?.image?.url}
                       alt={item?.title}
                     />
