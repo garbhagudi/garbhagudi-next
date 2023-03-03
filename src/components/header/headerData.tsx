@@ -10,7 +10,7 @@ export const TreatmentHeader = {
       id: "2",
       name: "Infertility",
       icon: "https://media.graphassets.com/qrGQ316SD6PY8aDxO8wN",
-      link: "/treatments/infertility-treatment",
+      link: "/treatments/infertility",
     },
     {
       id: "3",
