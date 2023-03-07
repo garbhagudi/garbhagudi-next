@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { gql, GraphQLClient } from "graphql-request";
+import { gql } from "@apollo/client";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
+import apolloClient from "lib/apollo-graphcms";
 
 const IndexPage = ({ careers }) => {
   return (
@@ -94,27 +95,27 @@ const IndexPage = ({ careers }) => {
           Current Opportunities
         </div>
         <div className="container mb-2 flex mx-auto w-full items-center justify-center">
-          <li className="flex flex-wrap gap-4 mx-auto mt-6">
+          <li className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6 mt-6">
             {careers.map((items) => (
               <Link href={`careers/${items?.slug}`} passHref key={items.id}>
-                <div className="bg-white rounded-lg border shadow-md hover:bg-gray-100 w-96 max-w-sm mx-auto">
+                <div className="bg-white rounded-lg border shadow-md hover:bg-gradient-to-br hover:from-pink-100 hover:via-brandPurple2 hover:to-brandPurple mx-auto hover:shadow-2xl hover:transition-all hover:-translate-x-2 hover:-translate-y-2 duration-300">
                   <div className="flex flex-col justify-between p-4 leading-normal ">
                     <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 font-content">
                       {items?.position}
                     </h5>
                     <div className="h-24">
-                      <p className="mb-1 font-content text-sm text-gray-900 ">
+                      <p className="mb-1 font-content text-sm font-semibold text-gray-900 ">
                         Location: {items?.location}
                       </p>
-                      <p className="mb-1 font-content text-sm text-gray-900 ">
+                      <p className="mb-1 font-content text-sm font-semibold text-gray-900 ">
                         Experience: {items?.experience}
                       </p>
-                      <p className="mb-1 font-content text-sm text-gray-900 ">
+                      <p className="mb-1 font-content text-sm font-semibold text-gray-900 ">
                         Qualification: {items?.qualification}
                       </p>
                     </div>
-                    <button className="font-content mt-4 rounded-3xl px-4 py-2 border font-semibold border-brandPink hover:bg-brandPink w-32">
-                      <Link href={`careers/${items?.slug}`}>Apply Now</Link>
+                    <button className="font-content mt-4 rounded-lg px-3 py-1.5 border font-semibold border-brandPink hover:bg-brandPink hover:text-white w-32">
+                      Apply Now
                     </button>
                   </div>
                 </div>
@@ -130,30 +131,25 @@ const IndexPage = ({ careers }) => {
 export default IndexPage;
 
 export const getStaticProps = async () => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const query = gql`
-    query {
-      careers(orderBy: publishedAt_DESC) {
-        position
-        slug
-        isActive
-        location
-        id
-        experience
-        qualification
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
+        careers(orderBy: publishedAt_DESC) {
+          position
+          slug
+          isActive
+          location
+          id
+          experience
+          qualification
+        }
       }
-    }
-  `;
-  const data = await graphQLClient.request(query);
-  const careers = data.careers;
+    `,
+  });
+
   return {
     props: {
-      careers,
+      careers: data.careers,
     },
     revalidate: 180,
   };

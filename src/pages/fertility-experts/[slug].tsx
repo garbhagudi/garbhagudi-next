@@ -3,13 +3,15 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import Link from "next/link";
-import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 import { useRouter } from "next/router";
 import Share from "components/share";
 
 export const getStaticProps = async ({ params }) => {
-  const { doctor } = await graphcms.request(
-    `query doctorPageQuery($slug: String!) {
+  const { data } = await apolloClient.query({
+    query: gql`
+      query ($slug: String!) {
         doctor(where: { slug: $slug }) {
           id
           name
@@ -36,30 +38,35 @@ export const getStaticProps = async ({ params }) => {
           marathahalliOnline
           marathahalliPhysical
         }
-      }`,
-    {
+      }
+    `,
+    variables: {
       slug: params.slug,
-    }
-  );
+    },
+  });
 
   return {
     props: {
-      doctor,
+      doctor: data.doctor,
     },
     revalidate: 180,
   };
 };
 
 export async function getStaticPaths() {
-  const { doctors } = await graphcms.request(`{
-    doctors {
-      slug
-      name
-    }
-  }`);
+  const { data } = await apolloClient.query({
+    query: gql`
+      {
+        doctors {
+          slug
+          name
+        }
+      }
+    `,
+  });
 
   return {
-    paths: doctors.map(({ slug }) => ({ params: { slug } })),
+    paths: data.doctors.map(({ slug }) => ({ params: { slug } })),
     fallback: true,
   };
 }

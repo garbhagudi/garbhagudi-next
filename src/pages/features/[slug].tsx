@@ -1,53 +1,53 @@
 import React from "react";
-import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Error from "next/error";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 
 export const getStaticProps = async ({ params }) => {
-  const { valueAddedService } = await graphcms.request(
-    `
-    query ($slug: String!) {
-      valueAddedService(where: { slug: $slug }) {
-        id
-        title
-        image {
-          url
-        }
-        content {
-          raw
-          text
+  const { data } = await apolloClient.query({
+    query: gql`
+      query ($slug: String!) {
+        valueAddedService(where: { slug: $slug }) {
+          id
+          title
+          image {
+            url
+          }
+          content {
+            raw
+            text
+          }
         }
       }
-    }
-  `,
-    {
+    `,
+    variables: {
       slug: params.slug,
-    }
-  );
+    },
+  });
 
   return {
     props: {
-      valueAddedService,
+      valueAddedService: data.valueAddedService,
     },
-    revalidate: 180,
   };
 };
 
 export const getStaticPaths = async () => {
-  const { valueAddedServices } = await graphcms.request(
-    `
-      query{
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
         valueAddedServices {
           title
           slug
         }
       }
-    `
-  );
+    `,
+  });
   return {
-    paths: valueAddedServices.map(({ slug }) => ({ params: { slug } })),
+    paths: data.valueAddedServices.map(({ slug }) => ({ params: { slug } })),
     fallback: false,
   };
 };

@@ -1,43 +1,52 @@
 import React from "react";
-import { GraphQLClient, gql } from "graphql-request";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 
-export const getServerSideProps = async (pageContext) => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const pageSlug = pageContext.query.slug;
-
-  const query = gql`
-    query ($pageSlug: String!) {
-      valueAddedService(where: { slug: $pageSlug }) {
-        id
-        title
-        image {
-          url
-        }
-        content {
-          raw
+export const getStaticProps = async ({ params }) => {
+  const { data } = await apolloClient.query({
+    query: gql`
+      query ($slug: String!) {
+        valueAddedService(where: { slug: $slug }) {
+          id
+          title
+          image {
+            url
+          }
+          content {
+            raw
+          }
         }
       }
-    }
-  `;
+    `,
+    variables: {
+      slug: params.slug,
+    },
+  });
 
-  const variables = {
-    pageSlug,
-  };
-
-  const data = await graphQLClient.request(query, variables);
-  const valueAddedService = data.valueAddedService;
   return {
     props: {
-      valueAddedService,
+      valueAddedService: data.valueAddedService,
     },
+  };
+};
+
+export const getStaticPaths = async () => {
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
+        valueAddedServices {
+          title
+          slug
+        }
+      }
+    `,
+  });
+  return {
+    paths: data.valueAddedServices.map(({ slug }) => ({ params: { slug } })),
+    fallback: false,
   };
 };
 

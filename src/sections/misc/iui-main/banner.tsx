@@ -6,14 +6,14 @@ const Banner = () => {
     <div>
       <div className="grid grid-cols-1 lg:grid-cols-2 max-w-7xl mx-auto px-3 pt-10 gap-3">
         <div className="py-5 flex items-start justify-center flex-col">
-          <h1 className="text-xl xl:text-2xl font-heading font-bold">
-            Experience the hope of starting a family with IUI treatment in
-            Bangalore
-          </h1>
-          <h3 className="text-base font-content mt-4 font-semibold">
+          <div className="text-xl xl:text-2xl font-heading font-bold">
+            Experience the hope of starting a family with{" "}
+            <h1 className="inline-block">IUI treatment in Bangalore</h1>
+          </div>
+          <div className="text-base font-content mt-4 font-semibold">
             Where expert fertility care meets state-of-the-art technology.
-          </h3>
-          <p className="text-base font-content pt-5">
+          </div>
+          <div className="text-base font-content pt-5">
             Experience the miracle of life with{" "}
             <Link
               href={"/treatments/intra-uterine-insemination-iui"}
@@ -33,7 +33,7 @@ const Banner = () => {
             >
               IUI treatment in Bangalore.
             </Link>{" "}
-          </p>
+          </div>
           <button className="text-lg font-content font-semibold text-white px-3 py-2 bg-brandPink hover:bg-brandPink4 mt-5 rounded-lg">
             Consult Now
           </button>

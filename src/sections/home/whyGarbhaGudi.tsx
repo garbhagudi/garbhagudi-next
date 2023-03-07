@@ -1,13 +1,14 @@
 import React from "react";
+import Link from "next/link";
 
 const WhyGG = () => {
   return (
-    <div>
-      <div className="container my-10 lg:my-16 px-6 mx-auto">
-        <section className="mb-32 text-gray-800">
-          <div className="block rounded-lg shadow-2xl bg-white">
+    <div className="bg-gradient-to-br from-brandPink5 via-gray-100 to-brandPink5">
+      <div className="container pt-10 pb-1 lg:pt-16 lg:pb-10 px-6 mx-auto">
+        <section className="mb-16 text-gray-800">
+          <div className="block rounded-lg shadow-3xl drop-shadow-2xl bg-white">
             <div className="flex flex-wrap items-center">
-              <div className="hidden lg:flex grow-0 shrink-0 basis-auto lg:w-6/12 xl:w-4/12">
+              <div className="flex lg:w-6/12 xl:w-4/12">
                 <img
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1677492148/Misc/coup-min_g3kq4k.webp"
                   alt="Why choose garbhagudi"
@@ -21,17 +22,28 @@ const WhyGG = () => {
                     complete your family?
                   </h2>
                   <p className="text-gray-900 font-content mb-6">
-                    GarbhaGudi is a leading IVF Clinic and Hospital in Bangalore
+                    GarbhaGudi is a leading{" "}
+                    <Link href={"/"} className="text-brandPink hover:underline">
+                      IVF Clinic and Hospital in Bangalore
+                    </Link>{" "}
                     with over 11 years of experience in providing comprehensive
                     fertility solutions. It has a renowned team of specialists,
                     state-of-the-art infrastructure, transparent pricing, and
                     consistently high success rates (75%) in assisted
-                    reproductive techniques. GarbhaGudi's holistic approach to
-                    fertility treatment addresses physical, emotional, and
-                    psychological aspects and includes nutrition counseling and
-                    stress management. Choose GarbhaGudi for personalized and
-                    compassionate care at the best IVF Clinic and Hospital in
-                    Bangalore.
+                    reproductive techniques. GarbhaGudi's holistic approach to{" "}
+                    <Link
+                      href={"/treatments/infertility"}
+                      className="text-brandPink hover:underline"
+                    >
+                      fertility treatment
+                    </Link>{" "}
+                    addresses physical, emotional, and psychological aspects and
+                    includes nutrition counseling and stress management. Choose
+                    GarbhaGudi for personalized and compassionate care at the{" "}
+                    <Link href={"/"} className="text-brandPink hover:underline">
+                      Best IVF Clinic and Hospital in Bangalore
+                    </Link>{" "}
+                    .
                   </p>
                 </div>
               </div>

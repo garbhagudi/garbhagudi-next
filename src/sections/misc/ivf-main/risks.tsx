@@ -79,9 +79,9 @@ const Risks = () => {
           <div className="mt-4 font-content">
             It is important to carefully weigh the potential risks and benefits
             of IVF with a fertility specialist before deciding whether or not to
-            pursue this treatment. It is also important to have a strong support
-            system in place to help cope with the emotional and financial
-            demands of the process.
+            pursue IVF in Bangalore. It is also important to have a strong
+            support system in place to help cope with the emotional and
+            financial demands of the process.
           </div>
         </div>
       </div>

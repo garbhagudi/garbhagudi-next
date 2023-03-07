@@ -1,7 +1,8 @@
 import React from "react";
 import Banner from "sections/location/banner";
 import TreatmentOptions from "sections/location/treatments";
-import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 import Faq from "sections/location/faq";
 import Cta from "sections/gg-care/cta";
 import QuickLinks from "sections/location/quickLinks";
@@ -68,9 +69,10 @@ const Branch = ({ branch }) => {
 export default Branch;
 
 export const getStaticProps = async ({ params }) => {
-  const { branch } = await graphcms.request(
-    `query ($slug: String!) {
-        branch (where: { slug: $slug }) {
+  const { data } = await apolloClient.query({
+    query: gql`
+      query ($slug: String!) {
+        branch(where: { slug: $slug }) {
           branchPicture {
             url
           }
@@ -81,7 +83,7 @@ export const getStaticProps = async ({ params }) => {
           }
           slug
           metaTitle
-    metaDescription
+          metaDescription
           id
           mapLink
           branchPicture {
@@ -102,30 +104,35 @@ export const getStaticProps = async ({ params }) => {
             }
           }
         }
-      }`,
-    {
+      }
+    `,
+    variables: {
       slug: params.slug,
-    }
-  );
+    },
+  });
 
   return {
     props: {
-      branch,
+      branch: data.branch,
     },
     revalidate: 180,
   };
 };
 
 export async function getStaticPaths() {
-  const { branches } = await graphcms.request(`{
-    branches {
-      slug
-      title
-    }
-  }`);
+  const { data } = await apolloClient.query({
+    query: gql`
+      {
+        branches {
+          slug
+          title
+        }
+      }
+    `,
+  });
 
   return {
-    paths: branches.map(({ slug }) => ({ params: { slug } })),
+    paths: data.branches.map(({ slug }) => ({ params: { slug } })),
     fallback: true,
   };
 }

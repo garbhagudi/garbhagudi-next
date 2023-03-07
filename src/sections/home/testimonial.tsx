@@ -71,7 +71,7 @@ const responsive = {
 
 const Testimonial = () => {
   return (
-    <section className="py-12 bg-gray-50 overflow-hidden md:py-16 lg:py-16">
+    <section className="py-12 bg-amber-50 overflow-hidden md:py-16 lg:py-16">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Carousel responsive={responsive} ssr={true} infinite={true}>
           {data.map((item) => {

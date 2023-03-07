@@ -5,49 +5,54 @@ import Error from "next/error";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import Share from "components/share";
-import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 import { useRouter } from "next/router";
 import Loading from "components/Loading";
 
 export const getStaticProps = async ({ params }) => {
-  const { award } = await graphcms.request(
-    `
-    query ($slug: String!) {
-      award(where: { slug: $slug }) {
-        id
-        image {
-          url
+  const { data } = await apolloClient.query({
+    query: gql`
+      query ($slug: String!) {
+        award(where: { slug: $slug }) {
+          id
+          image {
+            url
+          }
+          content {
+            raw
+            text
+          }
+          title
         }
-        content {
-          raw
-          text
-        }
-        title
       }
-    }
-  `,
-    {
+    `,
+    variables: {
       slug: params.slug,
-    }
-  );
+    },
+  });
 
   return {
     props: {
-      award,
+      award: data.award,
     },
   };
 };
 
 export const getStaticPaths = async () => {
-  const { awards } = await graphcms.request(`{
-    awards {
-      title
-      slug
-    }
-  }`);
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
+        awards {
+          title
+          slug
+        }
+      }
+    `,
+  });
 
   return {
-    paths: awards.map(({ slug }) => ({ params: { slug } })),
+    paths: data.awards.map((award) => ({ params: { slug: award.slug } })),
     fallback: true,
   };
 };
@@ -92,7 +97,7 @@ const AwardPage = ({ award }) => {
         text2={"Awards & Accolades"}
         link2="/about/awards-and-accolades"
         link3={"#"}
-        text3={award.title}
+        text3={award?.title}
         link4={""}
         text4={""}
       />

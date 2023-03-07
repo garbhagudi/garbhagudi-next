@@ -8,20 +8,18 @@ const tiers = [
     name: "Essentials",
     href: "/contact.html",
     priceMonthly: "90,000",
-    // description: "Quis suspendisse ut fermentum neque vivamus non tellus.",
+
   },
   {
     name: "Plus",
     href: "/contact.html",
     priceMonthly: "1,50,000",
-    // description: "Quis eleifend a tincidunt pellentesque. A tempor in sed.",
+
   },
   {
     name: "Premium",
     href: "/contact.html",
     priceMonthly: "2,20,000",
-    // description:
-    //   "Orci volutpat ut sed sed neque, dui eget. Quis tristique non.",
   },
 ];
 const sections = [

@@ -4,61 +4,66 @@ import BlogFooter from "components/blogFooter";
 import Error from "next/error";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
-import graphcms from "lib/graphcms";
 import { useRouter } from "next/router";
 import Share from "components/share";
 import Loading from "components/Loading";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 
 export const getStaticProps = async ({ params }) => {
-  const { blog } = await graphcms.request(
-    `
-    query ($slug: String!) {
-      blog(where: { slug: $slug }) {
-        id
-        title
-        slug
-        image {
-          url
-        }
-        doctor {
+  const { data } = await apolloClient.query({
+    query: gql`
+      query ($slug: String!) {
+        blog(where: { slug: $slug }) {
           id
+          title
+          slug
           image {
             url
           }
-          name
-          slug
+          doctor {
+            id
+            image {
+              url
+            }
+            name
+            slug
+          }
+          content {
+            raw
+            text
+          }
+          publishedOn
         }
-        content {
-          raw
-          text
-        }
-        publishedOn
       }
-    }
-  `,
-    {
+    `,
+    variables: {
       slug: params.slug,
-    }
-  );
+    },
+  });
 
   return {
     props: {
-      blog,
+      blog: data.blog,
     },
     revalidate: 180,
   };
 };
 
 export async function getStaticPaths() {
-  const { blogs } = await graphcms.request(`{
-      blogs {
-        slug
-        title
+  const { data } = await apolloClient.query({
+    query: gql`
+      {
+        blogs {
+          slug
+          title
+        }
       }
-  }`);
+    `,
+  });
 
   return {
-    paths: blogs.map(({ slug }) => ({ params: { slug } })),
+    paths: data.blogs.map(({ slug }) => ({ params: { slug } })),
     fallback: true,
   };
 }

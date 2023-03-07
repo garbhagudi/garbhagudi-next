@@ -1,6 +1,8 @@
 import React from "react";
 import Banner from "sections/location/banner";
 import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
@@ -104,8 +106,9 @@ const Locations = ({ branches }) => {
 export default Locations;
 
 export const getStaticProps = async () => {
-  const { branches } = await graphcms.request(
-    `query {
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
         branches {
           branchPicture {
             url
@@ -114,12 +117,13 @@ export const getStaticProps = async () => {
           slug
           id
         }
-      }`
-  );
+      }
+    `,
+  });
 
   return {
     props: {
-      branches,
+      branches: data.branches,
     },
     revalidate: 180,
   };

@@ -15,7 +15,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.background-animate {
+.background-shine {
   background-size: 400%;
   -webkit-animation: shine 5s ease infinite;
   -moz-animation: shine 5s ease infinite;

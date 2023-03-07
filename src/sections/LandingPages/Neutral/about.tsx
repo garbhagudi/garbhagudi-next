@@ -12,7 +12,7 @@ const About = () => {
             <img
               src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1659164257/logos/GG_Vertical_Logo_nrcl5h.svg"
               alt="logo"
-              className="w-56 h-56 p-3 bg-gradient-to-br from-brandPurple via-white to-brandPink4 rounded-xl shadow-2xl background-animate"
+              className="w-56 h-56 p-3 bg-gradient-to-br from-brandPurple via-white to-brandPink4 rounded-xl shadow-2xl animate-shine bg-[length:400%]"
             />
           </div>
           <div className="col-span-3 flex mt-6 md:mt-0 font-content items-center justify-center flex-col px-3">

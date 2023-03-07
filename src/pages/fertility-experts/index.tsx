@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Tab } from "@headlessui/react";
-import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import Loading from "components/Loading";
@@ -214,30 +215,32 @@ const IndexPage = ({ branches }) => {
 export default IndexPage;
 
 export const getStaticProps = async () => {
-  const { branches } = await graphcms.request(
-    `query {
-      branches {
-        title
-        address
-        mapLink
-        id
-        doctors {
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
+        branches {
+          title
+          address
+          mapLink
           id
-          name
-          slug
-          image{
-            url
+          doctors {
+            id
+            name
+            slug
+            image {
+              url
+            }
+            qualification
+            designation
           }
-          qualification
-          designation
         }
       }
-    }`
-  );
+    `,
+  });
 
   return {
     props: {
-      branches,
+      branches: data.branches,
       fallback: true,
     },
     revalidate: 180,

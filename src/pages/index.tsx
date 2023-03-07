@@ -2,10 +2,12 @@ import React from "react";
 import Head from "next/head";
 import HomeComponent from "sections/home";
 import Link from "next/link";
+import Faq from "sections/home/faq";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
-import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 
 const responsive = {
   superLargeDesktop: {
@@ -45,7 +47,7 @@ const responsive2 = {
   },
 };
 
-const Home = ({ homeData }) => {
+const Home = ({ data }) => {
   function addOrgJsonLd() {
     return {
       __html: `{
@@ -185,7 +187,7 @@ const Home = ({ homeData }) => {
         autoPlay={true}
         autoPlaySpeed={5000}
       >
-        {homeData?.banners.map((items: any) => (
+        {data?.banners.map((items: any) => (
           <div className="" key={items?.id}>
             <Link href={items?.url} target="_blank" rel="noreferrer">
               <Image
@@ -201,7 +203,7 @@ const Home = ({ homeData }) => {
         ))}
       </Carousel>
       <HomeComponent />
-      <div className="bg-white" id="ourTeam">
+      <div className="bg-neutral-50" id="ourTeam">
         <div className="px-4 py-16 mx-auto text-center max-w-7xl sm:px-6 lg:px-8 lg:py-12">
           <div className="space-y-12">
             <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
@@ -209,24 +211,25 @@ const Home = ({ homeData }) => {
                 Meet our Fertility Experts
               </h2>
               <p className="text-md text-brandDark font-content">
-                Our team of fertility specialists have been known for their
-                extensive clinical experience and research contributions and
-                their success in treating the most challenging fertility cases.
+                Our team of IVF specialists in Bangalore have been known for
+                their extensive clinical experience and research contributions
+                and their success in treating the most challenging fertility
+                cases.
               </p>
             </div>
             <ul className="hidden md:grid grid-cols-2 mx-auto space-y-0 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl">
-              {homeData?.doctors.map((item: any) => {
+              {data?.doctors.map((item: any) => {
                 return (
                   <li
                     key={item?.id}
-                    className="mb-2 transition-all duration-500 hover:shadow-2xl rounded-lg hover:scale-115"
+                    className="mb-2 transition-all duration-500 rounded-lg hover:scale-115"
                   >
                     <Link href={`/fertility-experts/${item?.slug}`} passHref>
                       <div className="space-y-4">
                         <Image
                           className="w-32 h-32 mx-auto my-auto mt-4 shadow-3xl transition-all duration-500 rounded-full xl:w-44 xl:h-44 drop-shadow-2xl"
                           src={item?.image?.url}
-                          alt={item?.imageAlt}
+                          alt={item?.imageAlt || item?.name}
                           width={500}
                           height={500}
                           loading="lazy"
@@ -239,9 +242,9 @@ const Home = ({ homeData }) => {
                             <p className="text-sm text-brandPurpleDark font-content">
                               {item?.qualification}
                             </p>
-                            <p className="pb-2 text-sm text-brandPink font-content">
+                            <div className="pb-2 text-sm text-brandPink font-content drop-shadow-2xl shadow-black">
                               {item?.designation}
-                            </p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -258,7 +261,7 @@ const Home = ({ homeData }) => {
                 autoPlay={true}
                 autoPlaySpeed={5000}
               >
-                {homeData?.doctors.map((item: any) => {
+                {data?.doctors.map((item: any) => {
                   return (
                     <li
                       key={item?.id}
@@ -297,6 +300,7 @@ const Home = ({ homeData }) => {
           </div>
         </div>
       </div>
+      <Faq />
     </div>
   );
 };
@@ -304,34 +308,36 @@ const Home = ({ homeData }) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const homeData = await graphcms.request(
-    `query {
-      doctors {
-        name
-        qualification
-        slug
-        image {
-          url
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
+        doctors {
+          name
+          qualification
+          slug
+          image {
+            url
+          }
+          imageAlt
+          medicalRegNo
+          id
+          designation
         }
-        imageAlt
-        medicalRegNo
-        id
-        designation
-      }
-      banners(orderBy: order_ASC) {
-        title
-        id
-        url
-        image{
+        banners(orderBy: order_ASC) {
+          title
+          id
           url
+          image {
+            url
+          }
         }
       }
-    }`
-  );
+    `,
+  });
 
   return {
     props: {
-      homeData,
+      data,
     },
     revalidate: 180,
   };
