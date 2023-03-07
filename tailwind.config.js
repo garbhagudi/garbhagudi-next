@@ -143,6 +143,7 @@ module.exports = {
       bounce: "bounce 1s infinite",
       shake: "shake 500ms cubic-bezier(.36,.07,.19,.97)",
       wave: "wave 2s linear infinite",
+      shine: "shine 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite",
     },
     aspectRatio: {
       auto: "auto",
@@ -649,6 +650,14 @@ module.exports = {
         "50%": { transform: "rotate(10.0deg)" },
         "60%": { transform: "rotate(0.0deg)" },
         "100%": { transform: "rotate(0.0deg)" },
+      },
+      shine: {
+        "0%,100%": {
+          "background-position": "0% 50%",
+        },
+        "50%": {
+          "background-position": "100% 50%",
+        },
       },
     },
     letterSpacing: {

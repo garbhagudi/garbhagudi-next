@@ -8,9 +8,9 @@ const Faq = (props: Props) => {
   const [activeIndex1, setActiveIndex1] = useState(1);
   return (
     <div className="px-3 scroll-m-16" id="faq">
-      <h3 className="text-center text-2xl  lg:text-3xl font-heading pt-12 font-semibold">
+      <h2 className="text-center text-2xl  lg:text-3xl font-heading pt-12 font-semibold">
         Frequently Asked Questions
-      </h3>
+      </h2>
       <div className="text-lg font-content mt-8 text-center">
         Here are some of the most frequently asked questions about infertility
         and its treatment options.

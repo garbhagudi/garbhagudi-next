@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { gql } from "graphql-request";
+import { gql } from "@apollo/client";
+import apolloClient from "lib/apollo-graphcms";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
-import graphcms from "lib/graphcms";
 import { useRouter } from "next/router";
 import Loading from "components/Loading";
 import SearchComponent from "components/search/searchComponent";
@@ -178,69 +178,72 @@ function BlogPage({
 export default BlogPage;
 
 export async function getStaticProps({ params }) {
-  const query = gql`
-    query blogListQuery($limit: Int!, $offset: Int!) {
-      blogsConnection(orderBy: publishedOn_DESC, first: $limit, skip: $offset) {
-        blogs: edges {
-          node {
-            id
-            title
-            publishedOn
-            slug
-            image {
-              url
-            }
-            doctor {
-              slug
-              name
+  const { data } = await apolloClient.query({
+    query: gql`
+      query ($limit: Int!, $offset: Int!) {
+        blogsConnection(
+          orderBy: publishedOn_DESC
+          first: $limit
+          skip: $offset
+        ) {
+          blogs: edges {
+            node {
               id
+              title
+              publishedOn
+              slug
               image {
                 url
               }
+              doctor {
+                slug
+                name
+                id
+                image {
+                  url
+                }
+              }
             }
           }
-        }
-        pageInfo {
-          hasNextPage
-          hasPreviousPage
-        }
-        aggregate {
-          count
+          pageInfo {
+            hasNextPage
+            hasPreviousPage
+          }
+          aggregate {
+            count
+          }
         }
       }
-    }
-  `;
-
-  const {
-    blogsConnection: { blogs, pageInfo, aggregate },
-  } = await graphcms.request(query, {
-    limit,
-    offset: Number((params.page - 1) * limit),
+    `,
+    variables: {
+      limit,
+      offset: Number((params.page - 1) * limit),
+    },
   });
 
   return {
     props: {
       currentPageNumber: Number(params.page),
-      blogs,
-      aggregate,
-      ...pageInfo,
+      blogs: data.blogsConnection.blogs,
+      aggregate: data.blogsConnection.aggregate,
+      ...data.blogsConnection.pageInfo,
     },
     revalidate: 180,
   };
 }
 
 export const getStaticPaths = async () => {
-  const query = gql`
-    query {
-      blogsConnection {
-        aggregate {
-          count
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
+        blogsConnection {
+          aggregate {
+            count
+          }
         }
       }
-    }
-  `;
-
-  const { blogsConnection } = await graphcms.request(query);
+    `,
+  });
   function* numberOfPages({ total, limit }) {
     let page = 1;
     let offset = 0;
@@ -253,7 +256,7 @@ export const getStaticPaths = async () => {
 
   const paths = [
     ...numberOfPages({
-      total: blogsConnection.aggregate.count,
+      total: data.blogsConnection.aggregate.count,
       limit,
     }),
   ].map((page) => ({

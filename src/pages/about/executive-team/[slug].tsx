@@ -1,5 +1,6 @@
 import React from "react";
-import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
@@ -8,50 +9,50 @@ import { useRouter } from "next/router";
 import Loading from "components/Loading";
 
 export const getStaticProps = async ({ params }) => {
-  const { director } = await graphcms.request(
-    `
-    query ($slug: String!) {
-      director(where: { slug: $slug }) {
-        id
-        name
-        details
-        link
-        image {
-          url
-        }
-        bio {
-          raw
-          text
+  const { data } = await apolloClient.query({
+    query: gql`
+      query ($slug: String!) {
+        director(where: { slug: $slug }) {
+          id
+          name
+          details
+          link
+          image {
+            url
+          }
+          bio {
+            raw
+            text
+          }
         }
       }
-    }
-  `,
-    {
+    `,
+    variables: {
       slug: params.slug,
-    }
-  );
+    },
+  });
 
   return {
     props: {
-      director,
+      director: data.director,
     },
-    revalidate: 180,
+    revalidate: 600,
   };
 };
 
 export const getStaticPaths = async () => {
-  const { directors } = await graphcms.request(
-    `
-      query{
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
         directors {
           name
           slug
         }
       }
-    `
-  );
+    `,
+  });
   return {
-    paths: directors.map(({ slug }) => ({ params: { slug } })),
+    paths: data.directors.map(({ slug }) => ({ params: { slug } })),
     fallback: true,
   };
 };

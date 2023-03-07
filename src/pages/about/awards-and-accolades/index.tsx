@@ -1,37 +1,30 @@
 import React from "react";
-import { GraphQLClient, gql } from "graphql-request";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 import Link from "next/link";
 import BreadCrumbs from "components/breadcrumbs";
 import Head from "next/head";
 
 export const getStaticProps = async () => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const query = gql`
-    query {
-      awards {
-        id
-        title
-        slug
-        image {
-          url
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
+        awards {
+          id
+          title
+          slug
+          image {
+            url
+          }
         }
       }
-    }
-  `;
-
-  const data = await graphQLClient.request(query);
-  const award = data.awards;
+    `,
+  });
 
   return {
     props: {
-      award,
+      award: data.awards,
     },
-    revalidate: 180,
   };
 };
 

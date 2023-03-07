@@ -49,7 +49,7 @@ const Faq = ({ branch }) => {
               <h3 className="font-semibold md:col-span-5">
                 How to contact GarbhaGudi IVF Centre in {branch}?
               </h3>
-              <p className="md:pl-0 md:col-span-7">
+              <div className="md:pl-0 md:col-span-7">
                 To contact the fertility specialists at our {branch} branch,
                 please visit{" "}
                 <Link href={"/gg-care"} className="text-brandPink">
@@ -102,13 +102,13 @@ const Faq = ({ branch }) => {
                     </div>
                   ))}
                 </div>
-              </p>
+              </div>
             </div>
             <div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
               <h3 className="font-semibold md:col-span-5">
                 What are our success rates for IVF treatments in {branch}?
               </h3>
-              <p className="md:pl-0 md:col-span-7">
+              <div className="md:pl-0 md:col-span-7">
                 The success rate of of an IVF Treatment depends on numerous
                 factors. At our {branch} branch the average success rate ranges
                 from 65 - 73%. <br /> <br />
@@ -117,14 +117,14 @@ const Faq = ({ branch }) => {
                 and choose a reputable clinic with a good track record.
                 Additionally, some clinics may have higher success rates for
                 certain types of patients or certain IVF procedures.
-              </p>
+              </div>
             </div>
 
             <div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
               <h3 className="font-semibold md:col-span-5">
                 What is the total cost of IVF in <strong>{branch}</strong>?
               </h3>
-              <p className="md:pl-0 md:col-span-7">
+              <div className="md:pl-0 md:col-span-7">
                 The total cost of IVF in <strong>{branch}</strong> can vary
                 depending on the individual patient's needs. On average, the
                 cost of a single IVF cycle in <strong>{branch}</strong> can
@@ -133,7 +133,7 @@ const Faq = ({ branch }) => {
                 eggs/sperm may cost additional sum. It's important to speak with
                 a specialist at the clinic to understand the total cost and any
                 additional fees that may apply.
-              </p>
+              </div>
             </div>
           </div>
         </div>

@@ -12,17 +12,34 @@ const Content = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="relative font-content mt-8 md:mt-16 space-y-8 ml-0 mx-auto text-left md:max-w-lg lg:max-w-2xl">
                 <p className="">
-                  IVF or In Vitro Fertilization is one of the more widely known
-                  types of Assisted Reproductive Techniques (ART). It involves
-                  retrieving eggs from the woman's ovaries and fertilizing them
-                  with sperm in a laboratory dish. The resulting embryos are
-                  then transferred back into the woman's uterus in the hope of
-                  achieving a successful pregnancy. GarbhaGudi IVF center offers
-                  state-of-the-art facilities and a team of experienced doctors
-                  and embryologists who work together to provide personalized
-                  care and support to couples undergoing IVF in Bangalore. With
-                  the help of IVF, couples struggling with infertility can have
-                  a chance to conceive and start a family.
+                  GarbhaGudi IVF Centre is a leading fertility clinic in
+                  Bangalore that provides a wide range of fertility treatments,
+                  including IVF treatment in Bangalore. IVF, or In vitro
+                  fertilization, is a popular assisted reproductive technology
+                  (ART) that helps couples who are struggling with infertility
+                  <br />
+                  <br />
+                  to conceive. IVF or In Vitro Fertilization is one of the more
+                  widely known types of Assisted Reproductive Techniques (ART).
+                  It involves retrieving eggs from the woman's ovaries and
+                  fertilizing them with sperm in a laboratory dish. The
+                  resulting embryos are then transferred back into the woman's
+                  uterus in the hope of achieving a successful pregnancy.
+                  GarbhaGudi IVF center offers state-of-the-art facilities and a
+                  team of experienced doctors and embryologists who work
+                  together to provide personalized care and support to couples
+                  undergoing IVF in Bangalore. With the help of IVF, couples
+                  struggling with infertility can have a chance to conceive and
+                  start a family.
+                </p>
+                <p>
+                  IVF treatment in Bangalore is a multi-step process that
+                  involves several stages, including ovarian stimulation, egg
+                  retrieval, fertilization, embryo culture, and embryo transfer.
+                  The process is carefully monitored by our team of experienced
+                  fertility specialists, who work closely with patients to
+                  customize a treatment plan that meets their unique needs and
+                  maximizes their chances of success.
                 </p>
                 <h2 className="text-lg font-bold font-heading">
                   What is the Process of IVF Treatment in Bangalore?
@@ -105,11 +122,29 @@ const Content = () => {
               process is called surrogacy.
               <br />
               <br />
+              At GarbhaGudi IVF Centre, we are committed to providing the best
+              IVF treatment in Bangalore. We use the latest technology and
+              techniques to ensure the best possible outcomes for our patients.
+              Our state-of-the-art laboratory is equipped with advanced
+              equipment and staffed by a team of highly skilled embryologists
+              who are dedicated to providing exceptional care and support.
+              <br />
+              <br />
               It is important to note that not all IVF cycles result in
               pregnancy, and it may be necessary to try multiple cycles before
               achieving a successful pregnancy. The success rate of IVF depends
               on a variety of factors, including the person's age, the cause of
               infertility, and the quality of the eggs and sperm.
+              <br />
+              <br />
+              If you are struggling with infertility and considering IVF in
+              Bangalore, GarbhaGudi IVF Centre can help. Our experienced
+              fertility specialists will work with you every step of the way to
+              help you achieve your dream of starting or growing your family.
+              GarbhaGudi offers multiple oprions to make IVF treatment cost in
+              Bangalore as affordable as possible Contact us today to schedule a
+              consultation and learn more about how we can help you on your
+              fertility journey.
             </div>
           </div>
         </div>

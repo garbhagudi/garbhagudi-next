@@ -3,54 +3,59 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
 import Share from "components/share";
-import graphcms from "lib/graphcms";
 import { useRouter } from "next/router";
 import Loading from "components/Loading";
 import Link from "next/link";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 
 export const getStaticProps = async ({ params }) => {
-  const { career } = await graphcms.request(
-    `
-    query ($slug: String!) {
-      career(where: { slug: $slug }) {
-        position
-        jobDescription {
-          raw
+  const { data } = await apolloClient.query({
+    query: gql`
+      query ($slug: String!) {
+        career(where: { slug: $slug }) {
+          position
+          jobDescription {
+            raw
+          }
+          image {
+            url
+          }
+          qualification
+          experience
+          description
+          location
+          link
         }
-        image {
-          url
-        }
-        qualification
-        experience
-        description
-        location
-        link
       }
-    }
-  `,
-    {
+    `,
+    variables: {
       slug: params.slug,
-    }
-  );
+    },
+  });
 
   return {
     props: {
-      career,
+      career: data.career,
     },
     revalidate: 180,
   };
 };
 
 export const getStaticPaths = async () => {
-  const { careers } = await graphcms.request(`{
-    careers {
-      position
-      slug
-    }
-  }`);
+  const { data } = await apolloClient.query({
+    query: gql`
+      {
+        careers {
+          position
+          slug
+        }
+      }
+    `,
+  });
 
   return {
-    paths: careers.map(({ slug }) => ({ params: { slug } })),
+    paths: data.careers.map(({ slug }) => ({ params: { slug } })),
     fallback: true,
   };
 };
@@ -140,11 +145,11 @@ const Career = ({ career }) => {
             </div>
             <div className="flex flex-col mt-10 sm:flex-row">
               <div className="text-center sm:w-1/3 sm:pr-8 sm:py-8">
-                <div className="inline-flex items-center justify-center text-gray-400 bg-gray-200 border-2 rounded-full w-44 h-44 lg:w-48 lg:h-48 border-brandPink3">
+                <div className="inline-flex items-center justify-center bg-gradient-to-br from-brandPurple via-white to-brandPink4 bg-[length:400%]  animate-shine rounded-full w-44 h-44 lg:w-48 lg:h-48 shadow-2xl drop-shadow-2xl">
                   <img
-                    src={career.image.url}
+                    src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1659164257/logos/GG_Vertical_Logo_nrcl5h.svg"
                     alt={career.position}
-                    className="rounded-full"
+                    className="rounded-full h-44 w-44 "
                   />
                 </div>
                 <div className="flex flex-col items-center justify-center text-center">
@@ -161,22 +166,22 @@ const Career = ({ career }) => {
                   <p className="text-base font-semibold font-qs">
                     Location: {career.location}
                   </p>
-                  <button className="px-4 py-2 mt-4 font-semibold text-white rounded-3xl font-qs bg-brandPink">
-                    <a href={career.link} target="_blank" rel="noreferrer">
+                  <div className="px-4 py-2 mt-4 font-semibold text-white rounded-3xl font-qs bg-brandPink">
+                    <Link href={career.link} target="_blank" rel="noreferrer">
                       Apply Now
-                    </a>
-                  </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
               <div className="pt-4 mt-4 border-t border-gray-200 sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l sm:border-t-0 sm:mt-0 sm:text-left ">
-                <p className="mb-4 text-xl font-content">Description</p>
-                <p className="text-base font-qs">{career.description}</p>
-                <p className="mt-8 text-xl font-content">
+                <div className="mb-4 text-xl font-content">Description</div>
+                <div className="text-base font-qs">{career.description}</div>
+                <div className="mt-8 text-xl font-content">
                   Job Responsibilities
-                </p>
-                <p className="mb-4 leading-relaxed text-md text-brandDark font-qs">
+                </div>
+                <div className="mb-4 leading-relaxed text-md text-brandDark font-qs">
                   <RichText content={career.jobDescription.raw.children} />
-                </p>
+                </div>
               </div>
             </div>
           </div>

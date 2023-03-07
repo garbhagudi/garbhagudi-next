@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 const Banner = ({ branchTitle }) => {
@@ -16,7 +15,9 @@ const Banner = ({ branchTitle }) => {
                 <h1 className="text-3xl lg:text-4xl font-heading font-bold leading-tight">
                   {" "}
                   IVF Centre
-                  <span className="text-brandPink"> in {branchTitle}</span>
+                  {branchTitle && (
+                    <span className="text-brandPink"> in {branchTitle}</span>
+                  )}
                 </h1>
                 <h3 className="mt-4 font-semibold font-content leading-7">
                   We are proud to offer infertility treatment at 5 locations

@@ -9,9 +9,9 @@ const OurCentres = (props: Props) => {
       className="container mx-auto px-3 scroll-m-24"
       id="iui-centres-in-bangalore"
     >
-      <h3 className="text-2xl lg:text-3xl font-heading font-bold text-center pb-5">
+      <h2 className="text-2xl lg:text-3xl font-heading font-bold text-center pb-5">
         GarbhaGudi IVF Centers in Bangalore
-      </h3>
+      </h2>
       <div className="flex justify-center items-center pb-5">
         <svg
           aria-hidden="true"

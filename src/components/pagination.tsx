@@ -30,7 +30,7 @@ const Pagination = ({
         <div className="flex mx-auto items-center justify-center space-x-4 text-center mt-5 sm:hidden">
           {isPrev && (
             <Link href={`/blogs/page/${previousPage}`}>
-              <div className=" rounded-xl py-2 px-6 bg-brandPink font-content font-semibold text-white">
+              <div className=" rounded-lg py-2 px-6 bg-brandPink font-content font-semibold text-white">
                 Prev Page
               </div>
             </Link>

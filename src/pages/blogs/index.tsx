@@ -1,48 +1,43 @@
 import React from "react";
-import { GraphQLClient, gql } from "graphql-request";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 import Link from "next/link";
 import BreadCrumbs from "components/breadcrumbs";
 import Head from "next/head";
+
 export const getStaticProps = async () => {
-  const url = process.env.ENDPOINT;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPH_CMS_TOKEN}`,
-    },
-  });
-  const query = gql`
-    query {
-      blogsConnection(orderBy: publishedOn_DESC, first: 6) {
-        edges {
-          node {
-            title
-            publishedOn
-            slug
-            id
-            image {
-              url
-            }
-            doctor {
-              name
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
+        blogsConnection(orderBy: publishedOn_DESC, first: 6) {
+          edges {
+            node {
+              title
+              publishedOn
+              slug
+              id
               image {
                 url
               }
-              slug
+              doctor {
+                name
+                image {
+                  url
+                }
+                slug
+              }
             }
           }
-        }
-        pageInfo {
-          endCursor
+          pageInfo {
+            endCursor
+          }
         }
       }
-    }
-  `;
-
-  const result = await graphQLClient.request(query);
-  const blogs = result.blogsConnection;
+    `,
+  });
   return {
     props: {
-      blogs,
+      blogs: data.blogsConnection,
     },
   };
 };
@@ -158,13 +153,13 @@ const Blogs = ({ blogs }) => {
                       </Link>
                     </div>
                     <div className="ml-3">
-                      <p className="text-sm font-medium text-gray-900">
+                      <div className="text-sm font-medium text-gray-900">
                         <Link href={`/doctors/${item.node.doctor.slug}`}>
                           <div className="font-qs font-semibold">
                             {item.node.doctor.name}
                           </div>
                         </Link>
-                      </p>
+                      </div>
                       <div className="flex space-x-1 text-sm text-gray-500 font-qs">
                         <time>{item.node.publishedOn}</time>
                       </div>

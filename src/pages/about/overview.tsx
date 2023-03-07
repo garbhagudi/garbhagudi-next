@@ -1,10 +1,10 @@
 import React from "react";
 import Header from "sections/about/header";
 import CoreVision from "sections/about/coreVision";
-import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
 import Link from "next/link";
 import Head from "next/head";
-// import BreadCrumbs from "components/breadcrumbs";
+import { gql } from "@apollo/client";
 
 const Overview = ({ directors }) => {
   return (
@@ -49,16 +49,6 @@ const Overview = ({ directors }) => {
           content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
         />
       </Head>
-      {/* <BreadCrumbs
-        text1="About"
-        link1="/about/overview"
-        link2={""}
-        text2={""}
-        link3={""}
-        text3={""}
-        link4={""}
-        text4={""}
-      /> */}
       <Header />
       <div className="bg-white">
         <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24">
@@ -114,23 +104,25 @@ const Overview = ({ directors }) => {
 export default Overview;
 
 export const getStaticProps = async () => {
-  const { directors } = await graphcms.request(`
-    query {
-      directors {
-        name
-        details
-        slug
-        image {
-          url
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
+        directors {
+          name
+          details
+          slug
+          image {
+            url
+          }
+          id
+          description
         }
-        id
-        description
       }
-    }
-  `);
+    `,
+  });
   return {
     props: {
-      directors,
+      directors: data.directors,
     },
     revalidate: 180,
   };

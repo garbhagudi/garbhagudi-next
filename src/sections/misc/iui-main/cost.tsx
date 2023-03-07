@@ -18,16 +18,16 @@ const Cost = () => {
             }
             className="text-brandPink hover:underline"
           >
-            IUI treatment in Bangalore
+            IUI Treatment cost in Bangalore
           </Link>{" "}
-          can cost between
+          is between
           <strong> INR 15,000 and INR 50,000 </strong>
           per cycle, depending on the location of the clinic, the experience of
           the specialist, and additional costs associated with the procedure
           such as medications and laboratory fees. It's always best to check
           with the clinic or your insurance provider to understand the full cost
           of the treatment. Some clinics also offer financing options to help
-          make the treatment more affordable.
+          make IUI Cost in Bangalore more affordable.
         </div>
       </div>
     </div>
