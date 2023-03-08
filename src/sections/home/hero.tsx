@@ -17,7 +17,7 @@ const Hero = () => {
               </div>
               <div className="text-md text-right font-bold">
                 ...with the{" "}
-                <h1 className="inline-block">Best IVF Hospital in Bangalore</h1>
+                <h1 className="inline-block">Best IVF Centre in Bangalore</h1>
               </div>
               <p className="mt-3 text-brandDark sm:mt-5 sm:text-xl lg:text-lg xl:text-base text-base font-content">
                 GarbhaGudi is a chain of new generation{" "}

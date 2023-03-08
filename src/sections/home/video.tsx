@@ -39,9 +39,9 @@ const responsive = {
 const Video = () => {
   return (
     <div className="container mx-auto text-center my-8">
-      <span className="text-2xl lg:text-4xl max-w-5xl font-extrabold text-brandDark font-heading">
+      <h2 className="text-2xl lg:text-4xl max-w-5xl font-extrabold text-brandDark font-heading">
         Testimonials from our happy couples
-      </span>
+      </h2>
       <div className="px-3 sm:px-0">
         <Carousel
           responsive={responsive}
