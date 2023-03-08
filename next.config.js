@@ -45,11 +45,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/treatments/infertility",
-        destination: "/treatments/infertility-treatment",
-        permanent: true,
-      },
-      {
         source: "/locations/fertility-experts",
         destination: "/fertility-experts",
         permanent: true,

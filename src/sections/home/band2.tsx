@@ -11,8 +11,11 @@ const Band2 = () => {
             <Link href={"/"} className="text-brandPink hover:underline">
               IVF Centre in Bangalore
             </Link>{" "}
-            Has Been Awarded as the Best IVF &amp; Fertility Hospital for It's
-            High Success Rates &amp; Holistic Approach to{" "}
+            Has Been Awarded as the Best Fertility &amp;{" "}
+            <Link href={"/"} className="text-brandPink hover:underline">
+              IVF Hospital
+            </Link>{" "}
+            for It's High Success Rates &amp; Holistic Approach to{" "}
             <Link
               href={"/infertility"}
               className="text-brandPink hover:underline font-bold"
