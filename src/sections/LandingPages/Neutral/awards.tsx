@@ -7,10 +7,10 @@ function FeaturesBlocks() {
         <div className="py-4 md:py-6">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4 uppercase font-heading bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark font-bold">
+            <h2 className="h2 mb-4 uppercase text-3xl font-heading bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark font-bold">
               Why we are the Industry Leaders?
             </h2>
-            <p className="text-2xl text-gray-600">
+            <p className="text-xl text-gray-600">
               GarbhaGudi has won numerous awards from various organisations for
               its exceptional service and high success rates
             </p>

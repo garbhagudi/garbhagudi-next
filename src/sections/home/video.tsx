@@ -38,8 +38,8 @@ const responsive = {
 
 const Video = () => {
   return (
-    <div className="container mx-auto text-center my-8">
-      <h2 className="text-2xl lg:text-4xl max-w-5xl font-extrabold text-brandDark font-heading">
+    <div className="max-w-7xl mx-auto  my-8">
+      <h2 className="text-2xl lg:text-4xl font-extrabold text-brandDark font-heading flex items-center justify-center">
         Testimonials from our happy couples
       </h2>
       <div className="px-3 sm:px-0">

@@ -5,6 +5,17 @@ const Banner = () => {
   return (
     <div className="bg-white pb-8 sm:pb-12 lg:pb-12">
       <div className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-36 font-content">
+        <div className="sm:mx-auto sm:max-w-3xl sm:px-6 block sm:hidden">
+          <div className="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <div className="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
+              <img
+                className="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none"
+                src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1676448333/Misc/Landing/Neutral/happy-family-with-their-first-child-min_fgylvk.webp"
+                alt="happy copuple with a baby"
+              />
+            </div>
+          </div>
+        </div>
         <div className="mx-auto max-w-md px-3 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-20">
           <div>
             <div className="">
@@ -99,7 +110,7 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="sm:mx-auto sm:max-w-3xl sm:px-6">
+        <div className="sm:mx-auto sm:max-w-3xl sm:px-6 hidden sm:block">
           <div className="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <div className="hidden sm:block">
               <div className="absolute inset-y-0 left-1/2 w-screen bg-gray-50 rounded-l-3xl lg:left-80 lg:right-0 lg:w-full" />
@@ -140,7 +151,7 @@ const Banner = () => {
               <img
                 className="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none"
                 src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1676448333/Misc/Landing/Neutral/happy-family-with-their-first-child-min_fgylvk.webp"
-                alt=""
+                alt="happy copuple with a baby"
               />
             </div>
           </div>
