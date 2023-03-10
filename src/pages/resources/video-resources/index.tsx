@@ -10,19 +10,19 @@ const YOUTUBE_PLAYLIST_ITEMS_API =
 
 export async function getServerSideProps() {
   const recommendedData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=25&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const tvAppearanceData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=25&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const garbhasandeshaData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=25&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const testimonialData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=25&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const recommended = await recommendedData.json();
@@ -71,7 +71,7 @@ const IndexPage = ({
           className="w-48 col-span-1 rounded-lg sm:w-32 xl:w-48"
         />
         <div className="col-span-3">
-          <div className="flex flex-col items-start justify-">
+          <div className="flex flex-col items-start">
             <div
               onClick={() => {
                 setUrl(url);
@@ -319,10 +319,10 @@ const IndexPage = ({
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
                     <div
-                      className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto customScrollbar lg:max-h-[38rem]"
+                      className="flex flex-col font-content mx-auto space-y-4 overflow-y-auto customScrollbar lg:max-h-[38rem]"
                       id="style-4"
                     >
-                      <div className="px-3 py-4 font-bold text-center text-md font-heading">
+                      <div className="px-3 py-4 font-bold text-center text-md font-heading sticky top-0 bg-gray-200">
                         Recommended
                       </div>
                       {recommended?.items.map((item) => {

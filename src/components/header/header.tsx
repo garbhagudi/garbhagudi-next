@@ -16,7 +16,7 @@ import LanguageSelect from "components/languageSelect";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="sticky top-0 bg-[url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1678187751/Misc/hnfkdEdRiiVOtwQOlnBLZ-transformed-min_rtvva0.jpg)] bg-cover bg-right sm:bg-center bg-no-repeat z-50 shadow-xl">
+    <div className="sticky top-0 z-50 bg-white shadow-xl">
       <nav className="shadow-2xl">
         <nav className="px-4 lg:px-6 lg:py-2">
           <div className="flex justify-between items-center mx-auto max-w-screen-xl">
@@ -70,28 +70,28 @@ const Nav = () => {
               <div className="py-2 flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                 <div className="hidden xl:block">
                   <div className="flex items-baseline space-x-4 ">
-                    <div className="px-2 py-2 text-sm font-bold text-white hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200">
+                    <div className="px-2 py-2 text-sm font-bold text-gray-800 hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200">
                       <Treatments />
                     </div>
 
-                    <div className="px-2 py-2 text-sm font-bold text-white hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200">
+                    <div className="px-2 py-2 text-sm font-bold text-gray-800 hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200">
                       <About />
                     </div>
 
-                    <div className="px-2 py-2 text-sm font-bold text-white hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200">
+                    <div className="px-2 py-2 text-sm font-bold text-gray-800 hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200">
                       <WhyGarbhaGudi />
                     </div>
 
-                    <div className="px-2 py-2 text-sm font-bold text-white hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200">
+                    <div className="px-2 py-2 text-sm font-bold text-gray-800 hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200">
                       <KnowledgeCenter />
                     </div>
-                    <div className="px-2 py-2 text-sm font-bold text-white hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200">
+                    <div className="px-2 py-2 text-sm font-bold text-gray-800 hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200">
                       <Contacts />
                     </div>
-                    <div className="px-2 py-2 text-sm font-bold text-white hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200">
+                    <div className="px-2 py-2 text-sm font-bold text-gray-800 hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200">
                       <Locations />
                     </div>
-                    <div className="px-2 py-2 text-sm font-bold text-white hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200">
+                    <div className="px-2 py-2 text-sm font-bold text-gray-800 hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200">
                       <Languages />
                     </div>
                   </div>
