@@ -96,7 +96,7 @@ const Banner = () => {
                     </span>
                   </div>
                 </div>
-                <div className="glow px-3 py-2 mt-6 hover:shadow-sm hover:shadow-brandPink w-72 text-center hover:rounded-lg">
+                <div className="glow px-3 py-2 mt-6 hover:shadow-sm hover:shadow-brandPink w-72 text-center">
                   <span></span>
                   <span></span>
                   <span></span>
