@@ -20,7 +20,7 @@ const Banner = ({ branchTitle }) => {
                   )}
                 </h1>
                 <h3 className="mt-4 font-semibold font-content leading-7">
-                  We are proud to offer infertility treatment at 5 locations
+                  We are proud to offer infertility treatment at 6 locations
                   across Bangalore. <br />
                   Please contact us today to learn more about our services and
                   find the location nearest you.
