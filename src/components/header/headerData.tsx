@@ -138,11 +138,6 @@ export const Contact = [
     href: "https://ggirhr.com",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264793/Icons/Contact/Training_Program_dh9imv.svg",
   },
-  // {
-  //   name: "Upcoming Camps",
-  //   href: "##",
-  //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264796/Icons/Contact/Up_coming_camps_pczhfy.svg",
-  // },
   {
     name: "Partnership",
     href: "/contact/partnership",
@@ -180,12 +175,6 @@ export const Resources = [
     href: "/resources/diagnosis",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839791/Icons/Resources/Diagnosis_psjq8s.svg",
   },
-  // {
-  //   name: "Treatments",
-  //   description: "Treatment Options",
-  //   href: "/resources/treatments",
-  //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839802/Icons/Resources/Treatments_kcqops.svg",
-  // },
   {
     name: "Tools",
     description: "Ovulation & Fertility Quotient Calculators",
@@ -237,6 +226,11 @@ export const Location = [
     name: "Marathahalli",
     href: "/locations/marathahalli",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/Marathahalli_p99ljc.svg",
+  },
+  {
+    name: "New BEL Road",
+    href: "/locations/new-bel-road",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1678881601/Icons/Locations/NBR_Icon_rlkyhf.svg",
   },
 ];
 

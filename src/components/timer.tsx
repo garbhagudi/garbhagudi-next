@@ -35,7 +35,7 @@ const CountdownTimer = () => {
 
   return (
     <div>
-      <div className="flex items-center mt-3 space-x-5 font-content max-w-sm">
+      <div className="flex items-center mt-3 space-x-3 font-content">
         <div className="flex items-center justify-center flex-col text-sm">
           <div className="text-3xl font-mono w-14 h-14 flex items-center justify-center border shadow-md shadow-white">
             {countdown.days}

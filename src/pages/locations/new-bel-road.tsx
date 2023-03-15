@@ -49,8 +49,8 @@ const NewBELRoad = () => {
               <h1 className="text-6xl lg:text-7xl xl:text-8xl text-gray-200 tracking-normal font-bold mt-12 text-center md:text-left font-heading">
                 We Are <span className="text-brandPink">Opening</span> Soon
               </h1>
-              <div className="mt-12 flex flex-col items-center text-white">
-                <p className="text-gray-300 uppercase text-sm">
+              <div className="mt-12 flex flex-col items-center text-white mx-auto md:ml-3">
+                <p className="text-gray-300 font-bold uppercase text-base">
                   Time left until the Inaguration
                 </p>
                 <CountdownTimer />
