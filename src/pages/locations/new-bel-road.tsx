@@ -22,7 +22,7 @@ const NewBELRoad = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://img.freepik.com/free-vector/futuristic-technology-background_23-2148460426.jpg?w=1380&t=st=1678867768~exp=1678868368~hmac=85cd732ad261c8b44d0101ed0844bedf873d1c7117650e4f7057f31740642c7a"
+          content="https://res.cloudinary.com/garbhagudi/image/upload/v1678874692/misc/3540662-min_kx15ea.jpg"
         />
 
         {/* Twitter*/}
@@ -33,17 +33,22 @@ const NewBELRoad = () => {
         <meta name="twitter:description" content="New Branch At New BEL Road" />
         <meta
           name="twitter:image"
-          content="https://img.freepik.com/free-vector/futuristic-technology-background_23-2148460426.jpg?w=1380&t=st=1678867768~exp=1678868368~hmac=85cd732ad261c8b44d0101ed0844bedf873d1c7117650e4f7057f31740642c7a"
+          content="https://res.cloudinary.com/garbhagudi/image/upload/v1678874692/misc/3540662-min_kx15ea.jpg"
         />
       </Head>
-      <div className="w-full h-screen bg-[url(https://img.freepik.com/free-vector/futuristic-technology-background_23-2148460426.jpg?w=1380&t=st=1678867768~exp=1678868368~hmac=85cd732ad261c8b44d0101ed0844bedf873d1c7117650e4f7057f31740642c7a)] bg-cover bg-no-repeat">
-        <div className="w-full h-screen bg-black bg-opacity-70">
+      <div className="w-full h-screen bg-[url('https://res.cloudinary.com/garbhagudi/image/upload/v1678874692/misc/3540662-min_kx15ea.jpg')] bg-cover bg-no-repeat">
+        <div className="w-full h-screen bg-black/80">
           <div className="w-full h-full flex flex-col items-start justify-between container mx-auto py-8 px-8 lg:px-4 xl:px-0">
             <div className="flex-1 flex flex-col items-start justify-center">
+              <div className="text-3xl lg:text-4xl font-content text-center lg:text-left font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-brandPink2 to-brandPurpleDark">
+                GarbhaGudi IVF Centre{" "}
+                <div className="inline-flex text-white tracking-wide font-content font-bold mt-3 lg:mt-0">
+                  @ New BEL Road
+                </div>
+              </div>
               <h1 className="text-6xl lg:text-7xl xl:text-8xl text-gray-200 tracking-normal font-bold mt-12 text-center md:text-left font-heading">
                 We Are <span className="text-brandPink">Opening</span> Soon
               </h1>
-
               <div className="mt-12 flex flex-col items-center text-white">
                 <p className="text-gray-300 uppercase text-sm">
                   Time left until the Inaguration
