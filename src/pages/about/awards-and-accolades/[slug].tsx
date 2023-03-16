@@ -36,6 +36,7 @@ export const getStaticProps = async ({ params }) => {
     props: {
       award: data.award,
     },
+    revalidate: 180,
   };
 };
 

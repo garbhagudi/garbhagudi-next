@@ -29,7 +29,6 @@ const CountdownTimer = () => {
 
   useEffect(() => {
     const intervalId = setInterval(calculateCountdown, 1000);
-
     return () => clearInterval(intervalId);
   }, []);
 

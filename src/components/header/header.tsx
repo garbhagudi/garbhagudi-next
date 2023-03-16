@@ -38,6 +38,10 @@ const menu = [
     id: 6,
     option: <Locations />,
   },
+  {
+    id: 7,
+    option: <Languages />,
+  },
 ];
 
 const Nav = () => {

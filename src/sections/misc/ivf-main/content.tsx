@@ -48,32 +48,6 @@ const Content = () => {
                   Here is a general overview of the steps involved in a typical
                   IVF cycle:
                 </div>
-                <ul className="space-y-3">
-                  <li>
-                    <strong>Initial consultation:</strong> The first step in the
-                    IVF process is usually a consultation with a fertility
-                    specialist. During this appointment, the specialist will
-                    discuss the person's medical history, perform a physical
-                    examination, and order any necessary tests to determine the
-                    cause of infertility.
-                  </li>
-                  <li>
-                    <strong>Ovarian stimulation:</strong> The next step is to
-                    stimulate the production of multiple eggs. This is typically
-                    done using injectable medications, such as gonadotropins or
-                    gonadotropin-releasing hormone agonists. The goal is to
-                    produce several mature eggs that can be retrieved and
-                    fertilized during the IVF process.
-                  </li>
-                  <li>
-                    <strong>Egg retrieval:</strong> Once the eggs are mature,
-                    they are retrieved using a procedure called transvaginal
-                    ultrasound-guided oocyte retrieval. This procedure is
-                    performed under conscious sedation or general anesthesia and
-                    involves inserting a needle through the vagina and into the
-                    ovaries to remove the eggs.
-                  </li>
-                </ul>
               </div>
               <div className="mt-4 mx-auto  -right-0 max-w-[50rem] lg:p-4">
                 <div className="relative w-full">
@@ -88,6 +62,30 @@ const Content = () => {
             </div>
             <div>
               <ul className="font-content space-y-3 pt-3">
+                <li>
+                  <strong>Initial consultation:</strong> The first step in the
+                  IVF process is usually a consultation with a fertility
+                  specialist. During this appointment, the specialist will
+                  discuss the person's medical history, perform a physical
+                  examination, and order any necessary tests to determine the
+                  cause of infertility.
+                </li>
+                <li>
+                  <strong>Ovarian stimulation:</strong> The next step is to
+                  stimulate the production of multiple eggs. This is typically
+                  done using injectable medications, such as gonadotropins or
+                  gonadotropin-releasing hormone agonists. The goal is to
+                  produce several mature eggs that can be retrieved and
+                  fertilized during the IVF process.
+                </li>
+                <li>
+                  <strong>Egg retrieval:</strong> Once the eggs are mature, they
+                  are retrieved using a procedure called transvaginal
+                  ultrasound-guided oocyte retrieval. This procedure is
+                  performed under conscious sedation or general anesthesia and
+                  involves inserting a needle through the vagina and into the
+                  ovaries to remove the eggs.
+                </li>
                 <li>
                   <strong>Fertilization:</strong> The retrieved eggs are mixed
                   with sperm in a laboratory setting to allow fertilization to

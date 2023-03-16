@@ -2,9 +2,9 @@ import React from "react";
 
 const Risks = () => {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto mt-16">
       <div className="px-3 lg:px-6 -mt-10 pb-16">
-        <h2 className="text-3xl lg:text-4xl font-heading text-center font-bold py-10 lg:py-16">
+        <h2 className="text-3xl lg:text-4xl font-heading text-center font-bold py-10">
           Potential Risks of IVF
         </h2>
         <div className="font-content">

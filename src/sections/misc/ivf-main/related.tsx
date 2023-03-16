@@ -12,8 +12,8 @@ const Related = () => {
           {keywords.map((items) => (
             <Link href={items.link} key={items.id}>
               <div>
-                <div className="px-3 py-1 border bg-green-300 font-semibold text-sm rounded-2xl font-content">
-                  {items.word}
+                <div className="px-3 py-1.5 border bg-brandPurple2 font-bold text-sm rounded-lg font-content hover:bg-brandPurpleDark hover:text-white transition-all duration-300 ease-in-out">
+                  <div className="">{items.word}</div>
                 </div>
               </div>
             </Link>
