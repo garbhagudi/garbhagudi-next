@@ -1,5 +1,6 @@
 import React from "react";
-import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 import Link from "next/link";
 import { Tab } from "@headlessui/react";
 import Head from "next/head";
@@ -83,7 +84,7 @@ const IndexPage = ({ treatments }) => {
                   )
                 }
               >
-                <div className="max-w-7xl mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
+                <div className="max-w-7xl mx-auto text-center text-base md:text-2xl font-heading font-semibold">
                   Female Infertility
                 </div>
               </Tab>
@@ -98,7 +99,7 @@ const IndexPage = ({ treatments }) => {
                   )
                 }
               >
-                <div className="max-w-7xl mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
+                <div className="max-w-7xl mx-auto text-center text-base px-2 md:text-2xl font-heading font-semibold">
                   Male Infertility
                 </div>
               </Tab>
@@ -113,7 +114,7 @@ const IndexPage = ({ treatments }) => {
                   )
                 }
               >
-                <div className="max-w-7xl mx-auto text-center text-sm md:text-2xl font-heading font-semibold">
+                <div className="max-w-7xl mx-auto text-center text-base md:text-2xl font-heading font-semibold">
                   Advanced Options
                 </div>
               </Tab>
@@ -130,7 +131,7 @@ const IndexPage = ({ treatments }) => {
                             passHref
                             key={item.id}
                           >
-                            <div className="border-brandPink w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
+                            <div className="border-brandPink w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
                               <div className="w-1/3">
                                 <img
                                   className="w-16 h-16 object-cover rounded-full"
@@ -152,7 +153,7 @@ const IndexPage = ({ treatments }) => {
                       href={`/treatments/in-vitro-fertilization-ivf`}
                       passHref
                     >
-                      <div className="border-brandPink w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
+                      <div className="border-brandPink w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
                         <div className="w-1/3">
                           <img
                             className="w-16 h-16 object-cover rounded-full"
@@ -171,7 +172,7 @@ const IndexPage = ({ treatments }) => {
                       href={`/treatments/intra-uterine-insemination-iui`}
                       passHref
                     >
-                      <div className="border-brandPink w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
+                      <div className="border-brandPink w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
                         <div className="w-1/3">
                           <img
                             className="w-16 h-16 object-cover rounded-full"
@@ -200,7 +201,7 @@ const IndexPage = ({ treatments }) => {
                             passHref
                             key={item.id}
                           >
-                            <div className="border-brandPink w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
+                            <div className="border-brandPink w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
                               <div className="w-1/3">
                                 <img
                                   className="w-16 h-16 object-cover rounded-full"
@@ -232,7 +233,7 @@ const IndexPage = ({ treatments }) => {
                             passHref
                             key={item.id}
                           >
-                            <div className="border-brandPink w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
+                            <div className="border-brandPink w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
                               <div className="w-1/3">
                                 <img
                                   className="w-16 h-16 object-cover rounded-full"
@@ -264,23 +265,25 @@ const IndexPage = ({ treatments }) => {
 export default IndexPage;
 
 export const getStaticProps = async () => {
-  const { treatments } = await graphcms.request(`
-    query {
-      treatments {
-        category
-        title
-        id
-        icon {
-          url
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
+        treatments {
+          category
+          title
+          id
+          icon {
+            url
+          }
+          slug
         }
-        slug
       }
-    }
-  `);
+    `,
+  });
 
   return {
     props: {
-      treatments,
+      treatments: data.treatments,
     },
     revalidate: 180,
   };

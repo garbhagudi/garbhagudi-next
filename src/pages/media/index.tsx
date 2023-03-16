@@ -1,26 +1,31 @@
 import React from "react";
-import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 import Link from "next/link";
 import Head from "next/head";
 import { HiChevronRight } from "react-icons/hi";
 
 export const getStaticProps = async () => {
-  const { medias } = await graphcms.request(
-    `query mediaPage {
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
         medias {
-            id
-            title
-            description
-            thumbnail {
-                url
-            }
-            articleLink
+          id
+          title
+          description
+          thumbnail {
+            url
+          }
+          articleLink
         }
-    }`
-  );
+      }
+    `,
+  });
 
   return {
-    props: { medias },
+    props: {
+      medias: data.medias,
+    },
     revalidate: 180,
   };
 };

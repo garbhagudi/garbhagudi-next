@@ -1,6 +1,5 @@
 import React from "react";
 import Banner from "sections/location/banner";
-import graphcms from "lib/graphcms";
 import apolloClient from "lib/apollo-graphcms";
 import { gql } from "@apollo/client";
 import Link from "next/link";

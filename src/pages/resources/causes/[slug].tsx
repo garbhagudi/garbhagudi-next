@@ -1,5 +1,6 @@
 import React from "react";
-import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
@@ -8,47 +9,47 @@ import Share from "components/share";
 import Loading from "components/Loading";
 
 export const getStaticProps = async ({ params }) => {
-  const { cause } = await graphcms.request(
-    `
-    query ($slug: String!) {
-      cause(where: { slug: $slug }) {
-        id
-        title
-        image {
-          url
-        }
-        content {
-          raw
-          text
+  const { data } = await apolloClient.query({
+    query: gql`
+      query ($slug: String!) {
+        cause(where: { slug: $slug }) {
+          id
+          title
+          image {
+            url
+          }
+          content {
+            raw
+            text
+          }
         }
       }
-    }
-  `,
-    {
+    `,
+    variables: {
       slug: params.slug,
-    }
-  );
+    },
+  });
   return {
     props: {
-      cause,
+      cause: data.cause,
     },
     revalidate: 180,
   };
 };
 
 export const getStaticPaths = async () => {
-  const { causes } = await graphcms.request(
-    `
-      query{
-        causes{
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
+        causes {
           title
           slug
         }
       }
-    `
-  );
+    `,
+  });
   return {
-    paths: causes.map(({ slug }) => ({ params: { slug } })),
+    paths: data.causes.map(({ slug }) => ({ params: { slug } })),
     fallback: true,
   };
 };
@@ -109,7 +110,7 @@ const Blog = ({ cause }) => {
         link2={"/resources/causes"}
         text2={"Causes"}
         link3={"#"}
-        text3={cause.title}
+        text3={cause?.title}
         link4=""
         text4=""
       />
@@ -221,20 +222,20 @@ const Blog = ({ cause }) => {
           <div className="max-w-7xl mx-auto">
             <h1>
               <span className="mt-4 block text-2xl text-center leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl font-heading">
-                {cause.title}
+                {cause?.title}
               </span>
             </h1>
             <figure>
               <img
                 className="w-full rounded-lg mt-10 mb-5"
-                src={cause.image.url}
-                alt={cause.title}
+                src={cause?.image.url}
+                alt={cause?.title}
                 width={1310}
                 height={873}
               />
             </figure>
             <div>
-              <RichText content={cause.content.raw.children} />
+              <RichText content={cause?.content?.raw?.children} />
             </div>
             <Share pinmedia={cause?.image?.url} />
           </div>

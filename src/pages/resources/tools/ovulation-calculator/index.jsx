@@ -63,7 +63,7 @@ const IndexPage = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <div className="container text-center mx-auto">
-            <h1 className="pt-8 text-3xl sm:text-4xl font-bold font-heading">
+            <h1 className="pt-8 text-3xl sm:text-4xl font-bold font-heading text-brandPink">
               Ovulation and Pregnancy Due Date Calculator
             </h1>
             <p className="text-sm mt-3 px-2 sm:px-0">
@@ -73,14 +73,14 @@ const IndexPage = () => {
             </p>
           </div>
         </div>
-        <div className="text-center mt-8 text-lg">
-          <label htmlFor="cycle" className="">
-            How long is your average cycle?{" "}
+        <div className="text-center mt-8 text-base flex items-center justify-center space-x-4">
+          <label htmlFor="cycle" className="font-content">
+            How long is your average cycle ?{" "}
           </label>
           <select
             onChange={(e) => cycleValue(e.target.value)}
             defaultValue={cycle}
-            className="border rounded-lg w-36 text-center"
+            className="w-24 text-center border-b-2 py-1.5 outline-none border-brandPurpleDark bg-transparent shadow-2xl drop-shadow-2xl font-content"
           >
             <option value="28">28 Days</option>
             <option value="29">29 Days</option>
@@ -115,15 +115,16 @@ const IndexPage = () => {
               />
             </div>
           </div>
-          <div className="text-center flex flex-col items-center justify-center p-2">
+          <div className="text-center flex flex-col items-center justify-center p-2 font-content">
             <div className="mx-auto mt-8 p-3 text-center rounded-2xl border text-base shadow-2xl w-96">
-              <p>Next Menstrual Cycle :</p>
+              <p> Approximate Ovulation :</p>
               <div className="font-bold">
-                <Moment format="DD MMMM YYYY" add={{ days: cycleLength + 0 }}>
+                <Moment format="DD MMMM YYYY" add={{ days: cycleLength - 14 }}>
                   {date}
                 </Moment>
               </div>
             </div>
+
             <div className="mx-auto mt-3 p-3 text-center rounded-2xl border text-base shadow-2xl w-96">
               <p>Fertile Window</p>
               <div className="font-bold">
@@ -132,14 +133,6 @@ const IndexPage = () => {
                 </Moment>{" "}
                 -{" "}
                 <Moment format="DD MMMM YYYY" add={{ days: cycleLength - 13 }}>
-                  {date}
-                </Moment>
-              </div>
-            </div>
-            <div className="mx-auto mt-3 p-3 text-center rounded-2xl border text-base shadow-2xl w-96">
-              <p> Approximate Ovulation :</p>
-              <div className="font-bold">
-                <Moment format="DD MMMM YYYY" add={{ days: cycleLength - 14 }}>
                   {date}
                 </Moment>
               </div>
@@ -154,8 +147,8 @@ const IndexPage = () => {
             </div>
             <div className="mx-auto mt-3 p-3 text-center rounded-2xl border text-base shadow-2xl w-96">
               <p>
-                {" "}
-                If conceived within this timeframe, the estimated due date :{" "}
+                If conceived with-in the fertile window, estimated pregnancy due
+                date :{" "}
               </p>
               <div className="font-bold">
                 {cycleLength !== 28 && (
@@ -176,9 +169,17 @@ const IndexPage = () => {
                 )}
               </div>
             </div>
+            <div className="mx-auto mt-3 p-3 text-center rounded-2xl border text-base shadow-2xl w-96">
+              <p>Next Menstrual Cycle :</p>
+              <div className="font-bold">
+                <Moment format="DD MMMM YYYY" add={{ days: cycleLength + 0 }}>
+                  {date}
+                </Moment>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="px-3 sm:px-0 text-center mt-5 mb-3 text-xs">
+        <div className="px-3 sm:px-0 text-center mt-5 mb-3 text-xs font-content">
           Only your physician can accurately determine your due date or the date
           of your conception based on his/her knowledge of your complete medical
           condition.

@@ -95,10 +95,10 @@ const IndexPage = ({ careers }) => {
           Current Opportunities
         </div>
         <div className="container mb-2 flex mx-auto w-full items-center justify-center">
-          <li className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6 mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6 mt-6 px-3">
             {careers.map((items) => (
               <Link href={`careers/${items?.slug}`} passHref key={items.id}>
-                <div className="bg-white rounded-lg border shadow-md hover:bg-gradient-to-br hover:from-pink-100 hover:via-brandPurple2 hover:to-brandPurple mx-auto hover:shadow-2xl hover:transition-all hover:-translate-x-2 hover:-translate-y-2 duration-300">
+                <div className="rounded-lg border shadow-md bg-gradient-to-br from-pink-50 to-purple-50 hover:bg-gradient-to-br hover:from-pink-100 hover:via-brandPurple2 hover:to-brandPurple mx-auto hover:shadow-2xl hover:transition-all hover:-translate-x-2 hover:-translate-y-2 duration-300">
                   <div className="flex flex-col justify-between p-4 leading-normal ">
                     <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 font-content">
                       {items?.position}
@@ -121,7 +121,7 @@ const IndexPage = ({ careers }) => {
                 </div>
               </Link>
             ))}
-          </li>
+          </div>
         </div>
       </div>
     </div>
