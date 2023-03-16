@@ -25,6 +25,7 @@ export const getStaticProps = async () => {
     props: {
       award: data.awards,
     },
+    revalidate: 180,
   };
 };
 
