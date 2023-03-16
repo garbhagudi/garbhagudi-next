@@ -166,7 +166,11 @@ const Career = ({ career }) => {
                   <p className="text-base font-semibold font-qs">
                     Location: {career.location}
                   </p>
-                  <div className="px-4 py-2 mt-4 font-semibold text-white rounded-3xl font-qs bg-brandPink">
+                  <div className="px-4 py-2 mt-4 font-semibold text-white font-content glow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                     <Link href={career.link} target="_blank" rel="noreferrer">
                       Apply Now
                     </Link>

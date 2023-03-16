@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from "react";
 import { HiCheck, HiMinus, HiChevronDown } from "react-icons/hi";
 import { Disclosure } from "@headlessui/react";
@@ -8,13 +7,11 @@ const tiers = [
     name: "Essentials",
     href: "/contact.html",
     priceMonthly: "90,000",
-
   },
   {
     name: "Plus",
     href: "/contact.html",
     priceMonthly: "1,50,000",
-
   },
   {
     name: "Premium",

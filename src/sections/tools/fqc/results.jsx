@@ -1,7 +1,7 @@
 export const Average = () => {
   return (
     <div>
-      <h1 className="font-heading text-2xl font-semibold text-center py-2 px-3 underline">
+      <h1 className="font-heading text-2xl font-semibold text-center py-2 px-3 underline text-brandPurpleDark">
         Average Fertility
       </h1>
       <article className="text-base px-3 sm:px-0">
@@ -35,7 +35,7 @@ export const Average = () => {
 export const Best = () => {
   return (
     <div>
-      <h1 className="font-heading text-2xl font-semibold text-center py-2 px-3 underline">
+      <h1 className="font-heading text-2xl font-semibold text-center py-2 px-3 underline text-green-600">
         Best Fertility
       </h1>
       <article className="text-base px-3 sm:px-0 mt-4">
@@ -76,7 +76,7 @@ export const Best = () => {
 export const Good = () => {
   return (
     <div>
-      <h1 className="font-heading text-2xl font-semibold text-center py-2 px-3 underline">
+      <h1 className="font-heading text-2xl font-semibold text-center py-2 px-3 underline text-green-500">
         Good Fertility
       </h1>
       <article className="text-base px-3 sm:px-0 mt-4">
@@ -117,7 +117,7 @@ export const Good = () => {
 export const Low = () => {
   return (
     <div>
-      <h1 className="font-heading text-2xl font-semibold text-center py-2 px-3 underline">
+      <h1 className="font-heading text-2xl font-semibold text-center py-2 px-3 underline text-orange-500">
         Low Fertility
       </h1>
       <article className="text-base px-3 sm:px-0 mt-4">
@@ -152,7 +152,7 @@ export const Low = () => {
 export const Poor = () => {
   return (
     <div>
-      <h1 className="font-heading text-2xl font-semibold text-center py-2 px-3 underline">
+      <h1 className="font-heading text-2xl font-semibold text-center py-2 px-3 underline text-red-500">
         Poor Fertility
       </h1>
       <article className="text-base px-3 sm:px-0 mt-4">

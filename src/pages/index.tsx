@@ -217,10 +217,10 @@ const Home = ({ data }) => {
                 cases.
               </p>
             </div>
-            <ul className="hidden md:grid grid-cols-2 mx-auto space-y-0 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl">
+            <div className="hidden md:grid grid-cols-2 mx-auto space-y-0 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl">
               {data?.doctors.map((item: any) => {
                 return (
-                  <li
+                  <div
                     key={item?.id}
                     className="mb-2 transition-all duration-500 rounded-lg hover:scale-115"
                   >
@@ -249,10 +249,10 @@ const Home = ({ data }) => {
                         </div>
                       </div>
                     </Link>
-                  </li>
+                  </div>
                 );
               })}
-            </ul>
+            </div>
             <div className="md:hidden">
               <Carousel
                 responsive={responsive2}
@@ -263,7 +263,7 @@ const Home = ({ data }) => {
               >
                 {data?.doctors.map((item: any) => {
                   return (
-                    <li
+                    <div
                       key={item?.id}
                       className="mb-2 transition-all duration-500 rounded-xl "
                     >
@@ -272,7 +272,7 @@ const Home = ({ data }) => {
                           <Image
                             className="w-56 h-56 mx-auto my-auto mt-4 transition-all duration-500 rounded-full xl:w-44 xl:h-44 hover:scale-110"
                             src={item?.image?.url}
-                            alt={item?.imageAlt}
+                            alt={item?.name || item?.imageAlt}
                             width={500}
                             height={500}
                             loading="lazy"
@@ -292,7 +292,7 @@ const Home = ({ data }) => {
                           </div>
                         </div>
                       </Link>
-                    </li>
+                    </div>
                   );
                 })}
               </Carousel>

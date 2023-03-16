@@ -2,7 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
-import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 
 const IndexPage = ({ diagnoses }) => {
   return (
@@ -74,8 +75,13 @@ const IndexPage = ({ diagnoses }) => {
         <div className="max-w-7xl mx-auto py-6 flex sm:py-12">
           <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-10 mx-auto">
             {diagnoses.map((item) => (
-              <Link href={`diagnosis/${item.slug}`} passHref key={item.id}>
-                <div className="border-brandPink w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
+              <Link
+                href={`diagnosis/${item.slug}`}
+                passHref
+                key={item.id}
+                className=""
+              >
+                <div className="border-brandPink w-80 mx-auto md:w-96 px-3 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
                   <div className="w-1/3">
                     <img
                       className="w-24 h-24 object-cover rounded-2xl"
@@ -101,22 +107,24 @@ const IndexPage = ({ diagnoses }) => {
 export default IndexPage;
 
 export const getStaticProps = async () => {
-  const { diagnoses } = await graphcms.request(`
-    query {
-      diagnoses {
-        title
-        id
-        icon {
-          url
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
+        diagnoses {
+          title
+          id
+          icon {
+            url
+          }
+          slug
         }
-        slug
       }
-    }
-  `);
+    `,
+  });
 
   return {
     props: {
-      diagnoses,
+      diagnoses: data.diagnoses,
     },
     revalidate: 180,
   };

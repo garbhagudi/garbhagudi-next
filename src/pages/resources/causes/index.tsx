@@ -2,7 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
-import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 
 const IndexPage = ({ causes }) => {
   return (
@@ -69,7 +70,7 @@ const IndexPage = ({ causes }) => {
       <h1 className="max-w-7xl mx-auto text-center text-4xl font-heading pt-12 font-semibold">
         Causes of Infertility
       </h1>
-      <p className="max-w-7xl mx-auto text-center pt-6 font-semibold font-content">
+      <p className="max-w-7xl mx-auto text-center pt-6 font-semibold font-content px-1">
         Infertility may be caused by a number of different factors, in either
         the male or female reproductive systems. However, it is sometimes not
         possible to explain the causes of infertility.
@@ -78,7 +79,7 @@ const IndexPage = ({ causes }) => {
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-10 mx-auto">
           {causes.map((item) => (
             <Link href={`causes/${item.slug}`} passHref key={item.id}>
-              <div className="border-brandPink w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
+              <div className="border-brandPink w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 ">
                 <div className="w-1/3">
                   <img
                     className="w-24 h-24 object-cover rounded-lg"
@@ -101,21 +102,23 @@ const IndexPage = ({ causes }) => {
 export default IndexPage;
 
 export const getStaticProps = async () => {
-  const { causes } = await graphcms.request(`
-    query {
-      causes {
-        title
-        id
-        icon {
-          url
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
+        causes {
+          title
+          id
+          icon {
+            url
+          }
+          slug
         }
-        slug
       }
-    }
-  `);
+    `,
+  });
   return {
     props: {
-      causes,
+      causes: data.causes,
     },
     revalidate: 180,
   };

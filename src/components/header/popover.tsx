@@ -20,12 +20,16 @@ export function About() {
         <>
           <Popover.Button
             className={`
-                ${close ? "w-screen text-left sm:w-full" : "text-opacity-90"}
+                ${
+                  close
+                    ? "w-screen text-left sm:w-full outline-none"
+                    : "text-opacity-90 outline-none"
+                }
                  `}
           >
-            <span className="">
+            <div className="px-2 py-2">
               About <HiChevronDown className="inline-block" />
-            </span>
+            </div>
           </Popover.Button>
           <Transition
             as={Fragment}
@@ -36,7 +40,7 @@ export function About() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-screen max-w-md px-4 transform -translate-x-1/2 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-xl">
+            <Popover.Panel className="absolute z-10 w-screen outline-none max-w-md px-4 transform -translate-x-1/2 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-xl">
               <div className="overflow-hidden shadow-lg rounded-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid grid-cols-2 gap-8 p-5 bg-white lg:grid-cols-2">
                   {AboutUs.map((item) => (
@@ -73,13 +77,17 @@ export function WhyGarbhaGudi() {
         <>
           <Popover.Button
             className={`
-                  ${close ? "w-screen text-left sm:w-full" : "text-opacity-90"}
+                  ${
+                    close
+                      ? "w-screen text-left sm:w-full outline-none"
+                      : "text-opacity-90 outline-none"
+                  }
                    `}
           >
-            <span className="w-full">
+            <div className="px-2 py-2">
               Why GarbhaGudi
               <HiChevronDown className="inline-block" />
-            </span>
+            </div>
           </Popover.Button>
           <Transition
             as={Fragment}
@@ -90,7 +98,7 @@ export function WhyGarbhaGudi() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 w-screen max-w-md px-4 transform -translate-x-1/2 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-3xl">
+            <Popover.Panel className="absolute z-10 w-screen max-w-lg px-4 transform -translate-x-1/2 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-3xl">
               <div className="overflow-hidden shadow-lg rounded-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid grid-cols-2 gap-8 p-5 bg-white lg:grid-cols-3">
                   {ValueAddedServices.map((item) => (
@@ -127,12 +135,16 @@ export function KnowledgeCenter() {
         <>
           <Popover.Button
             className={`
-                  ${close ? "w-screen text-left sm:w-full" : "text-opacity-90"}
+                  ${
+                    close
+                      ? "w-screen text-left sm:w-full outline-none"
+                      : "text-opacity-90 outline-none"
+                  }
                   `}
           >
-            <span className="w-full">
+            <div className="px-2 py-2">
               Resources <HiChevronDown className="inline-block" />
-            </span>
+            </div>
           </Popover.Button>
           <Transition
             as={Fragment}
@@ -159,7 +171,7 @@ export function KnowledgeCenter() {
                           <p className="text-sm font-medium text-gray-900">
                             {item.name}
                           </p>
-                          <p className="text-xs text-gray-500">
+                          <p className="text-xs text-gray-500 hidden lg:block">
                             {item.description}
                           </p>
                         </div>
@@ -183,12 +195,16 @@ export function Contacts() {
         <>
           <Popover.Button
             className={`
-                  ${close ? "w-screen text-left sm:w-full" : "text-opacity-90"}
+                  ${
+                    close
+                      ? "w-screen text-left sm:w-full outline-none"
+                      : "text-opacity-90 outline-none"
+                  }
                   `}
           >
-            <span className="w-full">
+            <div className="px-2 py-2">
               Contact <HiChevronDown className="inline-block" />
-            </span>
+            </div>
           </Popover.Button>
           <Transition
             as={Fragment}
@@ -236,12 +252,16 @@ export function Locations() {
         <>
           <Popover.Button
             className={`
-                ${close ? "w-screen text-left sm:w-full" : "text-opacity-90"}
+                ${
+                  close
+                    ? "w-screen text-left sm:w-full outline-none"
+                    : "text-opacity-90 outline-none"
+                }
                  `}
           >
-            <span className="w-full">
+            <div className="px-2 py-2">
               Locations <HiChevronDown className="inline-block" />
-            </span>
+            </div>
           </Popover.Button>
           <Transition
             as={Fragment}
@@ -252,9 +272,9 @@ export function Locations() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 px-4 transform mt-3 lg:mt-7 -translate-x-1/2 w-96 left-1/2 sm:px-0 lg:max-w-xl">
+            <Popover.Panel className="absolute z-10 px-4 w-screen transform mt-3 lg:mt-7 -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-lg">
               <div className="overflow-hidden shadow-lg rounded-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-8 p-5 bg-white lg:grid-cols-1">
+                <div className="relative grid gap-8 p-5 bg-white grid-cols-2 lg:grid-cols-2">
                   {Location.map((item) => (
                     <Link key={item.name} href={item.href}>
                       <div
@@ -289,12 +309,16 @@ export function Languages() {
         <>
           <Popover.Button
             className={`
-                ${open ? "w-screen text-left sm:w-full" : "text-opacity-90"}
+                ${
+                  open
+                    ? "w-screen text-left sm:w-full outline-none"
+                    : "text-opacity-90 outline-none"
+                }
                  `}
           >
-            <span className="w-full">
+            <div className="px-2 py-2">
               Language <HiChevronDown className="inline-block" />
-            </span>
+            </div>
           </Popover.Button>
           <Transition
             as={Fragment}
@@ -342,12 +366,16 @@ export function Treatments() {
         <>
           <Popover.Button
             className={`
-                ${close ? "w-screen text-left sm:w-full" : "text-opacity-90"}
+                ${
+                  close
+                    ? "w-screen text-left sm:w-full outline-none"
+                    : "text-opacity-90 outline-none"
+                }
                  `}
           >
-            <span className="w-full">
+            <div className="px-2 py-2">
               Treatments <HiChevronDown className="inline-block" />
-            </span>
+            </div>
           </Popover.Button>
           <Transition
             as={Fragment}

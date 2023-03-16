@@ -199,7 +199,7 @@ const IndexPage = () => {
                   type="text"
                   name="Age"
                   id="age"
-                  className="shadow-lg placeholder:text-xs focus:ring-brandPink4 focus:border-brandPink4 block w-full sm:text-sm border-gray-300 rounded-md"
+                  className="shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear"
                   placeholder="Age"
                   aria-describedby="Age"
                   onKeyPress={(e) => {
@@ -225,7 +225,7 @@ const IndexPage = () => {
                   type="text"
                   name="bmi"
                   id="bmi"
-                  className="shadow-lg placeholder:text-xs focus:ring-brandPink4 focus:border-brandPink4 block w-full sm:text-sm border-gray-300 rounded-md"
+                  className="shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear"
                   placeholder="BMI"
                   aria-describedby="Body Mass Index"
                   onKeyPress={(e) => {
@@ -251,7 +251,7 @@ const IndexPage = () => {
                   type="text"
                   name="afc"
                   id="afc"
-                  className="shadow-lg placeholder:text-xs focus:ring-brandPink4 focus:border-brandPink4 block w-full sm:text-sm border-gray-300 rounded-md"
+                  className="shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear"
                   placeholder="AFC"
                   aria-describedby="Antral Follicle Count"
                   onKeyPress={(e) => {
@@ -277,7 +277,7 @@ const IndexPage = () => {
                   type="text"
                   name="amh"
                   id="amh"
-                  className="shadow-lg placeholder:text-xs focus:ring-brandPink4 focus:border-brandPink4 block w-full sm:text-sm border-gray-300 rounded-md"
+                  className="shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear"
                   placeholder="AMH"
                   aria-describedby="Anti-Müllerian Hormone"
                   onKeyPress={(e) => {
@@ -293,7 +293,7 @@ const IndexPage = () => {
             </div>
             <div className="mx-auto  text-center">
               <button
-                className="px-8 py-2 mt-5 border order-gray-300 font-semibold rounded-3xl focus:ring-brandPink4 focus:border-brandPink4 hover:bg-brandPink4 hover:text-white"
+                className="px-8 py-2 mt-5 border-2 border-brandPink focus:outline-none font-semibold rounded-lg focus:ring-brandPink4 focus:border-brandPink4 hover:bg-brandPink hover:text-white transition-all duration-300 ease-in-out"
                 onClick={() => calculate()}
               >
                 <span className="text-xl">Calculate</span>
@@ -303,11 +303,11 @@ const IndexPage = () => {
           </div>
           <div id="result" className="hidden max-w-xl mx-auto px-3">
             <div className="flex flex-row mt-2">
-              <div className="mx-auto px-3 py-1  text-center rounded-2xl border text-base shadow-2xl w-32">
+              <div className="mx-auto px-3 py-1 text-center rounded-lg border-2 text-base shadow-2xl w-32 border-brandPurpleDark">
                 <div> Score </div>
                 <div id="score" className="font-bold text-xl"></div>
               </div>
-              <div className="mx-auto px-3 py-1 text-center rounded-2xl border text-base shadow-2xl w-32">
+              <div className="mx-auto px-3 py-1 text-center rounded-lg border-2 text-base shadow-2xl w-32 border-brandPurpleDark">
                 <div> Percent </div>
                 <div id="percent" className="font-bold text-xl"></div>
               </div>
@@ -338,7 +338,7 @@ const IndexPage = () => {
             </div>
             <div className="mx-auto text-center mt-5">
               <button
-                className="px-6 py-2 font-semibold text-xl border rounded-3xl focus:ring-brandPink4 focus:border-brandPink4 hover:bg-brandPink4 hover:text-white"
+                className="px-8 py-2 mt-5 border-2 border-brandPink focus:outline-none font-semibold rounded-lg focus:ring-brandPink4 focus:border-brandPink4 hover:bg-brandPink hover:text-white transition-all duration-300 ease-in-out"
                 onClick={refreshPage}
               >
                 Refresh

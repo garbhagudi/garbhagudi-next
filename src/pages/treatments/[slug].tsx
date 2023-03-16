@@ -1,5 +1,6 @@
 import React from "react";
-import graphcms from "lib/graphcms";
+import apolloClient from "lib/apollo-graphcms";
+import { gql } from "@apollo/client";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import BreadCrumbs from "components/breadcrumbs";
@@ -8,52 +9,52 @@ import Share from "components/share";
 import Loading from "components/Loading";
 
 export const getStaticProps = async ({ params }) => {
-  const { treatment } = await graphcms.request(
-    `
-    query ($slug: String!) {
-      treatment(where: { slug: $slug }) {
-        id
-        title
-        metaTitle
-        altTitle
-        metaDescription
-        slug
-        image {
-          url
-        }
-        imageAlt
-        content {
-          raw
-          text
+  const { data } = await apolloClient.query({
+    query: gql`
+      query ($slug: String!) {
+        treatment(where: { slug: $slug }) {
+          id
+          title
+          metaTitle
+          altTitle
+          metaDescription
+          slug
+          image {
+            url
+          }
+          imageAlt
+          content {
+            raw
+            text
+          }
         }
       }
-    }
-  `,
-    {
+    `,
+    variables: {
       slug: params.slug,
-    }
-  );
+    },
+  });
   return {
     props: {
-      treatment,
+      treatment: data.treatment,
     },
     revalidate: 180,
   };
 };
 
 export const getStaticPaths = async () => {
-  const { treatments } = await graphcms.request(
-    `
-      query{
+  const { data } = await apolloClient.query({
+    query: gql`
+      query {
         treatments {
           title
           slug
         }
       }
-    `
-  );
+    `,
+  });
   return {
-    paths: treatments.map(({ slug }) => ({ params: { slug } })),
+    paths: data.treatments.map(({ slug }) => ({ params: { slug } })),
     fallback: true,
   };
 };
