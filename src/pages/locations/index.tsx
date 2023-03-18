@@ -91,9 +91,6 @@ const Locations = ({ branches }) => {
         </h3>
         <div className="flex items-center pb-10 lg:pb-16 justify-center space-x-4 text-center">
           <div className="px-3 py-2 border-2 text-xl font-content font-semibold rounded-lg border-brandPink hover:bg-brandPink hover:text-white cursor-default">
-            RMV Layout
-          </div>
-          <div className="px-3 py-2 border-2 text-xl font-content font-semibold rounded-lg border-brandPink hover:bg-brandPink hover:text-white cursor-default">
             Nagarabhavi
           </div>
         </div>

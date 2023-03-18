@@ -9,7 +9,7 @@ const CountdownTimer = () => {
   });
 
   const calculateCountdown = () => {
-    const targetDate = new Date("March 18, 2023 11:11:00").getTime();
+    const targetDate = new Date("March 31, 2023 11:11:00").getTime();
     const now = new Date().getTime();
     const timeDifference = targetDate - now;
 
