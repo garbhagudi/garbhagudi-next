@@ -187,7 +187,7 @@ export const contactData = {
       address: (
         <div>
           <p>
-            Ganesh Towers,3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra Bank,
+            Ganesh Towers, 3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra Bank,
             Konappana Agrahara, Electronic City,
           </p>
           <p className="mt-1 mb-5">Bengaluru, Karnataka 560100</p>
@@ -211,6 +211,21 @@ export const contactData = {
       ),
       phone: "+91 81051 81515",
       directionLink: "https://goo.gl/maps/kxhfM5SCZuq6EDnE9",
+    },
+    {
+      id: "6",
+      name: "New BEL Road",
+      address: (
+        <div>
+          <p>
+            #3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage,
+            Ashwath Nagar, Devasandra Layout, Sadashivnagar
+          </p>
+          <p className="mt-1 mb-5">Bengaluru, Karnataka 560094</p>
+        </div>
+      ),
+      phone: "+91 9108 9108 25",
+      directionLink: "https://goo.gl/maps/Fmiwn4ZCsSTxehnq9",
     },
   ],
 };

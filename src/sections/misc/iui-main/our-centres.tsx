@@ -171,4 +171,17 @@ const Data = [
     ),
     link: "https://goo.gl/maps/kxhfM5SCZuq6EDnE9",
   },
+  {
+    id: 5,
+    branch: "New BEL Road",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62206.24078266471!2d77.54224755616912!3d12.978883707796326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1787016c1729%3A0xc0292defa84a9230!2sGarbhaGudi%20IVF%20Centre%2C%20New%20BEL%20Road!5e0!3m2!1sen!2suk!4v1679131051329!5m2!1sen!2suk",
+    phone: "+919108910832",
+    address: (
+      <span>
+        No. 3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage,
+        Ashwath Nagar, Devasandra Layout, Bengaluru, Karnataka 560094, India
+      </span>
+    ),
+    link: "https://goo.gl/maps/Fmiwn4ZCsSTxehnq9",
+  },
 ];
