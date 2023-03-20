@@ -92,7 +92,7 @@ const IndexPage = ({ branches }) => {
             >
               {branches.map((items: any) => (
                 <Tab
-                  className="w-full py-2 rounded-lg focus:outline-none text-gray-100 mx-auto text-center text-2xl font-heading font-semibold ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3"
+                  className="w-full py-2 rounded-lg focus:outline-none text-gray-100 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3"
                   key={items.id}
                 >
                   {items?.title}

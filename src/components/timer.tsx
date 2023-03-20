@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const CountdownTimer = () => {
+const CountdownTimer = ({ dateTime }) => {
   const [countdown, setCountdown] = useState({
     days: 0,
     hours: 0,
@@ -9,7 +9,7 @@ const CountdownTimer = () => {
   });
 
   const calculateCountdown = () => {
-    const targetDate = new Date("March 31, 2023 11:11:00").getTime();
+    const targetDate = new Date(dateTime).getTime();
     const now = new Date().getTime();
     const timeDifference = targetDate - now;
 

@@ -53,7 +53,7 @@ const NewBELRoad = () => {
                 <p className="text-gray-300 font-bold uppercase text-base">
                   Time left until the Inaguration
                 </p>
-                <CountdownTimer />
+                <CountdownTimer dateTime={"31 March 2023, 11:11:00"} />
               </div>
             </div>
           </div>
