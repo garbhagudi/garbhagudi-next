@@ -33,10 +33,7 @@ function BlogPage({
 
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <title>{title}</title>
-          <meta
-            name="title"
-            content={`Blogs | Page - ${currentPageNumber} | GarbhaGudi IVF Centre`}
-          />
+          <meta name="title" content={title} />
           <meta
             name="description"
             content="Stay up to date with the advancements in the field of Infertility treatment, get pregnancy tips and more with our blogs written by our doctors"
@@ -44,10 +41,7 @@ function BlogPage({
 
           {/* Open Graph / Facebook */}
 
-          <meta
-            property="og:title"
-            content={`Blogs | Page - ${currentPageNumber} | GarbhaGudi IVF Centre`}
-          />
+          <meta property="og:title" content={title} />
           <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
           <meta property="og:url" content="https://garbhagudi.com" />
           <meta
@@ -64,10 +58,7 @@ function BlogPage({
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@garbhagudiivf" />
-          <meta
-            name="twitter:title"
-            content={`Blogs | Page - ${currentPageNumber} | GarbhaGudi IVF Centre`}
-          />
+          <meta name="twitter:title" content={title} />
           <meta
             name="twitter:description"
             content="Stay up to date with the advancements in the field of Infertility treatment, get pregnancy tips and more with our blogs written by our doctors"

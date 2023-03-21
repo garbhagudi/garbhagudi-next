@@ -24,7 +24,7 @@ const Branch = ({ branch }) => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{title}</title>
+        <title>{branch?.metaTitle}</title>
         <meta name="title" content={branch?.metaTitle} />
         <meta name="description" content={branch?.metaDescription} />
 

@@ -108,10 +108,7 @@ const Doctor = ({ doctor }) => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{title}</title>
-        <meta
-          name="title"
-          content={`${doctor?.name} - Fertility Specialist | GarbhaGudi IVF Centre`}
-        />
+        <meta name="title" content={title} />
         <meta name="description" content={doctor?.bio?.text.slice(0, 160)} />
 
         {/* Ld+JSON Data */}
@@ -124,10 +121,7 @@ const Doctor = ({ doctor }) => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property="og:title"
-          content={`${doctor?.name} - Fertility Specialist | GarbhaGudi IVF Centre`}
-        />
+        <meta property="og:title" content={title} />
         <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
         <meta property="og:url" content="https://garbhagudi.com" />
         <meta
@@ -141,10 +135,7 @@ const Doctor = ({ doctor }) => {
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@garbhagudiivf" />
-        <meta
-          name="twitter:title"
-          content={`${doctor?.name} - Fertility Specialist | GarbhaGudi IVF Centre`}
-        />
+        <meta name="twitter:title" content={title} />
         <meta
           name="twitter:description"
           content={doctor?.bio?.text.slice(0, 160)}
