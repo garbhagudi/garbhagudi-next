@@ -1,6 +1,7 @@
 import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import MyModal from "./modal";
+import Image from "next/image";
 
 const DoctorLayout = ({
   name,
@@ -63,10 +64,12 @@ const DoctorLayout = ({
                     >
                       {name}
                     </Dialog.Title>
-                    <img
+                    <Image
                       src={docpic}
                       alt={name}
                       className="w-44 h-44 mx-auto m-4 rounded-full"
+                      width={500}
+                      height={500}
                     />
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">{bio}</p>

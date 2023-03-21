@@ -2,6 +2,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
+    dangerouslyAllowSVG: true,
     domains: [
       "res.cloudinary.com",
       "media.graphassets.com",

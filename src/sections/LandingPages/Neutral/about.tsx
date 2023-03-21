@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -9,9 +10,11 @@ const About = () => {
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
           <div className="hidden col-span-2 md:flex items-center justify-center rounded-lg mx-auto ">
-            <img
+            <Image
               src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1659164257/logos/GG_Vertical_Logo_nrcl5h.svg"
               alt="logo"
+              width={500}
+              height={500}
               className="w-56 h-56 p-3 bg-gradient-to-br from-brandPurple via-white to-brandPink4 rounded-xl shadow-2xl drop-shadow-2xl animate-shine bg-[length:400%]"
             />
           </div>

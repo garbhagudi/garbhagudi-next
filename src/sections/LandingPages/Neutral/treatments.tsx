@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Tab } from "@headlessui/react";
 import { TreatmentHeader } from "components/header/headerData";
+import Image from "next/image";
 
 const Treatments = () => {
   return (
@@ -30,10 +31,12 @@ const Treatments = () => {
                     <Link href={items.link} key={items.id}>
                       <div className="px-2 md:px-3 lg:px-4 py-2 md:py-3 rounded-lg border flex cursor-pointer hover:bg-brandPink  hover:text-white hover:border-transparent transition-all duration-300 ease-linear">
                         <div className="w-1/3">
-                          <img
+                          <Image
                             className="w-10 h-10 md:w-12 md:h-12 object-cover rounded-lg"
                             src={items.icon}
                             alt={items.name}
+                            width={500}
+                            height={500}
                           />
                         </div>
                         <div className="w-2/3 flex flex-col justify-center ml-4 text-left">
@@ -52,10 +55,12 @@ const Treatments = () => {
                     <Link href={items.link} key={items.id}>
                       <div className="px-2 md:px-3 lg:px-4 py-2 md:py-3 rounded-lg border flex cursor-pointer hover:bg-brandPink  hover:text-white hover:border-transparent transition-all duration-300 ease-linear">
                         <div className="w-1/3">
-                          <img
+                          <Image
                             className="w-10 h-10 md:w-12 md:h-12 object-cover rounded-lg"
                             src={items.icon}
                             alt={items.name}
+                            width={500}
+                            height={500}
                           />
                         </div>
                         <div className="w-2/3 flex flex-col justify-center ml-4 text-left">
@@ -74,10 +79,12 @@ const Treatments = () => {
                     <Link href={items.link} key={items.id}>
                       <div className="px-2 md:px-3 lg:px-4 py-2 md:py-3 rounded-lg border flex cursor-pointer hover:bg-brandPink  hover:text-white hover:border-transparent transition-all duration-300 ease-linear">
                         <div className="w-1/3">
-                          <img
+                          <Image
                             className="w-10 h-10 md:w-12 md:h-12 object-cover rounded-lg"
                             src={items.icon}
                             alt={items.name}
+                            width={500}
+                            height={500}
                           />
                         </div>
                         <div className="w-2/3 flex flex-col justify-center ml-4 text-left">
