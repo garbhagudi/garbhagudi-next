@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function FeaturesBlocks() {
   return (
@@ -22,7 +23,13 @@ function FeaturesBlocks() {
                 className="relative flex flex-col items-center p-3 bg-white rounded-lg  hover:shadow-2xl hover:-translate-x-2 hover:-translate-y-2 hover:border-0 transition-all duration-300"
                 key={items.id}
               >
-                <img src={items.img} alt={items.title} className="rounded-lg" />
+                <Image
+                  src={items.img}
+                  alt={items.title}
+                  className="rounded-lg"
+                  width={500}
+                  height={500}
+                />
                 <h4 className="text-xl font-bold text-center leading-snug tracking-tight mb-1 mt-3">
                   {items.title}
                 </h4>

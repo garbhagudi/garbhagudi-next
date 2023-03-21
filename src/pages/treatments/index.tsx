@@ -17,7 +17,7 @@ const IndexPage = ({ treatments }) => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Treatment | GarbhaGudi</title>
+        <title>Treatment | GarbhaGudi IVF Centre</title>
         <meta name="title" content="Treatment | GarbhaGudi IVF Centre" />
         <meta
           name="description"

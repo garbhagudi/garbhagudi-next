@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function HeroHome() {
   return (
@@ -30,10 +31,12 @@ function HeroHome() {
                 className=" flex items-center  justify-center"
                 key={items.id}
               >
-                <img
+                <Image
                   src={items.img}
                   alt={items.title}
                   className="w-full hover:scale-150 transition-all duration-200"
+                  width={200}
+                  height={200}
                 />
               </div>
             ))}

@@ -1,5 +1,6 @@
 import { HiStar } from "react-icons/hi";
 import Link from "next/link";
+import Image from "next/image";
 
 const Banner = () => {
   return (
@@ -8,10 +9,12 @@ const Banner = () => {
         <div className="sm:mx-auto sm:max-w-3xl sm:px-6 block sm:hidden">
           <div className="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <div className="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
-              <img
+              <Image
                 className="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none"
                 src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1676448333/Misc/Landing/Neutral/happy-family-with-their-first-child-min_fgylvk.webp"
                 alt="happy copuple with a baby"
+                width={1024}
+                height={1024}
               />
             </div>
           </div>
@@ -148,10 +151,12 @@ const Banner = () => {
               </svg>
             </div>
             <div className="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
-              <img
+              <Image
                 className="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none"
                 src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1676448333/Misc/Landing/Neutral/happy-family-with-their-first-child-min_fgylvk.webp"
                 alt="happy copuple with a baby"
+                width={500}
+                height={500}
               />
             </div>
           </div>

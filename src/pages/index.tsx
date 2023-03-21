@@ -115,7 +115,7 @@ const Home = ({ data }) => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>
-          GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India
+          Best IVF Centre in Bangalore | IVF Hospital in Bangalore | GarbhaGudi
         </title>
         <meta
           name="title"

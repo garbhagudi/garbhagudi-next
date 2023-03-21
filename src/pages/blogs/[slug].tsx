@@ -119,7 +119,7 @@ const Blog = ({ blog }) => {
         {/* Primary Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{title}</title>
-        <meta name="title" content={`${blog?.title} | GarbhaGudi`} />
+        <meta name="title" content={title} />
         <meta name="description" content={blog?.content?.text.slice(0, 160)} />
 
         {/* Ld+JSON Data */}
