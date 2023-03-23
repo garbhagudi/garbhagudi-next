@@ -1,12 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  CiPercent,
+  CiMedicalCase,
+  CiMedicalClipboard,
+  CiBank,
+} from "react-icons/ci";
+import { BsBuildings, BsCurrencyRupee, BsQuestionCircle } from "react-icons/bs";
+import { GiMeditation } from "react-icons/gi";
+import { ImLab } from "react-icons/im";
 
 const features = [
   {
     id: 1,
     name: "High Success Rate",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840283/Icons/Features/Success_Rate_lig6sq.svg",
+    icon: <CiPercent />,
     content:
       "GarbhaGudi has one of the highest IVF treatments success rates in the industry over 65-73 per cent.",
     link: "/features/success-rates-of-ivf",
@@ -14,7 +23,7 @@ const features = [
   {
     id: 2,
     name: "World Class Fertility Care",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840286/Icons/Features/World_Class_Fertility_Care_un83f6.svg",
+    icon: <BsBuildings />,
     content:
       "GarbhaGudi is Proud to have played a key role in bringing more than 8,500+ babies into the world since 2011.",
     link: "/features/world-class-fertility-care",
@@ -22,7 +31,7 @@ const features = [
   {
     id: 3,
     name: "Top Fertility Specialists",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840305/Icons/Features/Top_Fertility_Specialists_zkyl9x.svg",
+    icon: <CiMedicalCase />,
     content:
       "Team of fertility specialists like gynecologists, embryologists, technicians and staff to help you conceive.",
     link: "/fertility-experts",
@@ -30,7 +39,7 @@ const features = [
   {
     id: 4,
     name: "Affordable Treatments",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840310/Icons/Features/Affordable_Treatment_lwaaku.svg",
+    icon: <BsCurrencyRupee />,
     content:
       "GarbhaGudi offers Affordable Infertility treatment without any compromise on service or quality of medicines or services",
     link: "/features/affordable-treatments",
@@ -38,7 +47,7 @@ const features = [
   {
     id: 5,
     name: "Free Second Opinion",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840323/Icons/Features/Free_Second_Opinion_lkihbz.svg",
+    icon: <BsQuestionCircle />,
     content:
       "Patients can come and meet our doctors and understand if the advised treatment is the best thing for the patient couple.",
     link: "https://garbhagudi-ivf.com/contact-us",
@@ -46,7 +55,7 @@ const features = [
   {
     id: 6,
     name: "Financing Options",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840329/Icons/Features/Financial_Options_rrv8hi.svg",
+    icon: <CiBank />,
     content:
       "0% interest for patients when they cannot manage the finances to meet the cost of procedures.",
     link: "/features/financing-options",
@@ -54,7 +63,7 @@ const features = [
   {
     id: 7,
     name: "Holistic Approach",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840338/Icons/Features/Holistic_Approach_pcqyr1.svg",
+    icon: <GiMeditation />,
     content:
       "At Garbhagudi we are committed to Treating infertility through the holistic mind-body-soul programs.",
     link: "/features/holistic-approach",
@@ -62,7 +71,7 @@ const features = [
   {
     id: 8,
     name: "Treatment Protocols",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840352/Icons/Features/Treatment_Protocols_hll4cu.svg",
+    icon: <CiMedicalClipboard />,
     content:
       "Regularly enhanced and upgraded to incorporate the latest advancements in process, technology and clinical research.",
     link: "/features/treatment-protocols",
@@ -70,7 +79,7 @@ const features = [
   {
     id: 9,
     name: "Best in Class Facilities",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840357/Icons/Features/Best_in_Class_Facilities_fchmjr.svg",
+    icon: <ImLab />,
     content:
       "Our IVF Centers in Bangalore are equipped to handle the most challenging cases with state of the art technology at our disposal",
     link: "/features/best-in-class-facilities",
@@ -90,31 +99,26 @@ const Features = () => {
           of options and bringing a new ray of hope to many who are trying to
           conceive. So, you can expect:
         </p>
-        <div className="mt-12">
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature) => (
               <Link href={feature.link} key={feature.id} passHref>
-                <div className="pt-3 max-w-sm mx-auto">
-                  <div className=" flow-root bg-gray-100 border rounded-lg px-6 pb-8 shadow-lg hover:shadow-2xl hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200">
-                    <div className="-mt-6">
-                      <div>
-                        <span className="inline-flex items-center justify-center p-2 bg-brandPink rounded-full shadow-xl">
-                          <Image
-                            src={feature.icon}
-                            alt={feature.name}
-                            width={48}
-                            height={48}
-                            className="h-10 w-10"
-                            aria-hidden="true"
-                          />
-                        </span>
+                <div className="pt-3 group max-w-sm mx-auto">
+                  <div className="rounded-lg overflow-hidden shadow-3xl hover:shadow-2xl hover:scale-110 transition-all duration-200">
+                    <div className="grid grid-cols-6 ">
+                      <div className="col-span-1 bg-brandPink flex items-center justify-center h-full">
+                        <div className="text-4xl text-white font-bold">
+                          {feature.icon}
+                        </div>
                       </div>
-                      <h3 className="mt-5 text-lg font-semibold text-brandDark tracking-tight font-heading">
-                        {feature.name}
-                      </h3>
-                      <p className="mt-5 text-brandDark antialiased text-sm font-medium font-content min-h-[60px]">
-                        {feature.content}
-                      </p>
+                      <div className="flex flex-col col-span-5 px-2 border-2 border-brandPink rounded-tr-lg rounded-br-lg">
+                        <h3 className="mt-3 text-base font-semibold text-brandDark tracking-tight font-heading">
+                          {feature.name}
+                        </h3>
+                        <p className="mt-2 pb-3 text-brandDark antialiased text-sm  font-content font-normal">
+                          {feature.content}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
