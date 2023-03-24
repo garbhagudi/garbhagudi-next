@@ -204,7 +204,7 @@ const Home = ({ data }) => {
       </Carousel>
       <HomeComponent />
       <div className="bg-neutral-50" id="ourTeam">
-        <div className="px-4 py-16 mx-auto text-center max-w-7xl sm:px-6 lg:px-8 lg:py-12">
+        <div className="px-4 py-16 mx-auto text-center max-w-[1366px] sm:px-6 lg:px-8 lg:py-12">
           <div className="space-y-12">
             <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-brandDark font-heading">
@@ -217,7 +217,7 @@ const Home = ({ data }) => {
                 cases.
               </p>
             </div>
-            <div className="hidden lg:grid grid-cols-2 mx-auto space-y-0 sm:gap-8 sm:space-y-0 lg:grid-cols-5 lg:max-w-7xl">
+            <div className="hidden lg:grid grid-cols-2 mx-auto space-y-0 sm:gap-8 sm:space-y-0 lg:grid-cols-6">
               {data?.doctors.map((item: any) => {
                 return (
                   <div
@@ -235,7 +235,7 @@ const Home = ({ data }) => {
                           loading="lazy"
                         />
                         <div className="space-y-0.5">
-                          <h3 className="text-brandDark text-lg font-content">
+                          <h3 className="text-brandDark text-lg font-heading font-bold">
                             {item?.name}
                           </h3>
                           <p className="text-xs text-brandPurpleDark font-semibold font-content">
@@ -309,7 +309,8 @@ export const getStaticProps = async () => {
   const { data } = await apolloClient.query({
     query: gql`
       query {
-        doctors {
+        doctors(orderBy: order_ASC) {
+          order
           name
           qualification
           category
