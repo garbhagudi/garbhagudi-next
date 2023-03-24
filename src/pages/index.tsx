@@ -217,34 +217,32 @@ const Home = ({ data }) => {
                 cases.
               </p>
             </div>
-            <div className="hidden md:grid grid-cols-2 mx-auto space-y-0 sm:gap-16 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl">
+            <div className="hidden lg:grid grid-cols-2 mx-auto space-y-0 sm:gap-8 sm:space-y-0 lg:grid-cols-5 lg:max-w-7xl">
               {data?.doctors.map((item: any) => {
                 return (
                   <div
                     key={item?.id}
-                    className="mb-2 transition-all duration-500 rounded-lg hover:scale-115"
+                    className="transition-all duration-500 hover:scale-125"
                   >
                     <Link href={`/fertility-experts/${item?.slug}`} passHref>
                       <div className="space-y-4">
                         <Image
-                          className="w-32 h-32 mx-auto my-auto mt-4 shadow-3xl transition-all duration-500 rounded-full xl:w-44 xl:h-44 drop-shadow-2xl"
+                          className="mx-auto my-auto mt-4 shadow-3xl transition-all duration-300 rounded-full xl:w-40 xl:h-40 drop-shadow-2xl"
                           src={item?.image?.url}
                           alt={item?.imageAlt || item?.name}
                           width={500}
                           height={500}
                           loading="lazy"
                         />
-                        <div className="space-y-4">
-                          <div className="space-y-1 text-lg font-medium leading-6">
-                            <h3 className="text-brandDark font-content">
-                              {item?.name}
-                            </h3>
-                            <p className="text-sm text-brandPurpleDark font-content">
-                              {item?.qualification}
-                            </p>
-                            <div className="pb-2 text-sm text-brandPink font-content drop-shadow-2xl shadow-black">
-                              {item?.designation}
-                            </div>
+                        <div className="space-y-0.5">
+                          <h3 className="text-brandDark text-lg font-content">
+                            {item?.name}
+                          </h3>
+                          <p className="text-xs text-brandPurpleDark font-semibold font-content">
+                            {item?.qualification}
+                          </p>
+                          <div className="pb-2 text-sm text-brandPink font-content drop-shadow-2xl shadow-black">
+                            {item?.designation}
                           </div>
                         </div>
                       </div>
@@ -253,7 +251,7 @@ const Home = ({ data }) => {
                 );
               })}
             </div>
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <Carousel
                 responsive={responsive2}
                 ssr={true}
@@ -314,6 +312,7 @@ export const getStaticProps = async () => {
         doctors {
           name
           qualification
+          category
           slug
           image {
             url

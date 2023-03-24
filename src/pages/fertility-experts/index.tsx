@@ -87,7 +87,7 @@ const IndexPage = ({ branches }) => {
           <Tab.Group>
             <Tab.List
               className={
-                "flex flex-wrap lg:flex-nowrap lg:space-x-1 bg-brandPink rounded-xl p-1 transition-all ease-linear duration-300"
+                "grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-nowrap lg:space-x-1 bg-brandPink rounded-xl p-1 transition-all ease-linear duration-300"
               }
             >
               {branches.map((items: any) => (
@@ -106,8 +106,8 @@ const IndexPage = ({ branches }) => {
             >
               {branches.map((items: any) => (
                 <Tab.Panel key={items.id}>
-                  <div className="text-gray-600 body-font relative max-w-7xl mx-auto">
-                    <div className="py-12 flex flex-wrap lg:flex-nowrap inset-0">
+                  <div className="text-gray-600 body-font relative max-w-7xl mx-auto mt-10">
+                    <div className="lg:py-6 flex flex-wrap lg:flex-nowrap inset-0">
                       <div className="lg:w-1/2 bg-gray-300 rounded-lg overflow-hidden p-2 lg:p-10 flex items-end justify-start relative h-[44rem] md:ml-auto w-full">
                         <iframe
                           width="100%"
@@ -131,7 +131,7 @@ const IndexPage = ({ branches }) => {
                             <div className="leading-relaxed">
                               <Link
                                 href="mailto:dreams@garbhagudi.com"
-                                className="text-brandPink font-qs"
+                                className="text-brandPink font-qs underline hover:text-lg transition-all duration-100"
                               >
                                 dreams@garbhagudi.com
                               </Link>
@@ -139,15 +139,15 @@ const IndexPage = ({ branches }) => {
                             <h2 className="font-semibold text-gray-900 tracking-widest text-xs mt-4 font-qs">
                               PHONE
                             </h2>
-                            <div className="leading-relaxed font-qs">
+                            <div className="leading-relaxed font-qs hover:text-lg text-brandPink underline transition-all duration-100">
                               <Link href="tel:+919108910832">
                                 +91 9108 9108 32
                               </Link>
                             </div>
-                            <h2 className="font-semibold text-gray-900 tracking-widest text-xs mt-4 font-qs">
+                            <h2 className="uppercase font-semibold text-gray-900 tracking-widest text-xs mt-4 font-qs">
                               WhatsApp
                             </h2>
-                            <div className="leading-relaxed font-qs">
+                            <div className="leading-relaxed font-qs text-brandPink underline hover:text-lg transition-all duration-100">
                               <Link
                                 href="https://wa.me/918884183338?text=Hi."
                                 target="_blank"
@@ -159,14 +159,14 @@ const IndexPage = ({ branches }) => {
                           </div>
                         </div>
                       </div>
-                      <div className="lg:w-1/2 md:w-full flex flex-col md:ml-auto w-full md:py-8 md:mt-0 min-h-max">
-                        <p className="text-center font-heading font-bold text-xl mb-4 mt-7 lg:mt-0">
+                      <div className="lg:w-1/2 md:w-full flex flex-col md:ml-auto w-full md:py-4 md:mt-0">
+                        <p className="text-center font-heading font-bold text-xl mb-3 mt-7 lg:mt-0 px-2">
                           Fertility specialists at our {items.title} branch
                         </p>
                         <div className="mx-auto space-y-0 grid grid-cols-2 sm:gap-y-5 sm:gap-x-14 sm:space-y-0 lg:grid-cols-2 lg:max-w-7xl col-span-full">
                           {items?.doctors.map((doctor) => (
                             <div
-                              className="text-center hover:shadow-2xl hover:bg-white rounded-lg transition-all ease-in lg:px-1 duration-200"
+                              className="text-center rounded-lg"
                               key={doctor?.id}
                             >
                               <Link
@@ -174,24 +174,22 @@ const IndexPage = ({ branches }) => {
                                 passHref
                               >
                                 <div>
-                                  <div className="space-y-4">
+                                  <div className="space-y-2">
                                     <img
-                                      className="mx-auto h-48 w-48 my-auto rounded-full mt-4 "
+                                      className="mx-auto h-36 w-36 my-auto rounded-full mt-4 "
                                       src={doctor?.image.url}
                                       alt={doctor?.name}
                                     />
-                                    <div className="space-y-4">
-                                      <div className="text-lg leading-6 font-medium space-y-1">
-                                        <h3 className="text-brandDark font-content">
-                                          {doctor?.name}
-                                        </h3>
-                                        <p className="text-brandPurpleDark text-sm font-content">
-                                          {doctor?.qualification}
-                                        </p>
-                                        <p className="text-brandPink text-sm font-content">
-                                          {doctor?.designation}
-                                        </p>
-                                      </div>
+                                    <div className="text-base leading-6 font-medium space-y-0.5">
+                                      <h3 className="text-brandDark font-heading font-bold">
+                                        {doctor?.name}
+                                      </h3>
+                                      <p className="text-brandPurpleDark text-xs font-content">
+                                        {doctor?.qualification}
+                                      </p>
+                                      <p className="text-brandPink text-sm font-content">
+                                        {doctor?.designation}
+                                      </p>
                                     </div>
                                   </div>
                                 </div>

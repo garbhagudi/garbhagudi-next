@@ -23,7 +23,7 @@ const IndexPage = () => {
         />
         <meta
           name="description"
-          content="To book an appointment for your Fertility and IVF treatment in GarbhaGudi, you can contact on 8880000909 or you can also Email us on dreams@garbhagudi.com."
+          content="To book an appointment for your Fertility and IVF treatment in GarbhaGudi, you can contact on 9108910832 or you can also Email us on dreams@garbhagudi.com."
         />
 
         {/* Open Graph / Facebook */}
