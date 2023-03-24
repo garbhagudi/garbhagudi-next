@@ -221,8 +221,9 @@ export const getStaticProps = async () => {
           address
           mapLink
           id
-          doctors {
+          doctors(orderBy: order_ASC) {
             id
+            category
             name
             slug
             image {
