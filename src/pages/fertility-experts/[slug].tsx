@@ -205,7 +205,7 @@ const Doctor = ({ doctor }) => {
                   <h1 className="text-4xl font-semibold leading-normal mb-2 text-gray-800">
                     {doctor.name}
                   </h1>
-                  <div className="leading-normal mt-0 mb-2 textbrantext-brandPink2 font-bold uppercase text-xl">
+                  <div className="leading-normal mt-0 mb-2 textbrantext-brandPink2 font-bold text-xl">
                     {doctor.qualification}
                   </div>
                   <div className="mb-2 text-gray-700">{doctor.designation}</div>
