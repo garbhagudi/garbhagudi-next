@@ -3,6 +3,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     dangerouslyAllowSVG: true,
+    unoptimized: true,
     domains: [
       "res.cloudinary.com",
       "media.graphassets.com",
