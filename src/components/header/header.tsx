@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
+import Confetti from "react-confetti";
 import Link from "next/link";
 import {
   About,
@@ -49,6 +50,7 @@ const Nav = () => {
   return (
     <div className="sticky top-0 z-50 bg-white shadow-xl">
       <nav className="shadow-2xl">
+        <Confetti numberOfPieces={200} className="h-16 w-full object-cover" />
         <nav className="px-2 lg:px-6 lg:py-2">
           <div className="flex justify-between items-center mx-auto max-w-screen-xl">
             <Link href="/" className="hidden xl:flex items-center">
