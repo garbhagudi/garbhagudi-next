@@ -12,6 +12,7 @@ import {
   Languages,
 } from "components/header/popover";
 import LanguageSelect from "components/languageSelect";
+import Logo from "components/assets/logo";
 
 const menu = [
   {
@@ -52,11 +53,7 @@ const Nav = () => {
         <nav className="px-2 lg:px-6 lg:py-2">
           <div className="flex justify-between items-center mx-auto max-w-screen-xl">
             <Link href="/" className="hidden xl:flex items-center">
-              <img
-                className="w-44 h-full xl:w-56 "
-                src="https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg"
-                alt="logo"
-              />
+              <Logo />
             </Link>
             <Link href="/" className="flex items-center xl:hidden">
               <img
