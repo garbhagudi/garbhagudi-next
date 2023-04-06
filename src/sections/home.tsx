@@ -18,12 +18,12 @@ const HomeComponent = () => {
       <Hero />
       <Band2 />
       <Overview />
+      <TreatmentOptions />
       <Video />
       <Features />
       <Stats />
       <WhyGG />
       <Stat />
-      <TreatmentOptions />
       <Testimonial />
     </div>
   );

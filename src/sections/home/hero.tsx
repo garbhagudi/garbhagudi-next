@@ -46,7 +46,7 @@ const Hero = () => {
               <div className="my-6">
                 <Image
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643272918/Home/Home-Experience_the_Joy_kvdfwj.webp"
-                  alt="Experience the joy of being complete"
+                  alt="Experience the joy of being complete with the Best IVF Centre in Bangalore"
                   className="object-cover rounded-2xl"
                   width={1024}
                   height={768}

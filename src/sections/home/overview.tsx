@@ -51,7 +51,7 @@ const Overview = () => {
               <Image
                 className="absolute inset-0 h-full w-full object-cover"
                 src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1670926732/Home/Why_GarbhaGudi_oa1nv7-min_z7p9jv.webp"
-                alt="Dr Asha S Vijay Picture"
+                alt="Dr Asha S Vijay - IVF Specialist in Bangalore"
                 width={360}
                 height={640}
               />
