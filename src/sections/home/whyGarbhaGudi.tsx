@@ -11,7 +11,7 @@ const WhyGG = () => {
               <div className="flex lg:w-6/12 xl:w-4/12">
                 <img
                   src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1677492148/Misc/coup-min_g3kq4k.webp"
-                  alt="Why choose garbhagudi"
+                  alt="Why choose garbhagudi as the Best IVF Centre in Bangalore"
                   className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
                 />
               </div>
