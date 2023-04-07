@@ -2,6 +2,7 @@ import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import MyModal from "./modal";
 import Image from "next/image";
+import { RichText } from "@graphcms/rich-text-react-renderer";
 
 const DoctorLayout = ({
   name,
@@ -72,7 +73,7 @@ const DoctorLayout = ({
                       height={500}
                     />
                     <div className="mt-2">
-                      <p className="text-sm text-gray-500">{bio}</p>
+                      <RichText content={bio} />
                     </div>
 
                     <div className="mt-4 text-center space-y-4">

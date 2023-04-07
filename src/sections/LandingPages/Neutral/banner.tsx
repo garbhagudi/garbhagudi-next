@@ -24,8 +24,8 @@ const Banner = () => {
             <div className="">
               <div className="color-pop rounded-lg">
                 <div className="inline-flex items-center text-base text-center font-bold text-white px-2.5 py-2 bg-transparent rounded-lg">
-                  Book Fertility Treatment for ₹5000/- Now & Get ₹11,000/- OFF
-                  on the IVF Treatment*
+                  Start your IVF journey from as Low as ₹ 90,000 and take the
+                  first step towards completing your family.
                 </div>
               </div>
               <div className="mt-12 sm:max-w-xl">
@@ -89,13 +89,12 @@ const Banner = () => {
                       aria-hidden="true"
                     />
                   </div>
-                  <div className="min-w-0 flex-1 pl-5 py-1 text-sm text-gray-500 sm:py-3">
-                    <span className="font-medium text-gray-900">
-                      Rated 4.8 stars
-                    </span>{" "}
-                    on{" "}
-                    <span className="font-medium text-brandPink">
-                      Google Reviews
+                  <div className="min-w-0 flex-1 pl-5 py-1 text-sm text-gray-700 sm:py-3 font-semibold text-center md:text-left">
+                    <span className="text-gray-900">Rated 4.8 stars on</span>
+                    <span className="text-brandPink"> Google Reviews</span>
+                    <span className="text-gray-900">
+                      {" "}
+                      across all our branches
                     </span>
                   </div>
                 </div>

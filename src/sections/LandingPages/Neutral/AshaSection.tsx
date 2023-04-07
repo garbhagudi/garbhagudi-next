@@ -15,7 +15,7 @@ const AshaSection = () => {
                 <div className="relative">
                   <img
                     alt="Dr Asha"
-                    src="https://www.garbhagudi.com/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2FAKVhJHLwRmCJOyzS53Ri&w=640&q=75"
+                    src="https://media.graphassets.com/nwE1f23XRWyvbAAO25qP"
                     className="shadow-2xl rounded-full h-auto align-middle border-none -m-[100px] -ml-[100px] max-w-[200px]"
                   />
                 </div>
