@@ -3,7 +3,6 @@ import { HiChatAlt, HiPhone, HiCalendar } from "react-icons/hi";
 const supportLinks = [
   {
     name: "Chat Support",
-    href: "#",
     description:
       "Chat online with our team now from anywhere. We provide you with a seamless and hassle-free online chat experience from the comfort of your home. Get the proper assistance now!",
     icon: HiChatAlt,
@@ -13,7 +12,6 @@ const supportLinks = [
   },
   {
     name: "Call Support",
-    href: "#",
     description:
       "Reach out to us with your questions, concerns, or challenges. We’ll be happy to help you at any time, and we’re always trying to make things easier for you!",
     icon: HiPhone,
@@ -22,7 +20,6 @@ const supportLinks = [
   },
   {
     name: "Book an Appointment",
-    href: "#",
     description:
       "Now book an appointment with any of your nearest locations of GarbhaGudi IVF Centre, and get the best fertility treatments from our experts!",
     icon: HiCalendar,
@@ -52,7 +49,7 @@ const Hero = () => {
 
       {/* Overlapping cards */}
       <section
-        className="md:-mt-12 -mt-8 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
+        className="md:-mt-12 lg:-mt-44 -mt-8 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
         aria-labelledby="contact-heading"
       >
         <h2 className="sr-only" id="contact-heading">
@@ -74,7 +71,7 @@ const Hero = () => {
                 <h3 className="text-xl font-medium text-gray-900 font-heading">
                   {link.name}
                 </h3>
-                <p className="mt-4 text-base text-gray-500 font-content">
+                <p className="mt-4 text-sm text-gray-500 font-content">
                   {link.description}
                 </p>
               </div>
