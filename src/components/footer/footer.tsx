@@ -13,7 +13,7 @@ const navigation = {
     { name: "Dr Asha S Vijay", href: "https://drashasvijay.com" },
   ],
   quickLinks: [
-    { name: "IVF Treatment", href: "/treatments/in-virto-fertilization-ivf" },
+    { name: "IVF Treatment", href: "/treatments/in-vitro-fertilization-ivf" },
     {
       name: "IUI Treatment",
       href: "/treatments/intra-uterine-insemination-iui",
