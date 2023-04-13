@@ -12,7 +12,7 @@
   "dependencies": {
     "@apollo/client": "^3.7.11",
     "@graphcms/rich-text-react-renderer": "^0.6.1",
-    "@headlessui/react": "^1.7.13",
+    "@headlessui/react": "^1.7.14",
     "@headlessui/tailwindcss": "^0.1.2",
     "@vercel/analytics": "^0.1.11",
     "graphql": "^16.3.0",
