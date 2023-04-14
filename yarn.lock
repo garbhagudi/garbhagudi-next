@@ -2376,10 +2376,10 @@ react-calendar@^4.2.1:
     get-user-locale "^2.2.1"
     prop-types "^15.6.0"
 
-react-chrono@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/react-chrono/-/react-chrono-2.1.0.tgz#457261ab8e50c9a0ae05d67b2d8cea0d3312ceb2"
-  integrity sha512-0CR72XjlB8U3xtSuIwod39m3F31EjZrUlXmp9myvLMS85oXq9BvhArNk+yjiXttjBnuUl/RUUWRy7o4NRpNaxg==
+react-chrono@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-chrono/-/react-chrono-2.1.1.tgz#88bd0ac74986a4cc452bee66eb6f9343c3b3b317"
+  integrity sha512-DDkvVe+MkZiZb1Sk56752L71HtKvgLfes/FOC/Ty78fPeGTfxp8Ovl1F7CPI+rFaXb8reeSYJgQNVANdxpAsPg==
   dependencies:
     classnames "^2.3.2"
     dayjs "^1.11.7"
