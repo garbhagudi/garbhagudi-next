@@ -86,14 +86,6 @@ const Locations = ({ branches }) => {
             </Link>
           ))}
         </div>
-        <h3 className="text-3xl lg:text-4xl font-heading font-bold text-center pb-10 lg:pb-14">
-          Coming Soon
-        </h3>
-        <div className="flex items-center pb-10 lg:pb-16 justify-center space-x-4 text-center">
-          <div className="px-3 py-2 border-2 text-xl font-content font-semibold rounded-lg border-brandPink hover:bg-brandPink hover:text-white cursor-default">
-            Nagarabhavi
-          </div>
-        </div>
       </div>
     </div>
   );

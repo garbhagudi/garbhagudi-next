@@ -226,6 +226,11 @@ export const Location = [
     href: "/locations/new-bel-road",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1678881601/Icons/Locations/NBR_Icon_rlkyhf.svg",
   },
+  {
+    name: "Nagarabhavi",
+    href: "/locations/nagarabhavi",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1678881601/Icons/Locations/NBR_Icon_rlkyhf.svg",
+  },
 ];
 
 export const ValueAddedServices = [
