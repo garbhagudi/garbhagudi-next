@@ -1,5 +1,5 @@
 import React from "react";
-import { doctors } from "sections/LandingPages/Neutral/doctors";
+import { doctors } from "components/doctors";
 import { contactData } from "sections/gg-care/content";
 import Link from "next/link";
 
