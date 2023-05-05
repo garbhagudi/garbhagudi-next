@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }) {
         <Loading />
       ) : (
         <div>
-          <Nav />
+          {/* <Nav /> */}
           <main className="min-h-screen">
             <Component {...pageProps} />
           </main>
