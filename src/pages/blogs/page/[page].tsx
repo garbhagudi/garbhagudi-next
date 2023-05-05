@@ -88,7 +88,7 @@ function BlogPage({
                 Blogs
               </h1>
             </div>
-            <SearchComponent />
+            {/* <SearchComponent /> */}
             <div className="mt-12 max-w-xl mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none w">
               {blogs?.map((item: any) => (
                 <div
