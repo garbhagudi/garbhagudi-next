@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "../styles/globals.css";
+import "styles/globals.css";
+import "styles/calendar.css";
 import Footer from "components/footer/footer";
 import Nav from "components/header/header";
 import FloatPhone from "components/FloatPhone";
 import Salesiq from "components/SalesIQ";
 import TagManager from "react-gtm-module";
 import { useRouter } from "next/router";
-import "styles/calendar.css";
 import Loading from "components/Loading";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
