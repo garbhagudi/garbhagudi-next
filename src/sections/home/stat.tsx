@@ -20,7 +20,7 @@ const metrics = [
   },
   {
     id: 4,
-    stat: "6",
+    stat: "7",
     emphasis: "Infertility Centres Across Bangalore",
   },
 ];

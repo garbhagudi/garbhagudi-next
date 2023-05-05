@@ -26,7 +26,7 @@ const WhyGG = () => {
                     <Link href={"/"} className="text-brandPink hover:underline">
                       IVF Clinic and Hospital in Bangalore
                     </Link>{" "}
-                    with over 11 years of experience in providing comprehensive
+                    with over 13 years of experience in providing comprehensive
                     fertility solutions. It has a renowned team of specialists,
                     state-of-the-art infrastructure, transparent pricing, and
                     consistently high success rates (75%) in assisted
