@@ -227,5 +227,20 @@ export const contactData = {
       phone: "+91 9108 9108 25",
       directionLink: "https://goo.gl/maps/Fmiwn4ZCsSTxehnq9",
     },
+    {
+      id: "7",
+      name: "Nagarbhavi",
+      address: (
+        <div>
+          <p>
+            1st Floor, 80ft Main Road, NGCF Layout, 2nd Stage, BDA Road,
+            Naagarabhaavi,
+          </p>
+          <p className="mt-1 mb-5">Bengaluru, Karnataka 560072</p>
+        </div>
+      ),
+      phone: "+91 9886 9886 65",
+      directionLink: "https://goo.gl/maps/6ZCKzTrmE3UzgFuS7",
+    },
   ],
 };

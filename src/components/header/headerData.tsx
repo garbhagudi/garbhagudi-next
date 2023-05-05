@@ -1,3 +1,6 @@
+// import { SiGooglemaps } from "react-icons/ri";
+import { SiGooglemaps } from "react-icons/si";
+
 export const TreatmentHeader = {
   female: [
     {
@@ -199,37 +202,44 @@ export const Location = [
   {
     name: "Hanumanthanagar",
     href: "/locations/hanumanthanagar",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351546/Icons/Locations/Hanumanthanagar_ykripm.svg",
+    icon: <SiGooglemaps />,
+    short: "HN",
   },
   {
     name: "Kalyan Nagar",
     href: "/locations/kalyan-nagar",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351546/Icons/Locations/Kalyan_Nagar_ivtier.svg",
+    icon: <SiGooglemaps />,
+    short: "KN",
   },
   {
     name: "Jayanagar",
     href: "/locations/jayanagar",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1665574596/Icons/Locations/JN_Icon_ysrrvv.svg",
+    icon: <SiGooglemaps />,
+    short: "JN",
   },
   {
     name: "Electronic City",
     href: "/locations/electronic-city",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/Electronic_City_xntwob.svg",
+    icon: <SiGooglemaps />,
+    short: "EC",
   },
   {
     name: "Marathahalli",
     href: "/locations/marathahalli",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/Marathahalli_p99ljc.svg",
+    icon: <SiGooglemaps />,
+    short: "MH",
   },
   {
     name: "New BEL Road",
     href: "/locations/new-bel-road",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1678881601/Icons/Locations/NBR_Icon_rlkyhf.svg",
+    icon: <SiGooglemaps />,
+    short: "NBR",
   },
   {
     name: "Nagarabhavi",
     href: "/locations/nagarabhavi",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1678881601/Icons/Locations/NBR_Icon_rlkyhf.svg",
+    icon: <SiGooglemaps />,
+    short: "NBV",
   },
 ];
 
