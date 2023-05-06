@@ -7,6 +7,7 @@ import apolloClient from "lib/apollo-graphcms";
 import { gql } from "@apollo/client";
 import { useRouter } from "next/router";
 import Share from "components/share";
+import { SiGooglemaps } from "react-icons/si";
 
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
@@ -39,6 +40,8 @@ export const getStaticProps = async ({ params }) => {
           marathahalliPhysical
           newBelRoadOnline
           newBelRoadPhysical
+          nagarbhaviOnline
+          nagarbhaviPhysical
         }
       }
     `,
@@ -237,7 +240,8 @@ const Doctor = ({ doctor }) => {
                     doctor?.jayanagarPhysical ||
                     doctor?.electronicCityPhysical ||
                     doctor?.marathahalliPhysical ||
-                    doctor?.newBelRoadPhysical) && (
+                    doctor?.newBelRoadPhysical ||
+                    doctor?.nagarbhaviPhysical) && (
                     <section className="antialiased text-gray-600 mt-8 font-content overflow-hidden">
                       <div className="flex flex-col justify-center h-full">
                         <div className="w-full max-w-3xl mx-auto bg-white shadow-xl rounded-2xl border border-pink-200">
@@ -275,14 +279,8 @@ const Doctor = ({ doctor }) => {
                                         <td className="p-2 whitespace-nowrap">
                                           <div className="flex items-center">
                                             <div className="font-medium text-gray-800 flex items-center justify-center">
-                                              <div className="w-10 h-10 flex-shrink-0 mr-2">
-                                                <img
-                                                  className="rounded-sm"
-                                                  src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351546/Icons/Locations/Hanumanthanagar_ykripm.svg"
-                                                  width="40"
-                                                  height="40"
-                                                  alt="Alex Shatov"
-                                                />
+                                              <div className="w-10 h-10 bg-brandPink flex items-center justify-center mr-2 sm:mr-3 text-white rounded-lg">
+                                                <SiGooglemaps className="text-2xl" />
                                               </div>
                                               <Link
                                                 href="/locations/hanumanthanagar"
@@ -343,14 +341,8 @@ const Doctor = ({ doctor }) => {
                                           <div className="flex items-center">
                                             <div className="font-medium text-gray-800">
                                               <div className="font-medium text-gray-800 flex items-center justify-center">
-                                                <div className="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3">
-                                                  <img
-                                                    className="rounded-sm"
-                                                    src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351546/Icons/Locations/Kalyan_Nagar_ivtier.svg"
-                                                    width="40"
-                                                    height="40"
-                                                    alt="Alex Shatov"
-                                                  />
+                                                <div className="w-10 h-10 bg-brandPink flex items-center justify-center mr-2 sm:mr-3 text-white rounded-lg">
+                                                  <SiGooglemaps className="text-2xl" />
                                                 </div>
                                                 <Link
                                                   href="/locations/kalyan-nagar"
@@ -412,14 +404,8 @@ const Doctor = ({ doctor }) => {
                                           <div className="flex items-center">
                                             <div className="font-medium text-gray-800">
                                               <div className="font-medium text-gray-800 flex items-center justify-center">
-                                                <div className="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3 ">
-                                                  <img
-                                                    className="rounded-sm"
-                                                    src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1665574596/Icons/Locations/JN_Icon_ysrrvv.svg"
-                                                    width="40"
-                                                    height="40"
-                                                    alt="Alex Shatov"
-                                                  />
+                                                <div className="w-10 h-10 bg-brandPink flex items-center justify-center mr-2 sm:mr-3 text-white rounded-lg">
+                                                  <SiGooglemaps className="text-2xl" />
                                                 </div>
                                                 <Link
                                                   href="/locations/jayanagar"
@@ -479,14 +465,8 @@ const Doctor = ({ doctor }) => {
                                           <div className="flex items-center">
                                             <div className="font-medium text-gray-800">
                                               <div className="font-medium text-gray-800 flex items-center justify-center">
-                                                <div className="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3 ">
-                                                  <img
-                                                    className="rounded-sm"
-                                                    src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/Electronic_City_xntwob.svg"
-                                                    width="40"
-                                                    height="40"
-                                                    alt="Electronic City"
-                                                  />
+                                                <div className="w-10 h-10 bg-brandPink flex items-center justify-center mr-2 sm:mr-3 text-white rounded-lg">
+                                                  <SiGooglemaps className="text-2xl" />
                                                 </div>
                                                 <Link
                                                   href="/locations/electronic-city"
@@ -547,14 +527,8 @@ const Doctor = ({ doctor }) => {
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="flex items-center">
                                           <div className="font-medium text-gray-800 flex items-center justify-center">
-                                            <div className="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3 ">
-                                              <img
-                                                className="rounded-sm"
-                                                src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/Marathahalli_p99ljc.svg"
-                                                width="40"
-                                                height="40"
-                                                alt="Alex Shatov"
-                                              />
+                                            <div className="w-10 h-10 bg-brandPink flex items-center justify-center mr-2 sm:mr-3 text-white rounded-lg">
+                                              <SiGooglemaps className="text-2xl" />
                                             </div>
                                             <Link
                                               href="/locations/marathahalli"
@@ -612,17 +586,11 @@ const Doctor = ({ doctor }) => {
                                       <td className="p-2 whitespace-nowrap">
                                         <div className="flex items-center">
                                           <div className="font-medium text-gray-800 flex items-center justify-center">
-                                            <div className="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3 ">
-                                              <img
-                                                className="rounded-sm"
-                                                src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643351530/Icons/Locations/Marathahalli_p99ljc.svg"
-                                                width="40"
-                                                height="40"
-                                                alt="Alex Shatov"
-                                              />
+                                            <div className="w-10 h-10 bg-brandPink flex items-center justify-center mr-2 sm:mr-3 text-white rounded-lg">
+                                              <SiGooglemaps className="text-2xl" />
                                             </div>
                                             <Link
-                                              href="/locations/marathahalli"
+                                              href="/locations/new-bel-road"
                                               passHref
                                             >
                                               <span className="cursor-pointer">
@@ -656,6 +624,63 @@ const Doctor = ({ doctor }) => {
                                             <button>
                                               <a
                                                 href={doctor.newBelRoadOnline}
+                                                className="text-left font-medium text-brandPink2 hover:underline"
+                                                target="_blank"
+                                                hrefLang="en-us"
+                                                rel="noreferrer"
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </td>
+                                      )}
+                                    </tr>
+                                  )}
+                                  {(doctor.nagarbhaviOnline ||
+                                    doctor.nagarbhaviPhysical) && (
+                                    <tr>
+                                      <td className="p-2 whitespace-nowrap">
+                                        <div className="flex items-center">
+                                          <div className="font-medium text-gray-800 flex items-center justify-center">
+                                            <div className="w-10 h-10 bg-brandPink flex items-center justify-center mr-2 sm:mr-3 text-white rounded-lg">
+                                              <SiGooglemaps className="text-2xl" />
+                                            </div>
+                                            <Link
+                                              href="/locations/nagarabhavi"
+                                              passHref
+                                            >
+                                              <span className="cursor-pointer">
+                                                Nagarabhavi
+                                              </span>
+                                            </Link>
+                                          </div>
+                                        </div>
+                                      </td>
+
+                                      {doctor?.nagarbhaviPhysical && (
+                                        <td className="p-2 whitespace-nowrap">
+                                          <div className="text-left font-medium text-brandPink2">
+                                            <button>
+                                              <a
+                                                href={doctor.nagarbhaviPhysical}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                hrefLang="en-us"
+                                                className="text-left font-medium text-brandPink2 hover:underline"
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </td>
+                                      )}
+                                      {doctor?.nagarbhaviOnline && (
+                                        <td className="p-2 whitespace-nowrap">
+                                          <div className="text-left">
+                                            <button>
+                                              <a
+                                                href={doctor.nagarbhaviOnline}
                                                 className="text-left font-medium text-brandPink2 hover:underline"
                                                 target="_blank"
                                                 hrefLang="en-us"
