@@ -9,7 +9,6 @@ import TagManager from "react-gtm-module";
 import { useRouter } from "next/router";
 import Loading from "components/Loading";
 import Head from "next/head";
-import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -63,7 +62,6 @@ function MyApp({ Component, pageProps }) {
           </main>
           <FloatPhone />
           <Footer />
-          <Analytics />
         </div>
       )}
       <Salesiq
