@@ -39,29 +39,28 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         {router.asPath.endsWith("/index") ? (
-          <link
-            rel="alternative"
-            href={`https://www.garbhagudi.com`}
-            hrefLang="en-us"
-          />
+          <>
+            <link
+              rel="alternative"
+              href={`https://www.garbhagudi.com`}
+              hrefLang="en-us"
+            />
+            <link rel="canonical" href={`https://www.garbhagudi.com`} />
+          </>
         ) : (
-          <link
-            rel="alternative"
-            href={`https://www.garbhagudi.com${router.asPath}`}
-            hrefLang="en-us"
-          />
+          <>
+            <link
+              rel="alternative"
+              href={`https://www.garbhagudi.com${router.asPath}`}
+              hrefLang="en-us"
+            />
+            <link
+              rel="canonical"
+              href={`https://www.garbhagudi.com${router.asPath}`}
+            />
+          </>
         )}
-        <link
-          rel="alternative"
-          href={`https://www.garbhagudi.com${router.asPath}`}
-          hrefLang="en-us"
-        />
         <meta httpEquiv="content-language" content="en-gb"></meta>
-
-        <link
-          rel="canonical"
-          href={`https://www.garbhagudi.com${router.asPath}`}
-        />
         <meta
           name="robots"
           content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard"
