@@ -8,6 +8,7 @@ const CountdownTimer = ({ dateTime }) => {
     seconds: 0,
   });
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const calculateCountdown = () => {
     const targetDate = new Date(dateTime).getTime();
     const now = new Date().getTime();
@@ -30,7 +31,7 @@ const CountdownTimer = ({ dateTime }) => {
   useEffect(() => {
     const intervalId = setInterval(calculateCountdown, 1000);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [calculateCountdown]);
 
   return (
     <div>

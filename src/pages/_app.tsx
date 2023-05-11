@@ -12,6 +12,7 @@ import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -37,12 +38,26 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        {router.asPath.endsWith("/index") ? (
+          <link
+            rel="alternative"
+            href={`https://www.garbhagudi.com`}
+            hrefLang="en-us"
+          />
+        ) : (
+          <link
+            rel="alternative"
+            href={`https://www.garbhagudi.com${router.asPath}`}
+            hrefLang="en-us"
+          />
+        )}
         <link
           rel="alternative"
           href={`https://www.garbhagudi.com${router.asPath}`}
           hrefLang="en-us"
         />
         <meta httpEquiv="content-language" content="en-gb"></meta>
+
         <link
           rel="canonical"
           href={`https://www.garbhagudi.com${router.asPath}`}
