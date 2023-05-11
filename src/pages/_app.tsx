@@ -9,10 +9,10 @@ import TagManager from "react-gtm-module";
 import { useRouter } from "next/router";
 import Loading from "components/Loading";
 import Head from "next/head";
-import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -38,12 +38,26 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        {router.asPath.endsWith("/index") ? (
+          <link
+            rel="alternative"
+            href={`https://www.garbhagudi.com`}
+            hrefLang="en-us"
+          />
+        ) : (
+          <link
+            rel="alternative"
+            href={`https://www.garbhagudi.com${router.asPath}`}
+            hrefLang="en-us"
+          />
+        )}
         <link
           rel="alternative"
           href={`https://www.garbhagudi.com${router.asPath}`}
           hrefLang="en-us"
         />
         <meta httpEquiv="content-language" content="en-gb"></meta>
+
         <link
           rel="canonical"
           href={`https://www.garbhagudi.com${router.asPath}`}
@@ -63,7 +77,6 @@ function MyApp({ Component, pageProps }) {
           </main>
           <FloatPhone />
           <Footer />
-          <Analytics />
         </div>
       )}
       <Salesiq

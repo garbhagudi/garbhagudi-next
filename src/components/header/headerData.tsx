@@ -1,4 +1,3 @@
-// import { SiGooglemaps } from "react-icons/ri";
 import { SiGooglemaps } from "react-icons/si";
 
 export const TreatmentHeader = {
