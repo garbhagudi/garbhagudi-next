@@ -115,15 +115,15 @@ const Home = ({ data }) => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>
-          Best IVF Centre in Bangalore | IVF Hospital in Bangalore | GarbhaGudi
+          Best IVF Centre in Bangalore | IVF Hospital in Bangalore - GarbhaGudi
         </title>
         <meta
           name="title"
-          content="Best IVF Centre in Bangalore | IVF Hospital in Bangalore | GarbhaGudi"
+          content="Best IVF Centre in Bangalore | IVF Hospital in Bangalore - GarbhaGudi"
         />
         <meta
           name="description"
-          content="GarbhaGudi is one of the best IVF centres in Bangalore with a high success rate for IVF / infertility treatment. Book a Consultation now with the best IVF Doctor in Bangalore."
+          content="GarbhaGudi is one of the best IVF Clinic in Bangalore with a high success rate for IVF / infertility treatment. Book a Consultation now with the best IVF hospital in Bangalore."
         />
         {/* Ld+JSON Data */}
 

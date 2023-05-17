@@ -19,14 +19,17 @@ const IndexPage = ({ branches }) => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Our Fertility Experts | GarbhaGudi IVF Centre</title>
+        <title>
+          Best IVF Doctor in Bangalore | IVF Specialist in Bangalore -
+          GarbhaGudi
+        </title>
         <meta
           name="title"
-          content="Top Infertility Hospital and Centres with Best Fertility Doctors in Banglore | Garbha Gudi"
+          content="Best IVF Doctor in Bangalore | IVF Specialist in Bangalore - GarbhaGudi"
         />
         <meta
           name="description"
-          content="GarbhaGudi is a well known and one of the best fertility hospitals in Bangalore and you can be sure of getting the best fertility care here. Our hospital specializes in IVF treatments and has helped hundreds of couples realize their dreams of parenthood."
+          content="Garbhagudi Hospital has the best team of highly experienced IVF doctors in Bangalore. Our Ivf specialists provide a High Success Rate. Book an appointment with the best IVF doctors in Bangalore today!"
         />
 
         {/* Open Graph / Facebook */}
