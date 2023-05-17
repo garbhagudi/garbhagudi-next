@@ -202,8 +202,6 @@ const Treatment = ({ treatment }) => {
       `,
     };
   }
-  const title = `${treatment?.title} | GarbhaGudi`;
-
   return (
     <div>
       <Head>

@@ -160,14 +160,16 @@ const Iui = (props: Props) => {
     <div>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Intra-Uterine Insemination - IUI | GarbhaGudi</title>
+        <title>
+          Best IUI Treatment in Bangalore | IUI Centre in Bangalore - GarbhaGudi
+        </title>
         <meta
           name="title"
-          content="Intra-Uterine Insemination - IUI | GarbhaGudi"
+          content="Best IUI Treatment in Bangalore | IUI Centre in Bangalore - GarbhaGudi"
         />
         <meta
           name="description"
-          content="IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy."
+          content="GarbhaGudi provides the high success rate IUI Treatment in Bangalore, Being one of the Best IUI Centre in Bangalore we provide the most affordable IUI Treatment cost in Bangalore. Book now!"
         />
 
         {/* Ld+JSON Data */}

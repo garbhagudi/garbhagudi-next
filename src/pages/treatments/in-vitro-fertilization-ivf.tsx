@@ -187,16 +187,14 @@ const Ivf = () => {
     <div>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>
-          Best IVF Treatment In Bangalore | IVF Cost In Bangalore - GarbhaGudi
-        </title>
+        <title>Best IVF Treatment In Bangalore | IVF In Bangalore</title>
         <meta
           name="title"
-          content="Best IVF Treatment In Bangalore | IVF Cost In Bangalore - GarbhaGudi"
+          content="Best IVF Treatment In Bangalore | IVF In Bangalore"
         />
         <meta
           name="description"
-          content="The IVF treatment cost In Bangalore starts onwards Rs 90,000/- Click to book an appointment for affordable IVF costs and get the best IVF treatment in Bangalore"
+          content="The best IVF Treatment in Bangalore is provided by the experienced and highly qualified team of doctors at Garbhagudi IVF Centre. Visit us for the best IVF experience."
         />
 
         {/* Ld+JSON Data */}

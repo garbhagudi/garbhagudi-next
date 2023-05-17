@@ -7,7 +7,7 @@ import IvfProcess from "sections/misc/ivf-cost/ivfProcess";
 import Head from "next/head";
 
 const IvfCost = () => {
-  const title = `Low IVF Cost in Bangalore in ${new Date().getFullYear()} | Best IVFTreatment in Bangalore - GarbhaGudi`;
+  const title = `Low IVF Cost in Bangalore in ${new Date().getFullYear()} | IVF Treatment Cost @90K - GarbhaGudi`;
   return (
     <div>
       <Head>
@@ -15,7 +15,7 @@ const IvfCost = () => {
         <meta name="title" content={title} />
         <meta
           name="description"
-          content="The IVF treatment cost In Bangalore starts onwards Rs 90,000/- Click to book an appointment for affordable IVF costs and get the best IVF treatment in Bangalore"
+          content="The IVF treatment cost In Bangalore starts onwards Rs 90,000/- Click to book an appointment for affordable IVF costs and get the best IVF treatment in Bangalore."
         />
         {/* Open Graph / Facebook */}
 
