@@ -208,14 +208,10 @@ const Treatment = ({ treatment }) => {
         {/* Primary Tags */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{`${
-          treatment.metaTitle || treatment?.title
-        } | GarbhaGudi IVF Centre`}</title>
+        <title>{`${treatment.metaTitle || treatment?.title}`}</title>
         <meta
           name="title"
-          content={`${
-            treatment.metaTitle || treatment?.title
-          } | GarbhaGudi IVF Centre`}
+          content={`${treatment.metaTitle || treatment?.title}`}
         />
         <meta
           name="description"
