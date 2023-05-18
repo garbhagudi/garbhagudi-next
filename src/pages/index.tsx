@@ -203,7 +203,7 @@ const Home = ({ data }) => {
         ))}
       </Carousel>
       <HomeComponent />
-      <div className="bg-neutral-50" id="ourTeam">
+      <div className="bg-purple-100/70" id="ourTeam">
         <div className="px-4 py-16 mx-auto text-center max-w-[1366px] sm:px-6 lg:px-8 lg:py-12">
           <div className="space-y-12">
             <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
@@ -222,18 +222,21 @@ const Home = ({ data }) => {
                 return (
                   <div
                     key={item?.id}
-                    className="transition-all duration-500 hover:scale-125"
+                    className="hover:scale-115 transition-all duration-150"
                   >
                     <Link href={`/fertility-experts/${item?.slug}`} passHref>
                       <div className="space-y-4">
-                        <Image
-                          className="mx-auto my-auto mt-4 shadow-3xl transition-all duration-300 rounded-full xl:w-40 xl:h-40 drop-shadow-2xl"
-                          src={item?.image?.url}
-                          alt={item?.imageAlt || item?.name}
-                          width={500}
-                          height={500}
-                          loading="lazy"
-                        />
+                        <div className="relative">
+                          <div className="h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]"></div>
+                          <Image
+                            className="rounded-full shadow-2xl drop-shadow-2xl bg-transparent"
+                            src={item?.image?.url}
+                            alt={item?.imageAlt || item?.name}
+                            width={500}
+                            height={500}
+                            loading="lazy"
+                          />
+                        </div>
                         <div className="space-y-0.5">
                           <h3 className="text-brandDark text-lg font-heading font-bold">
                             {item?.name}
