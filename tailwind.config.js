@@ -144,6 +144,7 @@ module.exports = {
       shake: "shake 500ms cubic-bezier(.36,.07,.19,.97)",
       wave: "wave 2s linear infinite",
       shine: "shine 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite",
+      rotate: "spin 5s linear infinite",
     },
     aspectRatio: {
       auto: "auto",
@@ -383,12 +384,12 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        "Roboto",
         "ui-sans-serif",
         "system-ui",
         "-apple-system",
         "BlinkMacSystemFont",
         '"Segoe UI"',
-        "Roboto",
         '"Helvetica Neue"',
         "Arial",
         '"Noto Sans"',
@@ -657,6 +658,14 @@ module.exports = {
         },
         "50%": {
           "background-position": "100% 50%",
+        },
+      },
+      roatate: {
+        "0%": {
+          background: { transform: "rotate(0deg)" },
+        },
+        "100%": {
+          background: { transform: "rotate(360deg)" },
         },
       },
     },
