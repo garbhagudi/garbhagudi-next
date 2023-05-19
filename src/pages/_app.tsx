@@ -69,7 +69,7 @@ function MyApp({ Component, pageProps }) {
       {loading ? (
         <Loading />
       ) : (
-        <div>
+        <div className="selection:bg-brandPink selection:text-white">
           <Nav />
           <main className="min-h-screen">
             <Component {...pageProps} />
