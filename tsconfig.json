@@ -24,7 +24,9 @@
     "src/components/SalesIQ.tsx",
     "src/pages/tools/ovulation-calculator/index..jsx",
     "src/sections/misc/ivf-cost/ivfProcess.jsx",
-    "src/pages/_app.tsx"
+    "src/pages/_app.tsx",
+    "src/sections/gg-care/MapComponent.jsx",
+    "src/pages/gg-care/nearest-location.tsx"
   ],
   "exclude": ["node_modules"]
 }
