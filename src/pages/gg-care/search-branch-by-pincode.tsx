@@ -25,7 +25,12 @@ const NearestZipcodeFinder: React.FC<Props> = () => {
   const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputZipcode(e.target.value);
+    const inputValue = e.target.value;
+
+    // Validate input to allow only 6-digit numbers
+    if (inputValue.length <= 6 && /^\d*$/.test(inputValue)) {
+      setInputZipcode(inputValue);
+    }
   };
 
   const handleFindNearest = async () => {

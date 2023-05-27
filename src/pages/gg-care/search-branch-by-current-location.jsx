@@ -71,6 +71,7 @@ const SearchComponent = () => {
       setNearestLocation(nearest);
       calculateDirections(currentLocation, nearest);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentLocation]);
 
   const getDistance = (start, end) => {
