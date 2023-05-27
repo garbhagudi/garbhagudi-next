@@ -1,53 +1,40 @@
-import React from "react";
+import React, { useRef } from "react";
 import Head from "next/head";
 import HomeComponent from "sections/home";
 import Link from "next/link";
 import Faq from "sections/home/faq";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Scrollbar } from "swiper";
+import { Navigation } from "swiper";
 import Image from "next/image";
 import apolloClient from "lib/apollo-graphcms";
 import { gql } from "@apollo/client";
 
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 1,
+const breakpoints = {
+  0: {
+    slidesPerView: 1,
+    spaceBetween: 0,
   },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 1,
+  768: {
+    slidesPerView: 1,
+    spaceBetween: 30,
   },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
+  1024: {
+    slidesPerView: 1,
+    spaceBetween: 30,
   },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
-
-const responsive2 = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 4,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
+  1601: {
+    slidesPerView: 1,
+    spaceBetween: 30,
   },
 };
 
 const Home = ({ data }) => {
+  const swiperRef = useRef<SwiperCore>();
+  const swiperRef2 = useRef<SwiperCore>();
   function addOrgJsonLd() {
     return {
       __html: `{
@@ -179,29 +166,45 @@ const Home = ({ data }) => {
           content="mzhcIRsJx6D4QkbJJp3Tepas8Lyv6sJLWmGb0DvKOrw"
         />
       </Head>
-      <Carousel
-        responsive={responsive}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        ssr={true}
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={5000}
-      >
-        {data?.banners.map((items: any) => (
-          <div className="" key={items?.id}>
-            <Link href={items?.url} target="_blank" rel="noreferrer">
-              <Image
-                src={items?.image?.url}
-                alt={items?.title}
-                width={1920}
-                height={630}
-                className="w-full h-full"
-                priority
-              />
-            </Link>
-          </div>
-        ))}
-      </Carousel>
+      <div className="relative mx-auto flex flex-row items-center justify-center">
+        <button
+          onClick={() => swiperRef.current?.slidePrev()}
+          className="bg-brandPink text-white rounded-full z-10 p-2 absolute left-0 ml-4 hidden md:block"
+        >
+          <HiChevronLeft className="text-2xl" />
+        </button>
+        <Swiper
+          modules={[Navigation, Scrollbar]}
+          onBeforeInit={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          breakpoints={breakpoints}
+          className=""
+          loop={true}
+          pagination={true}
+        >
+          {data?.banners.map((items: any) => (
+            <SwiperSlide key={items.id}>
+              <Link href={items?.url} target="_blank" rel="noreferrer">
+                <Image
+                  src={items?.image?.url}
+                  alt={items?.title}
+                  width={1920}
+                  height={630}
+                  className="w-full h-full"
+                  priority
+                />
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <button
+          onClick={() => swiperRef.current?.slideNext()}
+          className="bg-brandPink text-white rounded-full p-2 z-10 absolute right-0 mr-4 hidden md:block"
+        >
+          <HiChevronRight className="text-2xl" />
+        </button>
+      </div>
       <HomeComponent />
       <div className="bg-purple-100/70" id="ourTeam">
         <div className="px-4 py-16 mx-auto text-center max-w-[1366px] sm:px-6 lg:px-8 lg:py-12">
@@ -254,49 +257,70 @@ const Home = ({ data }) => {
                 );
               })}
             </div>
-            <div className="lg:hidden">
-              <Carousel
-                responsive={responsive2}
-                ssr={true}
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={5000}
+            <div className="relative mx-auto flex flex-row items-center justify-center lg:hidden">
+              <button
+                onClick={() => swiperRef2.current?.slidePrev()}
+                className="bg-brandPink text-white rounded-full z-10 p-2 absolute left-0 ml-4 "
+              >
+                <HiChevronLeft className="text-2xl" />
+              </button>
+              <Swiper
+                modules={[Navigation, Scrollbar]}
+                onBeforeInit={(swiper) => {
+                  swiperRef2.current = swiper;
+                }}
+                breakpoints={breakpoints}
+                className=""
+                loop={true}
+                pagination={true}
+                autoplay
               >
                 {data?.doctors.map((item: any) => {
                   return (
-                    <div
-                      key={item?.id}
-                      className="mb-2 transition-all duration-500 rounded-xl "
-                    >
-                      <Link href={`/fertility-experts/${item?.slug}`} passHref>
-                        <div className="space-y-4">
-                          <Image
-                            className="w-56 h-56 mx-auto my-auto mt-4 transition-all duration-500 rounded-full xl:w-44 xl:h-44 hover:scale-110"
-                            src={item?.image?.url}
-                            alt={item?.name || item?.imageAlt}
-                            width={500}
-                            height={500}
-                            loading="lazy"
-                          />
+                    <SwiperSlide key={item.id}>
+                      <div className="mb-2 transition-all duration-500 rounded-xl ">
+                        <Link
+                          href={`/fertility-experts/${item?.slug}`}
+                          passHref
+                        >
                           <div className="space-y-4">
-                            <div className="space-y-1 text-lg font-medium leading-6">
-                              <h3 className="text-brandDark font-content">
-                                {item?.name}
-                              </h3>
-                              <p className="text-sm text-brandPurpleDark font-content">
-                                {item?.qualification}
-                              </p>
-                              <p className="pb-2 text-sm text-brandPink font-content">
-                                {item?.designation}
-                              </p>
+                            <div className="relative h-56 w-56 mx-auto">
+                              <div className="h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]"></div>
+                              <Image
+                                className="rounded-full shadow-2xl drop-shadow-2xl bg-transparent"
+                                src={item?.image?.url}
+                                alt={item?.imageAlt || item?.name}
+                                width={500}
+                                height={500}
+                                loading="lazy"
+                              />
+                            </div>
+                            <div className="space-y-4">
+                              <div className="space-y-1 text-lg font-medium leading-6">
+                                <h3 className="text-brandDark font-content">
+                                  {item?.name}
+                                </h3>
+                                <p className="text-sm text-brandPurpleDark font-content">
+                                  {item?.qualification}
+                                </p>
+                                <p className="pb-2 text-sm text-brandPink font-content">
+                                  {item?.designation}
+                                </p>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </Link>
-                    </div>
+                        </Link>
+                      </div>
+                    </SwiperSlide>
                   );
                 })}
-              </Carousel>
+              </Swiper>
+              <button
+                onClick={() => swiperRef2.current?.slideNext()}
+                className="bg-brandPink text-white rounded-full p-2 z-10 absolute right-0 mr-4"
+              >
+                <HiChevronRight className="text-2xl" />
+              </button>
             </div>
           </div>
         </div>

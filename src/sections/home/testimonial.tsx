@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
-import "react-multi-carousel/lib/styles.css";
 import { FcGoogle } from "react-icons/fc";
 import { MdOutlineSwipeLeft, MdOutlineRateReview } from "react-icons/md";
 import Image from "next/image";

@@ -6,6 +6,7 @@ import Cta from "sections/gg-care/cta";
 import Video from "sections/gg-care/workflow";
 import Head from "next/head";
 import Share from "components/share";
+import FindBranch from "sections/gg-care/find-branch";
 
 const IndexPage = () => {
   return (
@@ -65,6 +66,7 @@ const IndexPage = () => {
       <Video />
       <Stats />
       <Contact />
+      <FindBranch />
       <div className="mb-5">
         <Share pinmedia="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg" />
       </div>
