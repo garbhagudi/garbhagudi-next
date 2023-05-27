@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import SwiperCore, { Scrollbar } from "swiper";
+import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const data = [
   { id: 1, videoId: "xIvoIRASbgg" },
@@ -17,58 +21,74 @@ const data = [
   { id: 10, videoId: "Djje6h177kU" },
 ];
 
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 1,
+const breakpoints = {
+  0: {
+    slidesPerView: 1,
+    spaceBetween: 0,
   },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 1,
+  768: {
+    slidesPerView: 1,
+    spaceBetween: 30,
   },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
+  1024: {
+    slidesPerView: 1,
+    spaceBetween: 30,
   },
-  mobile: {
-    breakpoint: { max: 560, min: 0 },
-    items: 1,
+  1601: {
+    slidesPerView: 1,
+    spaceBetween: 30,
   },
 };
 
 const Video = () => {
+  const swiperRef = useRef<SwiperCore>();
   return (
-    <div className="max-w-7xl mx-auto  my-8">
-      <h2 className="text-2xl lg:text-4xl text-center font-extrabold text-brandDark font-heading flex items-center justify-center">
-        Testimonials from our happy couples
-      </h2>
-      <div className="px-3 sm:px-0">
-        <Carousel
-          responsive={responsive}
-          autoPlaySpeed={360000}
-          focusOnSelect={true}
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          ssr={true}
-          infinite={true}
-          showDots={true}
-          swipeable={true}
-          draggable={true}
-        >
-          {data.map((item) => {
-            return (
-              <div
-                className="md:w-8/12 mx-auto aspect-video mt-8 overflow-hidden rounded-3xl border-2 border-brandPink sm:px-0"
-                key={item.id}
-              >
-                <LiteYouTubeEmbed
-                  id={item.videoId}
-                  title="Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay"
-                  poster="maxresdefault"
-                />
-              </div>
-            );
-          })}
-        </Carousel>
+    <div className="bg-gradient-to-br from-brandPink5 to-brandPurple2">
+      <div className="max-w-7xl mx-auto py-8">
+        <h2 className="text-2xl lg:text-4xl text-center font-extrabold text-brandDark font-heading flex items-center justify-center">
+          Testimonials from our happy couples
+        </h2>
+        <div className="px-3 sm:px-0 relative max-w-7xl mx-auto flex flex-row items-center justify-center">
+          <button
+            onClick={() => swiperRef.current?.slidePrev()}
+            className="bg-brandPink text-white rounded-full z-10 p-2 absolute left-0 ml-4 hidden md:block"
+          >
+            <HiChevronLeft className="text-2xl" />
+          </button>
+          <Swiper
+            modules={[Navigation, Scrollbar]}
+            onBeforeInit={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            breakpoints={breakpoints}
+            className="max-w-6xl"
+            loop={true}
+            pagination={true}
+          >
+            {data.map((item) => {
+              return (
+                <SwiperSlide key={item.id}>
+                  <div
+                    className="md:w-8/12 mx-auto aspect-video mt-8 overflow-hidden rounded-3xl border-2 border-brandPink sm:px-0"
+                    key={item.id}
+                  >
+                    <LiteYouTubeEmbed
+                      id={item.videoId}
+                      title="Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay"
+                      poster="maxresdefault"
+                    />
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+          <button
+            onClick={() => swiperRef.current?.slideNext()}
+            className="bg-brandPink text-white rounded-full p-2 z-10 absolute right-0 mr-4 hidden md:block"
+          >
+            <HiChevronRight className="text-2xl" />
+          </button>
+        </div>
       </div>
     </div>
   );

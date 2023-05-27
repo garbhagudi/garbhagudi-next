@@ -1,4 +1,5 @@
 import { SiGooglemaps } from "react-icons/si";
+import { FaRoad } from "react-icons/fa";
 
 export const TreatmentHeader = {
   female: [
@@ -239,6 +240,11 @@ export const Location = [
     href: "/locations/nagarabhavi",
     icon: <SiGooglemaps />,
     short: "NBV",
+  },
+  {
+    name: "Find Nearest Location",
+    href: "/gg-care#nearest-location",
+    icon: <FaRoad />,
   },
 ];
 

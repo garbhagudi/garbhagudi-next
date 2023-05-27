@@ -4,7 +4,7 @@ import { FaSearchLocation, FaLocationArrow } from "react-icons/fa";
 
 const FindBranch = () => {
   return (
-    <div>
+    <div id="nearest-location">
       <h4 className="text-4xl text-center px-2 font-heading py-6 font-bold">
         Find the nearest Branch
       </h4>
