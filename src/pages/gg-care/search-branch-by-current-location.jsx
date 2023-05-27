@@ -6,6 +6,7 @@ import {
   DirectionsService,
   DirectionsRenderer,
 } from "@react-google-maps/api";
+import Head from "next/head";
 
 const SearchComponent = () => {
   const [currentLocation, setCurrentLocation] = useState(null);
@@ -107,6 +108,55 @@ const SearchComponent = () => {
 
   return (
     <div>
+      <Head>
+        {/* Primary Tags */}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Search branch by Current Location | GarbhaGudi IVF Centre</title>
+        <meta
+          name="title"
+          content="Search branch by Current Location | GarbhaGudi IVF Centre"
+        />
+        <meta
+          name="description"
+          content="To book an appointment for your Fertility and IVF treatment in GarbhaGudi, you can contact on 9108910832 or you can also Email us on dreams@garbhagudi.com."
+        />
+
+        {/* Open Graph / Facebook */}
+
+        <meta
+          property="og:title"
+          content="Search branch by Current Location | GarbhaGudi IVF Centre"
+        />
+        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
+        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta
+          property="og:description"
+          content="Reach out with your questions, concerns and challenges. Or just to say hi. We're always standing by and eager to help."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg"
+        />
+
+        {/* Twitter*/}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta
+          name="twitter:title"
+          content="Search branch by Current Location | GarbhaGudi IVF Centre"
+        />
+        <meta
+          name="twitter:description"
+          content="Reach out with your questions, concerns and challenges. Or just to say hi. We're always standing by and eager to help."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg"
+        />
+      </Head>
       <h1 className="text-center pt-8 font-heading text-2xl lg:text-4xl font-bold">
         Nearest Branch
       </h1>

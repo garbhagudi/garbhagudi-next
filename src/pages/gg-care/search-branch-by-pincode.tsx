@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaSpinner } from "react-icons/fa";
+import Head from "next/head";
 
 // List of available zipcodes
 const availableZipcodes = [
@@ -109,73 +110,125 @@ const NearestZipcodeFinder: React.FC<Props> = () => {
   };
 
   return (
-    <div className="flex items-center justify-center flex-col mt-10">
-      <h1 className="py-6 lg:pt-12 pb-6 font-heading text-3xl lg:text-4xl font-semibold px-2 text-center">
-        Find Your Nearest GarbhaGudi Branch
-      </h1>
-      <p className="pb-6 font-content px-3">
-        Enter your Zipcode / Pincode to find your nearest GarbhaGudi Branch
-      </p>
-      <input
-        type="text"
-        placeholder="Enter you Zip Code"
-        value={inputZipcode}
-        onChange={handleInputChange}
-        className="border-2 border-brandPurpleDark rounded-lg px-3 py-2 text-center text-brandPink focus:border-brandPink focus:outline-none text-lg font-content font-semibold"
-      />
-      <button
-        onClick={handleFindNearest}
-        disabled={loading}
-        className="font-content text-center mx-auto mt-4 px-3 py-2 border-brandPink3 border-2 rounded-lg hover:bg-brandPink3 hover:text-white font-semibold w-48 h-11"
-      >
-        {loading ? (
-          <FaSpinner className="text-center mx-auto animate-spin" />
-        ) : (
-          "Find Nearest Branch"
-        )}
-      </button>
-      <div className="py-6 md:py-12">
-        {locations.map(
-          (items) =>
-            nearestZipcode &&
-            nearestZipcode === items.zipCode && (
-              <div
-                key={items.id}
-                className="flex flex-col md:flex-row max-w-5xl bg-gray-200 p-3 rounded-lg"
-              >
-                <div className=" px-3 md:px-0 w-full md:w-6/12 ">
-                  <img
-                    src={items.image}
-                    alt={items.name}
-                    className="rounded-lg"
-                  />
-                </div>
-                <div className="ml-5 flex items-center md:items-start justify-center space-y-3 flex-col">
-                  <div className="text-2xl font-heading mt-4 md:mt-0">
-                    GarbhaGudi IVF Centre, {items.name}
-                  </div>
-                  <div className="font-content md:text-left text-lg text-center">
-                    {items.address}
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <a
-                      href={`tel:${items.phone}`}
-                      className="bg-brandPink text-center w-32 mr-5 px-3 py-2 rounded-lg font-content text-white font-semibold"
-                    >
-                      Call Now
-                    </a>
+    <div>
+      <Head>
+        {/* Primary Tags */}
 
-                    <a
-                      href={items.directionLink}
-                      className="bg-brandPink text-center w-44 px-3 py-2 rounded-lg font-content text-white font-semibold"
-                    >
-                      Maps / Directions
-                    </a>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Search branch by pincode | GarbhaGudi IVF Centre</title>
+        <meta
+          name="title"
+          content="Search branch by pincode | GarbhaGudi IVF Centre"
+        />
+        <meta
+          name="description"
+          content="To book an appointment for your Fertility and IVF treatment in GarbhaGudi, you can contact on 9108910832 or you can also Email us on dreams@garbhagudi.com."
+        />
+
+        {/* Open Graph / Facebook */}
+
+        <meta
+          property="og:title"
+          content="Search branch by pincode | GarbhaGudi IVF Centre"
+        />
+        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
+        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta
+          property="og:description"
+          content="Reach out with your questions, concerns and challenges. Or just to say hi. We're always standing by and eager to help."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg"
+        />
+
+        {/* Twitter*/}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta
+          name="twitter:title"
+          content="Search branch by pincode | GarbhaGudi IVF Centre"
+        />
+        <meta
+          name="twitter:description"
+          content="Reach out with your questions, concerns and challenges. Or just to say hi. We're always standing by and eager to help."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg"
+        />
+      </Head>
+
+      <div className="flex items-center justify-center flex-col mt-10">
+        <h1 className="py-6 lg:pt-12 pb-6 font-heading text-3xl lg:text-4xl font-semibold px-2 text-center">
+          Find Your Nearest GarbhaGudi Branch
+        </h1>
+        <p className="pb-6 font-content px-3">
+          Enter your Zipcode / Pincode to find your nearest GarbhaGudi Branch
+        </p>
+        <input
+          type="text"
+          placeholder="Enter you Zip Code"
+          value={inputZipcode}
+          onChange={handleInputChange}
+          className="border-2 border-brandPurpleDark rounded-lg px-3 py-2 text-center text-brandPink focus:border-brandPink focus:outline-none text-lg font-content font-semibold"
+        />
+        <button
+          onClick={handleFindNearest}
+          disabled={loading}
+          className="font-content text-center mx-auto mt-4 px-3 py-2 border-brandPink3 border-2 rounded-lg hover:bg-brandPink3 hover:text-white font-semibold w-48 h-11"
+        >
+          {loading ? (
+            <FaSpinner className="text-center mx-auto animate-spin" />
+          ) : (
+            "Find Nearest Branch"
+          )}
+        </button>
+        <div className="py-6 md:py-12">
+          {locations.map(
+            (items) =>
+              nearestZipcode &&
+              nearestZipcode === items.zipCode && (
+                <div
+                  key={items.id}
+                  className="flex flex-col md:flex-row max-w-5xl bg-gray-200 p-3 rounded-lg"
+                >
+                  <div className=" px-3 md:px-0 w-full md:w-6/12 ">
+                    <img
+                      src={items.image}
+                      alt={items.name}
+                      className="rounded-lg"
+                    />
+                  </div>
+                  <div className="ml-5 flex items-center md:items-start justify-center space-y-3 flex-col">
+                    <div className="text-2xl font-heading mt-4 md:mt-0">
+                      GarbhaGudi IVF Centre, {items.name}
+                    </div>
+                    <div className="font-content md:text-left text-lg text-center">
+                      {items.address}
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <a
+                        href={`tel:${items.phone}`}
+                        className="bg-brandPink text-center w-32 mr-5 px-3 py-2 rounded-lg font-content text-white font-semibold"
+                      >
+                        Call Now
+                      </a>
+
+                      <a
+                        href={items.directionLink}
+                        className="bg-brandPink text-center w-44 px-3 py-2 rounded-lg font-content text-white font-semibold"
+                      >
+                        Maps / Directions
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )
-        )}
+              )
+          )}
+        </div>
       </div>
     </div>
   );
