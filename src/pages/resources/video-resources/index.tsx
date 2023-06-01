@@ -319,10 +319,10 @@ const IndexPage = ({
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
                     <div
-                      className="flex flex-col font-content mx-auto space-y-4 overflow-y-auto customScrollbar lg:max-h-[38rem]"
+                      className="flex flex-col font-content space-y-4 overflow-y-auto lg:customScrollbar lg:max-h-[38rem]"
                       id="style-4"
                     >
-                      <div className="px-3 py-4 font-bold text-center text-md font-heading sticky top-0 bg-gray-200">
+                      <div className="px-3 py-4 font-bold text-center text-md font-heading sticky top-0 bg-brandPink text-white rounded-md lg:rounded-r-none">
                         Recommended
                       </div>
                       {recommended?.items.map((item) => {
@@ -393,10 +393,10 @@ const IndexPage = ({
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
                     <div
-                      className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto customScrollbar lg:max-h-[38rem]"
+                      className="flex flex-col font-content space-y-4 overflow-y-auto lg:customScrollbar lg:max-h-[38rem]"
                       id="style-4"
                     >
-                      <div className="px-3 py-4 font-bold text-center text-md font-heading">
+                      <div className="px-3 py-4 font-bold text-center text-md font-heading sticky top-0 bg-brandPink text-white rounded-md lg:rounded-r-none">
                         GarbhaSandesha
                       </div>
                       {garbhasandesha.items.map((item) => {
@@ -467,10 +467,10 @@ const IndexPage = ({
                 <div className="md:ml-10 lg:col-span-2">
                   <section className="flex items-center justify-center mt-8 ">
                     <div
-                      className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto customScrollbar lg:max-h-[38rem]"
+                      className="flex flex-col font-content space-y-4 overflow-y-auto lg:customScrollbar lg:max-h-[38rem]"
                       id="style-4"
                     >
-                      <div className="px-3 py-4 font-bold text-center text-md font-heading">
+                      <div className="px-3 py-4 font-bold text-center text-md font-heading sticky top-0 bg-brandPink text-white rounded-md lg:rounded-r-none">
                         TV Appearances
                       </div>
                       {tvAppearance?.items.map((item) => {
@@ -539,12 +539,12 @@ const IndexPage = ({
                   </div>
                 </div>
                 <div className="md:ml-10 lg:col-span-2">
-                  <div className="flex items-center justify-center mt-8 ">
+                  <section className="flex items-center justify-center mt-8 ">
                     <div
-                      className="flex flex-col font-content mx-auto mb-10 space-y-4 overflow-y-auto customScrollbar lg:max-h-[38rem]"
+                      className="flex flex-col font-content space-y-4 overflow-y-auto lg:customScrollbar lg:max-h-[38rem]"
                       id="style-4"
                     >
-                      <div className="px-3 py-4 font-bold text-center text-md font-heading">
+                      <div className="px-3 py-4 font-bold text-center text-md font-heading sticky top-0 bg-brandPink text-white rounded-md lg:rounded-r-none">
                         Testimonials
                       </div>
                       {testimonials?.items.map((item) => {
@@ -570,7 +570,7 @@ const IndexPage = ({
                         );
                       })}
                     </div>
-                  </div>
+                  </section>
                 </div>
               </div>
             </Tab.Panel>
