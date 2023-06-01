@@ -12,10 +12,9 @@ const Banner = () => {
         <div className="font-content max-w-7xl mx-auto relative px-3">
           <div>
             <p className="font-semibold">
-              The price of in-vitro fertilisation (IVF) varies from person to
-              person and depends on a variety of variables. In Bangalore,
-              depending on the complexity of the case, a preliminary cost can
-              fall between ₹1,00,000 and ₹4,00,000.
+              The preliminary cost of IVF treatment in Bangalore fall between
+              ₹1,00,000 and ₹4,00,000 varies from person to person and depends
+              on a variety of variables depending on the complexity of the case
             </p>
             <div className="grid grid-cols-1 lg:grid-cols-2 font-semibold">
               <div className=" mt-8 flex flex-col items-start justify-start max-w-lg">
