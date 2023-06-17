@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import AccordionLayout from "../Faq/FaqLayout";
+import React, { useState } from 'react';
+import AccordionLayout from '../Faq/FaqLayout';
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   return (
-    <div className="max-w-4xl mx-auto pb-10 px-3 lg:px-0">
-      <h3 className="text 3xl lg:text-4xl font-heading font-bold py-10 lg:py-16 text-center">
+    <div className='max-w-4xl mx-auto pb-10 px-3 lg:px-0'>
+      <h3 className='text 3xl lg:text-4xl font-heading font-bold py-10 lg:py-16 text-center'>
         Frequently Asked Questions
       </h3>
       {Data.map((items) => (
@@ -27,7 +27,7 @@ export default FAQ;
 
 const Data = [
   {
-    title: "What is the procedure to register for PARIPOORNA offer?",
+    title: 'What is the procedure to register for PARIPOORNA offer?',
     contents: (
       <div>
         Visit any of our centres during the registration for PARIPOORNA plan,
@@ -36,7 +36,7 @@ const Data = [
     ),
   },
   {
-    title: "Who is eligible for the PARIPOORNA offer?",
+    title: 'Who is eligible for the PARIPOORNA offer?',
     contents: (
       <div>
         This plan is specially designed for couples looking for infertility

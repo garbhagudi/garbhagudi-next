@@ -1,16 +1,16 @@
-import React from "react";
-import Banner from "sections/location/banner";
-import TreatmentOptions from "sections/location/treatments";
-import apolloClient from "lib/apollo-graphcms";
-import { gql } from "@apollo/client";
-import Faq from "sections/location/faq";
-import Cta from "sections/gg-care/cta";
-import QuickLinks from "sections/location/quickLinks";
-import VirtualTour from "sections/location/virtualTour";
-import MapSection from "sections/location/mapSection";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import Loading from "components/Loading";
+import React from 'react';
+import Banner from 'sections/location/banner';
+import TreatmentOptions from 'sections/location/treatments';
+import apolloClient from 'lib/apollo-graphcms';
+import { gql } from '@apollo/client';
+import Faq from 'sections/location/faq';
+import Cta from 'sections/gg-care/cta';
+import QuickLinks from 'sections/location/quickLinks';
+import VirtualTour from 'sections/location/virtualTour';
+import MapSection from 'sections/location/mapSection';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Loading from 'components/Loading';
 
 const Branch = ({ branch }) => {
   const router = useRouter();
@@ -23,27 +23,27 @@ const Branch = ({ branch }) => {
       <Head>
         {/* Primary Tags */}
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{branch?.metaTitle}</title>
-        <meta name="title" content={branch?.metaTitle} />
-        <meta name="description" content={branch?.metaDescription} />
+        <meta name='title' content={branch?.metaTitle} />
+        <meta name='description' content={branch?.metaDescription} />
 
         {/* Open Graph / Facebook */}
 
-        <meta property="og:title" content={branch?.metaTitle} />
-        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
-        <meta property="og:url" content="https://garbhagudi.com" />
-        <meta property="og:description" content={branch?.metaDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content={branch?.branchPicture.url} />
+        <meta property='og:title' content={branch?.metaTitle} />
+        <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
+        <meta property='og:url' content='https://garbhagudi.com' />
+        <meta property='og:description' content={branch?.metaDescription} />
+        <meta property='og:type' content='website' />
+        <meta property='og:image' content={branch?.branchPicture.url} />
 
         {/* Twitter*/}
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@garbhagudiivf" />
-        <meta name="twitter:title" content={branch?.metaTitle} />
-        <meta name="twitter:description" content={branch?.metaDescription} />
-        <meta name="twitter:image" content={branch?.branchPicture.url} />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@garbhagudiivf' />
+        <meta name='twitter:title' content={branch?.metaTitle} />
+        <meta name='twitter:description' content={branch?.metaDescription} />
+        <meta name='twitter:image' content={branch?.branchPicture.url} />
       </Head>
       <Banner branchTitle={branch.title} />
       <TreatmentOptions branch={branch?.title} />

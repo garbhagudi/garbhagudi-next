@@ -1,5 +1,5 @@
-import React from "react";
-import GarbhaGudiWay from "sections/tools/gg-way";
+import React from 'react';
+import GarbhaGudiWay from 'sections/tools/gg-way';
 
 const GGWays = () => {
   return (

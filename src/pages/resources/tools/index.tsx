@@ -1,7 +1,7 @@
-import React from "react";
-import Link from "next/link";
-import BlogFooter from "components/blogFooter";
-import Head from "next/head";
+import React from 'react';
+import Link from 'next/link';
+import BlogFooter from 'components/blogFooter';
+import Head from 'next/head';
 
 const IndexPage = () => {
   return (
@@ -9,71 +9,71 @@ const IndexPage = () => {
       <Head>
         {/* Primary Tags */}
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Tools and Calculator | GarbhaGudi</title>
         <meta
-          name="title"
-          content="Tools and Calculator | GarbhaGudi IVF Centre"
+          name='title'
+          content='Tools and Calculator | GarbhaGudi IVF Centre'
         />
         <meta
-          name="description"
-          content="Use these tools to know your fertility quotient, check for your next menstrual cycle, fertile window, pregnancy due date and more..."
+          name='description'
+          content='Use these tools to know your fertility quotient, check for your next menstrual cycle, fertile window, pregnancy due date and more...'
         />
 
         {/* Open Graph / Facebook */}
 
         <meta
-          property="og:title"
-          content="Tools and Calculator | GarbhaGudi IVF Centre"
+          property='og:title'
+          content='Tools and Calculator | GarbhaGudi IVF Centre'
         />
-        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
-        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
+        <meta property='og:url' content='https://garbhagudi.com' />
         <meta
-          property="og:description"
-          content="Use these tools to know your fertility quotient, check for your next menstrual cycle, fertile window, pregnancy due date and more..."
+          property='og:description'
+          content='Use these tools to know your fertility quotient, check for your next menstrual cycle, fertile window, pregnancy due date and more...'
         />
-        <meta property="og:type" content="website" />
+        <meta property='og:type' content='website' />
         <meta
-          property="og:image"
-          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg"
+          property='og:image'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg'
         />
 
         {/* Twitter*/}
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@garbhagudiivf' />
         <meta
-          name="twitter:title"
-          content="Tools and Calculator | GarbhaGudi IVF Centre"
+          name='twitter:title'
+          content='Tools and Calculator | GarbhaGudi IVF Centre'
         />
         <meta
-          name="twitter:description"
-          content="Use these tools to know your fertility quotient, check for your next menstrual cycle, fertile window, pregnancy due date and more..."
+          name='twitter:description'
+          content='Use these tools to know your fertility quotient, check for your next menstrual cycle, fertile window, pregnancy due date and more...'
         />
         <meta
-          name="twitter:image"
-          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg"
+          name='twitter:image'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg'
         />
       </Head>
-      <h1 className="pt-12 mx-auto text-4xl font-semibold text-center max-w-7xl font-heading">
+      <h1 className='pt-12 mx-auto text-4xl font-semibold text-center max-w-7xl font-heading'>
         Tools and Calcualtors
       </h1>
-      <p className="px-2 pt-6 mx-auto font-semibold text-center max-w-7xl font-content"></p>
-      <div className="flex py-6 mx-auto max-w-7xl sm:py-12">
-        <div className="grid grid-cols-1 gap-10 mx-auto lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
+      <p className='px-2 pt-6 mx-auto font-semibold text-center max-w-7xl font-content'></p>
+      <div className='flex py-6 mx-auto max-w-7xl sm:py-12'>
+        <div className='grid grid-cols-1 gap-10 mx-auto lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1'>
           {Data.map((item) => (
             <Link href={`tools/${item.link}`} passHref key={item.id}>
-              <div className="flex px-4 py-3 transition-colors duration-100 border-2 border-solid cursor-pointer border-brandPink w-96 rounded-2xl hover:bg-brandPink hover:text-white hover:border-transparent ">
-                <div className="w-1/3">
+              <div className='flex px-4 py-3 transition-colors duration-100 border-2 border-solid cursor-pointer border-brandPink w-96 rounded-2xl hover:bg-brandPink hover:text-white hover:border-transparent '>
+                <div className='w-1/3'>
                   <img
-                    className="object-cover w-24 h-24 rounded-2xl"
+                    className='object-cover w-24 h-24 rounded-2xl'
                     src={item.icon}
                     alt={item.name}
                   />
                 </div>
-                <div className="flex flex-col justify-center w-2/3 text-center">
-                  <p className="text-xl font-semibold font-qs">{item.name}</p>
-                  <p className="text-xs italic font-semibold font-content">
+                <div className='flex flex-col justify-center w-2/3 text-center'>
+                  <p className='text-xl font-semibold font-qs'>{item.name}</p>
+                  <p className='text-xs italic font-semibold font-content'>
                     {item.description}
                   </p>
                 </div>
@@ -82,54 +82,54 @@ const IndexPage = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col mt-4">
-        <p className="text-xl font-bold text-center font-heading">
+      <div className='flex flex-col mt-4'>
+        <p className='text-xl font-bold text-center font-heading'>
           Other Useful Links
         </p>
-        <ul className="mx-auto mt-4 space-y-4 font-semibold list-disc text-md font-content">
+        <ul className='mx-auto mt-4 space-y-4 font-semibold list-disc text-md font-content'>
           <li>
-            <Link href="/blogs/page/1">
-              <div className="hover:underline underline-offset-2">Blogs</div>
+            <Link href='/blogs/page/1'>
+              <div className='hover:underline underline-offset-2'>Blogs</div>
             </Link>
           </li>
           <li>
-            <Link href="/resources/causes">
-              <div className="hover:underline underline-offset-2">
+            <Link href='/resources/causes'>
+              <div className='hover:underline underline-offset-2'>
                 Causes of Infertility
               </div>
             </Link>
           </li>
           <li>
-            <Link href="/resources/diagnosis">
-              <div className="hover:underline underline-offset-2">
+            <Link href='/resources/diagnosis'>
+              <div className='hover:underline underline-offset-2'>
                 Diagnosis Methods
               </div>
             </Link>
           </li>
           <li>
-            <Link href="/resources/treatments">
-              <div className="hover:underline underline-offset-2">
+            <Link href='/resources/treatments'>
+              <div className='hover:underline underline-offset-2'>
                 Treatment Options
               </div>
             </Link>
           </li>
           <li>
-            <Link href="/resources/myths-and-facts">
-              <div className="hover:underline underline-offset-2">
+            <Link href='/resources/myths-and-facts'>
+              <div className='hover:underline underline-offset-2'>
                 Myths and Facts
               </div>
             </Link>
           </li>
           <li>
-            <Link href="https://consult.bestdocapp.com/home/GARBHAGUDI">
-              <div className="hover:underline underline-offset-2">
+            <Link href='https://consult.bestdocapp.com/home/GARBHAGUDI'>
+              <div className='hover:underline underline-offset-2'>
                 Book an Appointment
               </div>
             </Link>
           </li>
           <li>
-            <Link href="tel:+919108910832">
-              <div className="hover:underline underline-offset-2">
+            <Link href='tel:+919108910832'>
+              <div className='hover:underline underline-offset-2'>
                 Speak to our Executives
               </div>
             </Link>
@@ -146,16 +146,16 @@ export default IndexPage;
 const Data = [
   {
     id: 1,
-    name: "Ovulation Calculator",
-    link: "ovulation-calculator",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1654849032/Icons/Resources/Calendar_tvq9bm.svg",
-    description: "Know your next menstrual cycle and fertile window",
+    name: 'Ovulation Calculator',
+    link: 'ovulation-calculator',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1654849032/Icons/Resources/Calendar_tvq9bm.svg',
+    description: 'Know your next menstrual cycle and fertile window',
   },
   {
     id: 1,
-    name: "Fertility Quotient Calculator",
-    link: "fertility-quotient-calculator",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1654849032/Icons/Resources/Calculator_bxkdl9.svg",
-    description: "Calculate your Fertility Quotient",
+    name: 'Fertility Quotient Calculator',
+    link: 'fertility-quotient-calculator',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1654849032/Icons/Resources/Calculator_bxkdl9.svg',
+    description: 'Calculate your Fertility Quotient',
   },
 ];

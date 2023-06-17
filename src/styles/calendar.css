@@ -4,7 +4,7 @@
   max-width: 100%;
   background: white;
   border: 1px solid #a0a096;
-  font-family: "Nunito", Helvetica, sans-serif;
+  font-family: 'Nunito', Helvetica, sans-serif;
   line-height: 1.75em;
   overflow: hidden;
   height: auto;
@@ -46,7 +46,7 @@
   background: none;
   overflow: hidden;
   font-weight: bold;
-  font-family: "Nunito";
+  font-family: 'Nunito';
   font-size: 1.25em;
 }
 .react-calendar__navigation button:disabled {

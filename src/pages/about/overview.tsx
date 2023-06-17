@@ -1,10 +1,10 @@
-import React from "react";
-import Header from "sections/about/header";
-import CoreVision from "sections/about/coreVision";
-import apolloClient from "lib/apollo-graphcms";
-import Link from "next/link";
-import Head from "next/head";
-import { gql } from "@apollo/client";
+import React from 'react';
+import Header from 'sections/about/header';
+import CoreVision from 'sections/about/coreVision';
+import apolloClient from 'lib/apollo-graphcms';
+import Link from 'next/link';
+import Head from 'next/head';
+import { gql } from '@apollo/client';
 
 const Overview = ({ directors }) => {
   return (
@@ -12,79 +12,79 @@ const Overview = ({ directors }) => {
       <Head>
         {/* Primary Tags */}
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>About | GarbhaGudi</title>
-        <meta name="title" content="About | GarbhaGudi IVF Centre" />
+        <meta name='title' content='About | GarbhaGudi IVF Centre' />
         <meta
-          name="description"
-          content="GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art cutting-edge technology to address infertility."
+          name='description'
+          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art cutting-edge technology to address infertility.'
         />
 
         {/* Open Graph / Facebook */}
 
-        <meta property="og:title" content="About | GarbhaGudi IVF Centre" />
-        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
-        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta property='og:title' content='About | GarbhaGudi IVF Centre' />
+        <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
+        <meta property='og:url' content='https://garbhagudi.com' />
         <meta
-          property="og:description"
-          content="GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art cutting-edge technology to address infertility."
+          property='og:description'
+          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art cutting-edge technology to address infertility.'
         />
-        <meta property="og:type" content="website" />
+        <meta property='og:type' content='website' />
         <meta
-          property="og:image"
-          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
+          property='og:image'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
         />
 
         {/* Twitter*/}
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@garbhagudiivf" />
-        <meta name="twitter:title" content="About | GarbhaGudi IVF Centre" />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@garbhagudiivf' />
+        <meta name='twitter:title' content='About | GarbhaGudi IVF Centre' />
         <meta
-          name="twitter:description"
-          content="GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art cutting-edge technology to address infertility."
+          name='twitter:description'
+          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art cutting-edge technology to address infertility.'
         />
         <meta
-          name="twitter:image"
-          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
+          name='twitter:image'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
         />
       </Head>
       <Header />
-      <div className="bg-white">
-        <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24">
-          <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
-            <div className="space-y-5 sm:space-y-4">
-              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl font-content text-brandliteGray">
+      <div className='bg-white'>
+        <div className='px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24'>
+          <div className='space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0'>
+            <div className='space-y-5 sm:space-y-4'>
+              <h2 className='text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl font-content text-brandliteGray'>
                 Founders and Directors
               </h2>
             </div>
-            <div className="lg:col-span-2">
-              <ul className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
+            <div className='lg:col-span-2'>
+              <ul className='space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8'>
                 {directors.map((item) => (
                   <li key={item.id}>
                     <Link href={`/about/executive-team/${item.slug}`} passHref>
-                      <div className="space-y-4">
-                        <div className="aspect-square">
+                      <div className='space-y-4'>
+                        <div className='aspect-square'>
                           <img
-                            className="shadow-2xl object-fit rounded-3xl w-96 h-96"
+                            className='shadow-2xl object-fit rounded-3xl w-96 h-96'
                             src={item.image.url}
                             alt={item.name}
                           />
                         </div>
-                        <div className="space-y-2 text-lg font-medium leading-6">
-                          <h3 className="text-2xl font-semibold font-heading text-brandDark">
+                        <div className='space-y-2 text-lg font-medium leading-6'>
+                          <h3 className='text-2xl font-semibold font-heading text-brandDark'>
                             {item.name}
                           </h3>
-                          <p className="text-sm font-semibold font-qs text-brandPink">
+                          <p className='text-sm font-semibold font-qs text-brandPink'>
                             {item.details}
                           </p>
                         </div>
-                        <div className="text-lg">
-                          <p className="text-gray-500 font-content">
+                        <div className='text-lg'>
+                          <p className='text-gray-500 font-content'>
                             {item.description}
                           </p>
-                          <p className="mt-3 text-sm underline cursor-pointer text-brandPurple hover:text-brandPink font-content">
-                            Read More {">"}{" "}
+                          <p className='mt-3 text-sm underline cursor-pointer text-brandPurple hover:text-brandPink font-content'>
+                            Read More {'>'}{' '}
                           </p>
                         </div>
                       </div>

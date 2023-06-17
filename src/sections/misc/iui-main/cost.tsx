@@ -1,25 +1,25 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
 const Cost = () => {
   return (
     <div
-      className="max-w-7xl mx-auto px-3 scroll-m-16"
-      id="cost-of-iui-in-bangalore"
+      className='max-w-7xl mx-auto px-3 scroll-m-16'
+      id='cost-of-iui-in-bangalore'
     >
-      <div className="pt-10 lg:pt-16">
-        <h2 className="text-2xl lg:text-3xl font-heading text-center font-bold pb-6">
+      <div className='pt-10 lg:pt-16'>
+        <h2 className='text-2xl lg:text-3xl font-heading text-center font-bold pb-6'>
           IUI Treatment Cost in Bangalore
         </h2>
-        <div className="text-xl font-content max-w-5xl mx-auto">
+        <div className='text-xl font-content max-w-5xl mx-auto'>
           <Link
             href={
-              "https://www.garbhagudi.com/treatments/intra-uterine-insemination-iui"
+              'https://www.garbhagudi.com/treatments/intra-uterine-insemination-iui'
             }
-            className="text-brandPink hover:underline"
+            className='text-brandPink hover:underline'
           >
             IUI Treatment cost in Bangalore
-          </Link>{" "}
+          </Link>{' '}
           is between
           <strong> INR 15,000 and INR 50,000 </strong>
           per cycle, depending on the location of the clinic, the experience of

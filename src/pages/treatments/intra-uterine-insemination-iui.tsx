@@ -1,14 +1,14 @@
-import Head from "next/head";
-import React from "react";
-import CallToAction from "sections/misc/iui-main/CallToAction";
-import Advantages from "sections/misc/iui-main/adv-disadv";
-import Banner from "sections/misc/iui-main/banner";
-import Content from "sections/misc/iui-main/content";
-import Cost from "sections/misc/iui-main/cost";
-import Faq from "sections/misc/iui-main/faq";
-import ContentXtra from "sections/misc/iui-main/more-content";
-import OurCentres from "sections/misc/iui-main/our-centres";
-import Risks from "sections/misc/iui-main/risks";
+import Head from 'next/head';
+import React from 'react';
+import CallToAction from 'sections/misc/iui-main/CallToAction';
+import Advantages from 'sections/misc/iui-main/adv-disadv';
+import Banner from 'sections/misc/iui-main/banner';
+import Content from 'sections/misc/iui-main/content';
+import Cost from 'sections/misc/iui-main/cost';
+import Faq from 'sections/misc/iui-main/faq';
+import ContentXtra from 'sections/misc/iui-main/more-content';
+import OurCentres from 'sections/misc/iui-main/our-centres';
+import Risks from 'sections/misc/iui-main/risks';
 
 type Props = {};
 
@@ -16,8 +16,8 @@ const Iui = (props: Props) => {
   function addReviewJsonLd() {
     return {
       __html: `{
-        "@context": "https://schema.org/", 
-        "@type": "Product", 
+        "@context": "https://schema.org/",
+        "@type": "Product",
         "name": "Intra-Uterine Insemination (IUI)",
         "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
         "description": "IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy.",
@@ -127,8 +127,8 @@ const Iui = (props: Props) => {
   function addProductJsonLd() {
     return {
       __html: `{
-        "@context": "https://schema.org/", 
-        "@type": "Service", 
+        "@context": "https://schema.org/",
+        "@type": "Service",
         "name": "Intra-Uterine Insemination (IUI)",
         "image": "https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp",
         "description": "IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy.",
@@ -152,84 +152,84 @@ const Iui = (props: Props) => {
             "worstRating": "1",
             "reviewCount": "604"
           }
-        } 
+        }
       }`,
     };
   }
   return (
     <div>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>
           Best IUI Treatment in Bangalore | IUI Centre in Bangalore - GarbhaGudi
         </title>
         <meta
-          name="title"
-          content="Best IUI Treatment in Bangalore | IUI Centre in Bangalore - GarbhaGudi"
+          name='title'
+          content='Best IUI Treatment in Bangalore | IUI Centre in Bangalore - GarbhaGudi'
         />
         <meta
-          name="description"
-          content="GarbhaGudi provides the high success rate IUI Treatment in Bangalore, Being one of the Best IUI Centre in Bangalore we provide the most affordable IUI Treatment cost in Bangalore. Book now!"
+          name='description'
+          content='GarbhaGudi provides the high success rate IUI Treatment in Bangalore, Being one of the Best IUI Centre in Bangalore we provide the most affordable IUI Treatment cost in Bangalore. Book now!'
         />
 
         {/* Ld+JSON Data */}
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={addReviewJsonLd()}
-          key="review-jsonld"
+          key='review-jsonld'
         />
 
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={addProductJsonLd()}
-          key="product-jsonld"
+          key='product-jsonld'
         />
 
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-          key="breadcrumbs-jsonld"
+          key='breadcrumbs-jsonld'
         />
 
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={addFaqJsonLd()}
-          key="howto-jsonld"
+          key='howto-jsonld'
         />
 
         {/* Open Graph / Facebook */}
 
         <meta
-          property="og:title"
-          content="Intra-Uterine Insemination - IUI | GarbhaGudi"
+          property='og:title'
+          content='Intra-Uterine Insemination - IUI | GarbhaGudi'
         />
-        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
-        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
+        <meta property='og:url' content='https://garbhagudi.com' />
         <meta
-          property="og:description"
+          property='og:description'
           content="IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy."
         />
-        <meta property="og:type" content="website" />
+        <meta property='og:type' content='website' />
         <meta
-          property="og:image"
-          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp"
+          property='og:image'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp'
         />
 
         {/* Twitter*/}
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@garbhagudiivf' />
         <meta
-          name="twitter:title"
-          content="Intra-Uterine Insemination - IUI | GarbhaGudi"
+          name='twitter:title'
+          content='Intra-Uterine Insemination - IUI | GarbhaGudi'
         />
         <meta
-          name="twitter:description"
+          name='twitter:description'
           content="IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy."
         />
         <meta
-          name="twitter:image"
-          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp"
+          name='twitter:image'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp'
         />
       </Head>
       <Banner />

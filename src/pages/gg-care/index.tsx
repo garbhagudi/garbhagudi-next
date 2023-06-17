@@ -1,12 +1,12 @@
-import React from "react";
-import Hero from "sections/gg-care/hero";
-import Contact from "sections/gg-care/content";
-import Stats from "sections/gg-care/stats";
-import Cta from "sections/gg-care/cta";
-import Video from "sections/gg-care/workflow";
-import Head from "next/head";
-import Share from "components/share";
-import FindBranch from "sections/gg-care/find-branch";
+import React from 'react';
+import Hero from 'sections/gg-care/hero';
+import Contact from 'sections/gg-care/content';
+import Stats from 'sections/gg-care/stats';
+import Cta from 'sections/gg-care/cta';
+import Video from 'sections/gg-care/workflow';
+import Head from 'next/head';
+import Share from 'components/share';
+import FindBranch from 'sections/gg-care/find-branch';
 
 const IndexPage = () => {
   return (
@@ -14,52 +14,52 @@ const IndexPage = () => {
       <Head>
         {/* Primary Tags */}
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>
           GG CARE - Committed to Couple Delight | GarbhaGudi IVF Centre
         </title>
         <meta
-          name="title"
-          content="GG CARE - Committed to Couple Delight | GarbhaGudi IVF Centre"
+          name='title'
+          content='GG CARE - Committed to Couple Delight | GarbhaGudi IVF Centre'
         />
         <meta
-          name="description"
-          content="To book an appointment for your Fertility and IVF treatment in GarbhaGudi, you can contact on 9108910832 or you can also Email us on dreams@garbhagudi.com."
+          name='description'
+          content='To book an appointment for your Fertility and IVF treatment in GarbhaGudi, you can contact on 9108910832 or you can also Email us on dreams@garbhagudi.com.'
         />
 
         {/* Open Graph / Facebook */}
 
         <meta
-          property="og:title"
-          content="GG CARE - Committed to Couple Delight | GarbhaGudi IVF Centre"
+          property='og:title'
+          content='GG CARE - Committed to Couple Delight | GarbhaGudi IVF Centre'
         />
-        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
-        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
+        <meta property='og:url' content='https://garbhagudi.com' />
         <meta
-          property="og:description"
+          property='og:description'
           content="Reach out with your questions, concerns and challenges. Or just to say hi. We're always standing by and eager to help."
         />
-        <meta property="og:type" content="website" />
+        <meta property='og:type' content='website' />
         <meta
-          property="og:image"
-          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg"
+          property='og:image'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg'
         />
 
         {/* Twitter*/}
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@garbhagudiivf' />
         <meta
-          name="twitter:title"
-          content="GG CARE - Committed to Couple Delight | GarbhaGudi IVF Centre"
+          name='twitter:title'
+          content='GG CARE - Committed to Couple Delight | GarbhaGudi IVF Centre'
         />
         <meta
-          name="twitter:description"
+          name='twitter:description'
           content="Reach out with your questions, concerns and challenges. Or just to say hi. We're always standing by and eager to help."
         />
         <meta
-          name="twitter:image"
-          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg"
+          name='twitter:image'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg'
         />
       </Head>
       <Hero />
@@ -67,8 +67,8 @@ const IndexPage = () => {
       <Stats />
       <Contact />
       <FindBranch />
-      <div className="mb-5">
-        <Share pinmedia="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg" />
+      <div className='mb-5'>
+        <Share pinmedia='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg' />
       </div>
       <Cta />
     </div>
