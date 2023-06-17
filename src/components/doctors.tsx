@@ -1,19 +1,19 @@
 export const doctors = [
   {
-    id: "1",
-    name: "Dr Asha S Vijay",
-    designation: "Medical Director - GarbhaGudi",
-    qualification: "MBBS, DGO-DNB",
-    location: "Hanumanthanagar, Jayanagar, Marathahalli",
-    link: "",
+    id: '1',
+    name: 'Dr Asha S Vijay',
+    designation: 'Medical Director - GarbhaGudi',
+    qualification: 'MBBS, DGO-DNB',
+    location: 'Hanumanthanagar, Jayanagar, Marathahalli',
+    link: '',
     image:
-      "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Asha-Madam_Profile_vunk51.webp",
-    imageAlt: " ",
+      'https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Asha-Madam_Profile_vunk51.webp',
+    imageAlt: 'Dr Asha S Vijay - Medical Director - GarbhaGudi',
     bio: (
       <div>
-        <div className="w-full lg:w-9/12 mx-auto flex justify-start">
-          <div className="mb-4 text-gray-800 prose">
-            <div className="text-center text-xl text-brandDark font-semibold my-4 font-heading">
+        <div className='w-full lg:w-9/12 mx-auto flex justify-start'>
+          <div className='mb-4 text-gray-800 prose'>
+            <div className='text-center text-xl text-brandDark font-semibold my-4 font-heading'>
               <p>
                 Dr Asha S Vijay – A doyen in the field of infertility treatment,
                 a proficient academician, an accomplished entrepreneur and a
@@ -22,7 +22,7 @@ export const doctors = [
               Q
             </div>
             Q
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr Asha has well over two decades of experience in the fields of
                 obstetrics, gynaecology and infertility. She is a well-known
@@ -31,7 +31,7 @@ export const doctors = [
                 with an overarching vision to eradicate infertility.&nbsp;
               </p>
             </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr Asha has been instrumental in creating happy endings in the
                 lives of more than 7000+ couples, by ensuring they have a child
@@ -43,13 +43,13 @@ export const doctors = [
                 parenthood.
               </p>
             </div>
-            <div className="text-center text-lg text-brandDark font-semibold mt-3 font-heading">
+            <div className='text-center text-lg text-brandDark font-semibold mt-3 font-heading'>
               <p>
                 Dr Asha S Vijay has undergone specialized training in the field
                 of infertility at the following Centers
               </p>
             </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 &gt; Bangalore Assisted Conception Center under the guidance of
                 Dr Kamini Rao.
@@ -66,18 +66,18 @@ export const doctors = [
     ),
   },
   {
-    id: "3",
-    name: "Dr Maheshwari",
-    designation: "Assistant Medical Director, GarbhaGudi ",
-    qualification: "MBBS, MS-OBG, FRM",
-    location: "Hanumanthanagar",
+    id: '3',
+    name: 'Dr Maheshwari',
+    designation: 'Assistant Medical Director, GarbhaGudi ',
+    qualification: 'MBBS, MS-OBG, FRM',
+    location: 'Hanumanthanagar',
     image:
-      "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Maheshwari-new_rryrnt.webp",
+      'https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Maheshwari-new_rryrnt.webp',
     bio: (
       <div>
-        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-          <p className="mb-4 text-gray-800 prose">
-            <div className="text-md text-brandDark mt-3 font-qs">
+        <div className='w-full lg:w-9/12 px-4 mx-auto flex justify-start'>
+          <p className='mb-4 text-gray-800 prose'>
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr Maheshwari is a senior fertility consultant associated with
                 GarbhaGudi. Owing to her great desire to specialize further, she
@@ -96,18 +96,18 @@ export const doctors = [
     ),
   },
   {
-    id: "4",
-    name: "Dr Chinmayie R",
-    designation: "Assistant Medical Director, GGIRHR",
-    qualification: "MBBS,MS – OBG, FRM",
-    location: "Jayanagar",
+    id: '4',
+    name: 'Dr Chinmayie R',
+    designation: 'Assistant Medical Director, GGIRHR',
+    qualification: 'MBBS,MS – OBG, FRM',
+    location: 'Jayanagar',
     image:
-      "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Chinmaey_kz6etc.webp",
+      'https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Chinmaey_kz6etc.webp',
     bio: (
       <div>
-        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-          <p className="mb-4 text-gray-800 prose">
-            <div className="text-md text-brandDark mt-3 font-qs">
+        <div className='w-full lg:w-9/12 px-4 mx-auto flex justify-start'>
+          <p className='mb-4 text-gray-800 prose'>
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr Chinmayie is a fertility expert with eight years of
                 experience in gynaecology and infertility. She holds a
@@ -127,18 +127,18 @@ export const doctors = [
     ),
   },
   {
-    id: "5",
-    name: "Dr Priyanka Rani",
-    designation: "Fertility Specialist",
-    qualification: "MBBS, DNB, FRM",
-    location: "Electronic City",
+    id: '5',
+    name: 'Dr Priyanka Rani',
+    designation: 'Fertility Specialist',
+    qualification: 'MBBS, DNB, FRM',
+    location: 'Electronic City',
     image:
-      "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Prianka-Rani_cllnrd.webp",
+      'https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Prianka-Rani_cllnrd.webp',
     bio: (
       <div>
-        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-          <p className="mb-4 text-gray-800 prose">
-            <div className="text-md text-brandDark mt-3 font-qs">
+        <div className='w-full lg:w-9/12 px-4 mx-auto flex justify-start'>
+          <p className='mb-4 text-gray-800 prose'>
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr Priyanka Rani is a fertility specialist with years of
                 experience in gynaecology and obstetrics. She worked as a Senior
@@ -157,18 +157,18 @@ export const doctors = [
     ),
   },
   {
-    id: "6",
-    name: "Dr Anitha Manoj",
-    designation: "Fertility Specialist",
-    qualification: "MBBS, MS (OBG), FMAS, FRM",
-    location: "Nagarabhavi, Hanumanthanagar",
+    id: '6',
+    name: 'Dr Anitha Manoj',
+    designation: 'Fertility Specialist',
+    qualification: 'MBBS, MS (OBG), FMAS, FRM',
+    location: 'Nagarabhavi, Hanumanthanagar',
     image:
-      "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/anitha_oambb3.webp",
+      'https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/anitha_oambb3.webp',
     bio: (
       <div>
-        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-          <p className="mb-4 text-gray-800 prose">
-            <div className="text-md text-brandDark mt-3 font-qs">
+        <div className='w-full lg:w-9/12 px-4 mx-auto flex justify-start'>
+          <p className='mb-4 text-gray-800 prose'>
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr Anita has over a decade of experience as a gynaecologist. She
                 specializes in infertility and holds a fellowship in
@@ -187,17 +187,17 @@ export const doctors = [
     ),
   },
   {
-    id: "7",
-    name: "Dr Shubha L",
-    designation: "Fertility Specialist",
-    qualification: "MBBS, MS(OBG), DNB, FRM",
-    location: "Electronic City",
-    image: "https://media.graphassets.com/xHvgevKDT4aNPxoPBWaK",
+    id: '7',
+    name: 'Dr Shubha L',
+    designation: 'Fertility Specialist',
+    qualification: 'MBBS, MS(OBG), DNB, FRM',
+    location: 'Electronic City',
+    image: 'https://media.graphassets.com/xHvgevKDT4aNPxoPBWaK',
     bio: (
       <div>
-        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-          <p className="mb-4 text-gray-800 prose">
-            <div className="text-md text-brandDark mt-3 font-qs">
+        <div className='w-full lg:w-9/12 px-4 mx-auto flex justify-start'>
+          <p className='mb-4 text-gray-800 prose'>
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr. Shubha L is a fertility specialist with 5 years of
                 experience in obstetrics and gynecology. She completed her MBBS
@@ -223,17 +223,17 @@ export const doctors = [
     ),
   },
   {
-    id: "8",
-    name: "Dr Deepthi Venkatesh",
-    designation: "Fertility Specialist",
-    qualification: "MBBS, MS - FRM",
-    location: "Jayanagar",
-    image: "https://media.graphassets.com/Yc2o14y8QiSuGfDeTpmA",
+    id: '8',
+    name: 'Dr Deepthi Venkatesh',
+    designation: 'Fertility Specialist',
+    qualification: 'MBBS, MS - FRM',
+    location: 'Jayanagar',
+    image: 'https://media.graphassets.com/Yc2o14y8QiSuGfDeTpmA',
     bio: (
       <div>
-        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-          <div className="mb-4 text-gray-800 prose">
-            <div className="text-md text-brandDark mt-3 font-qs">
+        <div className='w-full lg:w-9/12 px-4 mx-auto flex justify-start'>
+          <div className='mb-4 text-gray-800 prose'>
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr. Deepthi is a distinguished fertility specialist with over
                 seven years of experience in the field of obstetrics and
@@ -244,7 +244,7 @@ export const doctors = [
                 RGUHS.
               </p>
             </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 With a passion for helping couples achieve their dream of
                 parenthood, Dr. Deepthi is an expert in Intra-Uterine
@@ -254,7 +254,7 @@ export const doctors = [
                 appreciate her compassionate nature and approachability.
               </p>
             </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Driven by her commitment to providing the very best care, Dr.
                 Deepthi continuously updates her knowledge and skills. She
@@ -273,17 +273,17 @@ export const doctors = [
     ),
   },
   {
-    id: "9",
-    name: "Dr Varsha Patil",
-    designation: "Fertility Specialist",
-    qualification: "MBBS, DGO, DNB(OBG), FRM",
-    location: "Marathahalli",
-    image: "https://media.graphassets.com/N1CTnwauQUuFHkwC9a0a",
+    id: '9',
+    name: 'Dr Varsha Patil',
+    designation: 'Fertility Specialist',
+    qualification: 'MBBS, DGO, DNB(OBG), FRM',
+    location: 'Marathahalli',
+    image: 'https://media.graphassets.com/N1CTnwauQUuFHkwC9a0a',
     bio: (
       <div>
-        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-          <div className="mb-4 text-gray-800 prose">
-            <div className="text-md text-brandDark mt-3 font-qs">
+        <div className='w-full lg:w-9/12 px-4 mx-auto flex justify-start'>
+          <div className='mb-4 text-gray-800 prose'>
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr Varsha Patil is a highly skilled Fertility Specialist,
                 dedicated to providing the best treatment for her patients. She
@@ -294,7 +294,7 @@ export const doctors = [
                 Baptist hospital, Bangalore.
               </p>
             </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Her desire to specialize further in infertility led her to
                 complete her Fellowship in Reproductive Medicine from the
@@ -306,7 +306,7 @@ export const doctors = [
                 Reproductive Medicine.
               </p>
             </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr Varsha Patil is known for her patience, knowledge, and hard
                 work. She believes in a scientific approach to fertility
@@ -325,17 +325,17 @@ export const doctors = [
     ),
   },
   {
-    id: "10",
-    name: "Dr Nikitha Murthy B.S",
-    designation: "Fertility Specialist",
-    qualification: "MBBS, MS-OBG, DNB, FRM",
-    location: "New BEL Road",
-    image: "https://media.graphassets.com/b0WeBG2eQpeodrBbB32S",
+    id: '10',
+    name: 'Dr Nikitha Murthy B.S',
+    designation: 'Fertility Specialist',
+    qualification: 'MBBS, MS-OBG, DNB, FRM',
+    location: 'New BEL Road',
+    image: 'https://media.graphassets.com/b0WeBG2eQpeodrBbB32S',
     bio: (
       <div>
-        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-          <div className="mb-4 text-gray-800 prose">
-            <div className="text-md text-brandDark mt-3 font-qs">
+        <div className='w-full lg:w-9/12 px-4 mx-auto flex justify-start'>
+          <div className='mb-4 text-gray-800 prose'>
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Meet Dr Nikitha Murthy, an experienced Infertility Specialist
                 with a passion for helping couples achieve their dream of having
@@ -345,7 +345,7 @@ export const doctors = [
                 JJMMC, Davanagere, and obtained her DNB in 2018.
               </p>
             </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 After completing her residency at Moolchand Hospital, New Delhi,
                 she worked as a Registrar at Fortis La Femme, Richmond Road &
@@ -354,7 +354,7 @@ export const doctors = [
                 Milann Fertility Centre, Bangalore.
               </p>
             </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr Murthy&apos;s passion for helping couples struggling with
                 infertility led her to become the Chief Consultant at Caree
@@ -366,7 +366,7 @@ export const doctors = [
                 complex fertility issues.
               </p>
             </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 With her vast knowledge and experience, Dr Nikitha Murthy is
                 dedicated to helping her patients navigate the complex world of
@@ -379,17 +379,17 @@ export const doctors = [
     ),
   },
   {
-    id: "10",
-    name: "Dr Aparna N",
-    designation: "Fertility Specialist",
-    qualification: "MBBS, DNB, M.Ch Reproductive Medicine and Surgery",
-    location: "Kalyan Nagar",
-    image: "https://media.graphassets.com/QgV1Ij9Ta2fdHnRsiGlp",
+    id: '10',
+    name: 'Dr Aparna N',
+    designation: 'Fertility Specialist',
+    qualification: 'MBBS, DNB, M.Ch Reproductive Medicine and Surgery',
+    location: 'Kalyan Nagar',
+    image: 'https://media.graphassets.com/QgV1Ij9Ta2fdHnRsiGlp',
     bio: (
       <div>
-        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-          <div className="mb-4 text-gray-800 prose">
-            <div className="text-md text-brandDark mt-3 font-qs">
+        <div className='w-full lg:w-9/12 px-4 mx-auto flex justify-start'>
+          <div className='mb-4 text-gray-800 prose'>
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr Aparna N is a highly qualified and experienced senior
                 Reproductive Medicine Specialist, currently practicing at
@@ -402,7 +402,7 @@ export const doctors = [
                 Amrita Institute Of Medical Sciences, Kochi, Kerala.
               </p>
             </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr Aparna has vast expertise in various areas related to
                 infertility, including Recurrent Pregnancy Loss, Repeated IVF
@@ -414,7 +414,7 @@ export const doctors = [
                 practice.
               </p>
             </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Apart from her clinical work, Dr Aparna is also a member of the
                 faculty at GarbhaGudi Institute of Reproductive Health and
@@ -425,7 +425,7 @@ export const doctors = [
                 patients from diverse linguistic backgrounds.
               </p>
             </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 With her expertise and experience, Dr Aparna N is dedicated to
                 providing the best possible care and treatment to her patients,
@@ -438,18 +438,18 @@ export const doctors = [
     ),
   },
   {
-    id: "11",
-    name: "Dr Srinivas B.V",
-    designation: "Andrologist and Urologist",
-    qualification: "MBBS, MS, DNB Urology, FAMH",
-    location: "Hanumanthanagar, Kalyan Nagar, Jayanagar, Electronic City",
+    id: '11',
+    name: 'Dr Srinivas B.V',
+    designation: 'Andrologist and Urologist',
+    qualification: 'MBBS, MS, DNB Urology, FAMH',
+    location: 'Hanumanthanagar, Kalyan Nagar, Jayanagar, Electronic City',
     image:
-      "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/06_gq0pxk.webp",
+      'https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/06_gq0pxk.webp',
     bio: (
       <div>
-        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-          <p className="mb-4 text-gray-800 prose">
-            <div className="text-md text-brandDark mt-3 font-qs">
+        <div className='w-full lg:w-9/12 px-4 mx-auto flex justify-start'>
+          <p className='mb-4 text-gray-800 prose'>
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr Srinivas is a renowned and experienced Andrologist rendering
                 his service in Garbhagudi IVF centre as Senior Consultant
@@ -460,7 +460,7 @@ export const doctors = [
                 during the same event.
               </p>
             </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr Srinivas completed his MBBS from the prestigious BANGALORE
                 MEDICAL COLLEGE. Later on, finished his postgraduate MS (General
@@ -474,7 +474,7 @@ export const doctors = [
                 men’s health.
               </p>
             </div>
-            <div className="text-md text-brandDark mt-3 font-qs">
+            <div className='text-md text-brandDark mt-3 font-qs'>
               <p>
                 Dr Srinivas is presently practising at various IVF and fertility
                 centres in Bangalore. He has also published many articles in

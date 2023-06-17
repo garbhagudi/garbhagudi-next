@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 
 const LiveBirth = () => {
   return (
-    <div className="max-w-7xl mx-auto">
-      <div className="px-3 lg:px-6">
-        <h2 className="text-3xl lg:text-4xl font-heading font-bold text-center pb-10 lg:pb-16">
+    <div className='max-w-7xl mx-auto'>
+      <div className='px-3 lg:px-6'>
+        <h2 className='text-3xl lg:text-4xl font-heading font-bold text-center pb-10 lg:pb-16'>
           Factors Affecting the Success Rate of an IVF Cycle
         </h2>
-        <div className="font-content">
+        <div className='font-content'>
           There are several factors that can affect the success rate of an in
           vitro fertilization (IVF) cycle. These include:
         </div>
-        <div className="mt-4 font-content">
-          <ul className="list-outside list-disc space-y-3">
+        <div className='mt-4 font-content'>
+          <ul className='list-outside list-disc space-y-3'>
             <li>
               <strong>Age:</strong> The age of the woman undergoing IVF can have
               a significant impact on the success rate of the procedure. Women
@@ -54,7 +54,7 @@ const LiveBirth = () => {
               a successful pregnancy.
             </li>
           </ul>
-          <div className="mt-4">
+          <div className='mt-4'>
             Overall, the success rate of IVF can vary greatly depending on these
             and other factors. It is important for patients to discuss their
             specific situation with their healthcare provider to determine the

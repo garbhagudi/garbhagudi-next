@@ -1,5 +1,5 @@
-import Head from "next/head";
-import BreadCrumbs from "components/breadcrumbs";
+import Head from 'next/head';
+import BreadCrumbs from 'components/breadcrumbs';
 
 const Terms = () => {
   return (
@@ -7,180 +7,180 @@ const Terms = () => {
       <Head>
         {/* Primary Tags */}
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Terms and Conditions | GarbhaGudi IVF Centre</title>
         <meta
-          name="title"
-          content="Terms and Conditions | GarbhaGudi IVF Centre"
+          name='title'
+          content='Terms and Conditions | GarbhaGudi IVF Centre'
         />
         <meta
-          name="description"
-          content="GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem."
+          name='description'
+          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
         />
 
         {/* Open Graph / Facebook */}
 
         <meta
-          property="og:title"
-          content="Terms and Conditions | GarbhaGudi IVF Centre"
+          property='og:title'
+          content='Terms and Conditions | GarbhaGudi IVF Centre'
         />
-        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
-        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
+        <meta property='og:url' content='https://garbhagudi.com' />
         <meta
-          property="og:description"
-          content="GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem."
+          property='og:description'
+          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
         />
-        <meta property="og:type" content="website" />
+        <meta property='og:type' content='website' />
         <meta
-          property="og:image"
-          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
+          property='og:image'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
         />
 
         {/* Twitter*/}
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@garbhagudiivf' />
         <meta
-          name="twitter:title"
-          content="Terms and Conditions | GarbhaGudi IVF Centre"
+          name='twitter:title'
+          content='Terms and Conditions | GarbhaGudi IVF Centre'
         />
         <meta
-          name="twitter:description"
-          content="GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem."
+          name='twitter:description'
+          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
         />
         <meta
-          name="twitter:image"
-          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg"
+          name='twitter:image'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
         />
       </Head>
       <BreadCrumbs
-        text1="Legal"
-        link1="/#footer"
-        text2="Terms & Conditions"
-        link2="#"
-        link3={""}
-        text3={""}
-        link4={""}
-        text4={""}
+        text1='Legal'
+        link1='/#footer'
+        text2='Terms & Conditions'
+        link2='#'
+        link3={''}
+        text3={''}
+        link4={''}
+        text4={''}
       />
-      <div className="relative py-8 bg-white overflow-hidden">
-        <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
+      <div className='relative py-8 bg-white overflow-hidden'>
+        <div className='hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full'>
           <div
-            className="relative h-full text-lg max-w-prose mx-auto"
-            aria-hidden="true"
+            className='relative h-full text-lg max-w-prose mx-auto'
+            aria-hidden='true'
           >
             <svg
-              className="absolute top-12 left-full transform translate-x-32"
+              className='absolute top-12 left-full transform translate-x-32'
               width={404}
               height={384}
-              fill="none"
-              viewBox="0 0 404 384"
+              fill='none'
+              viewBox='0 0 404 384'
             >
               <defs>
                 <pattern
-                  id="74b3fd99-0a6f-4271-bef2-e80eeafdf357"
+                  id='74b3fd99-0a6f-4271-bef2-e80eeafdf357'
                   x={0}
                   y={0}
                   width={20}
                   height={20}
-                  patternUnits="userSpaceOnUse"
+                  patternUnits='userSpaceOnUse'
                 >
                   <rect
                     x={0}
                     y={0}
                     width={4}
                     height={4}
-                    className="text-gray-200"
-                    fill="currentColor"
+                    className='text-gray-200'
+                    fill='currentColor'
                   />
                 </pattern>
               </defs>
               <rect
                 width={404}
                 height={384}
-                fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)"
+                fill='url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)'
               />
             </svg>
             <svg
-              className="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32"
+              className='absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32'
               width={404}
               height={384}
-              fill="none"
-              viewBox="0 0 404 384"
+              fill='none'
+              viewBox='0 0 404 384'
             >
               <defs>
                 <pattern
-                  id="f210dbf6-a58d-4871-961e-36d5016a0f49"
+                  id='f210dbf6-a58d-4871-961e-36d5016a0f49'
                   x={0}
                   y={0}
                   width={20}
                   height={20}
-                  patternUnits="userSpaceOnUse"
+                  patternUnits='userSpaceOnUse'
                 >
                   <rect
                     x={0}
                     y={0}
                     width={4}
                     height={4}
-                    className="text-gray-200"
-                    fill="currentColor"
+                    className='text-gray-200'
+                    fill='currentColor'
                   />
                 </pattern>
               </defs>
               <rect
                 width={404}
                 height={384}
-                fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
+                fill='url(#f210dbf6-a58d-4871-961e-36d5016a0f49)'
               />
             </svg>
             <svg
-              className="absolute bottom-12 left-full transform translate-x-32"
+              className='absolute bottom-12 left-full transform translate-x-32'
               width={404}
               height={384}
-              fill="none"
-              viewBox="0 0 404 384"
+              fill='none'
+              viewBox='0 0 404 384'
             >
               <defs>
                 <pattern
-                  id="d3eb07ae-5182-43e6-857d-35c643af9034"
+                  id='d3eb07ae-5182-43e6-857d-35c643af9034'
                   x={0}
                   y={0}
                   width={20}
                   height={20}
-                  patternUnits="userSpaceOnUse"
+                  patternUnits='userSpaceOnUse'
                 >
                   <rect
                     x={0}
                     y={0}
                     width={4}
                     height={4}
-                    className="text-gray-200"
-                    fill="currentColor"
+                    className='text-gray-200'
+                    fill='currentColor'
                   />
                 </pattern>
               </defs>
               <rect
                 width={404}
                 height={384}
-                fill="url(#d3eb07ae-5182-43e6-857d-35c643af9034)"
+                fill='url(#d3eb07ae-5182-43e6-857d-35c643af9034)'
               />
             </svg>
           </div>
         </div>
-        <div className="relative px-4 sm:px-6 lg:px-8">
-          <div className="text-lg max-w-7xl mx-auto">
+        <div className='relative px-4 sm:px-6 lg:px-8'>
+          <div className='text-lg max-w-7xl mx-auto'>
             <h1>
-              <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-800 sm:text-4xl font-heading  underline underline-offset-4">
+              <span className='mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-800 sm:text-4xl font-heading  underline underline-offset-4'>
                 Terms and Conditions
               </span>
             </h1>
-            <p className="mt-8 text-xl text-gray-00 leading-8 font-content font-semibold">
+            <p className='mt-8 text-xl text-gray-00 leading-8 font-content font-semibold'>
               The following terms and conditions will be deemed to have been
               accepted by the User on usage of the website www.garbhagudi.com.
               You are requested to read them carefully before you use the
               content and services of this site.
             </p>
-            <p className="mt-8 text-lg text-gray-800 font-content ">
+            <p className='mt-8 text-lg text-gray-800 font-content '>
               By using the Site, you agree to follow and be bound by the
               following terms and conditions concerning your use of the Site.
               Areas of the Site may have different terms of use posted. If there
@@ -192,13 +192,13 @@ const Terms = () => {
               been obtained.
             </p>
           </div>
-          <div className="relative md:bg-white max-w-7xl mx-auto mt-10">
-            <div className="lg:grid lg:grid-cols-2 lg:gap-6">
-              <div className="text-gray-800">
-                <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-800 sm:text-2xl font-heading underline underline-offset-4">
+          <div className='relative md:bg-white max-w-7xl mx-auto mt-10'>
+            <div className='lg:grid lg:grid-cols-2 lg:gap-6'>
+              <div className='text-gray-800'>
+                <span className='mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-800 sm:text-2xl font-heading underline underline-offset-4'>
                   Disclaimer
                 </span>
-                <p className="mt-4 text-lg font-content">
+                <p className='mt-4 text-lg font-content'>
                   The materials appearing on this website are provided for
                   informational use only, and are in no way intended to
                   constitute Medical advice or opinions from our clinics or any
@@ -208,7 +208,7 @@ const Terms = () => {
                   information appearing on this website without seeking the
                   advice of a doctor.
                 </p>
-                <p className="mt-4 text-lg font-content">
+                <p className='mt-4 text-lg font-content'>
                   The information provided about the doctors and medical
                   professionals and the special programs/procedures conducted by
                   them shall in no way be construed as advertisement and is only
@@ -219,7 +219,7 @@ const Terms = () => {
                   himself/herself before engaging the doctor and taking the
                   services of the clinic.
                 </p>
-                <p className="mt-4 text-lg font-content">
+                <p className='mt-4 text-lg font-content'>
                   The Site, and all data, statements content, materials,
                   information, software, products and services provided on the
                   Site, are provided on an “as is” and “as available” basis. We
@@ -228,9 +228,9 @@ const Terms = () => {
                   warranties of merchantability, fitness for a particular
                   purpose and non-infringement.
                 </p>
-                <p className="mt-4 text-lg font-content">
-                  <span className="font-bold">We do not claim that:</span>
-                  <ul className="list-disc mt-4">
+                <p className='mt-4 text-lg font-content'>
+                  <span className='font-bold'>We do not claim that:</span>
+                  <ul className='list-disc mt-4'>
                     <li>The site will meet your requirements</li>
                     <li>
                       The site will be available on an uninterrupted, timely,
@@ -244,11 +244,11 @@ const Terms = () => {
                   </ul>
                 </p>
               </div>
-              <div className="mt-6 text-gray-800 lg:mt-0">
-                <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-800 sm:text-2xl font-heading underline underline-offset-4">
+              <div className='mt-6 text-gray-800 lg:mt-0'>
+                <span className='mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-800 sm:text-2xl font-heading underline underline-offset-4'>
                   Limitation of Liability and Indemnification
                 </span>
-                <p className="mt-4 text-lg font-content">
+                <p className='mt-4 text-lg font-content'>
                   In no event will we be liable to any party for any direct,
                   indirect, incidental, special, exemplary, punitive or
                   consequential damages of any type whatsoever related to or

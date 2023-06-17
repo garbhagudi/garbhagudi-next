@@ -1,6 +1,6 @@
-import React from "react";
-import { Average, Good, Low, Best, Poor } from "sections/tools/fqc/results";
-import Head from "next/head";
+import React from 'react';
+import { Average, Good, Low, Best, Poor } from 'sections/tools/fqc/results';
+import Head from 'next/head';
 
 const IndexPage = () => {
   function calculate() {
@@ -37,28 +37,28 @@ const IndexPage = () => {
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     ];
 
-    const ageInput = document.getElementById("age").value;
-    const bmiInput = document.getElementById("bmi").value;
-    const afcInput = document.getElementById("afc").value;
-    const amhInput = Number(document.getElementById("amh").value) * 10;
+    const ageInput = document.getElementById('age').value;
+    const bmiInput = document.getElementById('bmi').value;
+    const afcInput = document.getElementById('afc').value;
+    const amhInput = Number(document.getElementById('amh').value) * 10;
 
     //Handle Empty Inputs
     if (
-      ageInput === "" ||
-      bmiInput === "" ||
-      afcInput === "" ||
-      amhInput === ""
+      ageInput === '' ||
+      bmiInput === '' ||
+      afcInput === '' ||
+      amhInput === ''
     ) {
-      return (document.getElementById("error").innerHTML =
-        "Error! : Please check your inputs...");
+      return (document.getElementById('error').innerHTML =
+        'Error! : Please check your inputs...');
     }
     if (
-      ageInput !== "" &&
-      bmiInput !== "" &&
-      afcInput !== "" &&
-      amhInput !== ""
+      ageInput !== '' &&
+      bmiInput !== '' &&
+      afcInput !== '' &&
+      amhInput !== ''
     ) {
-      document.getElementById("error").innerHTML = "";
+      document.getElementById('error').innerHTML = '';
     }
 
     function map1(ageInput) {
@@ -82,25 +82,25 @@ const IndexPage = () => {
       map1(ageInput) + map2(bmiInput) + map3(afcInput) + map4(amhInput);
     const percent = score * 2;
 
-    document.getElementById("result").classList.remove("hidden");
-    document.getElementById("form").classList.add("hidden");
-    document.getElementById("score").innerHTML = `${score}/50`;
-    document.getElementById("percent").innerHTML = `${percent}%`;
+    document.getElementById('result').classList.remove('hidden');
+    document.getElementById('form').classList.add('hidden');
+    document.getElementById('score').innerHTML = `${score}/50`;
+    document.getElementById('percent').innerHTML = `${percent}%`;
 
     if (score <= 18) {
-      document.getElementById("poor-fertility").classList.remove("hidden");
+      document.getElementById('poor-fertility').classList.remove('hidden');
     } else if (score > 18 && score <= 27) {
-      document.getElementById("low-fertility").classList.remove("hidden");
+      document.getElementById('low-fertility').classList.remove('hidden');
     } else if (score > 27 && score <= 34) {
-      document.getElementById("average-fertility").classList.remove("hidden");
+      document.getElementById('average-fertility').classList.remove('hidden');
     } else if (score > 34 && score <= 42) {
-      document.getElementById("good-fertility").classList.remove("hidden");
+      document.getElementById('good-fertility').classList.remove('hidden');
     } else if (score > 42 && score <= 50) {
-      document.getElementById("best-fertility").classList.remove("hidden");
+      document.getElementById('best-fertility').classList.remove('hidden');
     } else {
-      document.getElementById("overflow").classList.remove("hidden");
-      document.getElementById("score").classList.add("hidden");
-      document.getElementById("percent").classList.add("hidden");
+      document.getElementById('overflow').classList.remove('hidden');
+      document.getElementById('score').classList.add('hidden');
+      document.getElementById('percent').classList.add('hidden');
     }
   }
   function refreshPage() {
@@ -111,61 +111,61 @@ const IndexPage = () => {
       <Head>
         {/* Primary Tags */}
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Fertility Quotient Calculator | GarbhaGudi</title>
         <meta
-          name="title"
-          content="Fertility Quotient Calculator | GarbhaGudi IVF Centre"
+          name='title'
+          content='Fertility Quotient Calculator | GarbhaGudi IVF Centre'
         />
         <meta
-          name="description"
-          content="Fertility quotient is an indicator of an individual’s capability to reproduce. The subjective topic of fertility reserve is being converted to an objective score. It is ascore against 100, given against inputs provided by the user. The score is then converted to an indicative value to help the person understand the status of his/her fertility levels."
+          name='description'
+          content='Fertility quotient is an indicator of an individual’s capability to reproduce. The subjective topic of fertility reserve is being converted to an objective score. It is ascore against 100, given against inputs provided by the user. The score is then converted to an indicative value to help the person understand the status of his/her fertility levels.'
         />
 
         {/* Open Graph / Facebook */}
 
         <meta
-          property="og:title"
-          content="Fertility Quotient Calculator  | GarbhaGudi IVF Centre"
+          property='og:title'
+          content='Fertility Quotient Calculator  | GarbhaGudi IVF Centre'
         />
-        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
-        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
+        <meta property='og:url' content='https://garbhagudi.com' />
         <meta
-          property="og:description"
-          content="Fertility quotient is an indicator of an individual’s capability to reproduce. The subjective topic of fertility reserve is being converted to an objective score. It is ascore against 100, given against inputs provided by the user. The score is then converted to an indicative value to help the person understand the status of his/her fertility levels."
+          property='og:description'
+          content='Fertility quotient is an indicator of an individual’s capability to reproduce. The subjective topic of fertility reserve is being converted to an objective score. It is ascore against 100, given against inputs provided by the user. The score is then converted to an indicative value to help the person understand the status of his/her fertility levels.'
         />
-        <meta property="og:type" content="website" />
+        <meta property='og:type' content='website' />
         <meta
-          property="og:image"
-          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg"
+          property='og:image'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg'
         />
 
         {/* Twitter*/}
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@garbhagudiivf' />
         <meta
-          name="twitter:title"
-          content="Fertility Quotient Calculator | GarbhaGudi IVF Centre"
+          name='twitter:title'
+          content='Fertility Quotient Calculator | GarbhaGudi IVF Centre'
         />
         <meta
-          name="twitter:description"
-          content="Fertility quotient is an indicator of an individual’s capability to reproduce. The subjective topic of fertility reserve is being converted to an objective score. It is ascore against 100, given against inputs provided by the user. The score is then converted to an indicative value to help the person understand the status of his/her fertility levels."
+          name='twitter:description'
+          content='Fertility quotient is an indicator of an individual’s capability to reproduce. The subjective topic of fertility reserve is being converted to an objective score. It is ascore against 100, given against inputs provided by the user. The score is then converted to an indicative value to help the person understand the status of his/her fertility levels.'
         />
         <meta
-          name="twitter:image"
-          content="https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg"
+          name='twitter:image'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg'
         />
       </Head>
-      <div className="max-w-7xl mx-auto font-content">
-        <h1 className="text-4xl font-heading font-semibold text-center py-8 text-brandPink">
+      <div className='max-w-7xl mx-auto font-content'>
+        <h1 className='text-4xl font-heading font-semibold text-center py-8 text-brandPink'>
           Fertility Quotient Calculator
         </h1>
         <div
-          className=" text-sm sm:text-base px-3 sm:px-0 max-w-6xl mx-auto flex items-center justify-start flex-col"
-          id="intro"
+          className=' text-sm sm:text-base px-3 sm:px-0 max-w-6xl mx-auto flex items-center justify-start flex-col'
+          id='intro'
         >
-          <p className="mt-2">
+          <p className='mt-2'>
             Fertility quotient is an indicator of an individual’s capability to
             reproduce. The subjective topic of fertility reserve is being
             converted to an objective score. It is ascore against 100, given
@@ -173,7 +173,7 @@ const IndexPage = () => {
             an indicative value to help the person understand the status of
             his/her fertility levels.
           </p>
-          <p className="mt-2">
+          <p className='mt-2'>
             There have many research articles that address this topic of
             fertility capability. All research articles are more or less
             unanimous in their findings that a lady’s fertility is based on
@@ -184,24 +184,24 @@ const IndexPage = () => {
             etc.
           </p>
         </div>
-        <hr className="my-5" />
-        <div className="py-6">
-          <div className="max-w-lg space-y-3 mx-auto" id="form">
-            <div className="px-3 sm:px-0">
+        <hr className='my-5' />
+        <div className='py-6'>
+          <div className='max-w-lg space-y-3 mx-auto' id='form'>
+            <div className='px-3 sm:px-0'>
               <label
-                htmlFor="Age"
-                className="block text-sm font-medium text-gray-700"
+                htmlFor='Age'
+                className='block text-sm font-medium text-gray-700'
               >
-                Age{" "}
+                Age{' '}
               </label>
-              <div className="mt-1">
+              <div className='mt-1'>
                 <input
-                  type="text"
-                  name="Age"
-                  id="age"
-                  className="shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear"
-                  placeholder="Age"
-                  aria-describedby="Age"
+                  type='text'
+                  name='Age'
+                  id='age'
+                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
+                  placeholder='Age'
+                  aria-describedby='Age'
                   onKeyPress={(e) => {
                     if (!/[0-9]/.test(e.key)) {
                       e.preventDefault();
@@ -209,136 +209,136 @@ const IndexPage = () => {
                   }}
                 />
               </div>
-              <p className="mt-2 text-xs text-gray-400" id="Age Value">
+              <p className='mt-2 text-xs text-gray-400' id='Age Value'>
                 Optimum Value: 18 - 25
               </p>
             </div>
-            <div className="px-3 sm:px-0">
+            <div className='px-3 sm:px-0'>
               <label
-                htmlFor="bmi"
-                className="block text-sm font-medium text-gray-700"
+                htmlFor='bmi'
+                className='block text-sm font-medium text-gray-700'
               >
                 Body Mass Index (BMI)
               </label>
-              <div className="mt-1">
+              <div className='mt-1'>
                 <input
-                  type="text"
-                  name="bmi"
-                  id="bmi"
-                  className="shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear"
-                  placeholder="BMI"
-                  aria-describedby="Body Mass Index"
+                  type='text'
+                  name='bmi'
+                  id='bmi'
+                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
+                  placeholder='BMI'
+                  aria-describedby='Body Mass Index'
                   onKeyPress={(e) => {
                     if (!/[0-9]/.test(e.key)) {
                       e.preventDefault();
                     }
                   }}
                 />
-                <p className="mt-2 text-xs text-gray-400" id="Age Value">
+                <p className='mt-2 text-xs text-gray-400' id='Age Value'>
                   Optimum Value: 19 - 21
                 </p>
               </div>
             </div>
-            <div className="px-3 sm:px-0">
+            <div className='px-3 sm:px-0'>
               <label
-                htmlFor="afc"
-                className="block text-sm font-medium text-gray-700"
+                htmlFor='afc'
+                className='block text-sm font-medium text-gray-700'
               >
                 Antral Follicle Count (AFC)
               </label>
-              <div className="mt-1">
+              <div className='mt-1'>
                 <input
-                  type="text"
-                  name="afc"
-                  id="afc"
-                  className="shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear"
-                  placeholder="AFC"
-                  aria-describedby="Antral Follicle Count"
+                  type='text'
+                  name='afc'
+                  id='afc'
+                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
+                  placeholder='AFC'
+                  aria-describedby='Antral Follicle Count'
                   onKeyPress={(e) => {
                     if (!/[0-9]/.test(e.key)) {
                       e.preventDefault();
                     }
                   }}
                 />
-                <p className="mt-2 text-xs text-gray-400" id="Age Value">
+                <p className='mt-2 text-xs text-gray-400' id='Age Value'>
                   Optimum Value: 12 - 16
                 </p>
               </div>
             </div>
-            <div className="px-3 sm:px-0">
+            <div className='px-3 sm:px-0'>
               <label
-                htmlFor="amh"
-                className="block text-sm font-medium text-gray-700"
+                htmlFor='amh'
+                className='block text-sm font-medium text-gray-700'
               >
                 Anti-Müllerian Hormone (AMH) level
               </label>
-              <div className="mt-1">
+              <div className='mt-1'>
                 <input
-                  type="text"
-                  name="amh"
-                  id="amh"
-                  className="shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear"
-                  placeholder="AMH"
-                  aria-describedby="Anti-Müllerian Hormone"
+                  type='text'
+                  name='amh'
+                  id='amh'
+                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
+                  placeholder='AMH'
+                  aria-describedby='Anti-Müllerian Hormone'
                   onKeyPress={(e) => {
                     if (!/^\d*\.?\d*$/.test(e.key)) {
                       e.preventDefault();
                     }
                   }}
                 />
-                <p className="mt-2 text-xs text-gray-400" id="Age Value">
+                <p className='mt-2 text-xs text-gray-400' id='Age Value'>
                   Optimum Value: 2.1 - 3.9
                 </p>
               </div>
             </div>
-            <div className="mx-auto  text-center">
+            <div className='mx-auto  text-center'>
               <button
-                className="px-8 py-2 mt-5 border-2 border-brandPink focus:outline-none font-semibold rounded-lg focus:ring-brandPink4 focus:border-brandPink4 hover:bg-brandPink hover:text-white transition-all duration-300 ease-in-out"
+                className='px-8 py-2 mt-5 border-2 border-brandPink focus:outline-none font-semibold rounded-lg focus:ring-brandPink4 focus:border-brandPink4 hover:bg-brandPink hover:text-white transition-all duration-300 ease-in-out'
                 onClick={() => calculate()}
               >
-                <span className="text-xl">Calculate</span>
+                <span className='text-xl'>Calculate</span>
               </button>
-              <div id="error" className="my-4 text-red-500"></div>
+              <div id='error' className='my-4 text-red-500'></div>
             </div>
           </div>
-          <div id="result" className="hidden max-w-xl mx-auto px-3">
-            <div className="flex flex-row mt-2">
-              <div className="mx-auto px-3 py-1 text-center rounded-lg border-2 text-base shadow-2xl w-32 border-brandPurpleDark">
+          <div id='result' className='hidden max-w-xl mx-auto px-3'>
+            <div className='flex flex-row mt-2'>
+              <div className='mx-auto px-3 py-1 text-center rounded-lg border-2 text-base shadow-2xl w-32 border-brandPurpleDark'>
                 <div> Score </div>
-                <div id="score" className="font-bold text-xl"></div>
+                <div id='score' className='font-bold text-xl'></div>
               </div>
-              <div className="mx-auto px-3 py-1 text-center rounded-lg border-2 text-base shadow-2xl w-32 border-brandPurpleDark">
+              <div className='mx-auto px-3 py-1 text-center rounded-lg border-2 text-base shadow-2xl w-32 border-brandPurpleDark'>
                 <div> Percent </div>
-                <div id="percent" className="font-bold text-xl"></div>
+                <div id='percent' className='font-bold text-xl'></div>
               </div>
             </div>
-            <div className="mt-10">
-              <div id="poor-fertility" className="hidden">
+            <div className='mt-10'>
+              <div id='poor-fertility' className='hidden'>
                 <Poor />
               </div>
-              <div id="low-fertility" className="hidden">
+              <div id='low-fertility' className='hidden'>
                 <Low />
               </div>
-              <div id="average-fertility" className="hidden">
+              <div id='average-fertility' className='hidden'>
                 <Average />
               </div>
-              <div id="good-fertility" className="hidden">
+              <div id='good-fertility' className='hidden'>
                 <Good />
               </div>
-              <div id="best-fertility" className="hidden">
+              <div id='best-fertility' className='hidden'>
                 <Best />
               </div>
               <div
-                id="overflow"
-                className="hidden text-red-500 text-center text-lg"
+                id='overflow'
+                className='hidden text-red-500 text-center text-lg'
               >
-                {" "}
+                {' '}
                 Please check your Inputs.
               </div>
             </div>
-            <div className="mx-auto text-center mt-5">
+            <div className='mx-auto text-center mt-5'>
               <button
-                className="px-8 py-2 mt-5 border-2 border-brandPink focus:outline-none font-semibold rounded-lg focus:ring-brandPink4 focus:border-brandPink4 hover:bg-brandPink hover:text-white transition-all duration-300 ease-in-out"
+                className='px-8 py-2 mt-5 border-2 border-brandPink focus:outline-none font-semibold rounded-lg focus:ring-brandPink4 focus:border-brandPink4 hover:bg-brandPink hover:text-white transition-all duration-300 ease-in-out'
                 onClick={refreshPage}
               >
                 Refresh
@@ -346,14 +346,14 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        <div className="text-xs px-3 mb-5">
+        <div className='text-xs px-3 mb-5'>
           <p>
             The score is calculated based on the woman’s fertility factors -
             AMH, AFC, Age and BMI. Some of these factors play a role more
             critical than the others. So, proper adjustments have been done in
-            the algorithm to manage these variations.{" "}
+            the algorithm to manage these variations.{' '}
           </p>
-          <p className="mt-2">
+          <p className='mt-2'>
             Please note that the fertility quotient is an indicator of the
             fertility status. It is not a definitive advice from the doctor.
             Consult a fertility specialist to know more about your fertility

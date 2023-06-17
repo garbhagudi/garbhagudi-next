@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import "styles/globals.css";
-import "styles/calendar.css";
-import Footer from "components/footer/footer";
-import Nav from "components/header/header";
-import FloatPhone from "components/FloatPhone";
-import Salesiq from "components/SalesIQ";
-import TagManager from "react-gtm-module";
-import { useRouter } from "next/router";
-import Loading from "components/Loading";
-import Head from "next/head";
+import React, { useEffect, useState } from 'react';
+import 'styles/globals.css';
+import 'styles/calendar.css';
+import Footer from 'components/footer/footer';
+import Nav from 'components/header/header';
+import FloatPhone from 'components/FloatPhone';
+import Salesiq from 'components/SalesIQ';
+import TagManager from 'react-gtm-module';
+import { useRouter } from 'next/router';
+import Loading from 'components/Loading';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    TagManager.initialize({ gtmId: "GTM-5T77DVZ" });
+    TagManager.initialize({ gtmId: 'GTM-5T77DVZ' });
   }, []);
 
   useEffect(() => {
@@ -26,52 +26,52 @@ function MyApp({ Component, pageProps }) {
     const end = () => {
       setLoading(false);
     };
-    router.events.on("routeChangeStart", start);
-    router.events.on("routeChangeComplete", end);
-    router.events.on("routeChangeError", end);
+    router.events.on('routeChangeStart', start);
+    router.events.on('routeChangeComplete', end);
+    router.events.on('routeChangeError', end);
     return () => {
-      router.events.off("routeChangeStart", start);
-      router.events.off("routeChangeComplete", end);
-      router.events.off("routeChangeError", end);
+      router.events.off('routeChangeStart', start);
+      router.events.off('routeChangeComplete', end);
+      router.events.off('routeChangeError', end);
     };
   }, [router.events]);
   return (
     <>
       <Head>
-        {router.asPath.endsWith("/index") ? (
+        {router.asPath.endsWith('/index') ? (
           <>
             <link
-              rel="alternative"
+              rel='alternative'
               href={`https://www.garbhagudi.com`}
-              hrefLang="en-us"
+              hrefLang='en-us'
             />
-            <link rel="canonical" href={`https://www.garbhagudi.com`} />
+            <link rel='canonical' href={`https://www.garbhagudi.com`} />
           </>
         ) : (
           <>
             <link
-              rel="alternative"
+              rel='alternative'
               href={`https://www.garbhagudi.com${router.asPath}`}
-              hrefLang="en-us"
+              hrefLang='en-us'
             />
             <link
-              rel="canonical"
+              rel='canonical'
               href={`https://www.garbhagudi.com${router.asPath}`}
             />
           </>
         )}
-        <meta httpEquiv="content-language" content="en-gb"></meta>
+        <meta httpEquiv='content-language' content='en-gb'></meta>
         <meta
-          name="robots"
-          content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard"
+          name='robots'
+          content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
       </Head>
       {loading ? (
         <Loading />
       ) : (
-        <div className="selection:bg-brandPink selection:text-white">
+        <div className='selection:bg-brandPink selection:text-white'>
           <Nav />
-          <main className="min-h-screen">
+          <main className='min-h-screen'>
             <Component {...pageProps} />
           </main>
           <FloatPhone />
@@ -80,9 +80,9 @@ function MyApp({ Component, pageProps }) {
       )}
       <Salesiq
         widgetCode={
-          "93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0"
+          '93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
         }
-        domain={"https://salesiq.zoho.com/widget"}
+        domain={'https://salesiq.zoho.com/widget'}
       />
     </>
   );

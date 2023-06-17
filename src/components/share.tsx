@@ -1,5 +1,5 @@
-import React from "react";
-import { useRouter } from "next/router";
+import React from 'react';
+import { useRouter } from 'next/router';
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -15,7 +15,7 @@ import {
   TwitterIcon,
   TelegramShareButton,
   TelegramIcon,
-} from "next-share";
+} from 'next-share';
 
 type Props = {
   pinmedia: string;
@@ -24,8 +24,8 @@ type Props = {
 const Share: React.FC<Props> = ({ pinmedia }) => {
   const router = useRouter();
   return (
-    <div className="space-x-2 mx-auto text-center mt-16">
-      <h3 className="text-center font-content font-semibold text-xl mb-5">
+    <div className='space-x-2 mx-auto text-center mt-16'>
+      <h3 className='text-center font-content font-semibold text-xl mb-5'>
         Share this page
       </h3>
       <FacebookShareButton url={`https://garbhagudi.com${router.asPath}`}>

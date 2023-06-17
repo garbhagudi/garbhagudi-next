@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
 const Risks = () => {
   return (
-    <div className="max-w-7xl mx-auto mt-16">
-      <div className="px-3 lg:px-6 -mt-10 pb-16">
-        <h2 className="text-3xl lg:text-4xl font-heading text-center font-bold py-10">
+    <div className='max-w-7xl mx-auto mt-16'>
+      <div className='px-3 lg:px-6 -mt-10 pb-16'>
+        <h2 className='text-3xl lg:text-4xl font-heading text-center font-bold py-10'>
           Potential Risks of IVF
         </h2>
-        <div className="font-content">
+        <div className='font-content'>
           In vitro fertilisation (IVF) is a sophisticated set of treatments
           intended to improve fertility, avoid genetic issues, and aid in child
           conception. IVF success rates are influenced by a number of variables,
@@ -16,8 +16,8 @@ const Risks = () => {
           successful treatment for infertility, it is not without risks. Here
           are some potential risks associated with IVF:
         </div>
-        <div className="font-content mt-4">
-          <ul className="list-outside list-disc space-y-3">
+        <div className='font-content mt-4'>
+          <ul className='list-outside list-disc space-y-3'>
             <li>
               <strong>Multiple Pregnancies:</strong> One of the risks of IVF is
               the possibility of multiple pregnancies, which can occur if more
@@ -76,7 +76,7 @@ const Risks = () => {
               burden for many people.
             </li>
           </ul>
-          <div className="mt-4 font-content">
+          <div className='mt-4 font-content'>
             It is important to carefully weigh the potential risks and benefits
             of IVF with a fertility specialist before deciding whether or not to
             pursue IVF in Bangalore. It is also important to have a strong

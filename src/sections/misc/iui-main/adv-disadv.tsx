@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 
 type Props = {};
 
 const Advantages = (props: Props) => {
   return (
-    <div className="max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-2 divide-x-2 pb-10">
-        <div className="px-3">
-          <h3 className="text-xl border-b text-center py-4 font-heading font-bold">
+    <div className='max-w-7xl mx-auto'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 divide-x-2 pb-10'>
+        <div className='px-3'>
+          <h3 className='text-xl border-b text-center py-4 font-heading font-bold'>
             Advantages
           </h3>
-          <div className="font-content font-semibold mt-2">
+          <div className='font-content font-semibold mt-2'>
             IUI is generally considered to be a safe and low-invasive procedure,
             with several advantages:
           </div>
-          <ul className="space-y-3 font-content pt-4 list-outside list-disc ml-4">
+          <ul className='space-y-3 font-content pt-4 list-outside list-disc ml-4'>
             <li>
               <strong>Increased chances of pregnancy:</strong> IUI can increase
               the chances of pregnancy, particularly for couples with mild
@@ -44,15 +44,15 @@ const Advantages = (props: Props) => {
             </li>
           </ul>
         </div>
-        <div className="px-3">
-          <h3 className="text-xl border-b text-center py-4 font-heading font-bold">
+        <div className='px-3'>
+          <h3 className='text-xl border-b text-center py-4 font-heading font-bold'>
             Disadvangates
           </h3>
-          <div className="font-content font-semibold mt-2">
+          <div className='font-content font-semibold mt-2'>
             While IUI is generally considered a safe and low-invasive procedure,
             there are some potential disadvantages to consider:
           </div>
-          <ul className="space-y-3 font-content pt-4 list-outside list-disc ml-4">
+          <ul className='space-y-3 font-content pt-4 list-outside list-disc ml-4'>
             <li>
               <strong>Low success rate:</strong> The success rate of IUI is
               typically around 10-20% per cycle, and it may take multiple cycles

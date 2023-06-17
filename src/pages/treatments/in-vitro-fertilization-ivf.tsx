@@ -1,20 +1,20 @@
-import React from "react";
-import Head from "next/head";
-import Content from "sections/misc/ivf-main/content";
-import Banner from "sections/misc/ivf-main/banner";
-import WhenIvf from "sections/misc/ivf-main/when-ivf";
-import Faq from "sections/misc/ivf-main/faq";
-import LiveBirth from "sections/misc/ivf-main/live-birth";
-import Risks from "sections/misc/ivf-main/risks";
-import Video from "sections/misc/ivf-main/video";
-import Related from "sections/misc/ivf-main/related";
+import React from 'react';
+import Head from 'next/head';
+import Content from 'sections/misc/ivf-main/content';
+import Banner from 'sections/misc/ivf-main/banner';
+import WhenIvf from 'sections/misc/ivf-main/when-ivf';
+import Faq from 'sections/misc/ivf-main/faq';
+import LiveBirth from 'sections/misc/ivf-main/live-birth';
+import Risks from 'sections/misc/ivf-main/risks';
+import Video from 'sections/misc/ivf-main/video';
+import Related from 'sections/misc/ivf-main/related';
 
 const Ivf = () => {
   function addReviewJsonLd() {
     return {
       __html: `{
-          "@context": "https://schema.org/", 
-          "@type": "Product", 
+          "@context": "https://schema.org/",
+          "@type": "Product",
           "name": "In-vitro Fertilization (IVF)",
           "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
           "description": "What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
@@ -65,8 +65,8 @@ const Ivf = () => {
   function addProductJsonLd() {
     return {
       __html: `{
-        "@context": "https://schema.org/", 
-        "@type": "Service", 
+        "@context": "https://schema.org/",
+        "@type": "Service",
         "name": "In-vitro Fertilization (IVF)",
         "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
         "description": "What is IVF and how does it work ? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
@@ -90,7 +90,7 @@ const Ivf = () => {
             "worstRating": "1",
             "reviewCount": "604"
           }
-        } 
+        }
       }`,
     };
   }
@@ -186,81 +186,81 @@ const Ivf = () => {
   return (
     <div>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Best IVF Treatment In Bangalore | IVF In Bangalore</title>
         <meta
-          name="title"
-          content="Best IVF Treatment In Bangalore | IVF In Bangalore"
+          name='title'
+          content='Best IVF Treatment In Bangalore | IVF In Bangalore'
         />
         <meta
-          name="description"
-          content="The best IVF Treatment in Bangalore is provided by the experienced and highly qualified team of doctors at Garbhagudi IVF Centre. Visit us for the best IVF experience."
+          name='description'
+          content='The best IVF Treatment in Bangalore is provided by the experienced and highly qualified team of doctors at Garbhagudi IVF Centre. Visit us for the best IVF experience.'
         />
 
         {/* Ld+JSON Data */}
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={addReviewJsonLd()}
-          key="review-jsonld"
+          key='review-jsonld'
         />
 
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={addProductJsonLd()}
-          key="product-jsonld"
+          key='product-jsonld'
         />
 
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-          key="breadcrumbs-jsonld"
+          key='breadcrumbs-jsonld'
         />
 
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={addHowToJsonLd()}
-          key="howto-jsonld"
+          key='howto-jsonld'
         />
 
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={addFaqJsonLd()}
-          key="howto-jsonld"
+          key='howto-jsonld'
         />
 
         {/* Open Graph / Facebook */}
 
         <meta
-          property="og:title"
-          content="In-vitro Fertilization - IVF | GarbhaGudi"
+          property='og:title'
+          content='In-vitro Fertilization - IVF | GarbhaGudi'
         />
-        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
-        <meta property="og:url" content="https://garbhagudi.com" />
+        <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
+        <meta property='og:url' content='https://garbhagudi.com' />
         <meta
-          property="og:description"
-          content="What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART)."
+          property='og:description'
+          content='What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).'
         />
-        <meta property="og:type" content="website" />
+        <meta property='og:type' content='website' />
         <meta
-          property="og:image"
-          content="https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm"
+          property='og:image'
+          content='https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm'
         />
 
         {/* Twitter*/}
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@garbhagudiivf' />
         <meta
-          name="twitter:title"
-          content="In-vitro Fertilization - IVF | GarbhaGudi"
+          name='twitter:title'
+          content='In-vitro Fertilization - IVF | GarbhaGudi'
         />
         <meta
-          name="twitter:description"
-          content="What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART)."
+          name='twitter:description'
+          content='What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).'
         />
         <meta
-          name="twitter:image"
-          content="https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm"
+          name='twitter:image'
+          content='https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm'
         />
       </Head>
       <div>

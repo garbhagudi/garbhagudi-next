@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 
 const Risks = () => {
   return (
     <div>
-      <div className="max-w-7xl mx-auto">
-        <div className="px-3 lg:px-6 pb-10">
-          <h2 className="text-2xl lg:text-3xl font-heading text-center font-bold py-10 ">
+      <div className='max-w-7xl mx-auto'>
+        <div className='px-3 lg:px-6 pb-10'>
+          <h2 className='text-2xl lg:text-3xl font-heading text-center font-bold py-10 '>
             Potential Risks of IUI
           </h2>
-          <div className="font-content">
+          <div className='font-content'>
             IUI is generally considered a safe and low-invasive procedure with
             minimal risks. However, there are some risk factors associated with
             the procedure:
           </div>
-          <div className="font-content mt-4 px-3">
-            <ul className="list-outside list-disc ml-2 space-y-3">
+          <div className='font-content mt-4 px-3'>
+            <ul className='list-outside list-disc ml-2 space-y-3'>
               <li>
                 <strong>Multiple Pregnancies:</strong> IUI increases the chance
                 of having twins or triplets, which can be associated with risks
@@ -42,7 +42,7 @@ const Risks = () => {
                 during the procedure.
               </li>
             </ul>
-            <div className="mt-4 font-content">
+            <div className='mt-4 font-content'>
               It's important to note that these risks are rare and can be
               minimized by working with an experienced fertility specialist.
               It's always best to discuss the potential risks and benefits of
