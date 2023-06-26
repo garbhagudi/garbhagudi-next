@@ -21,7 +21,7 @@
     "next-share": "^0.20.0",
     "react": "^18.2.0",
     "react-calendar": "^4.3.0",
-    "react-chrono": "^2.2.0",
+    "react-chrono": "^2.2.1",
     "react-dom": "^18.2.0",
     "react-gtm-module": "^2.0.11",
     "react-icons": "^4.10.1",
