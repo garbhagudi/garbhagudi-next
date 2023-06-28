@@ -265,7 +265,7 @@ export const ValueAddedServices = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840305/Icons/Features/Top_Fertility_Specialists_zkyl9x.svg',
   },
   {
-    name: 'Afforbable Treatments',
+    name: 'Affordable Treatments',
     href: '/features/affordable-treatments',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840310/Icons/Features/Affordable_Treatment_lwaaku.svg',
   },
