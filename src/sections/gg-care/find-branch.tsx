@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaSearchLocation, FaLocationArrow } from 'react-icons/fa';
+import { FaSearchLocation } from 'react-icons/fa';
 
 const FindBranch = () => {
   return (

@@ -15,7 +15,7 @@ const Hero = () => {
                   of Being Complete...
                 </span>
               </div>
-              <div className='text-md text-right font-bold'>
+              <div className='text-md text-right font-bold font-content'>
                 ...with the{' '}
                 <h1 className='inline-block'>Best IVF Centre in Bangalore</h1>
               </div>

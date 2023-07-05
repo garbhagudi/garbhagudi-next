@@ -55,7 +55,7 @@ const Branch = ({ branch }) => {
         title={branch?.title}
       />
       <Cta />
-      <Faq branch={branch?.title} />
+      <Faq branch={branch?.title} doctors={branch.doctors} />
       <VirtualTour
         link1={branch?.virtualTourLink1}
         link2={branch?.virtualTourLink2}

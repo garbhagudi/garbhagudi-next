@@ -65,13 +65,19 @@ const DoctorLayout = ({
                     >
                       {name}
                     </Dialog.Title>
-                    <Image
-                      src={docpic}
-                      alt={name}
-                      className='w-44 h-44 mx-auto m-4 rounded-full'
-                      width={500}
-                      height={500}
-                    />
+                    <div className='flex items-center justify-center mx-auto w-44 h-44 mt-3'>
+                      <div className='relative'>
+                        <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
+                        <Image
+                          className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
+                          src={docpic}
+                          alt={name}
+                          width={500}
+                          height={500}
+                          loading='lazy'
+                        />
+                      </div>
+                    </div>
                     <div className='mt-2'>
                       <RichText content={bio} />
                     </div>

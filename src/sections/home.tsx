@@ -10,8 +10,9 @@ import Band2 from './home/band2';
 import Stat from './home/stat';
 import TreatmentOptions from './home/treatments';
 import WhyGG from './home/whyGarbhaGudi';
+import BlogsSnip from './home/newBlogs';
 
-const HomeComponent = () => {
+const HomeComponent = ({ testimonialPassthrough, blogsPassthrough }) => {
   return (
     <div>
       <Band />
@@ -19,11 +20,12 @@ const HomeComponent = () => {
       <Band2 />
       <Overview />
       <TreatmentOptions />
-      <Video />
+      <Video testimonials={testimonialPassthrough} />
       <Features />
       <Stats />
       <WhyGG />
       <Stat />
+      <BlogsSnip posts={blogsPassthrough} />
       <Testimonial />
     </div>
   );
