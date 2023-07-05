@@ -5,7 +5,7 @@ import Link from 'next/link';
 const metrics = [
   {
     id: 1,
-    stat: '8500+',
+    stat: '11000+',
     emphasis: 'Happy Families',
   },
   {
@@ -65,7 +65,7 @@ const Stat = () => {
           <div className='grid grid-cols-1 mt-12 gap-y-12 gap-x-6 sm:grid-cols-2'>
             {metrics.map((item) => (
               <p key={item.id}>
-                <span className='block text-2xl font-bold text-brandDark'>
+                <span className='block text-2xl font-bold text-brandDark font-heading'>
                   {item.stat}
                 </span>
                 <span className='block mt-1 text-base text-brandliteGray'>

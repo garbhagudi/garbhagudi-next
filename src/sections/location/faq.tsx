@@ -1,9 +1,9 @@
 import React from 'react';
-import { doctors } from 'components/doctors';
 import { contactData } from 'sections/gg-care/content';
 import Link from 'next/link';
+import Image from 'next/image';
 
-const Faq = ({ branch }) => {
+const Faq = ({ branch, doctors }) => {
   return (
     <div>
       <section className='max-w-7xl mx-auto font-content pt-8'>
@@ -13,43 +13,53 @@ const Faq = ({ branch }) => {
           </h2>
           <div className='divide-y divide-gray-700'>
             <div className='py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
-              <h3 className='font-semibold md:col-span-5'>
+              <h3 className='font-semibold md:col-span-4'>
                 Doctors available at GarbhaGudi, {branch}?
               </h3>
-              <div className='md:pl-0 md:col-span-7'>
-                <div className='flex items-center justify-center space-x-5'>
-                  {doctors.map(
-                    (items) =>
-                      items.location.includes(branch) && (
-                        <div
-                          key={items.id}
-                          className='flex items-center justify-center flex-col mt-5 lg:mt-0'
-                        >
-                          <img
-                            src={items.image}
-                            alt={items.imageAlt}
-                            className='w-28 rounded-full h-28'
-                          />
-                          <div className='font-heading font-bold text-base py-2 text-center'>
-                            {items.name}
+              <div className='md:pl-0 md:col-span-8'>
+                <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+                  {doctors?.map((item) => (
+                    <div
+                      className='text-center flex items-center justify-start flex-col mb-2 transition-all duration-500 ease-in-out transform hover:scale-105'
+                      key={item?.id}
+                    >
+                      <Link href={`/fertility-experts/${item?.slug}`} passHref>
+                        <div className='space-y-4'>
+                          <div className='relative h-32 w-32 mx-auto'>
+                            <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
+                            <Image
+                              className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
+                              src={item?.image?.url}
+                              alt={item?.imageAlt}
+                              width={500}
+                              height={500}
+                            />
                           </div>
-                          <div className='text-xs font-semibold font-content text-center'>
-                            {items.designation}
-                          </div>
-                          <div className='text-xs font-semibold font-content pt-2 text-center'>
-                            {items.qualification}
+                          <div className='space-y-4'>
+                            <div className='text-lg leading-6 font-medium space-y-1'>
+                              <h3 className='text-brandDark font-content'>
+                                {item?.name}
+                              </h3>
+                              {/* <p className='text-brandPurpleDark text-xs font-content'>
+                                {item?.qualification}
+                              </p> */}
+                              <p className='text-brandPink text-xs font-content'>
+                                {item?.designation}
+                              </p>
+                            </div>
                           </div>
                         </div>
-                      ),
-                  )}
+                      </Link>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
             <div className='py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
-              <h3 className='font-semibold md:col-span-5'>
+              <h3 className='font-semibold md:col-span-4'>
                 How to contact GarbhaGudi IVF Centre in {branch}?
               </h3>
-              <div className='md:pl-0 md:col-span-7'>
+              <div className='md:pl-0 md:col-span-8'>
                 To contact the fertility specialists at our {branch} branch,
                 please visit{' '}
                 <Link href={'/gg-care'} className='text-brandPink'>
@@ -105,10 +115,10 @@ const Faq = ({ branch }) => {
               </div>
             </div>
             <div className='py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
-              <h3 className='font-semibold md:col-span-5'>
+              <h3 className='font-semibold md:col-span-4'>
                 What are our success rates for IVF treatments in {branch}?
               </h3>
-              <div className='md:pl-0 md:col-span-7'>
+              <div className='md:pl-0 md:col-span-8'>
                 The success rate of of an IVF Treatment depends on numerous
                 factors. At our {branch} branch the average success rate ranges
                 from 65 - 73%. <br /> <br />
@@ -121,10 +131,10 @@ const Faq = ({ branch }) => {
             </div>
 
             <div className='py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
-              <h3 className='font-semibold md:col-span-5'>
+              <h3 className='font-semibold md:col-span-4'>
                 What is the total cost of IVF in <strong>{branch}</strong>?
               </h3>
-              <div className='md:pl-0 md:col-span-7'>
+              <div className='md:pl-0 md:col-span-8'>
                 The total cost of IVF in <strong>{branch}</strong> can vary
                 depending on the individual patient's needs. On average, the
                 cost of a single IVF cycle in <strong>{branch}</strong> can

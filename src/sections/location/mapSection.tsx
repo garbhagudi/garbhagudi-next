@@ -1,13 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { RichText } from '@graphcms/rich-text-react-renderer';
+import Image from 'next/image';
 
 const MapSection = ({ maplink, address, description, doctors, title }) => {
   return (
     <div className='px-3'>
       <div className='text-gray-600 body-font relative max-w-7xl mx-auto'>
         <div className='py-6 flex flex-wrap lg:flex-nowrap inset-0 '>
-          <div className='lg:w-1/2 bg-gray-300 rounded-3xl overflow-hidden p-2 lg:p-10 flex items-end justify-start relative h-[42rem] md:ml-auto w-full'>
+          <div className='lg:w-1/2 bg-gray-300 rounded-lg overflow-hidden p-2 lg:p-10 flex items-end justify-start relative h-[42rem] md:ml-auto w-full border-2 border-brandPurpleDark'>
             <iframe
               width='100%'
               height='100%'
@@ -67,33 +68,36 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
           <h2 className='text-center font-heading text-2xl font-semibold py-10 lg:mt-0'>
             Fertility Specialists at {title}
           </h2>
-          <div className='mx-auto space-y-0 grid grid-cols-2 sm:gap-y-10 sm:gap-x-32 sm:space-y-0 lg:grid-cols-4 lg:max-w-7xl col-span-full'>
+          <div className='grid grid-cols-2 mx-auto space-y-0 gap-3 sm:gap-8 sm:space-y-0 lg:grid-cols-6'>
             {doctors?.map((item: any) => {
               return (
                 <div
-                  className='text-center mb-2 transition-all duration-500 hover:shadow-2xl rounded-xl'
+                  className='text-center mx-auto flex items-center justify-start flex-col mb-2 transition-all duration-500 ease-in-out transform hover:scale-105'
                   key={item?.id}
                 >
                   <Link href={`/fertility-experts/${item?.slug}`} passHref>
-                    <div>
-                      <div className='space-y-4'>
-                        <img
-                          className='mx-auto h-40 w-40 my-auto rounded-full mt-4'
+                    <div className='space-y-4'>
+                      <div className='relative h-40 w-40 mx-auto'>
+                        <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
+                        <Image
+                          className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
                           src={item?.image?.url}
                           alt={item?.imageAlt}
+                          width={500}
+                          height={500}
                         />
-                        <div className='space-y-4'>
-                          <div className='text-lg leading-6 font-medium space-y-1'>
-                            <h3 className='text-brandDark font-content'>
-                              {item?.name}
-                            </h3>
-                            <p className='text-brandPurple text-sm font-content'>
-                              {item?.qualification}
-                            </p>
-                            <p className='text-brandPink text-sm font-content'>
-                              {item?.designation}
-                            </p>
-                          </div>
+                      </div>
+                      <div className='space-y-4'>
+                        <div className='text-lg leading-6 font-medium space-y-1'>
+                          <h3 className='text-brandDark font-content'>
+                            {item?.name}
+                          </h3>
+                          {/* <p className='text-brandPurpleDark text-xs font-content'>
+                            {item?.qualification}
+                          </p> */}
+                          <p className='text-brandPink text-sm font-content'>
+                            {item?.designation}
+                          </p>
                         </div>
                       </div>
                     </div>

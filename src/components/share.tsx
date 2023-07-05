@@ -15,6 +15,8 @@ import {
   TwitterIcon,
   TelegramShareButton,
   TelegramIcon,
+  InstapaperIcon,
+  InstapaperShareButton,
 } from 'next-share';
 
 type Props = {

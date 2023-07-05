@@ -78,6 +78,7 @@ const Testimonial = () => {
                           alt={item.name}
                           width={56}
                           height={56}
+                          suppressHydrationWarning={true}
                         />
                       </div>
                       <div className='mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center'>

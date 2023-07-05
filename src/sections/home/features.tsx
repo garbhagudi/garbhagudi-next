@@ -99,11 +99,11 @@ const Features = () => {
           conceive. So, you can expect:
         </p>
         <div className='mt-8'>
-          <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+          <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
             {features.map((feature) => (
               <Link href={feature.link} key={feature.id} passHref>
                 <div className='pt-3 group max-w-sm mx-auto'>
-                  <div className='rounded-lg overflow-hidden shadow-3xl hover:shadow-2xl hover:scale-110 transition-all duration-200'>
+                  <div className='rounded-lg overflow-hidden shadow-3xl hover:shadow-2xl hover:scale-105 transition-all duration-200'>
                     <div className='grid grid-cols-6 '>
                       <div className='col-span-1 bg-brandPink flex items-center justify-center h-full'>
                         <div className='text-4xl text-white font-bold'>

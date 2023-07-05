@@ -2,24 +2,12 @@ import React, { useRef } from 'react';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import { MdOutlineSwipeLeft } from 'react-icons/md';
 import SwiperCore, { Scrollbar } from 'swiper';
 import { Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-const data = [
-  { id: 1, videoId: 'xIvoIRASbgg' },
-  { id: 2, videoId: '1chyB0TjnrM' },
-  { id: 3, videoId: 'IfhN2YhkEyU' },
-  { id: 4, videoId: 'yM439ewxSks' },
-  { id: 5, videoId: 'YVyaYhk8Hbk' },
-  { id: 6, videoId: 'Te1R9a0cc40' },
-  { id: 7, videoId: 'jlDAsrZWinI' },
-  { id: 8, videoId: 'QJLHWn1P_-Y' },
-  { id: 9, videoId: 'VaGyOFVn4H4' },
-  { id: 10, videoId: 'Djje6h177kU' },
-];
 
 const breakpoints = {
   0: {
@@ -40,7 +28,7 @@ const breakpoints = {
   },
 };
 
-const Video = () => {
+const Video = ({ testimonials }) => {
   const swiperRef = useRef<SwiperCore>();
   return (
     <div className='bg-gradient-to-br from-brandPink5 to-brandPurple2'>
@@ -65,15 +53,16 @@ const Video = () => {
             loop={true}
             pagination={true}
           >
-            {data.map((item) => {
+            {testimonials?.items.map((item) => {
+              const { id, snippet = {} } = item;
               return (
-                <SwiperSlide key={item.id}>
+                <SwiperSlide key={id}>
                   <div
-                    className='md:w-8/12 mx-auto aspect-video mt-8 overflow-hidden rounded-3xl border-2 border-brandPink sm:px-0'
+                    className='md:w-10/12 mx-auto aspect-video mt-8 overflow-hidden border border-transparent rounded-lg sm:px-0'
                     key={item.id}
                   >
                     <LiteYouTubeEmbed
-                      id={item.videoId}
+                      id={snippet.resourceId.videoId}
                       title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
                       poster='maxresdefault'
                     />
@@ -88,6 +77,9 @@ const Video = () => {
           >
             <HiChevronRight className='text-2xl' />
           </button>
+        </div>
+        <div className='text-center lg:text-right pt-4 font-dm py-1 max-w-6xl mx-auto underline text-sm'>
+          Swipe for more reviews <MdOutlineSwipeLeft className='inline-block' />
         </div>
       </div>
     </div>
