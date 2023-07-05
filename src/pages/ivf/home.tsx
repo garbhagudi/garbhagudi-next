@@ -21,8 +21,12 @@ import Cta from 'sections/gg-care/cta';
 import Head from 'next/head';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
+import Image from 'next/image';
 
-const IndexPage = ({ doctors }) => {
+const YOUTUBE_PLAYLIST_ITEMS_API =
+  'https://www.googleapis.com/youtube/v3/playlistItems';
+
+const IndexPage = ({ doctors, testimonials }) => {
   const [activeIndex, setActiveIndex] = React.useState(1);
   const swiperRef = useRef<SwiperCore>();
 
@@ -160,7 +164,7 @@ const IndexPage = ({ doctors }) => {
         </div>
         <FeaturesBlocks />
         <div className='pt-10'>
-          <Video />
+          <Video testimonials={testimonials} />
         </div>
         <Branch />
         <Cta />
@@ -181,11 +185,17 @@ const ImageComponent = ({
 }) => {
   return (
     <div className='flex items-center justify-center flex-col md:h-[21rem]'>
-      <img
-        src={image}
-        alt={imageAlt}
-        className='h-36 w-36 md:h-44 md:w-44 rounded-full'
-      />
+      <div className='relative'>
+        <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
+        <Image
+          className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
+          src={image}
+          alt={imageAlt || name}
+          width={500}
+          height={500}
+          loading='lazy'
+        />
+      </div>
       <div className='text-center'>
         <div className='text-xl font-heading font-bold mt-4'>{name}</div>
         <div className='text-xs font-content mt-2 text-brandPurpleDark font-medium'>
@@ -219,9 +229,16 @@ export const getStaticProps = async () => {
     `,
   });
 
+  const testimonialsData = await fetch(
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+  );
+
+  const testimonials = await testimonialsData.json();
+
   return {
     props: {
       doctors: data.doctors,
+      testimonials,
       fallback: true,
     },
     revalidate: 180,

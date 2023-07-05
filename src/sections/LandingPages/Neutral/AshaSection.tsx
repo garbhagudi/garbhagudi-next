@@ -1,5 +1,6 @@
 import React from 'react';
 import MyModal from 'components/modal';
+import Image from 'next/image';
 
 const AshaSection = () => {
   return (
@@ -10,18 +11,22 @@ const AshaSection = () => {
       <div className='w-full lg:max-w-2xl px-4 mx-auto'>
         <div className='relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-2xl rounded-lg mt-16'>
           <div className='px-6'>
-            <div className='flex flex-wrap justify-center'>
+            <div className='flex flex-wrap justify-center mt-3'>
               <div className='w-full px-4 flex justify-center'>
-                <div className='relative'>
-                  <img
+                <div className='relative -mt-32'>
+                  <div className='h-full w-full  absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
+                  <Image
+                    className='h-56 w-56  rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
                     alt='Dr Asha'
-                    src='https://media.graphassets.com/nwE1f23XRWyvbAAO25qP'
-                    className='shadow-2xl rounded-full h-auto align-middle border-none -m-[100px] -ml-[100px] max-w-[200px]'
+                    src='https://media.graphassets.com/tEF3ZeEhSoeekeSEh47v'
+                    width={500}
+                    height={500}
+                    loading='lazy'
                   />
                 </div>
               </div>
             </div>
-            <div className='text-center mt-32'>
+            <div className='text-center mt-10'>
               <h3 className='text-xl font-semibold font-content leading-normal mb-2 text-blueGray-700'>
                 Dr Asha S Vijay
               </h3>
