@@ -185,7 +185,7 @@ const ImageComponent = ({
 }) => {
   return (
     <div className='flex items-center justify-center flex-col md:h-[21rem]'>
-      <div className='relative'>
+      <div className='relative w-44 h-44'>
         <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
         <Image
           className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
@@ -198,10 +198,10 @@ const ImageComponent = ({
       </div>
       <div className='text-center'>
         <div className='text-xl font-heading font-bold mt-4'>{name}</div>
-        <div className='text-xs font-content mt-2 text-brandPurpleDark font-medium'>
+        {/* <div className='text-xs font-content mt-2 text-brandPurpleDark font-medium'>
           {qualification}
-        </div>
-        <div className='text-sm font-content mt-2 mb-4'>{designation}</div>
+        </div> */}
+        <div className='text- font-content mt-2 mb-4'>{designation}</div>
       </div>
     </div>
   );

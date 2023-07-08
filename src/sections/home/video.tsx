@@ -53,7 +53,7 @@ const Video = ({ testimonials }) => {
             loop={true}
             pagination={true}
           >
-            {testimonials?.items.map((item) => {
+            {testimonials?.items?.map((item) => {
               const { id, snippet = {} } = item;
               return (
                 <SwiperSlide key={id}>
