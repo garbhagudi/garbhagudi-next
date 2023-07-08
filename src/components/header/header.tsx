@@ -13,35 +13,43 @@ import {
 } from 'components/header/popover';
 import LanguageSelect from 'components/languageSelect';
 import Logo from 'components/assets/logo';
+import { useRouter } from 'next/router';
 
 const menu = [
   {
     id: 1,
     option: <Treatments />,
+    slug: 'treatments',
   },
   {
     id: 2,
     option: <About />,
+    slug: 'about',
   },
   {
     id: 3,
     option: <WhyGarbhaGudi />,
+    slug: 'features',
   },
   {
     id: 4,
     option: <KnowledgeCenter />,
+    slug: 'resources',
   },
   {
     id: 5,
     option: <Contacts />,
+    slug: 'gg-care',
   },
   {
     id: 6,
     option: <Locations />,
+    slug: 'locations',
   },
   {
     id: 7,
     option: <Languages />,
+    slug: 'languages',
   },
 ];
 
