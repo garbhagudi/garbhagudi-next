@@ -161,7 +161,7 @@ const data = [
           <li>
             <strong>Genetic testing:</strong> Pre-implantation genetic testing
             (PGT) can be done to check the health of the embryos before they are
-            transferred to the uterus. This can cost several thousand dollars
+            transferred to the uterus.
           </li>
           <li>
             <strong>Anesthesia:</strong> Some patients may need to be sedated
@@ -171,8 +171,7 @@ const data = [
           <li>
             <strong>Storage of frozen embryos:</strong> If you have leftover
             embryos after the IVF cycle, you may choose to have them frozen for
-            future use. This can cost several hundred dollars per year for
-            storage fees.
+            future use.
           </li>
           <li>
             <strong>Multiple cycles:</strong> It is common for patients to need
