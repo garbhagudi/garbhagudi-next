@@ -167,6 +167,11 @@ export default function Footer() {
             target='_blank'
           />
           <SocialIcon
+            url='https://www.twitch.tv/garbhagudi'
+            style={{ width: '40px', height: '40px' }}
+            target='_blank'
+          />
+          <SocialIcon
             url='https://twitter.com/garbhagudiivf'
             style={{ width: '40px', height: '40px' }}
             target='_blank'
