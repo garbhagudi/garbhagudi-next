@@ -152,6 +152,11 @@ export default function Footer() {
             target='_blank'
           />
           <SocialIcon
+            url='https://www.instagram.com/garbhagudiivfcentre/?hl=en'
+            style={{ width: '40px', height: '40px' }}
+            target='_blank'
+          />
+          <SocialIcon
             url='https://www.linkedin.com/company/garbagudi'
             style={{ width: '40px', height: '40px' }}
             target='_blank'
