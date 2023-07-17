@@ -26,7 +26,7 @@ import Image from 'next/image';
 const YOUTUBE_PLAYLIST_ITEMS_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
 
-const IndexPage = ({ doctors, testimonials }) => {
+const IndexPage = ({ doctors, testimonials, branches }) => {
   const [activeIndex, setActiveIndex] = React.useState(1);
   const swiperRef = useRef<SwiperCore>();
 
@@ -139,7 +139,6 @@ const IndexPage = ({ doctors, testimonials }) => {
                         <ImageComponent
                           name={items.name}
                           image={items.image.url}
-                          qualification={items.qualification}
                           designation={items.designation}
                           imageAlt={items.imageAlt}
                         />
@@ -166,7 +165,7 @@ const IndexPage = ({ doctors, testimonials }) => {
         <div className='pt-10'>
           <Video testimonials={testimonials} />
         </div>
-        <Branch />
+        <Branch branches={branches} />
         <Cta />
         <FloatWhatsApp />
       </div>
@@ -176,13 +175,7 @@ const IndexPage = ({ doctors, testimonials }) => {
 
 export default IndexPage;
 
-const ImageComponent = ({
-  name,
-  image,
-  qualification,
-  designation,
-  imageAlt,
-}) => {
+const ImageComponent = ({ name, image, designation, imageAlt }) => {
   return (
     <div className='flex items-center justify-center flex-col md:h-[21rem]'>
       <div className='relative w-44 h-44'>
@@ -198,9 +191,6 @@ const ImageComponent = ({
       </div>
       <div className='text-center'>
         <div className='text-xl font-heading font-bold mt-4'>{name}</div>
-        {/* <div className='text-xs font-content mt-2 text-brandPurpleDark font-medium'>
-          {qualification}
-        </div> */}
         <div className='text- font-content mt-2 mb-4'>{designation}</div>
       </div>
     </div>
@@ -225,6 +215,14 @@ export const getStaticProps = async () => {
             raw
           }
         }
+        branches {
+          id
+          title
+          slug
+          branchPicture {
+            url
+          }
+        }
       }
     `,
   });
@@ -239,6 +237,7 @@ export const getStaticProps = async () => {
     props: {
       doctors: data.doctors,
       testimonials,
+      branches: data.branches,
       fallback: true,
     },
     revalidate: 180,
