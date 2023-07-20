@@ -13,7 +13,6 @@ import {
 } from 'components/header/popover';
 import LanguageSelect from 'components/languageSelect';
 import Logo from 'components/assets/logo';
-import { useRouter } from 'next/router';
 
 const menu = [
   {
