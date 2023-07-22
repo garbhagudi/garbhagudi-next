@@ -19,14 +19,14 @@ const features = [
       'GarbhaGudi has one of the highest IVF treatments success rates in the industry over 65-73 per cent.',
     link: '/features/success-rates-of-ivf',
   },
-  {
-    id: 2,
-    name: 'World Class Fertility Care',
-    icon: <BsBuildings />,
-    content:
-      'GarbhaGudi is Proud to have played a key role in bringing more than 8,500+ babies into the world since 2011.',
-    link: '/features/world-class-fertility-care',
-  },
+  // {
+  //   id: 2,
+  //   name: 'World Class Fertility Care',
+  //   icon: <BsBuildings />,
+  //   content:
+  //     'GarbhaGudi is Proud to have played a key role in bringing more than 8,500+ babies into the world since 2011.',
+  //   link: '/features/world-class-fertility-care',
+  // },
   {
     id: 3,
     name: 'Top Fertility Specialists',
@@ -43,14 +43,14 @@ const features = [
       'GarbhaGudi offers Affordable Infertility treatment without any compromise on service or quality of medicines or services',
     link: '/features/affordable-treatments',
   },
-  {
-    id: 5,
-    name: 'Free Second Opinion',
-    icon: <BsQuestionCircle />,
-    content:
-      'Patients can come and meet our doctors and understand if the advised treatment is the best thing for the patient couple.',
-    link: 'https://garbhagudi-ivf.com/contact-us',
-  },
+  // {
+  //   id: 5,
+  //   name: 'Free Second Opinion',
+  //   icon: <BsQuestionCircle />,
+  //   content:
+  //     'Patients can come and meet our doctors and understand if the advised treatment is the best thing for the patient couple.',
+  //   link: 'https://garbhagudi-ivf.com/contact-us',
+  // },
   {
     id: 6,
     name: 'Financing Options',
@@ -67,14 +67,14 @@ const features = [
       'At Garbhagudi we are committed to Treating infertility through the holistic mind-body-soul programs.',
     link: '/features/holistic-approach',
   },
-  {
-    id: 8,
-    name: 'Treatment Protocols',
-    icon: <CiMedicalClipboard />,
-    content:
-      'Regularly enhanced and upgraded to incorporate the latest advancements in process, technology and clinical research.',
-    link: '/features/treatment-protocols',
-  },
+  // {
+  //   id: 8,
+  //   name: 'Treatment Protocols',
+  //   icon: <CiMedicalClipboard />,
+  //   content:
+  //     'Regularly enhanced and upgraded to incorporate the latest advancements in process, technology and clinical research.',
+  //   link: '/features/treatment-protocols',
+  // },
   {
     id: 9,
     name: 'Best in Class Facilities',
