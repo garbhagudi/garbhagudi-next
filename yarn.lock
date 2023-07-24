@@ -454,15 +454,6 @@
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
 
-"@types/react@*":
-  version "18.0.30"
-  resolved "https://registry.npmjs.org/@types/react/-/react-18.0.30.tgz"
-  integrity sha512-AnME2cHDH11Pxt/yYX6r0w448BfTwQOLEhQEjCdwB7QskEI7EKtxhGUsExTQe/MsY3D9D5rMtu62WRocw9A8FA==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
-
 "@types/react@^18.2.15":
   version "18.2.15"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.15.tgz#14792b35df676c20ec3cf595b262f8c615a73066"
@@ -2419,12 +2410,11 @@ queue-microtask@^1.2.2:
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-react-calendar@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/react-calendar/-/react-calendar-4.4.0.tgz#18ad40efabc0aa0e20e595b1718c7b0028cfe64d"
-  integrity sha512-IMyAKozvfoPez4J5IbtRpvDhDlxfhP6ICx+1l99SaH00KyeSfayWM36lhRYksSd45lZ8+cx09Wumn4Xtws4poA==
+react-calendar@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/react-calendar/-/react-calendar-4.5.0.tgz#03a6ef29e3abb70b4b849f1154f61fe5e97038cd"
+  integrity sha512-K/41WRjF9j9X0b77eVNC9J2oZkxqvOSLnoyAWhpgZwTpga5Ho4RwIedR2tWnmcptD17xtSMTJgXmAFPysf0uDQ==
   dependencies:
-    "@types/react" "*"
     "@wojtekmaj/date-utils" "^1.1.3"
     clsx "^2.0.0"
     get-user-locale "^2.2.1"
