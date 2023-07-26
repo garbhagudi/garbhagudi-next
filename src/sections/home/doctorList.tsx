@@ -50,18 +50,18 @@ const DoctorList = (doctorList) => {
                 return (
                   <div
                     key={item?.id}
-                    className='hover:scale-115 transition-all duration-150'
+                    className='hover:scale-115 transition-all duration-300 '
                   >
                     <Link href={`/fertility-experts/${item?.slug}`} passHref>
                       <div className='space-y-4'>
-                        <div className='relative'>
+                        <div className='relative w-44 h-44'>
                           <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
                           <Image
-                            className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
+                            className='rounded-full  shadow-champaigne drop-shadow-2xl bg-transparent'
                             src={item?.image?.url}
                             alt={item?.imageAlt || item?.name}
-                            width={500}
-                            height={500}
+                            width={400}
+                            height={400}
                             loading='lazy'
                           />
                         </div>
@@ -69,7 +69,7 @@ const DoctorList = (doctorList) => {
                           <h3 className='text-brandDark text-lg font-heading font-bold'>
                             {item?.name}
                           </h3>
-                          <p className='text-xs text-brandPurpleDark font-semibold font-content'>
+                          <p className='text-xs text-purple-900 font-dm'>
                             {item?.qualification}
                           </p>
                           <div className='pb-2 text-sm text-brandPink font-content drop-shadow-2xl shadow-black'>
@@ -112,7 +112,7 @@ const DoctorList = (doctorList) => {
                             <div className='relative h-56 w-56 mx-auto'>
                               <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
                               <Image
-                                className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
+                                className='rounded-full shadow-vigorous drop-shadow-2xl bg-transparent'
                                 src={item?.image?.url}
                                 alt={item?.imageAlt || item?.name}
                                 width={500}
