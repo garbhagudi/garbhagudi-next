@@ -31,7 +31,7 @@ const BannerComponent = (bannerData) => {
   const swiperRef = useRef<SwiperCore>();
   return (
     <div>
-      <div className='relative mx-auto flex flex-row items-center justify-center'>
+      <div className='relative mx-auto flex flex-row items-center justify-center shadow-xl'>
         <button
           onClick={() => swiperRef.current?.slidePrev()}
           className='bg-brandPink text-white rounded-full z-10 p-2 absolute left-0 ml-4 hidden md:block'
@@ -44,9 +44,9 @@ const BannerComponent = (bannerData) => {
             swiperRef.current = swiper;
           }}
           breakpoints={breakpoints}
-          className=''
           loop={true}
           pagination={true}
+          autoplay={{ delay: 3000 }}
         >
           {bannerData?.banners.map((items: any) => (
             <SwiperSlide key={items.id}>
@@ -70,7 +70,6 @@ const BannerComponent = (bannerData) => {
           <HiChevronRight className='text-2xl' />
         </button>
       </div>
-      ;
     </div>
   );
 };
