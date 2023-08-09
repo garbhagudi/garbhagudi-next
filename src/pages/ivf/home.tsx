@@ -112,7 +112,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
         <div className=''>
           <div className='bg-transparent mx-auto py-10 lg:py-16'>
             <h1 className='text-2xl lg:text-3xl font-heading font-bold text-center pb-10 lg:pb-16'>
-              Our Fertility Experts
+              Meet Our Fertility Specialists
             </h1>
             <div className='relative max-w-7xl mx-auto flex items-center justify-center'>
               <button
