@@ -1,8 +1,10 @@
+import Link from 'next/link';
+
 export const WhatIsInfertilityTreatment = () => {
   return (
     <div className='max-w-7xl mx-auto px-3'>
       <div className='py-3 lg:py-8'>
-        <h2 className='font-heading text-2xl font-bold py-3'>
+        <h2 className='font-heading text-3xl font-bold py-3'>
           What is Infertility Treatment ? Enhancing Fertility for Parenthood
         </h2>
         <div className='font-content'>
@@ -48,7 +50,7 @@ export const InfertilityTreatmentProcess = () => {
   return (
     <div className='max-w-7xl mx-auto px-3'>
       <div className='py-3 lg:py-8'>
-        <h2 className='font-heading text-2xl font-bold py-3'>
+        <h2 className='font-heading text-3xl font-bold py-3'>
           What Is The Process Of Infertility Treatment in Bangalore? -
           Navigating the Path to Parenthood
         </h2>
@@ -94,7 +96,7 @@ export const WhyGarbhaGudi = () => {
   return (
     <div className='max-w-7xl mx-auto px-3'>
       <div className='py-3 lg:pt-8'>
-        <h2 className='font-heading text-2xl font-bold py-3'>
+        <h2 className='font-heading text-3xl font-bold py-3'>
           Why GarbhaGudi Is The Best Fertility Hospital In Bangalore? - Leading
           the Way in Infertility Treatment
         </h2>
@@ -125,10 +127,13 @@ export const WhyGarbhaGudi = () => {
           <div className='pb-4'>
             At GarbhaGudi IVF Centre, our suite of treatments includes
             Intrauterine Insemination (IUI), In Vitro Fertilization (IVF),
-            Intracytoplasmic Sperm Injection (ICSI), Egg Freezing, Surrogacy,
-            and more. We believe in a holistic approach, focusing not just on
-            the medical aspects but also on the emotional well-being of our
-            patients.
+            Intracytoplasmic Sperm Injection (
+            <Link href='/treatments/intracytoplasmic-sperm-injection-icsi'>
+              ICSI
+            </Link>
+            ), Egg Freezing, Surrogacy, and more. We believe in a holistic
+            approach, focusing not just on the medical aspects but also on the
+            emotional well-being of our patients.
           </div>
           <div className='pb-4'>
             With a commitment to excellence, compassionate care, and a high
@@ -151,7 +156,7 @@ export const WhenDiagnose = () => {
   return (
     <div className='max-w-7xl mx-auto px-3'>
       <div className='py-3 lg:py-8'>
-        <h2 className='font-heading text-2xl font-bold py-3'>
+        <h2 className='font-heading text-3xl font-bold py-3'>
           When to Diagnose for Infertility Treatment? - Taking the First Step
         </h2>
         <div>
@@ -192,7 +197,7 @@ export const WhenDiagnose = () => {
 export const InfertilityTreatmentOptions = () => {
   return (
     <div className='max-w-7xl mx-auto px-3'>
-      <h2 className='text-2xl font-heading font-bold pb-3 lg:pb-5'>
+      <h2 className='text-3xl font-heading font-bold pb-3 lg:pb-5'>
         Best-in-class Infertility Treatment in Bangalore - Enhancing Your Path
         to Parenthood
       </h2>
@@ -241,7 +246,7 @@ export const Causes = () => {
     <div>
       <div className='flex flex-col lg:flex-row items-center justify-center max-w-7xl mx-auto px-3 py-8 lg:py-10'>
         <div className='lg:w-1/2 pr-0 lg:pr-8 font-content'>
-          <h2 className='text-2xl font-bold mb-4 font-heading'>
+          <h2 className='text-3xl font-bold mb-4 font-heading'>
             Causes of Infertility - Understanding the Factors Affecting
             Fertility
           </h2>

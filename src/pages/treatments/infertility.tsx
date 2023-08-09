@@ -52,28 +52,28 @@ const InfertilityPage = ({ doctors }) => {
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>
-          GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India
+          Infertility Centre in Bangalore | Infertility Treatment in Bangalore
         </title>
         <meta
           name='title'
-          content='GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India'
+          content='Infertility Centre in Bangalore | Infertility Treatment in Bangalore'
         />
         <meta
           name='description'
-          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
+          content='GarbhaGudi is one of the best Infertility Centre & hospital in Bangalore. Our experienced team of Infertility Specialist in Bangalore have a high success rate of fertility Treatment in Bangalore.'
         />
 
         {/* Open Graph / Facebook */}
 
         <meta
           property='og:title'
-          content='GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India'
+          content='Infertility Centre in Bangalore | Infertility Treatment in Bangalore'
         />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
+          content='GarbhaGudi is one of the best Infertility Centre & hospital in Bangalore. Our experienced team of Infertility Specialist in Bangalore have a high success rate of fertility Treatment in Bangalore.'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -101,6 +101,7 @@ const InfertilityPage = ({ doctors }) => {
       <Banner />
       <WhatIsInfertilityTreatment />
       <InfertilityTreatmentOptions />
+      <CTA />
       <InfertilityTreatmentProcess />
       <Causes />
       <WhyGarbhaGudi />
@@ -108,9 +109,9 @@ const InfertilityPage = ({ doctors }) => {
       <AshaSection />
       <div className=''>
         <div className='bg-transparent mx-auto py-10 lg:py-16'>
-          <h1 className='text-2xl lg:text-3xl font-heading font-bold text-center pb-10 lg:pb-16'>
-            Our Fertility Experts
-          </h1>
+          <h2 className='text-2xl lg:text-3xl font-heading font-bold text-center pb-10 lg:pb-16'>
+            Our Fertility Specialists
+          </h2>
           <div className='relative max-w-7xl mx-auto flex items-center justify-center'>
             <button
               onClick={() => swiperRef.current?.slidePrev()}
@@ -155,6 +156,22 @@ const InfertilityPage = ({ doctors }) => {
             >
               <HiChevronRight className='text-2xl' />
             </button>
+          </div>
+          <div className='max-w-5xl  mx-auto pt-6 font-content'>
+            If you're seeking the{' '}
+            <span className='font-bold'>best infertility care</span>, look no
+            further than GarbhaGudi IVF Centre in Bangalore. Our team boasts the
+            finest <span className='font-bold'>infertility specialists</span>,
+            dedicated to providing top-tier treatments and solutions. As the
+            leading{' '}
+            <span className='font-bold'>infertility doctor in Bangalore</span>,
+            we take pride in being the go-to destination for those in search of
+            effective and compassionate care. With a reputation as the{' '}
+            <span className='font-bold'>
+              best fertility doctor in Bangalore
+            </span>
+            , our experts at GarbhaGudi are committed to guiding your journey
+            towards parenthood with expertise and unwavering support.
           </div>
         </div>
       </div>
