@@ -206,14 +206,6 @@ export const getStaticProps = async () => {
             raw
           }
         }
-        branches {
-          id
-          title
-          slug
-          branchPicture {
-            url
-          }
-        }
       }
     `,
   });
@@ -221,7 +213,6 @@ export const getStaticProps = async () => {
   return {
     props: {
       doctors: data.doctors,
-      branches: data.branches,
       fallback: true,
     },
     revalidate: 180,
