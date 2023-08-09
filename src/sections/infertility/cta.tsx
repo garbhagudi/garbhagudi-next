@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const CTA: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const CTA: React.FC = () => {
       }}
     >
       <div className='max-w-lg bg-white p-8 rounded-lg shadow-md bg-opacity-75'>
-        <h2 className='text-2xl font-semibold mb-2 font-heading'>
+        <h2 className='text-2xl font-bold mb-2 font-heading'>
           Get Started Today!
         </h2>
         <p className='text-gray-600 mb-4 font-content font-medium'>
@@ -17,7 +18,7 @@ const CTA: React.FC = () => {
           parenthood.
         </p>
         <button className='bg-brandPink hover:bg-brandPink4 text-white font-semibold px-4 py-2 rounded-lg focus:outline-none'>
-          Sign Up
+          <Link href='/gg-care'>Book an Appointment</Link>
         </button>
       </div>
     </div>

@@ -66,4 +66,23 @@ const data = [
     Answer:
       'Success rates of infertility treatment vary depending on factors such as age, the cause of infertility, and the treatment method. Our fertility experts work closely with patients to achieve the best possible outcomes.',
   },
+  {
+    id: '7',
+    Question: 'Does age impact fertility?',
+    Answer:
+      'Yes, age can significantly impact fertility. Fertility tends to decline as a person gets older, particularly for women. Women are born with a finite number of eggs, and their quality and quantity decrease over time. This can lead to difficulties in conceiving and a higher risk of miscarriages and birth defects as age increases. Men also experience a gradual decline in fertility with age, with potential impacts on sperm quality and reproductive function.',
+  },
+  {
+    id: '8',
+    Question: 'How much does fertility treatment cost in Bangalore?',
+    Answer:
+      "Fertility treatment costs in Bangalore, as well as anywhere else, can vary widely depending on the specific treatment, the clinic or hospital, and the individual circumstances of the patient. The cost for fertility treatments such as in vitro fertilization (IVF) can range from ₹90,000 to several lakhs of rupees. The mentioned starting cost of ₹90,000 at GarbhaGudi is a basic estimate and may not cover all aspects of the treatment. It's essential to consult with a fertility specialist and the chosen clinic to get a more accurate cost estimate based on your situation.",
+  },
+  {
+    id: '9',
+    Question:
+      'How long does it take time to get pregnant after fertility treatment?',
+    Answer:
+      "The time it takes to get pregnant after fertility treatment can vary widely depending on the specific treatment, individual factors, and the success of the treatment. Some couples may achieve pregnancy in the first treatment cycle, while others may require multiple cycles. For example, in IVF, it typically takes a few weeks for the entire treatment cycle, from ovarian stimulation to embryo transfer. After the embryo transfer, it can take around 10-14 days to determine if the treatment was successful through a pregnancy test. However, it's important to note that not all fertility treatments result in pregnancy, and some individuals or couples may require more time or adjustments to their treatment plan.",
+  },
 ];
