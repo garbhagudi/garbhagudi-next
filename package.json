@@ -30,7 +30,7 @@
     "swiper": "9.4.1"
   },
   "devDependencies": {
-    "@types/node": "^20.4.9",
+    "@types/node": "^20.5.1",
     "@types/react": "^18.2.20",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.46.0",
