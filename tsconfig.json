@@ -27,7 +27,8 @@
     "src/pages/_app.tsx",
     "src/sections/gg-care/MapComponent.jsx",
     "src/pages/gg-care/nearest-location.tsx",
-    "src/pages/gg-care/find-your-nearest-centre.jsx"
+    "src/pages/gg-care/find-your-nearest-centre.jsx",
+    "src/lib/chatgpt.js"
   ],
   "exclude": ["node_modules"]
 }
