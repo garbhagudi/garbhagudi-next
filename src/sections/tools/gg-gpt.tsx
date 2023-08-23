@@ -125,9 +125,11 @@ const ChatComponent = ({ apiKey }) => {
       {/* Chatbot Interface */}
       {showChatbot && (
         <div className='fixed bottom-4 left-4 bg-white border rounded-lg shadow-lg p-4 w-64 z-50'>
-          <div className='flex flex-col items-center justify-start mb-2'>
-            <div className='w-4 h-4 bg-green-500 rounded-full mr-2'></div>
-            <p className='text-sm font-medium text-gray-800'>GG Care Bot</p>
+          <div className='flex flex-col items-start justify-start mb-2'>
+            <div className='flex space-x-1 py-2'>
+              <div className='w-4 h-4 bg-green-500 rounded-full mr-2'></div>
+              <p className='text-sm font-medium text-gray-800'>GG Care Bot</p>
+            </div>
             <p className='text-sm font-thin text-gray-800'>
               Hello! I'm here to help with any questions you have about
               infertility and reproductive health. Let's keep our conversation
