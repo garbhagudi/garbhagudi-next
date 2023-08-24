@@ -19,7 +19,7 @@
     "moment": "^2.29.4",
     "next": "^13.4.13",
     "next-share": "^0.25.0",
-    "openai": "^3.3.0",
+    "openai": "^4.2.0",
     "react": "^18.2.0",
     "react-calendar": "^4.6.0",
     "react-chrono": "^2.2.4",
