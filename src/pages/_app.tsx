@@ -9,11 +9,14 @@ import TagManager from 'react-gtm-module';
 import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import Head from 'next/head';
+import ChatComponent from 'sections/tools/gg-gpt';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   const [loading, setLoading] = useState(false);
+
+  const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
 
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-5T77DVZ' });
@@ -84,6 +87,7 @@ function MyApp({ Component, pageProps }) {
         }
         domain={'https://salesiq.zoho.com/widget'}
       />
+      <ChatComponent apiKey={apiKey} />
     </>
   );
 }
