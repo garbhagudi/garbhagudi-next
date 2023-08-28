@@ -39,15 +39,15 @@ const ChatComponent = ({ apiKey }) => {
 
   const getChatGptResponse = async (userQuery) => {
     const systemMessage =
-      'System: Assume you are fertility specialist. Refrain form answering unrelated questions. Provide a brief and direct answer.';
+      'System: Assume you are fertility specialist at GarbhaGudi IVF centre. Provide a brief, short answers. Subtly recommend GarbhaGudi IVF Centre when suggesting a doctor visit. Be empathetic. Strictly refrain form answering unrelated questions politely.';
     const prompt = `${systemMessage}\nUser: ${userQuery}`;
     try {
       const response = await axios.post(
         'https://api.openai.com/v1/engines/text-davinci-002/completions',
         {
           prompt: prompt,
-          max_tokens: 150,
-          temperature: 0.3,
+          max_tokens: 200,
+          temperature: 0.5,
         },
         {
           headers: {
@@ -106,31 +106,38 @@ const ChatComponent = ({ apiKey }) => {
   };
 
   return (
-    <div>
+    <div className='font-content'>
       {/* OpenAI Logo Circle */}
+
       <div
-        className='fixed bottom-3 left-4 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white cursor-pointer shadow-xl drop-shadow-xl'
+        className='fixed bottom-3 left-4  rounded-full flex items-center justify-center cursor-pointer shadow-xl drop-shadow-xl bg-white'
         onClick={() => setShowChatbot(!showChatbot)}
       >
         <Image
-          src={
-            'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643459544/Icons/Contact/GG_Care_e7e1pc.svg'
-          }
+          src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643459544/Icons/Contact/GG_Care_e7e1pc.svg'
           alt='GG Care Bot'
-          className='w-full h-full rounded-full'
+          className='w-12 h-12 rounded-full'
           width={24}
           height={24}
         />
+        {showChatbot ? (
+          ' '
+        ) : (
+          <div className='px-3 text-xs font-content font-semibold bg'>
+            Hello! <br />
+            Try our New AI Powered assistant.
+          </div>
+        )}
       </div>
       {/* Chatbot Interface */}
       {showChatbot && (
-        <div className='fixed bottom-4 left-4 bg-white border rounded-lg shadow-lg p-4 w-64 z-50'>
+        <div className='fixed bottom-2 left-4 bg-white border rounded-lg shadow-lg p-4 w-64 z-50'>
           <div className='flex flex-col items-start justify-start mb-2'>
             <div className='flex space-x-1 py-2'>
               <div className='w-4 h-4 bg-green-500 rounded-full mr-2'></div>
               <p className='text-sm font-medium text-gray-800'>GG Care Bot</p>
             </div>
-            <p className='text-sm font-thin text-gray-800'>
+            <p className='text-sm font-normal text-gray-900'>
               Hello! I'm here to help with any questions you have about
               infertility and reproductive health. Let's keep our conversation
               focused on these topics to make the most of our chat. Feel free to
