@@ -15,7 +15,7 @@
     "@headlessui/react": "^1.7.16",
     "@headlessui/tailwindcss": "^0.2.0",
     "axios": "^1.4.0",
-    "graphql": "^16.7.1",
+    "graphql": "^16.8.0",
     "moment": "^2.29.4",
     "next": "^13.4.19",
     "next-share": "^0.25.0",
