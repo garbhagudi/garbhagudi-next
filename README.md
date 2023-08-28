@@ -32,7 +32,7 @@ Curious to know more about GarbhaGudi IVF Centre? Explore our [Overview](http://
 
 ## Get in Touch
 
-We're here to support you on your journey towards parenthood. Feel free to reach out to us through our official website's [Contact Page](https://garbhagudi.com/contact) for any inquiries, appointments, or information you may need.
+We're here to support you on your journey towards parenthood. Feel free to reach out to us through our official website's [Contact Page](https://garbhagudi.com/gg-care) for any inquiries, appointments, or information you may need.
 
 Connect with us on social media:
 
