@@ -421,8 +421,7 @@ module.exports = {
       heading: 'B612',
       content: 'Nunito',
       benne: 'Benne',
-      dm: 'DM Sans',
-      kan: "'Noto Sans Kannada'",
+      roboto: 'Roboto',
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
