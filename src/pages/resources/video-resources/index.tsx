@@ -4,25 +4,26 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import Head from 'next/head';
 import Link from 'next/link';
+import { VscVerified } from 'react-icons/vsc';
 
 const YOUTUBE_PLAYLIST_ITEMS_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
 
 export async function getServerSideProps() {
   const recommendedData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=25&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
   );
 
   const tvAppearanceData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=25&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
   );
 
   const garbhasandeshaData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=25&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
   );
 
   const testimonialData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=25&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
   );
 
   const recommended = await recommendedData.json();
@@ -62,26 +63,31 @@ const IndexPage = ({
     testimonials?.items[0].snippet.resourceId.videoId,
   );
 
-  const renderRecommended = (image, url, label, by) => {
+  const renderRecommended = (
+    image: string,
+    url: string,
+    label: string,
+    by: string,
+  ) => {
     return (
-      <div className='grid w-full grid-cols-4'>
+      <div className='flex items-center justify-start font-roboto pb-4 md:pb-0 border-b md:border-none'>
         <img
           src={image}
           alt={label}
-          className='w-48 col-span-1 rounded-lg sm:w-32 xl:w-48'
+          className='max-w-[200px] md:max-w-[230px] col-span-1 rounded-lg sm:w-32 xl:w-48'
         />
-        <div className='col-span-3'>
+        <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
             <div
               onClick={() => {
                 setUrl(url);
               }}
-              className='ml-4 text-sm font-semibold text-left cursor-pointer'
+              className='ml-4 text-sm md:text-base text-left cursor-pointer'
             >
               {label}
             </div>
-            <div className='mt-2 ml-4 text-xs italic font-bold underline font-heading'>
-              {by}
+            <div className='mt-2 ml-4 text-sm flex space-x-2 items-center'>
+              <span>{by}</span> <VscVerified className='fill-brandPink' />
             </div>
           </div>
         </div>
@@ -91,24 +97,24 @@ const IndexPage = ({
 
   const renderGarbhaSandesha = (image, url2, label, by) => {
     return (
-      <div className='grid w-full grid-cols-4'>
+      <div className='flex items-center justify-start font-roboto'>
         <img
           src={image}
           alt={label}
-          className='w-48 col-span-1 rounded-lg sm:w-32 xl:w-48'
+          className='max-w-[230px] col-span-1 rounded-lg sm:w-32 xl:w-48'
         />
-        <div className='col-span-3'>
-          <div className='flex flex-col items-start justify-center'>
+        <div className='flex items-center justify-center'>
+          <div className='flex flex-col items-start'>
             <div
               onClick={() => {
                 setUrl2(url2);
               }}
-              className='ml-4 text-sm font-semibold text-left cursor-pointer'
+              className='ml-4  text-base text-left cursor-pointer'
             >
               {label}
             </div>
-            <div className='mt-2 ml-4 text-xs italic font-bold underline font-heading'>
-              {by}
+            <div className='mt-2 ml-4 text-sm flex space-x-2 items-center'>
+              <span>{by}</span> <VscVerified className='fill-brandPink' />
             </div>
           </div>
         </div>
@@ -118,24 +124,24 @@ const IndexPage = ({
 
   const renderTvAppreances = (image, url3, label, by) => {
     return (
-      <div className='grid w-full grid-cols-4'>
+      <div className='flex items-center justify-start font-roboto'>
         <img
           src={image}
           alt={label}
-          className='w-48 col-span-1 rounded-lg sm:w-32 xl:w-48'
+          className='max-w-[230px] col-span-1 rounded-lg sm:w-32 xl:w-48'
         />
-        <div className='col-span-3'>
-          <div className='flex flex-col items-start justify-center'>
+        <div className='flex items-center justify-center'>
+          <div className='flex flex-col items-start'>
             <div
               onClick={() => {
                 setUrl3(url3);
               }}
-              className='ml-4 text-sm font-semibold text-left cursor-pointer'
+              className='ml-4  text-base text-left cursor-pointer'
             >
               {label}
             </div>
-            <div className='mt-2 ml-4 text-xs italic font-bold underline font-heading'>
-              {by}
+            <div className='mt-2 ml-4 text-sm flex space-x-2 items-center'>
+              <span>{by}</span> <VscVerified className='fill-brandPink' />
             </div>
           </div>
         </div>
@@ -145,24 +151,24 @@ const IndexPage = ({
 
   const renderTestimonials = (image, url4, label, by) => {
     return (
-      <div className='grid w-full grid-cols-4'>
+      <div className='flex items-center justify-start font-roboto'>
         <img
           src={image}
           alt={label}
-          className='w-48 col-span-1 rounded-lg sm:w-32 xl:w-48'
+          className='max-w-[230px] col-span-1 rounded-lg sm:w-32 xl:w-48'
         />
-        <div className='col-span-3'>
-          <div className='flex flex-col items-start justify-center'>
+        <div className='flex items-center justify-center'>
+          <div className='flex flex-col items-start'>
             <div
               onClick={() => {
                 setUrl4(url4);
               }}
-              className='ml-4 text-sm font-semibold text-left cursor-pointer'
+              className='ml-4  text-base text-left cursor-pointer'
             >
               {label}
             </div>
-            <div className='mt-2 ml-4 text-xs italic font-bold underline font-heading'>
-              {by}
+            <div className='mt-2 ml-4 text-sm flex space-x-2 items-center'>
+              <span>{by}</span> <VscVerified className='fill-brandPink' />
             </div>
           </div>
         </div>
@@ -217,7 +223,7 @@ const IndexPage = ({
       </Head>
       <div className='mx-auto'>
         <div>
-          <h1 className='py-4 text-2xl font-bold text-center sm:text-4xl font-heading text-brandDark'>
+          <h1 className='py-6 text-2xl font-bold text-center sm:text-4xl font-heading text-brandDark'>
             Video Resources
           </h1>
         </div>
@@ -227,9 +233,9 @@ const IndexPage = ({
               className={({ selected }) =>
                 classNames(
                   'w-full rounded-lg py-2.5 text-base font-medium leading-5 text-brandPink',
-                  'focus:outline-none focus:ring-2 focus:ring-brandPink',
+                  'focus:outline-none focus:ring-2 focus:ring-brandPink font-heading',
                   selected
-                    ? 'bg-white shadow'
+                    ? 'bg-white shadow ring-2 ring-brandPink'
                     : 'text-pink-100 hover:bg-white/[0.12] hover:text-white',
                 )
               }
@@ -241,9 +247,9 @@ const IndexPage = ({
               className={({ selected }) =>
                 classNames(
                   'w-full rounded-lg py-2.5 text-base font-medium leading-5 text-brandPink',
-                  'focus:outline-none focus:ring-2 focus:ring-brandPink',
+                  'focus:outline-none focus:ring-2 focus:ring-brandPink font-heading',
                   selected
-                    ? 'bg-white shadow'
+                    ? 'bg-white shadow ring-2 ring-brandPink'
                     : 'text-pink-100 hover:bg-white/[0.12] hover:text-white',
                 )
               }
@@ -254,22 +260,22 @@ const IndexPage = ({
               className={({ selected }) =>
                 classNames(
                   'w-full rounded-lg py-2.5 text-base font-medium leading-5 text-brandPink',
-                  'focus:outline-none',
+                  'focus:outline-none focus:ring-2 focus:ring-brandPink font-heading',
                   selected
-                    ? 'bg-white shadow focus:ring-2 focus:ring-brandPink'
+                    ? 'bg-white shadow ring-2 ring-brandPink'
                     : 'text-pink-100 hover:bg-white/[0.12] hover:text-white',
                 )
               }
             >
-              TV Appearances
+              TV Programs
             </Tab>
             <Tab
               className={({ selected }) =>
                 classNames(
                   'w-full rounded-lg py-2.5 text-base font-medium leading-5 text-brandPink',
-                  'focus:outline-none',
+                  'focus:outline-none focus:ring-2 focus:ring-brandPink font-heading',
                   selected
-                    ? 'bg-white shadow focus:ring-2 focus:ring-brandPink'
+                    ? 'bg-white shadow ring-2 ring-brandPink'
                     : 'text-pink-100 hover:bg-white/[0.12] hover:text-white',
                 )
               }
@@ -279,8 +285,8 @@ const IndexPage = ({
           </Tab.List>
           <Tab.Panels className={'px-3 lg:px-4 xl:px-10'}>
             <Tab.Panel>
-              <div className='grid grid-cols-1 mx-auto lg:grid-cols-5'>
-                <section className='col-span-5 lg:col-span-3'>
+              <div className='grid grid-cols-1 gap-6 xl:grid-cols-3 mx-auto'>
+                <section className='xl:col-span-2'>
                   <div className='mt-8 overflow-hidden border-2 rounded-lg border-brandPink'>
                     <LiteYouTubeEmbed
                       id={url}
@@ -288,73 +294,66 @@ const IndexPage = ({
                       poster='maxresdefault'
                     />
                   </div>
-                  <div className='flex flex-col items-start justify-start md:items-center md:flex-row md:justify-between'>
-                    <div>
-                      {recommended?.items?.map((item) => {
-                        const { id, snippet = {} } = item;
-                        const { title } = snippet;
-                        return (
-                          url === snippet.resourceId.videoId && (
-                            <div key={id}>
-                              <div className='mt-2 ml-1 text-xl font-bold font-heading'>
-                                {title}
-                              </div>
-                              <div className='mt-2 ml-1 text-sm font-bold font-content'>
-                                {snippet.channelTitle}
-                              </div>
+                  <div className='flex flex-col items-start justify-start md:flex-row md:justify-between'>
+                    {recommended?.items?.map((item) => {
+                      const { id, snippet = {} } = item;
+                      const { title } = snippet;
+                      return (
+                        url === snippet.resourceId.videoId && (
+                          <div key={id}>
+                            <div className='mt-2 ml-1 text-xl font-medium font-roboto max-w-2xl'>
+                              {title}
                             </div>
-                          )
-                        );
-                      })}
-                    </div>
-                    <div className='mt-4 md:mt-0'>
+                            <div className='mt-2 ml-1 text-sm font-medium font-roboto'>
+                              {snippet.channelTitle}
+                            </div>
+                          </div>
+                        )
+                      );
+                    })}
+                    <div className='mt-4'>
                       <Link href='https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1'>
-                        <div className='px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content'>
+                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-roboto'>
                           Subscribe
                         </div>
                       </Link>
                     </div>
                   </div>
                 </section>
-                <div className='md:ml-10 lg:col-span-2'>
-                  <section className='flex items-center justify-center mt-8 '>
-                    <div
-                      className='flex flex-col font-content space-y-4 overflow-y-auto lg:customScrollbar lg:max-h-[38rem]'
-                      id='style-4'
-                    >
-                      <div className='px-3 py-4 font-bold text-center text-md font-heading sticky top-0 bg-brandPink text-white rounded-md lg:rounded-r-none'>
-                        Recommended
-                      </div>
-                      {recommended?.items.map((item) => {
-                        const { id, snippet = {} } = item;
-                        const { title, thumbnails } = snippet;
-                        const { medium = {} } = thumbnails;
-                        return (
-                          <div
-                            className={
-                              url === snippet.resourceId.videoId
-                                ? 'max-w-md md:max-w-lg xl:max-w-xl text-brandPink'
-                                : 'max-w-md md:max-w-lg xl:max-w-xl hover:text-brandPink4'
-                            }
-                            key={id}
-                          >
-                            {renderRecommended(
-                              medium.url,
-                              snippet.resourceId.videoId,
-                              title,
-                              snippet.channelTitle,
-                            )}
-                          </div>
-                        );
-                      })}
+                <section className='xl:mt-8'>
+                  <div className='flex flex-col space-y-4 pb-8'>
+                    <div className='py-3 font-bold text-center text-lg font-heading sticky top-0 bg-brandPink text-white rounded-md'>
+                      Recommended
                     </div>
-                  </section>
-                </div>
+                    {recommended?.items.map((item) => {
+                      const { id, snippet = {} } = item;
+                      const { title, thumbnails } = snippet;
+                      const { medium = {} } = thumbnails;
+                      return (
+                        <div
+                          className={
+                            url === snippet.resourceId.videoId
+                              ? 'text-brandPink'
+                              : 'max-w-md md:max-w-xl hover:text-brandPink4'
+                          }
+                          key={id}
+                        >
+                          {renderRecommended(
+                            medium.url,
+                            snippet.resourceId.videoId,
+                            title,
+                            snippet.channelTitle,
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </section>
               </div>
             </Tab.Panel>
-            <Tab.Panel id='garbhasandesha'>
-              <div className='grid grid-cols-1 mx-auto lg:grid-cols-5'>
-                <section className='col-span-5 lg:col-span-3'>
+            <Tab.Panel>
+              <div className='grid grid-cols-1 gap-6 xl:grid-cols-3 mx-auto'>
+                <section className='xl:col-span-2'>
                   <div className='mt-8 overflow-hidden border-2 rounded-lg border-brandPink'>
                     <LiteYouTubeEmbed
                       id={url2}
@@ -362,216 +361,195 @@ const IndexPage = ({
                       poster='maxresdefault'
                     />
                   </div>
-                  <div className='flex flex-col items-start justify-start md:items-center md:flex-row md:justify-between'>
-                    <div>
-                      {garbhasandesha?.items?.map((item) => {
-                        const { id, snippet = {} } = item;
-                        const { title } = snippet;
-                        return (
-                          url2 === snippet.resourceId.videoId && (
-                            <div key={id}>
-                              <div className='mt-2 ml-1 text-xl font-bold font-heading'>
-                                {title}
-                              </div>
-                              <div className='mt-2 ml-1 font-semibold font-content'>
-                                {snippet.channelTitle}
-                              </div>
+                  <div className='flex flex-col items-start justify-start md:flex-row md:justify-between'>
+                    {garbhasandesha?.items?.map((item) => {
+                      const { id, snippet = {} } = item;
+                      const { title } = snippet;
+                      return (
+                        url2 === snippet.resourceId.videoId && (
+                          <div key={id}>
+                            <div className='mt-2 ml-1 text-xl font-medium font-roboto max-w-2xl'>
+                              {title}
                             </div>
-                          )
-                        );
-                      })}
-                    </div>
-                    <div className='mt-4 md:mt-0'>
+                            <div className='mt-2 ml-1 text-sm font-medium font-roboto'>
+                              {snippet.channelTitle}
+                            </div>
+                          </div>
+                        )
+                      );
+                    })}
+                    <div className='mt-4'>
                       <Link href='https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1'>
-                        <div className='px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content'>
+                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-roboto'>
                           Subscribe
                         </div>
                       </Link>
                     </div>
                   </div>
                 </section>
-                <div className='md:ml-10 lg:col-span-2'>
-                  <section className='flex items-center justify-center mt-8 '>
-                    <div
-                      className='flex flex-col font-content space-y-4 overflow-y-auto lg:customScrollbar lg:max-h-[38rem]'
-                      id='style-4'
-                    >
-                      <div className='px-3 py-4 font-bold text-center text-md font-heading sticky top-0 bg-brandPink text-white rounded-md lg:rounded-r-none'>
-                        GarbhaSandesha
-                      </div>
-                      {garbhasandesha.items.map((item) => {
-                        const { id, snippet = {} } = item;
-                        const { title, thumbnails } = snippet;
-                        const { medium = {} } = thumbnails;
-                        return (
-                          <div
-                            className={
-                              url2 === snippet.resourceId.videoId
-                                ? 'max-w-md md:max-w-lg xl:max-w-xl text-brandPink'
-                                : 'max-w-md md:max-w-lg xl:max-w-xl hover:text-brandPink4'
-                            }
-                            key={id}
-                          >
-                            {renderGarbhaSandesha(
-                              medium.url,
-                              snippet.resourceId.videoId,
-                              title,
-                              snippet.channelTitle,
-                            )}
-                          </div>
-                        );
-                      })}
+                <section className='xl:mt-8'>
+                  <div className='flex flex-col space-y-4 pb-8'>
+                    <div className='py-3 font-bold text-center text-lg font-heading sticky top-0 bg-brandPink text-white rounded-md'>
+                      GarbhaSandesha
                     </div>
-                  </section>
-                </div>
+                    {garbhasandesha?.items.map((item) => {
+                      const { id, snippet = {} } = item;
+                      const { title, thumbnails } = snippet;
+                      const { medium = {} } = thumbnails;
+                      return (
+                        <div
+                          className={
+                            url2 === snippet.resourceId.videoId
+                              ? 'text-brandPink'
+                              : 'max-w-md md:max-w-xl hover:text-brandPink4'
+                          }
+                          key={id}
+                        >
+                          {renderGarbhaSandesha(
+                            medium.url,
+                            snippet.resourceId.videoId,
+                            title,
+                            snippet.channelTitle,
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </section>
               </div>
             </Tab.Panel>
             <Tab.Panel>
-              <div className='grid grid-cols-1 mx-auto lg:grid-cols-5'>
-                <section className='col-span-5 lg:col-span-3'>
+              <div className='grid grid-cols-1 gap-6 xl:grid-cols-3 mx-auto'>
+                <section className='xl:col-span-2'>
                   <div className='mt-8 overflow-hidden border-2 rounded-lg border-brandPink'>
                     <LiteYouTubeEmbed
                       id={url3}
                       title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
-                      poster={'maxresdefault'}
+                      poster='maxresdefault'
                     />
                   </div>
-                  <div className='flex flex-col items-start justify-start md:items-center md:flex-row md:justify-between'>
-                    <div>
-                      {tvAppearance?.items?.map((item) => {
-                        const { id, snippet = {} } = item;
-                        const { title } = snippet;
-                        return (
-                          url3 === snippet.resourceId.videoId && (
-                            <div key={id}>
-                              <div className='mt-2 ml-1 text-xl font-bold font-kan'>
-                                {title}
-                              </div>
-                              <div className='mt-2 ml-1 font-semibold font-conten'>
-                                {snippet.channelTitle}
-                              </div>
+                  <div className='flex flex-col items-start justify-start md:flex-row md:justify-between'>
+                    {tvAppearance?.items?.map((item) => {
+                      const { id, snippet = {} } = item;
+                      const { title } = snippet;
+                      return (
+                        url3 === snippet.resourceId.videoId && (
+                          <div key={id}>
+                            <div className='mt-2 ml-1 text-xl font-medium font-roboto max-w-2xl'>
+                              {title}
                             </div>
-                          )
-                        );
-                      })}
-                    </div>
-                    <div className='mt-4 md:mt-0'>
+                            <div className='mt-2 ml-1 text-sm font-medium font-roboto'>
+                              {snippet.channelTitle}
+                            </div>
+                          </div>
+                        )
+                      );
+                    })}
+                    <div className='mt-4'>
                       <Link href='https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1'>
-                        <div className='px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content'>
+                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-roboto'>
                           Subscribe
                         </div>
                       </Link>
                     </div>
                   </div>
                 </section>
-                <div className='md:ml-10 lg:col-span-2'>
-                  <section className='flex items-center justify-center mt-8 '>
-                    <div
-                      className='flex flex-col font-content space-y-4 overflow-y-auto lg:customScrollbar lg:max-h-[38rem]'
-                      id='style-4'
-                    >
-                      <div className='px-3 py-4 font-bold text-center text-md font-heading sticky top-0 bg-brandPink text-white rounded-md lg:rounded-r-none'>
-                        TV Appearances
-                      </div>
-                      {tvAppearance?.items.map((item) => {
-                        const { id, snippet = {} } = item;
-                        const { title, thumbnails } = snippet;
-                        const { medium = {} } = thumbnails;
-                        return (
-                          <div
-                            className={
-                              url3 === snippet.resourceId.videoId
-                                ? 'max-w-md md:max-w-lg xl:max-w-xl text-brandPink'
-                                : 'max-w-md md:max-w-lg xl:max-w-xl hover:text-brandPink4'
-                            }
-                            key={id}
-                          >
-                            {renderTvAppreances(
-                              medium.url,
-                              snippet.resourceId.videoId,
-                              title,
-                              snippet.channelTitle,
-                            )}
-                          </div>
-                        );
-                      })}
+                <section className='xl:mt-8'>
+                  <div className='flex flex-col space-y-4 pb-8'>
+                    <div className='py-3 font-bold text-center text-lg font-heading sticky top-0 bg-brandPink text-white rounded-md'>
+                      TV Programs
                     </div>
-                  </section>
-                </div>
+                    {tvAppearance?.items.map((item) => {
+                      const { id, snippet = {} } = item;
+                      const { title, thumbnails } = snippet;
+                      const { medium = {} } = thumbnails;
+                      return (
+                        <div
+                          className={
+                            url3 === snippet.resourceId.videoId
+                              ? 'text-brandPink'
+                              : 'max-w-md md:max-w-xl hover:text-brandPink4'
+                          }
+                          key={id}
+                        >
+                          {renderTvAppreances(
+                            medium.url,
+                            snippet.resourceId.videoId,
+                            title,
+                            snippet.channelTitle,
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </section>
               </div>
             </Tab.Panel>
             <Tab.Panel>
-              <div className='grid grid-cols-1 mx-auto lg:grid-cols-5'>
-                <div className='col-span-5 lg:col-span-3'>
+              <div className='grid grid-cols-1 gap-6 xl:grid-cols-3 mx-auto'>
+                <section className='xl:col-span-2'>
                   <div className='mt-8 overflow-hidden border-2 rounded-lg border-brandPink'>
                     <LiteYouTubeEmbed
                       id={url4}
                       title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
-                      poster={'maxresdefault'}
+                      poster='maxresdefault'
                     />
                   </div>
-                  <div className='flex flex-col items-start justify-start md:items-center md:flex-row md:justify-between'>
-                    <div>
-                      {testimonials?.items?.map((item) => {
-                        const { id, snippet = {} } = item;
-                        const { title } = snippet;
-                        return (
-                          url4 === snippet.resourceId.videoId && (
-                            <div key={id}>
-                              <div className='mt-2 ml-1 text-xl font-bold font-kan'>
-                                {title}
-                              </div>
-                              <div className='mt-2 ml-1 font-semibold font-conten'>
-                                {snippet.channelTitle}
-                              </div>
+                  <div className='flex flex-col items-start justify-start md:flex-row md:justify-between'>
+                    {testimonials?.items?.map((item) => {
+                      const { id, snippet = {} } = item;
+                      const { title } = snippet;
+                      return (
+                        url4 === snippet.resourceId.videoId && (
+                          <div key={id}>
+                            <div className='mt-2 ml-1 text-xl font-medium font-roboto max-w-2xl'>
+                              {title}
                             </div>
-                          )
-                        );
-                      })}
-                    </div>
-                    <div className='mt-4 md:mt-0'>
+                            <div className='mt-2 ml-1 text-sm font-medium font-roboto'>
+                              {snippet.channelTitle}
+                            </div>
+                          </div>
+                        )
+                      );
+                    })}
+                    <div className='mt-4'>
                       <Link href='https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1'>
-                        <div className='px-4 py-2.5 font-semibold text-white uppercase bg-red-500 rounded-md font-content'>
+                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-roboto'>
                           Subscribe
                         </div>
                       </Link>
                     </div>
                   </div>
-                </div>
-                <div className='md:ml-10 lg:col-span-2'>
-                  <section className='flex items-center justify-center mt-8 '>
-                    <div
-                      className='flex flex-col font-content space-y-4 overflow-y-auto lg:customScrollbar lg:max-h-[38rem]'
-                      id='style-4'
-                    >
-                      <div className='px-3 py-4 font-bold text-center text-md font-heading sticky top-0 bg-brandPink text-white rounded-md lg:rounded-r-none'>
-                        Testimonials
-                      </div>
-                      {testimonials?.items.map((item) => {
-                        const { id, snippet = {} } = item;
-                        const { title, thumbnails } = snippet;
-                        const { medium = {} } = thumbnails;
-                        return (
-                          <div
-                            className={
-                              url4 === snippet.resourceId.videoId
-                                ? 'max-w-md md:max-w-lg xl:max-w-xl text-brandPink'
-                                : 'max-w-md md:max-w-lg xl:max-w-xl hover:text-brandPink4'
-                            }
-                            key={id}
-                          >
-                            {renderTestimonials(
-                              medium.url,
-                              snippet.resourceId.videoId,
-                              title,
-                              snippet.channelTitle,
-                            )}
-                          </div>
-                        );
-                      })}
+                </section>
+                <section className='xl:mt-8'>
+                  <div className='flex flex-col space-y-4 pb-8'>
+                    <div className='py-3 font-bold text-center text-lg font-heading sticky top-0 bg-brandPink text-white rounded-md'>
+                      Testimonials
                     </div>
-                  </section>
-                </div>
+                    {testimonials?.items.map((item) => {
+                      const { id, snippet = {} } = item;
+                      const { title, thumbnails } = snippet;
+                      const { medium = {} } = thumbnails;
+                      return (
+                        <div
+                          className={
+                            url4 === snippet.resourceId.videoId
+                              ? 'text-brandPink'
+                              : 'max-w-md md:max-w-xl hover:text-brandPink4'
+                          }
+                          key={id}
+                        >
+                          {renderTestimonials(
+                            medium.url,
+                            snippet.resourceId.videoId,
+                            title,
+                            snippet.channelTitle,
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </section>
               </div>
             </Tab.Panel>
           </Tab.Panels>

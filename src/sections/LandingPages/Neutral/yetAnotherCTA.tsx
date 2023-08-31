@@ -6,7 +6,7 @@ const YACta = () => {
     <div className='bg-gray-200 px-3'>
       <div className='max-w-5xl mx-auto py-14'>
         <div className='flex items-center justify-between flex-col md:flex-row mx-auto'>
-          <div className='font-dm text-2xl lg:text-3xl'>
+          <div className='font-content text-2xl lg:text-3xl'>
             Take the first step towards happiness <br /> with our IVF Packages
             starting from as low as <br />{' '}
             <span className='text-brandPink font-bold'> ₹ 90,000/-</span>

@@ -69,7 +69,7 @@ const DoctorList = (doctorList) => {
                           <h3 className='text-brandDark text-lg font-heading font-bold'>
                             {item?.name}
                           </h3>
-                          <p className='text-xs text-purple-900 font-dm'>
+                          <p className='text-xs text-purple-900 font-content'>
                             {item?.qualification}
                           </p>
                           <div className='pb-2 text-sm text-brandPink font-content drop-shadow-2xl shadow-black'>

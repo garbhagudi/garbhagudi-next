@@ -100,7 +100,7 @@ const Testimonial = () => {
           </button>
         </div>
       </div>
-      <div className='text-center lg:text-right pt-4 font-dm py-1 max-w-6xl mx-auto underline text-sm'>
+      <div className='text-center lg:text-right pt-4 font-content py-1 max-w-6xl mx-auto underline text-sm'>
         Swipe for more reviews <MdOutlineSwipeLeft className='inline-block' />
       </div>
     </section>
