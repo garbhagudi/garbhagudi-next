@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Band = () => {
   return (
-    <div className='px-3 mx-auto my-4  border-gray-300 max-w-7xl sm:px-6 lg:px-4 '>
+    <div className='px-3 mx-auto -mt-8 border-gray-300 max-w-7xl sm:px-6 lg:px-4 '>
       <div className='block mx-auto border-b text-xl font-bold text-center md:text-2xl font-benne'>
         <div className='block md:inline-block'>
           <span className='text-brandPink'>ಬಾಳಿಗೊಂದು ಬೇಕು </span>{' '}
