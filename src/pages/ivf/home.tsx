@@ -6,12 +6,8 @@ import FeaturesBlocks from 'sections/LandingPages/Neutral/awards';
 import Banner from 'sections/LandingPages/Neutral/banner';
 import Branch from 'sections/LandingPages/Neutral/branches';
 import DoctorLayout from 'components/doctorsLayout';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import SwiperCore from 'swiper';
-import { Navigation } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 import HeroHome from 'sections/LandingPages/Neutral/hero';
 import Stage from 'sections/LandingPages/Neutral/stage';
 import Treatments from 'sections/LandingPages/Neutral/treatments';
@@ -22,32 +18,13 @@ import Head from 'next/head';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 
 const YOUTUBE_PLAYLIST_ITEMS_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
 
 const IndexPage = ({ doctors, testimonials, branches }) => {
   const [activeIndex, setActiveIndex] = React.useState(1);
-  const swiperRef = useRef<SwiperCore>();
-
-  const breakpoints = {
-    0: {
-      slidesPerView: 1,
-      spaceBetween: 0,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-    },
-    1601: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-    },
-  };
   return (
     <div>
       <Head>
@@ -114,50 +91,67 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
             <h1 className='text-2xl lg:text-3xl font-heading font-bold text-center pb-10 lg:pb-16'>
               Meet Our Fertility Specialists
             </h1>
-            <div className='relative max-w-7xl mx-auto flex items-center justify-center'>
-              <button
-                onClick={() => swiperRef.current?.slidePrev()}
-                className='bg-brandPink text-white rounded-full z-10 p-2 absolute left-0 ml-4'
-              >
-                <HiChevronLeft className='text-2xl' />
-              </button>
-              <Swiper
-                slidesPerView={4}
-                spaceBetween={30}
-                modules={[Navigation]}
-                onBeforeInit={(swiper) => {
-                  swiperRef.current = swiper;
+            <div className='relative max-w-lg mx-auto flex items-center justify-center'>
+              <Carousel
+                autoPlay
+                infiniteLoop
+                emulateTouch
+                swipeable
+                interval={5000}
+                className='w-full h-full'
+                stopOnHover
+                showArrows
+                showIndicators={false}
+                showStatus={false}
+                renderArrowPrev={(clickHandler, hasPrev) => {
+                  return (
+                    <div
+                      className={`${
+                        hasPrev ? 'absolute' : 'hidden'
+                      } top-0 bottom-0 left-0 md:flex justify-center items-center p-3 opacity-80 hover:opacity-100 cursor-pointer z-20 hidden`}
+                      onClick={clickHandler}
+                    >
+                      <div className='w-11 h-11 bg-brandPurpleDark rounded-full flex items-center justify-center'>
+                        <HiChevronLeft className='w-full h-full mr-1 text-white' />
+                      </div>
+                    </div>
+                  );
                 }}
-                breakpoints={breakpoints}
-                className='max-w-6xl'
+                renderArrowNext={(clickHandler, hasNext) => {
+                  return (
+                    <div
+                      className={`${
+                        hasNext ? 'absolute' : 'hidden'
+                      } top-0 bottom-0 right-0 hidden md:flex justify-center items-center p-3 opacity-80 hover:opacity-100 cursor-pointer z-20`}
+                      onClick={clickHandler}
+                    >
+                      <div className='w-11 h-11 bg-brandPurpleDark rounded-full flex items-center justify-center'>
+                        <HiChevronRight className='w-full h-full ml-1 text-white' />
+                      </div>
+                    </div>
+                  );
+                }}
               >
                 {doctors.map((items) => (
-                  <SwiperSlide key={items.id}>
-                    <DoctorLayout
-                      index={items.id}
-                      imageComponent={
-                        <ImageComponent
-                          name={items.name}
-                          image={items.image.url}
-                          designation={items.designation}
-                          imageAlt={items.imageAlt}
-                        />
-                      }
-                      activeIndex={activeIndex}
-                      docpic={items.image.url}
-                      name={items.name}
-                      bio={items.bio.raw.children}
-                      setActiveIndex={setActiveIndex}
-                    ></DoctorLayout>
-                  </SwiperSlide>
+                  <DoctorLayout
+                    index={items.id}
+                    key={items.id}
+                    imageComponent={
+                      <ImageComponent
+                        name={items.name}
+                        image={items.image.url}
+                        designation={items.designation}
+                        imageAlt={items.imageAlt}
+                      />
+                    }
+                    activeIndex={activeIndex}
+                    docpic={items.image.url}
+                    name={items.name}
+                    bio={items.bio.raw.children}
+                    setActiveIndex={setActiveIndex}
+                  ></DoctorLayout>
                 ))}
-              </Swiper>
-              <button
-                onClick={() => swiperRef.current?.slideNext()}
-                className='bg-brandPink text-white rounded-full p-2 z-10 absolute right-0 mr-4'
-              >
-                <HiChevronRight className='text-2xl' />
-              </button>
+              </Carousel>
             </div>
           </div>
         </div>

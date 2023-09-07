@@ -2,11 +2,8 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Scrollbar } from 'swiper';
-import { Navigation } from 'swiper';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const breakpoints = {
   0: {
@@ -28,7 +25,6 @@ const breakpoints = {
 };
 
 const DoctorList = (doctorList) => {
-  const swiperRef2 = useRef<SwiperCore>();
   return (
     <div>
       <div className='bg-purple-100/70' id='ourTeam'>
@@ -83,69 +79,83 @@ const DoctorList = (doctorList) => {
               })}
             </div>
             <div className='relative mx-auto flex flex-row items-center justify-center lg:hidden'>
-              <button
-                onClick={() => swiperRef2.current?.slidePrev()}
-                className='bg-brandPink text-white rounded-full z-10 p-2 absolute left-0 ml-4 '
-              >
-                <HiChevronLeft className='text-2xl' />
-              </button>
-              <Swiper
-                modules={[Navigation, Scrollbar]}
-                onBeforeInit={(swiper) => {
-                  swiperRef2.current = swiper;
+              <Carousel
+                autoPlay
+                infiniteLoop
+                emulateTouch
+                interval={5000}
+                className='w-full h-full'
+                stopOnHover
+                showArrows
+                showIndicators={false}
+                showStatus={false}
+                renderArrowPrev={(clickHandler, hasPrev) => {
+                  return (
+                    <div
+                      className={`${
+                        hasPrev ? 'absolute' : 'hidden'
+                      } top-0 bottom-0 left-0 md:flex justify-center items-center p-3 opacity-80 hover:opacity-100 cursor-pointer z-20 hidden`}
+                      onClick={clickHandler}
+                    >
+                      <div className='w-11 h-11 bg-brandPurpleDark rounded-full flex items-center justify-center'>
+                        <HiChevronLeft className='w-full h-full mr-1 text-white' />
+                      </div>
+                    </div>
+                  );
                 }}
-                breakpoints={breakpoints}
-                className=''
-                loop={true}
-                pagination={true}
-                autoplay
+                renderArrowNext={(clickHandler, hasNext) => {
+                  return (
+                    <div
+                      className={`${
+                        hasNext ? 'absolute' : 'hidden'
+                      } top-0 bottom-0 right-0 hidden md:flex justify-center items-center p-3 opacity-80 hover:opacity-100 cursor-pointer z-20`}
+                      onClick={clickHandler}
+                    >
+                      <div className='w-11 h-11 bg-brandPurpleDark rounded-full flex items-center justify-center'>
+                        <HiChevronRight className='w-full h-full ml-1 text-white' />
+                      </div>
+                    </div>
+                  );
+                }}
               >
                 {doctorList?.doctors.map((item: any) => {
                   return (
-                    <SwiperSlide key={item.id}>
-                      <div className='mb-2 transition-all duration-500 rounded-xl '>
-                        <Link
-                          href={`/fertility-experts/${item?.slug}`}
-                          passHref
-                        >
+                    <div
+                      className='mb-2 transition-all duration-500 rounded-xl'
+                      key={item.id}
+                    >
+                      <Link href={`/fertility-experts/${item?.slug}`} passHref>
+                        <div className='space-y-4'>
+                          <div className='relative h-56 w-56 mx-auto'>
+                            <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
+                            <Image
+                              className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
+                              src={item?.image?.url}
+                              alt={item?.imageAlt || item?.name}
+                              width={500}
+                              height={500}
+                              loading='lazy'
+                            />
+                          </div>
                           <div className='space-y-4'>
-                            <div className='relative h-56 w-56 mx-auto'>
-                              <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
-                              <Image
-                                className='rounded-full shadow-vigorous drop-shadow-2xl bg-transparent'
-                                src={item?.image?.url}
-                                alt={item?.imageAlt || item?.name}
-                                width={500}
-                                height={500}
-                                loading='lazy'
-                              />
-                            </div>
-                            <div className='space-y-4'>
-                              <div className='space-y-1 text-lg font-medium leading-6'>
-                                <h3 className='text-brandDark font-content'>
-                                  {item?.name}
-                                </h3>
-                                <p className='text-sm text-brandPurpleDark font-content'>
-                                  {item?.qualification}
-                                </p>
-                                <p className='pb-2 text-sm text-brandPink font-content'>
-                                  {item?.designation}
-                                </p>
-                              </div>
+                            <div className='space-y-1 text-lg font-medium leading-6'>
+                              <h3 className='text-brandDark font-content'>
+                                {item?.name}
+                              </h3>
+                              <p className='text-sm text-brandPurpleDark font-content'>
+                                {item?.qualification}
+                              </p>
+                              <p className='pb-2 text-sm text-brandPink font-content'>
+                                {item?.designation}
+                              </p>
                             </div>
                           </div>
-                        </Link>
-                      </div>
-                    </SwiperSlide>
+                        </div>
+                      </Link>
+                    </div>
                   );
                 })}
-              </Swiper>
-              <button
-                onClick={() => swiperRef2.current?.slideNext()}
-                className='bg-brandPink text-white rounded-full p-2 z-10 absolute right-0 mr-4'
-              >
-                <HiChevronRight className='text-2xl' />
-              </button>
+              </Carousel>
             </div>
           </div>
         </div>
