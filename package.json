@@ -31,7 +31,7 @@
     "react-social-icons": "^6.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20.5.9",
+    "@types/node": "^20.6.0",
     "@types/react": "^18.2.21",
     "autoprefixer": "^10.4.15",
     "eslint": "^8.48.0",
