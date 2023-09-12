@@ -5,25 +5,6 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
-const breakpoints = {
-  0: {
-    slidesPerView: 1,
-    spaceBetween: 0,
-  },
-  768: {
-    slidesPerView: 1,
-    spaceBetween: 30,
-  },
-  1024: {
-    slidesPerView: 1,
-    spaceBetween: 30,
-  },
-  1601: {
-    slidesPerView: 1,
-    spaceBetween: 30,
-  },
-};
-
 const BannerComponent = (bannerData) => {
   return (
     <div>
