@@ -422,6 +422,7 @@ module.exports = {
       content: 'Nunito',
       benne: 'Benne',
       roboto: 'Roboto',
+      lexend: 'Lexend',
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

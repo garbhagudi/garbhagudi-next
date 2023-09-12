@@ -10,6 +10,10 @@ const nextConfig = {
       'avatars.dicebear.com',
     ],
   },
+  experimental: {
+    optimizeFonts: true,
+    scrollRestoration: true,
+  },
 
   async headers() {
     return [
