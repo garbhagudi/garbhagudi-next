@@ -196,6 +196,12 @@ export const Resources = [
     href: '/resources/myths-and-facts',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1656676913/Icons/Resources/MYTH_FACT_wdure8.svg',
   },
+  {
+    name: 'Events',
+    description: 'Free Camps, Webinars and other events by GarbhaGudi',
+    href: '/events/ghar-ghar-garbhagudi',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839833/Icons/Resources/Events_Webinars_buec8s.svg',
+  },
 ];
 
 export const Location = [
