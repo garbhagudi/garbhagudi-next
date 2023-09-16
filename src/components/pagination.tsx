@@ -30,14 +30,14 @@ const Pagination = ({
         <div className='flex mx-auto items-center justify-center space-x-4 text-center mt-5 sm:hidden'>
           {isPrev && (
             <Link href={`/blogs/page/${previousPage}`}>
-              <div className=' rounded-lg py-2 px-6 bg-brandPink font-content font-semibold text-white'>
+              <div className=' rounded-lg py-2 px-6 bg-gg-500 font-content font-semibold text-white'>
                 Prev Page
               </div>
             </Link>
           )}
           {isNext && (
             <Link href={`/blogs/page/${nextPage}`}>
-              <div className='rounded-lg py-2 px-4 bg-brandPink font-content font-semibold text-white'>
+              <div className='rounded-lg py-2 px-4 bg-gg-500 font-content font-semibold text-white'>
                 Next Page
               </div>
             </Link>
@@ -63,8 +63,8 @@ const Pagination = ({
                     onClick={() => handlePageClick(number)}
                     className={
                       currentPage === number
-                        ? 'relative z-10 inline-flex items-center font-content border border-brandPink bg-brandPink5 px-3 py-1.5 text-sm font-bold text-brandPink focus:z-20'
-                        : 'relative z-10 inline-flex items-center font-content px-1.5 py-1.5 text-sm font-medium hover:text-brandPink hover:underline hover:font-bold'
+                        ? 'relative z-10 inline-flex items-center font-content border border-gg-500 bg-brandPink5 px-3 py-1.5 text-sm font-bold text-gg-500 focus:z-20'
+                        : 'relative z-10 inline-flex items-center font-content px-1.5 py-1.5 text-sm font-medium hover:text-gg-500 hover:underline hover:font-bold'
                     }
                   >
                     <Link href={`/blogs/page/${number}`}>{number}</Link>
@@ -73,7 +73,7 @@ const Pagination = ({
               </div>
               <Link
                 href={nextLink}
-                className='relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-brandPink focus:z-20'
+                className='relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gg-500 focus:z-20'
               >
                 <span className='sr-only'>Next</span>
                 <HiChevronDoubleRight className='h-5 w-5' aria-hidden='true' />

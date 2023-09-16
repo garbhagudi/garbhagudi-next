@@ -18,6 +18,7 @@ const Video = ({ testimonials }) => {
             infiniteLoop
             emulateTouch
             className='w-full h-full'
+            showThumbs={false}
             stopOnHover
             showArrows
             showIndicators={false}

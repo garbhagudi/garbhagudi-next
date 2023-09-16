@@ -177,6 +177,11 @@ export default function Footer() {
             target='_blank'
           />
           <SocialIcon
+            url='https://www.reddit.com/r/garbhagudi/'
+            style={{ width: '40px', height: '40px' }}
+            target='_blank'
+          />
+          <SocialIcon
             url='mailto:dreams@garbhagudi.com'
             style={{ width: '40px', height: '40px' }}
             target='_blank'

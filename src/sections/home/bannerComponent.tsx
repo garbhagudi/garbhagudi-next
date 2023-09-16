@@ -13,6 +13,7 @@ const BannerComponent = (bannerData) => {
           autoPlay
           infiniteLoop
           emulateTouch
+          showThumbs={false}
           interval={5000}
           className='w-full h-full'
           stopOnHover

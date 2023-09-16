@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { gql } from '@apollo/client';
 import apolloClient from 'lib/apollo-graphcms';
 import Head from 'next/head';
@@ -79,17 +80,14 @@ function BlogPage({
           text4={''}
         />
         <div className='relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
-          <div className='absolute inset-0'>
-            <div className='bg-white h-1/3 sm:h-2/3' />
-          </div>
           <div className='relative max-w-7xl mx-auto'>
             <div className='text-center'>
-              <h1 className='text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl font-heading underline'>
+              <h1 className='text-3xl font-extrabold text-gray-800 sm:text-5xl font-heading underline'>
                 Blogs
               </h1>
             </div>
             <SearchComponent />
-            <div className='mt-12 max-w-xl mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none w'>
+            <div className='py-12 max-w-xl mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none'>
               {blogs?.map((item: any) => (
                 <div
                   key={item?.node?.id}
@@ -104,10 +102,10 @@ function BlogPage({
                       />
                     </div>
                   </Link>
-                  <div className='flex-1 bg-gradient-to-bl from-pink-100 to-white via-pink-50 p-6 flex flex-col justify-between'>
+                  <div className='flex-1 bg-gradient-to-bl from-gg-200 via-gg-100 to-gg-50 p-6 flex flex-col justify-between'>
                     <div className='flex-1'>
                       <Link href={`/blogs/${item?.node?.slug}`} passHref>
-                        <p className='text-lg font-semibold text-gray-900 cursor-pointer font-heading'>
+                        <p className='text-base font-bold text-gray-900 cursor-pointer font-lexend'>
                           {item?.node?.title}
                         </p>
                       </Link>
@@ -120,26 +118,28 @@ function BlogPage({
                         >
                           <div>
                             <span className='sr-only'>
-                              {item?.node?.doctor?.name}
+                              By: {item?.node?.doctor?.name}
                             </span>
-                            <img
-                              className='h-10 w-10 rounded-full'
+                            <Image
+                              className='h-12 w-12 md:h-16 md:w-16 rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'
                               src={item?.node?.doctor?.image?.url}
                               alt={item?.node?.doctor?.name}
+                              width={40}
+                              height={40}
                             />
                           </div>
                         </Link>
                       </div>
                       <div className='ml-3'>
-                        <div className='text-sm font-medium text-gray-900'>
+                        <div className='text-base font-medium text-gray-900'>
                           <Link href={`/doctors/${item?.node?.doctor?.slug}`}>
-                            <div className='font-qs font-semibold'>
-                              {item?.node?.doctor?.name}
+                            <div className='font-lexend'>
+                              Author : {item?.node?.doctor?.name}
                             </div>
                           </Link>
                         </div>
-                        <div className='flex space-x-1 text-sm text-gray-500 font-qs'>
-                          <time>{item?.node?.publishedOn}</time>
+                        <div className='flex space-x-1 text-sm text-gray-500 font-lexend'>
+                          <time>Published: {item?.node?.publishedOn}</time>
                         </div>
                       </div>
                     </div>
