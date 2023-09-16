@@ -437,64 +437,64 @@ export const doctors = [
       </div>
     ),
   },
-  {
-    id: '11',
-    name: 'Dr Srinivas B.V',
-    designation: 'Andrologist and Urologist',
-    qualification: 'MBBS, MS, DNB Urology, FAMH',
-    location: 'Hanumanthanagar, Kalyan Nagar, Jayanagar, Electronic City',
-    image:
-      'https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/06_gq0pxk.webp',
-    bio: (
-      <div>
-        <div className='w-full lg:w-9/12 px-4 mx-auto flex justify-start'>
-          <p className='mb-4 text-gray-800 prose'>
-            <div className='text-md text-brandDark mt-3 font-qs'>
-              <p>
-                Dr Srinivas is a renowned and experienced Andrologist rendering
-                his service in Garbhagudi IVF centre as Senior Consultant
-                Andrologist and Urologist. He was awarded as the best budding
-                Andrologist in India during the National Award ceremony
-                conducted by Economic times in the year 2019, he was also
-                awarded as the best budding Andrologist in South India as well
-                during the same event.
-              </p>
-            </div>
-            <div className='text-md text-brandDark mt-3 font-qs'>
-              <p>
-                Dr Srinivas completed his MBBS from the prestigious BANGALORE
-                MEDICAL COLLEGE. Later on, finished his postgraduate MS (General
-                Surgery) from ST. JOHN’S MEDICAL COLLEGE, BANGALORE. He
-                completed his super-speciality course DNB (Urology)- NATIONAL
-                BOARD OF EXAMINATION, NEW DELHI from NU Hospitals, Bangalore.
-                His pursuit for enhanced learning made him continue the further
-                course on FAMH( Fellowship in Andrology and Men’s Health) from
-                Rajiv Gandhi University Of health sciences. He is the first in
-                Asia to have a university certified course in Andrology and
-                men’s health.
-              </p>
-            </div>
-            <div className='text-md text-brandDark mt-3 font-qs'>
-              <p>
-                Dr Srinivas is presently practising at various IVF and fertility
-                centres in Bangalore. He has also published many articles in
-                international journals. His depth of involvement in research is
-                evident with his journal published in the International Journal
-                of Infertility and Fetal Medicine which studied the effect of
-                mobile phone radiation on semen parameters. His original article
-                on Hypogonadism and Varicocele was published in the
-                International Journal of Endocrinology and was appreciated
-                worldwide and was even included in American Urology Association
-                guidelines. To his credit, Dr Srinivas has won a lot of prizes
-                at various national and state conferences and CMEs. He is also
-                credited with being an author of 3 chapters of the standard
-                Fertility Textbook. He has given several TV interviews on
-                reproductive health and fertility issues.
-              </p>
-            </div>
-          </p>
-        </div>
-      </div>
-    ),
-  },
+  // {
+  //   id: '11',
+  //   name: 'Dr Srinivas B.V',
+  //   designation: 'Andrologist and Urologist',
+  //   qualification: 'MBBS, MS, DNB Urology, FAMH',
+  //   location: 'Hanumanthanagar, Kalyan Nagar, Jayanagar, Electronic City',
+  //   image:
+  //     'https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/06_gq0pxk.webp',
+  //   bio: (
+  //     <div>
+  //       <div className='w-full lg:w-9/12 px-4 mx-auto flex justify-start'>
+  //         <p className='mb-4 text-gray-800 prose'>
+  //           <div className='text-md text-brandDark mt-3 font-qs'>
+  //             <p>
+  //               Dr Srinivas is a renowned and experienced Andrologist rendering
+  //               his service in Garbhagudi IVF centre as Senior Consultant
+  //               Andrologist and Urologist. He was awarded as the best budding
+  //               Andrologist in India during the National Award ceremony
+  //               conducted by Economic times in the year 2019, he was also
+  //               awarded as the best budding Andrologist in South India as well
+  //               during the same event.
+  //             </p>
+  //           </div>
+  //           <div className='text-md text-brandDark mt-3 font-qs'>
+  //             <p>
+  //               Dr Srinivas completed his MBBS from the prestigious BANGALORE
+  //               MEDICAL COLLEGE. Later on, finished his postgraduate MS (General
+  //               Surgery) from ST. JOHN’S MEDICAL COLLEGE, BANGALORE. He
+  //               completed his super-speciality course DNB (Urology)- NATIONAL
+  //               BOARD OF EXAMINATION, NEW DELHI from NU Hospitals, Bangalore.
+  //               His pursuit for enhanced learning made him continue the further
+  //               course on FAMH( Fellowship in Andrology and Men’s Health) from
+  //               Rajiv Gandhi University Of health sciences. He is the first in
+  //               Asia to have a university certified course in Andrology and
+  //               men’s health.
+  //             </p>
+  //           </div>
+  //           <div className='text-md text-brandDark mt-3 font-qs'>
+  //             <p>
+  //               Dr Srinivas is presently practising at various IVF and fertility
+  //               centres in Bangalore. He has also published many articles in
+  //               international journals. His depth of involvement in research is
+  //               evident with his journal published in the International Journal
+  //               of Infertility and Fetal Medicine which studied the effect of
+  //               mobile phone radiation on semen parameters. His original article
+  //               on Hypogonadism and Varicocele was published in the
+  //               International Journal of Endocrinology and was appreciated
+  //               worldwide and was even included in American Urology Association
+  //               guidelines. To his credit, Dr Srinivas has won a lot of prizes
+  //               at various national and state conferences and CMEs. He is also
+  //               credited with being an author of 3 chapters of the standard
+  //               Fertility Textbook. He has given several TV interviews on
+  //               reproductive health and fertility issues.
+  //             </p>
+  //           </div>
+  //         </p>
+  //       </div>
+  //     </div>
+  //   ),
+  // },
 ];

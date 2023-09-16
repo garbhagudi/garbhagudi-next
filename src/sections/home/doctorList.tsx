@@ -41,7 +41,7 @@ const DoctorList = (doctorList) => {
                 cases.
               </p>
             </div>
-            <div className='hidden lg:grid grid-cols-2 mx-auto space-y-0 sm:gap-8 sm:space-y-0 lg:grid-cols-6'>
+            <div className='hidden lg:grid grid-cols-2 mx-auto space-y-0 sm:gap-8 sm:space-y-0 lg:grid-cols-5'>
               {doctorList?.doctors.map((item: any) => {
                 return (
                   <div
@@ -85,6 +85,7 @@ const DoctorList = (doctorList) => {
                 emulateTouch
                 interval={5000}
                 className='w-full h-full'
+                showThumbs={false}
                 stopOnHover
                 showArrows
                 showIndicators={false}

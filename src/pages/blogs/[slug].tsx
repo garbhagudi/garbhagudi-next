@@ -9,6 +9,8 @@ import Share from 'components/share';
 import Loading from 'components/Loading';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
@@ -27,6 +29,7 @@ export const getStaticProps = async ({ params }) => {
               url
             }
             name
+            imageAlt
             slug
           }
           content {
@@ -276,21 +279,30 @@ const Blog = ({ blog }) => {
           <div className='relative px-4 sm:px-6 lg:px-8'>
             <div className='max-w-7xl mx-auto'>
               <h1>
-                <span className='mt-4 block text-2xl text-center leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl font-heading'>
+                <span className='block text-2xl text-center leading-8 font-bold tracking-tighter text-gray-900 sm:text-4xl font-heading'>
                   {blog?.title}
                 </span>
-                <span className='block text-base text-center text-brandPink font-semibold tracking-wide uppercase mt-4'>
-                  {blog?.doctor?.name}
-                </span>
               </h1>
+              <Link href={`/fertility-experts/${blog?.doctor?.slug}`}>
+                <div className='flex items-center justify-center space-x-4 text-base text-center text-brandPink font-semibold tracking-wide uppercase mt-4 font-lexend'>
+                  <Image
+                    src={blog?.doctor?.image?.url}
+                    alt={blog?.doctor?.imageAlt || blog?.doctor?.name}
+                    width={40}
+                    height={40}
+                    className='h-12 w-12 md:h-16 md:w-16 rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'
+                  />
+                  <div>{blog?.doctor?.name}</div>
+                </div>
+              </Link>
 
               <img
-                className='w-full rounded-3xl mt-10 mb-8'
+                className='w-full rounded-lg my-8'
                 src={blog?.image?.url}
                 alt={blog?.title}
               />
 
-              <hr className='h-[6px] bg-gradient-to-r from-white  via-brandPurpleDark to-white rounded-3xl' />
+              <hr className='h-1 bg-brandPurpleDark' />
               <div>
                 <RichText content={blog?.content?.raw.children} />
               </div>
