@@ -50,7 +50,7 @@ const DoctorList = (doctorList) => {
                   >
                     <Link href={`/fertility-experts/${item?.slug}`} passHref>
                       <div className='space-y-4'>
-                        <div className='relative w-44 h-44'>
+                        <div className='relative w-44 h-44 mx-auto'>
                           <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
                           <Image
                             className='rounded-full  shadow-champaigne drop-shadow-2xl bg-transparent'
