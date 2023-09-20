@@ -2514,10 +2514,10 @@ react-calendar@^4.6.0:
     prop-types "^15.6.0"
     tiny-warning "^1.0.0"
 
-react-chrono@^2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/react-chrono/-/react-chrono-2.2.4.tgz#0f7855218f95f2d9e962f8eeff30764031db4aac"
-  integrity sha512-5BhtD6cKskJTMdI2yxzttcDKath7UeSMs313nyNsaGGcqaLD2WI08xT37mCQkbEoVUtGDWIJ4ZI7LVwEbIxMSA==
+react-chrono@^2.2.7:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/react-chrono/-/react-chrono-2.2.7.tgz#ad738202a05305366d94cb88a08d648ed678da40"
+  integrity sha512-ITDuhemBg63b68adijcreO4fgTC5tDOP4m+9HXqGI4Jp/QL5zCyIzv4nh41AWfZU7xc8Pr2UTABFtxvPIxiu4A==
   dependencies:
     classnames "^2.3.2"
     dayjs "^1.11.9"
