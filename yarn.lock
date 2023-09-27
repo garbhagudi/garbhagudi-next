@@ -130,14 +130,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.22.5"
 
-"@babel/runtime@^7.20.7":
-  version "7.21.0"
-  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.21.0.tgz"
-  integrity sha512-xwII0//EObnq89Ji5AKYQaRYiW/nZ3llSv29d49IuxPhKbtJoLP+9QUUZ4nVragQVtaVGeZrpB+ZtG/Pdy/POw==
-  dependencies:
-    regenerator-runtime "^0.13.11"
-
-"@babel/runtime@^7.22.11":
+"@babel/runtime@^7.20.7", "@babel/runtime@^7.22.11":
   version "7.22.15"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.22.15.tgz#38f46494ccf6cf020bd4eed7124b425e83e523b8"
   integrity sha512-T0O+aa+4w0u06iNmapipJXMV4HoUir03hpx3/YqXXhu9xim3w+dVphjFWl1OH8NbZHw5Lbm9k45drDkgq2VNNA==
@@ -2788,10 +2781,10 @@ react-responsive-carousel@^3.2.23:
     prop-types "^15.5.8"
     react-easy-swipe "^0.0.21"
 
-react-social-icons@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/react-social-icons/-/react-social-icons-6.3.0.tgz#adcf11901764c83be80e0e3f35e7f46f5f0e2049"
-  integrity sha512-g9+KnKsMYk2tJIyxHcTJ5rIqvNhRMTwM6c5CksLResbD2uZvsBawTnV1YXQ23V4xyZP6HPQCHG6epVlyv2mrgg==
+react-social-icons@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/react-social-icons/-/react-social-icons-6.4.0.tgz#6b8326140fb54618cbfce26542cd617d564f9364"
+  integrity sha512-8kLSp7yWB4GjWk9mDZc+u7qAkAF5lxuWLnolwRQ7KoUgQfjnxpFcuSSyda/Klt+HkqtFMiOJ+/Qtgq73vwc6BQ==
   dependencies:
     "@babel/runtime" "^7.22.11"
     react "^18.2.0"
@@ -2829,11 +2822,6 @@ reflect.getprototypeof@^1.0.4:
     get-intrinsic "^1.2.1"
     globalthis "^1.0.3"
     which-builtin-type "^1.1.3"
-
-regenerator-runtime@^0.13.11:
-  version "0.13.11"
-  resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz"
-  integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
 
 regenerator-runtime@^0.14.0:
   version "0.14.0"
