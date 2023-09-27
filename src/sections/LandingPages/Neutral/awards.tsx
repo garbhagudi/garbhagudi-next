@@ -17,7 +17,7 @@ function FeaturesBlocks() {
             </p>
           </div>
 
-          <div className='max-w-md mx-auto grid gap-4 md:grid-cols-2 lg:grid-cols-2 items-start md:max-w-2xl lg:max-w-none '>
+          <div className='flex items-center justify-center flex-wrap gap-5 '>
             {Data.map((items) => (
               <div
                 className='relative flex flex-col items-center p-3 bg-white rounded-lg  hover:shadow-2xl hover:-translate-x-2 hover:-translate-y-2 hover:border-0 transition-all duration-300'
@@ -69,5 +69,11 @@ const Data = [
     img: 'https://media.graphassets.com/luwGzhRUSUKaEwJAQDrQ',
     title: 'Certified Healthy Workplace',
     desc: 'Arogya World - 2022',
+  },
+  {
+    id: 5,
+    img: 'https://media.graphassets.com/Q3M7VqroRJmeY8YdfPgJ',
+    title: 'ICON of the Year - IVF - Dr Asha S Vijay',
+    desc: 'National Fertility Awards - ET HealthWorld - 2023',
   },
 ];
