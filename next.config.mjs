@@ -1,3 +1,7 @@
+// @ts-check
+
+/** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
@@ -10,11 +14,6 @@ const nextConfig = {
       'avatars.dicebear.com',
     ],
   },
-  experimental: {
-    optimizeFonts: true,
-    scrollRestoration: true,
-  },
-
   async headers() {
     return [
       {
