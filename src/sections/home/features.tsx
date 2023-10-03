@@ -1,11 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import {
-  CiPercent,
-  CiMedicalCase,
-  CiMedicalClipboard,
-  CiBank,
-} from 'react-icons/ci';
+import { CiPercent, CiMedicalCase, CiBank } from 'react-icons/ci';
 import { BsCurrencyRupee } from 'react-icons/bs';
 import { GiMeditation } from 'react-icons/gi';
 import { ImLab } from 'react-icons/im';
