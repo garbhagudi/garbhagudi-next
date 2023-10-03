@@ -84,7 +84,6 @@ const DoctorList = (doctorList: doctorListProps) => {
                 autoplay
                 autoplayInterval={5000}
                 defaultControlsConfig={defaultControlsConfig}
-                className='shadow-2xl border-0 drop-shadow-2xl'
                 wrapAround
                 dragging
                 enableKeyboardControls
@@ -92,7 +91,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                 renderCenterLeftControls={({ previousSlide }) => (
                   <button
                     onClick={previousSlide}
-                    className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                    className='w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
                   >
                     <HiChevronLeft className='mr-1' />
                   </button>
@@ -100,36 +99,31 @@ const DoctorList = (doctorList: doctorListProps) => {
                 renderCenterRightControls={({ nextSlide }) => (
                   <button
                     onClick={nextSlide}
-                    className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                    className='w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
                   >
                     <HiChevronRight className='ml-1' />
                   </button>
                 )}
               >
-                {doctorList?.doctors.map((item: any) => {
-                  return (
-                    <div
-                      className='mb-2 transition-all duration-500 rounded-xl'
-                      key={item.id}
-                    >
-                      <Link href={`/fertility-experts/${item?.slug}`} passHref>
-                        <div className='space-y-4'>
-                          <div className='relative h-56 w-56 mx-auto'>
-                            <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
-                            <Image
-                              className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
-                              src={item?.image?.url}
-                              alt={item?.imageAlt || item?.name}
-                              width={500}
-                              height={500}
-                              loading='lazy'
-                            />
-                          </div>
-                          <div className='space-y-4'>
+                {doctorList?.doctors.map((item) => (
+                  <div
+                    className='mb-2 transition-all duration-500 rounded-xl'
+                    key={item.id}
+                  >
+                    <Link href={`/fertility-experts/${item?.slug}`} passHref>
+                      <div className='space-y-4'>
+                        <div className='w-64 mx-auto'>
+                          <Image
+                            className='rounded-full shadow-2xl drop-shadow-2xl bg-gradient-to-br from-brandPink3/80 to-purple-500/40'
+                            src={item?.image?.url}
+                            alt={item?.imageAlt || item?.name}
+                            width={500}
+                            height={500}
+                            loading='lazy'
+                          />
+                          <div className='flex items-center justify-center space-y-4 mt-12 text-center'>
                             <div className='space-y-1 text-lg font-medium leading-6'>
-                              <h3 className='text-brandDark font-content'>
-                                {item?.name}
-                              </h3>
+                              <h3 className='font-content'>{item?.name}</h3>
                               <p className='text-sm text-brandPurpleDark font-content'>
                                 {item?.qualification}
                               </p>
@@ -139,10 +133,10 @@ const DoctorList = (doctorList: doctorListProps) => {
                             </div>
                           </div>
                         </div>
-                      </Link>
-                    </div>
-                  );
-                })}
+                      </div>
+                    </Link>
+                  </div>
+                ))}
               </Carousel>
             </div>
           </div>

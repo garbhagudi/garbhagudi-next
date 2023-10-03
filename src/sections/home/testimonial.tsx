@@ -58,11 +58,11 @@ const Testimonial = () => {
                 </blockquote>
                 <div className='mt-8'>
                   <div className='h-[2px] w-full rounded-lg bg-gradient-to-r from-brandPink via-brandPurple to-purple-800'></div>
-                  <div className='flex pt-4 items-center justify-center'>
+                  <div className='flex pt-4 space-x-3 items-center justify-center'>
                     <div className='md:flex-shrink-0'>
                       <BsFillChatSquareQuoteFill className='text-xl text-gray-900' />
                     </div>
-                    <div className='mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center'>
+                    <div className='text-center flex items-center'>
                       <div className='font-lexend text-xl font-semibold text-gray-900 '>
                         {item.name}
                       </div>

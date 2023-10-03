@@ -34,10 +34,9 @@ const Video = ({ testimonials }: testimonialProps) => {
         </h2>
         <div className='px-3 sm:px-0 max-w-7xl mx-auto flex flex-row items-center justify-center'>
           <Carousel
-            autoplay
             defaultControlsConfig={defaultControlsConfig}
             autoplayInterval={5000}
-            className='w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl'
+            className='w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl'
             wrapAround
             dragging
             enableKeyboardControls
