@@ -27,7 +27,7 @@ const metrics = [
 
 const Stat = () => {
   return (
-    <div className='relative mx-auto max-w-7xl'>
+    <div className='relative mx-auto'>
       <div className='absolute bottom-0 w-full h-80 xl:inset-0 xl:h-full'>
         <div className='w-full h-full xl:grid xl:grid-cols-2'>
           <div className='h-full xl:relative xl:col-start-2'>
