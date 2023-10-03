@@ -6,8 +6,7 @@ import FeaturesBlocks from 'sections/LandingPages/Neutral/awards';
 import Banner from 'sections/LandingPages/Neutral/banner';
 import Branch from 'sections/LandingPages/Neutral/branches';
 import DoctorLayout from 'components/doctorsLayout';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import Carousel from 'nuka-carousel';
 import HeroHome from 'sections/LandingPages/Neutral/hero';
 import Stage from 'sections/LandingPages/Neutral/stage';
 import Treatments from 'sections/LandingPages/Neutral/treatments';
@@ -25,6 +24,11 @@ const YOUTUBE_PLAYLIST_ITEMS_API =
 
 const IndexPage = ({ doctors, testimonials, branches }) => {
   const [activeIndex, setActiveIndex] = React.useState(1);
+  const defaultControlsConfig = {
+    pagingDotsStyle: {
+      display: 'none',
+    },
+  };
   return (
     <div>
       <Head>
@@ -93,47 +97,30 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
             </h1>
             <div className='relative max-w-3xl mx-auto flex items-center justify-center'>
               <Carousel
-                autoPlay
-                infiniteLoop
-                emulateTouch
-                swipeable
-                interval={5000}
-                className='w-full h-full'
-                stopOnHover
-                showArrows
-                centerMode
-                centerSlidePercentage={65}
-                showThumbs={false}
-                showIndicators={false}
-                showStatus={false}
-                renderArrowPrev={(clickHandler, hasPrev) => {
-                  return (
-                    <div
-                      className={`${
-                        hasPrev ? 'absolute' : 'hidden'
-                      } top-0 bottom-0 left-0 md:flex justify-center items-center p-3 opacity-80 hover:opacity-100 cursor-pointer z-20 hidden`}
-                      onClick={clickHandler}
-                    >
-                      <div className='w-11 h-11 bg-brandPurpleDark rounded-full flex items-center justify-center'>
-                        <HiChevronLeft className='w-full h-full mr-1 text-white' />
-                      </div>
-                    </div>
-                  );
-                }}
-                renderArrowNext={(clickHandler, hasNext) => {
-                  return (
-                    <div
-                      className={`${
-                        hasNext ? 'absolute' : 'hidden'
-                      } top-0 bottom-0 right-0 hidden md:flex justify-center items-center p-3 opacity-80 hover:opacity-100 cursor-pointer z-20`}
-                      onClick={clickHandler}
-                    >
-                      <div className='w-11 h-11 bg-brandPurpleDark rounded-full flex items-center justify-center'>
-                        <HiChevronRight className='w-full h-full ml-1 text-white' />
-                      </div>
-                    </div>
-                  );
-                }}
+                autoplay
+                defaultControlsConfig={defaultControlsConfig}
+                autoplayInterval={5000}
+                className='w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl'
+                wrapAround
+                dragging
+                enableKeyboardControls
+                pauseOnHover
+                renderCenterLeftControls={({ previousSlide }) => (
+                  <button
+                    onClick={previousSlide}
+                    className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                  >
+                    <HiChevronLeft className='mr-1' />
+                  </button>
+                )}
+                renderCenterRightControls={({ nextSlide }) => (
+                  <button
+                    onClick={nextSlide}
+                    className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                  >
+                    <HiChevronRight className='ml-1' />
+                  </button>
+                )}
               >
                 {doctors.map((items) => (
                   <DoctorLayout

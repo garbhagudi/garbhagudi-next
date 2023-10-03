@@ -3,10 +3,14 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { FcGoogle } from 'react-icons/fc';
 import { MdOutlineSwipeLeft, MdOutlineRateReview } from 'react-icons/md';
 import { BsFillChatSquareQuoteFill } from 'react-icons/bs';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
+import Carousel from 'nuka-carousel';
 
 const Testimonial = () => {
+  const defaultControlsConfig = {
+    pagingDotsStyle: {
+      display: 'none',
+    },
+  };
   return (
     <section className='bg-gradient-to-tr from-brandPink3/70 via-brandPurple/50 to-purple-100 overflow-hidden py-8'>
       <FcGoogle className='h-14 w-14 text-center mx-auto' />
@@ -18,44 +22,30 @@ const Testimonial = () => {
       <div className='flex items-center justify-center'>
         <div className='relative max-w-7xl mx-auto flex flex-row items-center justify-center'>
           <Carousel
-            autoPlay
-            infiniteLoop
-            emulateTouch
-            interval={5000}
-            showThumbs={false}
-            className='w-full h-full'
-            stopOnHover
-            showArrows
-            showIndicators={false}
-            showStatus={false}
-            renderArrowPrev={(clickHandler, hasPrev) => {
-              return (
-                <div
-                  className={`${
-                    hasPrev ? 'absolute' : 'hidden'
-                  } top-0 bottom-0 left-0 md:flex justify-center items-center p-3 opacity-80 hover:opacity-100 cursor-pointer z-20 hidden`}
-                  onClick={clickHandler}
-                >
-                  <div className='w-11 h-11 bg-brandPurpleDark rounded-full flex items-center justify-center'>
-                    <HiChevronLeft className='w-full h-full mr-1 text-white' />
-                  </div>
-                </div>
-              );
-            }}
-            renderArrowNext={(clickHandler, hasNext) => {
-              return (
-                <div
-                  className={`${
-                    hasNext ? 'absolute' : 'hidden'
-                  } top-0 bottom-0 right-0 hidden md:flex justify-center items-center p-3 opacity-80 hover:opacity-100 cursor-pointer z-20`}
-                  onClick={clickHandler}
-                >
-                  <div className='w-11 h-11 bg-brandPurpleDark rounded-full flex items-center justify-center'>
-                    <HiChevronRight className='w-full h-full ml-1 text-white' />
-                  </div>
-                </div>
-              );
-            }}
+            autoplay
+            defaultControlsConfig={defaultControlsConfig}
+            autoplayInterval={5000}
+            className='w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl'
+            wrapAround
+            dragging
+            enableKeyboardControls
+            pauseOnHover
+            renderCenterLeftControls={({ previousSlide }) => (
+              <button
+                onClick={previousSlide}
+                className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+              >
+                <HiChevronLeft className='mr-1' />
+              </button>
+            )}
+            renderCenterRightControls={({ nextSlide }) => (
+              <button
+                onClick={nextSlide}
+                className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+              >
+                <HiChevronRight className='ml-1' />
+              </button>
+            )}
           >
             {data.map((item) => (
               <div className='flex justify-center flex-col' key={item.id}>

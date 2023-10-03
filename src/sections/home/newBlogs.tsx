@@ -1,6 +1,19 @@
 import Link from 'next/link';
 
-const BlogsSnip = ({ posts }) => {
+interface postsProps {
+  posts: [
+    {
+      id: string;
+      title: string;
+      slug: string;
+      image: {
+        url: string;
+      };
+    },
+  ];
+}
+
+const BlogsSnip = ({ posts }: postsProps) => {
   return (
     <div className='bg-white pt-16 pb-20 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
       <div className='relative max-w-lg mx-auto lg:max-w-7xl'>

@@ -1,30 +1,31 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import Carousel from 'nuka-carousel';
 
-const breakpoints = {
-  0: {
-    slidesPerView: 1,
-    spaceBetween: 0,
-  },
-  768: {
-    slidesPerView: 1,
-    spaceBetween: 30,
-  },
-  1024: {
-    slidesPerView: 1,
-    spaceBetween: 30,
-  },
-  1601: {
-    slidesPerView: 1,
-    spaceBetween: 30,
-  },
-};
+interface doctorListProps {
+  doctors: [
+    {
+      id: string;
+      name: string;
+      slug: string;
+      qualification: string;
+      designation: string;
+      image: {
+        url: string;
+      };
+      imageAlt: string;
+    },
+  ];
+}
 
-const DoctorList = (doctorList) => {
+const DoctorList = (doctorList: doctorListProps) => {
+  const defaultControlsConfig = {
+    pagingDotsStyle: {
+      display: 'none',
+    },
+  };
   return (
     <div>
       <div className='bg-purple-100/70' id='ourTeam'>
@@ -42,7 +43,7 @@ const DoctorList = (doctorList) => {
               </p>
             </div>
             <div className='hidden lg:grid grid-cols-2 mx-auto space-y-0 sm:gap-8 sm:space-y-0 lg:grid-cols-5'>
-              {doctorList?.doctors.map((item: any) => {
+              {doctorList?.doctors.map((item) => {
                 return (
                   <div
                     key={item?.id}
@@ -80,44 +81,30 @@ const DoctorList = (doctorList) => {
             </div>
             <div className='relative mx-auto flex flex-row items-center justify-center lg:hidden'>
               <Carousel
-                autoPlay
-                infiniteLoop
-                emulateTouch
-                interval={5000}
-                className='w-full h-full'
-                showThumbs={false}
-                stopOnHover
-                showArrows
-                showIndicators={false}
-                showStatus={false}
-                renderArrowPrev={(clickHandler, hasPrev) => {
-                  return (
-                    <div
-                      className={`${
-                        hasPrev ? 'absolute' : 'hidden'
-                      } top-0 bottom-0 left-0 md:flex justify-center items-center p-3 opacity-80 hover:opacity-100 cursor-pointer z-20 hidden`}
-                      onClick={clickHandler}
-                    >
-                      <div className='w-11 h-11 bg-brandPurpleDark rounded-full flex items-center justify-center'>
-                        <HiChevronLeft className='w-full h-full mr-1 text-white' />
-                      </div>
-                    </div>
-                  );
-                }}
-                renderArrowNext={(clickHandler, hasNext) => {
-                  return (
-                    <div
-                      className={`${
-                        hasNext ? 'absolute' : 'hidden'
-                      } top-0 bottom-0 right-0 hidden md:flex justify-center items-center p-3 opacity-80 hover:opacity-100 cursor-pointer z-20`}
-                      onClick={clickHandler}
-                    >
-                      <div className='w-11 h-11 bg-brandPurpleDark rounded-full flex items-center justify-center'>
-                        <HiChevronRight className='w-full h-full ml-1 text-white' />
-                      </div>
-                    </div>
-                  );
-                }}
+                autoplay
+                autoplayInterval={5000}
+                defaultControlsConfig={defaultControlsConfig}
+                className='shadow-2xl border-0 drop-shadow-2xl'
+                wrapAround
+                dragging
+                enableKeyboardControls
+                pauseOnHover
+                renderCenterLeftControls={({ previousSlide }) => (
+                  <button
+                    onClick={previousSlide}
+                    className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                  >
+                    <HiChevronLeft className='mr-1' />
+                  </button>
+                )}
+                renderCenterRightControls={({ nextSlide }) => (
+                  <button
+                    onClick={nextSlide}
+                    className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                  >
+                    <HiChevronRight className='ml-1' />
+                  </button>
+                )}
               >
                 {doctorList?.doctors.map((item: any) => {
                   return (
