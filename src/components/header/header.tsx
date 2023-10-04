@@ -58,14 +58,14 @@ const Nav = () => {
   return (
     <div className='sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-xl'>
       <nav className='shadow-2xl'>
-        <nav className='px-2 lg:px-6 lg:py-2'>
+        <nav className='px-2 lg:px-3 lg:py-2'>
           <div className='flex justify-between items-center mx-auto max-w-screen-xl'>
             <Link href='/' className='hidden xl:flex items-center px-3 py-1'>
               <Logo />
             </Link>
             <Link href='/' className='flex items-center xl:hidden'>
               <img
-                className='w-16 h-full '
+                className='w-16 h-full dark:fill-white dark:grayscale dark:brightness-0 dark:invert'
                 src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1659164257/logos/GG_Vertical_Logo_nrcl5h.svg'
                 alt='logo'
               />
@@ -77,7 +77,7 @@ const Nav = () => {
                   href='https://consult.bestdocapp.com/home/GARBHAGUDI'
                   target={'_blank'}
                   rel='noreferrer'
-                  className='px-3 py-2 text-xs xl:text-base font-semibold text-white cursor-pointer bg-brandPink rounded-lg font-content hover:bg-brandPink3'
+                  className='px-3 py-2 text-sm dark:text-gray-800 text-gray-200 cursor-pointer bg-gg-500 dark:bg-gg-400 rounded-lg font-lexend hover:bg-brandPink3 dark:hover:bg-gg-500'
                 >
                   Book Appointment
                 </Link>
@@ -112,7 +112,7 @@ const Nav = () => {
                     {menu.map((items) => (
                       <div
                         key={items.id}
-                        className='text-sm font-bold text-gray-800 dark:text-gray-200 hover:bg-brandPink hover:text-white rounded-lg font-content transition-all ease-in duration-200'
+                        className='text-sm font-bold text-gray-800 dark:text-gray-200 hover:bg-gg-500 dark:hover:bg-gg-400 hover:text-white dark:hover:text-gray-800 rounded-lg font-content transition-all ease-in duration-200'
                       >
                         {items.option}
                       </div>
@@ -132,12 +132,15 @@ const Nav = () => {
           leaveFrom='opacity-100 scale-100'
           leaveTo='opacity-0 scale-95'
         >
-          <div className='mt-2 xl:hidden pb-2 bg-white' id='mobile-menu'>
+          <div
+            className='mt-2 xl:hidden pb-2 bg-white dark:bg-gray-800'
+            id='mobile-menu'
+          >
             <div className='px-2'>
               {menu.map((items) => (
                 <div
                   key={items.id}
-                  className='text-sm rounded-md font-semibold text-brandDark hover:bg-brandPink hover:text-white font-content'
+                  className='text-sm rounded-md font-semibold text-gray-800 dark:text-gray-200 hover:bg-gg-500 dark:hover:bg-gg-400 hover:text-white dark:hover:text-gray-800 font-content'
                 >
                   <div>{items.option}</div>
                 </div>
@@ -147,7 +150,7 @@ const Nav = () => {
                 target={'_blank'}
                 rel='noreferrer'
                 onClick={() => setIsOpen(!isOpen)}
-                className='block px-2 py-2 text-opacity-90 text-sm rounded-md font-semibold cursor-pointer text-brandDark hover:bg-brandPink hover:text-white font-content'
+                className='block px-2 py-2 text-opacity-90 text-sm rounded-md font-semibold cursor-pointer text-gray-800 dark:text-gray-200 hover:bg-gg-500 dark:hover:bg-gg-400 hover:text-white dark:hover:text-gray-800 font-content'
               >
                 Book an Appointment
               </Link>

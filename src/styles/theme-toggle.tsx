@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { BsFillSunFill } from 'react-icons/bs';
-import { MdDarkMode } from 'react-icons/md';
 import { useTheme } from 'next-themes';
+import { HiOutlineLightBulb } from 'react-icons/hi';
+import { LiaLightbulb } from 'react-icons/lia';
 
 const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
@@ -11,13 +11,13 @@ const ThemeToggle = () => {
   if (!mounted) return null;
   return (
     <button
-      className={`rounded-md hover:scale-110 active:scale-100 duration-200 dark:bg-gray-800 dark:text-white flex items-center justify-center`}
+      className={`rounded-md hover:scale-110 active:scale-100 duration-200 flex w-8 h-8 items-center justify-center`}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {theme === 'light' ? (
-        <BsFillSunFill className='w-7 h-7' />
+        <HiOutlineLightBulb className='w-7 h-7 text-gg-500' />
       ) : (
-        <MdDarkMode className='w-7 h-7 text-white' />
+        <LiaLightbulb className='w-7 h-7 text-white' />
       )}
     </button>
   );

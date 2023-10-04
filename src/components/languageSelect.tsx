@@ -15,13 +15,13 @@ export default function LanguageSelect() {
     <div className=''>
       <Listbox value={selected} onChange={setSelected}>
         <div className='relative'>
-          <Listbox.Button className='relative w-full cursor-default rounded-lg bg-wbite border border-brandPink py-2 px-3 pr-7 sm:pr-8 text-center '>
-            <span className='block text-xs text-brandPink font-semibold font-content'>
+          <Listbox.Button className='relative w-full cursor-default rounded-lg bg-wbite border border-gg-500 dark:border-gg-400 py-2 px-3 pr-7 sm:pr-8 text-center '>
+            <span className='block text-sm text-gray-800 dark:text-gray-200 font-semibold font-content'>
               {selected.name}
             </span>
             <span className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-1'>
               <HiSelector
-                className='h-5 w-5 text-brandPurpleDark'
+                className='h-5 w-5 text-brandPurpleDark dark:text-brandPurple2'
                 aria-hidden='true'
               />
             </span>
@@ -32,15 +32,15 @@ export default function LanguageSelect() {
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
           >
-            <Listbox.Options className='absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'>
+            <Listbox.Options className='absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white dark:bg-gray-800 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'>
               {people.map((person, personIdx) => (
                 <Link href={person.link} passHref key={personIdx}>
                   <Listbox.Option
                     className={({ active }) =>
-                      `relative cursor-default select-none text-sm py-2 px-4 pr-4  rounded-lg ${
+                      `relative cursor-default font-content select-none text-sm py-2 px-4 pr-4  rounded-lg ${
                         active
-                          ? 'bg-brandPink4 text-brandDark font-bold'
-                          : 'text-gray-900 font-bold'
+                          ? 'text-gray-800 dark:text-gray-200 font-bold hover:bg-gg-200 dark:hover:bg-gray-600'
+                          : 'text-gray-800 dark:text-gray-200 font-bold'
                       }`
                     }
                     value={person}

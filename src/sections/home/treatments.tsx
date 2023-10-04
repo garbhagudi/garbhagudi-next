@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const TreatmentOptions = () => {
   return (
-    <div className='bg-slate-50 pb-3'>
+    <div className='bg-slate-50 dark:bg-gray-800 pb-3'>
       <div className='container mx-auto'>
         <h2 className='py-16 lg:py-20 text-2xl lg:text-3xl font-heading text-center font-bold px-2'>
           Services Available at GarbhaGudi
@@ -13,7 +13,7 @@ const TreatmentOptions = () => {
           {Data.map((items) => (
             <div
               key={items?.id}
-              className='font-content border border-brandPink4 rounded-2xl flex items-center justify-between flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 hover:bg-pink-50'
+              className='font-content border dark:border-2 border-gg-400 dark:border-gray-700 rounded-xl flex items-center justify-between flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 hover:bg-pink-50 dark:hover:bg-gray-700'
             >
               <div className='w-28 h-28 -mt-14 mx-auto flex items-center justify-center rounded-full'>
                 <Image
@@ -30,10 +30,10 @@ const TreatmentOptions = () => {
                 </div>
                 <div className='px-3 text-base text-center'>{items?.desc}</div>
               </div>
-              <div className=' text-center border w-full bg-brandPink4 py-1 rounded-b-2xl'>
+              <div className=' text-center border dark:border-gray-800 w-full bg-gg-500 dark:bg-gray-500 py-1 rounded-b-xl'>
                 <Link
                   href={items?.link}
-                  className='font-bold text-white font-content'
+                  className='font-bold text-white dark:text-white font-content'
                 >
                   Learn More
                 </Link>
@@ -43,7 +43,7 @@ const TreatmentOptions = () => {
         </div>
         <Link
           href={'/treatments'}
-          className='text-center mx-auto flex items-center justify-center px-3 py-2 bg-transparent w-32 font-content font-bold text-brandPink border-2 border-brandPink hover:bg-brandPink hover:text-white mb-6 rounded-lg hover:shadow-2xl hover:shadow-brandPink hover:transition-all hover:-translate-y-1 duration-300'
+          className='text-center mx-auto flex items-center justify-center px-3 py-2 bg-transparent w-32 font-content font-bold text-gg-500 dark:text-gg-400 border-2 border-gg-500 dark:border-gg-400 hover:bg-gg-500 dark:hover:bg-gg-400 dark:hover:text-gray-800 mb-6 rounded-lg hover:shadow-2xl hover:shadow-gg-500 hover:transition-all hover:-translate-y-1 duration-300'
         >
           See More
         </Link>
@@ -63,7 +63,7 @@ const Data = [
         Unlock the doors of parenthood with GarbhaGudi's advanced{' '}
         <Link
           href={'/treatments/in-vitro-fertilization-ivf'}
-          className='text-brandPink hover:underline'
+          className='text-gg-500 dark:text-gg-400 hover:underline'
         >
           IVF treatment In Banglore
         </Link>
@@ -83,7 +83,7 @@ const Data = [
         state-of-the-art{' '}
         <Link
           href={'/treatments/intracytoplasmic-sperm-injection-icsi'}
-          className='text-brandPink hover:underline'
+          className='text-gg-500 dark:text-gg-400 hover:underline'
         >
           ICSI treatment In Banglore
         </Link>
@@ -103,7 +103,7 @@ const Data = [
         Experience the joy of parenthood with GarbhaGudi's{' '}
         <Link
           href={'/treatments/intra-uterine-insemination-iui'}
-          className='text-brandPink hover:underline'
+          className='text-gg-500 dark:text-gg-400 hover:underline'
         >
           IUI treatment In Banglore
         </Link>
@@ -123,7 +123,7 @@ const Data = [
         Advanced{' '}
         <Link
           href={'/treatments/infertility'}
-          className='text-brandPink hover:underline'
+          className='text-gg-500 dark:text-gg-400 hover:underline'
         >
           Infertility Treatments in Bangalore
         </Link>{' '}

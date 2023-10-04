@@ -17,10 +17,10 @@ const BlogFooter = () => {
               aria-hidden='true'
             />
             <div className='max-w-md mx-auto px-8 sm:max-w-max lg:max-w-none lg:p-0 hidden lg:block'>
-              <div className='max-h-96'>
+              <div className='bg-white dark:bg-gray-800 rounded-3xl border dark:border-gray-600 overflow-hidden'>
                 <Image
-                  className='object-cover object-center rounded-3xl shadow-2xl max-h-96 w-96'
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643701776/About/garbhagudi-ivf-center-bangalore-5f3b94a8e4de6_kk97e4.jpg'
+                  className='object-fit object-center rounded-3xl shadow-2xl h-64 lg:h-96 dark:fill-white dark:grayscale dark:brightness-0 dark:invert'
+                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1659164257/logos/GG_Vertical_Logo_nrcl5h.svg'
                   alt='gg logo'
                   width={500}
                   height={500}
@@ -29,7 +29,7 @@ const BlogFooter = () => {
             </div>
           </div>
 
-          <div className='relative bg-brandPurpleDark lg:col-start-3 lg:row-start-1 lg:col-span-10 rounded-3xl lg:grid lg:grid-cols-10 lg:items-center'>
+          <div className='relative bg-brandPurpleDark dark:bg-gray-700 lg:col-start-3 lg:row-start-1 lg:col-span-10 rounded-3xl lg:grid lg:grid-cols-10 lg:items-center'>
             <div
               className='hidden absolute inset-0 overflow-hidden rounded-3xl lg:block'
               aria-hidden='true'
@@ -89,7 +89,7 @@ const BlogFooter = () => {
                       y={0}
                       width={4}
                       height={4}
-                      className='text-gray-50'
+                      className='text-gray-100'
                       fill='currentColor'
                     />
                   </pattern>
@@ -122,7 +122,7 @@ const BlogFooter = () => {
                 infertility issues and sexual problems
               </p>
               <Link
-                className='block w-full py-3 px-5 text-center font-content bg-white rounded-md text-base font-semibold text-brandDark hover:bg-brandDark hover:text-gray-100 sm:inline-block sm:w-auto'
+                className='block w-full py-3 px-5 text-center font-content bg-white dark:bg-gray-600 rounded-md text-base font-semibold text-brandDark hover:bg-brandDark hover:text-gray-100 sm:inline-block sm:w-auto'
                 href='https://salesiq.zoho.com/signaturesupport.ls?widgetcode=93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
                 target={'_blank'}
                 rel='noreferrer'

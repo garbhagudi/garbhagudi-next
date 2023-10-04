@@ -82,7 +82,7 @@ function BlogPage({
         <div className='relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
           <div className='relative max-w-7xl mx-auto'>
             <div className='text-center'>
-              <h1 className='text-3xl font-extrabold text-gray-800 sm:text-5xl font-heading underline'>
+              <h1 className='text-3xl font-extrabold text-gray-800 dark:text-gray-200 sm:text-5xl font-heading underline'>
                 Blogs
               </h1>
             </div>
@@ -102,10 +102,10 @@ function BlogPage({
                       />
                     </div>
                   </Link>
-                  <div className='flex-1 bg-gradient-to-bl from-gg-200 via-gg-100 to-gg-50 p-6 flex flex-col justify-between'>
+                  <div className='flex-1 bg-gradient-to-bl from-gg-200 dark:from-gray-800 via-gg-100 to-gg-50 dark:to-gray-700 p-6 flex flex-col justify-between'>
                     <div className='flex-1'>
                       <Link href={`/blogs/${item?.node?.slug}`} passHref>
-                        <p className='text-base font-bold text-gray-900 cursor-pointer font-lexend'>
+                        <p className='text-base font-normal text-gray-800 dark:text-gray-200 cursor-pointer font-lexend'>
                           {item?.node?.title}
                         </p>
                       </Link>
@@ -131,14 +131,14 @@ function BlogPage({
                         </Link>
                       </div>
                       <div className='ml-3'>
-                        <div className='text-base font-medium text-gray-900'>
+                        <div className='text-base font-medium text-gray-800 dark:text-gray-200'>
                           <Link href={`/doctors/${item?.node?.doctor?.slug}`}>
                             <div className='font-lexend'>
                               Author : {item?.node?.doctor?.name}
                             </div>
                           </Link>
                         </div>
-                        <div className='flex space-x-1 text-sm text-gray-500 font-lexend'>
+                        <div className='flex space-x-1 text-sm text-gray-500 dark:text-gray-300 font-lexend'>
                           <time>Published: {item?.node?.publishedOn}</time>
                         </div>
                       </div>

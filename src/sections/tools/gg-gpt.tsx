@@ -110,7 +110,7 @@ const ChatComponent = ({ apiKey }) => {
       {/* OpenAI Logo Circle */}
 
       <div
-        className='fixed bottom-3 left-4  rounded-full flex items-center justify-center cursor-pointer shadow-xl drop-shadow-xl bg-white'
+        className='fixed bottom-3 left-4  rounded-full flex items-center justify-center cursor-pointer shadow-xl drop-shadow-xl bg-white dark:bg-gray-800 dark:border border-gray-600'
         onClick={() => setShowChatbot(!showChatbot)}
       >
         <Image

@@ -37,7 +37,7 @@ const Pagination = ({
           )}
           {isNext && (
             <Link href={`/blogs/page/${nextPage}`}>
-              <div className='rounded-lg py-2 px-4 bg-gg-500 font-content font-semibold text-white'>
+              <div className='rounded-lg py-2 px-4 bg-gg-500 font-content font-semibold text-white dark:text-gray-200'>
                 Next Page
               </div>
             </Link>
@@ -51,19 +51,19 @@ const Pagination = ({
             >
               <Link
                 href={previousLink}
-                className='relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-brandPink focus:z-20'
+                className='relative inline-flex items-center rounded-l-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-2 py-2 text-sm font-medium text-gray-500 dark:text-gray-300 hover:bg-gray-50 hover:text-brandPink dark:hover:text-gg-400 focus:z-20'
               >
                 <span className='sr-only'>Previous</span>
                 <HiChevronDoubleLeft className='h-5 w-5' aria-hidden='true' />
               </Link>
-              <div className='flex flex-wrap items-center justify-center space-x-1.5 px-3 border'>
+              <div className='flex flex-wrap items-center justify-center space-x-1.5 px-3 border dark:border-gray-600'>
                 {pageNumbers.map((number) => (
                   <div
                     key={number}
                     onClick={() => handlePageClick(number)}
                     className={
                       currentPage === number
-                        ? 'relative z-10 inline-flex items-center font-content border border-gg-500 bg-brandPink5 px-3 py-1.5 text-sm font-bold text-gg-500 focus:z-20'
+                        ? 'relative z-10 inline-flex items-center font-content border border-gg-500 dark:border-gray-600 bg-brandPink5 dark:bg-gray-700 px-3 py-1.5 text-sm font-bold text-gg-500 dark:text-gray-300 focus:z-20'
                         : 'relative z-10 inline-flex items-center font-content px-1.5 py-1.5 text-sm font-medium hover:text-gg-500 hover:underline hover:font-bold'
                     }
                   >
@@ -73,7 +73,7 @@ const Pagination = ({
               </div>
               <Link
                 href={nextLink}
-                className='relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gg-500 focus:z-20'
+                className='relative inline-flex items-center rounded-r-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-2 py-2 text-sm font-medium text-gray-500 dark:text-gray-300 hover:bg-gray-50 hover:text-brandPink dark:hover:text-gg-400 focus:z-20'
               >
                 <span className='sr-only'>Next</span>
                 <HiChevronDoubleRight className='h-5 w-5' aria-hidden='true' />
@@ -83,7 +83,7 @@ const Pagination = ({
         </div>
       </div>
       <div className='mx-auto text-center mt-10'>
-        <p className='text-sm text-gray-700'>
+        <p className='text-sm text-gray-800 dark:text-gray-200 font-lexend'>
           Showing{' '}
           <span className='font-medium'>
             {limitDefined * (currentPage - 1) + 1}

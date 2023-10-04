@@ -4,14 +4,14 @@ import Link from 'next/link';
 
 const Overview = () => {
   return (
-    <div className='relative bg-white'>
+    <div className='relative bg-white dark:bg-gray-800'>
       <div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start mt-10 md:mt-0'>
         <div className='relative sm:py-16 lg:py-0'>
           <div
             aria-hidden='true'
             className='hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen'
           >
-            <div className='absolute inset-y-0 right-1/2 w-full bg-gray-50 rounded-r-3xl lg:right-72' />
+            <div className='absolute inset-y-0 right-1/2 w-full bg-gray-50 dark:bg-gray-700 rounded-r-3xl lg:right-72' />
             <svg
               className='absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12'
               width={404}
@@ -33,7 +33,7 @@ const Overview = () => {
                     y={0}
                     width={4}
                     height={4}
-                    className='text-gray-200'
+                    className='text-gray-200 dark:text-gray-500'
                     fill='currentColor'
                   />
                 </pattern>
@@ -46,7 +46,6 @@ const Overview = () => {
             </svg>
           </div>
           <div className='relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20'>
-            {/* Testimonial card*/}
             <div className='relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden'>
               <Image
                 className='absolute inset-0 h-full w-full object-cover'
@@ -56,7 +55,7 @@ const Overview = () => {
                 height={640}
               />
               <div className='absolute inset-0 bg-gray-200 mix-blend-multiply' />
-              <div className='absolute inset-0 bg-gradient-to-t from-brandPink via-gray-400 mix-blend-multiply' />
+              <div className='absolute inset-0 bg-gradient-to-t from-brandPink dark:from-gray-700 via-gray-400 mix-blend-multiply' />
               <div className='relative px-8'>
                 <blockquote className='mt-8'>
                   <div className='relative text-lg font-medium text-white md:flex-grow'>
@@ -97,10 +96,10 @@ const Overview = () => {
 
         <div className='relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0'>
           <div className='pt-12 sm:pt-16 lg:pt-20'>
-            <h2 className='text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl font-heading lg:mt-10'>
+            <h2 className='text-3xl text-gray-800 dark:text-gray-200 font-extrabold tracking-tight sm:text-4xl font-heading lg:mt-10'>
               Welcome to GarbhaGudi IVF Centre, Bangalore
             </h2>
-            <div className='mt-3 text-brandDark sm:mt-5 sm:text-xl lg:text-lg xl:text-base text-base font-content'>
+            <div className='mt-3 text-gray-800 dark:text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-base text-base font-content'>
               <p className='text-md lg:text-lg'>
                 Spanning over a decade, GarbhaGudi has served as a beacon of
                 hope to thousands of infertile couples. Our experienced and
@@ -109,7 +108,10 @@ const Overview = () => {
                 warmly. <br />
                 <br />
                 GarbhaGudi{' '}
-                <Link href={'/'} className='text-brandPink hover:underline'>
+                <Link
+                  href={'/'}
+                  className='text-gg-500 dark:text-gg-400 hover:underline'
+                >
                   IVF Hospital in Bangalore
                 </Link>{' '}
                 was founded in 2011, our pioneering work has led to the
