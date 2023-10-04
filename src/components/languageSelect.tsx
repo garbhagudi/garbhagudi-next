@@ -15,7 +15,7 @@ export default function LanguageSelect() {
     <div className=''>
       <Listbox value={selected} onChange={setSelected}>
         <div className='relative'>
-          <Listbox.Button className='relative w-full cursor-default rounded-lg bg-wbite border border-brandPink py-1 sm:py-2 px-2 sm:px-3 pr-7 sm:pr-8 text-center '>
+          <Listbox.Button className='relative w-full cursor-default rounded-lg bg-wbite border border-brandPink py-2 px-3 pr-7 sm:pr-8 text-center '>
             <span className='block text-xs text-brandPink font-semibold font-content'>
               {selected.name}
             </span>

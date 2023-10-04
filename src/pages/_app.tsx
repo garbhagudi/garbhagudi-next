@@ -10,6 +10,7 @@ import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import Head from 'next/head';
 import ChatComponent from 'sections/tools/gg-gpt';
+import ThemeProvider from 'styles/theme-provider';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -69,18 +70,20 @@ function MyApp({ Component, pageProps }) {
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
       </Head>
-      {loading ? (
-        <Loading />
-      ) : (
-        <div className='selection:bg-brandPink selection:text-white'>
-          <Nav />
-          <main className='min-h-screen'>
-            <Component {...pageProps} />
-          </main>
-          <FloatPhone />
-          <Footer />
-        </div>
-      )}
+      <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+        {loading ? (
+          <Loading />
+        ) : (
+          <div className='selection:bg-brandPink selection:text-white'>
+            <Nav />
+            <main className='min-h-screen'>
+              <Component {...pageProps} />
+            </main>
+            <FloatPhone />
+            <Footer />
+          </div>
+        )}
+      </ThemeProvider>
       <Salesiq
         widgetCode={
           '93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'

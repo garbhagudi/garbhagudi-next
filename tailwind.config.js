@@ -5,7 +5,7 @@ module.exports = {
     './src/sections/**/*.{js,ts,jsx,tsx}',
   ],
   presets: [],
-  darkMode: 'media', // or 'class'
+  darkMode: 'class', // or 'class'
   plugins: [require('@headlessui/tailwindcss')],
   theme: {
     extend: {
