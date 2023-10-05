@@ -4,7 +4,7 @@ const VirtualTour = ({ link1, link2, link3 }) => {
   return (
     <div className='max-w-7xl mx-auto'>
       {link1 && (
-        <h3 className='text-center text-2xl md:text-4xl font-heading py-3 font-bold mx-auto'>
+        <h3 className='text-center text-2xl md:text-4xl font-heading py-3 font-bold mx-auto text-gray-800 dark:text-gray-200'>
           Virtual Tour
         </h3>
       )}

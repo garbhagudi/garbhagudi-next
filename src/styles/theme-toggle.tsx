@@ -7,8 +7,18 @@ const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    // Set the initial state of the theme based on the theme provided by next-themes.
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
+
   if (!mounted) return null;
+
   return (
     <button
       className={`rounded-md hover:scale-110 active:scale-100 duration-200 flex w-8 h-8 items-center justify-center`}

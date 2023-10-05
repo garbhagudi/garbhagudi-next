@@ -6,14 +6,14 @@ const TreatmentOptions = () => {
   return (
     <div className='bg-slate-50 dark:bg-gray-800 pb-3'>
       <div className='container mx-auto'>
-        <h2 className='py-16 lg:py-20 text-2xl lg:text-3xl font-heading text-center font-bold px-2'>
+        <h2 className='py-16 lg:py-20 text-2xl lg:text-3xl font-heading text-center font-bold px-2 text-gray-800 dark:text-gray-200 '>
           Services Available at GarbhaGudi
         </h2>
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-y-16 gap-x-3 lg:gap-16 pb-10 lg:pb-16 px-2'>
           {Data.map((items) => (
             <div
               key={items?.id}
-              className='font-content border dark:border-2 border-gg-400 dark:border-gray-700 rounded-xl flex items-center justify-between flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 hover:bg-pink-50 dark:hover:bg-gray-700'
+              className='font-content group border dark:border-2 border-gg-400 dark:border-gray-700 rounded-xl flex items-center justify-between flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 hover:bg-pink-50 dark:hover:bg-gray-700'
             >
               <div className='w-28 h-28 -mt-14 mx-auto flex items-center justify-center rounded-full'>
                 <Image
@@ -21,7 +21,7 @@ const TreatmentOptions = () => {
                   alt={items?.treatent}
                   width={100}
                   height={100}
-                  className='w-20'
+                  className='w-20 dark:grayscale group-hover:grayscale-0 transition-all duration-300'
                 />
               </div>
               <div className='flex flex-col items-center justify-center py-2'>

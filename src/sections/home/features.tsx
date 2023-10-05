@@ -75,16 +75,21 @@ const Features = () => {
         <div className='mt-8'>
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
             {features.map((feature) => (
-              <Link href={feature.link} key={feature.id} passHref>
+              <Link
+                href={feature.link}
+                key={feature.id}
+                passHref
+                className='group'
+              >
                 <div className='pt-3 group max-w-sm mx-auto'>
                   <div className='rounded-lg overflow-hidden shadow-3xl hover:shadow-2xl hover:scale-105 transition-all duration-200'>
                     <div className='grid grid-cols-6 '>
-                      <div className='col-span-1 bg-gg-500 dark:bg-gray-600 flex items-center justify-center h-full'>
+                      <div className='col-span-1 bg-gg-500 dark:bg-gray-600 dark:group-hover:bg-gg-500 flex items-center justify-center h-full'>
                         <div className='text-4xl text-white font-bold'>
                           {feature.icon}
                         </div>
                       </div>
-                      <div className='flex flex-col col-span-5 px-2 border-2 border-gg-500 dark:border-gray-600 rounded-tr-lg rounded-br-lg'>
+                      <div className='flex flex-col col-span-5 px-2 border-2 border-gg-500 dark:border-gray-600 dark:group-hover:border-gg-500 rounded-tr-lg rounded-br-lg'>
                         <h3 className='mt-3 text-base font-semibold text-gray-800 dark:text-gray-200 tracking-tight font-heading'>
                           {feature.name}
                         </h3>

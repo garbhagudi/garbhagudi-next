@@ -4,8 +4,8 @@ import AccordionLayout from 'sections/Faq/FaqLayout';
 const Faq = () => {
   const [activeIndex1, setActiveIndex1] = React.useState(1);
   return (
-    <div className='bg-fuchsia-50'>
-      <h2 className='pt-10 lg:pt:16 text-3xl lg:text-4xl font-heading font-bold text-center'>
+    <div className='bg-fuchsia-50 dark:bg-gray-700'>
+      <h2 className='pt-10 lg:pt:16 text-3xl lg:text-4xl font-heading font-bold text-center text-gray-800 dark:text-gray-200'>
         Frequently asked questions
       </h2>
       <div className='pb-10 lg:pb-16 px-3'>

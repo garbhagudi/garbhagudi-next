@@ -13,7 +13,7 @@ const Banner = () => {
                   Infertility Treatment in Bangalore
                 </h1>
               </div>
-              <div className='text-base font-content md:max-w-xl text-center md:text-left px-3 mt-4 font-medium text-white'>
+              <div className='text-base font-content md:max-w-xl text-center md:text-left px-3 mt-4 font-medium text-gray-200'>
                 "GarbhaGudi IVF Centre offers cutting-edge infertility treatment
                 in Bangalore, providing personalized solutions to enhance your
                 chances of parenthood. Our renowned team of fertility experts

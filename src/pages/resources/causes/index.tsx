@@ -78,17 +78,24 @@ const IndexPage = ({ causes }) => {
       <div className='max-w-7xl mx-auto py-6 flex sm:py-12'>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-10 mx-auto'>
           {causes.map((item) => (
-            <Link href={`causes/${item.slug}`} passHref key={item.id}>
-              <div className='border-brandPink w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 '>
+            <Link
+              href={`causes/${item.slug}`}
+              passHref
+              key={item.id}
+              className='group'
+            >
+              <div className='border-brandPink dark:border-gray-600 w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink dark:hover:bg-gray-600 hover:text-white hover:border-transparent transition-colors duration-100'>
                 <div className='w-1/3'>
                   <img
-                    className='w-24 h-24 object-cover rounded-lg'
+                    className='w-24 h-24 object-cover rounded-lg dark:grayscale group-hover:grayscale-0 transition-all duration-300'
                     src={item.icon.url}
                     alt={item.title}
                   />
                 </div>
-                <div className='w-2/3 flex flex-col justify-center text-center'>
-                  <p className='font-semibold text-xl font-qs'>{item.title}</p>
+                <div className='w-2/3 flex flex-col justify-center text-center text-gray-800 dark:text-gray-200 '>
+                  <p className='font-medium text-xl font-lexend'>
+                    {item.title}
+                  </p>
                 </div>
               </div>
             </Link>

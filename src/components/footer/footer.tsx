@@ -51,7 +51,7 @@ export default function Footer() {
       <h2 id='footerHeading' className='sr-only'>
         Footer
       </h2>
-      <div className='max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:py-8 lg:px-8 border-t'>
+      <div className='max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:py-8 lg:px-8 border-t dark:border-gray-600'>
         <div className='xl:grid xl:grid-cols-3 xl:gap-8'>
           <div className='mt-12 grid grid-cols-1 xl:grid-cols-1 gap-8 xl:mt-0 xl:col-span-full text-center antialiased'>
             <div className='grid grid-cols-3 md:grid-cols-5 gap-5'>

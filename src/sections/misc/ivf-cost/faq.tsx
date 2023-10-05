@@ -48,14 +48,14 @@ const faqs = [
 const Faq = () => {
   return (
     <div>
-      <div className=''>
+      <div className='text-gray-800 dark:text-gray-200'>
         <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8'>
           <div className='lg:grid lg:grid-cols-3 lg:gap-8'>
             <div>
-              <h2 className='text-3xl font-heading font-bold text-gray-900'>
+              <h2 className='text-3xl font-heading font-bold'>
                 Frequently asked questions
               </h2>
-              <p className='mt-4 text-lg text-gray-900 font-content'>
+              <p className='mt-4 text-lg font-content'>
                 Can’t find the answer you’re looking for? Reach out to our{' '}
                 <Link
                   href='/gg-care'
@@ -70,10 +70,10 @@ const Faq = () => {
               <dl className='space-y-12'>
                 {faqs.map((faq) => (
                   <div key={faq.question}>
-                    <div className='text-xl text-gray-900 font-heading font-bold'>
+                    <div className='text-xl font-heading font-bold'>
                       {faq.question}
                     </div>
-                    <div className='mt-2 text-lg text-gray-800 font-content'>
+                    <div className='mt-2 text-lg font-content'>
                       {faq.answer}
                     </div>
                   </div>

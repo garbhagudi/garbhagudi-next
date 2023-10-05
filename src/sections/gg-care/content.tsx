@@ -4,24 +4,24 @@ import Link from 'next/link';
 
 const Contact = () => {
   return (
-    <div className='bg-white'>
+    <div className='bg-white dark:bg-gray-800'>
       <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8'>
         <div className='divide-y-2 divide-gray-200'>
           <div className='lg:grid lg:grid-cols-3 lg:gap-8'>
-            <h2 className='text-2xl font-extrabold text-gray-900 sm:text-3xl font-heading'>
+            <h2 className='text-2xl font-extrabold text-gray-800 dark:text-gray-200  sm:text-3xl font-heading'>
               Get in touch
             </h2>
             <div className='mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2 font-content'>
               {contactData?.getInTouch.map((items) => (
                 <div key={items.id}>
-                  <h3 className='text-lg leading-6 font-medium text-gray-900'>
+                  <h3 className='text-lg leading-6 font-medium text-gray-800 dark:text-gray-200 '>
                     {items.name}
                   </h3>
                   <div className='mt-2 text-base'>
                     <div className='sr-only'>Email</div>
                     <Link
                       href={`mailto:${items.email}`}
-                      className='text-purple-800 hover:underline'
+                      className='text-purple-800 dark:text-purple-300 hover:underline'
                     >
                       <div>
                         <MdAlternateEmail className='inline-flex' />{' '}
@@ -32,7 +32,7 @@ const Contact = () => {
                       <div className='sr-only'>Phone number</div>
                       <Link
                         href={`tel:${items.phone}`}
-                        className='text-brandPink2 hover:underline'
+                        className='text-gg-500 dark:text-gg-400 hover:underline'
                       >
                         <div>
                           <MdPhone className='inline-block w-5 h-5' />{' '}
@@ -47,19 +47,19 @@ const Contact = () => {
           </div>
           <div className='mt-16 pt-16 lg:grid lg:grid-cols-2 lg:gap-8'>
             <div className='mt-8 grid grid-cols-1 gap-12 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2 font-content'>
-              <h2 className='text-2xl font-extrabold text-gray-900 sm:text-3xl font-heading'>
+              <h2 className='text-2xl font-extrabold text-gray-800 dark:text-gray-200  sm:text-3xl font-heading'>
                 Locations
               </h2>
               {contactData?.locations.map((items) => (
                 <div key={items.id}>
-                  <h3 className='text-lg leading-6 font-medium text-gray-900'>
+                  <h3 className='text-lg leading-6 font-medium text-gray-800 dark:text-gray-200 '>
                     {items.name}
                   </h3>
-                  <div className='mt-2 text-base text-gray-500'>
+                  <div className='mt-2 text-base text-gray-500 dark:text-gray-300'>
                     <div className='mt-1'>
                       <Link
                         href={`tel:${items.phone}`}
-                        className='text-brandPink2 hover:underline'
+                        className='text-gg-500 dark:text-gg-400 hover:underline'
                       >
                         <div>
                           <MdPhone className='inline-block w-5 h-5' />{' '}
@@ -67,33 +67,35 @@ const Contact = () => {
                         </div>
                       </Link>
                     </div>
-                    {items.address}
-                    <Link
-                      href={items.directionLink}
-                      className='inline-flex items-center overflow-hidden w-auto max-w-[32px] h-8 hover:max-w-[340px] bg-brandPink text-white font-semibold rounded-3xl hover:bg-brandPink2 transition-all duration-500 ease-linear'
-                      target={'_blank'}
-                      rel='noreferrer'
-                    >
-                      <span>
-                        <SiGooglemaps className='ml-2 text-base flex items-center' />
-                      </span>
-                      <span className='pl-2 pr-4 whitespace-nowrap'>
-                        Direction
-                      </span>
-                    </Link>
-                    <Link
-                      href={`tel:${items.phone}`}
-                      className='inline-flex ml-2 items-center overflow-hidden w-auto max-w-[32px] h-8 hover:max-w-sm bg-brandPink text-white font-semibold rounded-3xl hover:bg-brandPink2 transition-all duration-500 ease-linear'
-                      target={'_blank'}
-                      rel='noreferrer'
-                    >
-                      <span>
-                        <MdPhone className='ml-2 text-base flex items-center' />
-                      </span>
-                      <span className='pl-2 pr-4 whitespace-nowrap'>
-                        Phone Call
-                      </span>
-                    </Link>
+                    <div>{items.address}</div>
+                    <div className='space-x-3'>
+                      <Link
+                        href={items.directionLink}
+                        className='inline-flex items-center overflow-hidden w-auto max-w-[32px] h-8 hover:max-w-[340px] bg-gg-500 dark:bg-gray-500 text-white dark:text-gray-100 font-bold rounded-3xl hover:bg-brandPink2 dark:hover:bg-gg-400 transition-all duration-500 ease-linear'
+                        target={'_blank'}
+                        rel='noreferrer'
+                      >
+                        <span>
+                          <SiGooglemaps className='ml-2 text-base flex items-center' />
+                        </span>
+                        <span className='pl-2 pr-4 whitespace-nowrap'>
+                          Direction
+                        </span>
+                      </Link>
+                      <Link
+                        href={`tel:${items.phone}`}
+                        className='inline-flex items-center overflow-hidden w-auto max-w-[32px] h-8 hover:max-w-[340px] bg-gg-500 dark:bg-gray-500 text-white dark:text-gray-100 font-bold rounded-3xl hover:bg-brandPink2 dark:hover:bg-gg-400 transition-all duration-500 ease-linear'
+                        target={'_blank'}
+                        rel='noreferrer'
+                      >
+                        <span>
+                          <MdPhone className='ml-2 text-base flex items-center' />
+                        </span>
+                        <span className='pl-2 pr-4 whitespace-nowrap'>
+                          Phone Call
+                        </span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               ))}

@@ -27,7 +27,6 @@
     "postcss-focus-visible": "^9.0.0",
     "react": "^18.2.0",
     "react-calendar": "^4.6.0",
-    "react-chrono": "^2.3.0",
     "react-dom": "^18.2.0",
     "react-gtm-module": "^2.0.11",
     "react-icons": "^4.11.0",
@@ -38,6 +37,7 @@
   "devDependencies": {
     "@types/node": "^20.8.2",
     "@types/react": "^18.2.24",
+    "@types/react-gtm-module": "^2.0.1",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.50.0",
     "eslint-config-next": "^13.5.3",

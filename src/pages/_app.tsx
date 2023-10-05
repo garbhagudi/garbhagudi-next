@@ -70,7 +70,7 @@ function MyApp({ Component, pageProps }) {
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
       </Head>
-      <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+      <ThemeProvider attribute='class' defaultTheme='light' enableSystem>
         {loading ? (
           <Loading />
         ) : (

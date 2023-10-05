@@ -86,7 +86,7 @@ const Packages = () => {
   return (
     <div className='font-content'>
       <div className='text-center py-10 lg:py-16 px-3'>
-        <h2 className='font-heading font-bold text-3xl lg:text-5xl'>
+        <h2 className='font-heading font-bold text-3xl lg:text-5xl text-gray-800 dark:text-gray-200'>
           IVF Packages at GarbhaGudi
         </h2>
         <p className='pt-4 font-content'>
@@ -103,21 +103,24 @@ const Packages = () => {
       </div>
       <div className='max-w-7xl mx-auto py-16 sm:pb-24 sm:px-6 lg:px-8'>
         {/* xs to lg */}
-        <div className='max-w-sm mx-auto space-y-2 striped lg:hidden'>
+        <div className='max-w-sm mx-auto space-y-2 striped lg:hidden '>
           {tiers.map((tier) => (
-            <section key={tier.name} className='border border-black rounded-md'>
+            <section
+              key={tier.name}
+              className='border border-black dark:border-gray-600 rounded-md'
+            >
               <div className='p-4 mb-8 '>
-                <h2 className='text-lg leading-6 font-medium text-gray-900 font-heading text-center'>
+                <h2 className='text-lg leading-6 font-medium text-gray-800 dark:text-gray-200 font-heading text-center'>
                   {tier.name}
                 </h2>
                 <p className='mt-4 text-center '>
-                  <span className='text-4xl font-extrabold text-gray-900 '>
+                  <span className='text-4xl font-extrabold text-gray-800 dark:text-gray-200 '>
                     ₹{tier.priceMonthly}
                   </span>{' '}
                 </p>
                 <a
                   href={tier.href}
-                  className='block mt-4 w-48 mx-auto bg-brandPink3 border border-brandPink3 rounded-md py-2 text-sm font-bold font-heading text-white text-center hover:bg-brandPink'
+                  className='block w-36 mx-auto mt-4 bg-gg-400 dark:bg-gray-500 border border-gg-400 dark:border-gray-600 rounded-md py-2 text-sm font-bold font-heading text-white text-center hover:bg-gg-500 dark:hover:bg-gg-500 '
                 >
                   Contact Us
                 </a>
@@ -126,18 +129,18 @@ const Packages = () => {
               <Disclosure>
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className='flex items-center justify-center my-4 w-56 mx-auto text-brandPink font-bold'>
+                    <Disclosure.Button className='flex items-center justify-center my-4 w-56 mx-auto text-gg-500 dark:text-gray-300 font-bold'>
                       {open ? 'See less' : 'See More'}
                       <HiChevronDown
                         className={`${
                           open ? 'rotate-180 transform' : ''
-                        } h-5 w-5 text-brandPink`}
+                        } h-5 w-5 text-gg-500 dark:text-gray-300`}
                       />
                     </Disclosure.Button>
-                    <Disclosure.Panel className='text-gray-800'>
+                    <Disclosure.Panel className='text-gray-800 dark:text-gray-200'>
                       {sections.map((section) => (
                         <table key={section.name} className='w-full'>
-                          <caption className='text-xl border-t border-gray-200 py-3 px-4  font-heading font-bold text-gray-900 text-left'>
+                          <caption className='text-xl border-t border-gray-200 py-3 px-4  font-heading font-bold text-left'>
                             {section.name}
                           </caption>
                           <thead>
@@ -157,7 +160,7 @@ const Packages = () => {
                                 className='border-t border-gray-00'
                               >
                                 <th
-                                  className='py-5 px-4 text-sm font-normal text-gray-800 text-left'
+                                  className='py-5 px-4 text-sm font-normal text-left'
                                   scope='row'
                                 >
                                   {feature.name}
@@ -165,7 +168,7 @@ const Packages = () => {
                                 <td className='py-5 pr-4'>
                                   {typeof feature.tiers[tier.name] ===
                                   'string' ? (
-                                    <span className='block text-sm text-gray-700 text-right'>
+                                    <span className='block text-sm text-right'>
                                       {feature.tiers[tier.name]}
                                     </span>
                                   ) : (
@@ -209,7 +212,7 @@ const Packages = () => {
             <thead>
               <tr>
                 <th
-                  className='pb-4 px-6 text-sm font-medium text-gray-900 text-left'
+                  className='pb-4 px-6 text-sm font-medium text-gray-800 dark:text-gray-200 text-left'
                   scope='col'
                 >
                   <span className='sr-only'>Feature by</span>
@@ -218,7 +221,7 @@ const Packages = () => {
                 {tiers.map((tier) => (
                   <th
                     key={tier.name}
-                    className='w-1/4 pb-4 px-6 text-lg leading-6 font-bold font-heading text-gray-900 text-center mx-auto'
+                    className='w-1/4 pb-4 px-6 text-lg leading-6 font-bold font-heading text-gray-800 dark:text-gray-200 text-center mx-auto'
                     scope='col'
                   >
                     {tier.name}
@@ -229,7 +232,7 @@ const Packages = () => {
             <tbody className='border-t border-gray-300 divide-y divide-gray-300'>
               <tr>
                 <th
-                  className='py-8 px-6 text-sm font-medium text-gray-900 text-left align-top'
+                  className='py-8 px-6 text-sm font-medium text-gray-800 dark:text-gray-200 text-left align-top'
                   scope='row'
                 >
                   IVF Treatment Pricing
@@ -238,7 +241,7 @@ const Packages = () => {
                   <td key={tier.name} className='h-full py-8 px-6 align-top'>
                     <div className='h-full '>
                       <p className='text-center'>
-                        <span className='text-4xl font-extrabold text-gray-900'>
+                        <span className='text-4xl font-extrabold text-gray-800 dark:text-gray-200'>
                           ₹{tier.priceMonthly}
                         </span>{' '}
                       </p>
@@ -247,7 +250,7 @@ const Packages = () => {
                       </p> */}
                       <a
                         href={tier.href}
-                        className='block w-36 mx-auto mt-4 bg-brandPink3 border border-brandPink3 rounded-md py-2 text-sm font-bold font-heading text-white text-center hover:bg-brandPink'
+                        className='block w-36 mx-auto mt-4 bg-gg-400 dark:bg-gray-500 border border-gg-400 dark:border-gray-600 rounded-md py-2 text-sm font-bold font-heading text-white text-center hover:bg-gg-500 dark:hover:bg-gg-500 '
                       >
                         Know More
                       </a>
@@ -259,7 +262,7 @@ const Packages = () => {
                 <Fragment key={section.name}>
                   <tr>
                     <th
-                      className='py-3 pl-6 text-gray-900 text-xl text-left font-heading font-bold'
+                      className='py-3 pl-6 text-gray-800 dark:text-gray-200 text-xl text-left font-heading font-bold'
                       colSpan={4}
                       scope='colgroup'
                     >
@@ -318,7 +321,7 @@ const Packages = () => {
                   <td key={tier.name} className='pt-5 px-6'>
                     <a
                       href={tier.href}
-                      className='block w-36 mx-auto mt-4 bg-brandPink3 border border-brandPink3 rounded-md py-2 text-sm font-bold font-heading text-white text-center hover:bg-brandPink'
+                      className='block w-36 mx-auto mt-4 bg-gg-400 dark:bg-gray-500 border border-gg-400 dark:border-gray-600 rounded-md py-2 text-sm font-bold font-heading text-white text-center hover:bg-gg-500 dark:hover:bg-gg-500 '
                     >
                       Know More
                     </a>

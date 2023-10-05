@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Cost = () => {
   return (
     <div
-      className='max-w-7xl mx-auto px-3 scroll-m-16'
+      className='max-w-7xl mx-auto px-3 scroll-m-16 text-gray-800 dark:text-gray-200'
       id='cost-of-iui-in-bangalore'
     >
       <div className='pt-10 lg:pt-16'>

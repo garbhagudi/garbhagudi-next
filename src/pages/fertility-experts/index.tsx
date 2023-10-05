@@ -115,7 +115,7 @@ const IndexPage = ({ branches }) => {
                         <iframe
                           width='100%'
                           height='100%'
-                          className='absolute inset-0 border rounded-lg border-brandPurpleDark dark:grayscale dark:contrast-100 dark:invert-[92%] dark:hue-rotate-180'
+                          className='absolute inset-0 border rounded-lg border-brandPurpleDark dark:grayscale dark:brightness-75 dark:contrast-150 dark:invert'
                           loading='lazy'
                           title='map'
                           src={items.mapLink}

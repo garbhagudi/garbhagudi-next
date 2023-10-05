@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <div>
       <div className='grid grid-cols-1 lg:grid-cols-2 max-w-7xl mx-auto px-3 pt-10 gap-3'>
-        <div className='py-5 flex items-start justify-center flex-col'>
+        <div className='py-5 flex items-start justify-center flex-col text-gray-800 dark:text-gray-200'>
           <div className='text-xl xl:text-2xl font-heading font-bold'>
             Experience the hope of starting a family with{' '}
             <h1 className='inline-block'>IUI treatment in Bangalore</h1>
@@ -34,7 +34,7 @@ const Banner = () => {
               IUI treatment in Bangalore.
             </Link>{' '}
           </div>
-          <button className='text-lg font-content font-semibold text-white px-3 py-2 bg-brandPink hover:bg-brandPink4 mt-5 rounded-lg'>
+          <button className='text-lg font-content font-semibold text-white px-3 py-2 bg-gg-500 dark:bg-gray-500 hover:bg-gg-400 dark:hover:bg-gg-500 mt-5 rounded-lg'>
             Consult Now
           </button>
         </div>

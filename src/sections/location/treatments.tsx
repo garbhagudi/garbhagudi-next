@@ -12,7 +12,7 @@ const TreatmentOptions = ({ branch }) => {
         {Data.map((items) => (
           <div
             key={items?.id}
-            className='font-content border border-brandPink4 rounded-2xl flex items-center justify-between flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 hover:bg-pink-50'
+            className='font-content group border dark:border-2 border-gg-400 dark:border-gray-700 rounded-xl flex items-center justify-between flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 hover:bg-pink-50 dark:hover:bg-gray-700'
           >
             <div className='w-28 h-28 -mt-14 mx-auto flex items-center justify-center rounded-full'>
               <Image
@@ -20,7 +20,7 @@ const TreatmentOptions = ({ branch }) => {
                 alt={items?.treatent}
                 width={100}
                 height={100}
-                className='w-20'
+                className='w-20 dark:grayscale group-hover:grayscale-0 transition-all duration-300'
               />
             </div>
             <div className='flex flex-col items-center justify-center py-2'>
@@ -29,10 +29,10 @@ const TreatmentOptions = ({ branch }) => {
               </div>
               <div className='px-3 text-base text-center'>{items?.desc}</div>
             </div>
-            <div className=' text-center border w-full bg-brandPink4 py-1 rounded-b-2xl'>
+            <div className=' text-center border dark:border-gray-800 w-full bg-gg-500 dark:bg-gray-500 py-1 rounded-b-xl'>
               <Link
                 href={items?.link}
-                className='font-bold text-white font-content'
+                className='font-bold text-white dark:text-white font-content'
               >
                 Learn More
               </Link>

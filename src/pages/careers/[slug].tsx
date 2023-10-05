@@ -126,7 +126,7 @@ const Career = ({ career }) => {
         link4={''}
         text4={''}
       />
-      <section className='text-gray-600 body-font'>
+      <section className='text-gray-800 dark:text-gray-200 body-font'>
         <div className='container flex flex-col px-5 py-8 mx-auto'>
           <div className='mx-auto max-w-7xl'>
             <div>
@@ -153,7 +153,7 @@ const Career = ({ career }) => {
                   />
                 </div>
                 <div className='flex flex-col items-center justify-center text-center'>
-                  <h2 className='mt-4 text-2xl font-semibold text-gray-900 title-font font-heading'>
+                  <h2 className='mt-4 text-2xl font-semibold text-gray-800 dark:text-gray-200 title-font font-heading'>
                     {career.position}
                   </h2>
                   <div className='w-12 h-1 mt-2 mb-4 rounded bg-brandPink '></div>

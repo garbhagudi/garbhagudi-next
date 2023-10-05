@@ -87,7 +87,8 @@ const IndexPage = ({
               {label}
             </div>
             <div className='mt-2 ml-4 text-sm flex space-x-2 items-center'>
-              <span>{by}</span> <VscVerified className='fill-brandPink' />
+              <span>{by}</span>{' '}
+              <VscVerified className='fill-brandPink dark:fill-gray-200 h-5 w-5' />
             </div>
           </div>
         </div>
@@ -95,7 +96,12 @@ const IndexPage = ({
     );
   };
 
-  const renderGarbhaSandesha = (image, url2, label, by) => {
+  const renderGarbhaSandesha = (
+    image: string,
+    url2: string,
+    label: string,
+    by: string,
+  ) => {
     return (
       <div className='flex items-center justify-start font-roboto'>
         <img
@@ -109,12 +115,13 @@ const IndexPage = ({
               onClick={() => {
                 setUrl2(url2);
               }}
-              className='ml-4  text-base text-left cursor-pointer'
+              className='ml-4 text-base text-left cursor-pointer'
             >
               {label}
             </div>
             <div className='mt-2 ml-4 text-sm flex space-x-2 items-center'>
-              <span>{by}</span> <VscVerified className='fill-brandPink' />
+              <span>{by}</span>{' '}
+              <VscVerified className='fill-brandPink dark:fill-gray-200 h-5 w-5' />
             </div>
           </div>
         </div>
@@ -122,7 +129,12 @@ const IndexPage = ({
     );
   };
 
-  const renderTvAppreances = (image, url3, label, by) => {
+  const renderTvAppreances = (
+    image: string,
+    url3: string,
+    label: string,
+    by: string,
+  ) => {
     return (
       <div className='flex items-center justify-start font-roboto'>
         <img
@@ -141,7 +153,8 @@ const IndexPage = ({
               {label}
             </div>
             <div className='mt-2 ml-4 text-sm flex space-x-2 items-center'>
-              <span>{by}</span> <VscVerified className='fill-brandPink' />
+              <span>{by}</span>{' '}
+              <VscVerified className='fill-brandPink dark:fill-gray-200 h-5 w-5' />
             </div>
           </div>
         </div>
@@ -149,7 +162,12 @@ const IndexPage = ({
     );
   };
 
-  const renderTestimonials = (image, url4, label, by) => {
+  const renderTestimonials = (
+    image: string,
+    url4: string,
+    label: string,
+    by: string,
+  ) => {
     return (
       <div className='flex items-center justify-start font-roboto'>
         <img
@@ -168,7 +186,8 @@ const IndexPage = ({
               {label}
             </div>
             <div className='mt-2 ml-4 text-sm flex space-x-2 items-center'>
-              <span>{by}</span> <VscVerified className='fill-brandPink' />
+              <span>{by}</span>{' '}
+              <VscVerified className='fill-brandPink dark:fill-gray-200 h-5 w-5' />
             </div>
           </div>
         </div>
@@ -228,58 +247,18 @@ const IndexPage = ({
           </h1>
         </div>
         <Tab.Group>
-          <Tab.List className='grid grid-cols-2 mx-auto rounded-lg md:grid-cols-2 lg:grid-cols-4 bg-brandPink max-w-7xl'>
-            <Tab
-              className={({ selected }) =>
-                classNames(
-                  'w-full rounded-lg py-2.5 text-base font-medium leading-5 text-brandPink',
-                  'focus:outline-none focus:ring-2 focus:ring-brandPink font-heading',
-                  selected
-                    ? 'bg-white shadow ring-2 ring-brandPink'
-                    : 'text-pink-100 hover:bg-white/[0.12] hover:text-white',
-                )
-              }
-            >
+          <Tab.List className='max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:flex lg:flex-nowrap lg:space-x-1 bg-gg-500 dark:bg-gg-400 rounded-xl p-1 transition-all ease-linear duration-300'>
+            <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
               Recommended
             </Tab>
 
-            <Tab
-              className={({ selected }) =>
-                classNames(
-                  'w-full rounded-lg py-2.5 text-base font-medium leading-5 text-brandPink',
-                  'focus:outline-none focus:ring-2 focus:ring-brandPink font-heading',
-                  selected
-                    ? 'bg-white shadow ring-2 ring-brandPink'
-                    : 'text-pink-100 hover:bg-white/[0.12] hover:text-white',
-                )
-              }
-            >
+            <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
               GarbhaSandesha
             </Tab>
-            <Tab
-              className={({ selected }) =>
-                classNames(
-                  'w-full rounded-lg py-2.5 text-base font-medium leading-5 text-brandPink',
-                  'focus:outline-none focus:ring-2 focus:ring-brandPink font-heading',
-                  selected
-                    ? 'bg-white shadow ring-2 ring-brandPink'
-                    : 'text-pink-100 hover:bg-white/[0.12] hover:text-white',
-                )
-              }
-            >
+            <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
               TV Programs
             </Tab>
-            <Tab
-              className={({ selected }) =>
-                classNames(
-                  'w-full rounded-lg py-2.5 text-base font-medium leading-5 text-brandPink',
-                  'focus:outline-none focus:ring-2 focus:ring-brandPink font-heading',
-                  selected
-                    ? 'bg-white shadow ring-2 ring-brandPink'
-                    : 'text-pink-100 hover:bg-white/[0.12] hover:text-white',
-                )
-              }
-            >
+            <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
               Testimonials
             </Tab>
           </Tab.List>
@@ -333,8 +312,8 @@ const IndexPage = ({
                         <div
                           className={
                             url === snippet.resourceId.videoId
-                              ? 'text-brandPink'
-                              : 'max-w-md md:max-w-xl hover:text-brandPink4'
+                              ? 'text-gg-500 dark:text-gg-400'
+                              : 'max-w-md md:max-w-xl hover:text-gg-400 dark:hover:text-gray-300'
                           }
                           key={id}
                         >
@@ -389,7 +368,7 @@ const IndexPage = ({
                 </section>
                 <section className='xl:mt-8'>
                   <div className='flex flex-col space-y-4 pb-8'>
-                    <div className='py-3 font-bold text-center text-lg font-heading sticky top-0 bg-brandPink text-white rounded-md'>
+                    <div className='py-3 font-bold text-center text-lg font-heading sticky top-0 bg-gg-500 dark:bg-gg-400 text-white rounded-md'>
                       GarbhaSandesha
                     </div>
                     {garbhasandesha?.items.map((item) => {
@@ -400,8 +379,8 @@ const IndexPage = ({
                         <div
                           className={
                             url2 === snippet.resourceId.videoId
-                              ? 'text-brandPink'
-                              : 'max-w-md md:max-w-xl hover:text-brandPink4'
+                              ? 'text-gg-500 dark:text-gg-400'
+                              : 'max-w-md md:max-w-xl hover:text-gg-400 dark:hover:text-gray-300'
                           }
                           key={id}
                         >
@@ -467,8 +446,8 @@ const IndexPage = ({
                         <div
                           className={
                             url3 === snippet.resourceId.videoId
-                              ? 'text-brandPink'
-                              : 'max-w-md md:max-w-xl hover:text-brandPink4'
+                              ? 'text-gg-500 dark:text-gg-400'
+                              : 'max-w-md md:max-w-xl hover:text-gg-400 dark:hover:text-gray-300'
                           }
                           key={id}
                         >
@@ -534,8 +513,8 @@ const IndexPage = ({
                         <div
                           className={
                             url4 === snippet.resourceId.videoId
-                              ? 'text-brandPink'
-                              : 'max-w-md md:max-w-xl hover:text-brandPink4'
+                              ? 'text-gg-500 dark:text-gg-400'
+                              : 'max-w-md md:max-w-xl hover:text-gg-400 dark:hover:text-gray-300'
                           }
                           key={id}
                         >

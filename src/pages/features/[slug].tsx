@@ -93,7 +93,7 @@ const Vas = ({ valueAddedService }) => {
         link4={''}
         text4={''}
       />
-      <div className='relative py-16 bg-white overflow-hidden'>
+      <div className='relative py-16 bg-white dark:bg-gray-800  overflow-hidden'>
         <div className='hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full'>
           <div
             className='relative h-full text-lg max-w-prose mx-auto'
@@ -120,7 +120,7 @@ const Vas = ({ valueAddedService }) => {
                     y={0}
                     width={4}
                     height={4}
-                    className='text-gray-200'
+                    className='text-gray-200 dark:text-gray-700'
                     fill='currentColor'
                   />
                 </pattern>
@@ -152,7 +152,7 @@ const Vas = ({ valueAddedService }) => {
                     y={0}
                     width={4}
                     height={4}
-                    className='text-gray-100'
+                    className='text-gray-100 dark:text-gray-700'
                     fill='currentColor'
                   />
                 </pattern>
@@ -184,7 +184,7 @@ const Vas = ({ valueAddedService }) => {
                     y={0}
                     width={4}
                     height={4}
-                    className='text-gray-200'
+                    className='text-gray-200 dark:text-gray-700'
                     fill='currentColor'
                   />
                 </pattern>
@@ -201,7 +201,7 @@ const Vas = ({ valueAddedService }) => {
           {valueAddedService?.title ? (
             <div className='max-w-7xl mx-auto'>
               <h1>
-                <span className='mt-4 block text-2xl text-center leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl font-heading'>
+                <span className='mt-4 block text-2xl text-center leading-8 font-bold tracking-tight text-gray-800 dark:text-gray-200 sm:text-4xl font-heading'>
                   {valueAddedService?.title}
                 </span>
               </h1>
@@ -212,7 +212,7 @@ const Vas = ({ valueAddedService }) => {
                   alt={valueAddedService?.title}
                 />
               </figure>
-              <div>
+              <div className='text-gray-800 dark:text-gray-200'>
                 <RichText content={valueAddedService?.content.raw.children} />
               </div>
             </div>
