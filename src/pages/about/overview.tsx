@@ -50,11 +50,11 @@ const Overview = ({ directors }) => {
         />
       </Head>
       <Header />
-      <div className='bg-white'>
+      <div className='bg-white dark:bg-gray-800'>
         <div className='px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24'>
           <div className='space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0'>
             <div className='space-y-5 sm:space-y-4'>
-              <h2 className='text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl font-content text-brandliteGray'>
+              <h2 className='text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl font-content text-gray-800 dark:text-gray-200'>
                 Founders and Directors
               </h2>
             </div>
@@ -75,15 +75,15 @@ const Overview = ({ directors }) => {
                           <h3 className='text-2xl font-semibold font-heading text-brandDark'>
                             {item.name}
                           </h3>
-                          <p className='text-sm font-semibold font-qs text-brandPink'>
+                          <p className='text-sm font-semibold font-qs text-gg-500 dark:text-gg-400'>
                             {item.details}
                           </p>
                         </div>
                         <div className='text-lg'>
-                          <p className='text-gray-500 font-content'>
+                          <p className='text-gray-800 dark:text-gray-200 font-content'>
                             {item.description}
                           </p>
-                          <p className='mt-3 text-sm underline cursor-pointer text-brandPurple hover:text-brandPink font-content'>
+                          <p className='mt-3 text-sm underline cursor-pointer text-brandPurple2 hover:text-brandPink font-content'>
                             Read More {'>'}{' '}
                           </p>
                         </div>

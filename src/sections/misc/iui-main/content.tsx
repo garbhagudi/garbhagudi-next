@@ -5,7 +5,7 @@ type Props = {};
 
 const Content = (props: Props) => {
   return (
-    <div className='max-w-7xl mx-auto'>
+    <div className='max-w-7xl mx-auto text-gray-800 dark:text-gray-200'>
       <h2 className='text-2xl lg:text-3xl font-heading font-bold text-center py-10 lg:py-16'>
         What Is IUI treatment?
       </h2>
@@ -33,7 +33,7 @@ const Content = (props: Props) => {
             other fertility treatments.
           </div>
         </div>
-        <div className='col-span-1 px-3 bg-gray-300 lg:pt-7 pb-5 rounded-lg mt-16 lg:mt-0'>
+        <div className='col-span-1 px-3 bg-gray-300 dark:bg-gray-700 lg:pt-7 pb-5 rounded-lg mt-16 lg:mt-0 '>
           <h3 className='text-lg font-heading font-bold pt-5 lg:pt-0 pb-6'>
             Quick Links
           </h3>

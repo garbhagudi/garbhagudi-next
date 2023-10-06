@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const WhatIsInfertilityTreatment = () => {
   return (
-    <div className='max-w-7xl mx-auto px-3'>
+    <div className='max-w-7xl mx-auto px-3 text-gray-800 dark:text-gray-200'>
       <div className='py-3 lg:py-8'>
         <h2 className='font-heading text-3xl font-bold py-3'>
           What is Infertility Treatment ? Enhancing Fertility for Parenthood
@@ -48,7 +48,7 @@ export const WhatIsInfertilityTreatment = () => {
 
 export const InfertilityTreatmentProcess = () => {
   return (
-    <div className='max-w-7xl mx-auto px-3'>
+    <div className='max-w-7xl mx-auto px-3 text-gray-800 dark:text-gray-200'>
       <div className='py-3 lg:py-8'>
         <h2 className='font-heading text-3xl font-bold py-3'>
           What Is The Process Of Infertility Treatment in Bangalore? -
@@ -94,7 +94,7 @@ export const InfertilityTreatmentProcess = () => {
 
 export const WhyGarbhaGudi = () => {
   return (
-    <div className='max-w-7xl mx-auto px-3'>
+    <div className='max-w-7xl mx-auto px-3 text-gray-800 dark:text-gray-200'>
       <div className='py-3 lg:pt-8'>
         <h2 className='font-heading text-3xl font-bold py-3'>
           Why GarbhaGudi Is The Best Fertility Hospital In Bangalore? - Leading
@@ -154,7 +154,7 @@ export const WhyGarbhaGudi = () => {
 
 export const WhenDiagnose = () => {
   return (
-    <div className='max-w-7xl mx-auto px-3'>
+    <div className='max-w-7xl mx-auto px-3 text-gray-800 dark:text-gray-200'>
       <div className='py-3 lg:py-8'>
         <h2 className='font-heading text-3xl font-bold py-3'>
           When to Diagnose for Infertility Treatment? - Taking the First Step
@@ -196,7 +196,7 @@ export const WhenDiagnose = () => {
 
 export const InfertilityTreatmentOptions = () => {
   return (
-    <div className='max-w-7xl mx-auto px-3'>
+    <div className='max-w-7xl mx-auto px-3 text-gray-800 dark:text-gray-200'>
       <h2 className='text-3xl font-heading font-bold pb-3 lg:pb-5'>
         Best-in-class Infertility Treatment in Bangalore - Enhancing Your Path
         to Parenthood
@@ -209,8 +209,8 @@ export const InfertilityTreatmentOptions = () => {
             className='w-full lg:h-96 object-cover'
           />
         </div>
-        <div className='lg:w-1/2 pt-3 px-0 lg:px-8 lg:pt-0 font-content'>
-          <p className='text-gray-700'>
+        <div className='lg:w-1/2 pt-3 px-0 lg:px-8 lg:pt-0 font-content text-gray-800 dark:text-gray-200'>
+          <p className=''>
             Discover the joy of parenthood with our cutting-edge and
             compassionate
             <span className='font-bold'>
@@ -223,14 +223,14 @@ export const InfertilityTreatmentOptions = () => {
             </span>{' '}
             to address various infertility challenges that couples may face.
           </p>
-          <p className='text-gray-700 mt-4'>
+          <p className='mt-4'>
             Our dedicated team of fertility experts and advanced medical
             technologies ensure that you receive the highest standard of care
             and the best chances of success in your journey to conceive. Whether
             it's IUI, IVF, ICSI, or other assisted reproductive techniques, our
             comprehensive services cater to your unique needs and aspirations.
           </p>
-          <p className='text-gray-700 mt-4'>
+          <p className='mt-4'>
             Experience unparalleled support and guidance throughout your
             fertility treatment, and take the first step towards fulfilling your
             dream of parenthood with us.
@@ -245,26 +245,26 @@ export const Causes = () => {
   return (
     <div>
       <div className='flex flex-col lg:flex-row items-center justify-center max-w-7xl mx-auto px-3 py-8 lg:py-10'>
-        <div className='lg:w-1/2 pr-0 lg:pr-8 font-content'>
+        <div className='lg:w-1/2 pr-0 lg:pr-8 font-content text-gray-800 dark:text-gray-200'>
           <h2 className='text-3xl font-bold mb-4 font-heading'>
             Causes of Infertility - Understanding the Factors Affecting
             Fertility
           </h2>
-          <p className='text-gray-700'>
+          <p className=''>
             Infertility can be a complex issue, influenced by various factors
             that affect both men and women. Some common causes of infertility
             include hormonal imbalances, ovulation disorders, uterine or
             fallopian tube abnormalities, sperm abnormalities, and age-related
             factors.
           </p>
-          <p className='text-gray-700 mt-4'>
+          <p className=' mt-4'>
             Lifestyle factors, such as smoking, excessive alcohol consumption,
             obesity, and stress, can also play a role in infertility.
             Additionally, medical conditions like endometriosis, polycystic
             ovary syndrome (PCOS), and certain genetic conditions can contribute
             to fertility challenges.
           </p>
-          <p className='text-gray-700 mt-4'>
+          <p className=' mt-4'>
             At our infertility treatment center, we conduct thorough evaluations
             to identify the specific causes affecting fertility for each
             individual or couple. Our experienced team of specialists devises

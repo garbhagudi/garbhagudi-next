@@ -60,7 +60,7 @@ const IndexPage = ({ careers }) => {
       />
       <div className='max-w-7xl mx-auto'>
         <div>
-          <h1 className='text-center text-2xl sm:text-4xl font-heading font-bold py-6'>
+          <h1 className='text-center text-2xl sm:text-4xl font-heading font-bold py-6 text-gray-800 dark:text-gray-200'>
             GarbhaGudi – Certified Healthy Workplace
           </h1>
           <Link href='/about/awards-and-accolades/garbhagudi-certified-healthy-workplace'>
@@ -73,8 +73,8 @@ const IndexPage = ({ careers }) => {
             </div>
           </Link>
         </div>
-        <div className='px-2'>
-          <div className='text-center text-2xl sm:text-4xl mb-4 font-heading pt-12 font-semibold'>
+        <div className='px-2 text-gray-800 dark:text-gray-200'>
+          <div className='text-center text-2xl sm:text-4xl mb-4 font-heading pt-12 font-semibold '>
             Careers at GarbhaGudi
           </div>
           <p className='max-w-7xl mx-auto py-2 mt-4 font-content text-lg'>
@@ -97,24 +97,29 @@ const IndexPage = ({ careers }) => {
         <div className='container mb-2 flex mx-auto w-full items-center justify-center'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6 mt-6 px-3'>
             {careers.map((items) => (
-              <Link href={`careers/${items?.slug}`} passHref key={items.id}>
-                <div className='rounded-lg border shadow-md bg-gradient-to-br from-pink-50 to-purple-50 hover:bg-gradient-to-br hover:from-pink-100 hover:via-brandPurple2 hover:to-brandPurple mx-auto hover:shadow-2xl hover:transition-all hover:-translate-x-2 hover:-translate-y-2 duration-300'>
+              <Link
+                href={`careers/${items?.slug}`}
+                passHref
+                key={items.id}
+                className='group'
+              >
+                <div className='rounded-lg border dark:border-gray-600 shadow-md bg-gradient-to-br from-pink-50 dark:from-gray-800 dark:to-slate-800 to-purple-50 hover:bg-gradient-to-br hover:from-pink-100 dark:hover:from-gray-700 hover:via-brandPurple2 hover:to-brandPurple dark:hover:to-transparent mx-auto hover:shadow-2xl hover:transition-all hover:-translate-x-2 hover:-translate-y-2 duration-300'>
                   <div className='flex flex-col justify-between p-4 leading-normal '>
-                    <h5 className='mb-2 text-xl font-bold tracking-tight text-gray-900 font-content'>
+                    <h5 className='mb-2 text-xl font-bold tracking-tight text-gray-800 dark:text-gray-200  font-content'>
                       {items?.position}
                     </h5>
-                    <div className='h-24'>
-                      <p className='mb-1 font-content text-sm font-semibold text-gray-900 '>
+                    <div className='h-24 text-gray-800 dark:text-gray-200 '>
+                      <p className='mb-1 font-content text-sm font-semibold '>
                         Location: {items?.location}
                       </p>
-                      <p className='mb-1 font-content text-sm font-semibold text-gray-900 '>
+                      <p className='mb-1 font-content text-sm font-semibold'>
                         Experience: {items?.experience}
                       </p>
-                      <p className='mb-1 font-content text-sm font-semibold text-gray-900 '>
+                      <p className='mb-1 font-content text-sm font-semibold'>
                         Qualification: {items?.qualification}
                       </p>
                     </div>
-                    <button className='font-content mt-4 rounded-lg px-3 py-1.5 border font-semibold border-brandPink hover:bg-brandPink hover:text-white w-32'>
+                    <button className='font-content mt-4 rounded-lg px-3 py-1.5 border-2 font-semibold border-gg-500 dark:border-gray-500 group-hover:dark:border-gg-500 hover:bg-brandPink hover:text-white w-32'>
                       Apply Now
                     </button>
                   </div>

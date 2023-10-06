@@ -23,6 +23,7 @@ const BannerComponent = (bannerData: bannerProps) => {
       display: 'none',
     },
   };
+
   return (
     <div>
       <div className=''>
@@ -52,23 +53,27 @@ const BannerComponent = (bannerData: bannerProps) => {
             </button>
           )}
         >
-          {bannerData?.banners.map((items) => (
-            <Link
-              href={items.url}
-              target='_blank'
-              rel='noreferrer'
-              key={items.id}
-            >
-              <Image
-                src={items.image.url}
-                alt={items.title}
-                width={1920}
-                height={1080}
-                className='w-full h-full'
-                priority
-              />
-            </Link>
-          ))}
+          {bannerData ? (
+            bannerData.banners.map((banner) => (
+              <Link
+                href={banner.url}
+                target='_blank'
+                rel='noreferrer'
+                key={banner.id}
+              >
+                <Image
+                  src={banner?.image?.url}
+                  alt={banner.title}
+                  width={1920}
+                  height={1080}
+                  className='w-full h-full object-cover'
+                  priority
+                />
+              </Link>
+            ))
+          ) : (
+            <div></div>
+          )}
         </Carousel>
       </div>
     </div>

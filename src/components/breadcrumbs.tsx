@@ -41,7 +41,7 @@ const BreadCrumbs = ({
                 <HiChevronRight className='w-5 h-5' />
                 <a
                   href={link1}
-                  className='ml-1 mt-0.5 text-sm text-brandDark hover:text-brandPink2'
+                  className='ml-1 mt-0.5 text-sm text-gray-800 dark:text-gray-200 hover:text-brandPink2'
                 >
                   {text1}
                 </a>
@@ -64,7 +64,7 @@ const BreadCrumbs = ({
                       clipRule='evenodd'
                     ></path>
                   </svg>
-                  <span className='ml-1 text-sm cursor-pointer text-brandDark hover:text-brandPink2'>
+                  <span className='ml-1 text-sm cursor-pointer text-gray-800 dark:text-gray-200 hover:text-brandPink2'>
                     {text2}
                   </span>
                 </div>
@@ -87,7 +87,7 @@ const BreadCrumbs = ({
                       clipRule='evenodd'
                     ></path>
                   </svg>
-                  <span className='ml-1 text-sm font-medium text-brandDark hover:text-brandPink2'>
+                  <span className='ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-brandPink2'>
                     {text3}
                   </span>
                 </div>
@@ -110,7 +110,7 @@ const BreadCrumbs = ({
                       clipRule='evenodd'
                     ></path>
                   </svg>
-                  <span className='ml-1 text-sm font-medium text-brandDark hover:text-brandPink2'>
+                  <span className='ml-1 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-brandPink2'>
                     {text4}
                   </span>
                 </div>

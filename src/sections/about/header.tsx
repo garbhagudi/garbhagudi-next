@@ -7,7 +7,7 @@ const Header = () => {
         <div className='max-w-7xl mx-auto'>
           <div className='relative z-10 pb-8 bg-transparent sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32'>
             <svg
-              className='hidden xl:block absolute right-0 inset-y-0 h-full w-56 mr-4 text-white transform translate-x-1/2'
+              className='hidden xl:block absolute right-0 inset-y-0 h-full w-36 mr-10 text-white dark:text-gray-800 transform translate-x-1/2'
               fill='currentColor'
               viewBox='0 0 100 100'
               preserveAspectRatio='none'
@@ -19,10 +19,10 @@ const Header = () => {
 
             <main className='mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28'>
               <div className='sm:text-center lg:text-left'>
-                <h1 className='text-4xl tracking-tight sm:text-5xl md:text-6xl font-content font-bold text-brandliteGray'>
+                <h1 className='text-4xl tracking-tight sm:text-5xl md:text-6xl font-content font-bold text-gray-800 dark:text-gray-200'>
                   <span className='block xl:inline '>About GarbhaGudi</span>
                 </h1>
-                <p className='mt-3 text-base text-brandDark sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 font-content overflow-visible z-10'>
+                <p className='mt-3 text-base text-brandDark sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto text-gray-800 dark:text-gray-200 md:mt-5 md:text-xl lg:mx-0 font-content overflow-visible z-10'>
                   GarbhaGudi is a chain of new generation infertility treatment
                   hospitals equipped with state-of-the-art infrastructure and
                   cutting-edge technology to address this ever-increasing
@@ -43,13 +43,13 @@ const Header = () => {
           />
         </div>
       </div>
-      <div className='bg-purple-100 px-4 md:px-6 lg:px-8'>
+      <div className='bg-purple-100 dark:bg-gray-700 px-4 md:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto py-4 flex items-center lg:justify-between flex-col md:flex-row'>
           <div className='py-10 w-full md:w-3/4 text-center md:text-left'>
-            <div className='text-2xl md:text-3xl font-heading tracking-tight font-bold text-brandPink'>
+            <div className='text-2xl md:text-3xl font-heading tracking-tight font-bold text-gg-500 dark:text-gg-400'>
               Discover the Garbhagudi Way
             </div>
-            <div className='text-base md:text-lg font-content mt-3 font-semibold'>
+            <div className='text-base md:text-lg font-content mt-3 font-semibold text-gray-800 dark:text-gray-200'>
               Discover our values and how we operate as an organization. Gain
               insight into our guiding principles, from Couple's Delight to
               Holistic Approach.
@@ -58,7 +58,7 @@ const Header = () => {
           <div className='mx-auto mb-4 md:mb-0'>
             <Link
               href={'/about/garbhagudi-way'}
-              className='px-4 py-3 font-content font-semibold bg-brandPink text-white text-lg rounded-md hover:bg-brandPink3 transition-all duration-200'
+              className='px-4 py-3 font-normal bg-gg-500 dark:bg-gg-400 text-white dark:text-gray-800 text-lg font-lexend rounded-md hover:bg-gg-400 dark:hover:bg-gg-500 transition-all duration-200'
             >
               Know More
             </Link>

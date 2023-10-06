@@ -4,7 +4,7 @@ import { HiCheck } from 'react-icons/hi';
 
 const QuickLinks = () => {
   return (
-    <div className='bg-brandPink5 mt-5 px-3'>
+    <div className='bg-brandPink5 dark:bg-gray-700 mt-5 px-3'>
       <div className='flex flex-col lg:flex-row  items-start justify-evenly pt-10 pb-10 max-w-7xl mx-auto'>
         <h2 className='text-3xl lg:text-4qxl font-heading font-bold underline pb-6'>
           Our Other Branches

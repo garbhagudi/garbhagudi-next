@@ -9,15 +9,15 @@ const WhenIvf = () => {
           <img
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1671190677/Misc/avn-min_jo63l5.png'
             alt='When is IVF Treatment Recommended?'
-            className='relative w-full'
+            className='relative w-full dark:bg-white/10 dark:brightness-75 dark:invert'
           />
         </div>
-        <div>
+        <div className='text-gray-800 dark:text-gray-200'>
           <div className='mt-6 max-w-2xl'>
-            <h2 className='text-3xl font-extrabold tracking-tight text-gray-900 font-heading '>
+            <h2 className='text-3xl font-extrabold tracking-tight font-heading '>
               When is IVF Recommended?
             </h2>
-            <div className='mt-4 text-lg text-gray-900 font-content'>
+            <div className='mt-4 text-lg font-content'>
               Some common reasons for recommending IVF include:
               <ul className='space-y-3 text-base mt-4'>
                 <li>
@@ -59,7 +59,7 @@ const WhenIvf = () => {
             <div className='mt-6 text-center lg:text-left'>
               <Link
                 href='/blogs/when-and-what-should-you-consider-to-evaluate-for-pregnancy'
-                className='inline-flex px-3 py-2 rounded bg-brandPink font-content font-bold text-white hover:bg-brandPink2'
+                className='inline-flex px-3 py-2 rounded bg-gg-500 dark:bg-gray-500 font-content font-bold text-white hover:bg-gg-400 dark:hover:bg-gg-500'
               >
                 Know More
               </Link>

@@ -62,11 +62,16 @@ const IndexPage = () => {
       <div className='flex py-6 mx-auto max-w-7xl sm:py-12'>
         <div className='grid grid-cols-1 gap-10 mx-auto lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1'>
           {Data.map((item) => (
-            <Link href={`tools/${item.link}`} passHref key={item.id}>
-              <div className='flex px-4 py-3 transition-colors duration-100 border-2 border-solid cursor-pointer border-brandPink w-96 rounded-2xl hover:bg-brandPink hover:text-white hover:border-transparent '>
+            <Link
+              href={`tools/${item.link}`}
+              passHref
+              key={item.id}
+              className='group'
+            >
+              <div className='flex px-4 py-3 transition-colors duration-100 border-2 border-solid cursor-pointer border-gg-500 dark:border-gray-600 dark:hover:border-gg-500 w-96 rounded-2xl hover:bg-brandPink dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 hover:text-gray-200 hover:border-transparent '>
                 <div className='w-1/3'>
                   <img
-                    className='object-cover w-24 h-24 rounded-2xl'
+                    className='object-cover w-24 h-24 rounded-2xl dark:grayscale group-hover:grayscale-0 transition-all duration-150'
                     src={item.icon}
                     alt={item.name}
                   />
@@ -82,7 +87,7 @@ const IndexPage = () => {
           ))}
         </div>
       </div>
-      <div className='flex flex-col mt-4'>
+      <div className='flex flex-col mt-4 text-gray-800 dark:text-gray-200 '>
         <p className='text-xl font-bold text-center font-heading'>
           Other Useful Links
         </p>

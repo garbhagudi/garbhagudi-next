@@ -61,14 +61,14 @@ const VisionMission = () => {
         link4={''}
         text4={''}
       />
-      <section className='text-gray-600 body-font'>
+      <section className='text-gray-800 dark:text-gray-200 body-font'>
         <div className='container px-5 py-24 mx-auto'>
           <h1 className='text-4xl lg:text-5xl font-heading text-center pb-16 font-bold underline'>
             Mission & Vision of GarbhaGudi
           </h1>
           <div className='flex flex-wrap -mx-4 -mb-10 text-center'>
             <div className='sm:w-1/2 mb-10 px-4'>
-              <h2 className='title-font text-3xl font-heading font-semibold text-brandliteGray mt-6 mb-3'>
+              <h2 className='title-font text-3xl font-heading font-semibold text-gray-800 dark:text-gray-200 mt-6 mb-3'>
                 Vision
               </h2>
               <div className='rounded-lg h-64 overflow-hidden'>
@@ -91,7 +91,7 @@ const VisionMission = () => {
               </p>
             </div>
             <div className='sm:w-1/2 mb-10 px-4'>
-              <h2 className='title-font text-3xl text-brandliteGray mt-6 mb-3 font-heading font-semibold'>
+              <h2 className='title-font text-3xl text-gray-800 dark:text-gray-200 mt-6 mb-3 font-heading font-semibold'>
                 Mission
               </h2>
               <div className='rounded-lg h-64 overflow-hidden'>

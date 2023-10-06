@@ -27,9 +27,9 @@ const Video = ({ testimonials }: testimonialProps) => {
     },
   };
   return (
-    <div className='bg-gradient-to-br from-brandPink5 to-brandPurple2'>
+    <div className='bg-gradient-to-br from-brandPink5 dark:from-gray-800 dark:via-gray-800 to-brandPurple2 dark:to-brandPurpleDark'>
       <div className='max-w-7xl mx-auto py-8'>
-        <h2 className='text-2xl lg:text-4xl text-center font-extrabold text-brandDark font-heading flex items-center justify-center'>
+        <h2 className='text-2xl lg:text-4xl text-center font-extrabold text-gray-800 dark:text-gray-200 font-heading flex items-center justify-center'>
           Testimonials from our happy couples
         </h2>
         <div className='px-3 sm:px-0 max-w-7xl mx-auto flex flex-row items-center justify-center'>

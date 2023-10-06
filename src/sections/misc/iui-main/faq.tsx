@@ -8,7 +8,7 @@ const Faq = (props: Props) => {
   const [activeIndex1, setActiveIndex1] = useState(1);
   return (
     <div className='px-3 scroll-m-16' id='faq'>
-      <h2 className='text-center text-2xl  lg:text-3xl font-heading pt-12 font-semibold'>
+      <h2 className='text-center text-2xl  lg:text-3xl font-heading pt-12 font-semibold text-gray-800 dark:text-gray-200'>
         Frequently Asked Questions
       </h2>
       <div className='text-lg font-content mt-8 text-center'>

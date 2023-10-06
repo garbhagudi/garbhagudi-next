@@ -3,12 +3,12 @@ import React from 'react';
 const Content = () => {
   return (
     <div className='scroll-m-16 scroll-smooth' id='know-more'>
-      <div className='bg-white relative pt-10 lg:pt-24'>
+      <div className='bg-white dark:bg-gray-800 relative pt-10 lg:pt-24'>
         <div className='relative container m-auto px-3 md:px-12 lg:px-6'>
           <h2 className='mx-auto font-black text-4xl text-left lg:text-5xl font-heading'>
             What is IVF and how does it work ?
           </h2>{' '}
-          <div className='md:flex mx-auto flex-wrap'>
+          <div className='md:flex mx-auto flex-wrap text-gray-800 dark:text-gray-200'>
             <div className='grid grid-cols-1 lg:grid-cols-2'>
               <div className='relative font-content mt-8 md:mt-16 space-y-8 ml-0 mx-auto text-left md:max-w-lg lg:max-w-2xl'>
                 <p className=''>
@@ -53,7 +53,7 @@ const Content = () => {
                 <div className='relative w-full'>
                   <img
                     src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1671177124/Misc/PNG_25_yoa08y.png'
-                    className='relative  w-full'
+                    className='relative  w-full bg-white/10 dark:brightness-75 dark:invert'
                     alt='Process of IVF Treatment in Bangalore'
                     loading='lazy'
                   />

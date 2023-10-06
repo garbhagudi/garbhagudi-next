@@ -79,18 +79,18 @@ const IndexPage = ({ diagnoses }) => {
                 href={`diagnosis/${item.slug}`}
                 passHref
                 key={item.id}
-                className=''
+                className='group'
               >
-                <div className='border-brandPink w-80 mx-auto md:w-96 px-3 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 '>
+                <div className='border-brandPink dark:border-gray-600 w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink dark:hover:bg-gray-600 hover:text-white hover:border-transparent transition-colors duration-100'>
                   <div className='w-1/3'>
                     <img
-                      className='w-24 h-24 object-cover rounded-2xl'
+                      className='w-24 h-24 object-cover rounded-2xl dark:grayscale group-hover:grayscale-0 transition-all duration-300'
                       src={item.icon.url}
                       alt={item.title}
                     />
                   </div>
                   <div className='w-2/3 flex flex-col justify-center text-center'>
-                    <p className='font-semibold text-xl font-qs'>
+                    <p className='font-medium text-xl font-lexend'>
                       {item.title}
                     </p>
                   </div>

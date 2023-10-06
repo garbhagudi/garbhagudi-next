@@ -30,9 +30,9 @@ const supportLinks = [
 
 const Hero = () => {
   return (
-    <div className='bg-white'>
+    <div className='bg-white dark:bg-gray-800'>
       {/* Header */}
-      <div className='relative pb-32 bg-gray-800'>
+      <div className='relative pb-32 '>
         <div className='absolute inset-0'>
           <img
             className='w-full h-full object-cover'
@@ -40,7 +40,7 @@ const Hero = () => {
             alt='gg care'
           />
           <div
-            className='absolute inset-0 bg-gray-400 mix-blend-multiply'
+            className='absolute inset-0 bg-gray-400 dark:bg-gray-600 mix-blend-multiply'
             aria-hidden='true'
           />
         </div>
@@ -49,7 +49,7 @@ const Hero = () => {
 
       {/* Overlapping cards */}
       <section
-        className='md:-mt-12 lg:-mt-44 -mt-8 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8'
+        className='md:-mt-12 lg:-mt-44 -mt-8 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8 '
         aria-labelledby='contact-heading'
       >
         <h2 className='sr-only' id='contact-heading'>
@@ -59,23 +59,23 @@ const Hero = () => {
           {supportLinks.map((link) => (
             <div
               key={link.name}
-              className='flex flex-col bg-white rounded-2xl shadow-xl'
+              className='flex flex-col bg-white dark:bg-gray-800 rounded-2xl shadow-xl group dark:border-2 dark:border-gray-600'
             >
               <div className='flex-1 relative pt-16 px-6 pb-8 md:px-8'>
-                <div className='absolute top-0 p-5 inline-block bg-brandPink3 rounded-xl shadow-lg transform -translate-y-1/2'>
+                <div className='absolute top-0 p-5 inline-block bg-gg-400 dark:bg-gray-600  group-hover:dark:bg-gg-400 transition-all duration-150 rounded-xl shadow-lg transform -translate-y-1/2'>
                   <link.icon
                     className='h-6 w-6 text-white'
                     aria-hidden='true'
                   />
                 </div>
-                <h3 className='text-xl font-medium text-gray-900 font-heading'>
+                <h3 className='text-xl font-medium text-gray-800 dark:text-gray-200 font-heading'>
                   {link.name}
                 </h3>
-                <p className='mt-4 text-sm text-gray-500 font-content'>
+                <p className='mt-4 text-sm text-gray-700 dark:text-gray-300  font-content'>
                   {link.description}
                 </p>
               </div>
-              <button className='px-4  py-2 bg-brandPink3 rounded-b-2xl font-content text-white font-semibold'>
+              <button className='px-4  py-2 bg-gg-400 dark:bg-gray-600 dark:group-hover:bg-gg-400 transition-all duration-150 rounded-b-xl font-content text-white font-semibold'>
                 <a href={link.ctaLink} target='_blank' rel='noreferrer'>
                   {link.ctaAction}
                 </a>

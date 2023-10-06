@@ -158,11 +158,11 @@ const IndexPage = () => {
         />
       </Head>
       <div className='max-w-7xl mx-auto font-content'>
-        <h1 className='text-4xl font-heading font-semibold text-center py-8 text-brandPink'>
+        <h1 className='text-4xl font-heading font-semibold text-center py-8 text-gray-800 dark:text-gray-200 '>
           Fertility Quotient Calculator
         </h1>
         <div
-          className=' text-sm sm:text-base px-3 sm:px-0 max-w-6xl mx-auto flex items-center justify-start flex-col'
+          className=' text-sm sm:text-base px-3 sm:px-0 max-w-6xl mx-auto flex items-center justify-start flex-col text-gray-800 dark:text-gray-200 '
           id='intro'
         >
           <p className='mt-2'>
@@ -190,7 +190,7 @@ const IndexPage = () => {
             <div className='px-3 sm:px-0'>
               <label
                 htmlFor='Age'
-                className='block text-sm font-medium text-gray-700'
+                className='block text-sm font-medium text-gray-800 dark:text-gray-200 '
               >
                 Age{' '}
               </label>
@@ -199,7 +199,7 @@ const IndexPage = () => {
                   type='text'
                   name='Age'
                   id='age'
-                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
+                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark dark:border-gray-400 focus:outline-none focus:ring-brandPink4 focus:border-brandPink dark:focus:border-gg-400 block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
                   placeholder='Age'
                   aria-describedby='Age'
                   onKeyPress={(e) => {
@@ -216,7 +216,7 @@ const IndexPage = () => {
             <div className='px-3 sm:px-0'>
               <label
                 htmlFor='bmi'
-                className='block text-sm font-medium text-gray-700'
+                className='block text-sm font-medium text-gray-800 dark:text-gray-200 '
               >
                 Body Mass Index (BMI)
               </label>
@@ -225,7 +225,7 @@ const IndexPage = () => {
                   type='text'
                   name='bmi'
                   id='bmi'
-                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
+                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark dark:border-gray-400 focus:outline-none focus:ring-brandPink4 focus:border-brandPink dark:focus:border-gg-400 block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
                   placeholder='BMI'
                   aria-describedby='Body Mass Index'
                   onKeyPress={(e) => {
@@ -242,7 +242,7 @@ const IndexPage = () => {
             <div className='px-3 sm:px-0'>
               <label
                 htmlFor='afc'
-                className='block text-sm font-medium text-gray-700'
+                className='block text-sm font-medium text-gray-800 dark:text-gray-200 '
               >
                 Antral Follicle Count (AFC)
               </label>
@@ -251,7 +251,7 @@ const IndexPage = () => {
                   type='text'
                   name='afc'
                   id='afc'
-                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
+                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark dark:border-gray-400 focus:outline-none focus:ring-brandPink4 focus:border-brandPink dark:focus:border-gg-400 block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
                   placeholder='AFC'
                   aria-describedby='Antral Follicle Count'
                   onKeyPress={(e) => {
@@ -268,7 +268,7 @@ const IndexPage = () => {
             <div className='px-3 sm:px-0'>
               <label
                 htmlFor='amh'
-                className='block text-sm font-medium text-gray-700'
+                className='block text-sm font-medium text-gray-800 dark:text-gray-200 '
               >
                 Anti-Müllerian Hormone (AMH) level
               </label>
@@ -277,7 +277,7 @@ const IndexPage = () => {
                   type='text'
                   name='amh'
                   id='amh'
-                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark focus:outline-none focus:ring-brandPink4 focus:border-brandPink block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
+                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark dark:border-gray-400 focus:outline-none focus:ring-brandPink4 focus:border-brandPink dark:focus:border-gg-400 block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
                   placeholder='AMH'
                   aria-describedby='Anti-Müllerian Hormone'
                   onKeyPress={(e) => {
@@ -293,7 +293,7 @@ const IndexPage = () => {
             </div>
             <div className='mx-auto  text-center'>
               <button
-                className='px-8 py-2 mt-5 border-2 border-brandPink focus:outline-none font-semibold rounded-lg focus:ring-brandPink4 focus:border-brandPink4 hover:bg-brandPink hover:text-white transition-all duration-300 ease-in-out'
+                className='px-8 py-2 mt-5 border-2 border-brandPink focus:outline-none font-semibold rounded-lg focus:ring-brandPink4 focus:border-brandPink4 hover:bg-brandPink dark:focus:border-gg-400 hover:text-white transition-all duration-300 ease-in-out'
                 onClick={() => calculate()}
               >
                 <span className='text-xl'>Calculate</span>

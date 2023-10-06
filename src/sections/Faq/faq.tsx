@@ -13,10 +13,10 @@ const Faq = () => {
   const [activeIndex3, setActiveIndex3] = React.useState(1);
   return (
     <div className='max-w-7xl mx-auto'>
-      <h1 className='text-center text-4xl font-heading pt-12 font-semibold'>
+      <h1 className='text-center text-4xl font-heading pt-12 font-semibold text-gray-800 dark:text-gray-200 '>
         Frequently Asked Questions
       </h1>
-      <div className='text-lg font-contents mt-8 text-center'>
+      <div className='text-lg font-contents mt-8 text-center text-gray-800 dark:text-gray-200 '>
         Here are some of the most frequently asked questions about infertility
         and its treatment options.
       </div>
@@ -24,50 +24,20 @@ const Faq = () => {
         <Tab.Group vertical>
           <Tab.List
             className={
-              'flex flex-wrap md:flex-nowrap md:space-x-1 bg-brandPink rounded-xl p-1'
+              'flex flex-wrap md:flex-nowrap md:space-x-1 bg-gg-500 dark:bg-gg-400 rounded-xl p-1'
             }
           >
-            <Tab
-              className={({ selected }) =>
-                classNames(
-                  'w-full py-2.5 text-sm  font-medium text-brandPink rounded-lg',
-                  'focus:outline-none',
-                  selected
-                    ? 'bg-gray-100 ring-2 ring-brandPink2 shadow'
-                    : 'text-gray-100 hover:bg-brandPink4 hover:text-white',
-                )
-              }
-            >
+            <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
               <div className='mx-auto text-center text-sm md:text-2xl font-heading font-semibold'>
                 Male Infertility
               </div>
             </Tab>
-            <Tab
-              className={({ selected }) =>
-                classNames(
-                  'w-full py-2.5 text-sm  font-medium text-brandPink rounded-lg',
-                  'focus:outline-none',
-                  selected
-                    ? 'bg-gray-100 ring-2 ring-brandPink2 shadow'
-                    : 'text-gray-100 hover:bg-brandPink4 hover:text-white',
-                )
-              }
-            >
+            <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
               <div className='mx-auto text-center text-sm md:text-2xl font-heading font-semibold'>
                 Female Infertility
               </div>
             </Tab>
-            <Tab
-              className={({ selected }) =>
-                classNames(
-                  'w-full py-2.5 text-sm  font-medium text-brandPink rounded-lg',
-                  'focus:outline-none',
-                  selected
-                    ? 'bg-gray-100 ring-2 ring-brandPink2 shadow'
-                    : 'text-gray-100 hover:bg-brandPink4 hover:text-white',
-                )
-              }
-            >
+            <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
               <div className='mx-auto text-center text-sm md:text-2xl font-heading font-semibold'>
                 Treatments
               </div>

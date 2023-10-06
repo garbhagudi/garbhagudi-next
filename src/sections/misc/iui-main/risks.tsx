@@ -4,7 +4,7 @@ const Risks = () => {
   return (
     <div>
       <div className='max-w-7xl mx-auto'>
-        <div className='px-3 lg:px-6 pb-10'>
+        <div className='px-3 lg:px-6 pb-10 text-gray-800 dark:text-gray-200'>
           <h2 className='text-2xl lg:text-3xl font-heading text-center font-bold py-10 '>
             Potential Risks of IUI
           </h2>
