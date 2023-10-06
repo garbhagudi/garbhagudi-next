@@ -56,7 +56,7 @@ export const ContentOne = () => {
 export const ContentTwo = () => {
   return (
     <div>
-      <section className='my-10 flex flex-col md:flex-row items-center'>
+      <section className='my-10 flex flex-col md:flex-row items-center text-gray-800 dark:text-gray-200'>
         <div className='md:w-1/2 mt-6 md:mt-0 md:mr-6 flex items-start justify-center flex-col font-content py-6 px-2'>
           <h2 className='text-3xl font-semibold mb-3 font-lexend'>
             Here's how you can Help!

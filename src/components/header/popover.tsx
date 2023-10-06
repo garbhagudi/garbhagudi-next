@@ -41,7 +41,7 @@ export function About() {
             leaveTo='opacity-0 translate-y-1'
           >
             <Popover.Panel className='absolute z-10 w-screen outline-none max-w-md px-4 transform -translate-x-1/2 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-xl'>
-              <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black ring-opacity-5'>
+              <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black dark:ring-gray-600 ring-opacity-5 dark:ring-opacity-100'>
                 <div className='relative grid grid-cols-2 gap-8 p-5 bg-white dark:bg-gray-800 lg:grid-cols-2'>
                   {AboutUs.map((item) => (
                     <Link key={item.name} href={item.href} className='group'>
@@ -99,7 +99,7 @@ export function WhyGarbhaGudi() {
             leaveTo='opacity-0 translate-y-1'
           >
             <Popover.Panel className='absolute z-10 w-screen max-w-lg px-4 transform -translate-x-1/2 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-3xl'>
-              <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black ring-opacity-5'>
+              <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black dark:ring-gray-600 ring-opacity-5 dark:ring-opacity-100'>
                 <div className='relative grid grid-cols-2 gap-8 p-5 bg-white dark:bg-gray-800 lg:grid-cols-3'>
                   {ValueAddedServices.map((item) => (
                     <Link
@@ -161,7 +161,7 @@ export function KnowledgeCenter() {
             leaveTo='opacity-0 translate-y-1'
           >
             <Popover.Panel className='absolute z-10 w-screen max-w-xl px-4 transform -translate-x-1/2 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-xl'>
-              <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black ring-opacity-5'>
+              <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black dark:ring-gray-600 ring-opacity-5 dark:ring-opacity-100'>
                 <div className='relative grid grid-cols-2 gap-8 p-5 bg-white dark:bg-gray-800'>
                   {Resources.map((item) => (
                     <Link
@@ -226,7 +226,7 @@ export function Contacts() {
             leaveTo='opacity-0 translate-y-1'
           >
             <Popover.Panel className='absolute z-10 px-4 transform -translate-x-1/2 w-96 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-xl'>
-              <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black ring-opacity-5'>
+              <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black dark:ring-gray-600 ring-opacity-5 dark:ring-opacity-100'>
                 <div className='relative grid gap-8 p-5 bg-white dark:bg-gray-800 lg:grid-cols-1'>
                   {Contact.map((item) => (
                     <Link
