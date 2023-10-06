@@ -36,7 +36,7 @@ const Video = ({ testimonials }: testimonialProps) => {
           <Carousel
             defaultControlsConfig={defaultControlsConfig}
             autoplayInterval={5000}
-            className='w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl'
+            className='w-screen max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl'
             wrapAround
             dragging
             enableKeyboardControls

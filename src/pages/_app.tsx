@@ -74,23 +74,25 @@ function MyApp({ Component, pageProps }) {
         {loading ? (
           <Loading />
         ) : (
-          <div className='selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
-            <Nav />
-            <main className='min-h-screen'>
-              <Component {...pageProps} />
-            </main>
-            <FloatPhone />
-            <Footer />
-          </div>
+          <>
+            <div className='selection:bg-gg-500 selection:text-white dark:bg-gray-800 min-h-screen'>
+              <Nav />
+              <main className=''>
+                <Component {...pageProps} />
+              </main>
+              <Footer />
+            </div>
+          </>
         )}
+        <FloatPhone />
+        <Salesiq
+          widgetCode={
+            '93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
+          }
+          domain={'https://salesiq.zoho.com/widget'}
+        />
+        <ChatComponent apiKey={apiKey} />
       </ThemeProvider>
-      <Salesiq
-        widgetCode={
-          '93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
-        }
-        domain={'https://salesiq.zoho.com/widget'}
-      />
-      <ChatComponent apiKey={apiKey} />
     </>
   );
 }

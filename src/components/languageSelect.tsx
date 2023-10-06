@@ -15,13 +15,13 @@ export default function LanguageSelect() {
     <div className=''>
       <Listbox value={selected} onChange={setSelected}>
         <div className='relative'>
-          <Listbox.Button className='relative w-full cursor-default rounded-lg bg-wbite border border-gg-500 dark:border-gg-400 py-2 px-3 pr-7 sm:pr-8 text-center '>
-            <span className='block text-sm text-gray-800 dark:text-gray-200 font-semibold font-content'>
+          <Listbox.Button className='relative w-full cursor-default rounded-lg bg-wbite border border-gg-500 dark:border-gg-400 py-1 sm:py-2 px-1.5 sm:px-3 pr-6 sm:pr-8 text-center '>
+            <span className='block text-xs sm:text-sm text-gray-800 dark:text-gray-200 font-semibold font-content'>
               {selected.name}
             </span>
             <span className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-1'>
               <HiSelector
-                className='h-5 w-5 text-brandPurpleDark dark:text-brandPurple2'
+                className='sm:h-5 sm:w-5 text-brandPurpleDark dark:text-brandPurple2'
                 aria-hidden='true'
               />
             </span>
