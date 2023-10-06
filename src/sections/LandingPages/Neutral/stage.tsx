@@ -5,26 +5,26 @@ import { HiChevronRight } from 'react-icons/hi';
 const Stage = () => {
   return (
     <div>
-      <div className='max-w-7xl mx-auto'>
-        <div className='text-xl lg:text-2xl font-content font-bold text-center lg:py-10 text-gray-700'>
+      <div className='max-w-7xl mx-auto '>
+        <div className='text-xl lg:text-2xl my-6 font-heading font-bold text-center lg:py-10 text-gray-800 dark:text-gray-200'>
           How would you describe your situation ?
         </div>
         <div className='flex items-center justify-center flex-wrap mt-6 sm:mt-0 md:flex-row gap-4 mx-auto pb-10'>
           {Data.map((items) => (
             <div
               key={items.id}
-              className='bg-brandPink5 px-3 w-36 h-32 rounded-lg rounded-bl-[4rem] hover:scale-110 transition-all duration-200'
+              className='bg-gg-200 dark:bg-gray-600 px-3 w-36 h-32 rounded-lg rounded-bl-[4rem] hover:scale-110 transition-all duration-200'
             >
-              <div className='flex items-center justify-center bg-brandPink4 font-bold font-content text-white w-6 h-6 text-xs rounded-full mx-auto mt-3'>
+              <div className='flex items-center justify-center bg-gg-400 dark:bg-gray-800 font-bold font-content text-white w-6 h-6 text-xs rounded-full mx-auto mt-3'>
                 {items.id}
               </div>
               <MyModal
                 title={items.title}
                 clnm={
-                  'flex items-center justify-center py-2 text-sm font-content text-brandPurpleDark font-semibold mt-2'
+                  'flex items-center justify-center py-2 text-sm font-content text-brandPurpleDark dark:text-gray-200 font-semibold mt-2'
                 }
               />
-              <div className='flex items-center justify-center text-brandPurpleDark'>
+              <div className='flex items-center justify-center text-brandPurpleDark dark:text-gray-200'>
                 <HiChevronRight />
               </div>
             </div>

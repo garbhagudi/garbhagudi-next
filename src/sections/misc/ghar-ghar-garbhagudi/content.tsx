@@ -14,7 +14,7 @@ export const ContentOne = () => {
             height={500}
           />
         </div>
-        <div className='md:w-1/2 mt-6 md:mt-0 md:ml-6 flex items-start justify-center flex-col'>
+        <div className='md:w-1/2 mt-6 md:mt-0 md:ml-6 flex items-start justify-center flex-col text-gray-800 dark:text-gray-200'>
           <h2 className='text-3xl font-semibold mb-3 font-lexend'>Overview</h2>
           <div className='flex items-center justify-start flex-col space-y-3 font-content text-lg'>
             <p>

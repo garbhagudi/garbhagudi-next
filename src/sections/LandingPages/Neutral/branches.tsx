@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Branch = ({ branches }) => {
   return (
     <div>
-      <h1 className='pt-10 lg:pt-16 text-center font-heading text-3xl lg:text-4xl font-bold'>
+      <h1 className='pt-10 lg:pt-16 text-center font-heading text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200'>
         Our Branches
       </h1>
       <div className='flex items-center justify-center flex-wrap max-w-7xl mx-auto gap-6 py-10 lg:py-16'>
@@ -15,7 +15,7 @@ const Branch = ({ branches }) => {
             key={items?.id}
             className='hover:shadow-2xl rounded-xl transition-all duration-150'
           >
-            <div className='flex flex-col items-center justify-center border-2 border-brandPink rounded-xl overflow-hidden max-w-sm mx-auto'>
+            <div className='flex flex-col items-center justify-center border-2 border-gg-500 dark:border-gray-600 rounded-xl overflow-hidden max-w-sm mx-auto'>
               <div className='overflow-hidden'>
                 <Image
                   src={items?.branchPicture?.url}
@@ -26,8 +26,8 @@ const Branch = ({ branches }) => {
                   className='hover:scale-125 transition-all duration-500 overflow-hidden'
                 />
               </div>
-              <div className='flex items-center justify-evenly w-full px-3 py-3 border-t-2 border-brandPink'>
-                <div className='ml-4 font-heading font-bold text-xl'>
+              <div className='flex items-center justify-evenly w-full px-3 py-3 border-t-2 border-gg-500 dark:border-gray-600'>
+                <div className='ml-4 font-heading font-bold text-xl text-gray-800 dark:text-gray-200'>
                   {items?.title}
                 </div>
               </div>

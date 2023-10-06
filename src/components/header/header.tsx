@@ -77,7 +77,7 @@ const Nav = () => {
                   href='https://consult.bestdocapp.com/home/GARBHAGUDI'
                   target={'_blank'}
                   rel='noreferrer'
-                  className='px-3 py-2 text-sm dark:text-gray-800 text-gray-200 cursor-pointer bg-gg-500 dark:bg-gg-400 rounded-lg font-lexend hover:bg-brandPink3 dark:hover:bg-gg-500'
+                  className='px-3 py-2 text-sm text-gray-200 cursor-pointer bg-gg-500 dark:bg-gg-500 rounded-lg font-lexend hover:bg-brandPink3 dark:hover:bg-gg-600 transition-all ease-in duration-2'
                 >
                   Book Appointment
                 </Link>

@@ -8,10 +8,10 @@ function FeaturesBlocks() {
         <div className='py-4 md:py-6'>
           {/* Section header */}
           <div className='max-w-3xl mx-auto text-center pb-12 md:pb-20'>
-            <h2 className='h2 mb-4 uppercase text-3xl font-heading bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark font-bold'>
+            <h2 className='h2 mb-4 uppercase text-3xl font-heading bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark dark:to-brandPurple font-bold'>
               Why we are the Industry Leaders?
             </h2>
-            <p className='text-xl text-gray-600'>
+            <p className='text-xl text-gray-800 dark:text-gray-200 font-content'>
               GarbhaGudi has won numerous awards from various organisations for
               its exceptional service and high success rates
             </p>
@@ -20,7 +20,7 @@ function FeaturesBlocks() {
           <div className='flex items-center justify-center flex-wrap gap-5 '>
             {Data.map((items) => (
               <div
-                className='relative flex flex-col items-center p-3 bg-white rounded-lg  hover:shadow-2xl hover:-translate-x-2 hover:-translate-y-2 hover:border-0 transition-all duration-300'
+                className='relative flex flex-col items-center p-3 bg-white dark:bg-gray-700 rounded-lg  hover:shadow-2xl hover:-translate-x-2 hover:-translate-y-2 hover:border-0 transition-all duration-300'
                 key={items.id}
               >
                 <Image
@@ -29,11 +29,14 @@ function FeaturesBlocks() {
                   className='rounded-lg'
                   width={500}
                   height={500}
+                  loading='lazy'
                 />
-                <h4 className='text-xl font-bold text-center leading-snug tracking-tight mb-1 mt-3'>
+                <h4 className='text-xl font-bold text-center leading-snug tracking-tight mb-1 mt-3 text-gray-800 dark:text-gray-200'>
                   {items.title}
                 </h4>
-                <p className='text-gray-600 text-center'>{items.desc}</p>
+                <p className='text-gray-800 dark:text-gray-200 text-center'>
+                  {items.desc}
+                </p>
               </div>
             ))}
           </div>
