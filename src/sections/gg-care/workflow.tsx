@@ -11,12 +11,14 @@ const Video = () => {
             <div>
               <div className='mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-5xl font-heading'>
                 <h1 className='space-x-3'>
-                  <span className=' text-gray-900'>GarbhaGudi’s</span>
-                  <span className=' text-brandPink3'>Mission </span>
+                  <span className=' text-gray-800 dark:text-gray-200'>
+                    GarbhaGudi’s
+                  </span>
+                  <span className='text-gg-400'>Mission </span>
                 </h1>
               </div>
             </div>
-            <p className='mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-content'>
+            <p className='mt-3 text-base text-gray-500 dark:text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-content'>
               &quot;To provide reproductive health care of exceptional quality,
               within reach of every aspiring couple. We remain steadfast to
               achieving success and excellence in education, research, and

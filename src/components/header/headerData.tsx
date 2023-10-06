@@ -249,7 +249,7 @@ export const Location = [
   },
   {
     name: 'Find Nearest Location',
-    href: '/gg-care#nearest-location',
+    href: '/gg-care/search-branch-by-pincode',
     icon: <FaRoad />,
   },
 ];

@@ -12,23 +12,25 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
             <iframe
               width='100%'
               height='100%'
-              className='absolute inset-0'
+              className='absolute inset-0 dark:grayscale dark:brightness-75 dark:contrast-150 dark:invert'
               loading='lazy'
               title='map'
               src={maplink}
             ></iframe>
-            <div className='bg-white relative flex flex-wrap py-6 rounded-3xl shadow-3xl'>
+            <div className='bg-white dark:bg-gray-800 relative flex flex-wrap py-6 rounded-3xl shadow-3xl'>
               <div className='lg:w-1/2 px-6'>
-                <div className='title-font font-semibold text-gray-900 tracking-widest text-xs font-qs'>
+                <div className='title-font font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs font-qs'>
                   ADDRESS
                 </div>
-                <p className='mt-1 font-content text-sm'>{address}</p>
+                <p className='mt-1 font-content text-sm text-gray-800 dark:text-gray-200'>
+                  {address}
+                </p>
               </div>
               <div className='lg:w-1/2 px-6 mt-4 lg:mt-0'>
-                <div className='font-semibold text-gray-900 tracking-widest text-xs font-qs'>
+                <div className='font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs font-qs'>
                   EMAIL
                 </div>
-                <div className='text-indigo-500 leading-relaxed'>
+                <div className='leading-relaxed'>
                   <Link
                     href='mailto:dreams@garbhagudi.com'
                     className='text-brandPink font-qs text-sm'
@@ -36,16 +38,16 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
                     dreams@garbhagudi.com
                   </Link>
                 </div>
-                <div className='font-semibold text-gray-900 tracking-widest text-xs mt-4 font-qs'>
+                <div className='font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs mt-4 font-qs'>
                   PHONE
                 </div>
-                <p className='leading-relaxed font-qs text-sm'>
+                <p className='leading-relaxed font-qs text-sm text-gray-800 dark:text-gray-200'>
                   <Link href='tel:+919108910832'>+91 9108 9108 32</Link>
                 </p>
-                <div className='font-semibold text-gray-900 tracking-widest text-xs mt-4 font-qs'>
+                <div className='font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs mt-4 font-qs'>
                   WhatsApp
                 </div>
-                <p className='leading-relaxed font-qs text-sm'>
+                <p className='leading-relaxed font-qs text-sm text-gray-800 dark:text-gray-200'>
                   <Link
                     href='https://wa.me/918884183338?text=Hi.'
                     target='_blank'
@@ -57,15 +59,15 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
               </div>
             </div>
           </div>
-          <div className='lg:w-1/2 px-6 font-content flex flex-col items-center'>
+          <div className='lg:w-1/2 px-6 font-content flex flex-col items-center text-gray-800 dark:text-gray-200'>
             <h2 className='py-3 text-xl lg:text-2xl font-heading font-bold'>
               GarbhaGudi IVF Centre, {title}
             </h2>
             <RichText content={description} />
           </div>
         </div>
-        <div className='w-full bg-white flex flex-col pb-8 md:mt-0'>
-          <h2 className='text-center font-heading text-2xl font-semibold py-10 lg:mt-0'>
+        <div className='w-full flex flex-col pb-8 md:mt-0'>
+          <h2 className='text-center font-heading text-2xl font-semibold py-10 lg:mt-0 text-gray-800 dark:text-gray-200'>
             Fertility Specialists at {title}
           </h2>
           <div className='grid grid-cols-2 mx-auto space-y-0 gap-3 sm:gap-8 sm:space-y-0 lg:grid-cols-6'>
@@ -89,13 +91,10 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
                       </div>
                       <div className='space-y-4'>
                         <div className='text-lg leading-6 font-medium space-y-1'>
-                          <h3 className='text-brandDark font-content'>
+                          <h3 className='text-brandDark font-content text-gray-800 dark:text-gray-200'>
                             {item?.name}
                           </h3>
-                          {/* <p className='text-brandPurpleDark text-xs font-content'>
-                            {item?.qualification}
-                          </p> */}
-                          <p className='text-brandPink text-sm font-content'>
+                          <p className='text-gg-500 dark:text-gg-400 text-sm font-content'>
                             {item?.designation}
                           </p>
                         </div>

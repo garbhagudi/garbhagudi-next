@@ -101,7 +101,7 @@ const IvfProcess = () => {
             classNames={{
               title: 'text-center font-content',
               cardTitle: 'font-heading text-center mx-auto',
-              card: 'max-w-xl',
+              card: 'max-w-xl w-full mx-auto object-fit object-center aspect-square rounded-lg shadow-lg overflow-hidden',
             }}
             theme={{
               primary: '#ea4b6a',

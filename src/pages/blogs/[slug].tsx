@@ -172,7 +172,7 @@ const Blog = ({ blog }) => {
         text4={''}
       />
       {blog?.slug ? (
-        <div className='relative py-16 bg-white overflow-hidden'>
+        <div className='relative py-16 bg-white dark:bg-gray-800 overflow-hidden'>
           <div className='hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full'>
             <div
               className='relative h-full text-lg max-w-prose mx-auto'
@@ -199,7 +199,7 @@ const Blog = ({ blog }) => {
                       y={0}
                       width={4}
                       height={4}
-                      className='text-gray-200'
+                      className='text-gray-100 dark:text-gray-700'
                       fill='currentColor'
                     />
                   </pattern>
@@ -231,7 +231,7 @@ const Blog = ({ blog }) => {
                       y={0}
                       width={4}
                       height={4}
-                      className='text-gray-100'
+                      className='text-gray-100 dark:text-gray-700'
                       fill='currentColor'
                     />
                   </pattern>
@@ -263,7 +263,7 @@ const Blog = ({ blog }) => {
                       y={0}
                       width={4}
                       height={4}
-                      className='text-gray-200'
+                      className='text-gray-200 dark:text-gray-700'
                       fill='currentColor'
                     />
                   </pattern>
@@ -279,12 +279,12 @@ const Blog = ({ blog }) => {
           <div className='relative px-4 sm:px-6 lg:px-8'>
             <div className='max-w-7xl mx-auto'>
               <h1>
-                <span className='block text-2xl text-center leading-8 font-bold tracking-tighter text-gray-900 sm:text-4xl font-heading'>
+                <span className='block text-2xl text-center leading-8 font-bold tracking-tighter text-gray-800 dark:text-gray-200 sm:text-4xl font-heading'>
                   {blog?.title}
                 </span>
               </h1>
               <Link href={`/fertility-experts/${blog?.doctor?.slug}`}>
-                <div className='flex items-center justify-center space-x-4 text-base text-center text-brandPink font-semibold tracking-wide uppercase mt-4 font-lexend'>
+                <div className='flex items-center justify-center space-x-4 text-base text-center text-gg-500 dark:text-gray-200 font-semibold tracking-wide uppercase mt-4 font-lexend'>
                   <Image
                     src={blog?.doctor?.image?.url}
                     alt={blog?.doctor?.imageAlt || blog?.doctor?.name}
@@ -295,15 +295,12 @@ const Blog = ({ blog }) => {
                   <div>{blog?.doctor?.name}</div>
                 </div>
               </Link>
-
               <img
                 className='w-full rounded-lg my-8'
                 src={blog?.image?.url}
                 alt={blog?.title}
               />
-
-              <hr className='h-1 bg-brandPurpleDark' />
-              <div>
+              <div className='text-gray-800 dark:text-gray-200'>
                 <RichText content={blog?.content?.raw.children} />
               </div>
               <div>

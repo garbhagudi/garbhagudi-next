@@ -28,14 +28,17 @@ const DoctorList = (doctorList: doctorListProps) => {
   };
   return (
     <div>
-      <div className='bg-purple-100/70' id='ourTeam'>
+      <div
+        className='bg-purple-100/70 dark:bg-gradient-to-br dark:from-gray-800 dark:to-gray-800 dark:via-gray-700'
+        id='ourTeam'
+      >
         <div className='px-4 py-16 mx-auto text-center max-w-[1366px] sm:px-6 lg:px-8 lg:py-12'>
           <div className='space-y-12'>
             <div className='space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl'>
-              <h2 className='text-3xl font-extrabold tracking-tight sm:text-4xl text-brandDark font-heading'>
+              <h2 className='text-3xl font-extrabold tracking-tight sm:text-4xl text-gray-800 dark:text-gray-200 font-heading'>
                 Meet our Fertility Experts
               </h2>
-              <p className='text-md text-brandDark font-content'>
+              <p className='text-md text-gray-800 dark:text-gray-200 font-content'>
                 Our team of IVF specialists in Bangalore have been known for
                 their extensive clinical experience and research contributions
                 and their success in treating the most challenging fertility
@@ -52,7 +55,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                     <Link href={`/fertility-experts/${item?.slug}`} passHref>
                       <div className='space-y-4'>
                         <div className='relative w-44 h-44 mx-auto'>
-                          <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
+                          <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 dark:bg-gray-400 animate-rotate bg-[length: 400%]'></div>
                           <Image
                             className='rounded-full  shadow-champaigne drop-shadow-2xl bg-transparent'
                             src={item?.image?.url}
@@ -63,13 +66,13 @@ const DoctorList = (doctorList: doctorListProps) => {
                           />
                         </div>
                         <div className='space-y-0.5'>
-                          <h3 className='text-brandDark text-lg font-heading font-bold'>
+                          <h3 className='text-gray-800 dark:text-gray-200 text-lg font-heading font-bold'>
                             {item?.name}
                           </h3>
-                          <p className='text-xs text-purple-900 font-content'>
+                          <p className='text-xs text-purple-900 dark:text-purple-200 font-content'>
                             {item?.qualification}
                           </p>
-                          <div className='pb-2 text-sm text-brandPink font-content drop-shadow-2xl shadow-black'>
+                          <div className='pb-2 text-sm text-gg-500 dark:text-gg-300 font-content drop-shadow-2xl shadow-black'>
                             {item?.designation}
                           </div>
                         </div>
@@ -114,7 +117,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                       <div className='space-y-4'>
                         <div className='w-64 mx-auto'>
                           <Image
-                            className='rounded-full shadow-2xl drop-shadow-2xl bg-gradient-to-br from-brandPink3/80 to-purple-500/40'
+                            className='rounded-full shadow-2xl drop-shadow-2xl bg-gradient-to-br from-brandPink3/80 to-purple-500/40 dark:bg-gray-400'
                             src={item?.image?.url}
                             alt={item?.imageAlt || item?.name}
                             width={500}
@@ -123,11 +126,13 @@ const DoctorList = (doctorList: doctorListProps) => {
                           />
                           <div className='flex items-center justify-center space-y-4 mt-12 text-center'>
                             <div className='space-y-1 text-lg font-medium leading-6'>
-                              <h3 className='font-content'>{item?.name}</h3>
-                              <p className='text-sm text-brandPurpleDark font-content'>
+                              <h3 className='font-content text-gray-800 dark:text-white'>
+                                {item?.name}
+                              </h3>
+                              <p className='text-sm text-brandPurpleDark dark:text-purple-300 font-content'>
                                 {item?.qualification}
                               </p>
-                              <p className='pb-2 text-sm text-brandPink font-content'>
+                              <p className='pb-2 text-sm text-gg-500 dark:text-gg-300 font-content'>
                                 {item?.designation}
                               </p>
                             </div>

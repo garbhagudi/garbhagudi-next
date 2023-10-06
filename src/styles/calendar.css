@@ -2,7 +2,6 @@
   width: 490px;
   height: 480px;
   max-width: 100%;
-  background: white;
   border: 1px solid #a0a096;
   font-family: 'Nunito', Helvetica, sans-serif;
   line-height: 1.75em;
@@ -58,7 +57,7 @@
 }
 .react-calendar__month-view__weekdays {
   text-align: center;
-  color: #612a7b;
+  color: #b67e9f;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1em;
@@ -124,7 +123,4 @@
 .react-calendar__tile--active:enabled:hover,
 .react-calendar__tile--active:enabled:focus {
   background: #ec5d79;
-}
-.react-calendar--selectRange .react-calendar__tile--hover {
-  background-color: #e6e6e6;
 }

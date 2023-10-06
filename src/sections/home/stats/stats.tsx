@@ -7,7 +7,7 @@ const StatsPC = (props: Props) => {
   const [tooltipStatus, setTooltipStatus] = useState(0);
   return (
     <div className='hidden lg:block'>
-      <p className='font-heading text-center text-4xl py-10 bg-brandPink5 font-bold'>
+      <p className='font-heading text-center text-4xl py-10 bg-brandPink5 dark:bg-gray-700 font-bold'>
         This is why you can trust GarbhaGudi for your infertility treatments
       </p>
       <div className='max-w-lg md:max-w-4xl mx-auto align-middle mt-4'>
@@ -37,13 +37,13 @@ const StatsPC = (props: Props) => {
             </div>
 
             <div className='row-span-3 col-span-2 flex items-center justify-center rounded-full'>
-              <div className='absolute w-[700px] h-[700px] rounded-full bg-transparent border border-brandPink4 -z-30'></div>
-              <div className='absolute w-[450px] h-[450px] rounded-full bg-transparent border-2 border-dashed border-brandPink4 animate-spinSlow -z-20'></div>
-              <div className='flex items-center justify-center rounded-full ring-brandPink4 h-96 w-96 shadow-2xl border-4'>
+              <div className='absolute w-[700px] h-[700px] rounded-full bg-transparent border border-gg-500 dark:border-gg-400 -z-50'></div>
+              <div className='absolute w-[450px] h-[450px] rounded-full bg-transparent border-2 border-dashed border-gg-500 dark:border-gg-400 animate-spinSlow -z-40'></div>
+              <div className='flex items-center justify-center rounded-full ring-brandPink4 dark:bg-gray-700 h-96 w-96 shadow-2xl'>
                 <Image
                   src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1659164257/logos/GG_Vertical_Logo_nrcl5h.svg'
                   alt='garbhagudi logo'
-                  className='h-64 w-64'
+                  className='h-64 w-64  dark:fill-white dark:grayscale dark:brightness-0 dark:invert'
                   width={256}
                   height={256}
                   loading='lazy'

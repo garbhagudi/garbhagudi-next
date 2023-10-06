@@ -27,7 +27,7 @@ const metrics = [
 
 const Stat = () => {
   return (
-    <div className='relative mx-auto max-w-7xl'>
+    <div className='relative mx-auto'>
       <div className='absolute bottom-0 w-full h-80 xl:inset-0 xl:h-full'>
         <div className='w-full h-full xl:grid xl:grid-cols-2'>
           <div className='h-full xl:relative xl:col-start-2'>
@@ -41,20 +41,23 @@ const Stat = () => {
             />
             <div
               aria-hidden='true'
-              className='absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white to-transparent xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r'
+              className='absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white dark:from-gray-800 to-transparent xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r'
             />
           </div>
         </div>
       </div>
       <div className='max-w-4xl px-4 mx-auto sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8'>
         <div className='relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24'>
-          <p className='mt-3 text-3xl font-extrabold text-brandDark font-heading'>
+          <p className='mt-3 text-3xl font-extrabold text-gray-800 dark:text-gray-200 font-heading'>
             Our Ever-Growing Success
           </p>
-          <p className='mt-5 text-lg text-brandDark font-content'>
+          <p className='mt-5 text-lg text-gray-800 dark:text-gray-200 font-content'>
             GarbhaGudi is a place where dreams come alive, hopes never fade, and
             possibilities never end. As one of the finest{' '}
-            <Link href='/' className='text-brandPink hover:underline'>
+            <Link
+              href='/'
+              className='text-gg-500 dark:text-gg-400 hover:underline'
+            >
               IVF Centre in Bangalore
             </Link>
             , we ceaselessly work to help you cherish the golden moment of
@@ -65,11 +68,11 @@ const Stat = () => {
           <div className='grid grid-cols-1 mt-12 gap-y-12 gap-x-6 sm:grid-cols-2'>
             {metrics.map((item) => (
               <p key={item.id}>
-                <span className='block text-2xl font-bold text-brandDark font-heading'>
+                <span className='block text-2xl font-bold text-gray-800 dark:text-gray-200 font-heading'>
                   {item.stat}
                 </span>
-                <span className='block mt-1 text-base text-brandliteGray'>
-                  <span className='font-medium text-brandDark font-content'>
+                <span className='block mt-1 text-base text-gray-800 dark:text-gray-200'>
+                  <span className='font-medium text-gray-800 dark:text-gray-200 font-content'>
                     {item.emphasis}
                   </span>{' '}
                 </span>

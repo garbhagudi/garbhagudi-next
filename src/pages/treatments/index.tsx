@@ -73,47 +73,17 @@ const IndexPage = ({ treatments }) => {
         <div className='w-full max-w-7xl px-2 py-16 sm:px-0'>
           <Tab.Group>
             <Tab.List className={'flex p-1 space-x-1 bg-brandPink rounded-xl'}>
-              <Tab
-                className={({ selected }) =>
-                  classNames(
-                    'w-full py-2.5 text-sm font-medium text-brandPink rounded-lg',
-                    'focus:outline-none',
-                    selected
-                      ? 'bg-gray-100 ring-2 ring-brandPink2 shadow'
-                      : 'text-gray-100 hover:bg-brandPink3 hover:text-white',
-                  )
-                }
-              >
+              <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
                 <div className='max-w-7xl mx-auto text-center text-base md:text-2xl font-heading font-semibold'>
                   Female Infertility
                 </div>
               </Tab>
-              <Tab
-                className={({ selected }) =>
-                  classNames(
-                    'w-full py-2.5 text-sm  font-medium text-brandPink rounded-lg',
-                    'focus:outline-none',
-                    selected
-                      ? 'bg-gray-100 ring-2 ring-brandPink2 shadow'
-                      : 'text-gray-100 hover:bg-brandPink3 hover:text-white',
-                  )
-                }
-              >
+              <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
                 <div className='max-w-7xl mx-auto text-center text-base px-2 md:text-2xl font-heading font-semibold'>
                   Male Infertility
                 </div>
               </Tab>
-              <Tab
-                className={({ selected }) =>
-                  classNames(
-                    'w-full py-2.5 text-sm font-medium text-brandPink rounded-lg',
-                    'focus:outline-none',
-                    selected
-                      ? 'bg-gray-100 ring-2 ring-brandPink2 shadow-xl'
-                      : 'text-gray-100 hover:bg-brandPink3  hover:text-white',
-                  )
-                }
-              >
+              <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
                 <div className='max-w-7xl mx-auto text-center text-base md:text-2xl font-heading font-semibold'>
                   Advanced Options
                 </div>
@@ -130,11 +100,12 @@ const IndexPage = ({ treatments }) => {
                             href={`treatments/${item.slug}`}
                             passHref
                             key={item.id}
+                            className='group'
                           >
-                            <div className='border-brandPink w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 '>
+                            <div className='border-brandPink dark:border-gray-700 dark:hover:border-gg-400 w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink dark:hover:bg-gray-600 hover:text-white hover:border-transparent transition-all duration-100'>
                               <div className='w-1/3'>
                                 <img
-                                  className='w-16 h-16 object-cover rounded-full'
+                                  className='w-16 h-16 object-cover rounded-md dark:grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out'
                                   src={item.icon.url}
                                   alt={item.title}
                                 />
@@ -152,11 +123,12 @@ const IndexPage = ({ treatments }) => {
                     <Link
                       href={`/treatments/in-vitro-fertilization-ivf`}
                       passHref
+                      className='group'
                     >
-                      <div className='border-brandPink w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 '>
+                      <div className='border-brandPink dark:border-gray-700 dark:hover:border-gg-400 w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink dark:hover:bg-gray-600 hover:text-white hover:border-transparent transition-all duration-100'>
                         <div className='w-1/3'>
                           <img
-                            className='w-16 h-16 object-cover rounded-full'
+                            className='w-16 h-16 object-cover rounded-md dark:grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out'
                             src='https://media.graphassets.com/EwdJCRdtRiKDXeWF4toB'
                             alt='IVF Icon'
                           />
@@ -171,11 +143,12 @@ const IndexPage = ({ treatments }) => {
                     <Link
                       href={`/treatments/intra-uterine-insemination-iui`}
                       passHref
+                      className='group'
                     >
-                      <div className='border-brandPink w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 '>
+                      <div className='border-brandPink dark:border-gray-700 dark:hover:border-gg-400 w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink dark:hover:bg-gray-600 hover:text-white hover:border-transparent transition-all duration-100'>
                         <div className='w-1/3'>
                           <img
-                            className='w-16 h-16 object-cover rounded-full'
+                            className='w-16 h-16 object-cover rounded-md dark:grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out'
                             src='https://media.graphassets.com/CpcAosCyRImJVMN1xA9O'
                             alt='IUI Icon'
                           />

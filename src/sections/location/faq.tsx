@@ -7,11 +7,11 @@ const Faq = ({ branch, doctors }) => {
   return (
     <div>
       <section className='max-w-7xl mx-auto font-content pt-8'>
-        <div className='container flex flex-col justify-center px-4 py-8 mx-auto md:p-8'>
+        <div className='container flex flex-col justify-center px-4 py-8 mx-auto md:p-8 text-gray-800 dark:text-gray-200'>
           <h2 className='mb-8 text-3xl font-bold leading-none text-center sm:text-4xl font-heading'>
             Frequently Asked Questions
           </h2>
-          <div className='divide-y divide-gray-700'>
+          <div className='divide-y divide-gray-700 dark:divide-gray-600'>
             <div className='py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
               <h3 className='font-semibold md:col-span-4'>
                 Doctors available at GarbhaGudi, {branch}?
@@ -62,7 +62,10 @@ const Faq = ({ branch, doctors }) => {
               <div className='md:pl-0 md:col-span-8'>
                 To contact the fertility specialists at our {branch} branch,
                 please visit{' '}
-                <Link href={'/gg-care'} className='text-brandPink'>
+                <Link
+                  href={'/gg-care'}
+                  className='text-gg-500 dark:text-gg-400'
+                >
                   GG Care (Support)
                 </Link>{' '}
                 page. You can find all the information related to {branch}{' '}
@@ -80,7 +83,7 @@ const Faq = ({ branch, doctors }) => {
                           <div>
                             <Link
                               href={`tel:${items.phone}`}
-                              className='text-brandPink hover:underline'
+                              className='text-gg-500 dark:text-gg-400 hover:underline'
                             >
                               {items.phone}
                             </Link>
@@ -97,14 +100,14 @@ const Faq = ({ branch, doctors }) => {
                         <div>
                           <Link
                             href={`mailto:${items.email}`}
-                            className='text-brandPurpleDark hover:underline font-semibold'
+                            className='text-brandPurpleDark dark:text-purple-400 hover:underline font-semibold'
                           >
                             {items.email}
                           </Link>
                         </div>
                         <Link
                           href={`tel:${items.phone}`}
-                          className='text-brandPink hover:underline'
+                          className='text-gg-500 dark:text-gg-400 hover:underline'
                         >
                           {items.phone}
                         </Link>

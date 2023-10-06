@@ -53,21 +53,21 @@ const IndexPage = () => {
           />
         </Head>
         <div className='max-w-7xl mx-auto'>
-          <h1 className='text-4xl lg:text-5xl font-heading font-bold text-center pt-10 lg:pt-24'>
+          <h1 className='text-4xl lg:text-5xl font-heading font-bold text-center pt-10 lg:pt-24 text-gray-800 dark:text-gray-200 '>
             Resources
           </h1>
-          <p className='font-content text-center pt-4 pb-10 lg:pb-16'>
+          <p className='font-content text-center pt-4 pb-10 lg:pb-16 text-gray-800 dark:text-gray-200 '>
             Learn more about causes, diagnosis and treatment options of
             infertility
           </p>
-          <div className='grid grid-cols-2 max-w-2xl mx-auto'>
+          <div className='grid grid-cols-2 max-w-2xl mx-auto gap-4'>
             {data.map((items) => (
               <Link key={items.id} href={items.link}>
-                <div className='flex flex-col items-center justify-center py-3 rounded-xl hover:border-2 border-brandPink'>
+                <div className='flex flex-col items-center justify-center py-3 rounded-xl'>
                   <img
                     src={items.icon}
                     alt={items.title}
-                    className='w-20 h-20'
+                    className='w-20 h-20 dark:grayscale dark:hover:grayscale-0 transition-all duration-300'
                   />
                   <div className='text-center font-content pt-3'>
                     {items.title}

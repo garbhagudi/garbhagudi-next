@@ -110,7 +110,7 @@ const ChatComponent = ({ apiKey }) => {
       {/* OpenAI Logo Circle */}
 
       <div
-        className='fixed bottom-3 left-4  rounded-full flex items-center justify-center cursor-pointer shadow-xl drop-shadow-xl bg-white'
+        className='fixed bottom-3 left-4  rounded-full flex items-center justify-center cursor-pointer shadow-xl drop-shadow-xl bg-white dark:bg-gray-800 dark:border border-gray-600'
         onClick={() => setShowChatbot(!showChatbot)}
       >
         <Image
@@ -131,13 +131,15 @@ const ChatComponent = ({ apiKey }) => {
       </div>
       {/* Chatbot Interface */}
       {showChatbot && (
-        <div className='fixed bottom-2 left-4 bg-white border rounded-lg shadow-lg p-4 w-64 z-50'>
+        <div className='fixed bottom-2 left-4 bg-white dark:bg-gray-800 border dark:border-gray-600 rounded-lg shadow-lg p-4 w-64 z-50'>
           <div className='flex flex-col items-start justify-start mb-2'>
             <div className='flex space-x-1 py-2'>
               <div className='w-4 h-4 bg-green-500 rounded-full mr-2'></div>
-              <p className='text-sm font-medium text-gray-800'>GG Care Bot</p>
+              <p className='text-sm font-medium text-gray-800 dark:text-gray-200'>
+                GG Care Bot
+              </p>
             </div>
-            <p className='text-sm font-normal text-gray-900'>
+            <p className='text-sm font-normal text-gray-800 dark:text-gray-200'>
               Hello! I'm here to help with any questions you have about
               infertility and reproductive health. Let's keep our conversation
               focused on these topics to make the most of our chat. Feel free to
@@ -149,7 +151,7 @@ const ChatComponent = ({ apiKey }) => {
               type='text'
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
-              className='w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-brandPink4 focus:border-brandPink4'
+              className='w-full border dark:border-gray-600 rounded-lg px-3 py-2 dark:bg-gray-700 focus:outline-none focus:ring focus:ring-brandPink4 focus:border-brandPink4'
             />
           </div>
           <div className='flex items-center justify-start space-x-2'>
@@ -167,8 +169,10 @@ const ChatComponent = ({ apiKey }) => {
             </button>
           </div>
           <div className='mt-4'>
-            <p className='text-gray-600 text-sm'>GG Care Bot: </p>
-            <p className='bg-gray-100 rounded-md px-3 py-2 mt-2 text-gray-800'>
+            <p className='text-gray-800 dark:text-gray-200 text-sm'>
+              GG Care Bot:{' '}
+            </p>
+            <p className='bg-gray-100 dark:bg-gray-700 rounded-md px-3 py-2 mt-2 text-gray-800 dark:text-gray-200'>
               {chatResponse}
             </p>
           </div>

@@ -90,12 +90,12 @@ const IndexPage = ({ branches }) => {
           <Tab.Group>
             <Tab.List
               className={
-                'grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-nowrap lg:space-x-1 bg-brandPink rounded-xl p-1 transition-all ease-linear duration-300'
+                'grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-nowrap lg:space-x-1 bg-gg-500 dark:bg-gg-400 rounded-xl p-1 transition-all ease-linear duration-300'
               }
             >
               {branches.map((items: any) => (
                 <Tab
-                  className='w-full py-2 rounded-lg focus:outline-none text-gray-100 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'
+                  className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'
                   key={items.id}
                 >
                   {items?.title}
@@ -104,53 +104,53 @@ const IndexPage = ({ branches }) => {
             </Tab.List>
             <Tab.Panels
               className={
-                'bg-gradient-to-br border from-brandPink4 to-white via-pink-50 rounded-lg lg:px-6 border-t-0'
+                'bg-gradient-to-br border from-brandPink4 dark:from-gray-800 to-white dark:to-gray-700 via-pink-50 dark:via-gray-800 rounded-lg lg:px-6 border-t-0 dark:border-gray-800'
               }
             >
               {branches.map((items: any) => (
                 <Tab.Panel key={items.id}>
-                  <div className='text-gray-600 body-font relative max-w-7xl mx-auto mt-10'>
+                  <div className='text-gray-800 dark:text-gray-200 body-font relative max-w-7xl mx-auto mt-10'>
                     <div className='lg:py-6 flex flex-wrap lg:flex-nowrap inset-0'>
-                      <div className='lg:w-1/2 bg-gray-300 rounded-lg overflow-hidden p-2 lg:p-10 flex items-end justify-start relative h-[44rem] md:ml-auto w-full'>
+                      <div className='lg:w-1/2 bg-gray-800 rounded-lg overflow-hidden p-2 lg:p-10 flex items-end justify-start relative h-[44rem] md:ml-auto w-full'>
                         <iframe
                           width='100%'
                           height='100%'
-                          className='absolute inset-0 border rounded-lg  border-brandPurpleDark'
+                          className='absolute inset-0 border rounded-lg border-brandPurpleDark dark:grayscale dark:brightness-75 dark:contrast-150 dark:invert'
                           loading='lazy'
                           title='map'
                           src={items.mapLink}
                         ></iframe>
-                        <div className='bg-white relative flex flex-wrap py-6 rounded-3xl shadow-3xl'>
+                        <div className='bg-white dark:bg-gray-800 relative flex flex-wrap py-6 rounded-3xl shadow-3xl'>
                           <div className='lg:w-1/2 px-6'>
-                            <h2 className='title-font font-semibold text-gray-900 tracking-widest text-xs font-qs'>
+                            <h2 className='title-font font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs font-qs'>
                               ADDRESS
                             </h2>
                             <p className='mt-1 font-content'>{items.address}</p>
                           </div>
                           <div className='lg:w-1/2 px-6 mt-4 lg:mt-0'>
-                            <h2 className='font-semibold text-gray-900 tracking-widest text-xs font-qs'>
+                            <h2 className='font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs font-qs'>
                               EMAIL
                             </h2>
                             <div className='leading-relaxed'>
                               <Link
                                 href='mailto:dreams@garbhagudi.com'
-                                className='text-brandPink font-qs underline hover:text-lg transition-all duration-100'
+                                className='text-gg-500 dark:text-gg-400 font-qs underline hover:text-lg transition-all duration-100'
                               >
                                 dreams@garbhagudi.com
                               </Link>
                             </div>
-                            <h2 className='font-semibold text-gray-900 tracking-widest text-xs mt-4 font-qs'>
+                            <h2 className='font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs mt-4 font-qs'>
                               PHONE
                             </h2>
-                            <div className='leading-relaxed font-qs hover:text-lg text-brandPink underline transition-all duration-100'>
+                            <div className='leading-relaxed font-qs hover:text-lg text-gg-500 dark:text-gg-400 underline transition-all duration-100'>
                               <Link href='tel:+919108910832'>
                                 +91 9108 9108 32
                               </Link>
                             </div>
-                            <h2 className='uppercase font-semibold text-gray-900 tracking-widest text-xs mt-4 font-qs'>
+                            <h2 className='uppercase font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs mt-4 font-qs'>
                               WhatsApp
                             </h2>
-                            <div className='leading-relaxed font-qs text-brandPink underline hover:text-lg transition-all duration-100'>
+                            <div className='leading-relaxed font-qs text-gg-500 dark:text-gg-400 underline hover:text-lg transition-all duration-100'>
                               <Link
                                 href='https://wa.me/918884183338?text=Hi.'
                                 target='_blank'
@@ -187,10 +187,10 @@ const IndexPage = ({ branches }) => {
                                       <h3 className='text-brandDark font-heading font-bold'>
                                         {doctor?.name}
                                       </h3>
-                                      <p className='text-brandPurpleDark text-xs font-content'>
+                                      <p className='text-brandPurpleDark dark:text-brandPurple text-xs font-content'>
                                         {doctor?.qualification}
                                       </p>
-                                      <p className='text-brandPink text-sm font-content'>
+                                      <p className='text-gg-500 dark:text-gg-400 text-sm font-content'>
                                         {doctor?.designation}
                                       </p>
                                     </div>

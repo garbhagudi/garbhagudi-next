@@ -63,24 +63,24 @@ const IndexPage = () => {
       <div className='max-w-7xl mx-auto'>
         <div className='text-center'>
           <div className='container text-center mx-auto'>
-            <h1 className='pt-8 text-3xl sm:text-4xl font-bold font-heading text-brandPink'>
+            <h1 className='pt-8 text-3xl sm:text-4xl font-bold font-heading text-gray-800 dark:text-gray-200 '>
               Ovulation and Pregnancy Due Date Calculator
             </h1>
-            <p className='text-sm mt-3 px-2 sm:px-0'>
+            <p className='text-sm mt-3 px-2 sm:px-0 text-gray-800 dark:text-gray-200 font-lexend'>
               Menstrual periods are different from woman to woman and month to
               month. Use this calculator to see when you may be ovulating to
               help find your most fertile days.
             </p>
           </div>
         </div>
-        <div className='text-center mt-8 text-base flex items-center justify-center space-x-4'>
+        <div className='text-center mt-8 text-base flex items-center justify-center space-x-4 text-gray-800 dark:text-gray-200'>
           <label htmlFor='cycle' className='font-content'>
             How long is your average cycle ?{' '}
           </label>
           <select
             onChange={(e) => cycleValue(e.target.value)}
             defaultValue={cycle}
-            className='w-24 text-center border-b-2 py-1.5 outline-none border-brandPurpleDark bg-transparent shadow-2xl drop-shadow-2xl font-content'
+            className='w-24 text-center border-b-2 py-1.5 outline-none border-brandPurpleDark dark:bg-gray-600 text-gray-800 dark:text-gray-200 shadow-2xl drop-shadow-2xl font-content rounded-md'
           >
             <option value='28'>28 Days</option>
             <option value='29'>29 Days</option>
@@ -104,10 +104,10 @@ const IndexPage = () => {
         </div>
         <div className='pt-8 text-center grid grid-cols-1 md:grid-cols-2'>
           <div className='scale-75 md:scale-100'>
-            <p className='text-center text-lg'>
+            <p className='text-center text-lg font-lexend'>
               Select the first day of your last period
             </p>
-            <div className='flex justify-center'>
+            <div className='flex justify-center text-gray-800 dark:text-gray-200 '>
               <Calendar
                 onChange={onChange}
                 value={value}
@@ -115,7 +115,7 @@ const IndexPage = () => {
               />
             </div>
           </div>
-          <div className='text-center flex flex-col items-center justify-center p-2 font-content'>
+          <div className='text-center flex flex-col items-center justify-center p-2 font-content text-gray-800 dark:text-gray-200 '>
             <div className='mx-auto mt-8 p-3 text-center rounded-2xl border text-base shadow-2xl w-96'>
               <p> Approximate Ovulation :</p>
               <div className='font-bold'>
@@ -179,7 +179,7 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        <div className='px-3 sm:px-0 text-center mt-5 mb-3 text-xs font-content'>
+        <div className='px-3 sm:px-0 text-center mt-5 mb-3 text-xs text-gray-800 dark:text-gray-200 font-lexend'>
           Only your physician can accurately determine your due date or the date
           of your conception based on his/her knowledge of your complete medical
           condition.
