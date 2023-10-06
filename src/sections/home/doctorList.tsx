@@ -87,6 +87,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                 autoplay
                 autoplayInterval={5000}
                 defaultControlsConfig={defaultControlsConfig}
+                className='max-w-sm'
                 wrapAround
                 dragging
                 enableKeyboardControls
@@ -110,7 +111,7 @@ const DoctorList = (doctorList: doctorListProps) => {
               >
                 {doctorList?.doctors.map((item) => (
                   <div
-                    className='mb-2 transition-all duration-500 rounded-xl'
+                    className='mb-2 max-w-md transition-all duration-500 rounded-xl'
                     key={item.id}
                   >
                     <Link href={`/fertility-experts/${item?.slug}`} passHref>
