@@ -95,7 +95,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                 renderCenterLeftControls={({ previousSlide }) => (
                   <button
                     onClick={previousSlide}
-                    className='w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                    className='w-11 h-11 text-4xl bg-brandPurpleDark dark:bg-brandPurple text-white rounded-full flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
                   >
                     <HiChevronLeft className='mr-1' />
                   </button>
@@ -103,7 +103,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                 renderCenterRightControls={({ nextSlide }) => (
                   <button
                     onClick={nextSlide}
-                    className='w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                    className='w-11 h-11 text-4xl bg-brandPurpleDark dark:bg-brandPurple text-white rounded-full flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
                   >
                     <HiChevronRight className='ml-1' />
                   </button>
