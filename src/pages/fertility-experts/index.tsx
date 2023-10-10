@@ -104,12 +104,12 @@ const IndexPage = ({ branches }) => {
             </Tab.List>
             <Tab.Panels
               className={
-                'bg-gradient-to-br border from-brandPink4 dark:from-gray-800 to-white dark:to-gray-700 via-pink-50 dark:via-gray-800 rounded-lg lg:px-6 border-t-0 dark:border-gray-800'
+                'bg-gradient-to-br border from-brandPink4 dark:from-gray-800 to-white dark:to-gray-700 via-pink-50 dark:via-gray-800 rounded-lg lg:px-6 border-t-0 dark:border-gray-800 bg-white bg-opacity-70 dark:bg-opacity-5 backdrop-blur-2xl shadow-xl'
               }
             >
               {branches.map((items: any) => (
                 <Tab.Panel key={items.id}>
-                  <div className='text-gray-800 dark:text-gray-200 body-font relative max-w-7xl mx-auto mt-10'>
+                  <div className='text-gray-800 dark:text-gray-200 body-font relative max-w-7xl mx-auto mt-10 '>
                     <div className='lg:py-6 flex flex-wrap lg:flex-nowrap inset-0'>
                       <div className='lg:w-1/2 bg-gray-800 rounded-lg overflow-hidden p-2 lg:p-10 flex items-end justify-start relative h-[44rem] md:ml-auto w-full'>
                         <iframe
@@ -122,7 +122,7 @@ const IndexPage = ({ branches }) => {
                         ></iframe>
                         <div className='bg-white dark:bg-gray-800 relative flex flex-wrap py-6 rounded-3xl shadow-3xl'>
                           <div className='lg:w-1/2 px-6'>
-                            <h2 className='title-font font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs font-qs'>
+                            <h2 className='title-font font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs font-content'>
                               ADDRESS
                             </h2>
                             <p className='mt-1 font-content'>{items.address}</p>
@@ -163,7 +163,7 @@ const IndexPage = ({ branches }) => {
                         </div>
                       </div>
                       <div className='lg:w-1/2 md:w-full flex flex-col md:ml-auto w-full md:py-4 md:mt-0'>
-                        <p className='text-center font-heading font-bold text-xl mb-3 mt-7 lg:mt-0 px-2'>
+                        <p className='text-center font-heading font-bold text-xl mt-7 lg:mt-0 px-2'>
                           Fertility specialists at our {items.title} branch
                         </p>
                         <div className='mx-auto space-y-0 grid grid-cols-2 sm:gap-y-5 sm:gap-x-14 sm:space-y-0 lg:grid-cols-2 lg:max-w-7xl col-span-full'>
@@ -179,7 +179,7 @@ const IndexPage = ({ branches }) => {
                                 <div>
                                   <div className='space-y-2'>
                                     <img
-                                      className='mx-auto h-36 w-36 my-auto rounded-full mt-4 '
+                                      className='mx-auto h-36 w-36 my-auto rounded-full mt-4 bg-gray-400 dark:bg-gray-700'
                                       src={doctor?.image.url}
                                       alt={doctor?.name}
                                     />

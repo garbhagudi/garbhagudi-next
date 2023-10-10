@@ -42,12 +42,12 @@ export function About() {
           >
             <Popover.Panel className='absolute z-10 w-screen outline-none max-w-md px-4 transform -translate-x-1/2 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-xl'>
               <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black dark:ring-gray-600 ring-opacity-5 dark:ring-opacity-100'>
-                <div className='relative grid grid-cols-2 gap-8 p-5 bg-white dark:bg-gray-800 lg:grid-cols-2'>
+                <div className='relative grid grid-cols-2 gap-8 p-5 bg-white dark:bg-gray-800 bg-opacity-95 dark:bg-opacity-95 backdrop-blur-2xl lg:grid-cols-2 shadow-xl'>
                   {AboutUs.map((item) => (
                     <Link key={item.name} href={item.href} className='group'>
                       <div
                         onClick={() => close()}
-                        className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 dark:hover:bg-gray-600  focus:outline-none'
+                        className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gg-200 dark:hover:bg-gray-600  focus:outline-none'
                       >
                         <div className='flex items-center justify-center dark:grayscale dark:group-hover:grayscale-0 transition-all duration-150 ease-in-out flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12'>
                           <img src={item.icon} alt={item.name} />
@@ -100,7 +100,7 @@ export function WhyGarbhaGudi() {
           >
             <Popover.Panel className='absolute z-10 w-screen max-w-lg px-4 transform -translate-x-1/2 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-3xl'>
               <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black dark:ring-gray-600 ring-opacity-5 dark:ring-opacity-100'>
-                <div className='relative grid grid-cols-2 gap-8 p-5 bg-white dark:bg-gray-800 lg:grid-cols-3'>
+                <div className='relative grid grid-cols-2 gap-8 p-5 bg-white dark:bg-gray-800 bg-opacity-95 dark:bg-opacity-95 backdrop-blur-2xl lg:grid-cols-3'>
                   {ValueAddedServices.map((item) => (
                     <Link
                       key={item.name}
@@ -109,7 +109,7 @@ export function WhyGarbhaGudi() {
                       className='group'
                     >
                       <div
-                        className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 dark:hover:bg-gray-600  focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
+                        className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gg-200 dark:hover:bg-gray-600  focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
                         onClick={() => close()}
                       >
                         <div className='flex items-center justify-center dark:grayscale dark:group-hover:grayscale-0 transition-all duration-150 ease-in-out flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12'>
@@ -162,7 +162,7 @@ export function KnowledgeCenter() {
           >
             <Popover.Panel className='absolute z-10 w-screen max-w-xl px-4 transform -translate-x-1/2 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-xl'>
               <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black dark:ring-gray-600 ring-opacity-5 dark:ring-opacity-100'>
-                <div className='relative grid grid-cols-2 gap-8 p-5 bg-white dark:bg-gray-800'>
+                <div className='relative grid grid-cols-2 gap-8 p-5 bg-white bg-opacity-95 dark:bg-opacity-95 backdrop-blur-2xl dark:bg-gray-800'>
                   {Resources.map((item) => (
                     <Link
                       key={item.name}
@@ -171,7 +171,7 @@ export function KnowledgeCenter() {
                       className='group'
                     >
                       <div
-                        className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 dark:hover:bg-gray-600  focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
+                        className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gg-200 dark:hover:bg-gray-600  focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
                         onClick={() => close()}
                       >
                         <div className='flex items-center justify-center dark:grayscale dark:group-hover:grayscale-0 transition-all duration-150 ease-in-out flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12'>
@@ -227,7 +227,7 @@ export function Contacts() {
           >
             <Popover.Panel className='absolute z-10 px-4 transform -translate-x-1/2 w-96 mt-3 lg:mt-7 left-1/2 sm:px-0 lg:max-w-xl'>
               <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black dark:ring-gray-600 ring-opacity-5 dark:ring-opacity-100'>
-                <div className='relative grid gap-8 p-5 bg-white dark:bg-gray-800 lg:grid-cols-1'>
+                <div className='relative grid gap-8 p-5 bg-white dark:bg-gray-800 bg-opacity-95 dark:bg-opacity-95 backdrop-blur-2xl lg:grid-cols-1'>
                   {Contact.map((item) => (
                     <Link
                       key={item.name}
@@ -237,7 +237,7 @@ export function Contacts() {
                     >
                       <div
                         onClick={() => close()}
-                        className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 dark:hover:bg-gray-600 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
+                        className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gg-200 dark:hover:bg-gray-600 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
                       >
                         <div className='flex items-center justify-center dark:grayscale dark:group-hover:grayscale-0 transition-all duration-150 ease-in-out flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12'>
                           <img src={item.icon} alt={item.name} />
@@ -289,12 +289,12 @@ export function Locations() {
           >
             <Popover.Panel className='absolute z-10 px-4 w-screen transform mt-3 lg:mt-7 -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-lg'>
               <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black dark:ring-gray-600 ring-opacity-5 dark:ring-opacity-100'>
-                <div className='relative grid gap-8 p-5 bg-white dark:bg-gray-800 grid-cols-2 lg:grid-cols-2'>
+                <div className='relative grid gap-8 p-5 bg-white dark:bg-gray-800 bg-opacity-95 dark:bg-opacity-95 backdrop-blur-2xl grid-cols-2 lg:grid-cols-2'>
                   {Location.map((item) => (
                     <Link key={item.name} href={item.href} className='group'>
                       <div
                         onClick={() => close()}
-                        className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 dark:hover:bg-gray-600 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
+                        className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gg-200 dark:hover:bg-gray-600 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
                       >
                         <div className='flex items-center justify-center bg-gg-500 dark:grayscale dark:group-hover:grayscale-0 transition-all duration-150 ease-in-out rounded-lg flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12 text-base text-center lg:text-2xl'>
                           <div className='mt-1 text-center flex items-center justify-center flex-col'>
@@ -351,12 +351,12 @@ export function Languages() {
           >
             <Popover.Panel className='absolute z-10 w-32 px-4 mt-3 lg:mt-7 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-xl'>
               <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black dark:ring-gray-600 ring-opacity-5 dark:ring-opacity-100'>
-                <div className='relative grid gap-8 p-5 bg-white dark:bg-gray-800 lg:grid-cols-1'>
+                <div className='relative grid gap-8 p-5 bg-white dark:bg-gray-800 bg-opacity-95 dark:bg-opacity-95 backdrop-blur-2xl lg:grid-cols-1'>
                   {Language.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-pink-100 dark:hover:bg-gray-600  focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
+                      className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gg-200 dark:hover:bg-gray-600  focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
                     >
                       <div className='ml-4'>
                         <p className='text-sm font-medium text-gray-800 dark:text-white'>
@@ -407,7 +407,7 @@ export function Treatments() {
             leaveTo='opacity-0 translate-y-1'
           >
             <Popover.Panel className='absolute z-10 px-4 mt-3 lg:mt-7 transform -translate-x-1/2 w-screen max-w-xl left-1/2 sm:px-0 lg:max-w-xl'>
-              <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black dark:ring-gray-600 ring-opacity-5 dark:ring-opacity-100 bg-white dark:bg-gray-800 '>
+              <div className='overflow-hidden shadow-lg rounded-lg ring-1 ring-black dark:ring-gray-600 ring-opacity-5 dark:ring-opacity-100 bg-white dark:bg-gray-800 bg-opacity-95 dark:bg-opacity-95 backdrop-blur-2xl'>
                 <Tab.Group>
                   <Tab.List className='flex items-center justify-between bg-brandPink dark:bg-gray-600 text-white font-content font-bold px-3 lg:px-12 py-1.5 lg:py-2 rounded-t-lg'>
                     <Tab
@@ -459,7 +459,7 @@ export function Treatments() {
                             key={items.id}
                             className='group'
                           >
-                            <div className='flex flex-col items-center justify-center hover:bg-pink-100 dark:hover:bg-gray-600 py-2 rounded-xl'>
+                            <div className='flex flex-col items-center justify-center hover:bg-gg-200 dark:hover:bg-gray-600 py-2 rounded-xl'>
                               <img
                                 src={items.icon}
                                 alt={items.name}
@@ -481,7 +481,7 @@ export function Treatments() {
                             key={items.id}
                             className='group'
                           >
-                            <div className='flex flex-col items-center justify-center hover:bg-pink-100 dark:hover:bg-gray-600 py-2 rounded-xl'>
+                            <div className='flex flex-col items-center justify-center hover:bg-gg-200 dark:hover:bg-gray-600 py-2 rounded-xl'>
                               <img
                                 src={items.icon}
                                 alt={items.name}
@@ -503,7 +503,7 @@ export function Treatments() {
                             key={items.id}
                             className='group'
                           >
-                            <div className='flex flex-col items-center justify-center hover:bg-pink-100 dark:hover:bg-gray-600 py-2 rounded-xl'>
+                            <div className='flex flex-col items-center justify-center hover:bg-gg-200 dark:hover:bg-gray-600 py-2 rounded-xl'>
                               <img
                                 src={items.icon}
                                 alt={items.name}
