@@ -44,7 +44,7 @@ const Video = ({ testimonials }: testimonialProps) => {
             renderCenterLeftControls={({ previousSlide }) => (
               <button
                 onClick={previousSlide}
-                className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                className='hidden w-11 h-11 text-4xl bg-brandPurpleDark dark:bg-brandPurple text-white rounded-full md:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
               >
                 <HiChevronLeft className='mr-1' />
               </button>
@@ -52,7 +52,7 @@ const Video = ({ testimonials }: testimonialProps) => {
             renderCenterRightControls={({ nextSlide }) => (
               <button
                 onClick={nextSlide}
-                className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                className='hidden w-11 h-11 text-4xl bg-brandPurpleDark dark:bg-brandPurple text-white rounded-full md:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
               >
                 <HiChevronRight className='ml-1' />
               </button>
