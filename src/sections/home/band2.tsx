@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Band2 = () => {
   return (
-    <div className='max-w-7xl mx-auto px-3 my-4 sm:px-6 lg:px-4'>
+    <div className='max-w-7xl mx-auto px-3 my-4 sm:px-6 lg:px-4 bg-white dark:bg-gray-800'>
       <span className='text-md block text-center mx-auto font-content font-semibold py-2'>
         <div className='block md:inline-block'>
           <h3 className='text-gray-800 dark:text-gray-200'>

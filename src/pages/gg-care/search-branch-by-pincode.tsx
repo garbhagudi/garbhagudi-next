@@ -173,7 +173,7 @@ const NearestZipcodeFinder: React.FC<Props> = () => {
           placeholder='Enter you Zip Code'
           value={inputZipcode}
           onChange={handleInputChange}
-          className='border-2 border-brandPurpleDark rounded-lg px-3 py-2 text-center text-brandPink focus:border-brandPink focus:outline-none text-lg font-content font-semibold'
+          className='border-2 border-brandPurpleDark dark:border-brandPurple dark:bg-gray-700 dark:text-gray-200 rounded-lg px-3 py-2 text-center text-brandPink focus:border-brandPink focus:outline-none text-lg font-content font-semibold'
         />
         <button
           onClick={handleFindNearest}
@@ -193,7 +193,7 @@ const NearestZipcodeFinder: React.FC<Props> = () => {
               nearestZipcode === items.zipCode && (
                 <div
                   key={items.id}
-                  className='flex flex-col md:flex-row max-w-5xl bg-gray-200 p-3 rounded-lg'
+                  className='flex flex-col md:flex-row max-w-5xl bg-gray-200 dark:bg-gray-700 p-3 rounded-lg bg-opacity-70 dark:bg-opacity-90 shadow-xl backdrop-blur-2xl'
                 >
                   <div className=' px-3 md:px-0 w-full md:w-6/12 '>
                     <img
