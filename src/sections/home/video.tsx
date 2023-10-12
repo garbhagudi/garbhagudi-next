@@ -36,7 +36,7 @@ const Video = ({ testimonials }: testimonialProps) => {
           <Carousel
             defaultControlsConfig={defaultControlsConfig}
             autoplayInterval={5000}
-            className='w-screen max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl'
+            className='max-w-xs sm:max-w-sm md:max-w-md lg:max-w-4xl mx-auto'
             wrapAround
             dragging
             enableKeyboardControls
@@ -44,7 +44,7 @@ const Video = ({ testimonials }: testimonialProps) => {
             renderCenterLeftControls={({ previousSlide }) => (
               <button
                 onClick={previousSlide}
-                className='hidden w-11 h-11 text-4xl bg-brandPurpleDark dark:bg-brandPurple text-white rounded-full md:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                className='hidden w-11 h-11 text-4xl bg-brandPurpleDark dark:bg-brandPurple text-white rounded-full lg:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
               >
                 <HiChevronLeft className='mr-1' />
               </button>
@@ -52,7 +52,7 @@ const Video = ({ testimonials }: testimonialProps) => {
             renderCenterRightControls={({ nextSlide }) => (
               <button
                 onClick={nextSlide}
-                className='hidden w-11 h-11 text-4xl bg-brandPurpleDark dark:bg-brandPurple text-white rounded-full md:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                className='hidden w-11 h-11 text-4xl bg-brandPurpleDark dark:bg-brandPurple text-white rounded-full lg:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
               >
                 <HiChevronRight className='ml-1' />
               </button>
@@ -61,7 +61,7 @@ const Video = ({ testimonials }: testimonialProps) => {
             {testimonials?.items?.map((item) => {
               return (
                 <div
-                  className='w-screen max-w-md sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto aspect-video mt-8 overflow-hidden border border-transparent rounded-lg sm:px-0'
+                  className='w-screen max-w-xs sm:max-w-sm md:max-w-md lg:max-w-3xl mx-auto aspect-video mt-8 overflow-hidden border border-transparent rounded-lg sm:px-0'
                   key={item?.id}
                 >
                   <LiteYouTubeEmbed

@@ -15,7 +15,7 @@ function HeroHome() {
             <h2 className='text-3xl md:text-5xl mb-4 font-content text-gray-800 dark:text-gray-200'>
               Trusted by over{' '}
               <span className='bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark dark:to-brandPurple'>
-                8500+ couples{' '}
+                10000+ couples{' '}
               </span>
               across the world
             </h2>

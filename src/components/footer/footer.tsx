@@ -1,5 +1,15 @@
 import Link from 'next/link';
-import { SocialIcon } from 'react-social-icons';
+import {
+  BsYoutube,
+  BsTwitch,
+  BsReddit,
+  BsInstagram,
+  BsLinkedin,
+  BsWhatsapp,
+  BsFacebook,
+  BsFillEnvelopeAtFill,
+} from 'react-icons/bs';
+import { RiTwitterXFill } from 'react-icons/ri';
 
 const navigation = {
   about: [
@@ -140,52 +150,19 @@ export default function Footer() {
         </div>
       </div>
       <div className='max-w-7xl mx-auto border-t border-gray-200 dark:border-gray-600'>
-        <div className='mt-8 space-x-2 flex items-ceter justify-center'>
-          <SocialIcon
-            url='https://www.youtube.com/c/GarbhaGudiIVFCentre'
-            style={{ width: '40px', height: '40px' }}
-            target='_blank'
-          />
-          <SocialIcon
-            url='https://www.facebook.com/garbhagudiIVF/'
-            style={{ width: '40px', height: '40px' }}
-            target='_blank'
-          />
-          <SocialIcon
-            url='https://www.instagram.com/garbhagudiivfcentre/?hl=en'
-            style={{ width: '40px', height: '40px' }}
-            target='_blank'
-          />
-          <SocialIcon
-            url='https://www.linkedin.com/company/garbagudi'
-            style={{ width: '40px', height: '40px' }}
-            target='_blank'
-          />
-          <SocialIcon
-            url='https://api.whatsapp.com/send/?phone=918884183338&text=Hi.'
-            style={{ width: '40px', height: '40px' }}
-            target='_blank'
-          />
-          <SocialIcon
-            url='https://www.twitch.tv/garbhagudi'
-            style={{ width: '40px', height: '40px' }}
-            target='_blank'
-          />
-          <SocialIcon
-            url='https://twitter.com/garbhagudiivf'
-            style={{ width: '40px', height: '40px' }}
-            target='_blank'
-          />
-          <SocialIcon
-            url='https://www.reddit.com/r/garbhagudi/'
-            style={{ width: '40px', height: '40px' }}
-            target='_blank'
-          />
-          <SocialIcon
-            url='mailto:dreams@garbhagudi.com'
-            style={{ width: '40px', height: '40px' }}
-            target='_blank'
-          />
+        <div className='mt-8 space-x-2 sm:space-x-3 flex items-ceter justify-center'>
+          {SocialIcon.map((item) => (
+            <Link
+              key={item.name}
+              href={item.url}
+              target='_blank'
+              rel='noreferrer'
+              className=''
+            >
+              <span className='sr-only'>{item.name}</span>
+              {item.icon}
+            </Link>
+          ))}
         </div>
         <p className='font-content text-gray-800 dark:text-white text-center py-8'>
           &copy; {new Date().getFullYear()} GarbhaGudi IVF Centre, Inc. All
@@ -195,3 +172,57 @@ export default function Footer() {
     </footer>
   );
 }
+
+const SocialIcon = [
+  {
+    name: 'Youtube',
+    url: 'https://www.youtube.com/c/GarbhaGudiIVFCentre',
+    icon: <BsYoutube className='text-3xl text-red-600 dark:text-red-500' />,
+  },
+  {
+    name: 'Facebook',
+    url: 'https://www.facebook.com/garbhagudiIVF/',
+    icon: <BsFacebook className='text-3xl text-blue-600 dark:text-blue-500' />,
+  },
+  {
+    name: 'Instagram',
+    url: 'https://www.instagram.com/garbhagudiivfcentre/?hl=en',
+    icon: <BsInstagram className='text-3xl text-pink-600 dark:text-pink-500' />,
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/company/garbagudi',
+    icon: <BsLinkedin className='text-3xl text-blue-600 dark:text-blue-500' />,
+  },
+  {
+    name: 'WhatsApp',
+    url: 'https://api.whatsapp.com/send/?phone=918884183338&text=Hi.',
+    icon: (
+      <BsWhatsapp className='text-3xl text-green-600 dark:text-green-500' />
+    ),
+  },
+  {
+    name: 'Twitch',
+    url: 'https://www.twitch.tv/garbhagudi',
+    icon: (
+      <BsTwitch className='text-3xl text-purple-600 dark:text-purple-500' />
+    ),
+  },
+  {
+    name: 'X',
+    url: 'https://X.com/garbhagudiivf',
+    icon: <RiTwitterXFill className='text-3xl dark:text-white' />,
+  },
+  {
+    name: 'Reddit',
+    url: 'https://www.reddit.com/r/garbhagudi/',
+    icon: <BsReddit className='text-3xl text-orange-600' />,
+  },
+  {
+    name: 'Mail',
+    url: 'mailto:dreams@garbhagudi.com',
+    icon: (
+      <BsFillEnvelopeAtFill className='text-3xl text-gray-600 dark:text-gray-200' />
+    ),
+  },
+];

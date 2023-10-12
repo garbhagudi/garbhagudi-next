@@ -5,7 +5,7 @@ import Link from 'next/link';
 const metrics = [
   {
     id: 1,
-    stat: '11000+',
+    stat: '10000+',
     emphasis: 'Happy Families',
   },
   {
@@ -27,7 +27,7 @@ const metrics = [
 
 const Stat = () => {
   return (
-    <div className='relative mx-auto'>
+    <div className='relative mx-auto bg-white dark:bg-gray-800'>
       <div className='absolute bottom-0 w-full h-80 xl:inset-0 xl:h-full'>
         <div className='w-full h-full xl:grid xl:grid-cols-2'>
           <div className='h-full xl:relative xl:col-start-2'>

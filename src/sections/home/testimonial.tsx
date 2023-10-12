@@ -25,7 +25,7 @@ const Testimonial = () => {
             autoplay
             defaultControlsConfig={defaultControlsConfig}
             autoplayInterval={5000}
-            className='w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl'
+            className='max-w-xs sm:max-w-sm md:max-w-md lg:max-w-7xl mx-auto'
             wrapAround
             dragging
             enableKeyboardControls
@@ -33,7 +33,7 @@ const Testimonial = () => {
             renderCenterLeftControls={({ previousSlide }) => (
               <button
                 onClick={previousSlide}
-                className='hidden w-11 h-11 text-4xl bg-brandPurpleDark dark:bg-brandPurple text-white rounded-full md:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                className='hidden w-11 h-11 text-4xl bg-brandPurpleDark dark:bg-brandPurple text-white rounded-full lg:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
               >
                 <HiChevronLeft className='mr-1' />
               </button>
@@ -41,7 +41,7 @@ const Testimonial = () => {
             renderCenterRightControls={({ nextSlide }) => (
               <button
                 onClick={nextSlide}
-                className='hidden w-11 h-11 text-4xl bg-brandPurpleDark dark:bg-brandPurple text-white rounded-full md:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                className='hidden w-11 h-11 text-4xl bg-brandPurpleDark dark:bg-brandPurple text-white rounded-full lg:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
               >
                 <HiChevronRight className='ml-1' />
               </button>

@@ -9,7 +9,7 @@ const Overview = () => {
         <div className='relative sm:py-16 lg:py-0'>
           <div
             aria-hidden='true'
-            className='hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen'
+            className='hidden lg:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen'
           >
             <div className='absolute inset-y-0 right-1/2 w-full bg-gray-50 dark:bg-gray-700 rounded-r-3xl lg:right-72' />
             <svg
@@ -73,7 +73,7 @@ const Overview = () => {
                       leaders and technological forays. Most importantly, with a
                       fantastic team of doctors, embryologists and staff. <br />
                       <br /> The centre has been instrumental in creating happy
-                      endings in more than 8500 + couples’ lives by ensuring
+                      endings in more than 10000 + couples’ lives by ensuring
                       they have their biological child. With our strong team of
                       experts and cutting-edge medical technologies, GarbhaGudi
                       has achieved high success rates in the field of

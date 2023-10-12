@@ -47,8 +47,8 @@ const AshaSection = () => {
                     and also in infertility education. Many consider her as a
                     medical genius with an overarching vision to eradicate
                     infertility. Dr Asha has been instrumental in creating happy
-                    endings in the lives of more than 8500+ couples, by ensuring
-                    they have a child of their own.
+                    endings in the lives of more than 10000+ couples, by
+                    ensuring they have a child of their own.
                   </p>
                   <MyModal
                     title={'Consult Dr. Asha S Vijay'}
