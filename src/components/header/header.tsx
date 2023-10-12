@@ -79,7 +79,9 @@ const Nav = () => {
                   rel='noreferrer'
                   className='px-3 py-2 text-xs sm:text-sm text-gray-200 cursor-pointer bg-gg-500 dark:bg-gg-500 rounded-lg font-lexend hover:bg-brandPink3 dark:hover:bg-gg-600 transition-all ease-in duration-2'
                 >
-                  Book Appointment
+                  Book{' '}
+                  <span className='hidden sm:inline-block'>Appointment</span>{' '}
+                  <span className='sm:hidden inline-block'>Now</span>
                 </Link>
               </div>
               <div className='flex items-center justify-center ml-2 -mr-2 xl:hidden'>
@@ -132,11 +134,8 @@ const Nav = () => {
           leaveFrom='opacity-100 scale-100'
           leaveTo='opacity-0 scale-95'
         >
-          <div
-            className='mt-2 xl:hidden pb-2 bg-white dark:bg-gray-800'
-            id='mobile-menu'
-          >
-            <div className='px-2'>
+          <div className='mt-2 xl:hidden' id='mobile-menu'>
+            <div className=''>
               {menu.map((items) => (
                 <div
                   key={items.id}
