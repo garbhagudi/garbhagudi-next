@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
@@ -5,7 +7,7 @@ module.exports = {
     './src/sections/**/*.{js,ts,jsx,tsx}',
   ],
   presets: [],
-  darkMode: 'class', // or 'class'
+  darkMode: 'class', // or 'media'
   plugins: [require('@headlessui/tailwindcss')],
   theme: {
     extend: {
