@@ -98,7 +98,7 @@ const InfertilityPage = ({ doctors }) => {
               autoplay
               defaultControlsConfig={defaultControlsConfig}
               autoplayInterval={5000}
-              className='w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl'
+              className='max-w-sm sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl'
               wrapAround
               dragging
               enableKeyboardControls
