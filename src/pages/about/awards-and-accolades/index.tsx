@@ -119,7 +119,7 @@ const Awards = ({ award }) => {
                     />
                   </div>
                 </Link>
-                <div className='flex-1 bg-gray-600 text-gray-800 dark:text-gray-200 p-6 flex flex-col justify-between'>
+                <div className='flex-1 dark:bg-gray-700 text-gray-800 dark:text-gray-200 p-6 flex flex-col justify-between'>
                   <div className='flex-1'>
                     <Link
                       href={`/about/awards-and-accolades/${item?.slug}`}

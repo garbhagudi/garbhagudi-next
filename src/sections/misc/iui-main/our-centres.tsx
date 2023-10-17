@@ -78,7 +78,7 @@ const OurCentres = (props: Props) => {
               <iframe
                 width='100%'
                 height='100%'
-                className='w-screen border-b-2 border-brandPink4 h-72 max-w-md rounded-lg rounded-b-none dark:grayscale dark:brightness-75 dark:contrast-150 dark:invert'
+                className='border-b-2 border-brandPink4 h-72 w-full max-w-md rounded-lg rounded-b-none dark:grayscale dark:brightness-75 dark:contrast-150 dark:invert'
                 loading='lazy'
                 title='map'
                 src={items.map}

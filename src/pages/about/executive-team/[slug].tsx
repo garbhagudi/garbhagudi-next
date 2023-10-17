@@ -76,10 +76,7 @@ const ExecutiveTeam = ({ director }) => {
           name='title'
           content={`${director.name} | GarbhaGudi IVF Centre`}
         />
-        <meta
-          name='description'
-          content={director?.bio?.raw.children.slice(0, 160)}
-        />
+        <meta name='description' content={director?.bio?.text.slice(0, 160)} />
 
         {/* Open Graph / Facebook */}
 
@@ -109,7 +106,7 @@ const ExecutiveTeam = ({ director }) => {
         />
         <meta
           name='twitter:description'
-          content={director?.bio?.raw.children.slice(0, 160)}
+          content={director?.bio?.text.slice(0, 160)}
         />
         <meta
           name='twitter:image'
@@ -138,7 +135,7 @@ const ExecutiveTeam = ({ director }) => {
             </div>
             <div className='flex flex-col sm:flex-row mt-10'>
               <div className='sm:w-1/3 text-center sm:pr-8 sm:py-8'>
-                <div className='w-72 md:w-64 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400'>
+                <div className='w-72 md:w-64 rounded-full inline-flex items-center justify-center'>
                   <img
                     src={director?.image.url}
                     alt={director?.name}
@@ -146,11 +143,11 @@ const ExecutiveTeam = ({ director }) => {
                   />
                 </div>
                 <div className='flex flex-col items-center text-center justify-center'>
-                  <h1 className='title-font mt-4 text-gray-900 text-2xl font-semibold font-heading'>
+                  <h1 className='title-font mt-4 text-gray-800 dark:text-gray-200 text-2xl font-semibold font-heading'>
                     {director?.name}
                   </h1>
-                  <div className='w-12 h-1 bg-brandPink rounded mt-2 mb-4 '></div>
-                  <div className='text-base font-content font-semibold'>
+                  <div className='w-12 h-1 bg-gg-500 dark:bg-gg-400 rounded mt-2 mb-4'></div>
+                  <div className='text-base font-content font-semibold dark:text-gray-300'>
                     {director?.details}
                   </div>
                   <button className='px-4 py-2 mt-6 bg-brandPink2 text-white font-semibold font-content rounded-md'>
@@ -160,8 +157,8 @@ const ExecutiveTeam = ({ director }) => {
                   </button>
                 </div>
               </div>
-              <div className='sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 sm:text-left px-5'>
-                <div className='leading-relaxed text-lg mb-4 text-brandDark'>
+              <div className='sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 dark:border-gray-600 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 sm:text-left px-5'>
+                <div className='leading-relaxed text-lg mb-4 text-gray-800 dark:text-gray-200'>
                   <RichText content={director?.bio?.raw.children} />
                 </div>
               </div>
