@@ -11,7 +11,7 @@ const Hero = () => {
             'url("https://res.cloudinary.com/garbhagudiivf/image/upload/v1691234829/Misc/young-wife-husband-have-problems-family-life-min_csilul.webp")',
         }}
       >
-        <div className='bg-black bg-opacity-50 h-full text-gray-800 dark:text-gray-200 py-16 lg:py-40'>
+        <div className='bg-black bg-opacity-50 h-full text-gray-200 py-16 lg:py-40'>
           <div className='max-w-7xl mx-auto font-content'>
             <div className='max-w-3xl space-y-4 px-4 sm:px-6 lg:px-8 py-6 rounded-lg bg-gray-950 bg-opacity-20'>
               <h1 className='text-3xl font-lexend'>
