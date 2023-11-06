@@ -2,7 +2,7 @@ import React from 'react';
 
 const Partners = () => {
   return (
-    <div className='p-8 font-lexend'>
+    <div className='bg-white dark:bg-gray-800 p-8 font-lexend text-gray-800 dark:text-gray-200'>
       <h2 className='text-2xl font-semibold mb-4 font-heading'>
         Partners and advertisers
       </h2>
@@ -10,7 +10,7 @@ const Partners = () => {
         You're welcome to use the GarbhaGudi's name, logo and icon as long as
         you adhere to the logo and icon use guidelines mentioned below.
       </p>
-      <div className='bg-white p-6'>
+      <div className='p-6'>
         <h3 className='text-lg font-semibold mb-4'>Do's</h3>
         <ul className='list-disc pl-4 space-y-4'>
           <li className='mb-2'>
