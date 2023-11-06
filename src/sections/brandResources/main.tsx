@@ -44,13 +44,6 @@ const BRComponent = () => {
               >
                 Partners & Advertisers
               </Tab>
-              {/* <Tab
-                className={
-                  'py-2 ui-selected:border-b-2 ui-selected:outline-none border-gray-500 transition-all duration-75 ease-linear'
-                }
-              >
-                Media Write-ups & Resources
-              </Tab> */}
             </Tab.List>
             <Tab.Panels className={'max-w-4xl flex-1'}>
               <Tab.Panel>
