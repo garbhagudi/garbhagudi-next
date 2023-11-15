@@ -14,10 +14,10 @@ const Paripoorna = () => {
         {/* Primary Tags */}
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>Paripoorna | Get upto ₹30,000 off on IVF Treatments</title>
+        <title>Paripoorna | Get flat ₹90,000 off on IVF Treatments</title>
         <meta
           name='title'
-          content='Paripoorna | Get upto ₹30,000 off on IVF Treatments'
+          content='Paripoorna | Get flat ₹90,000 off on IVF Treatments'
         />
         <meta
           name='description'

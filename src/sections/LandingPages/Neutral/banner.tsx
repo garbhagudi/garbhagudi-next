@@ -24,8 +24,8 @@ const Banner = () => {
             <div className=''>
               <div className='color-pop rounded-lg'>
                 <div className='inline-flex items-center text-base text-center font-bold text-white  px-2.5 py-2 bg-transparent rounded-lg'>
-                  Start your IVF journey from as Low as ₹ 90,000 and take the
-                  first step towards completing your family.
+                  PARIPOORNA: It's the season of JOY of being COMPLETE 👶💖 Get
+                  90,000/- Discount on IVF Treatment
                 </div>
               </div>
               <div className='mt-12 sm:max-w-xl text-gray-800 dark:text-gray-200'>
@@ -33,7 +33,9 @@ const Banner = () => {
                   Welcome to the Best IVF Centre In Bangalore
                 </h1>
                 <p className='mt-6 text-xl'>
-                  Affordable IVF Treatment Options Starting from ₹90,000/-*
+                  Get a massive 90,000/-* off on your IVF Treatments. Offer
+                  Applicable on all-inclusive IVF package of ₹2,50,000 until
+                  31st December 2023.
                 </p>
                 <p className='mt-2 text-xl'>
                   EMI Facility Available at 0% Interest.
@@ -112,7 +114,7 @@ const Banner = () => {
                   <span></span>
                   <span></span>
                   <Link href={'tel:+919108910832'} className='font-bold'>
-                    Book a free consultation
+                    Book an Appointment
                   </Link>
                 </div>
               </div>
