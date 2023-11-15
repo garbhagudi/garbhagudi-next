@@ -11,6 +11,7 @@ import Loading from 'components/Loading';
 import Head from 'next/head';
 import ChatComponent from 'sections/tools/gg-gpt';
 import ThemeProvider from 'styles/theme-provider';
+import Alert from 'components/header/alert';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -76,6 +77,7 @@ function MyApp({ Component, pageProps }) {
         ) : (
           <>
             <div className='selection:bg-gg-500 selection:text-white dark:bg-gray-800 min-h-screen'>
+              <Alert />
               <Nav />
               <main className=''>
                 <Component {...pageProps} />

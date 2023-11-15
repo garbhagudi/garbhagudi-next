@@ -19,8 +19,8 @@ const AccordionLayout = ({
         onClick={() => handleSetIndex(index)}
         className={
           activeIndex === index
-            ? `flex w-full justify-between items-center px-3 font-semibold sm:px-6 py-2 mt-3 rounded-t-lg hover:cursor-pointer transition-all duration-500 ease-in-out text-md xl:text-xl bg-gg-500 dark:bg-gg-400 text-white dark:text-gray-800 font-heading`
-            : `flex w-full justify-between items-center px-3 font-medium sm:px-6 py-1 hover:py-3 mt-3 hover:rounded-lg hover:cursor-pointer transition-all duration-500 ease-in-out text-md hover:bg-gg-400 sm:hover:text-lg xl:hover:text-xl border-gray-300 font-lexend`
+            ? `flex w-full justify-between items-center px-3 font-semibold sm:px-6 py-2 mt-3 rounded-t-lg hover:cursor-pointer transition-all duration-500 ease-in-out text-md xl:text-xl bg-gg-500 dark:bg-gg-400 text-gray-200 dark:text-gray-800 font-heading`
+            : `flex w-full justify-between items-center px-3 font-medium sm:px-6 py-1 text-gray-800 dark:text-gray-200 hover:py-3 mt-3 hover:rounded-lg hover:cursor-pointer transition-all duration-500  ease-in-out text-md hover:bg-gg-400 sm:hover:text-lg xl:hover:text-xl border-gray-300 font-lexend`
         }
       >
         <div className='flex items-center justify-center'>
@@ -44,7 +44,7 @@ const AccordionLayout = ({
         leaveTo='transform scale-95 opacity-0'
       >
         {activeIndex === index && (
-          <div className='shadow-3xl rounded-b-lg p-4 font-content border-2 border-gg-500 dark:border-gg-400'>
+          <div className='shadow-3xl rounded-b-lg p-4 font-lexend text-gray-800 dark:text-gray-200 border-2 border-gg-500 dark:border-gg-400'>
             {children}
           </div>
         )}

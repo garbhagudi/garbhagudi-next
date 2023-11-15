@@ -5,7 +5,7 @@ const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   return (
     <div className='max-w-4xl mx-auto pb-10 px-3 lg:px-0'>
-      <h3 className='text 3xl lg:text-4xl font-heading font-bold py-10 lg:py-16 text-center'>
+      <h3 className='text 3xl lg:text-4xl font-heading font-bold py-10 lg:py-16 text-center text-gray-800 dark:text-gray-200'>
         Frequently Asked Questions
       </h3>
       {Data.map((items) => (
@@ -84,7 +84,7 @@ const Data = [
   {
     title: `What is the last date to apply for PARIPOORNA program?`,
     contents: (
-      <div>Register for the PARIPOORNA program before 31st Dec’2022.</div>
+      <div>Register for the PARIPOORNA program before 31st Dec&apos;2023.</div>
     ),
   },
   {
@@ -100,7 +100,7 @@ const Data = [
     title: `Can I register for PARIPOORNA through online without visiting the centre?   `,
     contents: (
       <div>
-        This offer is valid only for couples who register at any of our five
+        This offer is valid only for couples who register at any of our 7
         branches.
       </div>
     ),
