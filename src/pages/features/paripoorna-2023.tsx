@@ -39,7 +39,7 @@ const Paripoorna = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1669814239/paripoorna/YT_Eng-01_xnfpvr.jpg'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1700052783/paripoorna/mother-with-daughter-lie-bed-dog-looking-them-min_uecuvg.webp'
         />
 
         {/* Twitter*/}
@@ -56,7 +56,7 @@ const Paripoorna = () => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1669814239/paripoorna/YT_Eng-01_xnfpvr.jpg'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1700052783/paripoorna/mother-with-daughter-lie-bed-dog-looking-them-min_uecuvg.webp'
         />
       </Head>
 
