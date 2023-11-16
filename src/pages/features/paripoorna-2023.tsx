@@ -17,7 +17,7 @@ const Paripoorna = () => {
         <title>Paripoorna | Get flat ₹90,000 off on IVF Treatments</title>
         <meta
           name='title'
-          content='Paripoorna | Get flat ₹90,000 off on IVF Treatments'
+          content='Paripoorna | Get a flat ₹90,000 off on IVF Treatments'
         />
         <meta
           name='description'
@@ -28,7 +28,7 @@ const Paripoorna = () => {
 
         <meta
           property='og:title'
-          content='Paripoorna | Get upto ₹30,000 off on IVF Treatments'
+          content='Paripoorna | Get a flat ₹90,000 off on IVF Treatments'
         />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
@@ -48,7 +48,7 @@ const Paripoorna = () => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta
           name='twitter:title'
-          content='Paripoorna | Get upto ₹30,000 off on IVF Treatments'
+          content='Paripoorna | Get a flat ₹90,000 off on IVF Treatments'
         />
         <meta
           name='twitter:description'
