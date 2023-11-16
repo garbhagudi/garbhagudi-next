@@ -301,8 +301,8 @@ export const ValueAddedServices = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840357/Icons/Features/Best_in_Class_Facilities_fchmjr.svg',
   },
   {
-    name: 'Paripoorna',
-    href: '/features/paripoorna',
+    name: 'Paripoorna 2023',
+    href: '/features/paripoorna-2023',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841468/Icons/Why%20GarbhaGudi/Paripoorna_nikziu.svg',
   },
   {
