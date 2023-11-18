@@ -47,7 +47,7 @@ const PriceSlash: React.FC<PriceSlashProps> = ({
         <ul className='list-inside list-disc'>
           <li>Consultations and scans during stimulations</li>
           <li>Ovatian Stimulation Injections</li>
-          <li>Limited Lab ibvestigations during stimulation</li>
+          <li>Limited Lab investigations during stimulation</li>
           <li>OT Consumables ({'<'} ₹ 5000)</li>
           <li>Pre & Post Op Medications</li>
           <li>Egg Retrieval (OPU)</li>
@@ -186,7 +186,7 @@ const WatchVideo = () => {
                   <div>
                     <div className='mt-8 overflow-hidden border-2 rounded-xl border-brandPink'>
                       <LiteYouTubeEmbed
-                        id={'MxNaXDCggrU'}
+                        id={'0G4ZkeVVX6M'}
                         title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
                         poster='maxresdefault'
                       />
