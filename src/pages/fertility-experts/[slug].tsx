@@ -205,7 +205,7 @@ const Doctor = ({ doctor }) => {
                   </div>
                 </div>
                 <div className='text-center mt-12 font-content'>
-                  <h1 className='text-4xl font-semibold leading-normal mb-2 text-gray-800'>
+                  <h1 className='text-4xl font-semibold leading-normal mb-2 text-gray-800 dark:text-gray-200'>
                     {doctor.name}
                   </h1>
                   <div className='leading-normal mt-0 mb-2 textbrantext-brandPink2 font-bold text-xl'>
