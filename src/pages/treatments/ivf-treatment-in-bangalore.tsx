@@ -187,14 +187,14 @@ const Ivf = () => {
     <div>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>Best IVF Treatment In Bangalore | IVF In Bangalore</title>
+        <title>Best IVF Treatment In Bangalore | Garbhagudi </title>
         <meta
           name='title'
-          content='Best IVF Treatment In Bangalore | IVF In Bangalore'
+          content='Best IVF Treatment In Bangalore | Garbhagudi '
         />
         <meta
           name='description'
-          content='The best IVF Treatment in Bangalore is provided by the experienced and highly qualified team of doctors at Garbhagudi IVF Centre. Visit us for the best IVF experience.'
+          content='IVF Treatment in Bangalore:Experience advanced IVF treatment in Bangalore, tailored to help you achieve your dream of parenthood. Contact us for expert care and support.'
         />
 
         {/* Ld+JSON Data */}
@@ -232,13 +232,13 @@ const Ivf = () => {
 
         <meta
           property='og:title'
-          content='In-vitro Fertilization - IVF | GarbhaGudi'
+          content='Best IVF Treatment In Bangalore | Garbhagudi '
         />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).'
+          content='IVF Treatment in Bangalore:Experience advanced IVF treatment in Bangalore, tailored to help you achieve your dream of parenthood. Contact us for expert care and support.'
         />
         <meta property='og:type' content='website' />
         <meta
