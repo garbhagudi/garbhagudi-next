@@ -33,28 +33,28 @@ const InfertilityPage = ({ doctors }) => {
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>
-          Infertility Centre in Bangalore | Infertility Treatment in Bangalore
+          Best Infertility Treatment In Bangalore | Expert Fertility Solutions
         </title>
         <meta
           name='title'
-          content='Infertility Centre in Bangalore | Infertility Treatment in Bangalore'
+          content='Best Infertility Treatment In Bangalore | Expert Fertility Solutions'
         />
         <meta
           name='description'
-          content='GarbhaGudi is one of the best Infertility Centre & hospital in Bangalore. Our experienced team of Infertility Specialist in Bangalore have a high success rate of fertility Treatment in Bangalore.'
+          content='Your Journey to Parenthood Begins Here. Explore our comprehensive infertility treatment options in Bangalore, designed to fulfill your dreams of starting a family. Contact us '
         />
 
         {/* Open Graph / Facebook */}
 
         <meta
           property='og:title'
-          content='Infertility Centre in Bangalore | Infertility Treatment in Bangalore'
+          content='Best Infertility Treatment In Bangalore | Expert Fertility Solutions'
         />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='GarbhaGudi is one of the best Infertility Centre & hospital in Bangalore. Our experienced team of Infertility Specialist in Bangalore have a high success rate of fertility Treatment in Bangalore.'
+          content='Your Journey to Parenthood Begins Here. Explore our comprehensive infertility treatment options in Bangalore, designed to fulfill your dreams of starting a family. Contact us '
         />
         <meta property='og:type' content='website' />
         <meta

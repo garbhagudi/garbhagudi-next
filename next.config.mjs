@@ -42,48 +42,97 @@ const nextConfig = {
     ];
   },
 
+  // @ts-ignore
   async redirects() {
     return [
       {
         source: '/locations/south-end-circle',
         destination: '/locations/jayanagar',
         permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: '/treatments/in-vitro-fertilization-ivf',
+        destination: '/treatments/ivf-treatment-in-bangalore',
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: '/infertility',
+        destination: '/treatments/infertility-treatment-in-bangalore',
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: '/treatments/intra-uterine-insemination-iui',
+        destination: '/treatments/iui-treatment-in-bangalore',
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: '/treatments/intracytoplasmic-sperm-injection-icsi',
+        destination: '/treatments/icsi-treatment-in-bangalore',
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: '/treatments/laparoscopy',
+        destination: '/treatments/laparoscopy-treatment-in-bangalore',
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: '/treatments/hysteroscopy',
+        destination: '/treatments/hysteroscopy-treatment-in-bangalore',
+        permanent: true,
+        statusCode: 301,
       },
       {
         source: '/locations/fertility-experts',
         destination: '/fertility-experts',
         permanent: true,
+        statusCode: 301,
       },
       {
         source: '/blogs',
         destination: '/blogs/page/1',
         permanent: true,
+        statusCode: 301,
       },
       {
         source: '/resources/treatments',
         destination: '/treatments',
         permanent: true,
+        statusCode: 301,
       },
       {
         source: '/resources/treatments/:slug',
         destination: '/treatments/:slug',
         permanent: true,
+        statusCode: 301,
       },
       {
         source: '/doctors/:slug',
         destination: '/fertility-experts/:slug',
         permanent: true,
+        statusCode: 301,
       },
       {
         source: '/kn',
         destination: 'https://kannada.garbhagudi.com',
         permanent: true,
+        statusCode: 301,
       },
       {
         source: '/features/paripoorna',
-        destination: '/features/paripoorna-2022',
+        destination: '/features/paripoorna-2023',
         permanent: true,
+        statusCode: 301,
       },
+
+      //Legacy redirects
+      //From previous wordpress site
+
       {
         source: '/feed',
         destination: '/',

@@ -208,15 +208,15 @@ const Treatment = ({ treatment }) => {
         {/* Primary Tags */}
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>{`${treatment.metaTitle || treatment?.title}`}</title>
+        <title>{`${treatment?.metaTitle || treatment?.title}`}</title>
         <meta
           name='title'
-          content={`${treatment.metaTitle || treatment?.title}`}
+          content={`${treatment?.metaTitle || treatment?.title}`}
         />
         <meta
           name='description'
           content={
-            treatment.metaDescription || treatment?.content?.text.slice(0, 160)
+            treatment?.metaDescription || treatment?.content?.text.slice(0, 160)
           }
         />
 
@@ -240,7 +240,7 @@ const Treatment = ({ treatment }) => {
           key='breadcrumbs-jsonld'
         />
 
-        {treatment.slug === 'laparoscopy' && (
+        {treatment?.slug === 'laparoscopy-treatment-in-bangalore' && (
           <script
             type='application/ld+json'
             dangerouslySetInnerHTML={faqJsonLd()}

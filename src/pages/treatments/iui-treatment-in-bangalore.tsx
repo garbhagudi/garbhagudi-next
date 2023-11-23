@@ -160,16 +160,14 @@ const Iui = (props: Props) => {
     <div>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>
-          Best IUI Treatment in Bangalore | IUI Centre in Bangalore - GarbhaGudi
-        </title>
+        <title>IUI Treatment in Bangalore: Trusted Fertility Solutions</title>
         <meta
           name='title'
-          content='Best IUI Treatment in Bangalore | IUI Centre in Bangalore - GarbhaGudi'
+          content='IUI Treatment in Bangalore: Trusted Fertility Solutions '
         />
         <meta
           name='description'
-          content='GarbhaGudi provides the high success rate IUI Treatment in Bangalore, Being one of the Best IUI Centre in Bangalore we provide the most affordable IUI Treatment cost in Bangalore. Book now!'
+          content='Your Path to Parenthood with Expert Guidance. Experience the best IUI treatment in Bangalore, tailored to maximize your chances of conceiving. Contact us for personalized care'
         />
 
         {/* Ld+JSON Data */}
@@ -201,13 +199,13 @@ const Iui = (props: Props) => {
 
         <meta
           property='og:title'
-          content='Intra-Uterine Insemination - IUI | GarbhaGudi'
+          content='IUI Treatment in Bangalore: Trusted Fertility Solutions'
         />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content="IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy."
+          content='Your Path to Parenthood with Expert Guidance. Experience the best IUI treatment in Bangalore, tailored to maximize your chances of conceiving. Contact us for personalized care'
         />
         <meta property='og:type' content='website' />
         <meta
