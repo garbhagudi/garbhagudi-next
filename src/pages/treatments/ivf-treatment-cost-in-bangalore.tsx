@@ -7,7 +7,7 @@ import Faq from 'sections/misc/ivf-cost/faq';
 import Head from 'next/head';
 
 const IvfCost = () => {
-  const title = `Low IVF Cost in Bangalore in ${new Date().getFullYear()} | IVF Treatment Cost @90K - GarbhaGudi`;
+  const title = `Low IVF Cost in Bangalore in ${new Date().getFullYear()} | Get a massive 90,000/-* off on your IVF Treatments`;
   return (
     <div>
       <Head>
@@ -15,7 +15,7 @@ const IvfCost = () => {
         <meta name='title' content={title} />
         <meta
           name='description'
-          content='The IVF treatment cost In Bangalore starts onwards Rs 90,000/- Click to book an appointment for affordable IVF costs and get the best IVF treatment in Bangalore.'
+          content='This December, celebrate the season of parenthood, with Paripoorna. GarbhaGudi IVF Centre is offering a flat ₹90,000/- off on your IVF cycle cost. '
         />
         {/* Open Graph / Facebook */}
 
@@ -24,7 +24,7 @@ const IvfCost = () => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='The IVF treatment cost In Bangalore starts onwards Rs 90,000/- Click to book an appointment for affordable IVF costs and get the best IVF treatment in Bangalore'
+          content='This December, celebrate the season of parenthood, with Paripoorna. GarbhaGudi IVF Centre is offering a flat ₹90,000/- off on your IVF cycle cost. '
         />
         <meta property='og:type' content='website' />
         <meta
@@ -39,7 +39,7 @@ const IvfCost = () => {
         <meta name='twitter:title' content={title} />
         <meta
           name='twitter:description'
-          content='The IVF treatment cost In Bangalore starts onwards Rs 90,000/- Click to book an appointment for affordable IVF costs and get the best IVF treatment in Bangalore'
+          content='This December, celebrate the season of parenthood, with Paripoorna. GarbhaGudi IVF Centre is offering a flat ₹90,000/- off on your IVF cycle cost. '
         />
         <meta
           name='twitter:image'
