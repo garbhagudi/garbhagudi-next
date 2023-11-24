@@ -12,7 +12,7 @@ import Stage from 'sections/LandingPages/Neutral/stage';
 import Treatments from 'sections/LandingPages/Neutral/treatments';
 import YACta from 'sections/LandingPages/Neutral/yetAnotherCTA';
 import FloatWhatsApp from 'components/FloatWhatsapp';
-import Cta from 'sections/gg-care/cta';
+// import Cta from 'sections/gg-care/cta';
 import Head from 'next/head';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
@@ -100,7 +100,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
                 autoplay
                 defaultControlsConfig={defaultControlsConfig}
                 autoplayInterval={5000}
-                className='w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl'
+                className='max-w-xs md:max-w-md lg:max-w-lg'
                 wrapAround
                 dragging
                 enableKeyboardControls
@@ -150,7 +150,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
           <Video testimonials={testimonials} />
         </div>
         <Branch branches={branches} />
-        <Cta />
+        {/* <Cta /> */}
         <FloatWhatsApp />
       </div>
     </div>
@@ -212,7 +212,7 @@ export const getStaticProps = async () => {
   });
 
   const testimonialsData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const testimonials = await testimonialsData.json();
