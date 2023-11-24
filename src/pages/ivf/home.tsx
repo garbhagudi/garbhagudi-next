@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Video from 'sections/home/video';
 import About from 'sections/LandingPages/Neutral/about';
 import AshaSection from 'sections/LandingPages/Neutral/AshaSection';
@@ -10,9 +10,9 @@ import Carousel from 'nuka-carousel';
 import HeroHome from 'sections/LandingPages/Neutral/hero';
 import Stage from 'sections/LandingPages/Neutral/stage';
 import Treatments from 'sections/LandingPages/Neutral/treatments';
-import YACta from 'sections/LandingPages/Neutral/yetAnotherCTA';
+// import YACta from 'sections/LandingPages/Neutral/yetAnotherCTA';
 import FloatWhatsApp from 'components/FloatWhatsapp';
-// import Cta from 'sections/gg-care/cta';
+import Cta from 'sections/gg-care/cta';
 import Head from 'next/head';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
@@ -87,7 +87,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
         <About />
         <HeroHome />
         <Stage />
-        <YACta />
+        {/* <YACta /> */}
         <Treatments />
         <AshaSection />
         <div className=''>
@@ -150,7 +150,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
           <Video testimonials={testimonials} />
         </div>
         <Branch branches={branches} />
-        {/* <Cta /> */}
+        <Cta />
         <FloatWhatsApp />
       </div>
     </div>
