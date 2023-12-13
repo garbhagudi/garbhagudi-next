@@ -54,7 +54,7 @@ export const getStaticPaths = async () => {
 
 const Vas = ({ valueAddedService }) => {
   const title = `${valueAddedService?.title} | GarbhaGudi IVF Centre}`;
-  const desc = `${valueAddedService?.content.text.slice(0, 160)}`;
+  const desc = `${valueAddedService?.content.text.slice(0, 169)}`;
   const image = `${valueAddedService?.image.url}`;
   return (
     <div>
