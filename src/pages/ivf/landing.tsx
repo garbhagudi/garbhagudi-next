@@ -9,9 +9,6 @@ const Banner = dynamic(() => import('sections/LandingPages/Performant/banner'));
 const OtherServices = dynamic(
   () => import('sections/LandingPages/Performant/other-services')
 );
-const Calculators = dynamic(
-  () => import('sections/LandingPages/Performant/calculators')
-);
 const Testimonials = dynamic(
   () => import('sections/LandingPages/Performant/testimonials')
 );
