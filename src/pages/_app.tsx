@@ -12,6 +12,7 @@ import Head from 'next/head';
 import ChatComponent from 'sections/tools/gg-gpt';
 import ThemeProvider from 'styles/theme-provider';
 import Alert from 'components/header/alert';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -95,6 +96,7 @@ function MyApp({ Component, pageProps }) {
         />
         <ChatComponent apiKey={apiKey} />
       </ThemeProvider>
+      <SpeedInsights />
     </>
   );
 }
