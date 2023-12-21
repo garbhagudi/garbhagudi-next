@@ -52,6 +52,12 @@ const nextConfig = {
         statusCode: 301,
       },
       {
+        source: '/treatments/sperm-donation',
+        destination: '/',
+        permanent: true,
+        statusCode: 301,
+      },
+      {
         source: '/treatments/in-vitro-fertilization-ivf',
         destination: '/treatments/ivf-treatment-in-bangalore',
         permanent: true,
