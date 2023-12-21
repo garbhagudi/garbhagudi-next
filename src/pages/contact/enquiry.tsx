@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Form from 'sections/LandingPages/Performant/form';
 
 type Props = {};
 
@@ -47,17 +48,20 @@ const IndexPage = (props: Props) => {
         />
       </Head>
 
-      <div className='max-w-7xl mx-auto '>
+      <div className='max-w-7xl mx-auto'>
         <img
           src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1663403546/Banner/Google_Form_Header-min_tjenif.jpg'
           alt='formBanner'
-          className='md:max-w-2xl mt-4 mx-auto rounded-lg'
+          className='md:max-w-2xl mt-4 mx-auto'
         />
-        <iframe
-          src='https://docs.google.com/forms/d/e/1FAIpQLSePYwPkXxUwfyaGO3vSFMcUYCrnN4a4VFiR4TkzE0S0qJEEUA/viewform?embedded=true'
-          className='max-w-2xl w-screen h-[80rem] mx-auto'
+        <div className='bg-[#5d4c38] max-w-2xl mx-auto'>
+          {/* <iframe
+          src='/contact2.html'
+          className='max-w-2xl w-screen h-[80rem] mx-auto bg-gray-400'
           loading='lazy'
-        ></iframe>
+        ></iframe> */}
+          <Form />
+        </div>
       </div>
     </div>
   );
