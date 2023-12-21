@@ -74,7 +74,7 @@ const Nav = () => {
               <div className='space-x-3 flex items-center'>
                 <ThemeToggle />
                 <Link
-                  href='https://consult.bestdocapp.com/home/GARBHAGUDI'
+                  href='/contact/enquiry'
                   target={'_blank'}
                   rel='noreferrer'
                   className='px-3 py-2 text-xs sm:text-sm text-gray-200 cursor-pointer bg-gg-500 dark:bg-gg-500 rounded-lg font-lexend hover:bg-brandPink3 dark:hover:bg-gg-600 transition-all ease-in duration-2'
@@ -145,7 +145,7 @@ const Nav = () => {
                 </div>
               ))}
               <Link
-                href='https://consult.bestdocapp.com/home/GARBHAGUDI'
+                href='/contact/enquiry'
                 target={'_blank'}
                 rel='noreferrer'
                 onClick={() => setIsOpen(!isOpen)}
