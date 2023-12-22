@@ -54,12 +54,7 @@ const IndexPage = (props: Props) => {
           alt='formBanner'
           className='md:max-w-2xl mt-4 mx-auto'
         />
-        <div className='bg-[#5d4c38] max-w-2xl mx-auto'>
-          {/* <iframe
-          src='/contact2.html'
-          className='max-w-2xl w-screen h-[80rem] mx-auto bg-gray-400'
-          loading='lazy'
-        ></iframe> */}
+        <div className='bg-gray-300 dark:bg-gray-800 max-w-2xl mx-auto'>
           <Form />
         </div>
       </div>
