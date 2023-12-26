@@ -54,7 +54,7 @@ const IndexPage = (props: Props) => {
           alt='formBanner'
           className='md:max-w-2xl mt-4 mx-auto'
         />
-        <div className='bg-gray-300 dark:bg-gray-800 max-w-2xl mx-auto'>
+        <div className='bg-gray-800 max-w-2xl mx-auto'>
           <Form />
         </div>
       </div>
