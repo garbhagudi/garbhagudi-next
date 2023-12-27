@@ -5,31 +5,33 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import Head from 'next/head';
 import Link from 'next/link';
 import { VscVerified } from 'react-icons/vsc';
+import moment from 'moment';
 
 const YOUTUBE_PLAYLIST_ITEMS_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
 
 export async function getServerSideProps() {
   const recommendedData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const tvAppearanceData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const garbhasandeshaData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const testimonialData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const recommended = await recommendedData.json();
   const garbhasandesha = await garbhasandeshaData.json();
   const tvAppearance = await tvAppearanceData.json();
   const testimonials = await testimonialData.json();
+
   return {
     props: {
       recommended,
@@ -51,23 +53,25 @@ const IndexPage = ({
   testimonials,
 }) => {
   let [url, setUrl] = useState(
-    recommended?.items[0].snippet.resourceId.videoId,
+    recommended?.items[0].snippet.resourceId.videoId
   );
   let [url2, setUrl2] = useState(
-    garbhasandesha?.items[0].snippet.resourceId.videoId,
+    garbhasandesha?.items[0].snippet.resourceId.videoId
   );
   let [url3, setUrl3] = useState(
-    tvAppearance?.items[0].snippet.resourceId.videoId,
+    tvAppearance?.items[0].snippet.resourceId.videoId
   );
   let [url4, setUrl4] = useState(
-    testimonials?.items[0].snippet.resourceId.videoId,
+    testimonials?.items[0].snippet.resourceId.videoId
   );
+
+  console.log(recommended);
 
   const renderRecommended = (
     image: string,
     url: string,
     label: string,
-    by: string,
+    by: string
   ) => {
     return (
       <div className='flex items-center justify-start font-roboto pb-4 md:pb-0 border-b md:border-none'>
@@ -100,7 +104,7 @@ const IndexPage = ({
     image: string,
     url2: string,
     label: string,
-    by: string,
+    by: string
   ) => {
     return (
       <div className='flex items-center justify-start font-roboto'>
@@ -133,7 +137,7 @@ const IndexPage = ({
     image: string,
     url3: string,
     label: string,
-    by: string,
+    by: string
   ) => {
     return (
       <div className='flex items-center justify-start font-roboto'>
@@ -166,7 +170,7 @@ const IndexPage = ({
     image: string,
     url4: string,
     label: string,
-    by: string,
+    by: string
   ) => {
     return (
       <div className='flex items-center justify-start font-roboto'>
@@ -283,8 +287,13 @@ const IndexPage = ({
                             <div className='mt-2 ml-1 text-xl font-medium font-roboto max-w-2xl'>
                               {title}
                             </div>
-                            <div className='mt-2 ml-1 text-sm font-medium font-roboto'>
-                              {snippet.channelTitle}
+                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-roboto'>
+                              <div>Added: </div>
+                              <div>
+                                {moment(`${snippet.publishedAt}`)
+                                  .utcOffset('+05:30')
+                                  .format('MMM DD, YYYY - HH:mm')}
+                              </div>
                             </div>
                           </div>
                         )
@@ -321,7 +330,7 @@ const IndexPage = ({
                             medium.url,
                             snippet.resourceId.videoId,
                             title,
-                            snippet.channelTitle,
+                            snippet.channelTitle
                           )}
                         </div>
                       );
@@ -350,8 +359,13 @@ const IndexPage = ({
                             <div className='mt-2 ml-1 text-xl font-medium font-roboto max-w-2xl'>
                               {title}
                             </div>
-                            <div className='mt-2 ml-1 text-sm font-medium font-roboto'>
-                              {snippet.channelTitle}
+                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-roboto'>
+                              <div>Added: </div>
+                              <div>
+                                {moment(`${snippet.publishedAt}`)
+                                  .utcOffset('+05:30')
+                                  .format('MMM DD, YYYY - HH:mm')}
+                              </div>
                             </div>
                           </div>
                         )
@@ -388,7 +402,7 @@ const IndexPage = ({
                             medium.url,
                             snippet.resourceId.videoId,
                             title,
-                            snippet.channelTitle,
+                            snippet.channelTitle
                           )}
                         </div>
                       );
@@ -417,8 +431,13 @@ const IndexPage = ({
                             <div className='mt-2 ml-1 text-xl font-medium font-roboto max-w-2xl'>
                               {title}
                             </div>
-                            <div className='mt-2 ml-1 text-sm font-medium font-roboto'>
-                              {snippet.channelTitle}
+                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-roboto'>
+                              <div>Added: </div>
+                              <div>
+                                {moment(`${snippet.publishedAt}`)
+                                  .utcOffset('+05:30')
+                                  .format('MMM DD, YYYY - HH:mm')}
+                              </div>
                             </div>
                           </div>
                         )
@@ -455,7 +474,7 @@ const IndexPage = ({
                             medium.url,
                             snippet.resourceId.videoId,
                             title,
-                            snippet.channelTitle,
+                            snippet.channelTitle
                           )}
                         </div>
                       );
@@ -484,8 +503,13 @@ const IndexPage = ({
                             <div className='mt-2 ml-1 text-xl font-medium font-roboto max-w-2xl'>
                               {title}
                             </div>
-                            <div className='mt-2 ml-1 text-sm font-medium font-roboto'>
-                              {snippet.channelTitle}
+                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-roboto'>
+                              <div>Added: </div>
+                              <div>
+                                {moment(`${snippet.publishedAt}`)
+                                  .utcOffset('+05:30')
+                                  .format('MMM DD, YYYY - HH:mm')}
+                              </div>
                             </div>
                           </div>
                         )
@@ -522,7 +546,7 @@ const IndexPage = ({
                             medium.url,
                             snippet.resourceId.videoId,
                             title,
-                            snippet.channelTitle,
+                            snippet.channelTitle
                           )}
                         </div>
                       );
