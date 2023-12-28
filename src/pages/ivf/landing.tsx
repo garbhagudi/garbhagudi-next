@@ -1,26 +1,28 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import RelatedSearches from 'sections/LandingPages/Performant/relatedSearches';
-import DoctorList from 'sections/LandingPages/Performant/doctorList';
-import apolloClient from 'lib/apollo-graphcms';
-import { gql } from '@apollo/client';
-import Branch from 'sections/LandingPages/Performant/branches';
-const Banner = dynamic(() => import('sections/LandingPages/Performant/banner'));
-const OtherServices = dynamic(
-  () => import('sections/LandingPages/Performant/other-services')
-);
-const Testimonials = dynamic(
-  () => import('sections/LandingPages/Performant/testimonials')
-);
-const Cta = dynamic(() => import('sections/LandingPages/Performant/cta'));
+// import RelatedSearches from 'sections/LandingPages/Performant/relatedSearches';
+// import DoctorList from 'sections/LandingPages/Performant/doctorList';
+// import apolloClient from 'lib/apollo-graphcms';
+// import { gql } from '@apollo/client';
+// import Branch from 'sections/LandingPages/Performant/branches';
+// const Banner = dynamic(() => import('sections/LandingPages/Performant/banner'));
+// const OtherServices = dynamic(
+//   () => import('sections/LandingPages/Performant/other-services')
+// );
+// const Testimonials = dynamic(
+//   () => import('sections/LandingPages/Performant/testimonials')
+// );
+// const Cta = dynamic(() => import('sections/LandingPages/Performant/cta'));
 const Head = dynamic(() => import('next/head'));
-const TreatmentOptions = dynamic(
-  () => import('sections/LandingPages/Performant/treatment')
-);
-const Faq = dynamic(() => import('sections/LandingPages/Performant/faq'));
+// const TreatmentOptions = dynamic(
+//   () => import('sections/LandingPages/Performant/treatment')
+// );
+// const Faq = dynamic(() => import('sections/LandingPages/Performant/faq'));
 
-const YOUTUBE_PLAYLIST_ITEMS_API =
-  'https://www.googleapis.com/youtube/v3/playlistItems';
+// const YOUTUBE_PLAYLIST_ITEMS_API =
+//   'https://www.googleapis.com/youtube/v3/playlistItems';
+
+import { IoWarning } from 'react-icons/io5';
 
 export default function Home({ data }) {
   return (
@@ -76,62 +78,72 @@ export default function Home({ data }) {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
         />
       </Head>
-      <Banner />
+
+      <div className='flex flex-col items-center text-gray-800 dark:text-gray-200 font-lexend justify-center h-screen bg-gray-200 dark:bg-gray-800'>
+        <div className='text-4xl font-bold mb-4 flex items-center space-x-3'>
+          {' '}
+          <IoWarning className='text-yellow-400' /> <div>Work in Progress</div>
+        </div>
+        <p className='text-lg text-gray-600 dark:text-gray-300'>
+          This page is under development. Please check back later.
+        </p>
+      </div>
+      {/* <Banner />
       <OtherServices />
       <TreatmentOptions branch={'GarbhaGudi IVF Centre'} />
       <Branch branches={data.branches} />
       <DoctorList doctors={data.doctors} />
       <Faq />
       <Testimonials />
-      {/* <Calculators /> */}
+      <Calculators />
       <Cta />
-      <RelatedSearches />
+      <RelatedSearches /> */}
     </div>
   );
 }
 
-export const getStaticProps = async () => {
-  const { data } = await apolloClient.query({
-    query: gql`
-      {
-        doctors(orderBy: order_ASC, first: 12) {
-          order
-          name
-          qualification
-          category
-          slug
-          image {
-            url
-          }
-          imageAlt
-          medicalRegNo
-          id
-          designation
-        }
-        branches {
-          id
-          title
-          slug
-          branchPicture {
-            url
-          }
-        }
-      }
-    `,
-  });
+// export const getStaticProps = async () => {
+//   const { data } = await apolloClient.query({
+//     query: gql`
+//       {
+//         doctors(orderBy: order_ASC, first: 12) {
+//           order
+//           name
+//           qualification
+//           category
+//           slug
+//           image {
+//             url
+//           }
+//           imageAlt
+//           medicalRegNo
+//           id
+//           designation
+//         }
+//         branches {
+//           id
+//           title
+//           slug
+//           branchPicture {
+//             url
+//           }
+//         }
+//       }
+//     `,
+//   });
 
-  const testimonialsData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
-  );
+//   const testimonialsData = await fetch(
+//     `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+//   );
 
-  const testimonials = await testimonialsData.json();
+//   const testimonials = await testimonialsData.json();
 
-  return {
-    props: {
-      data,
-      testimonials,
-      fallback: true,
-    },
-    revalidate: 180,
-  };
-};
+//   return {
+//     props: {
+//       data,
+//       testimonials,
+//       fallback: true,
+//     },
+//     revalidate: 180,
+//   };
+// };
