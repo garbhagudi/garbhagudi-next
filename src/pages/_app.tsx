@@ -11,7 +11,7 @@ import Loading from 'components/Loading';
 import Head from 'next/head';
 import ChatComponent from 'sections/tools/gg-gpt';
 import ThemeProvider from 'styles/theme-provider';
-import Alert from 'components/header/alert';
+// import Alert from 'components/header/alert';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 function MyApp({ Component, pageProps }) {
@@ -78,7 +78,7 @@ function MyApp({ Component, pageProps }) {
         ) : (
           <>
             <div className='selection:bg-gg-500 selection:text-white dark:bg-gray-800 min-h-screen'>
-              <Alert />
+              {/* <Alert /> */}
               <Nav />
               <main className=''>
                 <Component {...pageProps} />
