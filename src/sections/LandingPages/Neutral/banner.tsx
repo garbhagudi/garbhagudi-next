@@ -23,9 +23,19 @@ const Banner = () => {
           <div>
             <div className=''>
               <div className='color-pop rounded-lg'>
-                <div className='inline-flex items-center text-base text-center font-bold text-white  px-2.5 py-2 bg-transparent rounded-lg'>
-                  PARIPOORNA: It's the season of JOY of being COMPLETE 👶💖 Get
-                  90,000/- Discount on IVF Treatment
+                <div className='flex flex-col items-start text-base font-bold text-white  px-2.5 py-2 bg-transparent rounded-lg'>
+                  <div>
+                    <span className='uppercase font-semibold font-lexend'>
+                      Limited Period Offer* :{' '}
+                    </span>
+                    <span className='font-lexend'>
+                      This New Year, start your IVF journery for free with our
+                      free fertility screening offer.
+                    </span>
+                  </div>
+                  <span className='text-xs text-right w-full font-lexend'>
+                    *Valid through Jan-2024
+                  </span>
                 </div>
               </div>
               <div className='mt-12 sm:max-w-xl text-gray-800 dark:text-gray-200'>
@@ -33,9 +43,9 @@ const Banner = () => {
                   Welcome to the Best IVF Centre In Bangalore
                 </h1>
                 <p className='mt-6 text-xl'>
-                  Get a massive 90,000/-* off on your IVF Treatments. Offer
-                  Applicable on all-inclusive IVF package of ₹2,50,000 until
-                  31st December 2023.
+                  Get start on your journey towards parenthood with GarbhaGudi
+                  IVF Centre's free fertility screening offer, valid throught
+                  out Jan 2024.
                 </p>
                 <p className='mt-2 text-xl'>
                   EMI Facility Available at 0% Interest.
