@@ -10,7 +10,6 @@ import Carousel from 'nuka-carousel';
 import HeroHome from 'sections/LandingPages/Neutral/hero';
 import Stage from 'sections/LandingPages/Neutral/stage';
 import Treatments from 'sections/LandingPages/Neutral/treatments';
-// import YACta from 'sections/LandingPages/Neutral/yetAnotherCTA';
 import FloatWhatsApp from 'components/FloatWhatsapp';
 import Cta from 'sections/gg-care/cta';
 import Head from 'next/head';

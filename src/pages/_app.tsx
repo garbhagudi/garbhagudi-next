@@ -11,7 +11,6 @@ import Loading from 'components/Loading';
 import Head from 'next/head';
 import ChatComponent from 'sections/tools/gg-gpt';
 import ThemeProvider from 'styles/theme-provider';
-// import Alert from 'components/header/alert';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 function MyApp({ Component, pageProps }) {
@@ -66,6 +65,10 @@ function MyApp({ Component, pageProps }) {
             />
           </>
         )}
+        <meta
+          name='viewport'
+          content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover'
+        />
         <meta httpEquiv='content-language' content='en-gb'></meta>
         <meta
           name='robots'
