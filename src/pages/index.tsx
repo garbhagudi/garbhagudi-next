@@ -6,6 +6,7 @@ import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import BannerComponent from 'sections/home/bannerComponent';
 import DoctorList from 'sections/home/doctorList';
+// import AddToHomeScreen from 'components/addToHomeScreen';
 
 const YOUTUBE_PLAYLIST_ITEMS_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -148,6 +149,7 @@ const Home = ({ data, testimonials }) => {
         blogsPassthrough={data.blogs}
       />
       <DoctorList doctors={data.doctors} />
+      {/* <AddToHomeScreen /> */}
       <Faq />
     </div>
   );
@@ -203,7 +205,7 @@ export const getStaticProps = async () => {
   });
 
   const testimonialsData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const testimonials = await testimonialsData.json();
