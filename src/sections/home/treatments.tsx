@@ -62,7 +62,7 @@ const Data = [
       <div>
         Unlock the doors of parenthood with GarbhaGudi's advanced{' '}
         <Link
-          href={'/treatments/in-vitro-fertilization-ivf'}
+          href={'/treatments/ivf-treatment-in-bangalore'}
           className='text-gg-500 dark:text-gg-400 hover:underline'
         >
           IVF treatment In Banglore
@@ -70,7 +70,7 @@ const Data = [
         and give your dreams of starting a family a new lease of life.
       </div>
     ),
-    link: '/treatments/in-vitro-fertilization-ivf',
+    link: '/treatments/ivf-treatment-in-bangalore',
     image:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1674890412/Misc/ivf%20icons/ivf_jwjqwf.webp',
   },
@@ -91,7 +91,7 @@ const Data = [
         infertility.
       </div>
     ),
-    link: '/treatments/intracytoplasmic-sperm-injection-icsi',
+    link: '/treatments/icsi-treatment-in-bangalore',
     image:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1674890412/Misc/ivf%20icons/fertilization_o5hpkk.webp',
   },
@@ -102,7 +102,7 @@ const Data = [
       <div>
         Experience the joy of parenthood with GarbhaGudi's{' '}
         <Link
-          href={'/treatments/intra-uterine-insemination-iui'}
+          href={'/treatments/iui-treatment-in-bangalore'}
           className='text-gg-500 dark:text-gg-400 hover:underline'
         >
           IUI treatment In Banglore
@@ -110,7 +110,7 @@ const Data = [
         , designed to increase your chances of pregnancy in a natural way.
       </div>
     ),
-    link: '/treatments/intra-uterine-insemination-iui',
+    link: '/treatments/iui-treatment-in-bangalore',
     image:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1674890412/Misc/ivf%20icons/in-vitro_mujzkz.webp',
   },
@@ -122,7 +122,7 @@ const Data = [
         Garbhagudi IVF Centre - Your Path to Parenthood Begins Here. Discover
         Advanced{' '}
         <Link
-          href={'/treatments/infertility'}
+          href={'/treatments/infertility-treatment-in-bangalore'}
           className='text-gg-500 dark:text-gg-400 hover:underline'
         >
           Infertility Treatments in Bangalore
@@ -130,7 +130,7 @@ const Data = [
         Today!
       </div>
     ),
-    link: '/treatments/pesa-and-tesa',
+    link: '/treatments/infertility-treatment-in-bangalore',
     image:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1674890412/Misc/ivf%20icons/research_j8mdnk.webp',
   },

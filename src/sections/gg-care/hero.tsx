@@ -24,7 +24,7 @@ const supportLinks = [
       'Now book an appointment with any of your nearest locations of GarbhaGudi IVF Centre, and get the best fertility treatments from our experts!',
     icon: HiCalendar,
     ctaAction: 'Book an Appointment',
-    ctaLink: 'https://consult.bestdocapp.com/home/GARBHAGUDI',
+    ctaLink: '/contact/enquiry',
   },
 ];
 

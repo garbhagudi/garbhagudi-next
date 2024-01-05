@@ -249,7 +249,7 @@ const pwa = withPWA({
   scope: '/pages',
   register: true,
   skipWaiting: true,
-  // disable: process.env.NODE_ENV === 'development',
+  disable: process.env.NODE_ENV === 'development',
 });
 
 export default pwa({

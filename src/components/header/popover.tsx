@@ -417,7 +417,7 @@ export function Treatments() {
                           'focus:outline-none',
                           selected
                             ? 'bg-gray-100 dark:bg-gray-700 ring-2 ring-brandPink2 dark:ring-gray-500 shadow'
-                            : 'text-gray-100 hover:bg-brandPink3 hover:text-white',
+                            : 'text-gray-100 hover:bg-brandPink3 hover:text-white'
                         )
                       }
                     >
@@ -430,7 +430,7 @@ export function Treatments() {
                           'focus:outline-none',
                           selected
                             ? 'bg-gray-100 dark:bg-gray-700 ring-2 ring-brandPink2 dark:ring-gray-500 shadow'
-                            : 'text-gray-100 hover:bg-brandPink3 hover:text-white',
+                            : 'text-gray-100 hover:bg-brandPink3 hover:text-white'
                         )
                       }
                     >
@@ -443,11 +443,11 @@ export function Treatments() {
                           'focus:outline-none',
                           selected
                             ? 'bg-gray-100 dark:bg-gray-700 ring-2 ring-brandPink2 dark:ring-gray-500 shadow'
-                            : 'text-gray-100 hover:bg-brandPink3 hover:text-white',
+                            : 'text-gray-100 hover:bg-brandPink3 hover:text-white'
                         )
                       }
                     >
-                      Advanced Options
+                      Advanced
                     </Tab>
                   </Tab.List>
                   <Tab.Panels className='px-2 my-2 text-black transition-all ease-out duration-500'>
