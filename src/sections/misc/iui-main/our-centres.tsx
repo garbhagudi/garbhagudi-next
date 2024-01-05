@@ -174,7 +174,7 @@ const Data = [
     link: 'https://goo.gl/maps/kxhfM5SCZuq6EDnE9',
   },
   {
-    id: 5,
+    id: 6,
     branch: 'New BEL Road',
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62206.24078266471!2d77.54224755616912!3d12.978883707796326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1787016c1729%3A0xc0292defa84a9230!2sGarbhaGudi%20IVF%20Centre%2C%20New%20BEL%20Road!5e0!3m2!1sen!2suk!4v1679131051329!5m2!1sen!2suk',
     phone: '+919108910832',
@@ -185,5 +185,17 @@ const Data = [
       </span>
     ),
     link: 'https://goo.gl/maps/Fmiwn4ZCsSTxehnq9',
+  },
+  {
+    id: 7,
+    branch: 'Nagarabhavi',
+    map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d486.02095515674114!2d77.51104068056954!3d12.961122397852817!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fcd6ee8ee57%3A0x2b5769e83d027d93!2sGarbhaGudi%20IVF%20Centre%2C%20Nagarbhavi!5e0!3m2!1sen!2sin!4v1683275922959!5m2!1sen!2sin',
+    phone: '+919886988665',
+    address: (
+      <span>
+        80 Feet Main Rd, 2 Stage, Naagarabhaavi, Bengaluru, Karnataka 560072
+      </span>
+    ),
+    link: 'https://www.google.com/maps/place/GarbhaGudi+IVF+Centre,+Nagarbhavi,+80+Feet+Main+Rd,+2+Stage,+Naagarabhaavi,+Bengaluru,+Karnataka+560072/@12.961096,77.5109731,19z/data=!4m6!3m5!1s0x3bae3fcd6ee8ee57:0x2b5769e83d027d93!8m2!3d12.961096!4d77.5109735!16s%2Fg%2F11ty4tr17s',
   },
 ];

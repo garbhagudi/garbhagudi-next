@@ -13,29 +13,29 @@ const AddToMobileChrome = (props: Props) => {
   const { closePrompt, doNotShowAgain } = props;
   return (
     <div>
-      <div className='fixed top-0 left-0 right-0 h-[60%] z-50 pt-12 px-4 text-white'>
-        <ImArrowUp className='text-4xl absolute top-[10px] right-[10px] text-indigo-700 z-10 animate-bounce' />
-        <div className='relative bg-primary p-4 h-full rounded-xl flex flex-col justify-around items-center text-center'>
-          <button className='absolute top-0 right-0 p-3' onClick={closePrompt}>
-            <FaTimes className='text-2xl' />
-          </button>
-          <p className='text-lg'>
+      <div className='fixed top-0 left-0 right-0 z-50 pt-12 px-4 text-white'>
+        <ImArrowUp className='text-4xl absolute top-[10px] right-[10px] text-gg-500 z-10 animate-bounce' />
+        <div className='relative bg-primary px-4 py-2 h-full rounded-xl flex flex-col space-y-3 justify-around items-center text-center'>
+          <p className='font-lexend'>
             For the best experience, we recommend installing the GarbhaGudi app
             to your home screen!
           </p>
-          <div className='flex gap-2 items-center text-lg'>
+          <div className='flex space-x-2 pt-4 items-center font-lexend'>
             <p>Click the</p>
-            <HiDotsVertical className='text-4xl' />
+            <HiDotsVertical className='text-2xl' />
             <p>icon</p>
           </div>
-          <div className='flex flex-col gap-2 items-center text-lg w-full px-4'>
+          <div className='flex flex-col gap-2 items-center font-lexend w-full px-4'>
             <p>Scroll down and then click:</p>
-            <div className='bg-zinc-50 flex justify-between items-center w-full px-4 py-2 rounded-lg text-zinc-900'>
+            <div className='bg-gg-300 flex justify-center space-x-3 font-lexend items-center w-full px-4 py-2 rounded-lg text-zinc-900'>
               <MdAddToHomeScreen className='text-2xl' />
               <p>Add to Home Screen</p>
             </div>
           </div>
-          <button className='border-2 p-1' onClick={doNotShowAgain}>
+          <button
+            className='border-2 px-3 py-1.5 font-lexend rounded-md hover:bg-gg-500'
+            onClick={doNotShowAgain}
+          >
             Don&apos;t show again
           </button>
         </div>

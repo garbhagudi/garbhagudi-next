@@ -27,7 +27,7 @@ const BreadCrumbs = ({
         className='flex py-3 px-5 rounded-lg font-semibold font-content z-10'
         aria-label='Breadcrumb'
       >
-        <ol className='flex flex-row space-x-1'>
+        <ol className='flex flex-row items-center space-x-1'>
           <li className='inline-flex items-center'>
             <Link passHref href='/'>
               <span className='text-sm flex items-center justify-center'>

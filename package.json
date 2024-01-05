@@ -15,7 +15,7 @@
     "@headlessui/react": "^1.7.17",
     "@headlessui/tailwindcss": "^0.2.0",
     "@vercel/speed-insights": "^1.0.2",
-    "axios": "^1.6.3",
+    "axios": "^1.6.4",
     "circular-dependency-plugin": "^5.2.2",
     "cookies-next": "^4.1.0",
     "focus-visible": "^5.2.0",
