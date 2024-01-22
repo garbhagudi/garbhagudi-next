@@ -9,6 +9,7 @@ import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import SearchComponent from 'components/search/searchComponent';
 import Pagination from 'components/pagination';
+import GGLogo from 'assets/gg-emblem.svg';
 
 const limit = 6;
 
@@ -116,29 +117,29 @@ function BlogPage({
                           href={`/doctors/${item?.node?.doctor?.slug}`}
                           passHref
                         >
-                          <div>
+                          <div className=''>
                             <span className='sr-only'>
-                              By: {item?.node?.doctor?.name}
+                              By: GarbhaGudi IVF Centre
                             </span>
                             <Image
-                              className='h-12 w-12 md:h-16 md:w-16 rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'
-                              src={item?.node?.doctor?.image?.url}
-                              alt={item?.node?.doctor?.name}
-                              width={40}
-                              height={40}
+                              className='h-12 w-12 scale-150 md:h-16 md:w-16 rounded-full dark:fill-white dark:grayscale dark:brightness-0 dark:invert'
+                              src={GGLogo}
+                              alt={'GarbhaGudi IVF Centre'}
+                              width={50}
+                              height={50}
                             />
                           </div>
                         </Link>
                       </div>
-                      <div className='ml-3'>
+                      <div>
                         <div className='text-base font-medium text-gray-800 dark:text-gray-200'>
-                          <Link href={`/doctors/${item?.node?.doctor?.slug}`}>
+                          <Link href={'/'}>
                             <div className='font-lexend'>
-                              Author : {item?.node?.doctor?.name}
+                              Author : GarbhaGudi IVF Centre
                             </div>
                           </Link>
                         </div>
-                        <div className='flex space-x-1 text-sm text-gray-500 dark:text-gray-300 font-lexend'>
+                        <div className='flex space-x-1 text-sm text-gray-700 dark:text-gray-200 font-lexend'>
                           <time>Published: {item?.node?.publishedOn}</time>
                         </div>
                       </div>
