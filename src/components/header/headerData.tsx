@@ -1,5 +1,6 @@
 import { SiGooglemaps } from 'react-icons/si';
 import { FaRoad } from 'react-icons/fa';
+import { MdPermMedia } from 'react-icons/md';
 
 export const TreatmentHeader = {
   female: [
@@ -139,6 +140,11 @@ export const Contact = [
     name: 'Partnership',
     href: '/contact/partnership',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264809/Icons/Contact/Partnership_srnnr9.svg',
+  },
+  {
+    name: 'Media Kit',
+    href: '/contact/media-kit',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643442839/Icons/About/Media_nyook4.svg',
   },
 ];
 
