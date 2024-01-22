@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
-import Header from 'sections/brandResources/header';
-import BRComponent from 'sections/brandResources/main';
+import Header from 'sections/mediaKit/brandResources/header';
+import BRComponent from 'sections/mediaKit/main';
 
 const IndexPage = () => {
   return (

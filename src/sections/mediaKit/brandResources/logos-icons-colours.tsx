@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { data } from 'sections/brandResources/iconsData';
+import { data } from 'sections/mediaKit/brandResources/iconsData';
 
 const LogosIconsColours = () => {
   return (
