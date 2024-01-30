@@ -14,7 +14,7 @@
     "@graphcms/rich-text-react-renderer": "^0.6.1",
     "@headlessui/react": "^1.7.18",
     "@headlessui/tailwindcss": "^0.2.0",
-    "@vercel/speed-insights": "^1.0.8",
+    "@vercel/speed-insights": "^1.0.9",
     "axios": "^1.6.4",
     "circular-dependency-plugin": "^5.2.2",
     "cookies-next": "^4.1.0",
