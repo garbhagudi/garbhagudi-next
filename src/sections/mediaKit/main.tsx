@@ -6,6 +6,8 @@ import LogosIconsColours from 'sections/mediaKit/brandResources/logos-icons-colo
 import Typography from 'sections/mediaKit/brandResources/badging';
 import Partners from 'sections/mediaKit/brandResources/partners-and-advertisers';
 import KeyPersonnel from 'sections/mediaKit/brandResources/keyPersonnel';
+import SocialPostsGuide from './brandResources/socialImageGuide';
+import SocialMediaTemplates from './brandResources/socialMediaTemplates';
 
 const MediaKit = () => {
   return (
@@ -51,6 +53,20 @@ const MediaKit = () => {
                   'py-2 ui-selected:border-b-2 ui-selected:outline-none border-gray-500 transition-all duration-75 ease-linear'
                 }
               >
+                Social Media Posts Guidelines
+              </Tab>
+              <Tab
+                className={
+                  'py-2 ui-selected:border-b-2 ui-selected:outline-none border-gray-500 transition-all duration-75 ease-linear'
+                }
+              >
+                Social Media Posts Templates
+              </Tab>
+              <Tab
+                className={
+                  'py-2 ui-selected:border-b-2 ui-selected:outline-none border-gray-500 transition-all duration-75 ease-linear'
+                }
+              >
                 Fonts and Web Typography
               </Tab>
               <Tab
@@ -73,6 +89,12 @@ const MediaKit = () => {
               </Tab.Panel>
               <Tab.Panel>
                 <LogosIconsColours />
+              </Tab.Panel>
+              <Tab.Panel>
+                <SocialPostsGuide />
+              </Tab.Panel>
+              <Tab.Panel>
+                <SocialMediaTemplates />
               </Tab.Panel>
               <Tab.Panel>
                 <Typography />
