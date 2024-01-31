@@ -56,7 +56,9 @@ const menu = [
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className='sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-xl dark:border-b dark:border-gray-600 bg-opacity-70 dark:bg-opacity-70 backdrop-blur-2xl'>
+    <div
+      className={`sticky top-0 z-50 bg-white bg-[url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1706689143/Misc/Valentine-Web_ubazbx.webp)] dark:bg-gray-800 shadow-xl dark:border-b dark:border-gray-600 bg-opacity-70 dark:bg-opacity-70 backdrop-blur-2xl`}
+    >
       <nav className='shadow-2xl'>
         <nav className='px-2 lg:px-3 lg:py-2'>
           <div className='flex justify-between items-center mx-auto max-w-screen-xl'>
