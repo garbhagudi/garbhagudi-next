@@ -43,8 +43,8 @@ const Banner = () => {
                 </h1>
                 <p className='mt-6 text-xl'>
                   Get start on your journey towards parenthood with GarbhaGudi
-                  IVF Centre's free fertility screening offer, valid throught
-                  out Jan 2024.
+                  IVF Centre's 100% free IUI offer and Free Consultation, valid
+                  throught out Feb 2024.
                 </p>
                 <p className='mt-2 text-xl'>
                   EMI Facility Available at 0% Interest.
