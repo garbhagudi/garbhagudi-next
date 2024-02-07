@@ -26,15 +26,14 @@ const Banner = () => {
                 <div className='flex flex-col items-start text-base font-bold text-white  px-2.5 py-2 bg-transparent rounded-lg'>
                   <div>
                     <span className='uppercase font-semibold font-lexend'>
-                      Limited Period Offer* :{' '}
+                      Offer of the Month* :{' '}
                     </span>
                     <span className='font-lexend'>
-                      This New Year, start your IVF journery for free with our
-                      free fertility screening offer.
+                      100% OFF on IUI Procedure & Free Fertility Consultation
                     </span>
                   </div>
                   <span className='text-xs text-right w-full font-lexend'>
-                    *Valid through Jan-2024
+                    *Valid through Feb-2024
                   </span>
                 </div>
               </div>
