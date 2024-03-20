@@ -76,7 +76,7 @@ const Nav = () => {
               <div className='space-x-3 flex items-center'>
                 <ThemeToggle />
                 <Link
-                  href='https://medicsprime.in/OnlineAppointment/OnlineAppointment.jsp?enx=%7B%22e%22%3A%22Pv1yAd9b5VMo2DOud8JSJFkU7CzPOXXBQlPNffirhwA6fe2HHci3dR%2BT1cnBNmqH3kNc2wKJoqqIdPgk0Ie7iA%3D%3D%22%2C%22s%22%3A%22f5ec95cc090eb4a5273afdb7946feb74%22%2C%22i%22%3A%22d919f6d46ee942475fcf1bd0928d6b47%22%7D'
+                  href='/contact/enquiry'
                   target={'_blank'}
                   rel='noreferrer'
                   className='px-3 py-2 text-xs sm:text-sm text-gray-200 cursor-pointer bg-gg-500 dark:bg-gg-500 rounded-lg font-lexend hover:bg-brandPink3 dark:hover:bg-gg-600 transition-all ease-in duration-2'
@@ -147,7 +147,7 @@ const Nav = () => {
                 </div>
               ))}
               <Link
-                href='https://medicsprime.in/OnlineAppointment/OnlineAppointment.jsp?enx=%7B%22e%22%3A%22Pv1yAd9b5VMo2DOud8JSJFkU7CzPOXXBQlPNffirhwA6fe2HHci3dR%2BT1cnBNmqH3kNc2wKJoqqIdPgk0Ie7iA%3D%3D%22%2C%22s%22%3A%22f5ec95cc090eb4a5273afdb7946feb74%22%2C%22i%22%3A%22d919f6d46ee942475fcf1bd0928d6b47%22%7D'
+                href={'/contact/enquiry'}
                 target={'_blank'}
                 rel='noreferrer'
                 onClick={() => setIsOpen(!isOpen)}
