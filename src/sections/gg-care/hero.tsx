@@ -24,7 +24,7 @@ const supportLinks = [
       'Now book an appointment with any of your nearest locations of GarbhaGudi IVF Centre, and get the best fertility treatments from our experts!',
     icon: HiCalendar,
     ctaAction: 'Book an Appointment',
-    ctaLink: '/contact/enquiry',
+    ctaLink: 'https://medicsprime.in/OnlineAppointment/OnlineAppointment.jsp?enx=%7B%22e%22%3A%22Pv1yAd9b5VMo2DOud8JSJFkU7CzPOXXBQlPNffirhwA6fe2HHci3dR%2BT1cnBNmqH3kNc2wKJoqqIdPgk0Ie7iA%3D%3D%22%2C%22s%22%3A%22f5ec95cc090eb4a5273afdb7946feb74%22%2C%22i%22%3A%22d919f6d46ee942475fcf1bd0928d6b47%22%7D',
   },
 ];
 
