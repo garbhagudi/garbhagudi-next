@@ -33,7 +33,7 @@ const Banner = () => {
                     </span>
                   </div>
                   <span className='text-xs text-right w-full font-lexend'>
-                    *Valid through Feb-2024
+                    *Valid through May-2024
                   </span>
                 </div>
               </div>
@@ -43,8 +43,8 @@ const Banner = () => {
                 </h1>
                 <p className='mt-6 text-xl'>
                   Get start on your journey towards parenthood with GarbhaGudi
-                  IVF Centre's 100% free IUI offer and Free Consultation, valid
-                  throught out Feb 2024.
+                  IVF Centre's 50% Off on Blood Tests & Free Fertility
+                  Consultation, valid throught out May 2024.
                 </p>
                 <p className='mt-2 text-xl'>
                   EMI Facility Available at 0% Interest.
