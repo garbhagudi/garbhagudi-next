@@ -29,7 +29,7 @@ const Banner = () => {
                       Offer of the Month* :{' '}
                     </span>
                     <span className='font-lexend'>
-                      100% OFF on IUI Procedure & Free Fertility Consultation
+                      50% Off on Blood Tests & Free Fertility Consultation
                     </span>
                   </div>
                   <span className='text-xs text-right w-full font-lexend'>
