@@ -26,7 +26,8 @@ const BannerComponent = (bannerData: bannerProps) => {
 
   return (
     <div>
-      <div className=''>
+      <div className='relative'>
+        <div className='absolute h-14 w-full z-[999] bg-cover bg-[url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1712728654/Web-Thorana_1_fbggzx.png)]'></div>
         <Carousel
           autoplay
           autoplayInterval={5000}
@@ -56,14 +57,14 @@ const BannerComponent = (bannerData: bannerProps) => {
           {bannerData ? (
             bannerData.banners.map((banner) => (
               <Link
-                href={banner.url}
+                href={banner?.url || '#'}
                 target='_blank'
                 rel='noreferrer'
                 key={banner.id}
               >
                 <Image
                   src={banner?.image?.url}
-                  alt={banner.title}
+                  alt={banner?.title}
                   width={1920}
                   height={1080}
                   className='w-full h-full object-cover'

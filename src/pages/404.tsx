@@ -53,7 +53,7 @@ const FourOhFour = () => {
           <div className='max-w-xl mx-auto py-16 sm:py-24'>
             <div className='text-center'>
               <p className='text-sm font-semibold text-brandPink uppercase tracking-wide font-content'>
-                404 error
+                404 error.
               </p>
               <h1 className='mt-4 font-heading text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl'>
                 This page does not exist.
