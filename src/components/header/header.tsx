@@ -57,7 +57,7 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
-      className={`sticky top-0 z-50 bg-white bg-[url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1709279807/Womens-Day-Theme-for-Web_cqnvcy.webp)] bg-no-repeat bg-cover bg-center dark:bg-gray-800 shadow-xl dark:border-b dark:border-gray-600 bg-opacity-70 dark:bg-opacity-70 backdrop-blur-2xl`}
+      className={`sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-xl dark:border-b dark:border-gray-600 bg-opacity-70 dark:bg-opacity-70 backdrop-blur-2xl`}
     >
       <nav className='shadow-2xl'>
         <nav className='px-2 lg:px-3 lg:py-2'>
