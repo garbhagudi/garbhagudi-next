@@ -29,7 +29,7 @@ const Banner = () => {
                       Offer of the Month* :{' '}
                     </span>
                     <span className='font-lexend'>
-                      50% Off on Blood Tests & Free Fertility Consultation
+                      ₹ 55000/- OFF on IVF Treatment
                     </span>
                   </div>
                   <span className='text-xs text-right w-full font-lexend'>
@@ -42,9 +42,8 @@ const Banner = () => {
                   Welcome to the Best IVF Centre In Bangalore
                 </h1>
                 <p className='mt-6 text-xl'>
-                  Get start on your journey towards parenthood with GarbhaGudi
-                  IVF Centre's 50% Off on Blood Tests & Free Fertility
-                  Consultation, valid throught out May/2024.
+                  Get start on your journey towards parenthood with ₹ 55000/-
+                  OFF on IVF Treatment, valid throught out May/2024.
                 </p>
                 <p className='mt-2 text-xl'>
                   EMI Facility Available at 0% Interest.
