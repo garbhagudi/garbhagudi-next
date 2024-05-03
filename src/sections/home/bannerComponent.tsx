@@ -26,57 +26,54 @@ const BannerComponent = (bannerData: bannerProps) => {
 
   return (
     <div>
-      <div className='relative'>
-        <div className='absolute h-14 w-full z-[999] bg-cover bg-[url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1712728654/Web-Thorana_1_fbggzx.png)]'></div>
-        <Carousel
-          autoplay
-          autoplayInterval={5000}
-          className='shadow-2xl border-0 drop-shadow-2xl'
-          defaultControlsConfig={defaultControlsConfig}
-          wrapAround
-          dragging
-          enableKeyboardControls
-          pauseOnHover
-          renderCenterLeftControls={({ previousSlide }) => (
-            <button
-              onClick={previousSlide}
-              className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+      <Carousel
+        autoplay
+        autoplayInterval={5000}
+        className='shadow-2xl border-0 drop-shadow-2xl'
+        defaultControlsConfig={defaultControlsConfig}
+        wrapAround
+        dragging
+        enableKeyboardControls
+        pauseOnHover
+        renderCenterLeftControls={({ previousSlide }) => (
+          <button
+            onClick={previousSlide}
+            className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+          >
+            <HiChevronLeft className='mr-1' />
+          </button>
+        )}
+        renderCenterRightControls={({ nextSlide }) => (
+          <button
+            onClick={nextSlide}
+            className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+          >
+            <HiChevronRight className='ml-1' />
+          </button>
+        )}
+      >
+        {bannerData ? (
+          bannerData.banners.map((banner) => (
+            <Link
+              href={banner?.url || '#'}
+              target='_blank'
+              rel='noreferrer'
+              key={banner.id}
             >
-              <HiChevronLeft className='mr-1' />
-            </button>
-          )}
-          renderCenterRightControls={({ nextSlide }) => (
-            <button
-              onClick={nextSlide}
-              className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
-            >
-              <HiChevronRight className='ml-1' />
-            </button>
-          )}
-        >
-          {bannerData ? (
-            bannerData.banners.map((banner) => (
-              <Link
-                href={banner?.url || '#'}
-                target='_blank'
-                rel='noreferrer'
-                key={banner.id}
-              >
-                <Image
-                  src={banner?.image?.url}
-                  alt={banner?.title}
-                  width={1920}
-                  height={1080}
-                  className='w-full h-full object-cover'
-                  priority
-                />
-              </Link>
-            ))
-          ) : (
-            <div></div>
-          )}
-        </Carousel>
-      </div>
+              <Image
+                src={banner?.image?.url}
+                alt={banner?.title}
+                width={1920}
+                height={1080}
+                className='w-full h-full object-cover'
+                priority
+              />
+            </Link>
+          ))
+        ) : (
+          <div></div>
+        )}
+      </Carousel>
     </div>
   );
 };
