@@ -104,10 +104,17 @@ const IndexPage = ({ careers }) => {
                 className='group'
               >
                 <div className='rounded-lg border dark:border-gray-600 shadow-md bg-gradient-to-br from-pink-50 dark:from-gray-800 dark:to-slate-800 to-purple-50 hover:bg-gradient-to-br hover:from-pink-100 dark:hover:from-gray-700 hover:via-brandPurple2 hover:to-brandPurple dark:hover:to-transparent mx-auto hover:shadow-2xl hover:transition-all hover:-translate-x-2 hover:-translate-y-2 duration-300'>
-                  <div className='flex flex-col justify-between p-4 leading-normal '>
-                    <h5 className='mb-2 text-xl font-bold tracking-tight text-gray-800 dark:text-gray-200  font-content'>
-                      {items?.position}
-                    </h5>
+                  <div className='flex flex-col justify-between p-4 leading-normal'>
+                    <div className='flex items-center space-x-2'>
+                      <img
+                        src={items?.image?.url}
+                        alt={items?.position}
+                        className='w-24 h-24 object-cover rounded-full'
+                      />
+                      <h5 className='mb-2 text-xl font-bold tracking-tight text-gray-800 dark:text-gray-200  font-content'>
+                        {items?.position}
+                      </h5>
+                    </div>
                     <div className='h-24 text-gray-800 dark:text-gray-200 '>
                       <p className='mb-1 font-content text-sm font-semibold '>
                         Location: {items?.location}
@@ -147,6 +154,9 @@ export const getStaticProps = async () => {
           id
           experience
           qualification
+          image {
+            url
+          }
         }
       }
     `,

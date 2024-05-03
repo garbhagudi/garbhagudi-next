@@ -147,7 +147,7 @@ const Career = ({ career }) => {
               <div className='text-center sm:w-1/3 sm:pr-8 sm:py-8'>
                 <div className='inline-flex items-center justify-center bg-gradient-to-br from-brandPurple via-white to-brandPink4 bg-[length:400%]  animate-shine rounded-full w-44 h-44 lg:w-48 lg:h-48 shadow-2xl drop-shadow-2xl'>
                   <img
-                    src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1659164257/logos/GG_Vertical_Logo_nrcl5h.svg'
+                    src={career.image.url}
                     alt={career.position}
                     className='rounded-full h-44 w-44 '
                   />
