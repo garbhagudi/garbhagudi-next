@@ -19,14 +19,8 @@ const IndexPage = ({ branches }) => {
         {/* Primary Tags */}
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>
-          Best IVF Doctor in Bangalore | IVF Specialist in Bangalore -
-          GarbhaGudi
-        </title>
-        <meta
-          name='title'
-          content='Best IVF Doctor in Bangalore | IVF Specialist in Bangalore - GarbhaGudi'
-        />
+        <title>Best IVF Specialist in Bangalore</title>
+        <meta name='title' content='Best IVF Specialist in Bangalore' />
         <meta
           name='description'
           content='Garbhagudi Hospital has the best team of highly experienced IVF doctors in Bangalore. Our Ivf specialists provide a High Success Rate. Book an appointment with the best IVF doctors in Bangalore today!'

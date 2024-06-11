@@ -7,7 +7,7 @@ import Faq from 'sections/misc/ivf-cost/faq';
 import Head from 'next/head';
 
 const IvfCost = () => {
-  const title = `Low IVF Cost in Bangalore in ${new Date().getFullYear()} | Get a massive 90,000/-* off on your IVF Treatments`;
+  const title = `Low IVF Cost in Bangalore`;
   return (
     <div>
       <Head>

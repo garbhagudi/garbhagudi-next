@@ -15,9 +15,7 @@ const IndexPage = () => {
         {/* Primary Tags */}
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>
-          GG CARE - Committed to Couple Delight | GarbhaGudi IVF Centre
-        </title>
+        <title>GG CARE - Committed to Couple Delight</title>
         <meta
           name='title'
           content='GG CARE - Committed to Couple Delight | GarbhaGudi IVF Centre'

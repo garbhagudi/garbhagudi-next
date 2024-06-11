@@ -72,7 +72,7 @@ export async function getStaticPaths() {
 }
 
 const Blog = ({ blog }) => {
-  const title = `${blog?.title} | GarbhaGudi IVF Centre`;
+  const title = `${blog?.title}`;
   const router = useRouter();
 
   function addBlogJsonLd() {

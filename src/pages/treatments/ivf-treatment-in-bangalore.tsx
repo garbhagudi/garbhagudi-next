@@ -187,11 +187,8 @@ const Ivf = () => {
     <div>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>Best IVF Treatment In Bangalore | Garbhagudi </title>
-        <meta
-          name='title'
-          content='Best IVF Treatment In Bangalore | Garbhagudi '
-        />
+        <title>Best IVF Treatment In Bangalore</title>
+        <meta name='title' content='Best IVF Treatment In Bangalore' />
         <meta
           name='description'
           content='IVF Treatment in Bangalore:Experience advanced IVF treatment in Bangalore, tailored to help you achieve your dream of parenthood. Contact us for expert care and support.'

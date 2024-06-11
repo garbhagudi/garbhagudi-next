@@ -66,7 +66,7 @@ const Career = ({ career }) => {
     return <Loading />;
   }
 
-  const title = `${career.position} | GarbhaGudi IVF Centre`;
+  const title = `${career.position}`;
 
   return (
     <div>
