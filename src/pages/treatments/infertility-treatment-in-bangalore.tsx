@@ -32,9 +32,7 @@ const InfertilityPage = ({ doctors }) => {
         {/* Primary Tags */}
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>
-          Best Infertility Treatment In Bangalore | Expert Fertility Solutions
-        </title>
+        <title>Best Infertility Treatment In Bangalore</title>
         <meta
           name='title'
           content='Best Infertility Treatment In Bangalore | Expert Fertility Solutions'

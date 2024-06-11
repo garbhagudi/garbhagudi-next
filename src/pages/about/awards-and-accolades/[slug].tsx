@@ -60,7 +60,7 @@ export const getStaticPaths = async () => {
 
 const AwardPage = ({ award }) => {
   const router = useRouter();
-  const title = `${award?.title} | GarbhaGudi`;
+  const title = `${award?.title}`;
   if (router.isFallback) {
     return <Loading />;
   }
@@ -70,7 +70,7 @@ const AwardPage = ({ award }) => {
         {/* Primary Tags */}
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
-        <meta name='title' content={`${award?.title} | GarbhaGudi`} />
+        <meta name='title' content={title} />
         <meta name='description' content={award?.content?.text.slice(0, 160)} />
         {/* Open Graph / Facebook */}
         <meta property='og:title' content={award?.title} />

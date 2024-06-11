@@ -78,7 +78,7 @@ export async function getStaticPaths() {
 
 const Doctor = ({ doctor }) => {
   const router = useRouter();
-  const title = `${doctor?.name} - Fertility Specialist | GarbhaGudi IVF Centre`;
+  const title = `${doctor?.name} - Fertility Specialist`;
 
   function addDocJsonLd() {
     return {
