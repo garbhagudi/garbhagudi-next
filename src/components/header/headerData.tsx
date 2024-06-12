@@ -345,8 +345,8 @@ export const AboutUs = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839012/Icons/About/Our_Fertility_Experts_bxsrrh.svg',
   },
   {
-    name: 'Media',
-    href: '/media',
+    name: 'Publications',
+    href: '/publications',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643442839/Icons/About/Media_nyook4.svg',
   },
   {
