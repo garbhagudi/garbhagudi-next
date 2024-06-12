@@ -25,7 +25,6 @@ export const getStaticProps = async ({ params }) => {
     `,
     variables: {
       slug: params.slug,
-      revalidate: 90,
     },
   });
 
@@ -33,6 +32,7 @@ export const getStaticProps = async ({ params }) => {
     props: {
       valueAddedService: data.valueAddedService,
     },
+    revalidate: 90,
   };
 };
 

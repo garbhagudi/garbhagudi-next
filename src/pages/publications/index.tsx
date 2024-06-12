@@ -37,8 +37,8 @@ const IndexPage = ({ medias }) => {
         {/* Primary Tags */}
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>Media | GarbhaGudi</title>
-        <meta name='title' content='Media | GarbhaGudi IVF Centre' />
+        <title>Publications | GarbhaGudi</title>
+        <meta name='title' content='Publications | GarbhaGudi IVF Centre' />
         <meta
           name='description'
           content='News articles and announcements from GarbhaGudi IVF Centre. Get the latest information in the world of IVF here'
@@ -46,7 +46,10 @@ const IndexPage = ({ medias }) => {
 
         {/* Open Graph / Facebook */}
 
-        <meta property='og:title' content='Media | GarbhaGudi IVF Centre' />
+        <meta
+          property='og:title'
+          content='Publications | GarbhaGudi IVF Centre'
+        />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -63,7 +66,10 @@ const IndexPage = ({ medias }) => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta name='twitter:title' content='Media | GarbhaGudi IVF Centre' />
+        <meta
+          name='twitter:title'
+          content='Publications | GarbhaGudi IVF Centre'
+        />
         <meta
           name='twitter:description'
           content='News articles and announcements from GarbhaGudi IVF Centre. Get the latest information in the world of IVF here'
@@ -75,7 +81,7 @@ const IndexPage = ({ medias }) => {
       </Head>
       <div className='max-w-7xl mx-auto'>
         <h1 className='text-center font-heading font-bold text-4xl lg:text-5xl pt-10 lg:pt-24'>
-          Media
+          Publications
         </h1>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 lg:py-24 gap-5'>
           {medias &&
