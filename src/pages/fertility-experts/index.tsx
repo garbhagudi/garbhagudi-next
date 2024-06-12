@@ -76,7 +76,7 @@ const IndexPage = ({ branches }) => {
           Our Fertility Experts
         </h1>
         <p className='text-md text-brandDark font-content max-w-4xl mx-auto text-center mt-4'>
-          Our team of fertility specialists have been known for their extensive
+          Our team of fertility specialists are known for their extensive
           clinical experience and research contributions and their success in
           treating the most challenging fertility cases.
         </p>
