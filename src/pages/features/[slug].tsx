@@ -25,6 +25,7 @@ export const getStaticProps = async ({ params }) => {
     `,
     variables: {
       slug: params.slug,
+      revalidate: 90,
     },
   });
 
