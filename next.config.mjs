@@ -11,6 +11,7 @@ const nextConfig = {
       'res.cloudinary.com',
       'media.graphassets.com',
       'avatars.dicebear.com',
+      'app.unbounce.com',
     ],
   },
 

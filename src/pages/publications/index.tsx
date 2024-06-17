@@ -87,26 +87,26 @@ const IndexPage = ({ medias }) => {
           {medias &&
             medias.map((items) => (
               <div
-                key={items.id}
+                key={items?.id}
                 className='mx-auto p-2 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-x-1 hover:-translate-y-1 transition duration-500 ease-in-out'
               >
                 <div>
                   <img
-                    src={items.thumbnail.url}
-                    alt={items.title}
+                    src={items?.thumbnail?.url}
+                    alt={items?.title}
                     className='aspect-video w-full mx-auto rounded-lg'
                   />
                 </div>
                 <div className='px-2'>
                   <div className='font-heading mt-4 text-xl font-bold py-2 text-center md:text-left'>
-                    {items.title}
+                    {items?.title}
                   </div>
                   <div className='font-content text-left md:text-left mt-2'>
-                    {items.description.slice(0, 170)}...
+                    {items?.description?.slice(0, 170)}...
                   </div>
                 </div>
                 <div className='mt-4'>
-                  <Link href={`${items.articleLink}`}>
+                  <Link href={`${items?.articleLink}`}>
                     <div className='font-content text-lg text-center flex items-center justify-center px-3 py-2 border text-white font-extrabold bg-brandPink4 hover:bg-brandPink rounded-lg transition duration-500 ease-in-out'>
                       Read More{' '}
                       <HiChevronRight className='inline-flex items-center justify-center' />
