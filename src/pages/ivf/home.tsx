@@ -34,12 +34,10 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
         {/* Primary Tags */}
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>
-          GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India
-        </title>
+        <title>Bangalore's Best IVF Centres | GarbhaGudi IVF Centre</title>
         <meta
           name='title'
-          content='GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India'
+          content="Bangalore's Best IVF Centres | GarbhaGudi IVF Centre"
         />
         <meta
           name='description'
@@ -50,7 +48,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
 
         <meta
           property='og:title'
-          content='GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India'
+          content="Bangalore's Best IVF Centres | GarbhaGudi IVF Centre"
         />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
@@ -70,7 +68,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta
           name='twitter:title'
-          content='GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India'
+          content="Bangalore's Best IVF Centres | GarbhaGudi IVF Centre"
         />
         <meta
           name='twitter:description'
