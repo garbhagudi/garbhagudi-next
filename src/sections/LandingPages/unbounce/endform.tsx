@@ -23,6 +23,8 @@ const EndForm = () => {
               width={500}
               height={500}
               className='rounded-lg'
+              fetchPriority='low'
+              loading='lazy'
             />
           </div>
         </div>

@@ -1,18 +1,25 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import Award from 'sections/LandingPages/unbounce/award';
 import Banner from 'sections/LandingPages/unbounce/banner';
 import CTA from 'sections/LandingPages/unbounce/cta';
 import Offer from 'sections/LandingPages/unbounce/offer';
-import Services from 'sections/LandingPages/unbounce/services';
-import WhyGarbhaGudi from 'sections/LandingPages/unbounce/whyGarbhaGudi';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
-import Doctors from 'sections/LandingPages/unbounce/doctors';
-import Testimonial from 'sections/home/testimonial';
-import Video from 'sections/home/video';
-import Faq from 'sections/home/faq';
-import EndForm from 'sections/LandingPages/unbounce/endform';
 import Head from 'next/head';
+
+// Dynamic imports
+const Services = dynamic(
+  () => import('sections/LandingPages/unbounce/services')
+);
+const WhyGarbhaGudi = dynamic(
+  () => import('sections/LandingPages/unbounce/whyGarbhaGudi')
+);
+const Doctors = dynamic(() => import('sections/LandingPages/unbounce/doctors'));
+const Testimonial = dynamic(() => import('sections/home/testimonial'));
+const Video = dynamic(() => import('sections/home/video'));
+const Faq = dynamic(() => import('sections/home/faq'));
+const EndForm = dynamic(() => import('sections/LandingPages/unbounce/endform'));
 
 const YOUTUBE_PLAYLIST_ITEMS_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -71,7 +78,7 @@ const Landing = ({ doctors, testimonials }) => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
         />
       </Head>
-      <div className='min-h-screen'>
+      <>
         <Offer />
         <Banner />
         <WhyGarbhaGudi />
@@ -83,7 +90,7 @@ const Landing = ({ doctors, testimonials }) => {
         <Faq />
         <Video testimonials={testimonials} />
         <EndForm />
-      </div>
+      </>
     </div>
   );
 };
