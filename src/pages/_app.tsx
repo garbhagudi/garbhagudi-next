@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import 'styles/globals.css';
 import 'styles/calendar.css';
-import Footer from 'components/footer/footer';
-import Nav from 'components/header/header';
-// import FloatPhone from 'components/FloatPhone';
-import Salesiq from 'components/SalesIQ';
-import TagManager from 'react-gtm-module';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-import Loading from 'components/Loading';
 import Head from 'next/head';
-// import ChatComponent from 'sections/tools/gg-gpt';
-import ThemeProvider from 'styles/theme-provider';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import ThemeProvider from 'styles/theme-provider';
+import TagManager from 'react-gtm-module';
+
+// Use dynamic imports for non-essential components
+const Footer = dynamic(() => import('components/footer/footer'));
+const Nav = dynamic(() => import('components/header/header'));
+const Salesiq = dynamic(() => import('components/SalesIQ'));
+const Loading = dynamic(() => import('components/Loading'));
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-
+  const noHeaderPaths = ['/ivf/landing'];
+  const shouldDisplayHeader = !noHeaderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
 
   // const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
@@ -82,7 +84,7 @@ function MyApp({ Component, pageProps }) {
           <>
             <div className='selection:bg-gg-500 selection:text-white dark:bg-gray-800 min-h-screen'>
               {/* <Alert /> */}
-              <Nav />
+              {shouldDisplayHeader && <Nav />}
               <main className=''>
                 <Component {...pageProps} />
               </main>

@@ -17,14 +17,10 @@ const WhyGarbhaGudi = dynamic(
 );
 const Doctors = dynamic(() => import('sections/LandingPages/unbounce/doctors'));
 const Testimonial = dynamic(() => import('sections/home/testimonial'));
-const Video = dynamic(() => import('sections/home/video'));
 const Faq = dynamic(() => import('sections/home/faq'));
 const EndForm = dynamic(() => import('sections/LandingPages/unbounce/endform'));
 
-const YOUTUBE_PLAYLIST_ITEMS_API =
-  'https://www.googleapis.com/youtube/v3/playlistItems';
-
-const Landing = ({ doctors, testimonials }) => {
+const Landing = ({ doctors }) => {
   return (
     <div>
       <Head>
@@ -88,7 +84,6 @@ const Landing = ({ doctors, testimonials }) => {
         <Doctors doctors={doctors} />
         <Testimonial />
         <Faq />
-        <Video testimonials={testimonials} />
         <EndForm />
       </>
     </div>
@@ -119,16 +114,9 @@ export const getStaticProps = async () => {
     `,
   });
 
-  const testimonialsData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
-  );
-
-  const testimonials = await testimonialsData.json();
-
   return {
     props: {
       doctors: data.doctors,
-      testimonials,
       fallback: true,
     },
     revalidate: 180,
