@@ -50,7 +50,7 @@ export function About() {
                         className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gg-200 dark:hover:bg-gray-600  focus:outline-none'
                       >
                         <div className='flex items-center justify-center dark:grayscale dark:group-hover:grayscale-0 transition-all duration-150 ease-in-out flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12'>
-                          <img src={item.icon} alt={item.name} />
+                          <img src={item.icon} alt={item.name} loading='lazy' />
                         </div>
                         <div className='ml-4'>
                           <p className='text-sm font-medium text-gray-800 dark:text-gray-200 font-content'>
@@ -113,7 +113,7 @@ export function WhyGarbhaGudi() {
                         onClick={() => close()}
                       >
                         <div className='flex items-center justify-center dark:grayscale dark:group-hover:grayscale-0 transition-all duration-150 ease-in-out flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12'>
-                          <img src={item.icon} alt={item.name} />
+                          <img src={item.icon} alt={item.name} loading='lazy' />
                         </div>
                         <div className='ml-4'>
                           <p className='text-sm font-medium text-gray-800 dark:text-gray-200'>
@@ -175,7 +175,7 @@ export function KnowledgeCenter() {
                         onClick={() => close()}
                       >
                         <div className='flex items-center justify-center dark:grayscale dark:group-hover:grayscale-0 transition-all duration-150 ease-in-out flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12'>
-                          <img src={item.icon} alt={item.name} />
+                          <img src={item.icon} alt={item.name} loading='lazy' />
                         </div>
                         <div className='ml-4'>
                           <p className='text-sm font-medium text-gray-800 dark:text-gray-200'>
@@ -240,7 +240,7 @@ export function Contacts() {
                         className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gg-200 dark:hover:bg-gray-600 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
                       >
                         <div className='flex items-center justify-center dark:grayscale dark:group-hover:grayscale-0 transition-all duration-150 ease-in-out flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12'>
-                          <img src={item.icon} alt={item.name} />
+                          <img src={item.icon} alt={item.name} loading='lazy' />
                         </div>
                         <div className='ml-4'>
                           <p className='text-sm font-medium text-gray-800 dark:text-gray-200'>
@@ -463,6 +463,7 @@ export function Treatments() {
                               <img
                                 src={items.icon}
                                 alt={items.name}
+                                loading='lazy'
                                 className='w-10 h-10 mx-auto dark:grayscale group-hover:grayscale-0 transition-all duration-300 ease-linear'
                               />
                               <div className='font-content text-sm font-medium pt-2 dark:text-gray-200'>
@@ -485,6 +486,7 @@ export function Treatments() {
                               <img
                                 src={items.icon}
                                 alt={items.name}
+                                loading='lazy'
                                 className='w-10 h-10 mx-auto dark:grayscale group-hover:grayscale-0 transition-all duration-300 ease-linear'
                               />
                               <div className='font-content font-medium pt-2 dark:text-gray-200'>
@@ -507,6 +509,7 @@ export function Treatments() {
                               <img
                                 src={items.icon}
                                 alt={items.name}
+                                loading='lazy'
                                 className='w-10 h-10 mx-auto dark:grayscale group-hover:grayscale-0 transition-all duration-300 ease-linear'
                               />
                               <div className='font-content text-sm font-medium pt-2 dark:text-gray-200'>

@@ -38,6 +38,7 @@ const Services = () => {
                 width={80}
                 height={80}
                 className='pb-8'
+                fetchPriority='low'
               />
               <h5 className='text-gg-500 text-xl font-semibold'>ICSI</h5>
               <p className='font-light'>
@@ -55,6 +56,7 @@ const Services = () => {
                 width={80}
                 height={80}
                 className='pb-8'
+                fetchPriority='low'
               />
               <h5 className='text-gg-500 text-xl font-semibold'>IUI</h5>
               <p className='font-light'>
@@ -72,6 +74,7 @@ const Services = () => {
                 width={80}
                 height={80}
                 className='pb-8'
+                fetchPriority='low'
               />
               <h5 className='text-gg-500 text-xl font-semibold'>
                 Infertility Treatment

@@ -12,7 +12,7 @@ const Doctors = ({ doctors }) => {
     },
   };
   return (
-    <div>
+    <>
       <div className='bg-transparent mx-auto py-10 lg:py-16'>
         <h1 className='text-2xl lg:text-3xl font-heading font-bold text-center pb-10 lg:pb-16'>
           Meet Our Fertility Specialists
@@ -66,7 +66,7 @@ const Doctors = ({ doctors }) => {
           </Carousel>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

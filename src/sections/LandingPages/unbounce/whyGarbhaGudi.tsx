@@ -5,7 +5,7 @@ import WhyGarbhagudi from 'assets/landing-page/why-garbhagudi.webp';
 
 const WhyGarbhaGudi = () => {
   return (
-    <div>
+    <>
       <div className='max-w-7xl mx-auto'>
         <div className='grid lg:grid-cols-2 gap-4 mx-auto px-2 py-4'>
           <div className='flex items-center justify-center flex-col'>
@@ -56,12 +56,13 @@ const WhyGarbhaGudi = () => {
               width={500}
               height={500}
               className='rounded-lg'
-              priority
+              fetchPriority='low'
+              loading='lazy'
             />
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

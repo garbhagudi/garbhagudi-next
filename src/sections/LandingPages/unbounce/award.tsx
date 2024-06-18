@@ -3,7 +3,7 @@ import React from 'react';
 
 const Award = () => {
   return (
-    <div>
+    <>
       <div className='max-w-7xl mx-auto'>
         <div className='px-2 lg:px-4'>
           <h4 className='pt-4 pb-8 lg:py-8 text-3xl lg:text-4xl font-lexend font-bold text-gg-500 text-center'>
@@ -53,7 +53,7 @@ const Award = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
