@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { FaPercent, FaUserDoctor, FaMap, FaCircleCheck } from 'react-icons/fa6';
+import WhyGarbhagudi from 'assets/landing-page/why-garbhagudi.webp';
 
 const WhyGarbhaGudi = () => {
   return (
@@ -50,13 +51,12 @@ const WhyGarbhaGudi = () => {
           </div>
           <div className='mx-auto'>
             <Image
-              src={
-                'https://app.unbounce.com/publish/assets/be830eee-eb3b-418b-9f9a-cea061d019a6/e4dc705c-eb81-468d-8133-f0fd3a698b90-f329d4d8-0968-4247-8657-3fdcd92ace1c-web-changes-2-c-min-original.webp'
-              }
+              src={WhyGarbhagudi}
               alt='Why GarbhaGudi Image'
               width={500}
               height={500}
               className='rounded-lg'
+              priority
             />
           </div>
         </div>
