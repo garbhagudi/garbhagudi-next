@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Form from './form';
+import offerBanner from 'assets/landing-page/offer-banner.webp';
 
 const Banner = () => {
   return (
@@ -9,13 +10,12 @@ const Banner = () => {
         <div className='grid lg:grid-cols-2 pt-8 lg:pt-16'>
           <div className='flex items-end justify-center pb-6 lg:pb-0'>
             <Image
-              src={
-                'https://app.unbounce.com/publish/assets/0d08e309-5ea8-4613-aa25-a277f6c9e193/31847cf6-4649-47d0-861b-eef22a15c2b3-web-b.original.webp'
-              }
+              src={offerBanner}
               alt='Banner Image'
               width={500}
               height={500}
               className='w-screen max-w-xl lg:max-w-2xl h-screen max-h-[22rem] lg:max-h-[30rem]'
+              priority
             />
           </div>
           <div className='flex items-center justify-center max-w-xl mx-auto'>

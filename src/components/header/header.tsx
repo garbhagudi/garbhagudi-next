@@ -146,15 +146,6 @@ const Nav = () => {
                   <div>{items.option}</div>
                 </div>
               ))}
-              <Link
-                href={'/contact/enquiry'}
-                target={'_blank'}
-                rel='noreferrer'
-                onClick={() => setIsOpen(!isOpen)}
-                className='block px-2 py-2 text-opacity-90 text-sm rounded-md font-semibold cursor-pointer text-gray-800 dark:text-gray-200 hover:bg-gg-500 dark:hover:bg-gg-400 hover:text-white dark:hover:text-gray-800 font-content'
-              >
-                Book an Appointment
-              </Link>
             </div>
           </div>
         </Transition>
