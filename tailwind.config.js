@@ -10,12 +10,7 @@ module.exports = {
   darkMode: 'class', // or 'media'
   plugins: [require('@headlessui/tailwindcss')],
   theme: {
-    extend: {
-      backgroundImage: {
-        celebrationImage:
-          "url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1669459462/Banner/cute-christmas-background-with-bokeh_oicilc.webp')",
-      },
-    },
+    extend: {},
     screens: {
       sm: '640px',
       md: '768px',
@@ -435,7 +430,6 @@ module.exports = {
       heading: 'B612',
       content: 'Nunito',
       benne: 'Benne',
-      roboto: 'Roboto',
       lexend: 'Lexend',
     },
     fontSize: {

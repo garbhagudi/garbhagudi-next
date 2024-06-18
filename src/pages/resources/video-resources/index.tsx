@@ -74,7 +74,7 @@ const IndexPage = ({
     by: string
   ) => {
     return (
-      <div className='flex items-center justify-start font-roboto pb-4 md:pb-0 border-b md:border-none'>
+      <div className='flex items-center justify-start font-sans pb-4 md:pb-0 border-b md:border-none'>
         <img
           src={image}
           alt={label}
@@ -107,7 +107,7 @@ const IndexPage = ({
     by: string
   ) => {
     return (
-      <div className='flex items-center justify-start font-roboto'>
+      <div className='flex items-center justify-start font-sans'>
         <img
           src={image}
           alt={label}
@@ -140,7 +140,7 @@ const IndexPage = ({
     by: string
   ) => {
     return (
-      <div className='flex items-center justify-start font-roboto'>
+      <div className='flex items-center justify-start font-sans'>
         <img
           src={image}
           alt={label}
@@ -173,7 +173,7 @@ const IndexPage = ({
     by: string
   ) => {
     return (
-      <div className='flex items-center justify-start font-roboto'>
+      <div className='flex items-center justify-start font-sans'>
         <img
           src={image}
           alt={label}
@@ -284,10 +284,10 @@ const IndexPage = ({
                       return (
                         url === snippet.resourceId.videoId && (
                           <div key={id}>
-                            <div className='mt-2 ml-1 text-xl font-medium font-roboto max-w-2xl'>
+                            <div className='mt-2 ml-1 text-xl font-medium font-sans max-w-2xl'>
                               {title}
                             </div>
-                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-roboto'>
+                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-sans'>
                               <div>Added: </div>
                               <div>
                                 {moment(`${snippet.publishedAt}`)
@@ -301,7 +301,7 @@ const IndexPage = ({
                     })}
                     <div className='mt-4'>
                       <Link href='https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1'>
-                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-roboto'>
+                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-sans'>
                           Subscribe
                         </div>
                       </Link>
@@ -356,10 +356,10 @@ const IndexPage = ({
                       return (
                         url2 === snippet.resourceId.videoId && (
                           <div key={id}>
-                            <div className='mt-2 ml-1 text-xl font-medium font-roboto max-w-2xl'>
+                            <div className='mt-2 ml-1 text-xl font-medium font-sans max-w-2xl'>
                               {title}
                             </div>
-                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-roboto'>
+                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-sans'>
                               <div>Added: </div>
                               <div>
                                 {moment(`${snippet.publishedAt}`)
@@ -373,7 +373,7 @@ const IndexPage = ({
                     })}
                     <div className='mt-4'>
                       <Link href='https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1'>
-                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-roboto'>
+                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-sans'>
                           Subscribe
                         </div>
                       </Link>
@@ -428,10 +428,10 @@ const IndexPage = ({
                       return (
                         url3 === snippet.resourceId.videoId && (
                           <div key={id}>
-                            <div className='mt-2 ml-1 text-xl font-medium font-roboto max-w-2xl'>
+                            <div className='mt-2 ml-1 text-xl font-medium font-sans max-w-2xl'>
                               {title}
                             </div>
-                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-roboto'>
+                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-sans'>
                               <div>Added: </div>
                               <div>
                                 {moment(`${snippet.publishedAt}`)
@@ -445,7 +445,7 @@ const IndexPage = ({
                     })}
                     <div className='mt-4'>
                       <Link href='https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1'>
-                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-roboto'>
+                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-sans'>
                           Subscribe
                         </div>
                       </Link>
@@ -500,10 +500,10 @@ const IndexPage = ({
                       return (
                         url4 === snippet.resourceId.videoId && (
                           <div key={id}>
-                            <div className='mt-2 ml-1 text-xl font-medium font-roboto max-w-2xl'>
+                            <div className='mt-2 ml-1 text-xl font-medium font-sans max-w-2xl'>
                               {title}
                             </div>
-                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-roboto'>
+                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-sans'>
                               <div>Added: </div>
                               <div>
                                 {moment(`${snippet.publishedAt}`)
@@ -517,7 +517,7 @@ const IndexPage = ({
                     })}
                     <div className='mt-4'>
                       <Link href='https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1'>
-                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-roboto'>
+                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-sans'>
                           Subscribe
                         </div>
                       </Link>
