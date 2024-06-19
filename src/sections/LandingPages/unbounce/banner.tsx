@@ -14,7 +14,7 @@ const Banner = () => {
               alt='Banner Image'
               width={500}
               height={500}
-              className='w-screen max-w-xl lg:max-w-2xl h-auto lg:max-h-[30rem]'
+              className='w-auto h-auto lg:max-h-[30rem]'
               priority
             />
           </div>
