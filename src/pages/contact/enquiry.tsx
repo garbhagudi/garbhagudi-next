@@ -55,6 +55,9 @@ const IndexPage = (props: Props) => {
           className='md:max-w-2xl mt-4 mx-auto'
         />
         <div className='bg-gray-800 max-w-2xl mx-auto'>
+          <h1 className='text-3xl text-white text-center font-lexend pt-4'>
+            Enquiry Form
+          </h1>
           <Form />
         </div>
       </div>

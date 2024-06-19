@@ -226,7 +226,7 @@ const CareerOrBaby = (props: Props) => {
             <img
               className='object-cover w-full h-56 rounded-3xl shadow-lg sm:h-64 md:h-80 lg:h-96 transition-shadow duration-300 hover:shadow-xl'
               src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/ART_The_Real_Boon_-min_lqxqex.jpg'
-              alt=''
+              alt='ART - The Real Boon!'
             />
           </div>
         </div>
@@ -321,7 +321,7 @@ const CareerOrBaby = (props: Props) => {
           height='1'
           width='1'
           style={{ display: 'none' }}
-          alt=''
+          alt='facebookpixel'
           src='https://px.ads.linkedin.com/collect/?pid=2711450&conversionId=7808026&fmt=gif'
         />
       </div>

@@ -30,7 +30,7 @@ const Faq = ({ branch, doctors }) => {
                             <Image
                               className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
                               src={item?.image?.url}
-                              alt={item?.imageAlt}
+                              alt={item?.name}
                               width={500}
                               height={500}
                             />
@@ -40,9 +40,6 @@ const Faq = ({ branch, doctors }) => {
                               <h3 className='text-brandDark font-content'>
                                 {item?.name}
                               </h3>
-                              {/* <p className='text-brandPurpleDark text-xs font-content'>
-                                {item?.qualification}
-                              </p> */}
                               <p className='text-brandPink text-xs font-content'>
                                 {item?.designation}
                               </p>
@@ -89,7 +86,7 @@ const Faq = ({ branch, doctors }) => {
                             </Link>
                           </div>
                         </div>
-                      ),
+                      )
                   )}
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 mt-4 gap-4'>

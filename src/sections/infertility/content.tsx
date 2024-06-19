@@ -50,10 +50,10 @@ export const InfertilityTreatmentProcess = () => {
   return (
     <div className='max-w-7xl mx-auto px-3 text-gray-800 dark:text-gray-200'>
       <div className='py-3 lg:py-8'>
-        <h2 className='font-heading text-3xl font-bold py-3'>
+        <div className='font-heading text-3xl font-bold py-3'>
           What Is The Process Of Infertility Treatment in Bangalore? -
           Navigating the Path to Parenthood
-        </h2>
+        </div>
         <div className='font-content space-y-4'>
           <div>
             At GarbhaGudi IVF Centre, a leading{' '}
@@ -96,10 +96,10 @@ export const WhyGarbhaGudi = () => {
   return (
     <div className='max-w-7xl mx-auto px-3 text-gray-800 dark:text-gray-200'>
       <div className='py-3 lg:pt-8'>
-        <h2 className='font-heading text-3xl font-bold py-3'>
+        <div className='font-heading text-3xl font-bold py-3'>
           Why GarbhaGudi Is The Best Fertility Hospital In Bangalore? - Leading
           the Way in Infertility Treatment
-        </h2>
+        </div>
         <div className='font-content'>
           <div className='pb-4'>
             GarbhaGudi IVF Centre stands as the epitome of excellence, making it
@@ -156,9 +156,9 @@ export const WhenDiagnose = () => {
   return (
     <div className='max-w-7xl mx-auto px-3 text-gray-800 dark:text-gray-200'>
       <div className='py-3 lg:py-8'>
-        <h2 className='font-heading text-3xl font-bold py-3'>
+        <div className='font-heading text-3xl font-bold py-3'>
           When to Diagnose for Infertility Treatment? - Taking the First Step
-        </h2>
+        </div>
         <div>
           <div className='pb-4'>
             For couples facing challenges in conceiving, seeking professional
@@ -197,10 +197,10 @@ export const WhenDiagnose = () => {
 export const InfertilityTreatmentOptions = () => {
   return (
     <div className='max-w-7xl mx-auto px-3 text-gray-800 dark:text-gray-200'>
-      <h2 className='text-3xl font-heading font-bold pb-3 lg:pb-5'>
+      <div className='text-3xl font-heading font-bold pb-3 lg:pb-5'>
         Best-in-class Infertility Treatment in Bangalore - Enhancing Your Path
         to Parenthood
-      </h2>
+      </div>
       <div className='flex flex-col lg:flex-row items-center justify-center max-w-7xl mx-auto pb-4 lg:pb-8'>
         <div className='lg:w-1/2 flex items-center justify-center rounded-lg overflow-hidden h-full'>
           <img
@@ -246,10 +246,10 @@ export const Causes = () => {
     <div>
       <div className='flex flex-col lg:flex-row items-center justify-center max-w-7xl mx-auto px-3 py-8 lg:py-10'>
         <div className='lg:w-1/2 pr-0 lg:pr-8 font-content text-gray-800 dark:text-gray-200'>
-          <h2 className='text-3xl font-bold mb-4 font-heading'>
+          <div className='text-3xl font-bold mb-4 font-heading'>
             Causes of Infertility - Understanding the Factors Affecting
             Fertility
-          </h2>
+          </div>
           <p className=''>
             Infertility can be a complex issue, influenced by various factors
             that affect both men and women. Some common causes of infertility
