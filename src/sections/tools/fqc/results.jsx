@@ -11,7 +11,7 @@ export const Average = () => {
           indicates that it is not long before the fertility levels will drop
           quickly. Such women are advised to plan for a child immediately and if
           there is no conception within 6 months, they need to meet up with a
-          fertility expert and take the doctor’s advice.
+          fertility expert and take the doctor&apos;s advice.
         </p>
         <p className='mt-2'>
           In-principle, women with Average Fertility should be able to conceive.
@@ -53,8 +53,8 @@ export const Best = () => {
           career reasons, personal reasons. It is recommended that such women to
           go for oocyte freezing. The technology of oocyte freezing is improving
           quickly and eggs may be frozen for years. The frozen “best” oocytes
-          can be used for fertilization with the husband’s sperms at a later
-          point of time.
+          can be used for fertilization with the husband&apos;s sperms at a
+          later point of time.
         </p>
         <p className='mt-2'>
           If a lady has a fertility quotient of “Best Fertility” and is still
@@ -96,8 +96,8 @@ export const Good = () => {
           career reasons, personal reasons. It is recommended that such women to
           go for oocyte freezing. The technology of oocyte freezing is improving
           quickly and eggs may be frozen for years. The frozen “good” oocytes
-          can be used for fertilization with the husband’s sperms at a later
-          point of time.
+          can be used for fertilization with the husband&apos;s sperms at a
+          later point of time.
         </p>
         <p className='mt-2'>
           One important point to note here is that a lady with a fertility
