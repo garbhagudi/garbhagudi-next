@@ -7,6 +7,7 @@ import Head from 'next/head';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 import TagManager from 'react-gtm-module';
+import RootLayout from 'components/layout';
 
 // Use dynamic imports for non-essential components
 const Footer = dynamic(() => import('components/footer/footer'));
@@ -41,7 +42,7 @@ function MyApp({ Component, pageProps }) {
     };
   }, [router.events]);
   return (
-    <>
+    <RootLayout>
       <Head>
         {router.asPath.endsWith('/index') ? (
           <>
@@ -99,7 +100,7 @@ function MyApp({ Component, pageProps }) {
         )}
       </ThemeProvider>
       <SpeedInsights />
-    </>
+    </RootLayout>
   );
 }
 
