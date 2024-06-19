@@ -5,7 +5,7 @@ import offerBanner from 'assets/landing-page/offer-banner.webp';
 
 const Banner = () => {
   return (
-    <div className='bg-red-950'>
+    <div className=''>
       <div className='max-w-7xl mx-auto lg:px-6'>
         <div className='grid lg:grid-cols-2 pt-8 lg:pt-16'>
           <div className='flex items-end justify-center pb-6 lg:pb-0'>
@@ -14,7 +14,7 @@ const Banner = () => {
               alt='Banner Image'
               width={500}
               height={500}
-              className='w-screen max-w-xl lg:max-w-2xl h-screen max-h-[22rem] lg:max-h-[30rem]'
+              className='w-screen max-w-xl lg:max-w-2xl h-auto lg:max-h-[30rem]'
               priority
             />
           </div>
@@ -23,7 +23,7 @@ const Banner = () => {
               <h4 className='text-3xl lg:text-5xl font-lexend text-gg-500 font-bold'>
                 Bengaluru's Most Trusted Fertility Center
               </h4>
-              <p className='pt-4 font-lexend text-lg text-white'>
+              <p className='pt-4 font-lexend text-lg text-gray-900'>
                 GarbhaGudi IVF Centre has been awarded as the Best IVF &
                 Fertility Centre in Bangalore by multiple organizations.
               </p>

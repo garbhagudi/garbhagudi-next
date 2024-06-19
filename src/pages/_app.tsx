@@ -41,31 +41,18 @@ function MyApp({ Component, pageProps }) {
       router.events.off('routeChangeError', end);
     };
   }, [router.events]);
+  const path = router.asPath.endsWith('/index') ? '' : router.asPath;
   return (
     <RootLayout>
       <Head>
-        {router.asPath.endsWith('/index') ? (
-          <>
-            <link
-              rel='alternative'
-              href={`https://www.garbhagudi.com`}
-              hrefLang='en-us'
-            />
-            <link rel='canonical' href={`https://www.garbhagudi.com`} />
-          </>
-        ) : (
-          <>
-            <link
-              rel='alternative'
-              href={`https://www.garbhagudi.com${router.asPath}`}
-              hrefLang='en-us'
-            />
-            <link
-              rel='canonical'
-              href={`https://www.garbhagudi.com${router.asPath}`}
-            />
-          </>
-        )}
+        <>
+          <link
+            rel='alternative'
+            href={`https://www.garbhagudi.com${path}`}
+            hrefLang='en-us'
+          />
+          <link rel='canonical' href={`https://www.garbhagudi.com${path}`} />
+        </>
         <meta
           name='viewport'
           content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover'
@@ -83,9 +70,8 @@ function MyApp({ Component, pageProps }) {
           <>
             <div className='selection:bg-gg-500 selection:text-white dark:bg-gray-800 min-h-screen'>
               {shouldDisplay && <Nav />}
-              <main className=''>
-                <Component {...pageProps} />
-              </main>
+              <Component {...pageProps} />
+
               <Footer />
             </div>
           </>

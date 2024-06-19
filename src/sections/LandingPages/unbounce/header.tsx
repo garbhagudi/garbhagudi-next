@@ -12,7 +12,7 @@ const Header = () => {
             href='callto:+919071234006'
             className='px-3 py-2 bg-gg-500 font-lexend text-white rounded-md text-sm font-semibold hover:bg-gg-600 transition duration-300 ease-in-out'
           >
-            Call Us
+            Contact Us
           </Link>
         </div>
       </div>
