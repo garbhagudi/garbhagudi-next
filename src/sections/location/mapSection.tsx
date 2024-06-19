@@ -84,7 +84,7 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
                         <Image
                           className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
                           src={item?.image?.url}
-                          alt={item?.imageAlt}
+                          alt={item?.name}
                           width={500}
                           height={500}
                         />

@@ -48,7 +48,7 @@ const IvfCost = () => {
       </Head>
       <Image
         src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1670318557/Misc/5564522_ef0kux.webp'
-        alt=''
+        alt='background-image'
         className='h-full object-cover opacity-80 blur-lg fixed -z-20'
         width={1920}
         height={1080}

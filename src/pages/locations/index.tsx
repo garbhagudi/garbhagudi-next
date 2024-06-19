@@ -71,7 +71,7 @@ const Locations = ({ branches }) => {
                 <div className='overflow-hidden'>
                   <Image
                     src={items?.branchPicture?.url}
-                    alt={items?.branch}
+                    alt={items?.title}
                     width={480}
                     height={100}
                     className='hover:scale-125 transition-all duration-500 overflow-hidden'

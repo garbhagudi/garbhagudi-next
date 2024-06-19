@@ -75,6 +75,36 @@ const nextConfig = {
         destination: '/treatments/:slug',
         permanent: true,
       },
+      {
+        source: '/features/Holistic%20Approach',
+        destination: '/features/holistic-approach',
+        permanent: true,
+      },
+      {
+        source: '/features/Affordable%20Treatments',
+        destination: '/features/affordable-treatments',
+        permanent: true,
+      },
+      {
+        source: '/features/Financing%20Options',
+        destination: '/features/financing-options',
+        permanent: true,
+      },
+      {
+        source: '/features/Success%20Rates%20of%20IVF',
+        destination: '/features/success-rates-of-ivf',
+        permanent: true,
+      },
+      {
+        source: '/features/Treatment%20Protocols',
+        destination: '/features/treatment-protocols',
+        permanent: true,
+      },
+      {
+        source: '/features/World%20Class%20Fertility%20Care',
+        destination: '/features/world-class-fertility-care',
+        permanent: true,
+      },
     ];
   },
 };
