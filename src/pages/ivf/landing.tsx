@@ -7,6 +7,8 @@ import Offer from 'sections/LandingPages/unbounce/offer';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Head from 'next/head';
+import Header from 'sections/LandingPages/unbounce/header';
+import FloatWhatsApp from 'components/FloatWhatsapp';
 
 // Dynamic imports
 const Services = dynamic(
@@ -75,6 +77,7 @@ const Landing = ({ doctors }) => {
         />
       </Head>
       <>
+        <Header />
         <Offer />
         <Banner />
         <WhyGarbhaGudi />
@@ -84,6 +87,7 @@ const Landing = ({ doctors }) => {
         <Doctors doctors={doctors} />
         <Testimonial />
         <Faq />
+        <FloatWhatsApp />
         <EndForm />
       </>
     </div>
@@ -96,7 +100,7 @@ export const getStaticProps = async () => {
   const { data } = await apolloClient.query({
     query: gql`
       {
-        doctors(orderBy: order_ASC) {
+        doctors(orderBy: order_ASC, first: 8) {
           id
           name
           designation
@@ -119,6 +123,5 @@ export const getStaticProps = async () => {
       doctors: data.doctors,
       fallback: true,
     },
-    revalidate: 180,
   };
 };

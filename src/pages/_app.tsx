@@ -16,11 +16,9 @@ const Loading = dynamic(() => import('components/Loading'));
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const noHeaderPaths = ['/ivf/landing'];
-  const shouldDisplayHeader = !noHeaderPaths.includes(router.pathname);
+  const noRenderPaths = ['/ivf/landing'];
+  const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
-
-  // const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
 
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-5T77DVZ' });
@@ -83,8 +81,7 @@ function MyApp({ Component, pageProps }) {
         ) : (
           <>
             <div className='selection:bg-gg-500 selection:text-white dark:bg-gray-800 min-h-screen'>
-              {/* <Alert /> */}
-              {shouldDisplayHeader && <Nav />}
+              {shouldDisplay && <Nav />}
               <main className=''>
                 <Component {...pageProps} />
               </main>
@@ -92,14 +89,14 @@ function MyApp({ Component, pageProps }) {
             </div>
           </>
         )}
-        {/* <FloatPhone /> */}
-        <Salesiq
-          widgetCode={
-            '93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
-          }
-          domain={'https://salesiq.zoho.com/widget'}
-        />
-        {/* <ChatComponent apiKey={apiKey} /> */}
+        {shouldDisplay && (
+          <Salesiq
+            widgetCode={
+              '93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
+            }
+            domain={'https://salesiq.zoho.com/widget'}
+          />
+        )}
       </ThemeProvider>
       <SpeedInsights />
     </>
