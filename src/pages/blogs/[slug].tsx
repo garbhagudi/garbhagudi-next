@@ -19,6 +19,8 @@ export const getStaticProps = async ({ params }) => {
         blog(where: { slug: $slug }) {
           id
           title
+          metaTitle
+          metaDescription
           slug
           image {
             url
@@ -72,7 +74,10 @@ export async function getStaticPaths() {
 }
 
 const Blog = ({ blog }) => {
-  const title = `${blog?.title}`;
+  const title = `${blog?.metaTitle || blog?.title}`;
+  const description = `${
+    blog?.metaDescription || blog?.content?.text.slice(0, 160)
+  }`;
   const router = useRouter();
 
   function addBlogJsonLd() {
@@ -85,7 +90,7 @@ const Blog = ({ blog }) => {
           "@type": "WebPage",
           "@id": "https://garbhagudi.com/blogs/${blog?.slug}"
         },
-        "headline": "${blog?.title}",
+        "headline": "${blog?.metaTitle || blog?.title}",
         "description": "${blog?.content?.text.slice(0, 160)}",
         "image": {
           "@type": "ImageObject",
@@ -123,7 +128,7 @@ const Blog = ({ blog }) => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={title} />
-        <meta name='description' content={blog?.content?.text.slice(0, 160)} />
+        <meta name='description' content={description} />
 
         {/* Ld+JSON Data */}
 
@@ -134,13 +139,10 @@ const Blog = ({ blog }) => {
         />
 
         {/* Open Graph / Facebook */}
-        <meta property='og:title' content={blog?.title} />
+        <meta property='og:title' content={title} />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
-        <meta
-          property='og:description'
-          content={blog?.content?.text.slice(0, 160)}
-        />
+        <meta property='og:description' content={description} />
         <meta property='og:type' content='article' />
         <meta
           property='og:article:published_time'
@@ -153,12 +155,9 @@ const Blog = ({ blog }) => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta
           name='twitter:title'
-          content={`${blog?.title} | GarbhaGudi IVF Centre`}
+          content={`${title} | GarbhaGudi IVF Centre`}
         />
-        <meta
-          name='twitter:description'
-          content={blog?.content?.text.slice(0, 160)}
-        />
+        <meta name='twitter:description' content={description} />
         <meta name='twitter:image' content={blog?.image?.url} />
       </Head>
       <BreadCrumbs
