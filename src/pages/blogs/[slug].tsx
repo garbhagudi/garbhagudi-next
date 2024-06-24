@@ -21,6 +21,7 @@ export const getStaticProps = async ({ params }) => {
           title
           metaTitle
           metaDescription
+          metaKeywords
           slug
           image {
             url
@@ -78,6 +79,7 @@ const Blog = ({ blog }) => {
   const description = `${
     blog?.metaDescription || blog?.content?.text.slice(0, 160)
   }`;
+  const keywords = `${blog?.metaKeywords || blog?.title}`;
   const router = useRouter();
 
   function addBlogJsonLd() {
@@ -129,6 +131,7 @@ const Blog = ({ blog }) => {
         <title>{title}</title>
         <meta name='title' content={title} />
         <meta name='description' content={description} />
+        <meta name='keywords' content={keywords} />
 
         {/* Ld+JSON Data */}
 
