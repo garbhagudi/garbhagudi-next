@@ -17,10 +17,10 @@ const CountdownTimer = ({ dateTime }) => {
     if (timeDifference > 0) {
       const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
-        (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
       const minutes = Math.floor(
-        (timeDifference % (1000 * 60 * 60)) / (1000 * 60),
+        (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
       );
       const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
@@ -37,7 +37,7 @@ const CountdownTimer = ({ dateTime }) => {
     <div>
       <div className='flex items-center mt-3 space-x-3 font-content'>
         <div className='flex items-center justify-center flex-col text-sm'>
-          <div className='text-3xl font-mono w-14 h-14 flex items-center justify-center border shadow-md shadow-white'>
+          <div className='text-3xl font-lexend w-14 h-14 flex items-center text-gg-500 justify-center border rounded-md shadow-md shadow-white'>
             {countdown.days}
           </div>{' '}
           Days
@@ -46,7 +46,7 @@ const CountdownTimer = ({ dateTime }) => {
           :
         </div>
         <div className='flex items-center justify-center flex-col text-sm'>
-          <div className='text-3xl font-mono w-14 h-14 flex items-center justify-center border shadow-md shadow-white'>
+          <div className='text-3xl font-lexend w-14 h-14 flex items-center text-gg-500 justify-center border rounded-md shadow-md shadow-white'>
             {countdown.hours}
           </div>{' '}
           Hours
@@ -55,7 +55,7 @@ const CountdownTimer = ({ dateTime }) => {
           :
         </div>
         <div className='flex items-center justify-center flex-col text-sm'>
-          <div className='text-3xl font-mono w-14 h-14 flex items-center justify-center border shadow-md shadow-white'>
+          <div className='text-3xl font-lexend w-14 h-14 flex items-center text-gg-500 justify-center border rounded-md shadow-md shadow-white'>
             {countdown.minutes}
           </div>{' '}
           Minutes
@@ -64,7 +64,7 @@ const CountdownTimer = ({ dateTime }) => {
           :
         </div>
         <div className='flex items-center justify-center flex-col text-sm'>
-          <div className='text-3xl font-mono w-14 h-14 flex items-center justify-center border shadow-md shadow-white'>
+          <div className='text-3xl font-lexend w-14 h-14 flex items-center text-gg-500 justify-center border rounded-md shadow-md shadow-white'>
             {countdown.seconds}
           </div>{' '}
           Seconds
