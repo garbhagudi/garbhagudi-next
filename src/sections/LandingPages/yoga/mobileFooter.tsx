@@ -3,8 +3,8 @@ import { FaRupeeSign, FaUserGroup } from 'react-icons/fa6';
 
 const MobileFooter = () => {
   return (
-    <div className='max-w-7xl mx-auto lg:hidden fixed bottom-0 w-full'>
-      <div className='max-w-3xl px-4 bg-gray-300/90 py-3 space-y-1.5'>
+    <div className='mx-auto xl:hidden fixed bottom-0 w-full'>
+      <div className='px-4 bg-gray-300/90 py-3 space-y-1.5'>
         <div className='flex items-center justify-between'>
           <div className='text-sm uppercase text-center font-lexend'>
             21 Day Yoga Challenge

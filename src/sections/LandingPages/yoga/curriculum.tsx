@@ -7,7 +7,7 @@ const Curriculum = () => {
   return (
     <div id='curriculum'>
       <div className='max-w-7xl mx-auto pb-16 px-4'>
-        <div className='max-w-3xl'>
+        <div className='xl:max-w-3xl'>
           <div className='text-3xl sm:text-4xl font-bold font-lexend py-8'>
             Curriculum For The 21 Days
           </div>

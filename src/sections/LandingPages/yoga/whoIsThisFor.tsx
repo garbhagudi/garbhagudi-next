@@ -8,7 +8,7 @@ const WhoIsThisFor = () => {
         <div className='text-4xl font-bold font-lexend pb-8'>
           Who is this for?
         </div>
-        <div className='max-w-3xl grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-10'>
+        <div className='xl:max-w-3xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10'>
           {yogaWorkshopDetails.map((item) => (
             <div key={item.category} className='flex flex-col gap-4'>
               <div className=''>

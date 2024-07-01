@@ -6,7 +6,7 @@ const Faq = () => {
   const [activeIndex1, setActiveIndex1] = React.useState(1);
   return (
     <div className='max-w-7xl mx-auto px-4'>
-      <div className='max-w-3xl'>
+      <div className='xl:max-w-3xl'>
         <h2 className='pt-10 lg:pt:16 text-3xl lg:text-4xl font-heading font-bold text-center text-gray-800 dark:text-white'>
           Frequently asked questions
         </h2>

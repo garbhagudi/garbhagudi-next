@@ -7,7 +7,7 @@ const Doctor = () => {
         <div className='text-4xl font-bold font-lexend py-8'>
           About the Hosts
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-3 max-w-3xl gap-5'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 xl:max-w-3xl gap-5'>
           {doctors.map((doctor) => (
             <div
               key={doctor.id}

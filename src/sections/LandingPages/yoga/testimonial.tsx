@@ -13,7 +13,7 @@ const Testimonial = () => {
   };
   return (
     <div className='max-w-7xl mx-auto scroll-m-16' id='testimonial'>
-      <section className='pb-16 max-w-3xl'>
+      <section className='pb-16 xl:max-w-3xl'>
         <FcGoogle className='h-14 w-14 text-center mx-auto' />
         <div className='font-sans font-semibold text-center dark:text-gray-200'>
           <MdOutlineRateReview className='inline-block mr-2' />

@@ -18,7 +18,7 @@ const Floating: React.FC = () => {
         let rightValue = 'right-36'; // Default value
 
         if (zoomLevel > 1) {
-          rightValue = 'right-10';
+          rightValue = 'right-1';
         } else if (screenWidth > 1920) {
           rightValue = 'right-96';
         } else if (screenWidth > 1280) {
@@ -27,12 +27,7 @@ const Floating: React.FC = () => {
           rightValue = 'right-32';
         }
 
-        element.classList.remove(
-          'right-10',
-          'right-32',
-          'right-48',
-          'right-96'
-        );
+        element.classList.remove('right-1', 'right-32', 'right-48', 'right-96');
         element.classList.add(rightValue);
       }
     };
@@ -46,32 +41,37 @@ const Floating: React.FC = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const floatingElement = document.getElementById('yoga-challenge');
-      const heroElement = document.getElementById('hero-section');
+  const adjustZIndex = () => {
+    const floatingElement = document.getElementById('floating-window');
+    const heroElement = document.getElementById('hero-section');
 
-      if (floatingElement && heroElement) {
-        const heroBottom = heroElement.getBoundingClientRect().bottom;
-        if (heroBottom < 0) {
-          floatingElement.style.zIndex = '10'; // Bring to front
-        } else {
-          floatingElement.style.zIndex = '-10'; // Stay behind
-        }
+    if (floatingElement && heroElement) {
+      const heroBottom = heroElement.getBoundingClientRect().bottom;
+
+      if (heroBottom < 0) {
+        floatingElement.style.zIndex = '10'; // Bring to front
+      } else {
+        floatingElement.style.zIndex = '-10'; // Stay behind
       }
-    };
+    }
+  };
 
-    window.addEventListener('scroll', handleScroll);
+  useEffect(() => {
+    // Adjust z-index on initial load
+    adjustZIndex();
+
+    // Adjust z-index on scroll
+    window.addEventListener('scroll', adjustZIndex);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', adjustZIndex);
     };
   }, []);
 
   return (
     <div
-      id='yoga-challenge'
-      className='fixed hidden lg:flex top-36 bg-gg-50 p-4 rounded-lg shadow-lg right-36 w-96 h-96 overflow-hidden'
+      id='floating-window'
+      className='fixed hidden xl:flex top-36 bg-gg-50 p-4 rounded-lg shadow-lg right-36 w-96 h-96 overflow-hidden'
     >
       <div className='max-w-xl'>
         <div className='flex flex-col items-start justify-start'>

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <div className='bg-gray-50 z-50' id='hero-section'>
+    <div className='bg-white z-50' id='hero-section'>
       <div className='max-w-7xl mx-auto px-4 pb-12 lg:py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
           <div className='flex items-start justify-center flex-col font-lexend py-10 space-y-4'>

@@ -7,7 +7,7 @@ const Benefits = () => {
         <div className='text-3xl sm:text-4xl font-bold font-lexend py-8'>
           Benefits You Will Gain
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-2 max-w-3xl'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 xl:max-w-3xl'>
           {benefits.map((benefit) => (
             <div
               key={benefit.id}

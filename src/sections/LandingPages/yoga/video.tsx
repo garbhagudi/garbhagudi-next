@@ -29,7 +29,7 @@ const Video = ({ testimonials }: testimonialProps) => {
   return (
     <div className=''>
       <div className='max-w-7xl mx-auto py-8'>
-        <div className='max-w-3xl'>
+        <div className='xl:max-w-3xl'>
           <h2 className='text-2xl lg:text-4xl text-center font-extrabold text-gray-800 font-heading flex items-center justify-center'>
             Testimonials
           </h2>

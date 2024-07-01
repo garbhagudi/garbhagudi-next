@@ -21,7 +21,7 @@ const EventDetails = () => {
   return (
     <div>
       <div className='max-w-7xl mx-auto px-4 py-16'>
-        <div className='grid grid-cols-2 lg:grid-cols-4 max-w-3xl gap-x-3 font-lexend'>
+        <div className='grid grid-cols-2 lg:grid-cols-4 xl:max-w-3xl gap-x-3 font-lexend'>
           {eventHeader.map((item) => (
             <div
               key={item.id}
@@ -34,7 +34,7 @@ const EventDetails = () => {
             </div>
           ))}
         </div>
-        <div className='max-w-3xl py-8'>
+        <div className='xl:max-w-3xl py-8'>
           <div className='text-3xl lg:text-4xl font-bold font-lexend my-8'>
             Whats Included?
           </div>
