@@ -1,6 +1,5 @@
 import React from 'react';
 import Logo from 'components/assets/logo';
-import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
 
 const Header = () => {
