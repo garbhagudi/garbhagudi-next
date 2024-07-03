@@ -6,12 +6,12 @@ const Faq = () => {
   const [activeIndex1, setActiveIndex1] = React.useState(1);
   return (
     <div>
-      <div className='bg-fuchsia-50 dark:bg-gray-700 mt-6'>
-        <h2 className='pt-10 lg:pt:16 text-3xl lg:text-4xl font-heading font-bold text-center text-gray-800 dark:text-gray-200'>
+      <div className='mt-6 bg-fuchsia-50 dark:bg-gray-700'>
+        <h2 className='lg:pt:16 pt-10 text-center font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 lg:text-4xl'>
           Frequently asked questions
         </h2>
-        <div className='pb-10 lg:pb-16 px-3'>
-          <div className='flex flex-col justify-center max-w-6xl mx-auto mt-10'>
+        <div className='px-3 pb-10 lg:pb-16'>
+          <div className='mx-auto mt-10 flex max-w-6xl flex-col justify-center'>
             {data.map((items) => (
               <AccordionLayout
                 title={items.Question}
@@ -37,7 +37,7 @@ const data = [
     id: 1,
     Question: 'What is the average IVF cost in Bangalore?',
     Answer: (
-      <p className='md:pl-0 md:col-span-7'>
+      <p className='md:col-span-7 md:pl-0'>
         The cost of in vitro fertilization (IVF) can vary widely depending on
         various factors such as the location of the treatment, the specific IVF
         protocol being used, and the individual patient's medical history and
@@ -61,7 +61,7 @@ const data = [
     id: 2,
     Question: 'IVF Treatment Centres in Bangalore?',
     Answer: (
-      <div className='md:pl-0 md:col-span-7'>
+      <div className='md:col-span-7 md:pl-0'>
         GarbhaGudi is a place where dreams come alive, hopes never fade, and
         possibilities never end. We strive tirelessly to assist you to treasure
         the golden moment of holding your little bundles of joy. <br />
@@ -73,7 +73,7 @@ const data = [
           <li>
             <Link
               href={'/locations/hanumanthanagar'}
-              className='text-brandPurpleDark hover:text-brandPink hover:underlink'
+              className='hover:underlink text-brandPurpleDark hover:text-brandPink'
             >
               HanumanthaNagar
             </Link>
@@ -81,7 +81,7 @@ const data = [
           <li>
             <Link
               href={'/locations/kalyan-nagar'}
-              className='text-brandPurpleDark hover:text-brandPink hover:underlink'
+              className='hover:underlink text-brandPurpleDark hover:text-brandPink'
             >
               Kalyan Nagar
             </Link>
@@ -89,7 +89,7 @@ const data = [
           <li>
             <Link
               href={'/locations/electronic-city'}
-              className='text-brandPurpleDark hover:text-brandPink hover:underlink'
+              className='hover:underlink text-brandPurpleDark hover:text-brandPink'
             >
               Electronic City
             </Link>
@@ -97,7 +97,7 @@ const data = [
           <li>
             <Link
               href={'/locations/jayanagar'}
-              className='text-brandPurpleDark hover:text-brandPink hover:underlink'
+              className='hover:underlink text-brandPurpleDark hover:text-brandPink'
             >
               Jayanagar
             </Link>
@@ -105,7 +105,7 @@ const data = [
           <li>
             <Link
               href={'/locations/marathahalli'}
-              className='text-brandPurpleDark hover:text-brandPink hover:underlink'
+              className='hover:underlink text-brandPurpleDark hover:text-brandPink'
             >
               Marathahalli
             </Link>
@@ -119,7 +119,7 @@ const data = [
     Question:
       'What is Success rate and Risk percentage involved in IVF treatment?',
     Answer: (
-      <p className='md:pl-0 md:col-span-7'>
+      <p className='md:col-span-7 md:pl-0'>
         The success rate of in vitro fertilization (IVF) can vary widely
         depending on several factors, including the patient's age, the cause of
         infertility, and the quality of the embryos. In general, the overall
@@ -149,7 +149,7 @@ const data = [
     Question:
       'What are the additional costs related to IVF Treatment in Bangalore and nearby areas?',
     Answer: (
-      <div className='md:pl-0 md:col-span-7'>
+      <div className='md:col-span-7 md:pl-0'>
         There are several additional costs that can be associated with in vitro
         fertilization (IVF) treatment. These can include:
         <ul className='my-4 space-y-2'>

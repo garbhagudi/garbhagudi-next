@@ -3,9 +3,9 @@ import React from 'react';
 const Risks = () => {
   return (
     <div>
-      <div className='max-w-7xl mx-auto'>
-        <div className='px-3 lg:px-6 pb-10 text-gray-800 dark:text-gray-200'>
-          <h2 className='text-2xl lg:text-3xl font-heading text-center font-bold py-10 '>
+      <div className='mx-auto max-w-7xl'>
+        <div className='px-3 pb-10 text-gray-800 dark:text-gray-200 lg:px-6'>
+          <h2 className='py-10 text-center font-heading text-2xl font-bold lg:text-3xl'>
             Potential Risks of IUI
           </h2>
           <div className='font-content'>
@@ -13,8 +13,8 @@ const Risks = () => {
             minimal risks. However, there are some risk factors associated with
             the procedure:
           </div>
-          <div className='font-content mt-4 px-3'>
-            <ul className='list-outside list-disc ml-2 space-y-3'>
+          <div className='mt-4 px-3 font-content'>
+            <ul className='ml-2 list-outside list-disc space-y-3'>
               <li>
                 <strong>Multiple Pregnancies:</strong> IUI increases the chance
                 of having twins or triplets, which can be associated with risks

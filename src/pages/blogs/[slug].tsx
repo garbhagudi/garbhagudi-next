@@ -174,14 +174,14 @@ const Blog = ({ blog }) => {
         text4={''}
       />
       {blog?.slug ? (
-        <div className='relative py-16 bg-white dark:bg-gray-800 overflow-hidden'>
-          <div className='hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full'>
+        <div className='relative overflow-hidden bg-white py-16 dark:bg-gray-800'>
+          <div className='hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full'>
             <div
-              className='relative h-full text-lg max-w-prose mx-auto'
+              className='relative mx-auto h-full max-w-prose text-lg'
               aria-hidden='true'
             >
               <svg
-                className='absolute top-12 left-full transform translate-x-32'
+                className='absolute left-full top-12 translate-x-32 transform'
                 width={404}
                 height={384}
                 fill='none'
@@ -213,7 +213,7 @@ const Blog = ({ blog }) => {
                 />
               </svg>
               <svg
-                className='absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32'
+                className='absolute right-full top-1/2 -translate-x-32 -translate-y-1/2 transform'
                 width={404}
                 height={384}
                 fill='none'
@@ -245,7 +245,7 @@ const Blog = ({ blog }) => {
                 />
               </svg>
               <svg
-                className='absolute bottom-12 left-full transform translate-x-32'
+                className='absolute bottom-12 left-full translate-x-32 transform'
                 width={404}
                 height={384}
                 fill='none'
@@ -279,26 +279,26 @@ const Blog = ({ blog }) => {
             </div>
           </div>
           <div className='relative px-4 sm:px-6 lg:px-8'>
-            <div className='max-w-7xl mx-auto'>
+            <div className='mx-auto max-w-7xl'>
               <h1>
-                <span className='block text-2xl text-center leading-8 font-bold tracking-tighter text-gray-800 dark:text-gray-200 sm:text-4xl font-heading'>
+                <span className='block text-center font-heading text-2xl font-bold leading-8 tracking-tighter text-gray-800 dark:text-gray-200 sm:text-4xl'>
                   {blog?.title}
                 </span>
               </h1>
               <Link href={`/fertility-experts/${blog?.doctor?.slug}`}>
-                <div className='flex items-center justify-center space-x-4 text-base text-center text-gg-500 dark:text-gray-200 font-semibold tracking-wide uppercase mt-4 font-lexend'>
+                <div className='mt-4 flex items-center justify-center space-x-4 text-center font-lexend text-base font-semibold uppercase tracking-wide text-gg-500 dark:text-gray-200'>
                   <Image
                     src={blog?.doctor?.image?.url}
                     alt={blog?.doctor?.imageAlt || blog?.doctor?.name}
                     width={40}
                     height={40}
-                    className='h-12 w-12 md:h-16 md:w-16 rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'
+                    className='h-12 w-12 rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 md:h-16 md:w-16'
                   />
                   <div>{blog?.doctor?.name}</div>
                 </div>
               </Link>
               <img
-                className='w-full rounded-lg my-8'
+                className='my-8 w-full rounded-lg'
                 src={blog?.image?.url}
                 alt={blog?.title}
               />

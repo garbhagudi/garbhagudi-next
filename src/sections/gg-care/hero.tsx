@@ -24,7 +24,8 @@ const supportLinks = [
       'Now book an appointment with any of your nearest locations of GarbhaGudi IVF Centre, and get the best fertility treatments from our experts!',
     icon: HiCalendar,
     ctaAction: 'Book an Appointment',
-    ctaLink: 'https://medicsprime.in/OnlineAppointment/OnlineAppointment.jsp?enx=%7B%22e%22%3A%22Pv1yAd9b5VMo2DOud8JSJFkU7CzPOXXBQlPNffirhwA6fe2HHci3dR%2BT1cnBNmqH3kNc2wKJoqqIdPgk0Ie7iA%3D%3D%22%2C%22s%22%3A%22f5ec95cc090eb4a5273afdb7946feb74%22%2C%22i%22%3A%22d919f6d46ee942475fcf1bd0928d6b47%22%7D',
+    ctaLink:
+      'https://medicsprime.in/OnlineAppointment/OnlineAppointment.jsp?enx=%7B%22e%22%3A%22Pv1yAd9b5VMo2DOud8JSJFkU7CzPOXXBQlPNffirhwA6fe2HHci3dR%2BT1cnBNmqH3kNc2wKJoqqIdPgk0Ie7iA%3D%3D%22%2C%22s%22%3A%22f5ec95cc090eb4a5273afdb7946feb74%22%2C%22i%22%3A%22d919f6d46ee942475fcf1bd0928d6b47%22%7D',
   },
 ];
 
@@ -32,50 +33,50 @@ const Hero = () => {
   return (
     <div className='bg-white dark:bg-gray-800'>
       {/* Header */}
-      <div className='relative pb-32 '>
+      <div className='relative pb-32'>
         <div className='absolute inset-0'>
           <img
-            className='w-full h-full object-cover'
+            className='h-full w-full object-cover'
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1644049097/Banner/GG_Care_Web_Banner-6_iyxanu.webp'
             alt='gg care'
           />
           <div
-            className='absolute inset-0 bg-gray-400 dark:bg-gray-600 mix-blend-multiply'
+            className='absolute inset-0 bg-gray-400 mix-blend-multiply dark:bg-gray-600'
             aria-hidden='true'
           />
         </div>
-        <div className='relative max-w-7xl mx-auto py-24 px-4 xl:py-56 sm:px-6 lg:px-8'></div>
+        <div className='relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 xl:py-56'></div>
       </div>
 
       {/* Overlapping cards */}
       <section
-        className='md:-mt-12 lg:-mt-44 -mt-8 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8 '
+        className='relative z-10 mx-auto -mt-8 max-w-7xl px-4 pb-32 sm:px-6 md:-mt-12 lg:-mt-44 lg:px-8'
         aria-labelledby='contact-heading'
       >
         <h2 className='sr-only' id='contact-heading'>
           Contact us
         </h2>
-        <div className='grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8'>
+        <div className='grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0'>
           {supportLinks.map((link) => (
             <div
               key={link.name}
-              className='flex flex-col bg-white dark:bg-gray-800 rounded-2xl shadow-xl group dark:border-2 dark:border-gray-600'
+              className='group flex flex-col rounded-2xl bg-white shadow-xl dark:border-2 dark:border-gray-600 dark:bg-gray-800'
             >
-              <div className='flex-1 relative pt-16 px-6 pb-8 md:px-8'>
-                <div className='absolute top-0 p-5 inline-block bg-gg-400 dark:bg-gray-600  group-hover:dark:bg-gg-400 transition-all duration-150 rounded-xl shadow-lg transform -translate-y-1/2'>
+              <div className='relative flex-1 px-6 pb-8 pt-16 md:px-8'>
+                <div className='absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-gg-400 p-5 shadow-lg transition-all duration-150 dark:bg-gray-600 group-hover:dark:bg-gg-400'>
                   <link.icon
                     className='h-6 w-6 text-white'
                     aria-hidden='true'
                   />
                 </div>
-                <h3 className='text-xl font-medium text-gray-800 dark:text-gray-200 font-heading'>
+                <h3 className='font-heading text-xl font-medium text-gray-800 dark:text-gray-200'>
                   {link.name}
                 </h3>
-                <p className='mt-4 text-sm text-gray-700 dark:text-gray-300  font-content'>
+                <p className='mt-4 font-content text-sm text-gray-700 dark:text-gray-300'>
                   {link.description}
                 </p>
               </div>
-              <button className='px-4  py-2 bg-gg-400 dark:bg-gray-600 dark:group-hover:bg-gg-400 transition-all duration-150 rounded-b-xl font-content text-white font-semibold'>
+              <button className='rounded-b-xl bg-gg-400 px-4 py-2 font-content font-semibold text-white transition-all duration-150 dark:bg-gray-600 dark:group-hover:bg-gg-400'>
                 <a href={link.ctaLink} target='_blank' rel='noreferrer'>
                   {link.ctaAction}
                 </a>

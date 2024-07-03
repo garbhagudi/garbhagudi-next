@@ -52,24 +52,24 @@ const IndexPage = () => {
             content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802155/SEO/OG_images_FAQs_k40phu.jpg'
           />
         </Head>
-        <div className='max-w-7xl mx-auto'>
-          <h1 className='text-4xl lg:text-5xl font-heading font-bold text-center pt-10 lg:pt-24 text-gray-800 dark:text-gray-200 '>
+        <div className='mx-auto max-w-7xl'>
+          <h1 className='pt-10 text-center font-heading text-4xl font-bold text-gray-800 dark:text-gray-200 lg:pt-24 lg:text-5xl'>
             Resources
           </h1>
-          <p className='font-content text-center pt-4 pb-10 lg:pb-16 text-gray-800 dark:text-gray-200 '>
+          <p className='pb-10 pt-4 text-center font-content text-gray-800 dark:text-gray-200 lg:pb-16'>
             Learn more about causes, diagnosis and treatment options of
             infertility
           </p>
-          <div className='grid grid-cols-2 max-w-2xl mx-auto gap-4'>
+          <div className='mx-auto grid max-w-2xl grid-cols-2 gap-4'>
             {data.map((items) => (
               <Link key={items.id} href={items.link}>
-                <div className='flex flex-col items-center justify-center py-3 rounded-xl'>
+                <div className='flex flex-col items-center justify-center rounded-xl py-3'>
                   <img
                     src={items.icon}
                     alt={items.title}
-                    className='w-20 h-20 dark:grayscale dark:hover:grayscale-0 transition-all duration-300'
+                    className='h-20 w-20 transition-all duration-300 dark:grayscale dark:hover:grayscale-0'
                   />
-                  <div className='text-center font-content pt-3'>
+                  <div className='pt-3 text-center font-content'>
                     {items.title}
                   </div>
                 </div>

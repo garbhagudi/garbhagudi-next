@@ -15,7 +15,7 @@ interface testimonialProps {
             videoId: string;
           };
         };
-      }
+      },
     ];
   };
 }
@@ -28,16 +28,16 @@ const Video = ({ testimonials }: testimonialProps) => {
   };
   return (
     <div className=''>
-      <div className='max-w-7xl mx-auto py-8'>
+      <div className='mx-auto max-w-7xl py-8'>
         <div className='xl:max-w-3xl'>
-          <h2 className='text-2xl lg:text-4xl text-center font-extrabold text-gray-800 font-heading flex items-center justify-center'>
+          <h2 className='flex items-center justify-center text-center font-heading text-2xl font-extrabold text-gray-800 lg:text-4xl'>
             Testimonials
           </h2>
-          <div className='px-3 sm:px-0 max-w-7xl mx-auto flex flex-row items-center justify-center'>
+          <div className='mx-auto flex max-w-7xl flex-row items-center justify-center px-3 sm:px-0'>
             <Carousel
               defaultControlsConfig={defaultControlsConfig}
               autoplayInterval={5000}
-              className='max-w-xs sm:max-w-sm md:max-w-md lg:max-w-4xl mx-auto'
+              className='mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-4xl'
               wrapAround
               dragging
               enableKeyboardControls
@@ -45,7 +45,7 @@ const Video = ({ testimonials }: testimonialProps) => {
               renderCenterLeftControls={({ previousSlide }) => (
                 <button
                   onClick={previousSlide}
-                  className='hidden w-11 h-11 text-4xl bg-brandPurpleDark dark:bg-brandPurple text-white rounded-full lg:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                  className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 dark:bg-brandPurple lg:flex'
                 >
                   <HiChevronLeft className='mr-1' />
                 </button>
@@ -53,7 +53,7 @@ const Video = ({ testimonials }: testimonialProps) => {
               renderCenterRightControls={({ nextSlide }) => (
                 <button
                   onClick={nextSlide}
-                  className='hidden w-11 h-11 text-4xl bg-brandPurpleDark dark:bg-brandPurple text-white rounded-full lg:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                  className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 dark:bg-brandPurple lg:flex'
                 >
                   <HiChevronRight className='ml-1' />
                 </button>
@@ -62,7 +62,7 @@ const Video = ({ testimonials }: testimonialProps) => {
               {testimonials?.items?.map((item) => {
                 return (
                   <div
-                    className='w-screen max-w-xs sm:max-w-sm md:max-w-md lg:max-w-3xl mx-auto aspect-video mt-8 overflow-hidden border border-transparent rounded-lg sm:px-0'
+                    className='mx-auto mt-8 aspect-video w-screen max-w-xs overflow-hidden rounded-lg border border-transparent sm:max-w-sm sm:px-0 md:max-w-md lg:max-w-3xl'
                     key={item?.id}
                   >
                     <LiteYouTubeEmbed
@@ -75,7 +75,7 @@ const Video = ({ testimonials }: testimonialProps) => {
               })}
             </Carousel>
           </div>
-          <div className='text-center lg:text-right pt-4 font-content py-1 max-w-6xl mx-auto underline text-sm'>
+          <div className='mx-auto max-w-6xl py-1 pt-4 text-center font-content text-sm underline lg:text-right'>
             Swipe for more reviews{' '}
             <MdOutlineSwipeLeft className='inline-block' />
           </div>

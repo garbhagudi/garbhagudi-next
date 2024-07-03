@@ -110,20 +110,20 @@ const ChatComponent = ({ apiKey }) => {
       {/* OpenAI Logo Circle */}
 
       <div
-        className='fixed bottom-3 left-4  rounded-full flex items-center justify-center cursor-pointer shadow-xl drop-shadow-xl bg-white dark:bg-gray-800 dark:border border-gray-600'
+        className='fixed bottom-3 left-4 flex cursor-pointer items-center justify-center rounded-full border-gray-600 bg-white shadow-xl drop-shadow-xl dark:border dark:bg-gray-800'
         onClick={() => setShowChatbot(!showChatbot)}
       >
         <Image
           src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643459544/Icons/Contact/GG_Care_e7e1pc.svg'
           alt='GG Care Bot'
-          className='w-12 h-12 rounded-full'
+          className='h-12 w-12 rounded-full'
           width={24}
           height={24}
         />
         {showChatbot ? (
           ' '
         ) : (
-          <div className='px-3 text-xs font-content font-semibold bg'>
+          <div className='bg px-3 font-content text-xs font-semibold'>
             Hello! <br />
             Try our New AI Powered assistant.
           </div>
@@ -131,10 +131,10 @@ const ChatComponent = ({ apiKey }) => {
       </div>
       {/* Chatbot Interface */}
       {showChatbot && (
-        <div className='fixed bottom-2 left-4 bg-white dark:bg-gray-800 border dark:border-gray-600 rounded-lg shadow-lg p-4 w-64 z-50'>
-          <div className='flex flex-col items-start justify-start mb-2'>
+        <div className='fixed bottom-2 left-4 z-50 w-64 rounded-lg border bg-white p-4 shadow-lg dark:border-gray-600 dark:bg-gray-800'>
+          <div className='mb-2 flex flex-col items-start justify-start'>
             <div className='flex space-x-1 py-2'>
-              <div className='w-4 h-4 bg-green-500 rounded-full mr-2'></div>
+              <div className='mr-2 h-4 w-4 rounded-full bg-green-500'></div>
               <p className='text-sm font-medium text-gray-800 dark:text-gray-200'>
                 GG Care Bot
               </p>
@@ -151,28 +151,28 @@ const ChatComponent = ({ apiKey }) => {
               type='text'
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
-              className='w-full border dark:border-gray-600 rounded-lg px-3 py-2 dark:bg-gray-700 focus:outline-none focus:ring focus:ring-brandPink4 focus:border-brandPink4'
+              className='w-full rounded-lg border px-3 py-2 focus:border-brandPink4 focus:outline-none focus:ring focus:ring-brandPink4 dark:border-gray-600 dark:bg-gray-700'
             />
           </div>
           <div className='flex items-center justify-start space-x-2'>
             <button
               onClick={handleSubmit}
-              className='bg-brandPink3 text-white px-2 py-1 rounded-md hover:bg-brandPink focus:outline-none focus:ring focus:ring-brandPink4 focus:border-brandPink4'
+              className='rounded-md bg-brandPink3 px-2 py-1 text-white hover:bg-brandPink focus:border-brandPink4 focus:outline-none focus:ring focus:ring-brandPink4'
             >
               Submit
             </button>
             <button
               onClick={() => setShowChatbot(false)}
-              className='bg-brandPink3 text-white px-2 py-1 rounded-md hover:bg-brandPink focus:outline-none focus:ring focus:ring-brandPink4 focus:border-brandPink4'
+              className='rounded-md bg-brandPink3 px-2 py-1 text-white hover:bg-brandPink focus:border-brandPink4 focus:outline-none focus:ring focus:ring-brandPink4'
             >
               Close
             </button>
           </div>
           <div className='mt-4'>
-            <p className='text-gray-800 dark:text-gray-200 text-sm'>
+            <p className='text-sm text-gray-800 dark:text-gray-200'>
               GG Care Bot:{' '}
             </p>
-            <p className='bg-gray-100 dark:bg-gray-700 rounded-md px-3 py-2 mt-2 text-gray-800 dark:text-gray-200'>
+            <p className='mt-2 rounded-md bg-gray-100 px-3 py-2 text-gray-800 dark:bg-gray-700 dark:text-gray-200'>
               {chatResponse}
             </p>
           </div>

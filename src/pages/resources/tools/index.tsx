@@ -55,12 +55,12 @@ const IndexPage = () => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg'
         />
       </Head>
-      <h1 className='pt-12 mx-auto text-4xl font-semibold text-center max-w-7xl font-heading'>
+      <h1 className='mx-auto max-w-7xl pt-12 text-center font-heading text-4xl font-semibold'>
         Tools and Calcualtors
       </h1>
-      <p className='px-2 pt-6 mx-auto font-semibold text-center max-w-7xl font-content'></p>
-      <div className='flex py-6 mx-auto max-w-7xl sm:py-12'>
-        <div className='grid grid-cols-1 gap-10 mx-auto lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1'>
+      <p className='mx-auto max-w-7xl px-2 pt-6 text-center font-content font-semibold'></p>
+      <div className='mx-auto flex max-w-7xl py-6 sm:py-12'>
+        <div className='mx-auto grid grid-cols-1 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
           {Data.map((item) => (
             <Link
               href={`tools/${item.link}`}
@@ -68,17 +68,17 @@ const IndexPage = () => {
               key={item.id}
               className='group'
             >
-              <div className='flex px-4 py-3 transition-colors duration-100 border-2 border-solid cursor-pointer border-gg-500 dark:border-gray-600 dark:hover:border-gg-500 w-96 rounded-2xl hover:bg-brandPink dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 hover:text-gray-200 hover:border-transparent '>
+              <div className='flex w-96 cursor-pointer rounded-2xl border-2 border-solid border-gg-500 px-4 py-3 text-gray-800 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-gray-200 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gg-500 dark:hover:bg-gray-600'>
                 <div className='w-1/3'>
                   <img
-                    className='object-cover w-24 h-24 rounded-2xl dark:grayscale group-hover:grayscale-0 transition-all duration-150'
+                    className='h-24 w-24 rounded-2xl object-cover transition-all duration-150 group-hover:grayscale-0 dark:grayscale'
                     src={item.icon}
                     alt={item.name}
                   />
                 </div>
-                <div className='flex flex-col justify-center w-2/3 text-center'>
-                  <p className='text-xl font-semibold font-qs'>{item.name}</p>
-                  <p className='text-xs italic font-semibold font-content'>
+                <div className='flex w-2/3 flex-col justify-center text-center'>
+                  <p className='font-qs text-xl font-semibold'>{item.name}</p>
+                  <p className='font-content text-xs font-semibold italic'>
                     {item.description}
                   </p>
                 </div>
@@ -87,54 +87,54 @@ const IndexPage = () => {
           ))}
         </div>
       </div>
-      <div className='flex flex-col mt-4 text-gray-800 dark:text-gray-200 '>
-        <p className='text-xl font-bold text-center font-heading'>
+      <div className='mt-4 flex flex-col text-gray-800 dark:text-gray-200'>
+        <p className='text-center font-heading text-xl font-bold'>
           Other Useful Links
         </p>
-        <ul className='mx-auto mt-4 space-y-4 font-semibold list-disc text-md font-content'>
+        <ul className='text-md mx-auto mt-4 list-disc space-y-4 font-content font-semibold'>
           <li>
             <Link href='/blogs/page/1'>
-              <div className='hover:underline underline-offset-2'>Blogs</div>
+              <div className='underline-offset-2 hover:underline'>Blogs</div>
             </Link>
           </li>
           <li>
             <Link href='/resources/causes'>
-              <div className='hover:underline underline-offset-2'>
+              <div className='underline-offset-2 hover:underline'>
                 Causes of Infertility
               </div>
             </Link>
           </li>
           <li>
             <Link href='/resources/diagnosis'>
-              <div className='hover:underline underline-offset-2'>
+              <div className='underline-offset-2 hover:underline'>
                 Diagnosis Methods
               </div>
             </Link>
           </li>
           <li>
             <Link href='/resources/treatments'>
-              <div className='hover:underline underline-offset-2'>
+              <div className='underline-offset-2 hover:underline'>
                 Treatment Options
               </div>
             </Link>
           </li>
           <li>
             <Link href='/resources/myths-and-facts'>
-              <div className='hover:underline underline-offset-2'>
+              <div className='underline-offset-2 hover:underline'>
                 Myths and Facts
               </div>
             </Link>
           </li>
           <li>
             <Link href='https://consult.bestdocapp.com/home/GARBHAGUDI'>
-              <div className='hover:underline underline-offset-2'>
+              <div className='underline-offset-2 hover:underline'>
                 Book an Appointment
               </div>
             </Link>
           </li>
           <li>
             <Link href='tel:+919108910832'>
-              <div className='hover:underline underline-offset-2'>
+              <div className='underline-offset-2 hover:underline'>
                 Speak to our Executives
               </div>
             </Link>

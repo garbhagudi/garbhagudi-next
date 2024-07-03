@@ -1,9 +1,9 @@
 import React from 'react';
 
 const GuidelineList = ({ category, guidelines }) => (
-  <div className='font-lexend space-y-4 pb-4'>
+  <div className='space-y-4 pb-4 font-lexend'>
     <h2 className='font-bold'>{category}</h2>
-    <ul className='space-y-2 list-disc ml-5'>
+    <ul className='ml-5 list-disc space-y-2'>
       {guidelines.map((guideline) => (
         <li key={guideline.id}>{guideline.point}</li>
       ))}

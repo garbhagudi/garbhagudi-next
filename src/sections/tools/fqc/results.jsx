@@ -1,10 +1,10 @@
 export const Average = () => {
   return (
     <div>
-      <h1 className='font-heading text-2xl font-semibold text-center py-2 px-3 underline text-brandPurpleDark'>
+      <h1 className='px-3 py-2 text-center font-heading text-2xl font-semibold text-brandPurpleDark underline'>
         Average Fertility
       </h1>
-      <article className='text-base px-3 sm:px-0'>
+      <article className='px-3 text-base sm:px-0'>
         <p className=''>
           A lady with Average Fertility needs to play it safe. It means that her
           fertility status is not too good, but neither is it very bad. It also
@@ -35,10 +35,10 @@ export const Average = () => {
 export const Best = () => {
   return (
     <div>
-      <h1 className='font-heading text-2xl font-semibold text-center py-2 px-3 underline text-green-600'>
+      <h1 className='px-3 py-2 text-center font-heading text-2xl font-semibold text-green-600 underline'>
         Best Fertility
       </h1>
-      <article className='text-base px-3 sm:px-0 mt-4'>
+      <article className='mt-4 px-3 text-base sm:px-0'>
         <p>
           This status indicates that the lady is at the peak of her reproductive
           life-span. All her indicators are positive and the time is best suited
@@ -76,10 +76,10 @@ export const Best = () => {
 export const Good = () => {
   return (
     <div>
-      <h1 className='font-heading text-2xl font-semibold text-center py-2 px-3 underline text-green-500'>
+      <h1 className='px-3 py-2 text-center font-heading text-2xl font-semibold text-green-500 underline'>
         Good Fertility
       </h1>
-      <article className='text-base px-3 sm:px-0 mt-4'>
+      <article className='mt-4 px-3 text-base sm:px-0'>
         <p>
           A lady with a fertility quotient of “good fertility” is in good shape
           for having a child. There are one or two factors that have started to
@@ -117,10 +117,10 @@ export const Good = () => {
 export const Low = () => {
   return (
     <div>
-      <h1 className='font-heading text-2xl font-semibold text-center py-2 px-3 underline text-orange-500'>
+      <h1 className='px-3 py-2 text-center font-heading text-2xl font-semibold text-orange-500 underline'>
         Low Fertility
       </h1>
-      <article className='text-base px-3 sm:px-0 mt-4'>
+      <article className='mt-4 px-3 text-base sm:px-0'>
         <p>
           A lady with a fertility quotient of “Low Fertility” has to take things
           seriously. There are some things that are not as good as they should
@@ -152,10 +152,10 @@ export const Low = () => {
 export const Poor = () => {
   return (
     <div>
-      <h1 className='font-heading text-2xl font-semibold text-center py-2 px-3 underline text-red-500'>
+      <h1 className='px-3 py-2 text-center font-heading text-2xl font-semibold text-red-500 underline'>
         Poor Fertility
       </h1>
-      <article className='text-base px-3 sm:px-0 mt-4'>
+      <article className='mt-4 px-3 text-base sm:px-0'>
         <p>
           Women who get a rating of “Poor Fertility” for their fertility
           quotient are advised to meet a fertility specialist immediately. The

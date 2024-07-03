@@ -4,22 +4,22 @@ import Link from 'next/link';
 
 const BlogFooter = () => {
   return (
-    <div className='relative py-16 bg-transparent'>
+    <div className='relative bg-transparent py-16'>
       <div
-        className='hidden absolute top-0 inset-x-0 h-1/2 lg:block'
+        className='absolute inset-x-0 top-0 hidden h-1/2 lg:block'
         aria-hidden='true'
       />
-      <div className='max-w-7xl mx-auto bg-transparent lg:bg-transparent lg:px-8'>
+      <div className='mx-auto max-w-7xl bg-transparent lg:bg-transparent lg:px-8'>
         <div className='lg:grid lg:grid-cols-12'>
-          <div className='relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent'>
+          <div className='relative z-10 lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:bg-transparent lg:py-16'>
             <div
-              className='absolute inset-x-0 h-1/2  lg:hidden'
+              className='absolute inset-x-0 h-1/2 lg:hidden'
               aria-hidden='true'
             />
-            <div className='max-w-md mx-auto px-8 sm:max-w-max lg:max-w-none lg:p-0 hidden lg:block'>
-              <div className='bg-white dark:bg-gray-800 rounded-3xl border dark:border-gray-600 overflow-hidden'>
+            <div className='mx-auto hidden max-w-md px-8 sm:max-w-max lg:block lg:max-w-none lg:p-0'>
+              <div className='overflow-hidden rounded-3xl border bg-white dark:border-gray-600 dark:bg-gray-800'>
                 <Image
-                  className='object-fit object-center rounded-3xl shadow-2xl h-64 lg:h-96 dark:fill-white dark:grayscale dark:brightness-0 dark:invert'
+                  className='object-fit h-64 rounded-3xl object-center shadow-2xl dark:fill-white dark:brightness-0 dark:grayscale dark:invert lg:h-96'
                   src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1659164257/logos/GG_Vertical_Logo_nrcl5h.svg'
                   alt='gg logo'
                   width={500}
@@ -29,13 +29,13 @@ const BlogFooter = () => {
             </div>
           </div>
 
-          <div className='relative bg-brandPurpleDark dark:bg-gray-700 lg:col-start-3 lg:row-start-1 lg:col-span-10 rounded-3xl lg:grid lg:grid-cols-10 lg:items-center'>
+          <div className='relative rounded-3xl bg-brandPurpleDark dark:bg-gray-700 lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center'>
             <div
-              className='hidden absolute inset-0 overflow-hidden rounded-3xl lg:block'
+              className='absolute inset-0 hidden overflow-hidden rounded-3xl lg:block'
               aria-hidden='true'
             >
               <svg
-                className='absolute bottom-full left-full transform translate-y-1/3 -translate-x-2/3 xl:bottom-auto xl:top-0 xl:translate-y-0'
+                className='absolute bottom-full left-full -translate-x-2/3 translate-y-1/3 transform xl:bottom-auto xl:top-0 xl:translate-y-0'
                 width={404}
                 height={384}
                 fill='none'
@@ -68,7 +68,7 @@ const BlogFooter = () => {
                 />
               </svg>
               <svg
-                className='absolute top-full transform -translate-y-1/3 -translate-x-1/3 xl:-translate-y-1/2'
+                className='absolute top-full -translate-x-1/3 -translate-y-1/3 transform xl:-translate-y-1/2'
                 width={404}
                 height={384}
                 fill='none'
@@ -101,14 +101,14 @@ const BlogFooter = () => {
                 />
               </svg>
             </div>
-            <div className='relative max-w-md mx-auto py-12 px-4 space-y-6 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6'>
+            <div className='relative mx-auto max-w-md space-y-6 px-4 py-12 sm:max-w-3xl sm:px-6 sm:py-16 lg:col-span-6 lg:col-start-4 lg:max-w-none lg:p-0'>
               <h2
-                className='text-3xl font-extrabold text-gray-100 font-heading'
+                className='font-heading text-3xl font-extrabold text-gray-100'
                 id='join-heading'
               >
                 About Us
               </h2>
-              <p className='text-lg text-gray-100 font-qs'>
+              <p className='font-qs text-lg text-gray-100'>
                 GarbhaGudi is a chain of New-Generation Infertility Treatment
                 Hospitals equipped with state-of- art-infrastructure &amp;
                 cutting-edge IVF Technology to address infertility issues &amp;
@@ -122,7 +122,7 @@ const BlogFooter = () => {
                 infertility issues and sexual problems
               </p>
               <Link
-                className='block w-full py-3 px-5 text-center font-content bg-white dark:bg-gray-600 rounded-md text-base font-semibold text-brandDark hover:bg-brandDark hover:text-gray-100 sm:inline-block sm:w-auto'
+                className='text-brandDark hover:bg-brandDark block w-full rounded-md bg-white px-5 py-3 text-center font-content text-base font-semibold hover:text-gray-100 dark:bg-gray-600 sm:inline-block sm:w-auto'
                 href='https://salesiq.zoho.com/signaturesupport.ls?widgetcode=93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
                 target={'_blank'}
                 rel='noreferrer'

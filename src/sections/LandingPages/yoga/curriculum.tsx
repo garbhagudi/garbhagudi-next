@@ -6,19 +6,19 @@ const Curriculum = () => {
 
   return (
     <div id='curriculum'>
-      <div className='max-w-7xl mx-auto pb-16 px-4'>
+      <div className='mx-auto max-w-7xl px-4 pb-16'>
         <div className='xl:max-w-3xl'>
-          <div className='text-3xl sm:text-4xl font-bold font-lexend py-8'>
+          <div className='py-8 font-lexend text-3xl font-bold sm:text-4xl'>
             Curriculum For The 21 Days
           </div>
           <TabGroup className={`w-full`}>
             <TabList
-              className={`text-xl space-x-3 lg:space-x-6 font-lexend border flex justify-around rounded-lg w-full`}
+              className={`flex w-full justify-around space-x-3 rounded-lg border font-lexend text-xl lg:space-x-6`}
             >
               {weeks.map((week) => (
                 <Tab
                   key={week}
-                  className={`data-[selected]:bg-gg-500 data-[selected]:border-2 data-[selected]:border-black data-[selected]:focus:outline-none data-[selected]:text-white data-[hover]:underline rounded-lg px-3 py-3 w-full`}
+                  className={`w-full rounded-lg px-3 py-3 data-[selected]:border-2 data-[selected]:border-black data-[selected]:bg-gg-500 data-[selected]:text-white data-[hover]:underline data-[selected]:focus:outline-none`}
                 >
                   Week {week}
                 </Tab>
@@ -30,11 +30,11 @@ const Curriculum = () => {
                   {yogaSchedule
                     .filter((item) => item.Week === week)
                     .map((item, index) => (
-                      <div key={index} className='flex gap-x-3 px-4 w-full'>
-                        <div className='w-1/3 flex items-center flex-col justify-center bg-gray-100 rounded-lg font-lexend'>
+                      <div key={index} className='flex w-full gap-x-3 px-4'>
+                        <div className='flex w-1/3 flex-col items-center justify-center rounded-lg bg-gray-100 font-lexend'>
                           <div>{item.title}</div> <div>{item.Day}</div>
                         </div>
-                        <div className='space-y-2 px-4 bg-gray-100 w-full rounded-lg py-2 font-content'>
+                        <div className='w-full space-y-2 rounded-lg bg-gray-100 px-4 py-2 font-content'>
                           {item.Knowledge && (
                             <p>
                               <strong>Knowledge:</strong> {item.Knowledge}

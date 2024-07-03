@@ -3,22 +3,22 @@ import React from 'react';
 const Benefits = () => {
   return (
     <div id='benefits'>
-      <div className='max-w-7xl mx-auto px-4 pb-16 scroll-m-16'>
-        <div className='text-3xl sm:text-4xl font-bold font-lexend py-8'>
+      <div className='mx-auto max-w-7xl scroll-m-16 px-4 pb-16'>
+        <div className='py-8 font-lexend text-3xl font-bold sm:text-4xl'>
           Benefits You Will Gain
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-2 xl:max-w-3xl'>
           {benefits.map((benefit) => (
             <div
               key={benefit.id}
-              className='flex items-center justify-center flex-col '
+              className='flex flex-col items-center justify-center'
             >
               <img
                 src={benefit.image}
                 alt={benefit.title}
-                className='max-w-xl object-cover rounded-lg'
+                className='max-w-xl rounded-lg object-cover'
               />
-              <div className='text-lg font-lexend'>{benefit.title}</div>
+              <div className='font-lexend text-lg'>{benefit.title}</div>
             </div>
           ))}
         </div>

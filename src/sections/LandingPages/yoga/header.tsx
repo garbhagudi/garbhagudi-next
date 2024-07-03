@@ -5,18 +5,18 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <>
-      <div className='max-w-7xl mx-auto px-4'>
+      <div className='mx-auto max-w-7xl px-4'>
         <div className='flex items-center justify-between py-4'>
           <div>
             <Logo />
           </div>
-          <div className='hidden lg:flex items-start justify-around space-x-3 font-lexend'>
-            <ul className='hidden lg:flex items-center space-x-4'>
+          <div className='hidden items-start justify-around space-x-3 font-lexend lg:flex'>
+            <ul className='hidden items-center space-x-4 lg:flex'>
               {menuitems.map((item, index) => (
                 <li key={index} className='px-4 py-2'>
                   <Link
                     href={item.url}
-                    className='text-gray-700 hover:text-gray-900 cursor-pointer transition-all duration-300 smooth-scroll scroll-auto'
+                    className='smooth-scroll cursor-pointer scroll-auto text-gray-700 transition-all duration-300 hover:text-gray-900'
                   >
                     {item.title}
                   </Link>
@@ -24,7 +24,7 @@ const Header = () => {
               ))}
             </ul>
             <Link href={'#register'} className=''>
-              <button className='px-4 py-2 text-white rounded-lg bg-gg-500 hover:bg-gg-600 transition-all duration-300 font-bold'>
+              <button className='rounded-lg bg-gg-500 px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-gg-600'>
                 Get Started
               </button>
             </Link>

@@ -19,7 +19,7 @@ const SocialMediaTemplates = () => {
                   height={500}
                   width={500}
                 />
-                <p className='font-lexend text-sm bg-gg-500 text-white py-0.5 text-center'>
+                <p className='bg-gg-500 py-0.5 text-center font-lexend text-sm text-white'>
                   {items.desccription}
                 </p>
               </div>

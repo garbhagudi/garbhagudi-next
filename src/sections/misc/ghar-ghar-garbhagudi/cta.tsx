@@ -3,15 +3,15 @@ import Link from 'next/link';
 
 const CTA = () => {
   return (
-    <div className='bg-[url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1643286880/Banner/Behind_Doctors_fssazq.webp)] bg-cover bg-center relative'>
-      <div className='bg-black bg-opacity-25 dark:bg-opacity-40 text-center py-16 lg:py-24'>
-        <div className='text-2xl font-lexend py-6 px-4 flex justify-center z-10'>
-          <div className='bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-200 font-bold px-3 py-4 rounded-lg bg-opacity-90'>
+    <div className='relative bg-[url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1643286880/Banner/Behind_Doctors_fssazq.webp)] bg-cover bg-center'>
+      <div className='bg-black bg-opacity-25 py-16 text-center dark:bg-opacity-40 lg:py-24'>
+        <div className='z-10 flex justify-center px-4 py-6 font-lexend text-2xl'>
+          <div className='rounded-lg bg-gray-200 bg-opacity-90 px-3 py-4 font-bold text-gray-900 dark:bg-gray-800 dark:text-gray-200'>
             Join us in making a difference! Register now for the Ghar Ghar
             GaarbhaGudi.
           </div>
         </div>
-        <button className='bg-white text-brandPink hover:bg-brandPink4 hover:text-white font-lexend py-3 rounded-lg px-4 mt-3'>
+        <button className='mt-3 rounded-lg bg-white px-4 py-3 font-lexend text-brandPink hover:bg-brandPink4 hover:text-white'>
           <Link href={'/gg-care'}>Register Now</Link>
         </button>
       </div>

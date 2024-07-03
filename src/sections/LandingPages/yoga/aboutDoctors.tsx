@@ -3,23 +3,23 @@ import React from 'react';
 const Doctor = () => {
   return (
     <div>
-      <div className='max-w-7xl mx-auto px-4 pb-16'>
-        <div className='text-4xl font-bold font-lexend py-8'>
+      <div className='mx-auto max-w-7xl px-4 pb-16'>
+        <div className='py-8 font-lexend text-4xl font-bold'>
           About the Hosts
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-3 xl:max-w-3xl gap-5'>
+        <div className='grid grid-cols-1 gap-5 lg:grid-cols-3 xl:max-w-3xl'>
           {doctors.map((doctor) => (
             <div
               key={doctor.id}
-              className='flex items-center justify-center flex-col '
+              className='flex flex-col items-center justify-center'
             >
               <img
                 src={doctor.image}
                 alt={doctor.name}
-                className='object-cover rounded-lg'
+                className='rounded-lg object-cover'
               />
-              <div className='text-lg font-lexend'>{doctor.name}</div>
-              <div className='text-base text-gray-500 font-content'>
+              <div className='font-lexend text-lg'>{doctor.name}</div>
+              <div className='font-content text-base text-gray-500'>
                 {doctor.content}
               </div>
             </div>

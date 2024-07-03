@@ -12,10 +12,10 @@ import FloatWhatsApp from 'components/FloatWhatsapp';
 
 // Dynamic imports
 const Services = dynamic(
-  () => import('sections/LandingPages/unbounce/services')
+  () => import('sections/LandingPages/unbounce/services'),
 );
 const WhyGarbhaGudi = dynamic(
-  () => import('sections/LandingPages/unbounce/whyGarbhaGudi')
+  () => import('sections/LandingPages/unbounce/whyGarbhaGudi'),
 );
 const Doctors = dynamic(() => import('sections/LandingPages/unbounce/doctors'));
 const Testimonial = dynamic(() => import('sections/home/testimonial'));

@@ -54,26 +54,26 @@ const navigation = {
 export default function Footer() {
   return (
     <footer
-      className='bg-neutral-50 dark:bg-gray-800 font-content'
+      className='bg-neutral-50 font-content dark:bg-gray-800'
       aria-labelledby='footerHeading'
       id='footer'
     >
       <h2 id='footerHeading' className='sr-only'>
         Footer
       </h2>
-      <div className='max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:py-8 lg:px-8 border-t dark:border-gray-600'>
+      <div className='mx-auto max-w-7xl border-t px-4 pb-12 dark:border-gray-600 sm:px-6 lg:px-8 lg:py-8'>
         <div className='xl:grid xl:grid-cols-3 xl:gap-8'>
-          <div className='mt-12 grid grid-cols-1 xl:grid-cols-1 gap-8 xl:mt-0 xl:col-span-full text-center antialiased'>
-            <div className='grid grid-cols-3 md:grid-cols-5 gap-5'>
+          <div className='mt-12 grid grid-cols-1 gap-8 text-center antialiased xl:col-span-full xl:mt-0 xl:grid-cols-1'>
+            <div className='grid grid-cols-3 gap-5 md:grid-cols-5'>
               <div className=''>
-                <h3 className='text-sm font-semibold text-gray-800 dark:text-white tracking-wider uppercase'>
+                <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
                   About
                 </h3>
                 <ul className='mt-4 space-y-1'>
                   {navigation.about.map((item) => (
                     <li key={item.name}>
                       <Link href={item.href} passHref>
-                        <span className=' text-gray-800 dark:text-white hover:text-brandPink hover:underline cursor-pointer text-xs hover:text-sm md:text-sm md:hover:text-base'>
+                        <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
                           {item.name}
                         </span>
                       </Link>
@@ -82,14 +82,14 @@ export default function Footer() {
                 </ul>
               </div>
               <div className=''>
-                <h3 className='text-sm font-semibold text-gray-800 dark:text-white tracking-wider uppercase'>
+                <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
                   Support
                 </h3>
                 <ul className='mt-4 space-y-1'>
                   {navigation.support.map((item) => (
                     <li key={item.name}>
                       <Link passHref href={item.href}>
-                        <span className=' text-gray-800 dark:text-white hover:text-brandPink hover:underline cursor-pointer text-xs hover:text-sm md:text-sm md:hover:text-base'>
+                        <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
                           {item.name}
                         </span>
                       </Link>
@@ -98,14 +98,14 @@ export default function Footer() {
                 </ul>
               </div>
               <div className=''>
-                <h3 className='text-sm font-semibold text-gray-800 dark:text-white tracking-wider uppercase'>
+                <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
                   Companies
                 </h3>
                 <ul className='mt-4 space-y-1'>
                   {navigation.company.map((item) => (
                     <li key={item.name}>
                       <Link passHref href={item.href}>
-                        <span className=' text-gray-800 dark:text-white hover:text-brandPink hover:underline cursor-pointer text-xs hover:text-sm md:text-sm md:hover:text-base'>
+                        <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
                           {item.name}
                         </span>
                       </Link>
@@ -114,14 +114,14 @@ export default function Footer() {
                 </ul>
               </div>
               <div className=''>
-                <h3 className='text-sm font-semibold text-gray-800 dark:text-white tracking-wider uppercase'>
+                <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
                   Quicklinks
                 </h3>
                 <ul className='mt-4 space-y-1'>
                   {navigation.quickLinks.map((item) => (
                     <li key={item.name}>
                       <Link href={item.href} passHref>
-                        <span className=' text-gray-800 dark:text-white hover:text-brandPink hover:underline cursor-pointer text-xs hover:text-sm md:text-sm md:hover:text-base'>
+                        <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
                           {item.name}
                         </span>
                       </Link>
@@ -130,14 +130,14 @@ export default function Footer() {
                 </ul>
               </div>
               <div className=''>
-                <h3 className='text-sm font-semibold text-gray-800 dark:text-white tracking-wider uppercase'>
+                <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
                   Legal
                 </h3>
                 <ul className='mt-4 space-y-1'>
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
                       <Link passHref href={item.href}>
-                        <span className=' text-gray-800 dark:text-white hover:text-brandPink hover:underline cursor-pointer text-xs hover:text-sm md:text-sm md:hover:text-base'>
+                        <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
                           {item.name}
                         </span>
                       </Link>
@@ -149,8 +149,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className='max-w-7xl mx-auto border-t border-gray-200 dark:border-gray-600'>
-        <div className='mt-8 space-x-2 sm:space-x-3 flex items-ceter justify-center'>
+      <div className='mx-auto max-w-7xl border-t border-gray-200 dark:border-gray-600'>
+        <div className='items-ceter mt-8 flex justify-center space-x-2 sm:space-x-3'>
           {SocialIcon.map((item) => (
             <Link
               key={item.name}
@@ -164,7 +164,7 @@ export default function Footer() {
             </Link>
           ))}
         </div>
-        <p className='font-content text-gray-800 dark:text-white text-center py-8'>
+        <p className='py-8 text-center font-content text-gray-800 dark:text-white'>
           &copy; {new Date().getFullYear()} GarbhaGudi IVF Centre, Inc. All
           rights reserved.
         </p>

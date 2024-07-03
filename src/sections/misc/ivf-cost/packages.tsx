@@ -1,7 +1,11 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react';
 import { HiCheck, HiMinus, HiChevronDown } from 'react-icons/hi';
-import { Disclosure } from '@headlessui/react';
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from '@headlessui/react';
 import Link from 'next/link';
 
 const tiers = [
@@ -85,8 +89,8 @@ const sections = [
 const Packages = () => {
   return (
     <div className='font-content'>
-      <div className='text-center py-10 lg:py-16 px-3'>
-        <h2 className='font-heading font-bold text-3xl lg:text-5xl text-gray-800 dark:text-gray-200'>
+      <div className='px-3 py-10 text-center lg:py-16'>
+        <h2 className='font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 lg:text-5xl'>
           IVF Packages at GarbhaGudi
         </h2>
         <p className='pt-4 font-content'>
@@ -101,26 +105,26 @@ const Packages = () => {
           package that works for you.
         </p>
       </div>
-      <div className='max-w-7xl mx-auto py-16 sm:pb-24 sm:px-6 lg:px-8'>
+      <div className='mx-auto max-w-7xl py-16 sm:px-6 sm:pb-24 lg:px-8'>
         {/* xs to lg */}
-        <div className='max-w-sm mx-auto space-y-2 striped lg:hidden '>
+        <div className='striped mx-auto max-w-sm space-y-2 lg:hidden'>
           {tiers.map((tier) => (
             <section
               key={tier.name}
-              className='border border-black dark:border-gray-600 rounded-md'
+              className='rounded-md border border-black dark:border-gray-600'
             >
-              <div className='p-4 mb-8 '>
-                <h2 className='text-lg leading-6 font-medium text-gray-800 dark:text-gray-200 font-heading text-center'>
+              <div className='mb-8 p-4'>
+                <h2 className='text-center font-heading text-lg font-medium leading-6 text-gray-800 dark:text-gray-200'>
                   {tier.name}
                 </h2>
-                <p className='mt-4 text-center '>
-                  <span className='text-4xl font-extrabold text-gray-800 dark:text-gray-200 '>
+                <p className='mt-4 text-center'>
+                  <span className='text-4xl font-extrabold text-gray-800 dark:text-gray-200'>
                     ₹{tier.priceMonthly}
                   </span>{' '}
                 </p>
                 <a
                   href={tier.href}
-                  className='block w-36 mx-auto mt-4 bg-gg-400 dark:bg-gray-500 border border-gg-400 dark:border-gray-600 rounded-md py-2 text-sm font-bold font-heading text-white text-center hover:bg-gg-500 dark:hover:bg-gg-500 '
+                  className='mx-auto mt-4 block w-36 rounded-md border border-gg-400 bg-gg-400 py-2 text-center font-heading text-sm font-bold text-white hover:bg-gg-500 dark:border-gray-600 dark:bg-gray-500 dark:hover:bg-gg-500'
                 >
                   Contact Us
                 </a>
@@ -129,18 +133,18 @@ const Packages = () => {
               <Disclosure>
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className='flex items-center justify-center my-4 w-56 mx-auto text-gg-500 dark:text-gray-300 font-bold'>
+                    <DisclosureButton className='mx-auto my-4 flex w-56 items-center justify-center font-bold text-gg-500 dark:text-gray-300'>
                       {open ? 'See less' : 'See More'}
                       <HiChevronDown
                         className={`${
                           open ? 'rotate-180 transform' : ''
                         } h-5 w-5 text-gg-500 dark:text-gray-300`}
                       />
-                    </Disclosure.Button>
-                    <Disclosure.Panel className='text-gray-800 dark:text-gray-200'>
+                    </DisclosureButton>
+                    <DisclosurePanel className='text-gray-800 dark:text-gray-200'>
                       {sections.map((section) => (
                         <table key={section.name} className='w-full'>
-                          <caption className='text-xl border-t border-gray-200 py-3 px-4  font-heading font-bold text-left'>
+                          <caption className='border-t border-gray-200 px-4 py-3 text-left font-heading text-xl font-bold'>
                             {section.name}
                           </caption>
                           <thead>
@@ -157,10 +161,10 @@ const Packages = () => {
                             {section.features.map((feature) => (
                               <tr
                                 key={feature.id}
-                                className='border-t border-gray-00'
+                                className='border-gray-00 border-t'
                               >
                                 <th
-                                  className='py-5 px-4 text-sm font-normal text-left'
+                                  className='px-4 py-5 text-left text-sm font-normal'
                                   scope='row'
                                 >
                                   {feature.name}
@@ -168,7 +172,7 @@ const Packages = () => {
                                 <td className='py-5 pr-4'>
                                   {typeof feature.tiers[tier.name] ===
                                   'string' ? (
-                                    <span className='block text-sm text-right'>
+                                    <span className='block text-right text-sm'>
                                       {feature.tiers[tier.name]}
                                     </span>
                                   ) : (
@@ -198,7 +202,7 @@ const Packages = () => {
                           </tbody>
                         </table>
                       ))}
-                    </Disclosure.Panel>
+                    </DisclosurePanel>
                   </>
                 )}
               </Disclosure>
@@ -207,12 +211,12 @@ const Packages = () => {
         </div>
         {/* lg+ */}
         <div className='hidden lg:block'>
-          <table className='w-full h-px table-fixed'>
+          <table className='h-px w-full table-fixed'>
             <caption className='sr-only'>Pricing plan comparison</caption>
             <thead>
               <tr>
                 <th
-                  className='pb-4 px-6 text-sm font-medium text-gray-800 dark:text-gray-200 text-left'
+                  className='px-6 pb-4 text-left text-sm font-medium text-gray-800 dark:text-gray-200'
                   scope='col'
                 >
                   <span className='sr-only'>Feature by</span>
@@ -221,7 +225,7 @@ const Packages = () => {
                 {tiers.map((tier) => (
                   <th
                     key={tier.name}
-                    className='w-1/4 pb-4 px-6 text-lg leading-6 font-bold font-heading text-gray-800 dark:text-gray-200 text-center mx-auto'
+                    className='mx-auto w-1/4 px-6 pb-4 text-center font-heading text-lg font-bold leading-6 text-gray-800 dark:text-gray-200'
                     scope='col'
                   >
                     {tier.name}
@@ -229,17 +233,17 @@ const Packages = () => {
                 ))}
               </tr>
             </thead>
-            <tbody className='border-t border-gray-300 divide-y divide-gray-300'>
+            <tbody className='divide-y divide-gray-300 border-t border-gray-300'>
               <tr>
                 <th
-                  className='py-8 px-6 text-sm font-medium text-gray-800 dark:text-gray-200 text-left align-top'
+                  className='px-6 py-8 text-left align-top text-sm font-medium text-gray-800 dark:text-gray-200'
                   scope='row'
                 >
                   IVF Treatment Pricing
                 </th>
                 {tiers.map((tier) => (
-                  <td key={tier.name} className='h-full py-8 px-6 align-top'>
-                    <div className='h-full '>
+                  <td key={tier.name} className='h-full px-6 py-8 align-top'>
+                    <div className='h-full'>
                       <p className='text-center'>
                         <span className='text-4xl font-extrabold text-gray-800 dark:text-gray-200'>
                           ₹{tier.priceMonthly}
@@ -250,7 +254,7 @@ const Packages = () => {
                       </p> */}
                       <a
                         href={tier.href}
-                        className='block w-36 mx-auto mt-4 bg-gg-400 dark:bg-gray-500 border border-gg-400 dark:border-gray-600 rounded-md py-2 text-sm font-bold font-heading text-white text-center hover:bg-gg-500 dark:hover:bg-gg-500 '
+                        className='mx-auto mt-4 block w-36 rounded-md border border-gg-400 bg-gg-400 py-2 text-center font-heading text-sm font-bold text-white hover:bg-gg-500 dark:border-gray-600 dark:bg-gray-500 dark:hover:bg-gg-500'
                       >
                         Know More
                       </a>
@@ -262,7 +266,7 @@ const Packages = () => {
                 <Fragment key={section.name}>
                   <tr>
                     <th
-                      className='py-3 pl-6 text-gray-800 dark:text-gray-200 text-xl text-left font-heading font-bold'
+                      className='py-3 pl-6 text-left font-heading text-xl font-bold text-gray-800 dark:text-gray-200'
                       colSpan={4}
                       scope='colgroup'
                     >
@@ -272,13 +276,13 @@ const Packages = () => {
                   {section.features.map((feature) => (
                     <tr key={feature.id}>
                       <th
-                        className='py-5 px-6 text-sm font-semibold text-left'
+                        className='px-6 py-5 text-left text-sm font-semibold'
                         scope='row'
                       >
                         {feature.name}
                       </th>
                       {tiers.map((tier) => (
-                        <td key={tier.name} className='py-5 px-6 text-center'>
+                        <td key={tier.name} className='px-6 py-5 text-center'>
                           {typeof feature.tiers[tier.name] === 'string' ? (
                             <span className='block text-sm'>
                               {feature.tiers[tier.name]}
@@ -287,12 +291,12 @@ const Packages = () => {
                             <>
                               {feature.tiers[tier.name] === true ? (
                                 <HiCheck
-                                  className='h-7 w-7 text-green-500 mx-auto'
+                                  className='mx-auto h-7 w-7 text-green-500'
                                   aria-hidden='true'
                                 />
                               ) : (
                                 <HiMinus
-                                  className='h-5 text-gray-400 mx-auto'
+                                  className='mx-auto h-5 text-gray-400'
                                   aria-hidden='true'
                                 />
                               )}
@@ -318,10 +322,10 @@ const Packages = () => {
                   Choose your plan
                 </th>
                 {tiers.map((tier) => (
-                  <td key={tier.name} className='pt-5 px-6'>
+                  <td key={tier.name} className='px-6 pt-5'>
                     <a
                       href={tier.href}
-                      className='block w-36 mx-auto mt-4 bg-gg-400 dark:bg-gray-500 border border-gg-400 dark:border-gray-600 rounded-md py-2 text-sm font-bold font-heading text-white text-center hover:bg-gg-500 dark:hover:bg-gg-500 '
+                      className='mx-auto mt-4 block w-36 rounded-md border border-gg-400 bg-gg-400 py-2 text-center font-heading text-sm font-bold text-white hover:bg-gg-500 dark:border-gray-600 dark:bg-gray-500 dark:hover:bg-gg-500'
                     >
                       Know More
                     </a>
@@ -331,7 +335,7 @@ const Packages = () => {
             </tfoot>
           </table>
         </div>
-        <div className='text-xs text-center lg:text mt-4 font-semibold'>
+        <div className='lg:text mt-4 text-center text-xs font-semibold'>
           *Any additional procedures and tests recommended by the doctor may or
           may not be included. Please contact the financial advisor at the
           centre for more information.

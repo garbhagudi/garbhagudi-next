@@ -5,9 +5,9 @@ import AccordionLayout from 'sections/Faq/FaqLayout';
 const Faq = () => {
   const [activeIndex1, setActiveIndex1] = React.useState(1);
   return (
-    <div className='max-w-7xl mx-auto px-4'>
+    <div className='mx-auto max-w-7xl px-4'>
       <div className='xl:max-w-3xl'>
-        <h2 className='pt-10 lg:pt:16 text-3xl lg:text-4xl font-heading font-bold text-center text-gray-800 dark:text-white'>
+        <h2 className='lg:pt:16 pt-10 text-center font-heading text-3xl font-bold text-gray-800 dark:text-white lg:text-4xl'>
           Frequently asked questions
         </h2>
         <Image
@@ -15,10 +15,10 @@ const Faq = () => {
           alt='faq'
           width={500}
           height={500}
-          className='w-full aspect-auto object-contain mx-auto mt-10 rounded-lg shadow-lg'
+          className='mx-auto mt-10 aspect-auto w-full rounded-lg object-contain shadow-lg'
         />
-        <div className='pb-10 lg:pb-16 px-3'>
-          <div className='flex flex-col justify-center max-w-6xl mx-auto mt-10'>
+        <div className='px-3 pb-10 lg:pb-16'>
+          <div className='mx-auto mt-10 flex max-w-6xl flex-col justify-center'>
             {yogaFAQs.map((items) => (
               <AccordionLayout
                 title={items.question}

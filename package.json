@@ -16,7 +16,7 @@
     "@headlessui/tailwindcss": "^0.2.1",
     "@vercel/speed-insights": "^1.0.12",
     "axios": "^1.7.2",
-    "circular-dependency-plugin": "^5.2.2",
+    "clsx": "^2.1.1",
     "focus-visible": "^5.2.0",
     "graphql": "^16.9.0",
     "moment": "^2.30.1",
@@ -36,7 +36,6 @@
     "react-responsive-masonry": "^2.2.0"
   },
   "devDependencies": {
-    "@types/next-pwa": "^5.6.9",
     "@types/node": "^20.14.9",
     "@types/react": "^18.3.3",
     "@types/react-gtm-module": "^2.0.3",
@@ -46,7 +45,9 @@
     "eslint-config-next": "^14.2.4",
     "next-sitemap": "^4.2.3",
     "postcss": "^8.4.39",
+    "prettier": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.5",
     "tailwindcss": "^3.4.4",
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.3"
   }
 }

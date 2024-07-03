@@ -5,7 +5,7 @@ const EventInfo = () => {
     <div>
       {/* Event Details Section */}
       <section className='my-10 text-gray-800 dark:text-gray-200'>
-        <h2 className='text-3xl font-semibold mb-3 font-lexend'>Welcome</h2>
+        <h2 className='mb-3 font-lexend text-3xl font-semibold'>Welcome</h2>
         <div className='space-y-2 font-content text-lg'>
           <p>
             to the Ghar Ghar GarbhaGudi, a campaign brought to you by GarbhaGudi

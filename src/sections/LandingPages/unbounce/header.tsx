@@ -5,12 +5,12 @@ import React from 'react';
 const Header = () => {
   return (
     <div>
-      <div className='max-w-7xl mx-auto px-3'>
+      <div className='mx-auto max-w-7xl px-3'>
         <div className='flex items-center justify-between py-3'>
           <Logo />
           <Link
             href='tel:+919071234006'
-            className='px-3 py-2 bg-gg-500 font-lexend text-white rounded-md text-sm font-semibold hover:bg-gg-600 transition duration-300 ease-in-out'
+            className='rounded-md bg-gg-500 px-3 py-2 font-lexend text-sm font-semibold text-white transition duration-300 ease-in-out hover:bg-gg-600'
           >
             Contact Us
           </Link>

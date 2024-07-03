@@ -5,17 +5,17 @@ import Image from 'next/image';
 const Steps = () => {
   return (
     <div
-      className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl md:px-24 lg:px-8 lg:py-24'
+      className='mx-auto px-4 py-16 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-7xl lg:px-8 lg:py-24'
       id='how-to'
     >
-      <h3 className='text-3xl lg:text-4xl font-heading font-bold text-center mb-14 text-gray-800 dark:text-gray-200'>
+      <h3 className='mb-14 text-center font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 lg:text-4xl'>
         How to Avail the Paripoorna Benefit
       </h3>
-      <div className='flex items-center justify-center flex-col lg:flex-row gap-3'>
-        <div className='grid lg:grid-cols-2 gap-2 w-full md:w-7/12 font-lexend'>
-          <div className='rounded lg:p-5 lg:transition lg:duration-300 hover:bg-green-50 group p-3 md:p-2'>
-            <div className='flex items-center mb-1'>
-              <span className='flex items-center justify-center w-4 h-4 mr-2 text-xs font-medium text-white rounded bg-green-500'>
+      <div className='flex flex-col items-center justify-center gap-3 lg:flex-row'>
+        <div className='grid w-full gap-2 font-lexend md:w-7/12 lg:grid-cols-2'>
+          <div className='group rounded p-3 hover:bg-green-50 md:p-2 lg:p-5 lg:transition lg:duration-300'>
+            <div className='mb-1 flex items-center'>
+              <span className='mr-2 flex h-4 w-4 items-center justify-center rounded bg-green-500 text-xs font-medium text-white'>
                 1
               </span>
               <p className='font-lexend text-base text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
@@ -29,9 +29,9 @@ const Steps = () => {
               moment you walk through our doors.
             </p>
           </div>
-          <div className='rounded lg:p-5 lg:transition lg:duration-300 hover:bg-purple-50 group p-5 md:p-2'>
-            <div className='flex items-center mb-1'>
-              <span className='flex items-center justify-center w-4 h-4 mr-2 text-xs font-medium text-white rounded bg-purple-500'>
+          <div className='group rounded p-5 hover:bg-purple-50 md:p-2 lg:p-5 lg:transition lg:duration-300'>
+            <div className='mb-1 flex items-center'>
+              <span className='mr-2 flex h-4 w-4 items-center justify-center rounded bg-purple-500 text-xs font-medium text-white'>
                 2
               </span>
               <p className='font-lexend text-base text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
@@ -45,9 +45,9 @@ const Steps = () => {
               receive the care that suits your individual journey.
             </p>
           </div>
-          <div className='rounded lg:p-5 lg:transition lg:duration-300 hover:bg-pink-50 group p-5 md:p-2'>
-            <div className='flex items-center mb-1'>
-              <span className='flex items-center justify-center w-4 h-4 mr-2 text-xs font-medium text-white rounded bg-brandPink'>
+          <div className='group rounded p-5 hover:bg-pink-50 md:p-2 lg:p-5 lg:transition lg:duration-300'>
+            <div className='mb-1 flex items-center'>
+              <span className='mr-2 flex h-4 w-4 items-center justify-center rounded bg-brandPink text-xs font-medium text-white'>
                 3
               </span>
               <p className='font-lexend text-base text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
@@ -61,9 +61,9 @@ const Steps = () => {
               solutions to make your path to parenthood as smooth as possible.
             </p>
           </div>
-          <div className='rounded lg:p-5 lg:transition lg:duration-300 hover:bg-yellow-50 group p-5 md:p-2'>
-            <div className='flex items-center mb-1'>
-              <span className='flex items-center justify-center w-4 h-4 mr-2 text-xs font-medium text-white rounded bg-yellow-500'>
+          <div className='group rounded p-5 hover:bg-yellow-50 md:p-2 lg:p-5 lg:transition lg:duration-300'>
+            <div className='mb-1 flex items-center'>
+              <span className='mr-2 flex h-4 w-4 items-center justify-center rounded bg-yellow-500 text-xs font-medium text-white'>
                 4
               </span>
               <p className='font-lexend text-base text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
@@ -78,9 +78,9 @@ const Steps = () => {
             </p>
           </div>
         </div>
-        <div className='w-full md:w-5/12 flex items-center justify-center'>
+        <div className='flex w-full items-center justify-center md:w-5/12'>
           <Image
-            className='inset-0 object-cover object-bottom w-full rounded shadow-lg '
+            className='inset-0 w-full rounded object-cover object-bottom shadow-lg'
             width={1024}
             height={1024}
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1700052783/paripoorna/mother-with-daughter-lie-bed-dog-looking-them-min_uecuvg.webp'

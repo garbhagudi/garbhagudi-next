@@ -6,48 +6,48 @@ import Image from 'next/image';
 const MapSection = ({ maplink, address, description, doctors, title }) => {
   return (
     <div className='px-3'>
-      <div className='text-gray-600 body-font relative max-w-7xl mx-auto'>
-        <div className='py-6 flex flex-wrap lg:flex-nowrap inset-0 '>
-          <div className='lg:w-1/2 bg-gray-300 rounded-lg overflow-hidden p-2 lg:p-10 flex items-end justify-start relative h-[42rem] md:ml-auto w-full border-2 border-brandPurpleDark'>
+      <div className='body-font relative mx-auto max-w-7xl text-gray-600'>
+        <div className='inset-0 flex flex-wrap py-6 lg:flex-nowrap'>
+          <div className='relative flex h-[42rem] w-full items-end justify-start overflow-hidden rounded-lg border-2 border-brandPurpleDark bg-gray-300 p-2 md:ml-auto lg:w-1/2 lg:p-10'>
             <iframe
               width='100%'
               height='100%'
-              className='absolute inset-0 dark:grayscale dark:brightness-75 dark:contrast-150 dark:invert'
+              className='absolute inset-0 dark:brightness-75 dark:contrast-150 dark:grayscale dark:invert'
               loading='lazy'
               title='map'
               src={maplink}
             ></iframe>
-            <div className='bg-white dark:bg-gray-800 relative flex flex-wrap py-6 rounded-3xl shadow-3xl'>
-              <div className='lg:w-1/2 px-6'>
-                <div className='title-font font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs font-qs'>
+            <div className='shadow-3xl relative flex flex-wrap rounded-3xl bg-white py-6 dark:bg-gray-800'>
+              <div className='px-6 lg:w-1/2'>
+                <div className='title-font font-qs text-xs font-semibold tracking-widest text-gray-800 dark:text-gray-200'>
                   ADDRESS
                 </div>
                 <p className='mt-1 font-content text-sm text-gray-800 dark:text-gray-200'>
                   {address}
                 </p>
               </div>
-              <div className='lg:w-1/2 px-6 mt-4 lg:mt-0'>
-                <div className='font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs font-qs'>
+              <div className='mt-4 px-6 lg:mt-0 lg:w-1/2'>
+                <div className='font-qs text-xs font-semibold tracking-widest text-gray-800 dark:text-gray-200'>
                   EMAIL
                 </div>
                 <div className='leading-relaxed'>
                   <Link
                     href='mailto:dreams@garbhagudi.com'
-                    className='text-brandPink font-qs text-sm'
+                    className='font-qs text-sm text-brandPink'
                   >
                     dreams@garbhagudi.com
                   </Link>
                 </div>
-                <div className='font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs mt-4 font-qs'>
+                <div className='mt-4 font-qs text-xs font-semibold tracking-widest text-gray-800 dark:text-gray-200'>
                   PHONE
                 </div>
-                <p className='leading-relaxed font-qs text-sm text-gray-800 dark:text-gray-200'>
+                <p className='font-qs text-sm leading-relaxed text-gray-800 dark:text-gray-200'>
                   <Link href='tel:+919108910832'>+91 9108 9108 32</Link>
                 </p>
-                <div className='font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs mt-4 font-qs'>
+                <div className='mt-4 font-qs text-xs font-semibold tracking-widest text-gray-800 dark:text-gray-200'>
                   WhatsApp
                 </div>
-                <p className='leading-relaxed font-qs text-sm text-gray-800 dark:text-gray-200'>
+                <p className='font-qs text-sm leading-relaxed text-gray-800 dark:text-gray-200'>
                   <Link
                     href='https://wa.me/918884183338?text=Hi.'
                     target='_blank'
@@ -59,30 +59,30 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
               </div>
             </div>
           </div>
-          <div className='lg:w-1/2 px-6 font-content flex flex-col items-center text-gray-800 dark:text-gray-200'>
-            <h2 className='py-3 text-xl lg:text-2xl font-heading font-bold'>
+          <div className='flex flex-col items-center px-6 font-content text-gray-800 dark:text-gray-200 lg:w-1/2'>
+            <h2 className='py-3 font-heading text-xl font-bold lg:text-2xl'>
               GarbhaGudi IVF Centre, {title}
             </h2>
             <RichText content={description} />
           </div>
         </div>
-        <div className='w-full flex flex-col pb-8 md:mt-0'>
-          <h2 className='text-center font-heading text-2xl font-semibold py-10 lg:mt-0 text-gray-800 dark:text-gray-200'>
+        <div className='flex w-full flex-col pb-8 md:mt-0'>
+          <h2 className='py-10 text-center font-heading text-2xl font-semibold text-gray-800 dark:text-gray-200 lg:mt-0'>
             Fertility Specialists at {title}
           </h2>
-          <div className='grid grid-cols-2 mx-auto space-y-0 gap-3 sm:gap-8 sm:space-y-0 lg:grid-cols-6'>
+          <div className='mx-auto grid grid-cols-2 gap-3 space-y-0 sm:gap-8 sm:space-y-0 lg:grid-cols-6'>
             {doctors?.map((item: any) => {
               return (
                 <div
-                  className='text-center mx-auto flex items-center justify-start flex-col mb-2 transition-all duration-500 ease-in-out transform hover:scale-105'
+                  className='mx-auto mb-2 flex transform flex-col items-center justify-start text-center transition-all duration-500 ease-in-out hover:scale-105'
                   key={item?.id}
                 >
                   <Link href={`/fertility-experts/${item?.slug}`} passHref>
                     <div className='space-y-4'>
-                      <div className='relative h-40 w-40 mx-auto'>
-                        <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
+                      <div className='relative mx-auto h-40 w-40'>
+                        <div className='bg-[length: 400%] absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
                         <Image
-                          className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
+                          className='rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
                           src={item?.image?.url}
                           alt={item?.name}
                           width={500}
@@ -90,11 +90,11 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
                         />
                       </div>
                       <div className='space-y-4'>
-                        <div className='text-lg leading-6 font-medium space-y-1'>
+                        <div className='space-y-1 text-lg font-medium leading-6'>
                           <h3 className='text-brandDark font-content text-gray-800 dark:text-gray-200'>
                             {item?.name}
                           </h3>
-                          <p className='text-gg-500 dark:text-gg-400 text-sm font-content'>
+                          <p className='font-content text-sm text-gg-500 dark:text-gg-400'>
                             {item?.designation}
                           </p>
                         </div>

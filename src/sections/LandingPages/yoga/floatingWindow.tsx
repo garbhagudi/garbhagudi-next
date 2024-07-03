@@ -71,12 +71,12 @@ const Floating: React.FC = () => {
   return (
     <div
       id='floating-window'
-      className='fixed hidden xl:flex top-36 bg-gg-50 p-4 rounded-lg shadow-lg right-36 w-96 h-96 overflow-hidden'
+      className='fixed right-36 top-36 hidden h-96 w-96 overflow-hidden rounded-lg bg-gg-50 p-4 shadow-lg xl:flex'
     >
       <div className='max-w-xl'>
         <div className='flex flex-col items-start justify-start'>
           <div className='space-y-1.5'>
-            <div className='text-2xl font-lexend'>21 - Days Yoga Challenge</div>
+            <div className='font-lexend text-2xl'>21 - Days Yoga Challenge</div>
             <div className='space-y-1'>
               <div className='flex items-center justify-start space-x-3 pt-6 font-content'>
                 <FaCalendar className='text-2xl text-gg-500' />{' '}
@@ -92,7 +92,7 @@ const Floating: React.FC = () => {
               </div>
               <div className='py-6'>
                 <Link href='#register'>
-                  <button className='bg-gg-500 hover:bg-gg-600 text-white rounded-lg px-4 py-2 font-lexend'>
+                  <button className='rounded-lg bg-gg-500 px-4 py-2 font-lexend text-white hover:bg-gg-600'>
                     Register
                   </button>
                 </Link>

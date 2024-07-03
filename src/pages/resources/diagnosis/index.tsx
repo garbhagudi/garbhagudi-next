@@ -65,15 +65,15 @@ const IndexPage = ({ diagnoses }) => {
           link4={''}
           text4={''}
         />
-        <h1 className='max-w-7xl mx-auto text-center text-4xl font-heading pt-12 font-semibold'>
+        <h1 className='mx-auto max-w-7xl pt-12 text-center font-heading text-4xl font-semibold'>
           Diagnosis
         </h1>
-        <p className='max-w-7xl mx-auto text-center pt-6 font-semibold font-content px-2'>
+        <p className='mx-auto max-w-7xl px-2 pt-6 text-center font-content font-semibold'>
           There are a number of diagnostic tools available to help pinpoint the
           cause of infertility. Some of them may include:
         </p>
-        <div className='max-w-7xl mx-auto py-6 flex sm:py-12'>
-          <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-10 mx-auto'>
+        <div className='mx-auto flex max-w-7xl py-6 sm:py-12'>
+          <div className='mx-auto grid grid-cols-1 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             {diagnoses.map((item) => (
               <Link
                 href={`diagnosis/${item.slug}`}
@@ -81,16 +81,16 @@ const IndexPage = ({ diagnoses }) => {
                 key={item.id}
                 className='group'
               >
-                <div className='border-brandPink dark:border-gray-600 w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink dark:hover:bg-gray-600 hover:text-white hover:border-transparent transition-colors duration-100'>
+                <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-600 dark:hover:bg-gray-600 md:w-96'>
                   <div className='w-1/3'>
                     <img
-                      className='w-24 h-24 object-cover rounded-2xl dark:grayscale group-hover:grayscale-0 transition-all duration-300'
+                      className='h-24 w-24 rounded-2xl object-cover transition-all duration-300 group-hover:grayscale-0 dark:grayscale'
                       src={item.icon.url}
                       alt={item.title}
                     />
                   </div>
-                  <div className='w-2/3 flex flex-col justify-center text-center'>
-                    <p className='font-medium text-xl font-lexend'>
+                  <div className='flex w-2/3 flex-col justify-center text-center'>
+                    <p className='font-lexend text-xl font-medium'>
                       {item.title}
                     </p>
                   </div>

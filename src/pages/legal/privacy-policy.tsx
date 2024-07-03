@@ -56,14 +56,14 @@ const Policy = () => {
         link4={''}
         text4={''}
       />
-      <div className='relative py-8 bg-white overflow-hidden'>
-        <div className='hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full'>
+      <div className='relative overflow-hidden bg-white py-8'>
+        <div className='hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full'>
           <div
-            className='relative h-full text-lg max-w-prose mx-auto'
+            className='relative mx-auto h-full max-w-prose text-lg'
             aria-hidden='true'
           >
             <svg
-              className='absolute top-12 left-full transform translate-x-32'
+              className='absolute left-full top-12 translate-x-32 transform'
               width={404}
               height={384}
               fill='none'
@@ -95,7 +95,7 @@ const Policy = () => {
               />
             </svg>
             <svg
-              className='absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32'
+              className='absolute right-full top-1/2 -translate-x-32 -translate-y-1/2 transform'
               width={404}
               height={384}
               fill='none'
@@ -127,7 +127,7 @@ const Policy = () => {
               />
             </svg>
             <svg
-              className='absolute bottom-12 left-full transform translate-x-32'
+              className='absolute bottom-12 left-full translate-x-32 transform'
               width={404}
               height={384}
               fill='none'
@@ -161,13 +161,13 @@ const Policy = () => {
           </div>
         </div>
         <div className='relative px-4 sm:px-6 lg:px-8'>
-          <div className='text-lg max-w-7xl mx-auto'>
+          <div className='mx-auto max-w-7xl text-lg'>
             <h1>
-              <span className='mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-800 sm:text-4xl font-heading  underline underline-offset-4'>
+              <span className='mt-2 block text-center font-heading text-3xl font-extrabold leading-8 tracking-tight text-gray-800 underline underline-offset-4 sm:text-4xl'>
                 Privacy Policy
               </span>
             </h1>
-            <p className='mt-8 text-xl text-gray-00 leading-8 font-content'>
+            <p className='text-gray-00 mt-8 font-content text-xl leading-8'>
               This privacy policy sets out how we use and protect any
               information that you give us when you use this website. We are
               committed to ensuring that your privacy is protected. Should we
@@ -180,20 +180,20 @@ const Policy = () => {
               2019
             </p>
 
-            <div className='mt-6 max-w-7xl text-gray-800 mx-auto'>
-              <span className='mt-2 block text-3xl text-left leading-8 font-extrabold tracking-tight text-gray-900 sm:text-2xl font-heading underline underline-offset-4'>
+            <div className='mx-auto mt-6 max-w-7xl text-gray-800'>
+              <span className='mt-2 block text-left font-heading text-3xl font-extrabold leading-8 tracking-tight text-gray-900 underline underline-offset-4 sm:text-2xl'>
                 Security
               </span>
-              <p className='mt-4 text-lg font-content'>
+              <p className='mt-4 font-content text-lg'>
                 We are committed to ensuring that your information is secure. In
                 order to prevent unauthorised access or disclosure, we have put
                 in place suitable physical, electronic and managerial procedures
                 to safeguard and secure the information we collect online.
               </p>
-              <span className='mt-4 block text-3xl text-left leading-8 font-extrabold tracking-tight text-gray-900 sm:text-2xl font-heading underline underline-offset-4'>
+              <span className='mt-4 block text-left font-heading text-3xl font-extrabold leading-8 tracking-tight text-gray-900 underline underline-offset-4 sm:text-2xl'>
                 Links to other websites
               </span>
-              <p className='mt-4 text-lg font-content'>
+              <p className='mt-4 font-content text-lg'>
                 Our website may contain links to other websites of interest.
                 However, once you have used these links to leave our site, you
                 should note that we do not have any control over that other
@@ -203,24 +203,24 @@ const Policy = () => {
                 statement. You should exercise caution and look at the privacy
                 statement applicable to the website in question.
               </p>
-              <span className='mt-4 block text-3xl text-left leading-8 font-extrabold tracking-tight text-gray-900 sm:text-2xl font-heading underline underline-offset-4'>
+              <span className='mt-4 block text-left font-heading text-3xl font-extrabold leading-8 tracking-tight text-gray-900 underline underline-offset-4 sm:text-2xl'>
                 Controlling your personal information
               </span>
-              <p className='mt-4 text-lg font-content'>
+              <p className='mt-4 font-content text-lg'>
                 If you have previously agreed to us using your personal
                 information for direct marketing purposes, you may change your
                 mind at any time by writing to or emailing us at{' '}
                 <a
                   href='mailto:info@garbhagudi.com'
-                  className='underline text-purple-600'
+                  className='text-purple-600 underline'
                 >
                   info@garbhagudi.com
                 </a>
               </p>
-              <span className='mt-4 block text-3xl text-left leading-8 font-extrabold tracking-tight text-gray-900 sm:text-2xl font-heading underline underline-offset-4'>
+              <span className='mt-4 block text-left font-heading text-3xl font-extrabold leading-8 tracking-tight text-gray-900 underline underline-offset-4 sm:text-2xl'>
                 Taking care of your Password/s (Password security)
               </span>
-              <p className='mt-4 text-lg font-content'>
+              <p className='mt-4 font-content text-lg'>
                 We firmly believe in protecting the personal information of the
                 customer. We or any of its staff or official will never ask for
                 any password or related information from its customers and the

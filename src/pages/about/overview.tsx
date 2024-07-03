@@ -51,10 +51,10 @@ const Overview = ({ directors }) => {
       </Head>
       <Header />
       <div className='bg-white dark:bg-gray-800'>
-        <div className='px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24'>
+        <div className='mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-24'>
           <div className='space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0'>
             <div className='space-y-5 sm:space-y-4'>
-              <h2 className='text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl font-content text-gray-800 dark:text-gray-200'>
+              <h2 className='font-content text-4xl font-bold tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl md:text-6xl'>
                 Founders and Directors
               </h2>
             </div>
@@ -66,24 +66,24 @@ const Overview = ({ directors }) => {
                       <div className='space-y-4'>
                         <div className='aspect-square'>
                           <img
-                            className='shadow-2xl object-fit rounded-3xl w-96 h-96'
+                            className='object-fit h-96 w-96 rounded-3xl shadow-2xl'
                             src={item.image.url}
                             alt={item.name}
                           />
                         </div>
                         <div className='space-y-2 text-lg font-medium leading-6'>
-                          <h3 className='text-2xl font-semibold font-heading text-brandDark'>
+                          <h3 className='text-brandDark font-heading text-2xl font-semibold'>
                             {item.name}
                           </h3>
-                          <p className='text-sm font-semibold font-qs text-gg-500 dark:text-gg-400'>
+                          <p className='font-qs text-sm font-semibold text-gg-500 dark:text-gg-400'>
                             {item.details}
                           </p>
                         </div>
                         <div className='text-lg'>
-                          <p className='text-gray-800 dark:text-gray-200 font-content'>
+                          <p className='font-content text-gray-800 dark:text-gray-200'>
                             {item.description}
                           </p>
-                          <p className='mt-3 text-sm underline cursor-pointer text-brandPurple2 hover:text-brandPink font-content'>
+                          <p className='mt-3 cursor-pointer font-content text-sm text-brandPurple2 underline hover:text-brandPink'>
                             Read More {'>'}{' '}
                           </p>
                         </div>

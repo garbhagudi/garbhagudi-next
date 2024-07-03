@@ -91,21 +91,21 @@ const Awards = ({ award }) => {
         link4={''}
         text4={''}
       />
-      <div className='relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
+      <div className='relative px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24'>
         <div className='absolute inset-0'>
-          <div className='bg-white dark:bg-gray-800 h-1/3 sm:h-2/3' />
+          <div className='h-1/3 bg-white dark:bg-gray-800 sm:h-2/3' />
         </div>
-        <div className='relative max-w-7xl mx-auto'>
+        <div className='relative mx-auto max-w-7xl'>
           <div className='text-center'>
-            <h1 className='text-3xl tracking-tight font-extrabold text-gray-800 dark:text-gray-200 sm:text-4xl font-heading drop-shadow-xl'>
+            <h1 className='font-heading text-3xl font-extrabold tracking-tight text-gray-800 drop-shadow-xl dark:text-gray-200 sm:text-4xl'>
               Awards and Accolades
             </h1>
           </div>
-          <div className='mt-12 max-w-xl mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none w'>
+          <div className='w mx-auto mt-12 grid max-w-xl gap-8 lg:max-w-none lg:grid-cols-3'>
             {award?.map((item: any) => (
               <div
                 key={item?.id}
-                className='flex flex-col rounded-lg shadow-lg overflow-hidden hover:shadow-2xl hover:transition-all hover:-translate-x-2 hover:-translate-y-2 duration-300'
+                className='flex flex-col overflow-hidden rounded-lg shadow-lg duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-2xl hover:transition-all'
               >
                 <Link
                   href={`/about/awards-and-accolades/${item?.slug}`}
@@ -113,19 +113,19 @@ const Awards = ({ award }) => {
                 >
                   <div className='flex-shrink-0'>
                     <img
-                      className='h-38 w-full object-contain rounded-t-lg cursor-pointer'
+                      className='h-38 w-full cursor-pointer rounded-t-lg object-contain'
                       src={item?.image?.url}
                       alt={item?.title}
                     />
                   </div>
                 </Link>
-                <div className='flex-1 dark:bg-gray-700 text-gray-800 dark:text-gray-200 p-6 flex flex-col justify-between'>
+                <div className='flex flex-1 flex-col justify-between p-6 text-gray-800 dark:bg-gray-700 dark:text-gray-200'>
                   <div className='flex-1'>
                     <Link
                       href={`/about/awards-and-accolades/${item?.slug}`}
                       passHref
                     >
-                      <p className='text-lg font-semibold cursor-pointer font-heading'>
+                      <p className='cursor-pointer font-heading text-lg font-semibold'>
                         {item?.title}
                       </p>
                     </Link>

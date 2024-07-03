@@ -4,11 +4,11 @@ import Image from 'next/image';
 const WhoIsThisFor = () => {
   return (
     <div className='px-4 py-16'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='text-4xl font-bold font-lexend pb-8'>
+      <div className='mx-auto max-w-7xl'>
+        <div className='pb-8 font-lexend text-4xl font-bold'>
           Who is this for?
         </div>
-        <div className='xl:max-w-3xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10'>
+        <div className='grid grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-2 lg:grid-cols-3 xl:max-w-3xl'>
           {yogaWorkshopDetails.map((item) => (
             <div key={item.category} className='flex flex-col gap-4'>
               <div className=''>
@@ -21,7 +21,7 @@ const WhoIsThisFor = () => {
                 />
               </div>
 
-              <div className='text-xl font-lexend'>{item.category}</div>
+              <div className='font-lexend text-xl'>{item.category}</div>
               <div className='font-content'>{item.description}</div>
             </div>
           ))}

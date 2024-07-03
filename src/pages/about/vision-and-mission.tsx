@@ -61,25 +61,25 @@ const VisionMission = () => {
         link4={''}
         text4={''}
       />
-      <section className='text-gray-800 dark:text-gray-200 body-font'>
-        <div className='container px-5 py-24 mx-auto'>
-          <h1 className='text-4xl lg:text-5xl font-heading text-center pb-16 font-bold underline'>
+      <section className='body-font text-gray-800 dark:text-gray-200'>
+        <div className='container mx-auto px-5 py-24'>
+          <h1 className='pb-16 text-center font-heading text-4xl font-bold underline lg:text-5xl'>
             Mission & Vision of GarbhaGudi
           </h1>
-          <div className='flex flex-wrap -mx-4 -mb-10 text-center'>
-            <div className='sm:w-1/2 mb-10 px-4'>
-              <h2 className='title-font text-3xl font-heading font-semibold text-gray-800 dark:text-gray-200 mt-6 mb-3'>
+          <div className='-mx-4 -mb-10 flex flex-wrap text-center'>
+            <div className='mb-10 px-4 sm:w-1/2'>
+              <h2 className='title-font mb-3 mt-6 font-heading text-3xl font-semibold text-gray-800 dark:text-gray-200'>
                 Vision
               </h2>
-              <div className='rounded-lg h-64 overflow-hidden'>
+              <div className='h-64 overflow-hidden rounded-lg'>
                 <img
                   alt='content'
-                  className='object-cover object-center h-full w-full mb-2'
+                  className='mb-2 h-full w-full object-cover object-center'
                   src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643278927/About/1201x501_Vision_c6ds1h.jpg'
                 />
               </div>
 
-              <p className='leading-relaxed text-lg font-content text-left text-brandDark mt-2'>
+              <p className='text-brandDark mt-2 text-left font-content text-lg leading-relaxed'>
                 A mission followed by dedication and hard work turns into a
                 vision. Enormous amount of hard work goes into reaching out to
                 more and more people and create an awareness about infertility
@@ -90,19 +90,19 @@ const VisionMission = () => {
                 approach, ethical values, and humane touch.
               </p>
             </div>
-            <div className='sm:w-1/2 mb-10 px-4'>
-              <h2 className='title-font text-3xl text-gray-800 dark:text-gray-200 mt-6 mb-3 font-heading font-semibold'>
+            <div className='mb-10 px-4 sm:w-1/2'>
+              <h2 className='title-font mb-3 mt-6 font-heading text-3xl font-semibold text-gray-800 dark:text-gray-200'>
                 Mission
               </h2>
-              <div className='rounded-lg h-64 overflow-hidden'>
+              <div className='h-64 overflow-hidden rounded-lg'>
                 <img
                   alt='content'
-                  className='object-cover object-center h-full w-full mb-2'
+                  className='mb-2 h-full w-full object-cover object-center'
                   src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643278945/About/1201x501_Mission_wcctgt.jpg'
                 />
               </div>
 
-              <p className='leading-relaxed font-content text-lg text-left text-brandDark mt-2'>
+              <p className='text-brandDark mt-2 text-left font-content text-lg leading-relaxed'>
                 Dr. Asha S. Vijay, a post graduate in Obstetrics &amp;
                 Gynecology from the prestigious Bangalore Medical College,
                 started her career with Kidwai Institute of Oncology, Bangalore

@@ -4,21 +4,21 @@ import Image from 'next/image';
 const About = () => {
   return (
     <div className=''>
-      <div className='max-w-5xl mx-auto pb-16'>
-        <h3 className='text-3xl lg:text-4xl font-heading font-bold text-center lg:pb-10 text-gray-800 dark:text-gray-200'>
+      <div className='mx-auto max-w-5xl pb-16'>
+        <h3 className='text-center font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 lg:pb-10 lg:text-4xl'>
           About Us
         </h3>
-        <div className='grid grid-cols-1 md:grid-cols-5 gap-5'>
-          <div className='hidden col-span-2 md:flex items-center justify-center rounded-lg mx-auto '>
+        <div className='grid grid-cols-1 gap-5 md:grid-cols-5'>
+          <div className='col-span-2 mx-auto hidden items-center justify-center rounded-lg md:flex'>
             <Image
               src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1659164257/logos/GG_Vertical_Logo_nrcl5h.svg'
               alt='logo'
               width={500}
               height={500}
-              className='w-56 h-56 p-3 bg-gradient-to-br from-brandPurple via-white to-brandPink4 rounded-xl shadow-2xl drop-shadow-2xl animate-shine bg-[length:400%]'
+              className='h-56 w-56 animate-shine rounded-xl bg-gradient-to-br from-brandPurple via-white to-brandPink4 bg-[length:400%] p-3 shadow-2xl drop-shadow-2xl'
             />
           </div>
-          <div className='col-span-3 flex mt-6 md:mt-0 font-content items-center justify-center flex-col px-3 text-gray-800 dark:text-gray-200'>
+          <div className='col-span-3 mt-6 flex flex-col items-center justify-center px-3 font-content text-gray-800 dark:text-gray-200 md:mt-0'>
             <div>
               Spanning over a decade, GarbhaGudi has served as a beacon of hope
               to thousands of infertile couples. Our experienced and dedicated

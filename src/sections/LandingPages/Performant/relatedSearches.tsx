@@ -2,15 +2,15 @@ import React from 'react';
 
 const RelatedSearches = () => {
   return (
-    <div className='max-w-7xl mx-auto'>
-      <h2 className='text-4xl font-bold font-heading text-center py-8 lg:py-14'>
+    <div className='mx-auto max-w-7xl'>
+      <h2 className='py-8 text-center font-heading text-4xl font-bold lg:py-14'>
         Related Searches
       </h2>
-      <ul className='flex items-center justify-center gap-2 text-center flex-wrap font-content pb-6 lg:pb-12'>
+      <ul className='flex flex-wrap items-center justify-center gap-2 pb-6 text-center font-content lg:pb-12'>
         {list.map((item) => (
           <li
             key={item.id}
-            className='px-3 py-1.5 bg-gg-400 hover:bg-gg-600 cursor-default text-white rounded-lg'
+            className='cursor-default rounded-lg bg-gg-400 px-3 py-1.5 text-white hover:bg-gg-600'
           >
             {item.item}
           </li>

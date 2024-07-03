@@ -20,12 +20,12 @@ const EventDetails = () => {
 
   return (
     <div>
-      <div className='max-w-7xl mx-auto px-4 py-16'>
-        <div className='grid grid-cols-2 lg:grid-cols-4 xl:max-w-3xl gap-x-3 font-lexend'>
+      <div className='mx-auto max-w-7xl px-4 py-16'>
+        <div className='grid grid-cols-2 gap-x-3 font-lexend lg:grid-cols-4 xl:max-w-3xl'>
           {eventHeader.map((item) => (
             <div
               key={item.id}
-              className='flex flex-col items-center justify-start space-y-1.5 border py-3 rounded-lg'
+              className='flex flex-col items-center justify-start space-y-1.5 rounded-lg border py-3'
             >
               <div className='text-5xl text-gg-500'>{item.icon}</div>
               <div className='text-lg font-bold'>{item.title}</div>
@@ -34,35 +34,35 @@ const EventDetails = () => {
             </div>
           ))}
         </div>
-        <div className='xl:max-w-3xl py-8'>
-          <div className='text-3xl lg:text-4xl font-bold font-lexend my-8'>
+        <div className='py-8 xl:max-w-3xl'>
+          <div className='my-8 font-lexend text-3xl font-bold lg:text-4xl'>
             Whats Included?
           </div>
           <div className='grid grid-cols-1 gap-3'>
             {whatToExpect.map((item) => (
               <div
                 key={item.id}
-                className='py-4 flex flex-col justify-center items-center md:flex-row space-x-2 lg:space-x-5'
+                className='flex flex-col items-center justify-center space-x-2 py-4 md:flex-row lg:space-x-5'
               >
                 <Image
                   src={item.image}
                   alt={item.title}
                   width={48}
                   height={48}
-                  className='w-48 aspect-auto object-contain mx-auto'
+                  className='mx-auto aspect-auto w-48 object-contain'
                 />
-                <div className='flex flex-col lg:py-2 shadow-lg pt-20 md:pt-0 -mt-16 md:-mt-0 p-3 rounded-lg'>
-                  <div className='text-2xl font-bold font-lexend py-2'>
+                <div className='-mt-16 flex flex-col rounded-lg p-3 pt-20 shadow-lg md:-mt-0 md:pt-0 lg:py-2'>
+                  <div className='py-2 font-lexend text-2xl font-bold'>
                     {item.title}
                   </div>
-                  <div className='text-base text-gray-500 font-content'>
+                  <div className='font-content text-base text-gray-500'>
                     {expanded[item.id]
                       ? item.description
                       : truncate(item.description, 220)}
                     {item.description.length > 220 && (
                       <button
                         onClick={() => toggleReadMore(item.id)}
-                        className='text-gg-500 ml-2'
+                        className='ml-2 text-gg-500'
                       >
                         {expanded[item.id] ? 'Read Less' : 'Read More'}
                       </button>
