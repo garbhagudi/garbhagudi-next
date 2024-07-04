@@ -80,28 +80,26 @@
   >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <form
-      id="webform3505252000276132002"
       action="https://crm.zoho.com/crm/WebToLeadForm"
-      name="WebToLeads3505252000276132002"
+      name="WebToLeads3505252000085291164"
       method="POST"
-      onSubmit='javascript:document.charset="UTF-8"; return checkMandatory3505252000276132002()'
-      accept
-      -
-      charset="UTF-8"
+      onSubmit='javascript:document.charset="UTF-8"; return checkMandatory3505252000085291164()'
+      accept-charset="UTF-8"
     >
       <input
         type="text"
         style="display: none"
         name="xnQsjsdp"
-        value="3fbae96fc7d4f064d06a4ea013cb4720543f9e2491cbcf735bb62b88b1e6c2a3"
+        value="17730c4e7d6442ffce68a431e6d754713eb2b12b9ac7777050f2773ec54ed2d2"
       />
       <input type="hidden" name="zc_gad" id="zc_gad" value="" />
       <input
         type="text"
         style="display: none"
         name="xmIwtLD"
-        value="70c2bef49d2a98db494d686b9ec575d6ad56dde353c0cdac5f968e660d7bd29bb76faacba6697b4c267441fefa34de40"
+        value="61bba0cba3c8377c6a5dd6a5d5678a36b0c0af8489b97450a29344c095d7fdeb"
       />
       <input
         type="text"
@@ -109,17 +107,16 @@
         name="actionType"
         value="TGVhZHM="
       />
-      <input type="text" style="display: none" name="returnURL" value="null" />
+      <input
+        type="text"
+        style="display: none"
+        name="returnURL"
+        value="https&#x3a;&#x2f;&#x2f;garbhagudi.com&#x2f;thank-you.html"
+      />
       <!-- Do not remove this code. -->
-      <!-- <div class='zcwf_row'> -->
-      <div
-        class="zcwf_col_lab"
-        style="font-size: 12px; font-family: Arial"
-      ></div>
-      <h2 class="text-2xl font-[B612] text-center font-bold text-gray-800 pb-4">
-        Contact Us
-      </h2>
-      <!-- <div class = 'zcwf_col_fld' > -->
+      <input type="text" style="display: none" id="ldeskuid" name="ldeskuid" />
+      <input type="text" style="display: none" id="LDTuvid" name="LDTuvid" />
+      <!-- Do not remove this code. -->
       <div class="space-y-3 px-3 mx-auto">
         <div class="max-w-sm mx-auto">
           <input
@@ -128,12 +125,11 @@
             placeholder="Full Name"
             name="Last Name"
             maxlength="80"
-            class="w-full font-[nunito] text-base py-1 px-3 border lg:mt-0 active:outline-none focus:outline-none focus:ring-2 focus:ring-[#ea4b6a] focus:border-[#ea4b6a] border-[#ea4b6a] rounded-md"
+            class="w-full font-[nunito] text-base py-1 px-3 border mt-2 lg:mt-0 active:outline-none focus:outline-none focus:ring-2 focus:ring-[#ea4b6a] focus:border-[#ea4b6a] border-[#ea4b6a] rounded-md"
           />
           <div class="zcwf_col_help"></div>
         </div>
 
-        <!-- </div > -->
         <div class="max-w-sm mx-auto">
           <input
             type="text"
@@ -145,9 +141,11 @@
           />
           <div class="zcwf_col_help"></div>
         </div>
+
         <div class="max-w-sm mx-auto">
           <input
-            type="email"
+            type="text"
+            ftype="email"
             id="Email"
             placeholder="Email"
             name="Email"
@@ -158,45 +156,47 @@
         </div>
       </div>
       <div class="zcwf_row wfrm_fld_dpNn hidden">
-        <div class="zcwf_col_lab" style="font-size: 12px; font-family: Arial">
+        <div class="zcwf_col_lab" style="font-size: 15px; font-family: Verdana">
           <label for="Description">Description</label>
         </div>
         <div class="zcwf_col_fld">
           <textarea id="Description" name="Description">
-Catalyst_LP_v1</textarea
+LP_Catalyst_V1</textarea
           >
           <div class="zcwf_col_help"></div>
         </div>
       </div>
       <div class="zcwf_row wfrm_fld_dpNn hidden">
-        <div class="zcwf_col_lab" style="font-size: 12px; font-family: Arial">
+        <div class="zcwf_col_lab" style="font-size: 15px; font-family: Verdana">
           <label for="Lead_Source">Lead Source</label>
         </div>
-        <div class="zcwf_col_fld">
+        <div class="zcwf_col_fld hidden">
           <select class="zcwf_col_fld_slt" id="Lead_Source" name="Lead Source">
             <option value="-None-">-None-</option>
             <option selected value="Online">Online</option>
             <option value="Media">Media</option>
             <option value="Listing">Listing</option>
             <option value="Referred">Referral</option>
-            <option value="Camp">Camp & amp; Events</option>
+            <option value="Camp">Camp &amp; Events</option>
             <option value="Sponsor">Display</option>
           </select>
           <div class="zcwf_col_help"></div>
         </div>
       </div>
       <div class="zcwf_row wfrm_fld_dpNn hidden">
-        <div class="zcwf_col_lab" style="font-size: 12px; font-family: Arial">
-          <label for="LEADCF6"> Lead Sub Source </label>
+        <div class="zcwf_col_lab" style="font-size: 15px; font-family: Verdana">
+          <label for="LEADCF6">Lead Sub Source</label>
         </div>
         <div class="zcwf_col_fld">
           <select class="zcwf_col_fld_slt" id="LEADCF6" name="LEADCF6">
-            <option value="-None-">-None -</option>
-            <option value="GarbhaGudi&#x20;Website">GarbhaGudi Website</option>
+            <option value="-None-">-None-</option>
+            <option selected value="GarbhaGudi&#x20;Website">
+              GarbhaGudi Website
+            </option>
             <option value="Bagepalli">Bagepalli</option>
             <option value="Youtube">Youtube</option>
             <option value="Geo&#x20;Ads">
-              Geo Ads & #x28; Ads Media network & #x29;
+              Geo Ads &#x28;Ads Media network&#x29;
             </option>
             <option value="Affiliate&#x20;Marketing">
               Affiliate Marketing
@@ -221,7 +221,6 @@ Catalyst_LP_v1</textarea
             <option value="Mfine">Mfine</option>
             <option value="Google">Google</option>
             <option value="Tiptur&#x20;OPD">Tiptur OPD</option>
-            <option value="Madevapura&#x20;Camp">Madevapura Camp</option>
             <option value="Foore">Foore</option>
             <option value="Instagram">Instagram</option>
             <option value="Chitradurga&#x20;camp">Chitradurga camp</option>
@@ -235,8 +234,6 @@ Catalyst_LP_v1</textarea
             <option value="Name&#x20;boards">Name boards</option>
             <option value="Quora">Quora</option>
             <option value="Practo">Practo</option>
-            <option value="BTP&#x20;-&#x20;App">BTP - App</option>
-            <option value="Uniheal">Uniheal</option>
             <option value="Just&#x20;Dial">Just Dial</option>
             <option value="Clinic&#x20;spot">Clinic spot</option>
             <option value="Sira&#x20;Thumkur">Sira</option>
@@ -251,7 +248,7 @@ Catalyst_LP_v1</textarea
             <option value="Friend&#x20;&amp;&#x20;Family">
               Friend &amp; Family
             </option>
-            <option value="Camp&#x20;-&#x20;Kanakapura">
+            <option value="Camp&#x20;&#x20;-&#x20;Kanakapura">
               Camp - Kanakapura
             </option>
             <option value="KONANKUNTE&#x20;CAMP">KONANKUNTE CAMP</option>
@@ -274,26 +271,44 @@ Catalyst_LP_v1</textarea
             <option value="Banners">Banners</option>
             <option value="Wall&#x20;paintings">Wall paintings</option>
             <option value="Bus&#x20;advertisements">Bus advertisements</option>
-            <option value="GarbhaGudi&#x20;IVF&#x20;Landing">
-              Catalyst_LP_v1
-            </option>
-            <option selected value="Catalyst_LP_v1">Catalyst_LP_v1</option>
           </select>
           <div class="zcwf_col_help"></div>
         </div>
       </div>
-      <div class="zcwf_row mt-5">
+      <div class="zcwf_row flex items-center justify-center flex-col pt-6">
+        <div class="zcwf_col_lab"></div>
+        <div
+          class="zcwf_col_fld flex items-center justify-center mx-auto flex-col"
+        >
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LegDMIiAAAAAEdpZNW8tk7jSYoTFJu7-1smV3xB"
+            data-theme="light"
+            data-callback="rccallback3505252000085291164"
+            captcha-verified="false"
+            id="recap3505252000085291164"
+          ></div>
+          <div
+            id="recapErr3505252000085291164"
+            style="font-size: 12px; color: red; visibility: hidden"
+          >
+            Captcha validation failed. If you are not a robot then please try
+            again.
+          </div>
+        </div>
+      </div>
+      <div class="zcwf_row">
+        <div class="zcwf_col_lab"></div>
         <div class="zcwf_col_fld flex items-center justify-center space-x-3">
           <input
             type="submit"
             id="formsubmit"
-            class="formsubmit zcwf_button font-[nunito] px-5 py-2 rounded-lg font-bold text-white bg-[#ea4b6a] hover:bg-[#ee6f88] active:outline-none focus:outline-none"
+            class="formsubmit zcwf_button font-[nunito] px-3 py-2 rounded-lg text-base font-bold text-white bg-[#ea4b6a] hover:bg-[#ee6f88] active:outline-none focus:outline-none"
             value="Submit"
             title="Submit"
-          />
-          <input
+          /><input
             type="reset"
-            class="zcwf_button font-[nunito] px-3 py-2 rounded-lg font-bold text-white bg-[#ea4b6a] hover:bg-[#ee6f88] active:outline-none focus:outline-none"
+            class="zcwf_button font-[nunito] px-3 py-2 rounded-lg text-base font-bold text-white bg-[#ea4b6a] hover:bg-[#ee6f88] active:outline-none focus:outline-none"
             name="reset"
             value="Reset"
             title="Reset"
@@ -334,8 +349,8 @@ Catalyst_LP_v1</textarea
           }
           return true;
         }
-        function validateEmail3505252000276132002() {
-          var form = document.forms['WebToLeads3505252000276132002'];
+        function validateEmail3505252000085291164() {
+          var form = document.forms['WebToLeads3505252000085291164'];
           var emailFld = form.querySelectorAll('[ftype=email]');
           var i;
           for (i = 0; i < emailFld.length; i++) {
@@ -357,12 +372,12 @@ Catalyst_LP_v1</textarea
           return true;
         }
 
-        function checkMandatory3505252000276132002() {
+        function checkMandatory3505252000085291164() {
           var mndFileds = new Array('Last Name', 'Phone');
           var fldLangVal = new Array('Full\x20Name', 'Phone');
           for (i = 0; i < mndFileds.length; i++) {
             var fieldObj =
-              document.forms['WebToLeads3505252000276132002'][mndFileds[i]];
+              document.forms['WebToLeads3505252000085291164'][mndFileds[i]];
             if (fieldObj) {
               if (fieldObj.value.replace(/^\s+|\s+$/g, '').length == 0) {
                 if (fieldObj.type == 'file') {
@@ -395,29 +410,20 @@ Catalyst_LP_v1</textarea
               } catch (e) {}
             }
           }
-          if (!validateEmail3505252000276132002()) {
+          trackVisitor3505252000085291164();
+          if (!validateEmail3505252000085291164()) {
             return false;
           }
 
-          var urlparams = new URLSearchParams(window.location.search);
-          if (
-            urlparams.has('service') &&
-            urlparams.get('service') === 'smarturl'
-          ) {
-            var webform = document.getElementById('webform3505252000276132002');
-            var service = urlparams.get('service');
-            var smarturlfield = document.createElement('input');
-            smarturlfield.setAttribute('type', 'hidden');
-            smarturlfield.setAttribute('value', service);
-            smarturlfield.setAttribute('name', 'service');
-            webform.appendChild(smarturlfield);
+          if (!reCaptchaAlert3505252000085291164()) {
+            return false;
           }
-
           document
             .querySelector('.crmWebToEntityForm .formsubmit')
             .setAttribute('disabled', true);
         }
-        function tooltipShow3505252000276132002(el) {
+
+        function tooltipShow3505252000085291164(el) {
           var tooltip = el.nextElementSibling;
           var tooltipDisplay = tooltip.style.display;
           if (tooltipDisplay == 'none') {
