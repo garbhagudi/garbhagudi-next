@@ -26,7 +26,7 @@ const Doctors = dynamic(
 const Faq = dynamic(() => import('sections/home/faq'));
 
 
-export default function LandingPage(doctors) {
+export default function LandingPage_call({doctors}) {
     return (
         <div>
             <Head>
