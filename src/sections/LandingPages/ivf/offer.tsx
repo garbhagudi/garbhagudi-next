@@ -24,7 +24,7 @@ const Offer = () => {
                                 Fertility Centre in Bangalore by multiple organizations.
                             </p>
                             <div className='bg-[#005E7E]'>
-                            <h2 className='text-white mt-2 text-center text-xl font-bold font-lexend'>Talk To Our Fertility Experts Today</h2>
+                            <h2 className='text-white mt-3 text-center text-xl font-bold font-lexend'>Talk To Our Fertility Experts Today</h2>
                               <Form/>
                             </div>
                     </div>

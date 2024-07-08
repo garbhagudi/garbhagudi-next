@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Form from './form';
-import offerBanner from 'assets/landing-page/offer-banner.webp';
+import offerBanner from 'assets/landing-page/Offer-Logo.png';
 
 const Banner = () => {
   return (
@@ -12,8 +12,8 @@ const Banner = () => {
             <Image
               src={offerBanner}
               alt='Banner Image'
-              width={500}
-              height={500}
+              width={400}
+              height={400}
               className='w-auto h-auto lg:max-h-[30rem]'
               priority
             />
