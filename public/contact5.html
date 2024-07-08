@@ -77,6 +77,7 @@
     >
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       <form
         id="webform3505252000276132002"
         action="https://crm.zoho.com/crm/WebToLeadForm"
@@ -84,7 +85,7 @@
         method="POST"
         onSubmit='javascript:document.charset="UTF-8"; return checkMandatory3505252000276132002()'
         accept-charset="UTF-8"
-        class="-mb-6"
+        class=""
       >
       <input type='text' style='display:none;' name='xnQsjsdp' value='9e88efc4197ee8371d4bcdb89ec73f72048ec42dca94615bfa6806e9e7f57b91'></input> 
       <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
@@ -129,6 +130,7 @@
             />
             <div class="zcwf_col_help"></div>
           </div>
+          <div class='zcwf_col_fld'><div class='g-recaptcha' data-sitekey='6LegDMIiAAAAAEdpZNW8tk7jSYoTFJu7-1smV3xB' data-theme='light' data-callback='rccallback3505252000276132002' captcha-verified='false' id='recap3505252000276132002'></div><div  id='recapErr3505252000276132002' style='font-size:12px;color:red;visibility:hidden;'>Captcha validation failed. If you are not a robot then please try again.</div></div>
         </div>
         <div class="zcwf_row wfrm_fld_dpNn hidden">
           <div class="zcwf_col_lab" style="font-size: 12px; font-family: Arial">
@@ -256,7 +258,7 @@
           </div>
         </div>
         <div class="zcwf_row">
-          <div class="zcwf_col_lab mt-5"></div>
+          <div class="zcwf_col_lab"></div>
           <div class="zcwf_col_fld flex items-center justify-center space-x-3">
             <input
               type="submit"
@@ -346,6 +348,7 @@
 		        }
 		    }
 		    if(!validateEmail3505252000276132002()){return false;}
+            if(!reCaptchaAlert3505252000276132002()){return false;}
 		    var urlparams = new URLSearchParams( window.location.search);
 	        if(urlparams.has('service') && (urlparams.get('service')==='smarturl')){
 		        var webform = document.getElementById('webform3505252000276132002');
@@ -360,7 +363,7 @@
 		    document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
             setTimeout(() => {
                  window.location.href = '/thank-you.html';
-              }, 2000);
+            }, 2000);
 	    }
           function tooltipShow3505252000276132002(el) {
             var tooltip = el.nextElementSibling;
@@ -378,7 +381,7 @@
           }
         </script>
         <!-- Do not remove this --- Analytics Tracking code starts -->
-        <script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=fff69d2bb7c6d3621a465af1c6d4fb25d4d42014baf98a0eda56502d492c4610778e2aa8c0755248b1f93b2841d23c7fgidd82d09613da1f259cf0810e08d56f2e09df3e0197764b08f299f66fa26b6f52dgid7f5f93245a24522282f9bf5528ab74b848722e9d84ad0db18f341f5e42c791begid5d4788cd5f6d834f66f6202a42b05a45b06115ff2b0d7f37b0139873c81c40b9&tw=b537afeb20e430af27e5ce317e4d33809fbef522bfb90e5764613586cd81976e'></script>
+        <script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=d1a1690fcb310fc728def3a1bcb8a3a276fdfae5b952d10d9424de92c5832ab77035eea9f9c111ce891dde9fa535e9b7gid0a660f63865ae385ac66beb72e0e499b48272077541ff4b0b670fd5b89c029c1gidf7c3f54ac72794f1a9497c64abf5ea5098b5c16107ecef21a5862c2362fa7783gid50b92c601fe1732b1b488ea15ced0f1c1866f68e6d73af38e714b061ea1db2d3&tw=60fd3ec76224eb2f01d601cb358972e0c12eb82099531f9acd920a5a21b4351a'></script>
         <!-- Do not remove this --- Analytics Tracking code ends. -->
       </form>
     </div>
