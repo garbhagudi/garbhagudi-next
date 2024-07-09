@@ -27,6 +27,17 @@ const Faq = dynamic(() => import('sections/home/faq'));
 
 
 export default function LandingPage_call({doctors}) {
+  useEffect(() => {
+    const redirectToPhoneDialer = () => {
+      window.location.href = 'tel:+919071234006'; // Replace with your phone number
+    };
+
+    document.addEventListener('click', redirectToPhoneDialer);
+
+    return () => {
+      document.removeEventListener('click', redirectToPhoneDialer);
+    };
+  }, []);
     return (
         <div>
             <Head>
@@ -89,7 +100,6 @@ export default function LandingPage_call({doctors}) {
             <Testimonial />
             <Faq/>
             <EndForm/>
-            <PopupImage/>
             </> 
         </div>
     );

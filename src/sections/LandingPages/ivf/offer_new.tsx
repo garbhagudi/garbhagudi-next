@@ -1,8 +1,7 @@
 import React from 'react';
-import { useState , useEffect , useRef } from 'react';
 import Image from 'next/image';
-import offerBanner from 'assets/landing-page/Offer-Logo.png';
 import Form from './form';
+import offerBanner from 'assets/landing-page/Offer-Logo.png';
 
 const Offer = () => {
   return (
@@ -24,14 +23,9 @@ const Offer = () => {
                                 GarbhaGudi IVF Centre has been awarded as the Best IVF &
                                 Fertility Centre in Bangalore by multiple organizations.
                             </p>
-                            <div className='bg-[#005E7E] p-3'>
-                            <h2 className='text-white mt-1 text-center text-xl font-bold font-lexend'>Talk To Our Fertility Experts Today</h2>
-                            <div className='flex flex-col px-5 pt-4 mb-10 mt-5 w-full'>
-                              <input type="text" placeholder='Full Name' className='rounded border border-gg-500 mt-5 py-1 px-4' />
-                              <input type="text" placeholder='Phone' className='rounded border border-gg-500 mt-5  py-1 px-4' />
-                              <input type="text" placeholder='Email' className='rounded border border-gg-500 mt-5  py-1 px-4' />
-                              <button className='bg-gg-500 font-lexend px-3 py-2 mt-5 w-1/2 mx-auto text-white rounded'> Submit </button>
-                            </div>
+                            <div className='bg-[#005E7E]'>
+                            <h2 className='text-white mt-3 text-center text-xl font-bold font-lexend'>Talk To Our Fertility Experts Today</h2>
+                              <Form/>
                             </div>
                     </div>
                 </section>
