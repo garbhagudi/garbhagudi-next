@@ -3,9 +3,9 @@ import React from 'react';
 const Offer = () => {
   return (
     <div className='bg-gg-800'>
-      <div className='mx-auto max-w-7xl px-3 lg:px-5'>
-        <div className='py-5 text-center font-lexend text-xl font-bold text-yellow-500 lg:py-6 lg:text-2xl'>
-          Offer of the month: ₹ 55000/- OFF on IVF Treatment
+      <div className='max-w-7xl mx-auto px-3 lg:px-5'>
+        <div className='text-yellow-500 font-lexend text-xl lg:text-2xl text-center py-5 lg:py-6 font-bold'>
+          Offer of the month:  Free Fertility Screening
         </div>
       </div>
     </div>
