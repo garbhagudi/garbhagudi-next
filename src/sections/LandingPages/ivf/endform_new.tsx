@@ -14,13 +14,8 @@ const EndForm = () => {
                 Book an Appointment
               </h4>
               <div className='bg-[#005E7E] flex flex-col items-center'>
-                <h2 className='text-white mt-3 text-center text-xl font-bold font-lexend'>Talk To Our Fertility Experts Today</h2>
-                <div className='flex flex-col px-5 pt-4 mb-10 mt-5 w-full'>
-                  <input type="text" placeholder='Full Name' className='rounded border border-gg-500 w-full  py-1 px-4' />
-                  <input type="text" placeholder='Phone' className='rounded border border-gg-500 mt-5  py-1 px-4' />
-                  <input type="text" placeholder='Email' className='rounded border border-gg-500 mt-5  py-1 px-4' />
-                  <button className='bg-gg-500 font-lexend px-3 py-2 mt-5 w-1/2 mx-auto text-white rounded'> Submit </button>
-               </div>
+              <h2 className='text-white mt-3 text-center text-xl font-bold font-lexend'>Talk To Our Fertility Experts Today</h2>
+                <Form />
               </div>
             </div>
           </div>
