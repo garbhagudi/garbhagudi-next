@@ -66,33 +66,33 @@ const IndexPage = ({ treatments }) => {
         link4={''}
         text4={''}
       />
-      <div className='max-w-7xl mx-auto'>
-        <h1 className='text-center text-4xl font-heading pt-12 font-semibold'>
+      <div className='mx-auto max-w-7xl'>
+        <h1 className='pt-12 text-center font-heading text-4xl font-semibold'>
           Treatment Options
         </h1>
         <div className='w-full max-w-7xl px-2 py-16 sm:px-0'>
           <Tab.Group>
-            <Tab.List className={'flex p-1 space-x-1 bg-brandPink rounded-xl'}>
-              <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
-                <div className='max-w-7xl mx-auto text-center text-base md:text-2xl font-heading font-semibold'>
+            <Tab.List className={'flex space-x-1 rounded-xl bg-brandPink p-1'}>
+              <Tab className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'>
+                <div className='mx-auto max-w-7xl text-center font-heading text-base font-semibold md:text-2xl'>
                   Female Infertility
                 </div>
               </Tab>
-              <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
-                <div className='max-w-7xl mx-auto text-center text-base px-2 md:text-2xl font-heading font-semibold'>
+              <Tab className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'>
+                <div className='mx-auto max-w-7xl px-2 text-center font-heading text-base font-semibold md:text-2xl'>
                   Male Infertility
                 </div>
               </Tab>
-              <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
-                <div className='max-w-7xl mx-auto text-center text-base md:text-2xl font-heading font-semibold'>
+              <Tab className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'>
+                <div className='mx-auto max-w-7xl text-center font-heading text-base font-semibold md:text-2xl'>
                   Advanced Options
                 </div>
               </Tab>
             </Tab.List>
             <Tab.Panels>
               <Tab.Panel>
-                <div className='max-w-7xl mx-auto py-6 flex sm:py-12'>
-                  <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4 mx-auto'>
+                <div className='mx-auto flex max-w-7xl py-6 sm:py-12'>
+                  <div className='mx-auto grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {treatments.map((item) => {
                       if (item.category == 'Female') {
                         return (
@@ -102,16 +102,16 @@ const IndexPage = ({ treatments }) => {
                             key={item.id}
                             className='group'
                           >
-                            <div className='border-brandPink dark:border-gray-700 dark:hover:border-gg-400 w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink dark:hover:bg-gray-600 hover:text-white hover:border-transparent transition-all duration-100'>
+                            <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-all duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-700 dark:hover:border-gg-400 dark:hover:bg-gray-600 md:w-96'>
                               <div className='w-1/3'>
                                 <img
-                                  className='w-16 h-16 object-cover rounded-md dark:grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out'
+                                  className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
                                   src={item.icon.url}
                                   alt={item.title}
                                 />
                               </div>
-                              <div className='w-2/3 flex flex-col justify-center text-left'>
-                                <p className='font-semibold text-lg font-qs'>
+                              <div className='flex w-2/3 flex-col justify-center text-left'>
+                                <p className='font-qs text-lg font-semibold'>
                                   {item.title}
                                 </p>
                               </div>
@@ -125,16 +125,16 @@ const IndexPage = ({ treatments }) => {
                       passHref
                       className='group'
                     >
-                      <div className='border-brandPink dark:border-gray-700 dark:hover:border-gg-400 w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink dark:hover:bg-gray-600 hover:text-white hover:border-transparent transition-all duration-100'>
+                      <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-all duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-700 dark:hover:border-gg-400 dark:hover:bg-gray-600 md:w-96'>
                         <div className='w-1/3'>
                           <img
-                            className='w-16 h-16 object-cover rounded-md dark:grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out'
+                            className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
                             src='https://media.graphassets.com/EwdJCRdtRiKDXeWF4toB'
                             alt='IVF Icon'
                           />
                         </div>
-                        <div className='w-2/3 flex flex-col justify-center text-left'>
-                          <p className='font-semibold text-lg font-qs'>
+                        <div className='flex w-2/3 flex-col justify-center text-left'>
+                          <p className='font-qs text-lg font-semibold'>
                             In-Vitro Fertilization
                           </p>
                         </div>
@@ -145,16 +145,16 @@ const IndexPage = ({ treatments }) => {
                       passHref
                       className='group'
                     >
-                      <div className='border-brandPink dark:border-gray-700 dark:hover:border-gg-400 w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink dark:hover:bg-gray-600 hover:text-white hover:border-transparent transition-all duration-100'>
+                      <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-all duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-700 dark:hover:border-gg-400 dark:hover:bg-gray-600 md:w-96'>
                         <div className='w-1/3'>
                           <img
-                            className='w-16 h-16 object-cover rounded-md dark:grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out'
+                            className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
                             src='https://media.graphassets.com/CpcAosCyRImJVMN1xA9O'
                             alt='IUI Icon'
                           />
                         </div>
-                        <div className='w-2/3 flex flex-col justify-center text-left'>
-                          <p className='font-semibold text-lg font-qs'>
+                        <div className='flex w-2/3 flex-col justify-center text-left'>
+                          <p className='font-qs text-lg font-semibold'>
                             Intra-Uterine Insemination
                           </p>
                         </div>
@@ -164,8 +164,8 @@ const IndexPage = ({ treatments }) => {
                 </div>
               </Tab.Panel>
               <Tab.Panel>
-                <div className='max-w-7xl mx-auto py-6 flex sm:py-12'>
-                  <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4 mx-auto'>
+                <div className='mx-auto flex max-w-7xl py-6 sm:py-12'>
+                  <div className='mx-auto grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {treatments.map((item) => {
                       if (item.category == 'Male') {
                         return (
@@ -174,16 +174,16 @@ const IndexPage = ({ treatments }) => {
                             passHref
                             key={item.id}
                           >
-                            <div className='border-brandPink w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 '>
+                            <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white md:w-96'>
                               <div className='w-1/3'>
                                 <img
-                                  className='w-16 h-16 object-cover rounded-full'
+                                  className='h-16 w-16 rounded-full object-cover'
                                   src={item.icon.url}
                                   alt={item.title}
                                 />
                               </div>
-                              <div className='w-2/3 flex flex-col justify-center text-left'>
-                                <p className='font-semibold text-lg font-qs'>
+                              <div className='flex w-2/3 flex-col justify-center text-left'>
+                                <p className='font-qs text-lg font-semibold'>
                                   {item.title}
                                 </p>
                               </div>
@@ -196,8 +196,8 @@ const IndexPage = ({ treatments }) => {
                 </div>
               </Tab.Panel>
               <Tab.Panel>
-                <div className='max-w-7xl mx-auto py-6 flex sm:py-12'>
-                  <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4 mx-auto'>
+                <div className='mx-auto flex max-w-7xl py-6 sm:py-12'>
+                  <div className='mx-auto grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {treatments.map((item) => {
                       if (item.category == 'Advanced') {
                         return (
@@ -206,16 +206,16 @@ const IndexPage = ({ treatments }) => {
                             passHref
                             key={item.id}
                           >
-                            <div className='border-brandPink w-80 mx-auto md:w-96 px-4 py-3 border-solid rounded-2xl border-2 flex cursor-pointer hover:bg-brandPink hover:text-white hover:border-transparent transition-colors duration-100 '>
+                            <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white md:w-96'>
                               <div className='w-1/3'>
                                 <img
-                                  className='w-16 h-16 object-cover rounded-full'
+                                  className='h-16 w-16 rounded-full object-cover'
                                   src={item.icon.url}
                                   alt={item.title}
                                 />
                               </div>
-                              <div className='w-2/3 flex flex-col justify-center text-left'>
-                                <p className='font-semibold text-lg font-qs'>
+                              <div className='flex w-2/3 flex-col justify-center text-left'>
+                                <p className='font-qs text-lg font-semibold'>
                                   {item.title}
                                 </p>
                               </div>

@@ -48,14 +48,14 @@ const IndexPage = (props: Props) => {
         />
       </Head>
 
-      <div className='max-w-7xl mx-auto'>
+      <div className='mx-auto max-w-7xl'>
         <img
           src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1663403546/Banner/Google_Form_Header-min_tjenif.jpg'
           alt='formBanner'
-          className='md:max-w-2xl mt-4 mx-auto'
+          className='mx-auto mt-4 md:max-w-2xl'
         />
-        <div className='bg-gray-800 max-w-2xl mx-auto'>
-          <h1 className='text-3xl text-white text-center font-lexend pt-4'>
+        <div className='mx-auto max-w-2xl bg-gray-800'>
+          <h1 className='pt-4 text-center font-lexend text-3xl text-white'>
             Enquiry Form
           </h1>
           <Form />

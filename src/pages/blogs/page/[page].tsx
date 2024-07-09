@@ -80,33 +80,33 @@ function BlogPage({
           link4={''}
           text4={''}
         />
-        <div className='relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
-          <div className='relative max-w-7xl mx-auto'>
+        <div className='relative px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24'>
+          <div className='relative mx-auto max-w-7xl'>
             <div className='text-center'>
-              <h1 className='text-3xl font-extrabold text-gray-800 dark:text-gray-200 sm:text-5xl font-heading underline'>
+              <h1 className='font-heading text-3xl font-extrabold text-gray-800 underline dark:text-gray-200 sm:text-5xl'>
                 Blogs
               </h1>
             </div>
             <SearchComponent />
-            <div className='py-12 max-w-xl mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none'>
+            <div className='mx-auto grid max-w-xl gap-8 py-12 lg:max-w-none lg:grid-cols-3'>
               {blogs?.map((item: any) => (
                 <div
                   key={item?.node?.id}
-                  className='flex flex-col rounded-lg shadow-2xl overflow-hidden hover:translate-x-1 hover:translate-y-1 transition duration-200 hover:shadow-lg'
+                  className='flex flex-col overflow-hidden rounded-lg shadow-2xl transition duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-lg'
                 >
                   <Link href={`/blogs/${item.node.slug}`} passHref>
                     <div className='flex-shrink-0'>
                       <img
-                        className='h-38 w-full object-contain rounded-t-lg cursor-pointer'
+                        className='h-38 w-full cursor-pointer rounded-t-lg object-contain'
                         src={item?.node?.image?.url}
                         alt={item?.node?.title}
                       />
                     </div>
                   </Link>
-                  <div className='flex-1 bg-gradient-to-bl from-gg-200 dark:from-gray-800 via-gg-100 to-gg-50 dark:to-gray-700 p-6 flex flex-col justify-between'>
+                  <div className='flex flex-1 flex-col justify-between bg-gradient-to-bl from-gg-200 via-gg-100 to-gg-50 p-6 dark:from-gray-800 dark:to-gray-700'>
                     <div className='flex-1'>
                       <Link href={`/blogs/${item?.node?.slug}`} passHref>
-                        <p className='text-base font-normal text-gray-800 dark:text-gray-200 cursor-pointer font-lexend'>
+                        <p className='cursor-pointer font-lexend text-base font-normal text-gray-800 dark:text-gray-200'>
                           {item?.node?.title}
                         </p>
                       </Link>
@@ -122,7 +122,7 @@ function BlogPage({
                               By: GarbhaGudi IVF Centre
                             </span>
                             <Image
-                              className='h-12 w-12 scale-150 md:h-16 md:w-16 rounded-full dark:fill-white dark:grayscale dark:brightness-0 dark:invert'
+                              className='h-12 w-12 scale-150 rounded-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert md:h-16 md:w-16'
                               src={GGLogo}
                               alt={'GarbhaGudi IVF Centre'}
                               width={50}
@@ -139,7 +139,7 @@ function BlogPage({
                             </div>
                           </Link>
                         </div>
-                        <div className='flex space-x-1 text-sm text-gray-700 dark:text-gray-200 font-lexend'>
+                        <div className='flex space-x-1 font-lexend text-sm text-gray-700 dark:text-gray-200'>
                           <time>Published: {item?.node?.publishedOn}</time>
                         </div>
                       </div>

@@ -3,13 +3,13 @@ import React from 'react';
 
 const CallToAction = () => {
   return (
-    <div className='bg-gray-100 dark:bg-gray-700 rounded-lg max-w-7xl mx-auto mt-10'>
-      <div className='max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 text-center lg:text-left flex flex-col lg:flex-row items-center lg:justify-between'>
+    <div className='mx-auto mt-10 max-w-7xl rounded-lg bg-gray-100 dark:bg-gray-700'>
+      <div className='mx-auto flex max-w-7xl flex-col items-center px-4 py-12 text-center sm:px-6 lg:flex-row lg:justify-between lg:px-8 lg:py-16 lg:text-left'>
         <h2 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
           <span className='block font-content text-gray-800 dark:text-gray-200'>
             Ready to start?
           </span>
-          <span className='block text-brandPink font-content'>
+          <span className='block font-content text-brandPink'>
             Let us take your dreams forward...
           </span>
         </h2>
@@ -17,7 +17,7 @@ const CallToAction = () => {
           <div className='inline-flex rounded-md shadow'>
             <Link
               href={'/gg-care'}
-              className='px-4 py-3 text-xl bg-gg-500 dark:bg-gray-500 hover:bg-gg-400 dark:hover:bg-gg-500 text-white rounded-lg font-content font-semibold'
+              className='rounded-lg bg-gg-500 px-4 py-3 font-content text-xl font-semibold text-white hover:bg-gg-400 dark:bg-gray-500 dark:hover:bg-gg-500'
             >
               Book an Appointment
             </Link>

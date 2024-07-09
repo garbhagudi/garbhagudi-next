@@ -4,15 +4,15 @@ import Link from 'next/link';
 const Related = () => {
   return (
     <div id='related'>
-      <div className='max-w-7xl mx-auto pb-10 lg:pb-16'>
-        <h3 className='text-3xl lg:text-4xl font-heading text-center font-bold py-10 lg:py-16 text-gray-800 dark:text-gray-200'>
+      <div className='mx-auto max-w-7xl pb-10 lg:pb-16'>
+        <h3 className='py-10 text-center font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 lg:py-16 lg:text-4xl'>
           Related Searches
         </h3>
-        <div className='flex items-center justify-center flex-wrap gap-3'>
+        <div className='flex flex-wrap items-center justify-center gap-3'>
           {keywords.map((items) => (
             <Link href={items.link} key={items.id}>
               <div>
-                <div className='px-3 py-1.5 border dark:border-gray-500 bg-brandPurple2 dark:bg-gray-600 font-bold text-sm rounded-lg font-content hover:bg-brandPurpleDark hover:text-white transition-all duration-300 ease-in-out'>
+                <div className='rounded-lg border bg-brandPurple2 px-3 py-1.5 font-content text-sm font-bold transition-all duration-300 ease-in-out hover:bg-brandPurpleDark hover:text-white dark:border-gray-500 dark:bg-gray-600'>
                   <div className=''>{items.word}</div>
                 </div>
               </div>

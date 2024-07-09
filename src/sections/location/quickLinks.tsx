@@ -4,19 +4,19 @@ import { HiCheck } from 'react-icons/hi';
 
 const QuickLinks = () => {
   return (
-    <div className='bg-brandPink5 dark:bg-gray-700 mt-5 px-3'>
-      <div className='flex flex-col lg:flex-row  items-start justify-evenly pt-10 pb-10 max-w-7xl mx-auto'>
-        <h2 className='text-3xl lg:text-4qxl font-heading font-bold underline pb-6'>
+    <div className='mt-5 bg-brandPink5 px-3 dark:bg-gray-700'>
+      <div className='mx-auto flex max-w-7xl flex-col items-start justify-evenly pb-10 pt-10 lg:flex-row'>
+        <h2 className='lg:text-4qxl pb-6 font-heading text-3xl font-bold underline'>
           Our Other Branches
         </h2>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-3'>
+        <div className='grid grid-cols-1 gap-3 lg:grid-cols-2'>
           {Data.map((items) => (
             <div key={items.id}>
               <Link
                 href={items.link}
-                className='text-sm lg:text-base font-semibold font-content flex items-center hover:underline'
+                className='flex items-center font-content text-sm font-semibold hover:underline lg:text-base'
               >
-                <HiCheck className='bg-green-700 text-white stroke-2 w-6 h-6 p-1 rounded-full mr-2' />
+                <HiCheck className='mr-2 h-6 w-6 rounded-full bg-green-700 stroke-2 p-1 text-white' />
                 {items.title}
               </Link>
             </div>

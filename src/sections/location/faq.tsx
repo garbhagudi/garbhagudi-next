@@ -6,29 +6,29 @@ import Image from 'next/image';
 const Faq = ({ branch, doctors }) => {
   return (
     <div>
-      <section className='max-w-7xl mx-auto font-content pt-8'>
-        <div className='container flex flex-col justify-center px-4 py-8 mx-auto md:p-8 text-gray-800 dark:text-gray-200'>
-          <h2 className='mb-8 text-3xl font-bold leading-none text-center sm:text-4xl font-heading'>
+      <section className='mx-auto max-w-7xl pt-8 font-content'>
+        <div className='container mx-auto flex flex-col justify-center px-4 py-8 text-gray-800 dark:text-gray-200 md:p-8'>
+          <h2 className='mb-8 text-center font-heading text-3xl font-bold leading-none sm:text-4xl'>
             Frequently Asked Questions
           </h2>
           <div className='divide-y divide-gray-700 dark:divide-gray-600'>
-            <div className='py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
+            <div className='space-y-2 py-6 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
               <h3 className='font-semibold md:col-span-4'>
                 Doctors available at GarbhaGudi, {branch}?
               </h3>
-              <div className='md:pl-0 md:col-span-8'>
+              <div className='md:col-span-8 md:pl-0'>
                 <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
                   {doctors?.map((item) => (
                     <div
-                      className='text-center flex items-center justify-start flex-col mb-2 transition-all duration-500 ease-in-out transform hover:scale-105'
+                      className='mb-2 flex transform flex-col items-center justify-start text-center transition-all duration-500 ease-in-out hover:scale-105'
                       key={item?.id}
                     >
                       <Link href={`/fertility-experts/${item?.slug}`} passHref>
                         <div className='space-y-4'>
-                          <div className='relative h-32 w-32 mx-auto'>
-                            <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
+                          <div className='relative mx-auto h-32 w-32'>
+                            <div className='bg-[length: 400%] absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
                             <Image
-                              className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
+                              className='rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
                               src={item?.image?.url}
                               alt={item?.name}
                               width={500}
@@ -36,11 +36,11 @@ const Faq = ({ branch, doctors }) => {
                             />
                           </div>
                           <div className='space-y-4'>
-                            <div className='text-lg leading-6 font-medium space-y-1'>
+                            <div className='space-y-1 text-lg font-medium leading-6'>
                               <h3 className='text-brandDark font-content'>
                                 {item?.name}
                               </h3>
-                              <p className='text-brandPink text-xs font-content'>
+                              <p className='font-content text-xs text-brandPink'>
                                 {item?.designation}
                               </p>
                             </div>
@@ -52,11 +52,11 @@ const Faq = ({ branch, doctors }) => {
                 </div>
               </div>
             </div>
-            <div className='py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
+            <div className='space-y-2 py-6 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
               <h3 className='font-semibold md:col-span-4'>
                 How to contact GarbhaGudi IVF Centre in {branch}?
               </h3>
-              <div className='md:pl-0 md:col-span-8'>
+              <div className='md:col-span-8 md:pl-0'>
                 To contact the fertility specialists at our {branch} branch,
                 please visit{' '}
                 <Link
@@ -80,16 +80,16 @@ const Faq = ({ branch, doctors }) => {
                           <div>
                             <Link
                               href={`tel:${items.phone}`}
-                              className='text-gg-500 dark:text-gg-400 hover:underline'
+                              className='text-gg-500 hover:underline dark:text-gg-400'
                             >
                               {items.phone}
                             </Link>
                           </div>
                         </div>
-                      )
+                      ),
                   )}
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-2 mt-4 gap-4'>
+                <div className='mt-4 grid grid-cols-1 gap-4 md:grid-cols-2'>
                   {contactData.getInTouch.map((items) => (
                     <div key={items.id}>
                       <div>
@@ -97,14 +97,14 @@ const Faq = ({ branch, doctors }) => {
                         <div>
                           <Link
                             href={`mailto:${items.email}`}
-                            className='text-brandPurpleDark dark:text-purple-400 hover:underline font-semibold'
+                            className='font-semibold text-brandPurpleDark hover:underline dark:text-purple-400'
                           >
                             {items.email}
                           </Link>
                         </div>
                         <Link
                           href={`tel:${items.phone}`}
-                          className='text-gg-500 dark:text-gg-400 hover:underline'
+                          className='text-gg-500 hover:underline dark:text-gg-400'
                         >
                           {items.phone}
                         </Link>
@@ -114,11 +114,11 @@ const Faq = ({ branch, doctors }) => {
                 </div>
               </div>
             </div>
-            <div className='py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
+            <div className='space-y-2 py-6 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
               <h3 className='font-semibold md:col-span-4'>
                 What are our success rates for IVF treatments in {branch}?
               </h3>
-              <div className='md:pl-0 md:col-span-8'>
+              <div className='md:col-span-8 md:pl-0'>
                 The success rate of of an IVF Treatment depends on numerous
                 factors. At our {branch} branch the average success rate ranges
                 from 65 - 73%. <br /> <br />
@@ -130,11 +130,11 @@ const Faq = ({ branch, doctors }) => {
               </div>
             </div>
 
-            <div className='py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
+            <div className='space-y-2 py-6 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
               <h3 className='font-semibold md:col-span-4'>
                 What is the total cost of IVF in <strong>{branch}</strong>?
               </h3>
-              <div className='md:pl-0 md:col-span-8'>
+              <div className='md:col-span-8 md:pl-0'>
                 The total cost of IVF in <strong>{branch}</strong> can vary
                 depending on the individual patient's needs. On average, the
                 cost of a single IVF cycle in <strong>{branch}</strong> can

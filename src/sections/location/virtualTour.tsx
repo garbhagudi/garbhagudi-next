@@ -2,17 +2,17 @@ import React from 'react';
 
 const VirtualTour = ({ link1, link2, link3 }) => {
   return (
-    <div className='max-w-7xl mx-auto'>
+    <div className='mx-auto max-w-7xl'>
       {link1 && (
-        <h3 className='text-center text-2xl md:text-4xl font-heading py-3 font-bold mx-auto text-gray-800 dark:text-gray-200'>
+        <h3 className='mx-auto py-3 text-center font-heading text-2xl font-bold text-gray-800 dark:text-gray-200 md:text-4xl'>
           Virtual Tour
         </h3>
       )}
-      <ul className='mx-auto grid grid-cols-1 sm:gap-x-0 py-8 px-2 lg:grid-cols-3 max-w-7xl'>
+      <ul className='mx-auto grid max-w-7xl grid-cols-1 px-2 py-8 sm:gap-x-0 lg:grid-cols-3'>
         {link1 && (
           <li>
             <div className='space-y-4'>
-              <div className='bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 relative h-[24rem] mx-auto mt-4'>
+              <div className='relative mx-auto mt-4 h-[24rem] overflow-hidden rounded-lg bg-gray-300 p-10 sm:mr-10'>
                 <iframe
                   width='100%'
                   height='100%'
@@ -28,7 +28,7 @@ const VirtualTour = ({ link1, link2, link3 }) => {
         {link2 && (
           <li>
             <div className='space-y-4'>
-              <div className='bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 relative h-[24rem] mx-auto mt-4'>
+              <div className='relative mx-auto mt-4 h-[24rem] overflow-hidden rounded-lg bg-gray-300 p-10 sm:mr-10'>
                 <iframe
                   width='100%'
                   height='100%'
@@ -44,7 +44,7 @@ const VirtualTour = ({ link1, link2, link3 }) => {
         {link3 && (
           <li>
             <div className='space-y-4'>
-              <div className='bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 relative h-[24rem] mx-auto mt-4'>
+              <div className='relative mx-auto mt-4 h-[24rem] overflow-hidden rounded-lg bg-gray-300 p-10 sm:mr-10'>
                 <iframe
                   width='100%'
                   height='100%'

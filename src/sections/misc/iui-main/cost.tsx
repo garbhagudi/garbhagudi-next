@@ -4,14 +4,14 @@ import Link from 'next/link';
 const Cost = () => {
   return (
     <div
-      className='max-w-7xl mx-auto px-3 scroll-m-16 text-gray-800 dark:text-gray-200'
+      className='mx-auto max-w-7xl scroll-m-16 px-3 text-gray-800 dark:text-gray-200'
       id='cost-of-iui-in-bangalore'
     >
       <div className='pt-10 lg:pt-16'>
-        <h2 className='text-2xl lg:text-3xl font-heading text-center font-bold pb-6'>
+        <h2 className='pb-6 text-center font-heading text-2xl font-bold lg:text-3xl'>
           IUI Treatment Cost in Bangalore
         </h2>
-        <div className='text-xl font-content max-w-5xl mx-auto'>
+        <div className='mx-auto max-w-5xl font-content text-xl'>
           <Link
             href={
               'https://www.garbhagudi.com/treatments/intra-uterine-insemination-iui'

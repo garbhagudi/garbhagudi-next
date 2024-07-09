@@ -87,11 +87,11 @@ const InfertilityPage = ({ doctors }) => {
       <WhenDiagnose />
       <AshaSection />
       <div className=''>
-        <div className='bg-transparent mx-auto py-10 lg:py-16'>
-          <h2 className='text-2xl lg:text-3xl font-heading font-bold text-center pb-10 lg:pb-16'>
+        <div className='mx-auto bg-transparent py-10 lg:py-16'>
+          <h2 className='pb-10 text-center font-heading text-2xl font-bold lg:pb-16 lg:text-3xl'>
             Our Fertility Specialists
           </h2>
-          <div className='relative max-w-lg mx-auto flex items-center justify-center'>
+          <div className='relative mx-auto flex max-w-lg items-center justify-center'>
             <Carousel
               autoplay
               defaultControlsConfig={defaultControlsConfig}
@@ -104,7 +104,7 @@ const InfertilityPage = ({ doctors }) => {
               renderCenterLeftControls={({ previousSlide }) => (
                 <button
                   onClick={previousSlide}
-                  className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                  className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 md:flex'
                 >
                   <HiChevronLeft className='mr-1' />
                 </button>
@@ -112,7 +112,7 @@ const InfertilityPage = ({ doctors }) => {
               renderCenterRightControls={({ nextSlide }) => (
                 <button
                   onClick={nextSlide}
-                  className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+                  className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 md:flex'
                 >
                   <HiChevronRight className='ml-1' />
                 </button>
@@ -139,7 +139,7 @@ const InfertilityPage = ({ doctors }) => {
               ))}
             </Carousel>
           </div>
-          <div className='max-w-5xl  mx-auto pt-6 font-content'>
+          <div className='mx-auto max-w-5xl pt-6 font-content'>
             If you're seeking the{' '}
             <span className='font-bold'>best infertility care</span>, look no
             further than GarbhaGudi IVF Centre in Bangalore. Our team boasts the
@@ -167,11 +167,11 @@ export default InfertilityPage;
 
 const ImageComponent = ({ name, image, designation, imageAlt }) => {
   return (
-    <div className='flex items-center justify-center flex-col md:h-[21rem]'>
-      <div className='relative w-44 h-44'>
-        <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
+    <div className='flex flex-col items-center justify-center md:h-[21rem]'>
+      <div className='relative h-44 w-44'>
+        <div className='bg-[length: 400%] absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
         <Image
-          className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
+          className='rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
           src={image}
           alt={imageAlt || name}
           width={500}
@@ -180,8 +180,8 @@ const ImageComponent = ({ name, image, designation, imageAlt }) => {
         />
       </div>
       <div className='text-center'>
-        <div className='text-xl font-heading font-bold mt-4'>{name}</div>
-        <div className='text- font-content mt-2 mb-4'>{designation}</div>
+        <div className='mt-4 font-heading text-xl font-bold'>{name}</div>
+        <div className='text- mb-4 mt-2 font-content'>{designation}</div>
       </div>
     </div>
   );

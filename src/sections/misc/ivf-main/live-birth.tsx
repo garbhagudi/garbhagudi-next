@@ -2,9 +2,9 @@ import React from 'react';
 
 const LiveBirth = () => {
   return (
-    <div className='max-w-7xl mx-auto text-gray-800 dark:text-gray-200'>
+    <div className='mx-auto max-w-7xl text-gray-800 dark:text-gray-200'>
       <div className='px-3 lg:px-6'>
-        <h2 className='text-3xl lg:text-4xl font-heading font-bold text-center pb-10 lg:pb-16'>
+        <h2 className='pb-10 text-center font-heading text-3xl font-bold lg:pb-16 lg:text-4xl'>
           Factors Affecting the Success Rate of an IVF Cycle
         </h2>
         <div className='font-content'>

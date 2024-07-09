@@ -13,7 +13,7 @@ interface bannerProps {
       image: {
         url: string;
       };
-    }
+    },
   ];
 }
 
@@ -29,7 +29,7 @@ const BannerComponent = (bannerData: bannerProps) => {
       <Carousel
         autoplay
         autoplayInterval={5000}
-        className='shadow-2xl border-0 drop-shadow-2xl'
+        className='border-0 shadow-2xl drop-shadow-2xl'
         defaultControlsConfig={defaultControlsConfig}
         wrapAround
         dragging
@@ -38,7 +38,7 @@ const BannerComponent = (bannerData: bannerProps) => {
         renderCenterLeftControls={({ previousSlide }) => (
           <button
             onClick={previousSlide}
-            className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center ml-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+            className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 md:flex'
           >
             <HiChevronLeft className='mr-1' />
           </button>
@@ -46,7 +46,7 @@ const BannerComponent = (bannerData: bannerProps) => {
         renderCenterRightControls={({ nextSlide }) => (
           <button
             onClick={nextSlide}
-            className='hidden w-11 h-11 text-4xl bg-brandPurpleDark text-white rounded-full md:flex items-center justify-center mr-3 bg-opacity-70 hover:bg-opacity-100 transition duration-300 ease-in-out'
+            className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 md:flex'
           >
             <HiChevronRight className='ml-1' />
           </button>
@@ -65,7 +65,7 @@ const BannerComponent = (bannerData: bannerProps) => {
                 alt={banner?.title}
                 width={1920}
                 height={1080}
-                className='w-full h-full object-cover'
+                className='h-full w-full object-cover'
                 priority
               />
             </Link>

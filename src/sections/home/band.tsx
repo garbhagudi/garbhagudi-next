@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const Band = () => {
   return (
-    <div className='px-3 mx-auto mt-2 max-w-7xl sm:px-6 lg:px-4 bg-white dark:bg-gray-800'>
-      <div className='block mx-auto border-b border-gray-300 dark:border-gray-600 text-xl font-bold text-center md:text-2xl font-benne'>
+    <div className='mx-auto mt-2 max-w-7xl bg-white px-3 dark:bg-gray-800 sm:px-6 lg:px-4'>
+      <div className='mx-auto block border-b border-gray-300 text-center font-benne text-xl font-bold dark:border-gray-600 md:text-2xl'>
         <div className='block md:inline-block'>
           <span className='text-brandPink dark:text-gg-400'>
             ಬಾಳಿಗೊಂದು ಬೇಕು{' '}
@@ -24,12 +24,12 @@ const Band = () => {
           </span>
         </div>
       </div>
-      <div className='pt-4 text-center '>
-        <div className='text-lg font-content font-semibold bg-gray-300 dark:bg-gray-700 px-4 py-2 rounded-xl lg:w-96 mx-auto'>
+      <div className='pt-4 text-center'>
+        <div className='mx-auto rounded-xl bg-gray-300 px-4 py-2 font-content text-lg font-semibold dark:bg-gray-700 lg:w-96'>
           For Appointments Call:{' '}
           <Link
             href={'tel:+919108910832'}
-            className='text-gg-500 dark:text-gg-400 hover:underline block md:inline-flex'
+            className='block text-gg-500 hover:underline dark:text-gg-400 md:inline-flex'
           >
             +91 9108 9108 32
           </Link>

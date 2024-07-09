@@ -4,10 +4,10 @@ const GarbhaGudiWay = () => {
   return (
     <div>
       <div className='bg-purple-50'>
-        <h1 className='py-8 lg:py-10 text-3xl lg:text-4xl font-lexend text-center font-bold'>
+        <h1 className='py-8 text-center font-lexend text-3xl font-bold lg:py-10 lg:text-4xl'>
           GarbhaGudi Way
         </h1>
-        <p className='max-w-4xl mx-auto pb-8 text-lg font-lexend text-center'>
+        <p className='mx-auto max-w-4xl pb-8 text-center font-lexend text-lg'>
           Whether you are an individual contributor or the manager of a large
           team, you are a GarbhaGudi leader - A GarbhaGudian.{' '}
           <span className='font-extrabold text-brandPink4'>
@@ -15,26 +15,26 @@ const GarbhaGudiWay = () => {
           </span>
         </p>
       </div>
-      <div className='flex flex-wrap gap-5 items-center justify-center bg-purple-50 py-10 px-3 sm:px-0'>
+      <div className='flex flex-wrap items-center justify-center gap-5 bg-purple-50 px-3 py-10 sm:px-0'>
         {ggway.map((items) => (
           <div
-            className='group w-full max-w-sm aspect-square [perspective:1000px]'
+            className='group aspect-square w-full max-w-sm [perspective:1000px]'
             key={items.id}
           >
             <div className='relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
-              <div className='relative w-full h-full inset-0'>
-                <div className='absolute w-full h-full bg-black/70 rounded-lg'>
-                  <div className='flex h-full px-2 items-center font-bold text-white text-2xl md:text-3xl text-center font-lexend justify-center group-hover:text-transparent transition-all duration-500'>
+              <div className='relative inset-0 h-full w-full'>
+                <div className='absolute h-full w-full rounded-lg bg-black/70'>
+                  <div className='flex h-full items-center justify-center px-2 text-center font-lexend text-2xl font-bold text-white transition-all duration-500 group-hover:text-transparent md:text-3xl'>
                     {items.title}
                   </div>
                 </div>
                 <img
-                  className='w-full h-full rounded-xl object-cover shadow-xl shadow-black/50'
+                  className='h-full w-full rounded-xl object-cover shadow-xl shadow-black/50'
                   src={items.bgImage}
                   alt='Image'
                 />
               </div>
-              <div className='absolute inset-0 h-full w-full rounded-xl bg-brandDark/70 px-3 py-1 md:px-12 text-center text-white [transform:rotateY(180deg)] [backface-visibility:hidden]'>
+              <div className='bg-brandDark/70 absolute inset-0 h-full w-full rounded-xl px-3 py-1 text-center text-white [backface-visibility:hidden] [transform:rotateY(180deg)] md:px-12'>
                 <div className='flex min-h-full flex-col items-center justify-center font-lexend text-lg md:text-xl'>
                   {items.way}
                 </div>

@@ -5,13 +5,13 @@ type Props = {};
 
 const Content = (props: Props) => {
   return (
-    <div className='max-w-7xl mx-auto text-gray-800 dark:text-gray-200'>
-      <h2 className='text-2xl lg:text-3xl font-heading font-bold text-center py-10 lg:py-16'>
+    <div className='mx-auto max-w-7xl text-gray-800 dark:text-gray-200'>
+      <h2 className='py-10 text-center font-heading text-2xl font-bold lg:py-16 lg:text-3xl'>
         What Is IUI treatment?
       </h2>
       <div className='grid grid-cols-1 lg:grid-cols-4'>
-        <div className='col-span-3 font-content px-3 max-w-4xl'>
-          <h3 className='text-lg font-heading font-bold pb-6'>
+        <div className='col-span-3 max-w-4xl px-3 font-content'>
+          <h3 className='pb-6 font-heading text-lg font-bold'>
             Introduction to IUI
           </h3>
           <div>
@@ -33,26 +33,26 @@ const Content = (props: Props) => {
             other fertility treatments.
           </div>
         </div>
-        <div className='col-span-1 px-3 bg-gray-300 dark:bg-gray-700 lg:pt-7 pb-5 rounded-lg mt-16 lg:mt-0 '>
-          <h3 className='text-lg font-heading font-bold pt-5 lg:pt-0 pb-6'>
+        <div className='col-span-1 mt-16 rounded-lg bg-gray-300 px-3 pb-5 dark:bg-gray-700 lg:mt-0 lg:pt-7'>
+          <h3 className='pb-6 pt-5 font-heading text-lg font-bold lg:pt-0'>
             Quick Links
           </h3>
           <div className='font-content'>
-            <ul className='space-y-3 list-outside list-disc'>
-              <li className='hover:underline hover:text-brandPink ml-4'>
+            <ul className='list-outside list-disc space-y-3'>
+              <li className='ml-4 hover:text-brandPink hover:underline'>
                 <Link href='#iui-centres-in-bangalore'>
                   IUI Centres in Bangalore
                 </Link>
               </li>
-              <li className='hover:underline hover:text-brandPink ml-4'>
+              <li className='ml-4 hover:text-brandPink hover:underline'>
                 <Link href='#cost-of-iui-in-bangalore'>
                   Cost of IUI in Bangalore
                 </Link>
               </li>
-              <li className='hover:underline hover:text-brandPink ml-4'>
+              <li className='ml-4 hover:text-brandPink hover:underline'>
                 <Link href='#procedure-of-iui'>Procedure of IUI</Link>
               </li>
-              <li className='hover:underline hover:text-brandPink ml-4'>
+              <li className='ml-4 hover:text-brandPink hover:underline'>
                 <Link href='#faq'>Frequently asked questions on IUI</Link>
               </li>
             </ul>

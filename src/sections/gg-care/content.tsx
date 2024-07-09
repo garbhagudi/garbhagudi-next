@@ -5,23 +5,23 @@ import Link from 'next/link';
 const Contact = () => {
   return (
     <div className='bg-white dark:bg-gray-800'>
-      <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8'>
+      <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8'>
         <div className='divide-y-2 divide-gray-200'>
           <div className='lg:grid lg:grid-cols-3 lg:gap-8'>
-            <h2 className='text-2xl font-extrabold text-gray-800 dark:text-gray-200  sm:text-3xl font-heading'>
+            <h2 className='font-heading text-2xl font-extrabold text-gray-800 dark:text-gray-200 sm:text-3xl'>
               Get in touch
             </h2>
-            <div className='mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2 font-content'>
+            <div className='mt-8 grid grid-cols-1 gap-12 font-content sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:col-span-2 lg:mt-0'>
               {contactData?.getInTouch.map((items) => (
                 <div key={items.id}>
-                  <h3 className='text-lg leading-6 font-medium text-gray-800 dark:text-gray-200 '>
+                  <h3 className='text-lg font-medium leading-6 text-gray-800 dark:text-gray-200'>
                     {items.name}
                   </h3>
                   <div className='mt-2 text-base'>
                     <div className='sr-only'>Email</div>
                     <Link
                       href={`mailto:${items.email}`}
-                      className='text-purple-800 dark:text-purple-300 hover:underline'
+                      className='text-purple-800 hover:underline dark:text-purple-300'
                     >
                       <div>
                         <MdAlternateEmail className='inline-flex' />{' '}
@@ -32,10 +32,10 @@ const Contact = () => {
                       <div className='sr-only'>Phone number</div>
                       <Link
                         href={`tel:${items.phone}`}
-                        className='text-gg-500 dark:text-gg-400 hover:underline'
+                        className='text-gg-500 hover:underline dark:text-gg-400'
                       >
                         <div>
-                          <MdPhone className='inline-block w-5 h-5' />{' '}
+                          <MdPhone className='inline-block h-5 w-5' />{' '}
                           {items.phone}
                         </div>
                       </Link>
@@ -46,23 +46,23 @@ const Contact = () => {
             </div>
           </div>
           <div className='mt-16 pt-16 lg:grid lg:grid-cols-2 lg:gap-8'>
-            <div className='mt-8 grid grid-cols-1 gap-12 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2 font-content'>
-              <h2 className='text-2xl font-extrabold text-gray-800 dark:text-gray-200  sm:text-3xl font-heading'>
+            <div className='mt-8 grid grid-cols-1 gap-12 font-content sm:grid-cols-3 sm:gap-x-8 sm:gap-y-12 lg:col-span-2 lg:mt-0'>
+              <h2 className='font-heading text-2xl font-extrabold text-gray-800 dark:text-gray-200 sm:text-3xl'>
                 Locations
               </h2>
               {contactData?.locations.map((items) => (
                 <div key={items.id}>
-                  <h3 className='text-lg leading-6 font-medium text-gray-800 dark:text-gray-200 '>
+                  <h3 className='text-lg font-medium leading-6 text-gray-800 dark:text-gray-200'>
                     {items.name}
                   </h3>
                   <div className='mt-2 text-base text-gray-500 dark:text-gray-300'>
                     <div className='mt-1'>
                       <Link
                         href={`tel:${items.phone}`}
-                        className='text-gg-500 dark:text-gg-400 hover:underline'
+                        className='text-gg-500 hover:underline dark:text-gg-400'
                       >
                         <div>
-                          <MdPhone className='inline-block w-5 h-5' />{' '}
+                          <MdPhone className='inline-block h-5 w-5' />{' '}
                           {items.phone}
                         </div>
                       </Link>
@@ -71,27 +71,27 @@ const Contact = () => {
                     <div className='space-x-3'>
                       <Link
                         href={items.directionLink}
-                        className='inline-flex items-center overflow-hidden w-auto max-w-[32px] h-8 hover:max-w-[340px] bg-gg-500 dark:bg-gray-500 text-white dark:text-gray-100 font-bold rounded-3xl hover:bg-brandPink2 dark:hover:bg-gg-400 transition-all duration-500 ease-linear'
+                        className='inline-flex h-8 w-auto max-w-[32px] items-center overflow-hidden rounded-3xl bg-gg-500 font-bold text-white transition-all duration-500 ease-linear hover:max-w-[340px] hover:bg-brandPink2 dark:bg-gray-500 dark:text-gray-100 dark:hover:bg-gg-400'
                         target={'_blank'}
                         rel='noreferrer'
                       >
                         <span>
-                          <SiGooglemaps className='ml-2 text-base flex items-center' />
+                          <SiGooglemaps className='ml-2 flex items-center text-base' />
                         </span>
-                        <span className='pl-2 pr-4 whitespace-nowrap'>
+                        <span className='whitespace-nowrap pl-2 pr-4'>
                           Direction
                         </span>
                       </Link>
                       <Link
                         href={`tel:${items.phone}`}
-                        className='inline-flex items-center overflow-hidden w-auto max-w-[32px] h-8 hover:max-w-[340px] bg-gg-500 dark:bg-gray-500 text-white dark:text-gray-100 font-bold rounded-3xl hover:bg-brandPink2 dark:hover:bg-gg-400 transition-all duration-500 ease-linear'
+                        className='inline-flex h-8 w-auto max-w-[32px] items-center overflow-hidden rounded-3xl bg-gg-500 font-bold text-white transition-all duration-500 ease-linear hover:max-w-[340px] hover:bg-brandPink2 dark:bg-gray-500 dark:text-gray-100 dark:hover:bg-gg-400'
                         target={'_blank'}
                         rel='noreferrer'
                       >
                         <span>
-                          <MdPhone className='ml-2 text-base flex items-center' />
+                          <MdPhone className='ml-2 flex items-center text-base' />
                         </span>
-                        <span className='pl-2 pr-4 whitespace-nowrap'>
+                        <span className='whitespace-nowrap pl-2 pr-4'>
                           Phone Call
                         </span>
                       </Link>
@@ -146,7 +146,7 @@ export const contactData = {
             Subhasri Complex, 210/A, Kumaraswamy Temple Rd, 2nd Block, Phase 1,
             Banashankari Stage I, Banashankari,
           </p>
-          <p className='mt-1 mb-5'>Bengaluru, Karnataka 560050</p>
+          <p className='mb-5 mt-1'>Bengaluru, Karnataka 560050</p>
         </div>
       ),
       phone: '+91 98869 15556',
@@ -161,7 +161,7 @@ export const contactData = {
             Park Landing, 5AC-709, Outer Ring Rd, Balachandra Layout, HRBR
             Layout 2nd Block, Chelekare, Extension,
           </p>
-          <p className='mt-1 mb-5'>Bengaluru, Karnataka 560043</p>
+          <p className='mb-5 mt-1'>Bengaluru, Karnataka 560043</p>
         </div>
       ),
       phone: '+91 88614 33339',
@@ -177,7 +177,7 @@ export const contactData = {
             Basavanagudi, <br />
             Jayanagar
           </p>
-          <p className='mt-1 mb-5'>Bengaluru, Karnataka 560004</p>
+          <p className='mb-5 mt-1'>Bengaluru, Karnataka 560004</p>
         </div>
       ),
       phone: '+91 99724 63355',
@@ -192,7 +192,7 @@ export const contactData = {
             Ganesh Towers, 3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra Bank,
             Konappana Agrahara, Electronic City,
           </p>
-          <p className='mt-1 mb-5'>Bengaluru, Karnataka 560100</p>
+          <p className='mb-5 mt-1'>Bengaluru, Karnataka 560100</p>
         </div>
       ),
       phone: '+91 88618 11116',
@@ -208,7 +208,7 @@ export const contactData = {
             next to कलामंदिर, <br />
             Marathahalli,
           </p>
-          <p className='mt-1 mb-5'>Bengaluru, Karnataka 560037</p>
+          <p className='mb-5 mt-1'>Bengaluru, Karnataka 560037</p>
         </div>
       ),
       phone: '+91 81051 81515',
@@ -223,7 +223,7 @@ export const contactData = {
             #3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage,
             Ashwath Nagar, Devasandra Layout, Sadashivnagar
           </p>
-          <p className='mt-1 mb-5'>Bengaluru, Karnataka 560094</p>
+          <p className='mb-5 mt-1'>Bengaluru, Karnataka 560094</p>
         </div>
       ),
       phone: '+91 9108 9108 25',
@@ -238,7 +238,7 @@ export const contactData = {
             1st Floor, 80ft Main Road, NGCF Layout, 2nd Stage, BDA Road,
             Naagarabhaavi,
           </p>
-          <p className='mt-1 mb-5'>Bengaluru, Karnataka 560072</p>
+          <p className='mb-5 mt-1'>Bengaluru, Karnataka 560072</p>
         </div>
       ),
       phone: '+91 9886 9886 65',

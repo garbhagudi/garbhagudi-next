@@ -1,6 +1,5 @@
 import { SiGooglemaps } from 'react-icons/si';
 import { FaRoad } from 'react-icons/fa';
-import { MdPermMedia } from 'react-icons/md';
 
 export const TreatmentHeader = {
   female: [

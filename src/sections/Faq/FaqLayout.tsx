@@ -19,8 +19,8 @@ const AccordionLayout = ({
         onClick={() => handleSetIndex(index)}
         className={
           activeIndex === index
-            ? `flex w-full justify-between items-center px-3 font-semibold sm:px-6 py-2 mt-3 rounded-t-lg hover:cursor-pointer transition-all duration-500 ease-in-out text-md xl:text-xl bg-gg-500 dark:bg-gg-400 text-gray-200 dark:text-gray-800 font-heading`
-            : `flex w-full justify-between items-center px-3 font-medium sm:px-6 py-1 text-gray-800 dark:text-gray-200 hover:py-3 mt-3 hover:rounded-lg hover:cursor-pointer transition-all duration-500  ease-in-out text-md hover:bg-gg-400 sm:hover:text-lg xl:hover:text-xl border-gray-300 font-lexend`
+            ? `text-md mt-3 flex w-full items-center justify-between rounded-t-lg bg-gg-500 px-3 py-2 font-heading font-semibold text-gray-200 transition-all duration-500 ease-in-out hover:cursor-pointer dark:bg-gg-400 dark:text-gray-800 sm:px-6 xl:text-xl`
+            : `text-md mt-3 flex w-full items-center justify-between border-gray-300 px-3 py-1 font-lexend font-medium text-gray-800 transition-all duration-500 ease-in-out hover:cursor-pointer hover:rounded-lg hover:bg-gg-400 hover:py-3 dark:text-gray-200 sm:px-6 sm:hover:text-lg xl:hover:text-xl`
         }
       >
         <div className='flex items-center justify-center'>
@@ -28,9 +28,9 @@ const AccordionLayout = ({
         </div>
         <div>
           {activeIndex === index ? (
-            <HiChevronDown className='w-8 h-8 rotate-180 transition-all duration-500' />
+            <HiChevronDown className='h-8 w-8 rotate-180 transition-all duration-500' />
           ) : (
-            <HiChevronDown className='w-8 h-8 ' />
+            <HiChevronDown className='h-8 w-8' />
           )}
         </div>
       </div>
@@ -45,7 +45,7 @@ const AccordionLayout = ({
         leaveTo='transform scale-95 opacity-0'
       >
         {activeIndex === index && (
-          <div className='shadow-3xl rounded-b-lg p-4 font-lexend text-gray-800 dark:text-gray-200 border-2 border-gg-500 dark:border-gg-400'>
+          <div className='shadow-3xl rounded-b-lg border-2 border-gg-500 p-4 font-lexend text-gray-800 dark:border-gg-400 dark:text-gray-200'>
             {children}
           </div>
         )}

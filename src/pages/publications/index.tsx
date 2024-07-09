@@ -79,35 +79,35 @@ const IndexPage = ({ medias }) => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1658492748/SEO/SEO_Website_image-min_wjkpwk.webp'
         />
       </Head>
-      <div className='max-w-7xl mx-auto'>
-        <h1 className='text-center font-heading font-bold text-4xl lg:text-5xl pt-10 lg:pt-24'>
+      <div className='mx-auto max-w-7xl'>
+        <h1 className='pt-10 text-center font-heading text-4xl font-bold lg:pt-24 lg:text-5xl'>
           Publications
         </h1>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 lg:py-24 gap-5'>
+        <div className='grid grid-cols-1 gap-5 py-10 md:grid-cols-2 lg:grid-cols-3 lg:py-24'>
           {medias &&
             medias.map((items) => (
               <div
                 key={items?.id}
-                className='mx-auto p-2 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-x-1 hover:-translate-y-1 transition duration-500 ease-in-out'
+                className='mx-auto rounded-xl p-2 shadow-lg transition duration-500 ease-in-out hover:-translate-x-1 hover:-translate-y-1 hover:shadow-2xl'
               >
                 <div>
                   <img
                     src={items?.thumbnail?.url}
                     alt={items?.title}
-                    className='aspect-video w-full mx-auto rounded-lg'
+                    className='mx-auto aspect-video w-full rounded-lg'
                   />
                 </div>
                 <div className='px-2'>
-                  <div className='font-heading mt-4 text-xl font-bold py-2 text-center md:text-left'>
+                  <div className='mt-4 py-2 text-center font-heading text-xl font-bold md:text-left'>
                     {items?.title}
                   </div>
-                  <div className='font-content text-left md:text-left mt-2'>
+                  <div className='mt-2 text-left font-content md:text-left'>
                     {items?.description?.slice(0, 170)}...
                   </div>
                 </div>
                 <div className='mt-4'>
                   <Link href={`${items?.articleLink}`}>
-                    <div className='font-content text-lg text-center flex items-center justify-center px-3 py-2 border text-white font-extrabold bg-brandPink4 hover:bg-brandPink rounded-lg transition duration-500 ease-in-out'>
+                    <div className='flex items-center justify-center rounded-lg border bg-brandPink4 px-3 py-2 text-center font-content text-lg font-extrabold text-white transition duration-500 ease-in-out hover:bg-brandPink'>
                       Read More{' '}
                       <HiChevronRight className='inline-flex items-center justify-center' />
                     </div>

@@ -79,12 +79,12 @@ const features = [
 
 const Features2 = () => {
   return (
-    <div className='relative bg-white py-8 sm:py-18' id='features'>
-      <div className='mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
-        <h1 className='mt-2 text-3xl font-extrabold text-brandDark tracking-tight sm:text-4xl font-heading'>
+    <div className='sm:py-18 relative bg-white py-8' id='features'>
+      <div className='mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8'>
+        <h1 className='text-brandDark mt-2 font-heading text-3xl font-extrabold tracking-tight sm:text-4xl'>
           Our Versatile Approach
         </h1>
-        <p className='mt-5 max-w-prose mx-auto text-md text-brandDark font-content'>
+        <p className='text-md text-brandDark mx-auto mt-5 max-w-prose font-content'>
           At GarbhaGudi, we understand that fertility treatments can be mentally
           and physically stressful. We are always committed to providing a world
           of options and bringing a new ray of hope to many who are trying to
@@ -94,11 +94,11 @@ const Features2 = () => {
           <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
             {features.map((feature) => (
               <Link href={feature.link} key={feature.id} passHref>
-                <div className='pt-3 max-w-sm mx-auto'>
-                  <div className=' flow-root bg-gray-100 border rounded-lg px-6 pb-8 shadow-lg hover:shadow-2xl hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200'>
+                <div className='mx-auto max-w-sm pt-3'>
+                  <div className='flow-root rounded-lg border bg-gray-100 px-6 pb-8 shadow-lg transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-2xl'>
                     <div className='-mt-6'>
                       <div>
-                        <span className='inline-flex items-center justify-center p-2 bg-brandPink rounded-full shadow-xl'>
+                        <span className='inline-flex items-center justify-center rounded-full bg-brandPink p-2 shadow-xl'>
                           <Image
                             src={feature.icon}
                             alt={feature.name}
@@ -109,10 +109,10 @@ const Features2 = () => {
                           />
                         </span>
                       </div>
-                      <h3 className='mt-5 text-lg font-semibold text-brandDark tracking-tight font-heading'>
+                      <h3 className='text-brandDark mt-5 font-heading text-lg font-semibold tracking-tight'>
                         {feature.name}
                       </h3>
-                      <p className='mt-5 text-brandDark antialiased text-sm font-medium font-content min-h-[60px]'>
+                      <p className='text-brandDark mt-5 min-h-[60px] font-content text-sm font-medium antialiased'>
                         {feature.content}
                       </p>
                     </div>

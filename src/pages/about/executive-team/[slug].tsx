@@ -123,42 +123,42 @@ const ExecutiveTeam = ({ director }) => {
         link4={''}
         text4={''}
       />
-      <section className='text-gray-600 body-font'>
-        <div className='md:px-5 py-24 mx-auto flex flex-col'>
-          <div className='lg:w-4/6 mx-auto'>
-            <div className='rounded-lg h-56 md:h-96 overflow-hidden'>
+      <section className='body-font text-gray-600'>
+        <div className='mx-auto flex flex-col py-24 md:px-5'>
+          <div className='mx-auto lg:w-4/6'>
+            <div className='h-56 overflow-hidden rounded-lg md:h-96'>
               <img
                 alt='content'
-                className='object-cover h-full w-full'
+                className='h-full w-full object-cover'
                 src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643287945/Banner/1200x500_4Directors_nqn9eg.jpg'
               />
             </div>
-            <div className='flex flex-col sm:flex-row mt-10'>
-              <div className='sm:w-1/3 text-center sm:pr-8 sm:py-8'>
-                <div className='w-72 md:w-64 rounded-full inline-flex items-center justify-center'>
+            <div className='mt-10 flex flex-col sm:flex-row'>
+              <div className='text-center sm:w-1/3 sm:py-8 sm:pr-8'>
+                <div className='inline-flex w-72 items-center justify-center rounded-full md:w-64'>
                   <img
                     src={director?.image.url}
                     alt={director?.name}
                     className='rounded-full'
                   />
                 </div>
-                <div className='flex flex-col items-center text-center justify-center'>
-                  <h1 className='title-font mt-4 text-gray-800 dark:text-gray-200 text-2xl font-semibold font-heading'>
+                <div className='flex flex-col items-center justify-center text-center'>
+                  <h1 className='title-font mt-4 font-heading text-2xl font-semibold text-gray-800 dark:text-gray-200'>
                     {director?.name}
                   </h1>
-                  <div className='w-12 h-1 bg-gg-500 dark:bg-gg-400 rounded mt-2 mb-4'></div>
-                  <div className='text-base font-content font-semibold dark:text-gray-300'>
+                  <div className='mb-4 mt-2 h-1 w-12 rounded bg-gg-500 dark:bg-gg-400'></div>
+                  <div className='font-content text-base font-semibold dark:text-gray-300'>
                     {director?.details}
                   </div>
-                  <button className='px-4 py-2 mt-6 bg-brandPink2 text-white font-semibold font-content rounded-md'>
+                  <button className='mt-6 rounded-md bg-brandPink2 px-4 py-2 font-content font-semibold text-white'>
                     <a href={director?.link} target='_blank' rel='noreferrer'>
                       Connect
                     </a>
                   </button>
                 </div>
               </div>
-              <div className='sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 dark:border-gray-600 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 sm:text-left px-5'>
-                <div className='leading-relaxed text-lg mb-4 text-gray-800 dark:text-gray-200'>
+              <div className='mt-4 border-t border-gray-200 px-5 pt-4 dark:border-gray-600 sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left'>
+                <div className='mb-4 text-lg leading-relaxed text-gray-800 dark:text-gray-200'>
                   <RichText content={director?.bio?.raw.children} />
                 </div>
               </div>

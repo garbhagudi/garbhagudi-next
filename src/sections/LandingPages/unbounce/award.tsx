@@ -4,9 +4,9 @@ import React from 'react';
 const Award = () => {
   return (
     <>
-      <div className='max-w-7xl mx-auto'>
+      <div className='mx-auto max-w-7xl'>
         <div className='px-2 lg:px-4'>
-          <h4 className='pt-4 pb-8 lg:py-8 text-3xl lg:text-4xl font-lexend font-bold text-gg-500 text-center'>
+          <h4 className='pb-8 pt-4 text-center font-lexend text-3xl font-bold text-gg-500 lg:py-8 lg:text-4xl'>
             Exceptional Success Rates from Personalized Treatment
           </h4>
           <Image
@@ -18,32 +18,32 @@ const Award = () => {
             height={500}
             className='rounded-lg'
           />
-          <div className='grid grid-cols-1 lg:grid-cols-3 space-x-3 font-lexend mt-6'>
-            <div className='py-3 lg:py-8 space-y-3'>
-              <h5 className='text-xl font-bold text-gg-500 text-center'>
+          <div className='mt-6 grid grid-cols-1 space-x-3 font-lexend lg:grid-cols-3'>
+            <div className='space-y-3 py-3 lg:py-8'>
+              <h5 className='text-center text-xl font-bold text-gg-500'>
                 Individualized Treatment Plans
               </h5>
-              <p className='font-light text-center'>
+              <p className='text-center font-light'>
                 We specialize in personalized IVF treatment, tailoring plans for
                 each patient's unique needs. Our experienced team uses
                 cutting-edge techniques, resulting in enhanced success rates.
               </p>
             </div>
-            <div className='py-3 lg:py-8 space-y-3'>
-              <h5 className='text-xl font-bold text-gg-500 text-center'>
+            <div className='space-y-3 py-3 lg:py-8'>
+              <h5 className='text-center text-xl font-bold text-gg-500'>
                 Reproductive Medicine Proficiency
               </h5>
-              <p className='font-light text-center'>
+              <p className='text-center font-light'>
                 Our success in personalized treatment is driven by a specialized
                 team staying updated on advancements. We apply tailored
                 cutting-edge techniques for optimal outcomes.
               </p>
             </div>
-            <div className='py-3 lg:py-8 space-y-3'>
-              <h5 className='text-xl font-bold text-gg-500 text-center'>
+            <div className='space-y-3 py-3 lg:py-8'>
+              <h5 className='text-center text-xl font-bold text-gg-500'>
                 Holistic Patient Support
               </h5>
-              <p className='font-light text-center'>
+              <p className='text-center font-light'>
                 Holistic care is our priority, addressing both physical and
                 emotional well-being. Our support services, including
                 counseling, contribute to a nurturing environment for overall

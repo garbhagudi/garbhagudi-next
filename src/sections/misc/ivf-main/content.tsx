@@ -3,14 +3,14 @@ import React from 'react';
 const Content = () => {
   return (
     <div className='scroll-m-16 scroll-smooth' id='know-more'>
-      <div className='bg-white dark:bg-gray-800 relative pt-10 lg:pt-24'>
-        <div className='relative container m-auto px-3 md:px-12 lg:px-6'>
-          <h2 className='mx-auto font-black text-4xl text-left lg:text-5xl font-heading'>
+      <div className='relative bg-white pt-10 dark:bg-gray-800 lg:pt-24'>
+        <div className='container relative m-auto px-3 md:px-12 lg:px-6'>
+          <h2 className='mx-auto text-left font-heading text-4xl font-black lg:text-5xl'>
             What is IVF and how does it work ?
           </h2>{' '}
-          <div className='md:flex mx-auto flex-wrap text-gray-800 dark:text-gray-200'>
+          <div className='mx-auto flex-wrap text-gray-800 dark:text-gray-200 md:flex'>
             <div className='grid grid-cols-1 lg:grid-cols-2'>
-              <div className='relative font-content mt-8 md:mt-16 space-y-8 ml-0 mx-auto text-left md:max-w-lg lg:max-w-2xl'>
+              <div className='relative mx-auto ml-0 mt-8 space-y-8 text-left font-content md:mt-16 md:max-w-lg lg:max-w-2xl'>
                 <p className=''>
                   GarbhaGudi IVF Centre is a leading fertility clinic in
                   Bangalore that provides a wide range of fertility treatments,
@@ -41,7 +41,7 @@ const Content = () => {
                   customize a treatment plan that meets their unique needs and
                   maximizes their chances of success.
                 </p>
-                <h2 className='text-lg font-bold font-heading'>
+                <h2 className='font-heading text-lg font-bold'>
                   What is the Process of IVF Treatment in Bangalore?
                 </h2>
                 <div>
@@ -49,11 +49,11 @@ const Content = () => {
                   IVF cycle:
                 </div>
               </div>
-              <div className='mt-4 mx-auto  -right-0 max-w-[50rem] lg:p-4'>
+              <div className='-right-0 mx-auto mt-4 max-w-[50rem] lg:p-4'>
                 <div className='relative w-full'>
                   <img
                     src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1671177124/Misc/PNG_25_yoa08y.png'
-                    className='relative  w-full bg-white/10 dark:brightness-75 dark:invert'
+                    className='relative w-full bg-white/10 dark:brightness-75 dark:invert'
                     alt='Process of IVF Treatment in Bangalore'
                     loading='lazy'
                   />
@@ -61,7 +61,7 @@ const Content = () => {
               </div>
             </div>
             <div>
-              <ul className='font-content space-y-3 pt-3'>
+              <ul className='space-y-3 pt-3 font-content'>
                 <li>
                   <strong>Initial consultation:</strong> The first step in the
                   IVF process is usually a consultation with a fertility
@@ -109,7 +109,7 @@ const Content = () => {
                 </li>
               </ul>
             </div>
-            <div className='mt-8 font-content '>
+            <div className='mt-8 font-content'>
               One full IVF cycle takes about three weeks but sometimes the
               procedure is split into parts, to manage certain challenges in the
               couples. This may delay the process. IVF can be done using the

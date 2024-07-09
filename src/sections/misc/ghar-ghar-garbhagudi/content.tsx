@@ -4,19 +4,19 @@ import Image from 'next/image';
 export const ContentOne = () => {
   return (
     <div>
-      <section className='my-10 flex flex-col md:flex-row items-center'>
+      <section className='my-10 flex flex-col items-center md:flex-row'>
         <div className='md:w-1/2'>
           <Image
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1694509085/Misc/GGG_Logo_eng_thb8cv.webp'
             alt='Ghar Ghar GarbhaGudi Logo'
-            className='w-full h-auto bg-brandPink rounded-lg p-3'
+            className='h-auto w-full rounded-lg bg-brandPink p-3'
             width={500}
             height={500}
           />
         </div>
-        <div className='md:w-1/2 mt-6 md:mt-0 md:ml-6 flex items-start justify-center flex-col text-gray-800 dark:text-gray-200'>
-          <h2 className='text-3xl font-semibold mb-3 font-lexend'>Overview</h2>
-          <div className='flex items-center justify-start flex-col space-y-3 font-content text-lg'>
+        <div className='mt-6 flex flex-col items-start justify-center text-gray-800 dark:text-gray-200 md:ml-6 md:mt-0 md:w-1/2'>
+          <h2 className='mb-3 font-lexend text-3xl font-semibold'>Overview</h2>
+          <div className='flex flex-col items-center justify-start space-y-3 font-content text-lg'>
             <p>
               Infertility is not a curse; modern medical treatments can fulfill
               every woman's dream of motherhood. To make this dream a reality,
@@ -56,12 +56,12 @@ export const ContentOne = () => {
 export const ContentTwo = () => {
   return (
     <div>
-      <section className='my-10 flex flex-col md:flex-row items-center text-gray-800 dark:text-gray-200'>
-        <div className='md:w-1/2 mt-6 md:mt-0 md:mr-6 flex items-start justify-center flex-col font-content py-6 px-2'>
-          <h2 className='text-3xl font-semibold mb-3 font-lexend'>
+      <section className='my-10 flex flex-col items-center text-gray-800 dark:text-gray-200 md:flex-row'>
+        <div className='mt-6 flex flex-col items-start justify-center px-2 py-6 font-content md:mr-6 md:mt-0 md:w-1/2'>
+          <h2 className='mb-3 font-lexend text-3xl font-semibold'>
             Here's how you can Help!
           </h2>
-          <ul className='space-y-2 list-outside list-disc text-lg'>
+          <ul className='list-outside list-disc space-y-2 text-lg'>
             <li>
               If you're aware of any childless couples in your neighborhood,
               family, or among your acquaintances who may benefit from the
@@ -82,7 +82,7 @@ export const ContentTwo = () => {
               your content to us via WhatsApp at{' '}
               <a
                 href='https://wa.me/+919108910832'
-                className='font-semibold hover:underline hover:text-brandPink'
+                className='font-semibold hover:text-brandPink hover:underline'
               >
                 +919108910832
               </a>
@@ -104,16 +104,16 @@ export const ContentTwo = () => {
               mentioned above.
             </li>
           </ul>
-          <div className='mt-2 text-lg '>
+          <div className='mt-2 text-lg'>
             Thank you for helping us spread the message of hope and parenthood
             with Garbhagudi IVF Centre's 'Ghar Ghar Garbhagudi' campaign!
           </div>
         </div>
-        <div className='md:w-1/2 flex items-center justify-center'>
+        <div className='flex items-center justify-center md:w-1/2'>
           <img
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1694513639/Misc/ss-min_mt1fic.webp'
             alt='How can you Help?'
-            className='w-full h-auto object-cover object-center rounded-lg'
+            className='h-auto w-full rounded-lg object-cover object-center'
           />
         </div>
       </section>

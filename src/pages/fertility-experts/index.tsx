@@ -71,25 +71,25 @@ const IndexPage = ({ branches }) => {
         link4={''}
         text4={''}
       />
-      <div className='max-w-7xl mx-auto'>
-        <h1 className='text-center text-4xl font-heading pt-12 font-semibold'>
+      <div className='mx-auto max-w-7xl'>
+        <h1 className='pt-12 text-center font-heading text-4xl font-semibold'>
           Our Fertility Experts
         </h1>
-        <p className='text-md text-brandDark font-content max-w-4xl mx-auto text-center mt-4'>
+        <p className='text-md text-brandDark mx-auto mt-4 max-w-4xl text-center font-content'>
           Our team of fertility specialists are known for their extensive
           clinical experience and research contributions and their success in
           treating the most challenging fertility cases.
         </p>
-        <div className='w-full max-w-7xl px-2 py-16 sm:px-0 '>
+        <div className='w-full max-w-7xl px-2 py-16 sm:px-0'>
           <Tab.Group>
             <Tab.List
               className={
-                'grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-nowrap lg:space-x-1 bg-gg-500 dark:bg-gg-400 rounded-xl p-1 transition-all ease-linear duration-300'
+                'grid grid-cols-2 rounded-xl bg-gg-500 p-1 transition-all duration-300 ease-linear dark:bg-gg-400 md:grid-cols-3 lg:flex lg:flex-nowrap lg:space-x-1'
               }
             >
               {branches.map((items: any) => (
                 <Tab
-                  className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'
+                  className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'
                   key={items.id}
                 >
                   {items?.title}
@@ -98,53 +98,53 @@ const IndexPage = ({ branches }) => {
             </Tab.List>
             <Tab.Panels
               className={
-                'bg-gradient-to-br border from-brandPink4 dark:from-gray-800 to-white dark:to-gray-700 via-pink-50 dark:via-gray-800 rounded-lg lg:px-6 border-t-0 dark:border-gray-800 bg-white bg-opacity-70 dark:bg-opacity-5 backdrop-blur-2xl shadow-xl'
+                'rounded-lg border border-t-0 bg-white bg-opacity-70 bg-gradient-to-br from-brandPink4 via-pink-50 to-white shadow-xl backdrop-blur-2xl dark:border-gray-800 dark:bg-opacity-5 dark:from-gray-800 dark:via-gray-800 dark:to-gray-700 lg:px-6'
               }
             >
               {branches.map((items: any) => (
                 <Tab.Panel key={items.id}>
-                  <div className='text-gray-800 dark:text-gray-200 body-font relative max-w-7xl mx-auto mt-10 '>
-                    <div className='lg:py-6 flex flex-wrap lg:flex-nowrap inset-0'>
-                      <div className='lg:w-1/2 bg-gray-800 rounded-lg overflow-hidden p-2 lg:p-10 flex items-end justify-start relative h-[44rem] md:ml-auto w-full'>
+                  <div className='body-font relative mx-auto mt-10 max-w-7xl text-gray-800 dark:text-gray-200'>
+                    <div className='inset-0 flex flex-wrap lg:flex-nowrap lg:py-6'>
+                      <div className='relative flex h-[44rem] w-full items-end justify-start overflow-hidden rounded-lg bg-gray-800 p-2 md:ml-auto lg:w-1/2 lg:p-10'>
                         <iframe
                           width='100%'
                           height='100%'
-                          className='absolute inset-0 border rounded-lg border-brandPurpleDark dark:grayscale dark:brightness-75 dark:contrast-150 dark:invert'
+                          className='absolute inset-0 rounded-lg border border-brandPurpleDark dark:brightness-75 dark:contrast-150 dark:grayscale dark:invert'
                           loading='lazy'
                           title='map'
                           src={items.mapLink}
                         ></iframe>
-                        <div className='bg-white dark:bg-gray-800 relative flex flex-wrap py-6 rounded-3xl shadow-3xl'>
-                          <div className='lg:w-1/2 px-6'>
-                            <h2 className='title-font font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs font-content'>
+                        <div className='shadow-3xl relative flex flex-wrap rounded-3xl bg-white py-6 dark:bg-gray-800'>
+                          <div className='px-6 lg:w-1/2'>
+                            <h2 className='title-font font-content text-xs font-semibold tracking-widest text-gray-800 dark:text-gray-200'>
                               ADDRESS
                             </h2>
                             <p className='mt-1 font-content'>{items.address}</p>
                           </div>
-                          <div className='lg:w-1/2 px-6 mt-4 lg:mt-0'>
-                            <h2 className='font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs font-qs'>
+                          <div className='mt-4 px-6 lg:mt-0 lg:w-1/2'>
+                            <h2 className='font-qs text-xs font-semibold tracking-widest text-gray-800 dark:text-gray-200'>
                               EMAIL
                             </h2>
                             <div className='leading-relaxed'>
                               <Link
                                 href='mailto:dreams@garbhagudi.com'
-                                className='text-gg-500 dark:text-gg-400 font-qs underline hover:text-lg transition-all duration-100'
+                                className='font-qs text-gg-500 underline transition-all duration-100 hover:text-lg dark:text-gg-400'
                               >
                                 dreams@garbhagudi.com
                               </Link>
                             </div>
-                            <h2 className='font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs mt-4 font-qs'>
+                            <h2 className='mt-4 font-qs text-xs font-semibold tracking-widest text-gray-800 dark:text-gray-200'>
                               PHONE
                             </h2>
-                            <div className='leading-relaxed font-qs hover:text-lg text-gg-500 dark:text-gg-400 underline transition-all duration-100'>
+                            <div className='font-qs leading-relaxed text-gg-500 underline transition-all duration-100 hover:text-lg dark:text-gg-400'>
                               <Link href='tel:+919108910832'>
                                 +91 9108 9108 32
                               </Link>
                             </div>
-                            <h2 className='uppercase font-semibold text-gray-800 dark:text-gray-200 tracking-widest text-xs mt-4 font-qs'>
+                            <h2 className='mt-4 font-qs text-xs font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-200'>
                               WhatsApp
                             </h2>
-                            <div className='leading-relaxed font-qs text-gg-500 dark:text-gg-400 underline hover:text-lg transition-all duration-100'>
+                            <div className='font-qs leading-relaxed text-gg-500 underline transition-all duration-100 hover:text-lg dark:text-gg-400'>
                               <Link
                                 href='https://wa.me/918884183338?text=Hi.'
                                 target='_blank'
@@ -156,14 +156,14 @@ const IndexPage = ({ branches }) => {
                           </div>
                         </div>
                       </div>
-                      <div className='lg:w-1/2 md:w-full flex flex-col md:ml-auto w-full md:py-4 md:mt-0'>
-                        <p className='text-center font-heading font-bold text-xl mt-7 lg:mt-0 px-2'>
+                      <div className='flex w-full flex-col md:ml-auto md:mt-0 md:w-full md:py-4 lg:w-1/2'>
+                        <p className='mt-7 px-2 text-center font-heading text-xl font-bold lg:mt-0'>
                           Fertility specialists at our {items.title} branch
                         </p>
-                        <div className='mx-auto space-y-0 grid grid-cols-2 sm:gap-y-5 sm:gap-x-14 sm:space-y-0 lg:grid-cols-2 lg:max-w-7xl col-span-full'>
+                        <div className='col-span-full mx-auto grid grid-cols-2 space-y-0 sm:gap-x-14 sm:gap-y-5 sm:space-y-0 lg:max-w-7xl lg:grid-cols-2'>
                           {items?.doctors.map((doctor) => (
                             <div
-                              className='text-center rounded-lg'
+                              className='rounded-lg text-center'
                               key={doctor?.id}
                             >
                               <Link
@@ -173,18 +173,18 @@ const IndexPage = ({ branches }) => {
                                 <div>
                                   <div className='space-y-2'>
                                     <img
-                                      className='mx-auto h-36 w-36 my-auto rounded-full mt-4 bg-gray-400 dark:bg-gray-700'
+                                      className='mx-auto my-auto mt-4 h-36 w-36 rounded-full bg-gray-400 dark:bg-gray-700'
                                       src={doctor?.image.url}
                                       alt={doctor?.name}
                                     />
-                                    <div className='text-base leading-6 font-medium space-y-0.5'>
+                                    <div className='space-y-0.5 text-base font-medium leading-6'>
                                       <h3 className='text-brandDark font-heading font-bold'>
                                         {doctor?.name}
                                       </h3>
-                                      <p className='text-brandPurpleDark dark:text-brandPurple text-xs font-content'>
+                                      <p className='font-content text-xs text-brandPurpleDark dark:text-brandPurple'>
                                         {doctor?.qualification}
                                       </p>
-                                      <p className='text-gg-500 dark:text-gg-400 text-sm font-content'>
+                                      <p className='font-content text-sm text-gg-500 dark:text-gg-400'>
                                         {doctor?.designation}
                                       </p>
                                     </div>

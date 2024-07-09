@@ -8,18 +8,18 @@ const Alert = () => {
 
   return (
     <div className={close ? 'hidden' : 'block'}>
-      <div className='bg-white dark:bg-gray-800 border-b dark:border-gray-600'>
-        <div className='max-w-7xl mx-auto py-2 px-3 sm:px-6 lg:px-8'>
-          <div className='flex items-center justify-between flex-wrap'>
-            <div className='w-0 flex-1 flex items-center'>
-              <span className='flex p-2 rounded-lg bg-gg-500 dark:bg-gray-500'>
+      <div className='border-b bg-white dark:border-gray-600 dark:bg-gray-800'>
+        <div className='mx-auto max-w-7xl px-3 py-2 sm:px-6 lg:px-8'>
+          <div className='flex flex-wrap items-center justify-between'>
+            <div className='flex w-0 flex-1 items-center'>
+              <span className='flex rounded-lg bg-gg-500 p-2 dark:bg-gray-500'>
                 <HiSpeakerphone
-                  className='h-4 md:h-6 w-4 md:w-6 text-white'
+                  className='h-4 w-4 text-white md:h-6 md:w-6'
                   aria-hidden='true'
                 />
               </span>
-              <p className='ml-3 font-medium text-gray-800 dark:text-gray-200 truncate font-lexend text-sm'>
-                <span className='md:hidden text-xs'>
+              <p className='ml-3 truncate font-lexend text-sm font-medium text-gray-800 dark:text-gray-200'>
+                <span className='text-xs md:hidden'>
                   PARIPOORNA: An affordable way to complete your family
                 </span>
                 <span className='hidden md:inline'>
@@ -28,10 +28,10 @@ const Alert = () => {
                 </span>
               </p>
             </div>
-            <div className='order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto'>
+            <div className='order-3 mt-2 w-full flex-shrink-0 sm:order-2 sm:mt-0 sm:w-auto'>
               <Link
                 href='/features/paripoorna-2023'
-                className='flex items-center justify-center py-1 md:py-2 px-3 border border-transparent font-lexend rounded-md shadow-sm text-sm text-white bg-gg-500 dark:bg-gray-500 hover:bg-gg-600 dark:hover:bg-gray-600'
+                className='flex items-center justify-center rounded-md border border-transparent bg-gg-500 px-3 py-1 font-lexend text-sm text-white shadow-sm hover:bg-gg-600 dark:bg-gray-500 dark:hover:bg-gray-600 md:py-2'
               >
                 Learn more
               </Link>
@@ -39,7 +39,7 @@ const Alert = () => {
             <div className='order-2 flex-shrink-0 sm:order-3 sm:ml-3'>
               <button
                 type='button'
-                className='-mr-1 flex p-2 rounded-md hover:bg-brandDark focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2'
+                className='hover:bg-brandDark -mr-1 flex rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2'
                 onClick={handleClick}
               >
                 <span className='sr-only'>Dismiss</span>

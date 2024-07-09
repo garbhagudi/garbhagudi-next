@@ -91,10 +91,10 @@ const IvfProcess = () => {
   return (
     <div className='mx-auto'>
       <div>
-        <h2 className='text-3xl lg:text-4xl font-heading font-bold text-center py-10 lg:py-16'>
+        <h2 className='py-10 text-center font-heading text-3xl font-bold lg:py-16 lg:text-4xl'>
           Understanding In-Vitro Fertilization (IVF)
         </h2>
-        <div className='max-w-7xl mx-auto'>
+        <div className='mx-auto max-w-7xl'>
           <Chrono
             items={data}
             mode='HORIZONTAL'

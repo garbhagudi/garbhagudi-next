@@ -27,7 +27,7 @@ const DoctorLayout = ({
       <div className=''>
         <div
           onClick={() => handleSetIndex(index)}
-          className=' px-3 pt-4 flex items-center mr-1 ml-1 justify-center dark:border-gray-600 rounded-lg dark:bg-gray-700 transition duration-200 ease-in-out'
+          className='ml-1 mr-1 flex items-center justify-center rounded-lg px-3 pt-4 transition duration-200 ease-in-out dark:border-gray-600 dark:bg-gray-700'
         >
           <div className=''>{imageComponent}</div>
         </div>
@@ -48,7 +48,7 @@ const DoctorLayout = ({
             </Transition.Child>
 
             <div className='fixed inset-0 flex items-start justify-center overflow-y-auto'>
-              <div className='mt-24  p-4 text-center'>
+              <div className='mt-24 p-4 text-center'>
                 <Transition.Child
                   as={React.Fragment}
                   enter='ease-out duration-300'
@@ -58,18 +58,18 @@ const DoctorLayout = ({
                   leaveFrom='opacity-100 scale-100'
                   leaveTo='opacity-0 scale-95'
                 >
-                  <Dialog.Panel className='w-full max-w-7xl transform rounded-2xl bg-white dark:bg-gray-600 p-6 text-left align-middle shadow-xl transition-all'>
+                  <Dialog.Panel className='w-full max-w-7xl transform rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all dark:bg-gray-600'>
                     <Dialog.Title
                       as='h3'
-                      className='text-2xl font-heading font-bold text-center leading-6 text-gg-500 dark:text-gray-200'
+                      className='text-center font-heading text-2xl font-bold leading-6 text-gg-500 dark:text-gray-200'
                     >
                       {name}
                     </Dialog.Title>
-                    <div className='flex items-center justify-center mx-auto w-44 h-44 mt-3'>
+                    <div className='mx-auto mt-3 flex h-44 w-44 items-center justify-center'>
                       <div className='relative'>
-                        <div className='h-full w-full absolute rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
+                        <div className='bg-[length: 400%] absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
                         <Image
-                          className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent'
+                          className='rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
                           src={docpic}
                           alt={name}
                           width={500}
@@ -82,7 +82,7 @@ const DoctorLayout = ({
                       <RichText content={bio} />
                     </div>
 
-                    <div className='mt-4 text-center space-y-4'>
+                    <div className='mt-4 space-y-4 text-center'>
                       <MyModal
                         title={'Book an Appointment'}
                         clnm={
@@ -91,7 +91,7 @@ const DoctorLayout = ({
                       />
                       <button
                         type='button'
-                        className='inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-600 dark:hover:bg-gg-400 font-lexend hover:text-white'
+                        className='inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 font-lexend text-sm font-medium text-gray-900 hover:bg-gray-600 hover:text-white dark:hover:bg-gg-400'
                         onClick={closeModal}
                       >
                         Close

@@ -6,16 +6,16 @@ type Props = {};
 const OurCentres = (props: Props) => {
   return (
     <div
-      className='container mx-auto px-3 scroll-m-24'
+      className='container mx-auto scroll-m-24 px-3'
       id='iui-centres-in-bangalore'
     >
-      <h2 className='text-2xl lg:text-3xl font-heading font-bold text-center pb-5 text-gray-800 dark:text-gray-200'>
+      <h2 className='pb-5 text-center font-heading text-2xl font-bold text-gray-800 dark:text-gray-200 lg:text-3xl'>
         GarbhaGudi IVF Centers in Bangalore
       </h2>
-      <div className='flex justify-center items-center pb-5'>
+      <div className='flex items-center justify-center pb-5'>
         <svg
           aria-hidden='true'
-          className='w-5 h-5 text-yellow-400'
+          className='h-5 w-5 text-yellow-400'
           fill='currentColor'
           viewBox='0 0 20 20'
           xmlns='http://www.w3.org/2000/svg'
@@ -25,7 +25,7 @@ const OurCentres = (props: Props) => {
         </svg>
         <svg
           aria-hidden='true'
-          className='w-5 h-5 text-yellow-400'
+          className='h-5 w-5 text-yellow-400'
           fill='currentColor'
           viewBox='0 0 20 20'
           xmlns='http://www.w3.org/2000/svg'
@@ -35,7 +35,7 @@ const OurCentres = (props: Props) => {
         </svg>
         <svg
           aria-hidden='true'
-          className='w-5 h-5 text-yellow-400'
+          className='h-5 w-5 text-yellow-400'
           fill='currentColor'
           viewBox='0 0 20 20'
           xmlns='http://www.w3.org/2000/svg'
@@ -45,7 +45,7 @@ const OurCentres = (props: Props) => {
         </svg>
         <svg
           aria-hidden='true'
-          className='w-5 h-5 text-yellow-400'
+          className='h-5 w-5 text-yellow-400'
           fill='currentColor'
           viewBox='0 0 20 20'
           xmlns='http://www.w3.org/2000/svg'
@@ -55,7 +55,7 @@ const OurCentres = (props: Props) => {
         </svg>
         <svg
           aria-hidden='true'
-          className='w-5 h-5 text-gray-300 dark:text-gray-500'
+          className='h-5 w-5 text-gray-300 dark:text-gray-500'
           fill='currentColor'
           viewBox='0 0 20 20'
           xmlns='http://www.w3.org/2000/svg'
@@ -63,37 +63,37 @@ const OurCentres = (props: Props) => {
           <title>Fifth star</title>
           <path d='M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z'></path>
         </svg>
-        <p className='ml-2 text-sm font-medium text-gray-800 dark:text-gray-200 font-lexend'>
+        <p className='ml-2 font-lexend text-sm font-medium text-gray-800 dark:text-gray-200'>
           4.8 out of 5
         </p>
       </div>
-      <div className='text-center font-content pb-5 text-gray-800 dark:text-gray-200'>
+      <div className='pb-5 text-center font-content text-gray-800 dark:text-gray-200'>
         "Experience the exceptional service and quality that has earned us a
         4.8-star rating!"
       </div>
-      <div className='flex items-center justify-center flex-wrap gap-4 lg:gap-10'>
+      <div className='flex flex-wrap items-center justify-center gap-4 lg:gap-10'>
         {Data.map((items) => (
-          <div key={items.id} className='border-2 border-brandPink4 rounded-lg'>
+          <div key={items.id} className='rounded-lg border-2 border-brandPink4'>
             <div>
               <iframe
                 width='100%'
                 height='100%'
-                className='border-b-2 border-brandPink4 h-72 w-full max-w-md rounded-lg rounded-b-none dark:grayscale dark:brightness-75 dark:contrast-150 dark:invert'
+                className='h-72 w-full max-w-md rounded-lg rounded-b-none border-b-2 border-brandPink4 dark:brightness-75 dark:contrast-150 dark:grayscale dark:invert'
                 loading='lazy'
                 title='map'
                 src={items.map}
               ></iframe>
             </div>
-            <div className='space-y-2 pt-2 px-2 pb-2 font-content max-w-md'>
-              <div className='text-xl font-heading border-b border-brandPink4'>
+            <div className='max-w-md space-y-2 px-2 pb-2 pt-2 font-content'>
+              <div className='border-b border-brandPink4 font-heading text-xl'>
                 {items.branch}
               </div>
-              <div className='text-sm pb-2 h-16'>Address: {items.address}</div>
+              <div className='h-16 pb-2 text-sm'>Address: {items.address}</div>
               <div className='flex items-center justify-between space-x-2'>
-                <button className='px-2.5 py-1.5 text-sm bg-gg-400 dark:bg-gray-500 rounded-lg text-white font-semibold hover:bg-gg-400 dark:hover:bg-gg-400'>
+                <button className='rounded-lg bg-gg-400 px-2.5 py-1.5 text-sm font-semibold text-white hover:bg-gg-400 dark:bg-gray-500 dark:hover:bg-gg-400'>
                   <Link href={`tel:${items.phone}`}>Call Now</Link>
                 </button>
-                <button className='px-2.5 py-1.5 text-sm bg-gg-400 dark:bg-gray-500 rounded-lg text-white font-semibold hover:bg-gg-400 dark:hover:bg-gg-400'>
+                <button className='rounded-lg bg-gg-400 px-2.5 py-1.5 text-sm font-semibold text-white hover:bg-gg-400 dark:bg-gray-500 dark:hover:bg-gg-400'>
                   <Link href={items.link}>Directions</Link>
                 </button>
               </div>
