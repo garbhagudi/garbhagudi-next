@@ -5,6 +5,7 @@ import ParagraphSection from 'sections/misc/international-ivf-day/ParagraphSecti
 import CallToAction from 'sections/misc/international-ivf-day/CallToAction';
 import { Location } from 'components/header/headerData';
 import Image from 'next/image';
+import banner from 'assets/Landing-Page-Banners.jpg';
 
 const ImageBanner = dynamic(
   () => import('sections/misc/international-ivf-day/ImageBanner'),
@@ -39,6 +40,13 @@ const Page = () => {
           <p className='text-center text-gray-600 dark:text-gray-400'>
             Discover the confluence of science and Indic wisdom to enhance fertility.
           </p>
+          <Image
+              height={100}
+              width={100}
+              className='rounded-lg mt-10 mb-5 w-full'
+              src={banner}
+              alt='Section Image'
+            />
             <div className='my-8'>
                 <ParagraphSection/>
                 <Yoga/>

@@ -85,11 +85,11 @@
         onSubmit='javascript:document.charset="UTF-8"; return checkMandatory3505252000277723744()'
         accept-charset="UTF-8"
       >
-      <input type='text' style='display:none;' name='xnQsjsdp' value='fe7bb15f1e55252ae0edf66f10d4050d74b63ba1d8b757683c4460ea5a35a079'></input> 
-      <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
-      <input type='text' style='display:none;' name='xmIwtLD' value='93a07d93c31216317b9a34010f013bddaf743ccf940e8139366a55f9224a1e5016ecb4f74540aa6ff5774b4a6c8adb5e'></input> 
-      <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
-      <input type='text' style='display:none;' name='returnURL' value='https&#x3a;&#x2f;&#x2f;garbhagudi.com&#x2f;thank-you.html' > </input>
+      <input type='text' style='display:none;' name='xnQsjsdp' value='397e49fab684bb21cd0364713e13b5dcb0d08bf80e8b2bb3b390593fb5895fe3'></input> 
+ <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
+ <input type='text' style='display:none;' name='xmIwtLD' value='001fd918351eae3cfbc6f112f3aa2841d20bc1aed2901e4070eb55fff9f069e07ee7238b5996d73b8a45640049583acb'></input> 
+ <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
+ <input type='text' style='display:none;' name='returnURL' value='https&#x3a;&#x2f;&#x2f;garbhagudi.com&#x2f;thank-you.html' > </input>
         <!-- Do not remove this code. -->
         <div class="space-y-3 px-3 mx-auto">
           <div class="max-w-sm mx-auto">
@@ -116,14 +116,15 @@
             <div class="zcwf_col_help"></div>
           </div>
           <div class="max-w-sm mx-auto">
-            <select class='w-full font-[nunito] text-base py-1 px-3 border mt-2 lg:mt-0 active:outline-none focus:outline-none focus:ring-2 focus:ring-[#ea4b6a] focus:border-[#ea4b6a] border-[#ea4b6a] rounded-md zcwf_col_fld_slt' id='LEADCF15' name='LEADCF15'  >
-                <option value='-None-' disabled selected>Marital Status</option>
-                <option value='Married'>Married</option>
-                <option value='Unmarried'>Unmarried</option>
-                <option value='Divorced'>Divorced</option>
-                <option value='Live-in'>Live-in</option>
-                <option value='I&#x27;ve&#x20;not&#x20;checked'>I&#x27;ve not checked</option>
-            </select>
+            <input
+              type="text"
+              ftype="email"
+              id="Email"
+              placeholder="Email"
+              name="Email"
+              maxlength="100"
+              class="w-full font-[nunito] text-base py-1 px-3 border mt-2 lg:mt-0 active:outline-none focus:outline-none focus:ring-2 focus:ring-[#ea4b6a] focus:border-[#ea4b6a] border-[#ea4b6a] rounded-md"
+            />
             <div class="zcwf_col_help"></div>
           </div>
         </div>
@@ -271,31 +272,32 @@
           </div>
         </div>
         <script>
-          function validateEmail3505252000276132002() {
-            var form = document.forms['WebToLeads3505252000276132002'];
-            var emailFld = form.querySelectorAll('[ftype=email]');
-            var i;
-            for (i = 0; i < emailFld.length; i++) {
-              var emailVal = emailFld[i].value;
-              if (emailVal.replace(/^\s+|\s+$/g, '').length != 0) {
-                var atpos = emailVal.indexOf('@');
-                var dotpos = emailVal.lastIndexOf('.');
-                if (
-                  atpos < 1 ||
-                  dotpos < atpos + 2 ||
-                  dotpos + 2 >= emailVal.length
-                ) {
-                  alert('Please enter a valid email address. ');
-                  emailFld[i].focus();
-                  return false;
-                }
-              }
-            }
-            return true;
-          }
-          function checkMandatory3505252000277723744() {
-		var mndFileds = new Array('Last Name','Phone','LEADCF15');
-		var fldLangVal = new Array('Full\x20Name','Phone','Marital\x20Status');
+          function validateEmail3505252000277723744()
+	{
+		var form = document.forms['WebToLeads3505252000277723744'];
+		var emailFld = form.querySelectorAll('[ftype=email]');
+		var i;
+		for (i = 0; i < emailFld.length; i++)
+		{
+			var emailVal = emailFld[i].value;
+			if((emailVal.replace(/^\s+|\s+$/g, '')).length!=0 )
+			{
+				var atpos=emailVal.indexOf('@');
+				var dotpos=emailVal.lastIndexOf('.');
+				if (atpos<1 || dotpos<atpos+2 || dotpos+2>=emailVal.length)
+				{
+					alert('Please enter a valid email address. ');
+					emailFld[i].focus();
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	function checkMandatory3505252000277723744() {
+		var mndFileds = new Array('Last Name','Phone');
+		var fldLangVal = new Array('Full\x20Name','Phone');
 		for(i=0;i<mndFileds.length;i++) {
 		  var fieldObj=document.forms['WebToLeads3505252000277723744'][mndFileds[i]];
 		  if(fieldObj) {
@@ -329,6 +331,8 @@
 			} catch (e) {}
 		    }
 		}
+		if(!validateEmail3505252000277723744()){return false;}
+		
 	var urlparams = new URLSearchParams( window.location.search);
 	if(urlparams.has('service') && (urlparams.get('service')==='smarturl')){
 		var webform = document.getElementById('webform3505252000277723744');
@@ -358,7 +362,7 @@ function tooltipShow3505252000277723744(el){
 }
         </script>
         <!-- Do not remove this --- Analytics Tracking code starts -->
-        <script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=c6a01d8b80c3da5d43a2d6e2355f6c414962b2879e3343f69a392a98acbe978b01a038117b7277fa7d022615deec4682gid507960e38d6665f13b5b1487399f36c598dd73434b459ffa5948c0b5cfd0f914gid85255813de1a4e68204c1bc4aefc58b5d92e95a6ba99c1888326448b1d7b965agid56ef353d826cc4a1336a9583aefed3758cd53f465f0bbd3b3de0897a2bd2e694&tw=5a272f7f1cb7a87ad3e6371e66a11870b43e2fa310b1adb254e5bb1216d02697'></script>
+        <script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=e97b51e0764ee27a39a90e56212f8f801a4916888d8b97470f66b787b3059494ffd6b4cfce88cf1c8c8c0f607356664egid25fbba15d86479d7ab43f6575673e934f0a7c2fc3f54026adb91d85651783b54gid5a4af7ea97ffa2644a1bb759ce67d8500e2cce067d18b7849d9de25060f85ad9gidabf66469a864b94429c9a87f976dd7830ae08ef536e9564e9bba421372c1ef1e&tw=f7be419bf2e04b515a7bd6e12ae2fc28326d2143f785bb99a38b95d738b69f66'></script>
         <!-- Do not remove this --- Analytics Tracking code ends. -->
       </form>
     </div>

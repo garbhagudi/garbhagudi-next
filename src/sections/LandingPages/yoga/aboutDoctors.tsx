@@ -56,8 +56,8 @@ const doctors = [
     id: 3,
     name: 'Nutritionuist – Dr. Sridevi',
     image:
-      'https://yoga-satvicmovement-org.b-cdn.net/resources/img/hosts/Akshay-1.webp',
+      '',
     content:
-      'Dr. Alex Doe is a certified yoga instructor with 10 years of experience. He has trained over 1000 students and has helped them achieve their fitness goals. He is a firm believer in the power of yoga and its ability to transform lives.',
+      'Dedicated and innovative Ayurvedic professional with a Doctor of Medicine in Ayurveda (MD(Ayu)) and a Bachelor of Ayurveda Medicine and Surgery (BAMS). Currently serving as an Assistant Professor at Transdisciplinary University, Bangalore, with extensive experience in Ayurvedic consulting, research, and teaching. Skilled in nutrition expertise, product development, database management, and regulatory compliance. Passionate about integrating traditional knowledge with modern science for holistic wellness solutions.',
   },
 ];

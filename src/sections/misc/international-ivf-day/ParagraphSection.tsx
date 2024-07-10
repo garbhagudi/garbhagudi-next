@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import banner from 'assets/Landing-Page-Banners.jpg';
+import banner from 'assets/21-Days-Yoga-Challenge-Logo.png';
 
 const ParagraphSection = () => {
     return (
@@ -17,15 +17,15 @@ const ParagraphSection = () => {
           <h2 className='text-xl font-bold mt-5'>Join the 21-Day Yoga Challenge</h2>
           <p className='text-gray-800 dark:text-gray-200'>As part of our campaign, we invite you to take part in our 21-day yoga challenge. This program is designed to improve reproductive health through specially curated yoga practices. By participating, you'll not only enhance your fertility but also become part of a supportive community committed to holistic well-being.
           </p>
-          <figure>
+          <div className='mt-2 flex justify-center items-center rounded-lg'>
             <Image
-              height={100}
-              width={100}
-              className='rounded-lg mt-10 mb-5 w-full'
+              height={350}
+              width={350}
+              className='rounded-lg mt-10 mb-5'
               src={banner}
               alt='Section Image'
             />
-          </figure>
+          </div>
     
       </div>
     );

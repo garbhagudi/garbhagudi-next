@@ -50,7 +50,6 @@ const Yoga: NextPage = ({ testimonials }: any) => {
       <Faq />
       <Register />
       <WhoIsThisFor />
-      <Video testimonials={testimonials} />
       <MobileFooter />
       <Floating />
     </>
