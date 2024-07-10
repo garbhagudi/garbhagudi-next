@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import AccordionLayout from 'sections/Faq/FaqLayout';
+import banner from 'assets/FAQImage.jpg'
 
 const Faq = () => {
   const [activeIndex1, setActiveIndex1] = React.useState(1);
@@ -11,7 +12,7 @@ const Faq = () => {
           Frequently asked questions
         </h2>
         <Image
-          src='https://yoga-satvicmovement-org.b-cdn.net/resources/img/faq_reduce.webp'
+          src={banner}
           alt='faq'
           width={500}
           height={500}
@@ -42,32 +43,44 @@ export default Faq;
 const yogaFAQs = [
   {
     id: 1,
-    question: 'What are the benefits of practicing yoga?',
+    question: 'Can Yoga improve fertility in women?',
     answer:
-      'Yoga offers numerous benefits including improved flexibility, increased strength, better posture, enhanced mental clarity, stress reduction, and overall well-being. Regular practice can also help with weight management, cardiovascular health, and chronic pain relief.',
+      'Yoga is known for its potential to help with conception. It reduces stress and aids in balancing the hormones. It also improves blood flow to the reproductive parts of the body. Certain yoga poses, like the Bridge and Cobra, enhance the blood flow and support the endocrine system. Yoga is useful but should not replace medical advice.',
   },
   {
     id: 2,
-    question: 'Do I need to be flexible to start yoga?',
+    question: 'How does yoga affect the reproductive system?',
     answer:
-      'No, you do not need to be flexible to start yoga. Yoga is for everyone, regardless of their current level of flexibility. With regular practice, you will gradually improve your flexibility, strength, and balance.',
+      'Yoga for fertility also improves blood circulation in the reproductive organs. Hatha yoga is considered the best for fertility, since its movements are slower and more fluid. Respiratory techniques help women find balance and “asanas” improve circulation.',
   },
   {
     id: 3,
-    question: 'What should I wear to a yoga class?',
+    question: 'What is the success rate of yoga?',
     answer:
-      "Wear comfortable, breathable clothing that allows you to move freely. It's best to choose moisture-wicking fabrics that can keep you dry during practice. Avoid overly loose clothing that might get in the way of certain poses.",
+      "88% said that they had observed physical benefits, and 86.2% said they saw a positive impact on their mental health. 82.6% of participants commented that yoga had helped with their stress levels. 87.1% said practicing yoga made them feel stronger, and 91.6% said their flexibility had improved.",
   },
   {
     id: 4,
-    question: 'How often should I practice yoga?',
+    question: 'What are the results of fertility yoga?',
     answer:
-      'The frequency of yoga practice depends on your goals and schedule. Beginners can start with 2-3 times a week and gradually increase the frequency. Even a short daily practice can be highly beneficial.',
+      'It not only helps in easing out mental and physical tension but also gives you emotional stability and beauty benefits. Yoga for fertility likewise has several positive implications like: Stress reliever, Hormonal balance, improved blood circulation etc.',
   },
   {
     id: 5,
-    question: 'Can I practice yoga if I have a medical condition or injury?',
+    question: 'Is it okay to practice yoga while I am menstruating?',
     answer:
-      "Yes, but it's important to consult with your healthcare provider before starting yoga if you have any medical conditions or injuries. Inform your yoga instructor about your condition so they can provide modifications and ensure a safe practice.",
+      "The answer is yes - it's ok to practice yoga while you are bleeding. BUT it should specifically be a restorative form of practice- one which encourages rest and relaxation.",
+  },
+  {
+    id: 6,
+    question: 'What is the maximum time to do yoga?',
+    answer:
+      "If yoga is your only workout, aim for at least 20-30 minutes of yoga, 6 days per week. If necessary, you can start with 3 days per week for your first month. As your fitness level increases, you can increase that to 40-70 minutes per day.",
+  },
+  {
+    id: 7,
+    question: 'Is yoga better in the morning or evening?',
+    answer:
+      "As discussed earlier, both morning and evening yoga have their unique benefits. Morning Yoga can help energize you for the day ahead, while evening yoga can help you relax and unwind. The best time for yoga ultimately depends on your personal preference and lifestyle.",
   },
 ];

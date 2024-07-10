@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '../unbounce/form';
+import Form from './form';
 
 const Register = () => {
   return (

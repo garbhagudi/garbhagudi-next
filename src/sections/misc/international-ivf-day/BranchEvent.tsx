@@ -11,8 +11,8 @@ const Location = [
     short: 'HN',
     events: [
       {
-        date: 'July 5',
-        activity: 'Health Camp',
+        date: '23 July',
+        activity: 'Yoga session',
         description: 'Join our health camp for free check-ups and consultations.',
       },
     ],
@@ -24,7 +24,7 @@ const Location = [
     short: 'KN',
     events: [
       {
-        date: 'July 6',
+        date: '11 July',
         activity: 'Yoga Session',
         description: 'Participate in our special yoga session to enhance fertility.',
       },
@@ -37,8 +37,8 @@ const Location = [
     short: 'JN',
     events: [
       {
-        date: 'July 7',
-        activity: 'Nutrition Workshop',
+        date: '16 July',
+        activity: 'Yoga session',
         description: 'Learn about nutrition and its impact on fertility.',
       },
     ],
@@ -50,8 +50,8 @@ const Location = [
     short: 'EC',
     events: [
       {
-        date: 'July 8',
-        activity: 'Ayurveda Talk',
+        date: '19 July',
+        activity: 'Yoga session',
         description: 'Discover the benefits of Ayurveda for reproductive health.',
       },
     ],
@@ -63,8 +63,8 @@ const Location = [
     short: 'MH',
     events: [
       {
-        date: 'July 9',
-        activity: 'Yoga Challenge',
+        date: '12 July',
+        activity: 'Yoga session',
         description: 'Join our yoga challenge to improve your overall wellness.',
       },
     ],
@@ -76,8 +76,8 @@ const Location = [
     short: 'NBR',
     events: [
       {
-        date: 'July 10',
-        activity: 'Health Talk',
+        date: '18 July',
+        activity: 'Yoga session',
         description: 'Attend our health talk to learn more about fertility treatments.',
       },
     ],
@@ -89,15 +89,15 @@ const Location = [
     short: 'NBV',
     events: [
       {
-        date: 'July 11',
-        activity: 'Wellness Seminar',
+        date: '17 July',
+        activity: 'Yoga session',
         description: 'Join our seminar to gain insights into holistic wellness.',
       },
     ],
   },
 ];
 
-const BranchEvents = ({ locations }) => {
+const BranchEvents = () => {
   const [openLocation, setOpenLocation] = useState(null);
 
   const toggleLocation = (location) => {
@@ -106,7 +106,7 @@ const BranchEvents = ({ locations }) => {
 
   return (
     <div>
-      <h2 className='text-xl font-bold'>Events at Branch Level</h2>
+      <h2 className='text-xl font-bold mt-10'>Events at Branch Level</h2>
       {Location.map((item, index) => (
         <div key={index} className='my-8'>
           <div className='group'>
@@ -172,15 +172,14 @@ const BranchEvents = ({ locations }) => {
                     <p className='text-gray-800 dark:text-gray-200'>
                       <strong>Date:</strong> {event.date}
                     </p>
-                    <p className='text-gray-800 dark:text-gray-200'>
+                    <p className='text-gray-800 mt-2 dark:text-gray-200'>
                       <strong>Activity:</strong> {event.activity}
                     </p>
-                    <p className='text-gray-800 dark:text-gray-200'>
-                      <strong>Description:</strong> {event.description}
-                    </p>
+                    <Link href={"https://www.garbhagudi.com/ivf/yoga"}>
                     <button className='mt-2 bg-gg-500 text-white px-4 py-2 rounded'>
                       Register
                     </button>
+                    </Link>
                   </div>
                 ))}
               </div>

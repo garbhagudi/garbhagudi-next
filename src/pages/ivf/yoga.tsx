@@ -46,7 +46,7 @@ const Yoga: NextPage = ({ testimonials }: any) => {
       <Benefits />
       <Curriculum />
       <AboutDoctors />
-      <Testimonial />a
+      <Testimonial />
       <Faq />
       <Register />
       <WhoIsThisFor />

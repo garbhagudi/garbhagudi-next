@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const events = [
-    { date: '1', event: 'Opening Ceremony', details: 'Details for Opening Ceremony' },
+    { date: '11', event: 'Yoga session', details: 'Yoga session with 10-15pax (including 5 couples)' },
     { date: '2', event: 'Yoga Session', details: 'Details for Yoga Session' },
     { date: '3', event: 'Nutrition Workshop', details: 'Details for Nutrition Workshop' },
     { date: '4', event: 'IVF Seminar', details: 'Details for IVF Seminar' },

@@ -71,7 +71,7 @@ const Floating: React.FC = () => {
   return (
     <div
       id='floating-window'
-      className='fixed right-36 top-36 hidden h-96 w-96 overflow-hidden rounded-lg bg-gg-50 p-4 shadow-lg xl:flex'
+      className='fixed right-16 top-36 hidden h-96 w-96 overflow-hidden rounded-lg bg-gg-50 p-4 shadow-lg xl:flex'
     >
       <div className='max-w-xl'>
         <div className='flex flex-col items-start justify-start'>
@@ -80,11 +80,11 @@ const Floating: React.FC = () => {
             <div className='space-y-1'>
               <div className='flex items-center justify-start space-x-3 pt-6 font-content'>
                 <FaCalendar className='text-2xl text-gg-500' />{' '}
-                <div>8th Jul - 28th Jul</div>
+                <div>25th Jul - 15th Aug</div>
               </div>
               <div className='flex items-center justify-start space-x-3 pt-3 font-content'>
                 <FaClock className='text-2xl text-gg-500' />{' '}
-                <div>6 to 7:30 AM (IST)</div>
+                <div>6:45 AM to 7:30 AM (IST)</div>
               </div>
               <div className='flex items-center justify-start space-x-3 pt-3 font-content'>
                 <FaIndianRupeeSign className='text-2xl text-gg-500' />{' '}

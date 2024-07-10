@@ -2,6 +2,9 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaCalendar, FaClock, FaGlobeAsia } from 'react-icons/fa';
 import { GrYoga } from 'react-icons/gr';
+import Banner_1 from 'assets/90-minute-recorded.svg'
+import Banner_2 from 'assets/Meal-Plans-Diet.svg' 
+import Banner_3 from 'assets/Recordings-of-All-Sessions.svg'
 
 const EventDetails = () => {
   const truncate = (str, length) => {
@@ -47,9 +50,9 @@ const EventDetails = () => {
                 <Image
                   src={item.image}
                   alt={item.title}
-                  width={48}
-                  height={48}
-                  className='mx-auto aspect-auto w-48 object-contain'
+                  width={40}
+                  height={40}
+                  className='mx-auto aspect-auto w-40 object-contain'
                 />
                 <div className='-mt-16 flex flex-col rounded-lg p-3 pt-20 shadow-lg md:-mt-0 md:pt-0 lg:py-2'>
                   <div className='py-2 font-lexend text-2xl font-bold'>
@@ -84,14 +87,14 @@ const eventHeader = [
   {
     id: 1,
     title: 'Start Date',
-    description: '2024-07-31',
+    description: '2024-07-25',
     icon: <FaCalendar />,
     misc: '',
   },
   {
     id: 2,
     title: 'Timing',
-    description: '6 - 7:30 AM (IST)',
+    description: '6:30 AM - 7:30 AM (IST)',
     icon: <FaClock />,
     misc: '(Rec. available for 1 day)',
   },
@@ -112,33 +115,22 @@ const eventHeader = [
 const whatToExpect = [
   {
     id: 1,
-    title: '90 minute recorded session every morning',
-    image:
-      'https://yoga-satvicmovement-org.b-cdn.net/resources/img/include_1-1.webp',
+    title: '90 Minute recorded session every morning',
+    image:Banner_1,
     description:
-      'Every session will include 20 minutes of Yoga philosophy explained in an applicable way to help you take control of your thoughts & emotions. This will be followed by 60 minutes of step by step asana practice. The practice will include asanas both from Hatha and Ashtanga style. You will also follow guided meditations & pranayama. We will end the session with 10 minutes of practical healthy habits that will help you change your food and lifestyle to reach your peak health. You will learn the benefits of cleansing practices like sunbathing and fasting along with food habits like juicing and having a wholesome diet.',
+      'Every session will include 15 minutes of Yoga explained in an applicable way to help you take control of your thoughts & emotions (Pranayama and relaxation). This will be followed by 30 minutes of step-by-step asana practice. The practice will include asanas which can be done comfortably by all including people who are taking some treatments. You will learn the benefits of these asanas in this session.',
   },
   {
     id: 2,
-    title: 'Deep Yogic Knowledge',
-    image:
-      'https://yoga-satvicmovement-org.b-cdn.net/resources/img/include_2-1.webp',
-    description:
-      'Most people feel lost, alone & stressed in life. The Yogic philosophy deeply understands the human psychology and talks about simple yet powerful tools to navigate the ups and downs of life. We will dive into the Ashtanga philosophy and learn about the 8 limbs of yoga these are beautiful values to live by. This is explained in a simple and fun way through stories, analogies and activities!',
-  },
-  {
-    id: 3,
     title: 'Meal Plans & Diet',
-    image:
-      'https://yoga-satvicmovement-org.b-cdn.net/resources/img/include_3-1.webp',
+    image:Banner_2,
     description:
-      'Satvic foods are not only conducive to your yoga practice but also have the power to prevent and heal your diseases. Every day we will help you make a healthy food addition to your life. This workshop is designed in a way that you absorb the knowledge without getting overwhelmed & can actually implement it in your life. Don’t worry, Satvic meals are neither boring nor tasteless! This plant based power packed way of eating will bring you tons of energy each day!',
+      'Preferably, Satvic foods are conducive to yoga practice and also have the power to prevent and heal diseases. We will help you make a healthy food addition to your life. This workshop is designed in a way that you absorb the knowledge without getting overwhelmed & can actually implement it in your life. Our nutritionist will give you tips for having a healthy diet for optimum health.',
   },
   {
     id: 4,
     title: 'Recordings of All Sessions',
-    image:
-      'https://yoga-satvicmovement-org.b-cdn.net/resources/img/include_5-1.webp',
+    image:Banner_3,
     description:
       'If you live outside India or miss a session due to an emergency, no worries! The replay links of each session will be provided for 1 day.',
   },

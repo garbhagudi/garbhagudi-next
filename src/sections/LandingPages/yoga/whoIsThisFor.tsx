@@ -39,13 +39,13 @@ const yogaWorkshopDetails = [
     image:
       'https://yoga-satvicmovement-org.b-cdn.net/resources/img/healthy.png',
     description:
-      'You live a very busy life & have no time to exercise? Well, this workshop is for you! This will help you start your morning right & elevate your life.',
+      'Everyone is living a very busy life & have no time to exercise? Well, this challenge is for you! This will help you start your morning/evening right & elevate your life.',
   },
   {
     category: 'For Homemakers',
     image: 'https://yoga-satvicmovement-org.b-cdn.net/resources/img/woman.png',
     description:
-      "Always taking care of others but forget to do something meaningful for your own health? It's time to do something wonderful for yourself so you can support your family even better.",
+      "They always taking care of others but forget to do something meaningful for their own health? It's time to do something wonderful for yourself so you can support your family even better.",
   },
   {
     category: 'For Senior Citizens',

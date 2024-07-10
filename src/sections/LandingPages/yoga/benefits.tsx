@@ -1,4 +1,9 @@
 import React from 'react';
+import banner_1 from 'assets/Benefits-You-Will-Gain_Img01.png';
+import banner_2 from 'assets/Benefits-You-Will-Gain_Img02.png';
+import banner_3 from 'assets/Benefits-You-Will-Gain_Img03.png';
+import banner_4 from 'assets/Benefits-You-Will-Gain_Img04.png';
+import Image from 'next/image';
 
 const Benefits = () => {
   return (
@@ -13,7 +18,9 @@ const Benefits = () => {
               key={benefit.id}
               className='flex flex-col items-center justify-center'
             >
-              <img
+              <Image
+                width={300}
+                height={300}
                 src={benefit.image}
                 alt={benefit.title}
                 className='max-w-xl rounded-lg object-cover'
@@ -33,25 +40,21 @@ const benefits = [
   {
     id: 1,
     title: 'Experience higher energy levels',
-    image:
-      'https://yoga-satvicmovement-org.b-cdn.net/resources/img/ExtremelyHighEnergy_n.webp',
+    image:banner_1,
   },
   {
     id: 2,
     title: 'Understand your thoughts & emotions',
-    image:
-      'https://yoga-satvicmovement-org.b-cdn.net/resources/img/peacefulandcalm_n.webp',
+    image:banner_2,
   },
   {
     id: 3,
     title: 'Feel more stable',
-    image:
-      'https://yoga-satvicmovement-org.b-cdn.net/resources/img/OptimalWeight_n.webp',
+    image:banner_3,
   },
   {
     id: 4,
     title: 'Have better relationships',
-    image:
-      'https://yoga-satvicmovement-org.b-cdn.net/resources/img/BetterRelationship_n.webp',
+    image:banner_4,
   },
 ];

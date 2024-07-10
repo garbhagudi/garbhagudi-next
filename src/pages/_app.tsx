@@ -17,7 +17,7 @@ const Loading = dynamic(() => import('components/Loading'));
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const noRenderPaths = ['/ivf/landing','/lp/ivf-enquiry-form','/lp/ivf-enquiry-form-call'];
+  const noRenderPaths = ['/ivf/landing','/lp/ivf-enquiry-form','/lp/ivf-enquiry-form-call','/ivf/yoga'];
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
 

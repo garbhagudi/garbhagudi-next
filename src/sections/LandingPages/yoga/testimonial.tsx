@@ -90,36 +90,30 @@ const yogaReviews = [
     id: 2,
     name: 'Rahul Patel',
     review:
-      'Zenith Yoga Studio is a sanctuary of peace and wellness. The instructors are deeply knowledgeable and inspiring, guiding each session with grace and expertise. The studio itself is serene, with calming decor and impeccable cleanliness. The staff is friendly and supportive, making every visit a rejuvenating experience. Highly recommend Zenith Yoga Studio for anyone seeking balance and mindfulness in their yoga practice.',
+     'I just wanted to say thank you for helping me to make that positive change to my life. Just wanted to thank you again for the yoga class. It was really nice to see how you genuinely enjoy teaching and the pleasure you get from sharing your knowledge with others - your passion for yoga is very infectious.',
   },
   {
     id: 3,
     name: 'Priya Sharma',
     review:
-      'Radiant Yoga Retreat is a haven for relaxation and renewal. The instructors are not only skilled but also compassionate, ensuring every session is both challenging and nurturing. The atmosphere is peaceful, with stunning views and a welcoming ambiance. The staff goes above and beyond to create a supportive community. Highly recommend Radiant Yoga Retreat for anyone looking to deepen their yoga practice.',
+      'I want to share  this  yoga session is very useful to me and positive thinking  it was really nice for my pleasant mindset. I really enjoy this session.',
   },
   {
     id: 4,
     name: 'Amit Singh',
     review:
-      'Tranquil Waves Yoga Center is simply exceptional. The teachers are dedicated and knowledgeable, offering personalized guidance that caters to individual needs. The facilities are top-notch, with spacious studios and calming decor that promotes focus and relaxation. The entire team is friendly and attentive, ensuring a warm and welcoming environment. Highly recommend Tranquil Waves Yoga Center for anyone seeking holistic wellness through yoga.',
+      'I really appreciate your enthusiasm for teaching. Your class always feels very thoughtful and i like the way that you weave yoga into each class. I just want to say thank you for the yoga class.',
   },
   {
     id: 5,
     name: 'Neha Patel',
     review:
-      'Harmony Yoga Studio is a gem in the heart of the city. The instructors are passionate and skilled, fostering a supportive environment for practitioners of all levels. The studio itself exudes serenity, with soothing music and aromatic scents that enhance the yoga experience. The staff is attentive and caring, making every visit a rejuvenating journey. Highly recommend Harmony Yoga Studio for its commitment to holistic well-being.',
+      'Hi mam when ever I am tension n I have lots of confusion u solve like a mother, where ever need are with me just like mother protecting her child from all negatives and difficulties I have no words to say just like thank you kindly be with me give me more positive thoughts and support n please talk 2 minutes after session it gives us strength and hope more positivity will build k 🙏',
   },
   {
     id: 6,
     name: 'Rajesh Kumar',
     review:
-      'Eternal Bliss Yoga Center exceeded my expectations. The instructors are not only experts in their field but also compassionate mentors who guide with patience and encouragement. The facilities are pristine, with state-of-the-art equipment and peaceful surroundings that elevate the practice. The staff is friendly and supportive, creating a nurturing atmosphere for personal growth. Highly recommend Eternal Bliss Yoga Center for its dedication to yoga excellence.',
-  },
-  {
-    id: 7,
-    name: 'Ananya Desai',
-    review:
-      'Soulful Yoga Sanctuary is where I found my inner peace. The instructors are knowledgeable and inspiring, leading classes that cater to both body and soul. The ambiance is serene, with soft lighting and calming vibes that enhance relaxation. The staff is incredibly kind and helpful, ensuring a positive experience every time. Highly recommend Soulful Yoga Sanctuary for its transformative approach to yoga.',
+      "I'm relatively new to yoga and I can't tell you how happy I've been to learn from you... thanks a lot maam",
   },
 ];
