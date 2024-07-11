@@ -102,7 +102,7 @@ const eventHeader = [
     id: 3,
     title: 'Language',
     icon: <FaGlobeAsia />,
-    description: 'English, Hindi',
+    description: 'English, Kannada',
   },
   {
     id: 4,
