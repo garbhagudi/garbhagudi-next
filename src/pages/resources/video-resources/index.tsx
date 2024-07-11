@@ -12,19 +12,19 @@ const YOUTUBE_PLAYLIST_ITEMS_API =
 
 export async function getServerSideProps() {
   const recommendedData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
   );
 
   const tvAppearanceData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
   );
 
   const garbhasandeshaData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
   );
 
   const testimonialData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
   );
 
   const recommended = await recommendedData.json();
@@ -53,16 +53,16 @@ const IndexPage = ({
   testimonials,
 }) => {
   let [url, setUrl] = useState(
-    recommended?.items[0].snippet.resourceId.videoId
+    recommended?.items[0].snippet.resourceId.videoId,
   );
   let [url2, setUrl2] = useState(
-    garbhasandesha?.items[0].snippet.resourceId.videoId
+    garbhasandesha?.items[0].snippet.resourceId.videoId,
   );
   let [url3, setUrl3] = useState(
-    tvAppearance?.items[0].snippet.resourceId.videoId
+    tvAppearance?.items[0].snippet.resourceId.videoId,
   );
   let [url4, setUrl4] = useState(
-    testimonials?.items[0].snippet.resourceId.videoId
+    testimonials?.items[0].snippet.resourceId.videoId,
   );
 
   console.log(recommended);
@@ -71,14 +71,14 @@ const IndexPage = ({
     image: string,
     url: string,
     label: string,
-    by: string
+    by: string,
   ) => {
     return (
-      <div className='flex items-center justify-start font-sans pb-4 md:pb-0 border-b md:border-none'>
+      <div className='flex items-center justify-start border-b pb-4 font-sans md:border-none md:pb-0'>
         <img
           src={image}
           alt={label}
-          className='max-w-[200px] md:max-w-[230px] col-span-1 rounded-lg sm:w-32 xl:w-48'
+          className='col-span-1 max-w-[200px] rounded-lg sm:w-32 md:max-w-[230px] xl:w-48'
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
@@ -86,13 +86,13 @@ const IndexPage = ({
               onClick={() => {
                 setUrl(url);
               }}
-              className='ml-4 text-sm md:text-base text-left cursor-pointer'
+              className='ml-4 cursor-pointer text-left text-sm md:text-base'
             >
               {label}
             </div>
-            <div className='mt-2 ml-4 text-sm flex space-x-2 items-center'>
+            <div className='ml-4 mt-2 flex items-center space-x-2 text-sm'>
               <span>{by}</span>{' '}
-              <VscVerified className='fill-brandPink dark:fill-gray-200 h-5 w-5' />
+              <VscVerified className='h-5 w-5 fill-brandPink dark:fill-gray-200' />
             </div>
           </div>
         </div>
@@ -104,14 +104,14 @@ const IndexPage = ({
     image: string,
     url2: string,
     label: string,
-    by: string
+    by: string,
   ) => {
     return (
       <div className='flex items-center justify-start font-sans'>
         <img
           src={image}
           alt={label}
-          className='max-w-[230px] col-span-1 rounded-lg sm:w-32 xl:w-48'
+          className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
@@ -119,13 +119,13 @@ const IndexPage = ({
               onClick={() => {
                 setUrl2(url2);
               }}
-              className='ml-4 text-base text-left cursor-pointer'
+              className='ml-4 cursor-pointer text-left text-base'
             >
               {label}
             </div>
-            <div className='mt-2 ml-4 text-sm flex space-x-2 items-center'>
+            <div className='ml-4 mt-2 flex items-center space-x-2 text-sm'>
               <span>{by}</span>{' '}
-              <VscVerified className='fill-brandPink dark:fill-gray-200 h-5 w-5' />
+              <VscVerified className='h-5 w-5 fill-brandPink dark:fill-gray-200' />
             </div>
           </div>
         </div>
@@ -137,14 +137,14 @@ const IndexPage = ({
     image: string,
     url3: string,
     label: string,
-    by: string
+    by: string,
   ) => {
     return (
       <div className='flex items-center justify-start font-sans'>
         <img
           src={image}
           alt={label}
-          className='max-w-[230px] col-span-1 rounded-lg sm:w-32 xl:w-48'
+          className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
@@ -152,13 +152,13 @@ const IndexPage = ({
               onClick={() => {
                 setUrl3(url3);
               }}
-              className='ml-4  text-base text-left cursor-pointer'
+              className='ml-4 cursor-pointer text-left text-base'
             >
               {label}
             </div>
-            <div className='mt-2 ml-4 text-sm flex space-x-2 items-center'>
+            <div className='ml-4 mt-2 flex items-center space-x-2 text-sm'>
               <span>{by}</span>{' '}
-              <VscVerified className='fill-brandPink dark:fill-gray-200 h-5 w-5' />
+              <VscVerified className='h-5 w-5 fill-brandPink dark:fill-gray-200' />
             </div>
           </div>
         </div>
@@ -170,14 +170,14 @@ const IndexPage = ({
     image: string,
     url4: string,
     label: string,
-    by: string
+    by: string,
   ) => {
     return (
       <div className='flex items-center justify-start font-sans'>
         <img
           src={image}
           alt={label}
-          className='max-w-[230px] col-span-1 rounded-lg sm:w-32 xl:w-48'
+          className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
@@ -185,13 +185,13 @@ const IndexPage = ({
               onClick={() => {
                 setUrl4(url4);
               }}
-              className='ml-4  text-base text-left cursor-pointer'
+              className='ml-4 cursor-pointer text-left text-base'
             >
               {label}
             </div>
-            <div className='mt-2 ml-4 text-sm flex space-x-2 items-center'>
+            <div className='ml-4 mt-2 flex items-center space-x-2 text-sm'>
               <span>{by}</span>{' '}
-              <VscVerified className='fill-brandPink dark:fill-gray-200 h-5 w-5' />
+              <VscVerified className='h-5 w-5 fill-brandPink dark:fill-gray-200' />
             </div>
           </div>
         </div>
@@ -246,31 +246,31 @@ const IndexPage = ({
       </Head>
       <div className='mx-auto'>
         <div>
-          <h1 className='py-6 text-2xl font-bold text-center sm:text-4xl font-heading text-brandDark'>
+          <h1 className='text-brandDark py-6 text-center font-heading text-2xl font-bold sm:text-4xl'>
             Video Resources
           </h1>
         </div>
         <Tab.Group>
-          <Tab.List className='max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:flex lg:flex-nowrap lg:space-x-1 bg-gg-500 dark:bg-gg-400 rounded-xl p-1 transition-all ease-linear duration-300'>
-            <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
+          <Tab.List className='mx-auto grid max-w-7xl grid-cols-2 rounded-xl bg-gg-500 p-1 transition-all duration-300 ease-linear dark:bg-gg-400 md:grid-cols-4 lg:flex lg:flex-nowrap lg:space-x-1'>
+            <Tab className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'>
               Recommended
             </Tab>
 
-            <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
+            <Tab className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'>
               GarbhaSandesha
             </Tab>
-            <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
+            <Tab className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'>
               TV Programs
             </Tab>
-            <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
+            <Tab className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'>
               Testimonials
             </Tab>
           </Tab.List>
           <Tab.Panels className={'px-3 lg:px-4 xl:px-10'}>
             <Tab.Panel>
-              <div className='grid grid-cols-1 gap-6 xl:grid-cols-3 mx-auto'>
+              <div className='mx-auto grid grid-cols-1 gap-6 xl:grid-cols-3'>
                 <section className='xl:col-span-2'>
-                  <div className='mt-8 overflow-hidden border-2 rounded-lg border-brandPink'>
+                  <div className='mt-8 overflow-hidden rounded-lg border-2 border-brandPink'>
                     <LiteYouTubeEmbed
                       id={url}
                       title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
@@ -284,10 +284,10 @@ const IndexPage = ({
                       return (
                         url === snippet.resourceId.videoId && (
                           <div key={id}>
-                            <div className='mt-2 ml-1 text-xl font-medium font-sans max-w-2xl'>
+                            <div className='ml-1 mt-2 max-w-2xl font-sans text-xl font-medium'>
                               {title}
                             </div>
-                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-sans'>
+                            <div className='ml-1 mt-2 flex items-center space-x-3 font-sans text-sm font-medium'>
                               <div>Added: </div>
                               <div>
                                 {moment(`${snippet.publishedAt}`)
@@ -301,7 +301,7 @@ const IndexPage = ({
                     })}
                     <div className='mt-4'>
                       <Link href='https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1'>
-                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-sans'>
+                        <div className='rounded-3xl bg-[#FF0000] px-4 py-2.5 font-sans font-semibold text-white'>
                           Subscribe
                         </div>
                       </Link>
@@ -310,7 +310,7 @@ const IndexPage = ({
                 </section>
                 <section className='xl:mt-8'>
                   <div className='flex flex-col space-y-4 pb-8'>
-                    <div className='py-3 font-bold text-center text-lg font-heading sticky top-0 bg-brandPink text-white rounded-md'>
+                    <div className='sticky top-0 rounded-md bg-brandPink py-3 text-center font-heading text-lg font-bold text-white'>
                       Recommended
                     </div>
                     {recommended?.items.map((item) => {
@@ -322,7 +322,7 @@ const IndexPage = ({
                           className={
                             url === snippet.resourceId.videoId
                               ? 'text-gg-500 dark:text-gg-400'
-                              : 'max-w-md md:max-w-xl hover:text-gg-400 dark:hover:text-gray-300'
+                              : 'max-w-md hover:text-gg-400 dark:hover:text-gray-300 md:max-w-xl'
                           }
                           key={id}
                         >
@@ -330,7 +330,7 @@ const IndexPage = ({
                             medium.url,
                             snippet.resourceId.videoId,
                             title,
-                            snippet.channelTitle
+                            snippet.channelTitle,
                           )}
                         </div>
                       );
@@ -340,9 +340,9 @@ const IndexPage = ({
               </div>
             </Tab.Panel>
             <Tab.Panel>
-              <div className='grid grid-cols-1 gap-6 xl:grid-cols-3 mx-auto'>
+              <div className='mx-auto grid grid-cols-1 gap-6 xl:grid-cols-3'>
                 <section className='xl:col-span-2'>
-                  <div className='mt-8 overflow-hidden border-2 rounded-lg border-brandPink'>
+                  <div className='mt-8 overflow-hidden rounded-lg border-2 border-brandPink'>
                     <LiteYouTubeEmbed
                       id={url2}
                       title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
@@ -356,10 +356,10 @@ const IndexPage = ({
                       return (
                         url2 === snippet.resourceId.videoId && (
                           <div key={id}>
-                            <div className='mt-2 ml-1 text-xl font-medium font-sans max-w-2xl'>
+                            <div className='ml-1 mt-2 max-w-2xl font-sans text-xl font-medium'>
                               {title}
                             </div>
-                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-sans'>
+                            <div className='ml-1 mt-2 flex items-center space-x-3 font-sans text-sm font-medium'>
                               <div>Added: </div>
                               <div>
                                 {moment(`${snippet.publishedAt}`)
@@ -373,7 +373,7 @@ const IndexPage = ({
                     })}
                     <div className='mt-4'>
                       <Link href='https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1'>
-                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-sans'>
+                        <div className='rounded-3xl bg-[#FF0000] px-4 py-2.5 font-sans font-semibold text-white'>
                           Subscribe
                         </div>
                       </Link>
@@ -382,7 +382,7 @@ const IndexPage = ({
                 </section>
                 <section className='xl:mt-8'>
                   <div className='flex flex-col space-y-4 pb-8'>
-                    <div className='py-3 font-bold text-center text-lg font-heading sticky top-0 bg-gg-500 dark:bg-gg-400 text-white rounded-md'>
+                    <div className='sticky top-0 rounded-md bg-gg-500 py-3 text-center font-heading text-lg font-bold text-white dark:bg-gg-400'>
                       GarbhaSandesha
                     </div>
                     {garbhasandesha?.items.map((item) => {
@@ -394,7 +394,7 @@ const IndexPage = ({
                           className={
                             url2 === snippet.resourceId.videoId
                               ? 'text-gg-500 dark:text-gg-400'
-                              : 'max-w-md md:max-w-xl hover:text-gg-400 dark:hover:text-gray-300'
+                              : 'max-w-md hover:text-gg-400 dark:hover:text-gray-300 md:max-w-xl'
                           }
                           key={id}
                         >
@@ -402,7 +402,7 @@ const IndexPage = ({
                             medium.url,
                             snippet.resourceId.videoId,
                             title,
-                            snippet.channelTitle
+                            snippet.channelTitle,
                           )}
                         </div>
                       );
@@ -412,9 +412,9 @@ const IndexPage = ({
               </div>
             </Tab.Panel>
             <Tab.Panel>
-              <div className='grid grid-cols-1 gap-6 xl:grid-cols-3 mx-auto'>
+              <div className='mx-auto grid grid-cols-1 gap-6 xl:grid-cols-3'>
                 <section className='xl:col-span-2'>
-                  <div className='mt-8 overflow-hidden border-2 rounded-lg border-brandPink'>
+                  <div className='mt-8 overflow-hidden rounded-lg border-2 border-brandPink'>
                     <LiteYouTubeEmbed
                       id={url3}
                       title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
@@ -428,10 +428,10 @@ const IndexPage = ({
                       return (
                         url3 === snippet.resourceId.videoId && (
                           <div key={id}>
-                            <div className='mt-2 ml-1 text-xl font-medium font-sans max-w-2xl'>
+                            <div className='ml-1 mt-2 max-w-2xl font-sans text-xl font-medium'>
                               {title}
                             </div>
-                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-sans'>
+                            <div className='ml-1 mt-2 flex items-center space-x-3 font-sans text-sm font-medium'>
                               <div>Added: </div>
                               <div>
                                 {moment(`${snippet.publishedAt}`)
@@ -445,7 +445,7 @@ const IndexPage = ({
                     })}
                     <div className='mt-4'>
                       <Link href='https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1'>
-                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-sans'>
+                        <div className='rounded-3xl bg-[#FF0000] px-4 py-2.5 font-sans font-semibold text-white'>
                           Subscribe
                         </div>
                       </Link>
@@ -454,7 +454,7 @@ const IndexPage = ({
                 </section>
                 <section className='xl:mt-8'>
                   <div className='flex flex-col space-y-4 pb-8'>
-                    <div className='py-3 font-bold text-center text-lg font-heading sticky top-0 bg-brandPink text-white rounded-md'>
+                    <div className='sticky top-0 rounded-md bg-brandPink py-3 text-center font-heading text-lg font-bold text-white'>
                       TV Programs
                     </div>
                     {tvAppearance?.items.map((item) => {
@@ -466,7 +466,7 @@ const IndexPage = ({
                           className={
                             url3 === snippet.resourceId.videoId
                               ? 'text-gg-500 dark:text-gg-400'
-                              : 'max-w-md md:max-w-xl hover:text-gg-400 dark:hover:text-gray-300'
+                              : 'max-w-md hover:text-gg-400 dark:hover:text-gray-300 md:max-w-xl'
                           }
                           key={id}
                         >
@@ -474,7 +474,7 @@ const IndexPage = ({
                             medium.url,
                             snippet.resourceId.videoId,
                             title,
-                            snippet.channelTitle
+                            snippet.channelTitle,
                           )}
                         </div>
                       );
@@ -484,9 +484,9 @@ const IndexPage = ({
               </div>
             </Tab.Panel>
             <Tab.Panel>
-              <div className='grid grid-cols-1 gap-6 xl:grid-cols-3 mx-auto'>
+              <div className='mx-auto grid grid-cols-1 gap-6 xl:grid-cols-3'>
                 <section className='xl:col-span-2'>
-                  <div className='mt-8 overflow-hidden border-2 rounded-lg border-brandPink'>
+                  <div className='mt-8 overflow-hidden rounded-lg border-2 border-brandPink'>
                     <LiteYouTubeEmbed
                       id={url4}
                       title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
@@ -500,10 +500,10 @@ const IndexPage = ({
                       return (
                         url4 === snippet.resourceId.videoId && (
                           <div key={id}>
-                            <div className='mt-2 ml-1 text-xl font-medium font-sans max-w-2xl'>
+                            <div className='ml-1 mt-2 max-w-2xl font-sans text-xl font-medium'>
                               {title}
                             </div>
-                            <div className='mt-2 ml-1 flex items-center space-x-3 text-sm font-medium font-sans'>
+                            <div className='ml-1 mt-2 flex items-center space-x-3 font-sans text-sm font-medium'>
                               <div>Added: </div>
                               <div>
                                 {moment(`${snippet.publishedAt}`)
@@ -517,7 +517,7 @@ const IndexPage = ({
                     })}
                     <div className='mt-4'>
                       <Link href='https://www.youtube.com/c/GarbhaGudiIVFCentre/?sub_confirmation=1'>
-                        <div className='px-4 py-2.5 font-semibold text-white bg-[#FF0000] rounded-3xl font-sans'>
+                        <div className='rounded-3xl bg-[#FF0000] px-4 py-2.5 font-sans font-semibold text-white'>
                           Subscribe
                         </div>
                       </Link>
@@ -526,7 +526,7 @@ const IndexPage = ({
                 </section>
                 <section className='xl:mt-8'>
                   <div className='flex flex-col space-y-4 pb-8'>
-                    <div className='py-3 font-bold text-center text-lg font-heading sticky top-0 bg-brandPink text-white rounded-md'>
+                    <div className='sticky top-0 rounded-md bg-brandPink py-3 text-center font-heading text-lg font-bold text-white'>
                       Testimonials
                     </div>
                     {testimonials?.items.map((item) => {
@@ -538,7 +538,7 @@ const IndexPage = ({
                           className={
                             url4 === snippet.resourceId.videoId
                               ? 'text-gg-500 dark:text-gg-400'
-                              : 'max-w-md md:max-w-xl hover:text-gg-400 dark:hover:text-gray-300'
+                              : 'max-w-md hover:text-gg-400 dark:hover:text-gray-300 md:max-w-xl'
                           }
                           key={id}
                         >
@@ -546,7 +546,7 @@ const IndexPage = ({
                             medium.url,
                             snippet.resourceId.videoId,
                             title,
-                            snippet.channelTitle
+                            snippet.channelTitle,
                           )}
                         </div>
                       );

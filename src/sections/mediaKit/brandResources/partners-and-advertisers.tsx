@@ -2,8 +2,8 @@ import React from 'react';
 
 const Partners = () => {
   return (
-    <div className='bg-white dark:bg-gray-800 p-8 font-lexend text-gray-800 dark:text-gray-200'>
-      <h2 className='text-2xl font-semibold mb-4 font-heading'>
+    <div className='bg-white p-8 font-lexend text-gray-800 dark:bg-gray-800 dark:text-gray-200'>
+      <h2 className='mb-4 font-heading text-2xl font-semibold'>
         Partners and advertisers
       </h2>
       <p>
@@ -11,8 +11,8 @@ const Partners = () => {
         you adhere to the logo and icon use guidelines mentioned below.
       </p>
       <div className='p-6'>
-        <h3 className='text-lg font-semibold mb-4'>Do's</h3>
-        <ul className='list-disc pl-4 space-y-4'>
+        <h3 className='mb-4 text-lg font-semibold'>Do's</h3>
+        <ul className='list-disc space-y-4 pl-4'>
           <li className='mb-2'>
             <strong>Use Official Assets:</strong> Always use the official logos,
             icons, and branding assets provided by GarbhaGudi IVF Centre. These
@@ -53,8 +53,8 @@ const Partners = () => {
       </div>
 
       <div className='p-6'>
-        <h3 className='text-lg font-semibold mb-4'>Don'ts</h3>
-        <ul className='list-disc pl-4 space-y-4'>
+        <h3 className='mb-4 text-lg font-semibold'>Don'ts</h3>
+        <ul className='list-disc space-y-4 pl-4'>
           <li className='mb-2'>
             <strong>Don't Modify the Logo:</strong> Do not alter or distort the
             logo in any way, including changing its colors, proportions, or

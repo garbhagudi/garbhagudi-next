@@ -161,11 +161,11 @@ const NearestZipcodeFinder: React.FC<Props> = () => {
         />
       </Head>
 
-      <div className='flex items-center justify-center flex-col mt-10'>
-        <h1 className='py-6 lg:pt-12 pb-6 font-heading text-3xl lg:text-4xl font-semibold px-2 text-center'>
+      <div className='mt-10 flex flex-col items-center justify-center'>
+        <h1 className='px-2 py-6 pb-6 text-center font-heading text-3xl font-semibold lg:pt-12 lg:text-4xl'>
           Find Your Nearest GarbhaGudi Branch
         </h1>
-        <p className='pb-6 font-content px-3'>
+        <p className='px-3 pb-6 font-content'>
           Enter your Zipcode / Pincode to find your nearest GarbhaGudi Branch
         </p>
         <input
@@ -173,15 +173,15 @@ const NearestZipcodeFinder: React.FC<Props> = () => {
           placeholder='Enter you Zip Code'
           value={inputZipcode}
           onChange={handleInputChange}
-          className='border-2 border-brandPurpleDark dark:border-brandPurple dark:bg-gray-700 dark:text-gray-200 rounded-lg px-3 py-2 text-center text-brandPink focus:border-brandPink focus:outline-none text-lg font-content font-semibold'
+          className='rounded-lg border-2 border-brandPurpleDark px-3 py-2 text-center font-content text-lg font-semibold text-brandPink focus:border-brandPink focus:outline-none dark:border-brandPurple dark:bg-gray-700 dark:text-gray-200'
         />
         <button
           onClick={handleFindNearest}
           disabled={loading}
-          className='font-content text-center mx-auto mt-4 px-3 py-2 border-brandPink3 border-2 rounded-lg hover:bg-brandPink3 hover:text-white font-semibold w-48 h-11'
+          className='mx-auto mt-4 h-11 w-48 rounded-lg border-2 border-brandPink3 px-3 py-2 text-center font-content font-semibold hover:bg-brandPink3 hover:text-white'
         >
           {loading ? (
-            <FaSpinner className='text-center mx-auto animate-spin' />
+            <FaSpinner className='mx-auto animate-spin text-center' />
           ) : (
             'Find Nearest Branch'
           )}
@@ -193,33 +193,33 @@ const NearestZipcodeFinder: React.FC<Props> = () => {
               nearestZipcode === items.zipCode && (
                 <div
                   key={items.id}
-                  className='flex flex-col md:flex-row max-w-5xl bg-gray-200 dark:bg-gray-700 p-3 rounded-lg bg-opacity-70 dark:bg-opacity-90 shadow-xl backdrop-blur-2xl'
+                  className='flex max-w-5xl flex-col rounded-lg bg-gray-200 bg-opacity-70 p-3 shadow-xl backdrop-blur-2xl dark:bg-gray-700 dark:bg-opacity-90 md:flex-row'
                 >
-                  <div className=' px-3 md:px-0 w-full md:w-6/12 '>
+                  <div className='w-full px-3 md:w-6/12 md:px-0'>
                     <img
                       src={items.image}
                       alt={items.name}
                       className='rounded-lg'
                     />
                   </div>
-                  <div className='ml-5 flex items-center md:items-start justify-center space-y-3 flex-col'>
-                    <div className='text-2xl font-heading mt-4 md:mt-0'>
+                  <div className='ml-5 flex flex-col items-center justify-center space-y-3 md:items-start'>
+                    <div className='mt-4 font-heading text-2xl md:mt-0'>
                       GarbhaGudi IVF Centre, {items.name}
                     </div>
-                    <div className='font-content md:text-left text-lg text-center'>
+                    <div className='text-center font-content text-lg md:text-left'>
                       {items.address}
                     </div>
                     <div className='flex items-center justify-center'>
                       <a
                         href={`tel:${items.phone}`}
-                        className='bg-brandPink text-center w-32 mr-5 px-3 py-2 rounded-lg font-content text-white font-semibold'
+                        className='mr-5 w-32 rounded-lg bg-brandPink px-3 py-2 text-center font-content font-semibold text-white'
                       >
                         Call Now
                       </a>
 
                       <a
                         href={items.directionLink}
-                        className='bg-brandPink text-center w-44 px-3 py-2 rounded-lg font-content text-white font-semibold'
+                        className='w-44 rounded-lg bg-brandPink px-3 py-2 text-center font-content font-semibold text-white'
                       >
                         Maps / Directions
                       </a>
@@ -248,7 +248,7 @@ const locations = [
           Subhasri Complex, 210/A, Kumaraswamy Temple Rd, 2nd Block, Phase 1,
           Banashankari Stage I, Banashankari,
         </p>
-        <p className='mt-1 mb-5'>Bengaluru, Karnataka 560050</p>
+        <p className='mb-5 mt-1'>Bengaluru, Karnataka 560050</p>
       </div>
     ),
     phone: '+91 98869 15556',
@@ -265,7 +265,7 @@ const locations = [
           Park Landing, 5AC-709, Outer Ring Rd, Balachandra Layout, HRBR Layout
           2nd Block, Chelekare, Extension,
         </p>
-        <p className='mt-1 mb-5'>Bengaluru, Karnataka 560043</p>
+        <p className='mb-5 mt-1'>Bengaluru, Karnataka 560043</p>
       </div>
     ),
     phone: '+91 88614 33339',
@@ -283,7 +283,7 @@ const locations = [
           Basavanagudi, <br />
           Jayanagar
         </p>
-        <p className='mt-1 mb-5'>Bengaluru, Karnataka 560004</p>
+        <p className='mb-5 mt-1'>Bengaluru, Karnataka 560004</p>
       </div>
     ),
     phone: '+91 99724 63355',
@@ -300,7 +300,7 @@ const locations = [
           Ganesh Towers, 3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra Bank,
           Konappana Agrahara, Electronic City,
         </p>
-        <p className='mt-1 mb-5'>Bengaluru, Karnataka 560100</p>
+        <p className='mb-5 mt-1'>Bengaluru, Karnataka 560100</p>
       </div>
     ),
     phone: '+91 88618 11116',
@@ -318,7 +318,7 @@ const locations = [
           next to कलामंदिर, <br />
           Marathahalli,
         </p>
-        <p className='mt-1 mb-5'>Bengaluru, Karnataka 560037</p>
+        <p className='mb-5 mt-1'>Bengaluru, Karnataka 560037</p>
       </div>
     ),
     phone: '+91 81051 81515',
@@ -335,7 +335,7 @@ const locations = [
           #3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage,
           Ashwath Nagar, Devasandra Layout, Sadashivnagar
         </p>
-        <p className='mt-1 mb-5'>Bengaluru, Karnataka 560094</p>
+        <p className='mb-5 mt-1'>Bengaluru, Karnataka 560094</p>
       </div>
     ),
     phone: '+91 9108 9108 25',
@@ -352,7 +352,7 @@ const locations = [
           1st Floor, 80ft Main Road, NGCF Layout, 2nd Stage, BDA Road,
           Naagarabhaavi,
         </p>
-        <p className='mt-1 mb-5'>Bengaluru, Karnataka 560072</p>
+        <p className='mb-5 mt-1'>Bengaluru, Karnataka 560072</p>
       </div>
     ),
     phone: '+91 9886 9886 65',

@@ -3,29 +3,29 @@ import Link from 'next/link';
 
 const WhyGG = () => {
   return (
-    <div className='bg-gradient-to-br from-brandPink5 dark:from-gray-800 via-gray-100 dark:via-gray-700 to-brandPink5 dark:to-gray-800'>
-      <div className='container pt-10 pb-1 lg:pt-16 lg:pb-10 px-6 mx-auto'>
+    <div className='bg-gradient-to-br from-brandPink5 via-gray-100 to-brandPink5 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800'>
+      <div className='container mx-auto px-6 pb-1 pt-10 lg:pb-10 lg:pt-16'>
         <section className='mb-16 text-gray-800'>
-          <div className='block rounded-lg shadow-3xl drop-shadow-2xl bg-white dark:bg-gray-800'>
+          <div className='shadow-3xl block rounded-lg bg-white drop-shadow-2xl dark:bg-gray-800'>
             <div className='flex flex-wrap items-center'>
               <div className='flex lg:w-6/12 xl:w-4/12'>
                 <img
                   src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1677492148/Misc/coup-min_g3kq4k.webp'
                   alt='Why choose garbhagudi as the Best IVF Centre in Bangalore'
-                  className='w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg'
+                  className='w-full rounded-t-lg lg:rounded-bl-lg lg:rounded-tr-none'
                 />
               </div>
-              <div className='grow-0 shrink-0 basis-auto w-full lg:w-6/12 xl:w-8/12'>
+              <div className='w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12'>
                 <div className='px-6 py-12 md:px-12'>
-                  <h2 className='text-2xl font-bold mb-4 font-heading text-left lg:text-center text-gray-800 dark:text-gray-200'>
+                  <h2 className='mb-4 text-left font-heading text-2xl font-bold text-gray-800 dark:text-gray-200 lg:text-center'>
                     Why GarbhaGudi should be the your next destination to
                     complete your family?
                   </h2>
-                  <p className='text-gray-800 dark:text-gray-200 font-content mb-6'>
+                  <p className='mb-6 font-content text-gray-800 dark:text-gray-200'>
                     GarbhaGudi is a leading{' '}
                     <Link
                       href={'/'}
-                      className='text-gg-500 dark:text-gg-400 hover:underline'
+                      className='text-gg-500 hover:underline dark:text-gg-400'
                     >
                       IVF Clinic and Hospital in Bangalore
                     </Link>{' '}
@@ -36,7 +36,7 @@ const WhyGG = () => {
                     reproductive techniques. GarbhaGudi's holistic approach to{' '}
                     <Link
                       href={'/treatments/infertility'}
-                      className='text-gg-500 dark:text-gg-400 hover:underline'
+                      className='text-gg-500 hover:underline dark:text-gg-400'
                     >
                       fertility treatment
                     </Link>{' '}
@@ -45,7 +45,7 @@ const WhyGG = () => {
                     GarbhaGudi for personalized and compassionate care at the{' '}
                     <Link
                       href={'/'}
-                      className='text-gg-500 dark:text-gg-400 hover:underline'
+                      className='text-gg-500 hover:underline dark:text-gg-400'
                     >
                       Best IVF Clinic and Hospital in Bangalore
                     </Link>{' '}

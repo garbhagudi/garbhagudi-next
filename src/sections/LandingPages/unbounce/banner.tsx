@@ -6,8 +6,8 @@ import offerBanner from 'assets/landing-page/Offer-Logo.png';
 const Banner = () => {
   return (
     <div className=''>
-      <div className='max-w-7xl mx-auto lg:px-6'>
-        <div className='grid lg:grid-cols-2 pt-8 lg:pt-16'>
+      <div className='mx-auto max-w-7xl lg:px-6'>
+        <div className='grid pt-8 lg:grid-cols-2 lg:pt-16'>
           <div className='flex items-end justify-center pb-6 lg:pb-0'>
             <Image
               src={offerBanner}
@@ -18,9 +18,9 @@ const Banner = () => {
               priority
             />
           </div>
-          <div className='flex items-center justify-center max-w-xl mx-auto'>
-            <div className='flex items-center justify-center mx-auto flex-col text-center'>
-              <h4 className='text-3xl lg:text-5xl font-lexend text-gg-500 font-bold'>
+          <div className='mx-auto flex max-w-xl items-center justify-center'>
+            <div className='mx-auto flex flex-col items-center justify-center text-center'>
+              <h4 className='font-lexend text-3xl font-bold text-gg-500 lg:text-5xl'>
                 Bengaluru's Most Trusted Fertility Center
               </h4>
               <p className='pt-4 font-lexend text-lg text-gray-900'>

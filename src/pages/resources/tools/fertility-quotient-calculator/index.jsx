@@ -157,12 +157,12 @@ const IndexPage = () => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg'
         />
       </Head>
-      <div className='max-w-7xl mx-auto font-content'>
-        <h1 className='text-4xl font-heading font-semibold text-center py-8 text-gray-800 dark:text-gray-200 '>
+      <div className='mx-auto max-w-7xl font-content'>
+        <h1 className='py-8 text-center font-heading text-4xl font-semibold text-gray-800 dark:text-gray-200'>
           Fertility Quotient Calculator
         </h1>
         <div
-          className=' text-sm sm:text-base px-3 sm:px-0 max-w-6xl mx-auto flex items-center justify-start flex-col text-gray-800 dark:text-gray-200 '
+          className='mx-auto flex max-w-6xl flex-col items-center justify-start px-3 text-sm text-gray-800 dark:text-gray-200 sm:px-0 sm:text-base'
           id='intro'
         >
           <p className='mt-2'>
@@ -186,11 +186,11 @@ const IndexPage = () => {
         </div>
         <hr className='my-5' />
         <div className='py-6'>
-          <div className='max-w-lg space-y-3 mx-auto' id='form'>
+          <div className='mx-auto max-w-lg space-y-3' id='form'>
             <div className='px-3 sm:px-0'>
               <label
                 htmlFor='Age'
-                className='block text-sm font-medium text-gray-800 dark:text-gray-200 '
+                className='block text-sm font-medium text-gray-800 dark:text-gray-200'
               >
                 Age{' '}
               </label>
@@ -199,7 +199,7 @@ const IndexPage = () => {
                   type='text'
                   name='Age'
                   id='age'
-                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark dark:border-gray-400 focus:outline-none focus:ring-brandPink4 focus:border-brandPink dark:focus:border-gg-400 block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
+                  className='block h-9 w-full rounded-md border-2 border-brandPurpleDark pl-3 shadow-2xl transition-all duration-300 ease-linear placeholder:text-sm focus:border-brandPink focus:outline-none focus:ring-brandPink4 focus:drop-shadow-2xl dark:border-gray-400 dark:focus:border-gg-400 sm:text-sm'
                   placeholder='Age'
                   aria-describedby='Age'
                   onKeyPress={(e) => {
@@ -216,7 +216,7 @@ const IndexPage = () => {
             <div className='px-3 sm:px-0'>
               <label
                 htmlFor='bmi'
-                className='block text-sm font-medium text-gray-800 dark:text-gray-200 '
+                className='block text-sm font-medium text-gray-800 dark:text-gray-200'
               >
                 Body Mass Index (BMI)
               </label>
@@ -225,7 +225,7 @@ const IndexPage = () => {
                   type='text'
                   name='bmi'
                   id='bmi'
-                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark dark:border-gray-400 focus:outline-none focus:ring-brandPink4 focus:border-brandPink dark:focus:border-gg-400 block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
+                  className='block h-9 w-full rounded-md border-2 border-brandPurpleDark pl-3 shadow-2xl transition-all duration-300 ease-linear placeholder:text-sm focus:border-brandPink focus:outline-none focus:ring-brandPink4 focus:drop-shadow-2xl dark:border-gray-400 dark:focus:border-gg-400 sm:text-sm'
                   placeholder='BMI'
                   aria-describedby='Body Mass Index'
                   onKeyPress={(e) => {
@@ -242,7 +242,7 @@ const IndexPage = () => {
             <div className='px-3 sm:px-0'>
               <label
                 htmlFor='afc'
-                className='block text-sm font-medium text-gray-800 dark:text-gray-200 '
+                className='block text-sm font-medium text-gray-800 dark:text-gray-200'
               >
                 Antral Follicle Count (AFC)
               </label>
@@ -251,7 +251,7 @@ const IndexPage = () => {
                   type='text'
                   name='afc'
                   id='afc'
-                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark dark:border-gray-400 focus:outline-none focus:ring-brandPink4 focus:border-brandPink dark:focus:border-gg-400 block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
+                  className='block h-9 w-full rounded-md border-2 border-brandPurpleDark pl-3 shadow-2xl transition-all duration-300 ease-linear placeholder:text-sm focus:border-brandPink focus:outline-none focus:ring-brandPink4 focus:drop-shadow-2xl dark:border-gray-400 dark:focus:border-gg-400 sm:text-sm'
                   placeholder='AFC'
                   aria-describedby='Antral Follicle Count'
                   onKeyPress={(e) => {
@@ -268,7 +268,7 @@ const IndexPage = () => {
             <div className='px-3 sm:px-0'>
               <label
                 htmlFor='amh'
-                className='block text-sm font-medium text-gray-800 dark:text-gray-200 '
+                className='block text-sm font-medium text-gray-800 dark:text-gray-200'
               >
                 Anti-Müllerian Hormone (AMH) level
               </label>
@@ -277,7 +277,7 @@ const IndexPage = () => {
                   type='text'
                   name='amh'
                   id='amh'
-                  className='shadow-2xl focus:drop-shadow-2xl placeholder:text-sm pl-3 border-2 border-brandPurpleDark dark:border-gray-400 focus:outline-none focus:ring-brandPink4 focus:border-brandPink dark:focus:border-gg-400 block w-full h-9 sm:text-sm rounded-md transition-all duration-300 ease-linear'
+                  className='block h-9 w-full rounded-md border-2 border-brandPurpleDark pl-3 shadow-2xl transition-all duration-300 ease-linear placeholder:text-sm focus:border-brandPink focus:outline-none focus:ring-brandPink4 focus:drop-shadow-2xl dark:border-gray-400 dark:focus:border-gg-400 sm:text-sm'
                   placeholder='AMH'
                   aria-describedby='Anti-Müllerian Hormone'
                   onKeyPress={(e) => {
@@ -291,9 +291,9 @@ const IndexPage = () => {
                 </p>
               </div>
             </div>
-            <div className='mx-auto  text-center'>
+            <div className='mx-auto text-center'>
               <button
-                className='px-8 py-2 mt-5 border-2 border-brandPink focus:outline-none font-semibold rounded-lg focus:ring-brandPink4 focus:border-brandPink4 hover:bg-brandPink dark:focus:border-gg-400 hover:text-white transition-all duration-300 ease-in-out'
+                className='mt-5 rounded-lg border-2 border-brandPink px-8 py-2 font-semibold transition-all duration-300 ease-in-out hover:bg-brandPink hover:text-white focus:border-brandPink4 focus:outline-none focus:ring-brandPink4 dark:focus:border-gg-400'
                 onClick={() => calculate()}
               >
                 <span className='text-xl'>Calculate</span>
@@ -301,15 +301,15 @@ const IndexPage = () => {
               <div id='error' className='my-4 text-red-500'></div>
             </div>
           </div>
-          <div id='result' className='hidden max-w-xl mx-auto px-3'>
-            <div className='flex flex-row mt-2'>
-              <div className='mx-auto px-3 py-1 text-center rounded-lg border-2 text-base shadow-2xl w-32 border-brandPurpleDark'>
+          <div id='result' className='mx-auto hidden max-w-xl px-3'>
+            <div className='mt-2 flex flex-row'>
+              <div className='mx-auto w-32 rounded-lg border-2 border-brandPurpleDark px-3 py-1 text-center text-base shadow-2xl'>
                 <div> Score </div>
-                <div id='score' className='font-bold text-xl'></div>
+                <div id='score' className='text-xl font-bold'></div>
               </div>
-              <div className='mx-auto px-3 py-1 text-center rounded-lg border-2 text-base shadow-2xl w-32 border-brandPurpleDark'>
+              <div className='mx-auto w-32 rounded-lg border-2 border-brandPurpleDark px-3 py-1 text-center text-base shadow-2xl'>
                 <div> Percent </div>
-                <div id='percent' className='font-bold text-xl'></div>
+                <div id='percent' className='text-xl font-bold'></div>
               </div>
             </div>
             <div className='mt-10'>
@@ -330,15 +330,15 @@ const IndexPage = () => {
               </div>
               <div
                 id='overflow'
-                className='hidden text-red-500 text-center text-lg'
+                className='hidden text-center text-lg text-red-500'
               >
                 {' '}
                 Please check your Inputs.
               </div>
             </div>
-            <div className='mx-auto text-center mt-5'>
+            <div className='mx-auto mt-5 text-center'>
               <button
-                className='px-8 py-2 mt-5 border-2 border-brandPink focus:outline-none font-semibold rounded-lg focus:ring-brandPink4 focus:border-brandPink4 hover:bg-brandPink hover:text-white transition-all duration-300 ease-in-out'
+                className='mt-5 rounded-lg border-2 border-brandPink px-8 py-2 font-semibold transition-all duration-300 ease-in-out hover:bg-brandPink hover:text-white focus:border-brandPink4 focus:outline-none focus:ring-brandPink4'
                 onClick={refreshPage}
               >
                 Refresh
@@ -346,7 +346,7 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        <div className='text-xs px-3 mb-5'>
+        <div className='mb-5 px-3 text-xs'>
           <p>
             The score is calculated based on the woman’s fertility factors -
             AMH, AFC, Age and BMI. Some of these factors play a role more

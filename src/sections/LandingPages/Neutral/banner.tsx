@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 const Banner = () => {
   return (
-    <div className='bg-white dark:bg-gray-800 pb-8 sm:pb-12 lg:pb-12'>
-      <div className='pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-36 font-content'>
-        <div className='sm:mx-auto sm:max-w-3xl sm:px-6 block sm:hidden'>
+    <div className='bg-white pb-8 dark:bg-gray-800 sm:pb-12 lg:pb-12'>
+      <div className='overflow-hidden pt-8 font-content sm:pt-12 lg:relative lg:py-36'>
+        <div className='block sm:mx-auto sm:hidden sm:max-w-3xl sm:px-6'>
           <div className='py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
-            <div className='relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12'>
+            <div className='relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12'>
               <Image
                 className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
                 src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1676448333/Misc/Landing/Neutral/happy-family-with-their-first-child-min_fgylvk.webp'
@@ -19,26 +19,26 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <div className='mx-auto max-w-md px-3 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-20'>
+        <div className='mx-auto max-w-md px-3 sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-20 lg:px-8'>
           <div>
             <div className=''>
               <div className='color-pop rounded-lg'>
-                <div className='flex flex-col items-start text-base font-bold text-white  px-2.5 py-2 bg-transparent rounded-lg'>
+                <div className='flex flex-col items-start rounded-lg bg-transparent px-2.5 py-2 text-base font-bold text-white'>
                   <div>
-                    <span className='uppercase font-semibold font-lexend'>
+                    <span className='font-lexend font-semibold uppercase'>
                       Offer of the Month* :{' '}
                     </span>
                     <span className='font-lexend'>
                       ₹ 55000/- OFF on IVF Treatment
                     </span>
                   </div>
-                  <span className='text-xs text-right w-full font-lexend'>
+                  <span className='w-full text-right font-lexend text-xs'>
                     *Valid through May/2024
                   </span>
                 </div>
               </div>
-              <div className='mt-12 sm:max-w-xl text-gray-800 dark:text-gray-200'>
-                <h1 className='text-4xl font-extrabold sm:text-5xl font-heading '>
+              <div className='mt-12 text-gray-800 dark:text-gray-200 sm:max-w-xl'>
+                <h1 className='font-heading text-4xl font-extrabold sm:text-5xl'>
                   Welcome to the Best IVF Centre In Bangalore
                 </h1>
                 <p className='mt-6 text-xl'>
@@ -50,32 +50,32 @@ const Banner = () => {
                 </p>
               </div>
               <div className='mt-6'>
-                <h3 className='mb-6 text-2xl font-content font-medium'>
+                <h3 className='mb-6 font-content text-2xl font-medium'>
                   Why choose{' '}
-                  <span className='bg-clip-text text-transparent bg-gradient-to-r from-brandPink2 to-brandPurpleDark dark:to-brandPurple'>
+                  <span className='bg-gradient-to-r from-brandPink2 to-brandPurpleDark bg-clip-text text-transparent dark:to-brandPurple'>
                     GarbhaGudi?
                   </span>
                 </h3>
-                <div className='grid grid-cols-1 md:grid-cols-2 text-gray-700 font-semibold gap-3 text-base cursor-pointer'>
-                  <div className='bg-gray-200 dark:hover:text-gray-800 dark:text-gray-200 dark:bg-gray-700 hover:bg-gradient-to-l from-gray-400 via-gray-300 to-gray-300 pl-3 py-1.5 rounded-md hover:shadow-xl duration-200'>
+                <div className='grid cursor-pointer grid-cols-1 gap-3 text-base font-semibold text-gray-700 md:grid-cols-2'>
+                  <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
                     <span className='font-bold text-brandPink dark:text-gg-400'>
                       10000+
                     </span>{' '}
                     Happy Families
                   </div>
-                  <div className='bg-gray-200 dark:hover:text-gray-800 dark:text-gray-200 dark:bg-gray-700 hover:bg-gradient-to-l from-gray-400 via-gray-300 to-gray-300 pl-3 py-1.5 rounded-md hover:shadow-xl duration-200'>
+                  <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
                     <span className='font-bold text-brandPink dark:text-gg-400'>
                       12+
                     </span>{' '}
                     Years of Experience
                   </div>
-                  <div className='bg-gray-200 dark:hover:text-gray-800 dark:text-gray-200 dark:bg-gray-700 hover:bg-gradient-to-l from-gray-400 via-gray-300 to-gray-300 pl-3 py-1.5 rounded-md hover:shadow-xl duration-200'>
+                  <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
                     <span className='font-bold text-brandPink dark:text-gg-400'>
                       65-73%
                     </span>{' '}
                     IVF Success Rate
                   </div>
-                  <div className='bg-gray-200 dark:hover:text-gray-800 dark:text-gray-200 dark:bg-gray-700 hover:bg-gradient-to-l from-gray-400 via-gray-300 to-gray-300 pl-3 py-1.5 rounded-md hover:shadow-xl duration-200'>
+                  <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
                     <span className='font-bold text-brandPink dark:text-gg-400'>
                       7
                     </span>{' '}
@@ -85,7 +85,7 @@ const Banner = () => {
               </div>
               <div className='mt-6'>
                 <div className='inline-flex items-center divide-x divide-gray-300'>
-                  <div className='flex-shrink-0 flex pr-5'>
+                  <div className='flex flex-shrink-0 pr-5'>
                     <HiStar
                       className='h-5 w-5 text-yellow-400'
                       aria-hidden='true'
@@ -107,7 +107,7 @@ const Banner = () => {
                       aria-hidden='true'
                     />
                   </div>
-                  <div className='min-w-0 flex-1 pl-5 py-1 text-sm text-gray-800 dark:text-gray-200 sm:py-3 font-semibold text-center md:text-left'>
+                  <div className='min-w-0 flex-1 py-1 pl-5 text-center text-sm font-semibold text-gray-800 dark:text-gray-200 sm:py-3 md:text-left'>
                     <span className=''>Rated 4.8 stars on</span>
                     <span className='text-gg-500 dark:text-gg-400'>
                       {' '}
@@ -116,7 +116,7 @@ const Banner = () => {
                     <span className=''> across all our branches</span>
                   </div>
                 </div>
-                <div className='glow px-3 py-2 mt-6 hover:shadow-sm hover:shadow-brandPink dark:bg-gray-700 dark:hover:bg-gg-500 dark:text-gray-200 w-72 text-center'>
+                <div className='glow mt-6 w-72 px-3 py-2 text-center hover:shadow-sm hover:shadow-brandPink dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gg-500'>
                   <span></span>
                   <span></span>
                   <span></span>
@@ -130,12 +130,12 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className='sm:mx-auto sm:max-w-3xl sm:px-6 hidden sm:block'>
+        <div className='hidden sm:mx-auto sm:block sm:max-w-3xl sm:px-6'>
           <div className='py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
             <div className='hidden sm:block'>
-              <div className='absolute inset-y-0 left-1/2 w-screen bg-gray-50 dark:bg-gray-700 rounded-l-3xl lg:left-80 lg:right-0 lg:w-full' />
+              <div className='absolute inset-y-0 left-1/2 w-screen rounded-l-3xl bg-gray-50 dark:bg-gray-700 lg:left-80 lg:right-0 lg:w-full' />
               <svg
-                className='absolute top-8 right-1/2 -mr-3 lg:m-0 lg:left-0'
+                className='absolute right-1/2 top-8 -mr-3 lg:left-0 lg:m-0'
                 width={404}
                 height={392}
                 fill='none'
@@ -167,7 +167,7 @@ const Banner = () => {
                 />
               </svg>
             </div>
-            <div className='relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12'>
+            <div className='relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12'>
               <Image
                 className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
                 src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1676448333/Misc/Landing/Neutral/happy-family-with-their-first-child-min_fgylvk.webp'

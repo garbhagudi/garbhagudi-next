@@ -4,17 +4,17 @@ type Props = {};
 
 const Advantages = (props: Props) => {
   return (
-    <div className='max-w-7xl mx-auto'>
-      <div className='grid grid-cols-1 lg:grid-cols-2 divide-x-2 dark:divide-gray-600 pb-10 text-gray-800 dark:text-gray-200'>
+    <div className='mx-auto max-w-7xl'>
+      <div className='grid grid-cols-1 divide-x-2 pb-10 text-gray-800 dark:divide-gray-600 dark:text-gray-200 lg:grid-cols-2'>
         <div className='px-3'>
-          <h3 className='text-xl border-b dark:border-gray-600 text-center py-4 font-heading font-bold'>
+          <h3 className='border-b py-4 text-center font-heading text-xl font-bold dark:border-gray-600'>
             Advantages
           </h3>
-          <div className='font-content font-semibold mt-2'>
+          <div className='mt-2 font-content font-semibold'>
             IUI is generally considered to be a safe and low-invasive procedure,
             with several advantages:
           </div>
-          <ul className='space-y-3 font-content pt-4 list-outside list-disc ml-4'>
+          <ul className='ml-4 list-outside list-disc space-y-3 pt-4 font-content'>
             <li>
               <strong>Increased chances of pregnancy:</strong> IUI can increase
               the chances of pregnancy, particularly for couples with mild
@@ -45,14 +45,14 @@ const Advantages = (props: Props) => {
           </ul>
         </div>
         <div className='px-3'>
-          <h3 className='text-xl border-b dark:border-gray-600 text-center py-4 font-heading font-bold'>
+          <h3 className='border-b py-4 text-center font-heading text-xl font-bold dark:border-gray-600'>
             Disadvangates
           </h3>
-          <div className='font-content font-semibold mt-2'>
+          <div className='mt-2 font-content font-semibold'>
             While IUI is generally considered a safe and low-invasive procedure,
             there are some potential disadvantages to consider:
           </div>
-          <ul className='space-y-3 font-content pt-4 list-outside list-disc ml-4'>
+          <ul className='ml-4 list-outside list-disc space-y-3 pt-4 font-content'>
             <li>
               <strong>Low success rate:</strong> The success rate of IUI is
               typically around 10-20% per cycle, and it may take multiple cycles

@@ -1,0 +1,63 @@
+import Image from 'next/image';
+import banner from 'assets/21-Days-Yoga-Challenge-Logo.png';
+
+const ParagraphSection = () => {
+    return (
+      <div>
+        <h2 className='text-xl font-bold'>Holistic approach to fertility</h2>
+        <p className='text-gray-800 dark:text-gray-200'>At Garbhagudi, we integrate the tri-fold path of yoga, nutrition, and Ayurveda with advanced medical treatments to enhance fertility. This unique approach not only supports your physical health but also nurtures your mental and emotional well-being, creating an optimal environment for conception.</p>
+          <ul className='list-disc pl-5 space-y-2 text-gray-800 dark:text-gray-200'>
+            {principles.map((item,index)=>(
+                <li key={index} className='leading-relaxed'>{item.para}</li>
+            ))}
+          </ul>
+          <p className='text-gray-800 dark:text-gray-200'>Holistic medicine is meant to complement, not replace, traditional medical care.</p>
+          <h2 className='text-xl font-bold mt-5'>Engage and Learn with us:</h2>
+          <p className='text-gray-800 dark:text-gray-200'>Join us in celebrating International IVF Day by participating in our various events and activities. Our event calendar from July 1 to July 25 is packed with opportunities for you to learn and engage. Whether you are an existing patient or new to our services, there's something for everyone. We also have special events happening at our branches across 7 locations, ensuring you can be part of the celebration no matter where you are</p>
+          <h2 className='text-xl font-bold mt-5'>Join the 21-Day Yoga Challenge</h2>
+          <p className='text-gray-800 dark:text-gray-200'>As part of our campaign, we invite you to take part in our 21-day yoga challenge. This program is designed to improve reproductive health through specially curated yoga practices. By participating, you'll not only enhance your fertility but also become part of a supportive community committed to holistic well-being.
+          </p>
+          <div className='mt-2 flex justify-center items-center rounded-lg'>
+            <Image
+              height={350}
+              width={350}
+              className='rounded-lg mt-10 mb-5'
+              src={banner}
+              alt='Section Image'
+            />
+          </div>
+    
+      </div>
+    );
+  };
+  
+  export default ParagraphSection;
+  
+  const principles = [
+    {
+        para : "Holistic medicine is a form of healing that considers the whole person – body, mind, soul, and emotions – in the quest for optimal health and wellness. According to the holistic medicine philosophy, you can achieve the best possible health by gaining proper balance in life."
+    },
+    {
+        para : "Holistic medicine practitioners believe that the whole person is made up of parts that depend on one another, and if one part isn't working properly, all the other parts will be affected. So, if you have imbalances (physical, emotional, or spiritual) in your life, it can harm your overall health."
+    },
+    {
+        para:"A holistic doctor may use all forms of health care, from conventional medication to alternative therapies, to treat you. "
+    },
+    {
+        para:"Holistic healing therapy is based on principles that guide its approach to promoting health and wellness. These principles aim to create a balanced and harmonious state of well-being and acknowledges that true health and wellness are achieved when the mind, body, and soul are in harmony - Physical, Mental, Emotional, Social, Environmental, and Spiritual."
+    }
+  ]
+  const otherPrinciples =[
+    {
+        para : "All people have innate healing powers."
+    },
+    {
+        para : "The patient is a person, not a disease."
+    },
+    {
+        para:"Healing takes a team approach involving the patient and doctor, and addresses all parts of a person's life using a variety of health care practices"
+    },
+    {
+        para:"Treatment involves fixing the cause of the condition, not just easing the symptoms"
+    }
+  ]

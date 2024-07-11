@@ -4,16 +4,16 @@ import Link from 'next/link';
 const Banner = () => {
   return (
     <div>
-      <div className='grid grid-cols-1 lg:grid-cols-2 max-w-7xl mx-auto px-3 pt-10 gap-3'>
-        <div className='py-5 flex items-start justify-center flex-col text-gray-800 dark:text-gray-200'>
-          <div className='text-xl xl:text-2xl font-heading font-bold'>
+      <div className='mx-auto grid max-w-7xl grid-cols-1 gap-3 px-3 pt-10 lg:grid-cols-2'>
+        <div className='flex flex-col items-start justify-center py-5 text-gray-800 dark:text-gray-200'>
+          <div className='font-heading text-xl font-bold xl:text-2xl'>
             Experience the hope of starting a family with{' '}
             <h1 className='inline-block'>IUI treatment in Bangalore</h1>
           </div>
-          <div className='text-base font-content mt-4 font-semibold'>
+          <div className='mt-4 font-content text-base font-semibold'>
             Where expert fertility care meets state-of-the-art technology.
           </div>
-          <div className='text-base font-content pt-5'>
+          <div className='pt-5 font-content text-base'>
             Experience the miracle of life with{' '}
             <Link
               href={'/treatments/intra-uterine-insemination-iui'}
@@ -34,7 +34,7 @@ const Banner = () => {
               IUI treatment in Bangalore.
             </Link>{' '}
           </div>
-          <button className='text-lg font-content font-semibold text-white px-3 py-2 bg-gg-500 dark:bg-gray-500 hover:bg-gg-400 dark:hover:bg-gg-500 mt-5 rounded-lg'>
+          <button className='mt-5 rounded-lg bg-gg-500 px-3 py-2 font-content text-lg font-semibold text-white hover:bg-gg-400 dark:bg-gray-500 dark:hover:bg-gg-500'>
             Consult Now
           </button>
         </div>

@@ -63,14 +63,14 @@ const Refund = () => {
         link4={''}
         text4={''}
       />
-      <div className='relative py-8 bg-white overflow-hidden'>
-        <div className='hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full'>
+      <div className='relative overflow-hidden bg-white py-8'>
+        <div className='hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full'>
           <div
-            className='relative h-full text-lg max-w-prose mx-auto'
+            className='relative mx-auto h-full max-w-prose text-lg'
             aria-hidden='true'
           >
             <svg
-              className='absolute top-12 left-full transform translate-x-32'
+              className='absolute left-full top-12 translate-x-32 transform'
               width={404}
               height={384}
               fill='none'
@@ -102,7 +102,7 @@ const Refund = () => {
               />
             </svg>
             <svg
-              className='absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32'
+              className='absolute right-full top-1/2 -translate-x-32 -translate-y-1/2 transform'
               width={404}
               height={384}
               fill='none'
@@ -134,7 +134,7 @@ const Refund = () => {
               />
             </svg>
             <svg
-              className='absolute bottom-12 left-full transform translate-x-32'
+              className='absolute bottom-12 left-full translate-x-32 transform'
               width={404}
               height={384}
               fill='none'
@@ -168,23 +168,23 @@ const Refund = () => {
           </div>
         </div>
         <div className='relative px-4 sm:px-6 lg:px-8'>
-          <div className='text-lg max-w-7xl mx-auto'>
+          <div className='mx-auto max-w-7xl text-lg'>
             <h1>
-              <span className='mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-800 sm:text-4xl font-heading  underline underline-offset-4'>
+              <span className='mt-2 block text-center font-heading text-3xl font-extrabold leading-8 tracking-tight text-gray-800 underline underline-offset-4 sm:text-4xl'>
                 Cancellation &amp; Refund Policy
               </span>
             </h1>
-            <p className='mt-8 text-xl text-gray-00 leading-8 font-content'>
+            <p className='text-gray-00 mt-8 font-content text-xl leading-8'>
               GarbhaGudi IVF believes in helping its patients as far as possible
               and has a liberal cancellation policy for consultation booked
               online.
             </p>
 
-            <div className='mt-6 max-w-7xl text-gray-800 mx-auto'>
-              <span className='mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl font-heading underline underline-offset-4'>
+            <div className='mx-auto mt-6 max-w-7xl text-gray-800'>
+              <span className='mt-2 block text-center font-heading text-3xl font-extrabold leading-8 tracking-tight text-gray-900 underline underline-offset-4 sm:text-4xl'>
                 Under this policy
               </span>
-              <p className='mt-4 text-lg font-content'>
+              <p className='mt-4 font-content text-lg'>
                 Cancellations are into consideration only if our doctors have
                 cancelled the consultation. There will be no refund for
                 cancellation if it comes from the other end (patients). Refund
@@ -194,7 +194,7 @@ const Refund = () => {
                 appointments however, you can reschedule the appointments to a
                 desired future date and avail the benefit for payment done.
               </p>
-              <p className='mt-4 text-lg font-content'>
+              <p className='mt-4 font-content text-lg'>
                 In case one feels that the consultation services received is not
                 as shown on the website, one must bring it to the notice of our
                 customer service within 24 hours after making the appointment
@@ -203,14 +203,14 @@ const Refund = () => {
                 the case; however, no refund will be provided in case of
                 dissatisfactory consultation experience.
               </p>
-              <p className='mt-4 text-lg font-content'>
+              <p className='mt-4 font-content text-lg'>
                 Auto-refunds to your account are not there. You will have to
                 request (within seven days of cancellation) a Refund using our
                 Contact Page. The Refund shall be processed within 7 working
                 days as it involves bank transactions. Refund amounts to
                 deduction of bank charges any.
               </p>
-              <p className='mt-4 text-lg font-content'>
+              <p className='mt-4 font-content text-lg'>
                 It will be our earnest attempt to respond to your online query
                 or online consultation request within the stipulated time frame
                 of three Working days. But in case you do not receive any

@@ -63,20 +63,20 @@ const CareerOrBaby = (props: Props) => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.jpg'
         />
       </Head>
-      <div className='px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8'>
-        <h5 className='text-4xl md:text-5xl font-extrabold leading-none text-center mt-6 mb-10 font-heading'>
+      <div className='mx-auto px-4 pt-16 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-8'>
+        <h5 className='mb-10 mt-6 text-center font-heading text-4xl font-extrabold leading-none md:text-5xl'>
           Career or Baby ?
         </h5>
         <div className='grid gap-4 lg:grid-cols-2'>
           <div>
             <img
-              className='object-cover w-full h-64 rounded-2xl shadow-lg sm:h-[360px]'
+              className='h-64 w-full rounded-2xl object-cover shadow-lg sm:h-[360px]'
               src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.jpg'
               alt=''
             />
           </div>
           <div className='lg:pr-10'>
-            <p className='mb-6 text-gray-900 font-content text-base'>
+            <p className='mb-6 font-content text-base text-gray-900'>
               Today’s women and men are successful beyond imagination, and there
               comes a time when they have to choose between parenthood and a
               career. The former always precedes as it becomes the purpose for
@@ -98,22 +98,22 @@ const CareerOrBaby = (props: Props) => {
             </p>
           </div>
         </div>
-        <p className='mt-0 sm:mt-4 font-content text-gray-900'>
+        <p className='mt-0 font-content text-gray-900 sm:mt-4'>
           We all know that age plays a crucial role in a woman's ability to get
           pregnant, but many of us often ignore that men’s age is equally
           important. Let’s look at male and female infertility, the causes, and
           solutions.
         </p>
-        <hr className='mb-5 my-3 border-gray-300' />
+        <hr className='my-3 mb-5 border-gray-300' />
       </div>
-      <div className='px-4 pb-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl md:px-24 lg:px-8 lg:pb-10'>
+      <div className='mx-auto px-4 pb-6 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-7xl lg:px-8 lg:pb-10'>
         <div className='grid lg:grid-cols-2'>
-          <div className='flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg'>
-            <h2 className='max-w-lg mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none font-heading'>
+          <div className='flex flex-col justify-center md:pr-8 lg:max-w-lg xl:pr-0'>
+            <h2 className='mb-6 max-w-lg font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none'>
               The Male Infertility
             </h2>
-            <div className='max-w-xl mb-6'>
-              <p className='text-base text-gray-900 font-content'>
+            <div className='mb-6 max-w-xl'>
+              <p className='font-content text-base text-gray-900'>
                 Although a man’s fertility rate doesn’t drop abruptly as a
                 woman’s, this doesn’t mean that every man remains capable of
                 having a child throughout his lifetime. The quality of sperm
@@ -138,8 +138,8 @@ const CareerOrBaby = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className='px-4 pb-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl md:px-24 lg:px-8 lg:pb-10'>
-        <h2 className='max-w-lg mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none font-heading'>
+      <div className='mx-auto px-4 pb-6 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-7xl lg:px-8 lg:pb-10'>
+        <h2 className='mb-6 max-w-lg font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none'>
           The Female Infertility
         </h2>
         <div className='grid lg:grid-cols-2'>
@@ -150,9 +150,9 @@ const CareerOrBaby = (props: Props) => {
               className='rounded-3xl'
             />
           </div>
-          <div className='flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg'>
-            <div className='max-w-xl mb-6'>
-              <p className='text-base text-gray-900 font-content mt-4 sm:mt-0'>
+          <div className='flex flex-col justify-center md:pr-8 lg:max-w-lg xl:pr-0'>
+            <div className='mb-6 max-w-xl'>
+              <p className='mt-4 font-content text-base text-gray-900 sm:mt-0'>
                 A woman’s peak reproductive years remain between her late teens
                 and late 20s. During the 30s, the fertility potential starts to
                 decline. It becomes more drastic by the age of 30, and by 45,
@@ -171,20 +171,20 @@ const CareerOrBaby = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className='px-4 pb-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl md:px-24 lg:px-8 lg:pb-10'>
-        <h3 className='max-w-lg mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none font-heading'>
+      <div className='mx-auto px-4 pb-6 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-7xl lg:px-8 lg:pb-10'>
+        <h3 className='mb-6 max-w-lg font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none'>
           Improving Your Chances
         </h3>
-        <p className='text-base text-gray-900 font-content'>
+        <p className='font-content text-base text-gray-900'>
           So, here’s the good news. The world of medicines is ready to support
           you despite all the odds! There are several treatment options for men
           and women to help them conceive, including Assisted Reproductive
           Technologies (ART).
         </p>
-        <p className='my-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl sm:leading-none font-heading'>
+        <p className='my-6 font-heading text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl sm:leading-none'>
           Treatment Options for Men
         </p>
-        <ul className='list-disc list-inside space-y-2 font-content'>
+        <ul className='list-inside list-disc space-y-2 font-content'>
           <li>
             Surgery, if the cause of infertility is varicocele or a blockage in
             the tubes that carry sperm (vas deferens)
@@ -200,10 +200,10 @@ const CareerOrBaby = (props: Props) => {
             certain hormones.
           </li>
         </ul>
-        <p className='my-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl sm:leading-none font-heading'>
+        <p className='my-6 font-heading text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl sm:leading-none'>
           Treatment Options for Women
         </p>
-        <ul className='list-disc list-inside space-y-2 font-content'>
+        <ul className='list-inside list-disc space-y-2 font-content'>
           <li>
             Fertility drugs and hormone therapy to help the woman ovulate or
             restore the vital hormones
@@ -215,22 +215,22 @@ const CareerOrBaby = (props: Props) => {
           </li>
         </ul>
       </div>
-      <div className='px-4 py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8'>
-        <div className='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12'>
-          <h2 className='max-w-lg mb-2 font-heading text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto'>
+      <div className='mx-auto px-4 py-4 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-8'>
+        <div className='mb-10 max-w-xl sm:text-center md:mx-auto md:mb-12 lg:max-w-2xl'>
+          <h2 className='mb-2 max-w-lg font-heading text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto'>
             ART – The Real Boon!
           </h2>
         </div>
         <div className='mx-auto lg:max-w-2xl'>
           <div className='relative w-full'>
             <img
-              className='object-cover w-full h-56 rounded-3xl shadow-lg sm:h-64 md:h-80 lg:h-96 transition-shadow duration-300 hover:shadow-xl'
+              className='h-56 w-full rounded-3xl object-cover shadow-lg transition-shadow duration-300 hover:shadow-xl sm:h-64 md:h-80 lg:h-96'
               src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/ART_The_Real_Boon_-min_lqxqex.jpg'
               alt='ART - The Real Boon!'
             />
           </div>
         </div>
-        <p className=' text-gray-900 mt-6 font-content'>
+        <p className='mt-6 font-content text-gray-900'>
           You must have known about the popular ART treatments such as IVF - an
           advanced medical procedure where the woman's egg is fertilized by a
           sperm outside the body, IUI – a technique where sperms are placed in
@@ -241,14 +241,14 @@ const CareerOrBaby = (props: Props) => {
           and egg freezing!
         </p>
       </div>
-      <div className='px-4 pb-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl md:px-24 lg:px-8 lg:pb-10'>
+      <div className='mx-auto px-4 pb-6 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-7xl lg:px-8 lg:pb-10'>
         <div className='grid lg:grid-cols-2'>
-          <div className='flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg'>
-            <h2 className='max-w-lg mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none font-heading'>
+          <div className='flex flex-col justify-center md:pr-8 lg:max-w-lg xl:pr-0'>
+            <h2 className='mb-6 max-w-lg font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none'>
               Sperm Freezing
             </h2>
-            <div className='max-w-xl mb-6'>
-              <p className='text-base text-gray-900 font-content'>
+            <div className='mb-6 max-w-xl'>
+              <p className='font-content text-base text-gray-900'>
                 Sperm freezing, also called cryopreservation, is the process of
                 preserving sperm cells for later use, which helps maintain men’s
                 fertility potential even if they are delaying fatherhood for any
@@ -269,8 +269,8 @@ const CareerOrBaby = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className='px-4 pb-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl md:px-24 lg:px-8 lg:pb-10'>
-        <h2 className='max-w-lg mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none font-heading'>
+      <div className='mx-auto px-4 pb-6 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-7xl lg:px-8 lg:pb-10'>
+        <h2 className='mb-6 max-w-lg font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none'>
           Egg Freezing
         </h2>
         <div className='grid lg:grid-cols-2'>
@@ -281,9 +281,9 @@ const CareerOrBaby = (props: Props) => {
               className='rounded-3xl'
             />
           </div>
-          <div className='flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg'>
-            <div className='max-w-xl mb-6'>
-              <p className='text-base text-gray-900 font-content mt-4 sm:mt-0'>
+          <div className='flex flex-col justify-center md:pr-8 lg:max-w-lg xl:pr-0'>
+            <div className='mb-6 max-w-xl'>
+              <p className='mt-4 font-content text-base text-gray-900 sm:mt-0'>
                 Sperm freezing, also called cryopreservation, is the process of
                 preserving sperm cells for later use, which helps maintain men’s
                 fertility potential even if they are delaying fatherhood for any
@@ -297,8 +297,8 @@ const CareerOrBaby = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className='px-4 pb-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl md:px-24 lg:px-8 lg:pb-10'>
-        <h2 className='max-w-lg mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none font-heading'>
+      <div className='mx-auto px-4 pb-6 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-7xl lg:px-8 lg:pb-10'>
+        <h2 className='mb-6 max-w-lg font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none'>
           A Final Word
         </h2>
         <p className='font-content'>

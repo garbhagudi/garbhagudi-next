@@ -1,4 +1,9 @@
-import { Dialog, Transition } from '@headlessui/react';
+import {
+  Dialog,
+  DialogPanel,
+  Transition,
+  TransitionChild,
+} from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import Form from './form';
 
@@ -23,7 +28,7 @@ export default function MyModal({ title, clnm }) {
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as='div' className='relative z-10' onClose={closeModal}>
-          <Transition.Child
+          <TransitionChild
             as={Fragment}
             enter='ease-out duration-300'
             enterFrom='opacity-0'
@@ -33,11 +38,11 @@ export default function MyModal({ title, clnm }) {
             leaveTo='opacity-0'
           >
             <div className='fixed inset-0 bg-black bg-opacity-25'></div>
-          </Transition.Child>
+          </TransitionChild>
 
           <div className='fixed inset-0 overscroll-y-contain'>
-            <div className='flex max-w-lg mx-auto min-h-full items-center justify-center text-center mt-10'>
-              <Transition.Child
+            <div className='mx-auto mt-10 flex min-h-full max-w-lg items-center justify-center text-center'>
+              <TransitionChild
                 as={Fragment}
                 enter='ease-out duration-300'
                 enterFrom='opacity-0 scale-95'
@@ -46,22 +51,22 @@ export default function MyModal({ title, clnm }) {
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'
               >
-                <Dialog.Panel className='w-full max-w-lg -mt-5 transform rounded cursor-pointer overflow-hidden bg-gray-50 dark:bg-gray-800 opacity-95 align-middle shadow-xl transition-all'>
+                <DialogPanel className='-mt-5 w-full max-w-lg transform cursor-pointer overflow-hidden rounded bg-gray-50 align-middle opacity-95 shadow-xl transition-all dark:bg-gray-800'>
                   <div
-                    className='my-4 flex sm:hidden items-center justify-center cursor-pointer px-3 py-1 bg-brandPink2 mx-auto w-20 text-white font-semibold rounded-lg'
+                    className='mx-auto my-4 flex w-20 cursor-pointer items-center justify-center rounded-lg bg-brandPink2 px-3 py-1 font-semibold text-white sm:hidden'
                     onClick={closeModal}
                   >
                     Close
                   </div>
                   <Form />
                   <div
-                    className='hidden my-4 hover:animate-shake items-center sm:block justify-center cursor-pointer px-3 py-1 bg-brandPink2 mx-auto w-20 text-white font-semibold rounded-lg'
+                    className='mx-auto my-4 hidden w-20 cursor-pointer items-center justify-center rounded-lg bg-brandPink2 px-3 py-1 font-semibold text-white hover:animate-shake sm:block'
                     onClick={closeModal}
                   >
                     Close
                   </div>
-                </Dialog.Panel>
-              </Transition.Child>
+                </DialogPanel>
+              </TransitionChild>
             </div>
           </div>
         </Dialog>

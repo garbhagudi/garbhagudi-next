@@ -12,11 +12,11 @@ const Faq = () => {
   const [activeIndex2, setActiveIndex2] = React.useState(1);
   const [activeIndex3, setActiveIndex3] = React.useState(1);
   return (
-    <div className='max-w-7xl mx-auto'>
-      <h1 className='text-center text-4xl font-heading pt-12 font-semibold text-gray-800 dark:text-gray-200 '>
+    <div className='mx-auto max-w-7xl'>
+      <h1 className='pt-12 text-center font-heading text-4xl font-semibold text-gray-800 dark:text-gray-200'>
         Frequently Asked Questions
       </h1>
-      <div className='text-lg font-contents mt-8 text-center text-gray-800 dark:text-gray-200 '>
+      <div className='font-contents mt-8 text-center text-lg text-gray-800 dark:text-gray-200'>
         Here are some of the most frequently asked questions about infertility
         and its treatment options.
       </div>
@@ -24,28 +24,28 @@ const Faq = () => {
         <Tab.Group vertical>
           <Tab.List
             className={
-              'flex flex-wrap md:flex-nowrap md:space-x-1 bg-gg-500 dark:bg-gg-400 rounded-xl p-1'
+              'flex flex-wrap rounded-xl bg-gg-500 p-1 dark:bg-gg-400 md:flex-nowrap md:space-x-1'
             }
           >
-            <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
-              <div className='mx-auto text-center text-sm md:text-2xl font-heading font-semibold'>
+            <Tab className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'>
+              <div className='mx-auto text-center font-heading text-sm font-semibold md:text-2xl'>
                 Male Infertility
               </div>
             </Tab>
-            <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
-              <div className='mx-auto text-center text-sm md:text-2xl font-heading font-semibold'>
+            <Tab className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'>
+              <div className='mx-auto text-center font-heading text-sm font-semibold md:text-2xl'>
                 Female Infertility
               </div>
             </Tab>
-            <Tab className='w-full py-2 rounded-lg focus:outline-none text-gray-100 dark:text-gray-800 mx-auto text-center text-xl font-heading font-semibold ui-selected:bg-gray-100 dark:ui-selected:bg-gray-800 ui-selected:text-brandPink2 dark:ui-selected:text-gray-200 ui-selected:shadow-xl ui-selected:hover:bg-gray-100 ui-selected:transition-all ui-selected:ease-linear ui-selected:duration-300 ui-not-selected:hover:bg-brandPink3'>
-              <div className='mx-auto text-center text-sm md:text-2xl font-heading font-semibold'>
+            <Tab className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'>
+              <div className='mx-auto text-center font-heading text-sm font-semibold md:text-2xl'>
                 Treatments
               </div>
             </Tab>
           </Tab.List>
           <Tab.Panels>
             <Tab.Panel>
-              <div className='flex flex-col justify-center max-w-6xl mx-auto mt-10'>
+              <div className='mx-auto mt-10 flex max-w-6xl flex-col justify-center'>
                 {maleInfertility.map((items) => (
                   <AccordionLayout
                     title={items.title}
@@ -60,7 +60,7 @@ const Faq = () => {
               </div>
             </Tab.Panel>
             <Tab.Panel>
-              <div className='flex flex-col justify-center max-w-6xl mx-auto mt-10'>
+              <div className='mx-auto mt-10 flex max-w-6xl flex-col justify-center'>
                 {femaleInfertility.map((items) => (
                   <AccordionLayout
                     title={items.title}
@@ -75,7 +75,7 @@ const Faq = () => {
               </div>
             </Tab.Panel>
             <Tab.Panel>
-              <div className='flex flex-col justify-center max-w-6xl mx-auto mt-10'>
+              <div className='mx-auto mt-10 flex max-w-6xl flex-col justify-center'>
                 {ivfProcedures.map((items) => (
                   <AccordionLayout
                     title={items.title}

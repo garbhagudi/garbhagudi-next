@@ -4,36 +4,36 @@ import Link from 'next/link';
 
 const TreatmentOptions = () => {
   return (
-    <div className='bg-slate-50 dark:bg-gray-800 pb-3'>
+    <div className='bg-slate-50 pb-3 dark:bg-gray-800'>
       <div className='container mx-auto'>
-        <h2 className='py-16 lg:py-20 text-2xl lg:text-3xl font-heading text-center font-bold px-2 text-gray-800 dark:text-gray-200 '>
+        <h2 className='px-2 py-16 text-center font-heading text-2xl font-bold text-gray-800 dark:text-gray-200 lg:py-20 lg:text-3xl'>
           Services Available at GarbhaGudi
         </h2>
-        <div className='grid grid-cols-1 lg:grid-cols-4 gap-y-16 gap-x-3 lg:gap-16 pb-10 lg:pb-16 px-2'>
+        <div className='grid grid-cols-1 gap-x-3 gap-y-16 px-2 pb-10 lg:grid-cols-4 lg:gap-16 lg:pb-16'>
           {Data.map((items) => (
             <div
               key={items?.id}
-              className='font-content group border dark:border-2 border-gg-400 dark:border-gray-700 rounded-xl flex items-center justify-between flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 hover:bg-pink-50 dark:hover:bg-gray-700'
+              className='group flex flex-col items-center justify-between rounded-xl border border-gg-400 font-content transition-all duration-300 hover:-translate-y-2 hover:bg-pink-50 hover:shadow-2xl dark:border-2 dark:border-gray-700 dark:hover:bg-gray-700'
             >
-              <div className='w-28 h-28 -mt-14 mx-auto flex items-center justify-center rounded-full'>
+              <div className='mx-auto -mt-14 flex h-28 w-28 items-center justify-center rounded-full'>
                 <Image
                   src={items?.image}
                   alt={items?.treatent}
                   width={100}
                   height={100}
-                  className='w-20 dark:grayscale group-hover:grayscale-0 transition-all duration-300'
+                  className='w-20 transition-all duration-300 group-hover:grayscale-0 dark:grayscale'
                 />
               </div>
               <div className='flex flex-col items-center justify-center py-2'>
-                <div className='text-xl font-heading text-center font-bold pb-2'>
+                <div className='pb-2 text-center font-heading text-xl font-bold'>
                   {items?.treatent}
                 </div>
-                <div className='px-3 text-base text-center'>{items?.desc}</div>
+                <div className='px-3 text-center text-base'>{items?.desc}</div>
               </div>
-              <div className=' text-center border dark:border-gray-800 w-full bg-gg-500 dark:bg-gray-500 py-1 rounded-b-xl'>
+              <div className='w-full rounded-b-xl border bg-gg-500 py-1 text-center dark:border-gray-800 dark:bg-gray-500'>
                 <Link
                   href={items?.link}
-                  className='font-bold text-white dark:text-white font-content'
+                  className='font-content font-bold text-white dark:text-white'
                 >
                   Learn More
                 </Link>
@@ -43,7 +43,7 @@ const TreatmentOptions = () => {
         </div>
         <Link
           href={'/treatments'}
-          className='text-center mx-auto flex items-center justify-center px-3 py-2 bg-transparent w-32 font-content font-bold text-gg-500 dark:text-gg-400 border-2 border-gg-500 dark:border-gg-400 hover:bg-gg-500 dark:hover:bg-gg-400 dark:hover:text-gray-800 mb-6 rounded-lg hover:shadow-2xl hover:shadow-gg-500 hover:transition-all hover:-translate-y-1 duration-300'
+          className='mx-auto mb-6 flex w-32 items-center justify-center rounded-lg border-2 border-gg-500 bg-transparent px-3 py-2 text-center font-content font-bold text-gg-500 duration-300 hover:-translate-y-1 hover:bg-gg-500 hover:shadow-2xl hover:shadow-gg-500 hover:transition-all dark:border-gg-400 dark:text-gg-400 dark:hover:bg-gg-400 dark:hover:text-gray-800'
         >
           See More
         </Link>
@@ -63,7 +63,7 @@ const Data = [
         Unlock the doors of parenthood with GarbhaGudi's advanced{' '}
         <Link
           href={'/treatments/ivf-treatment-in-bangalore'}
-          className='text-gg-500 dark:text-gg-400 hover:underline'
+          className='text-gg-500 hover:underline dark:text-gg-400'
         >
           IVF treatment In Banglore
         </Link>
@@ -83,7 +83,7 @@ const Data = [
         state-of-the-art{' '}
         <Link
           href={'/treatments/intracytoplasmic-sperm-injection-icsi'}
-          className='text-gg-500 dark:text-gg-400 hover:underline'
+          className='text-gg-500 hover:underline dark:text-gg-400'
         >
           ICSI treatment In Banglore
         </Link>
@@ -103,7 +103,7 @@ const Data = [
         Experience the joy of parenthood with GarbhaGudi's{' '}
         <Link
           href={'/treatments/iui-treatment-in-bangalore'}
-          className='text-gg-500 dark:text-gg-400 hover:underline'
+          className='text-gg-500 hover:underline dark:text-gg-400'
         >
           IUI treatment In Banglore
         </Link>
@@ -123,7 +123,7 @@ const Data = [
         Advanced{' '}
         <Link
           href={'/treatments/infertility-treatment-in-bangalore'}
-          className='text-gg-500 dark:text-gg-400 hover:underline'
+          className='text-gg-500 hover:underline dark:text-gg-400'
         >
           Infertility Treatments in Bangalore
         </Link>{' '}

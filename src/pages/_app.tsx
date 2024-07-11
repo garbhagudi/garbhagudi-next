@@ -17,7 +17,7 @@ const Loading = dynamic(() => import('components/Loading'));
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const noRenderPaths = ['/ivf/landing','/lp/ivf-enquiry-form','/lp/ivf-enquiry-form-call'];
+  const noRenderPaths = ['/ivf/landing','/lp/ivf-enquiry-form','/lp/ivf-enquiry-form-call','/ivf/yoga'];
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
 
@@ -68,7 +68,7 @@ function MyApp({ Component, pageProps }) {
           <Loading />
         ) : (
           <>
-            <div className='selection:bg-gg-500 selection:text-white dark:bg-gray-800 min-h-screen'>
+            <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
               {shouldDisplay && <Nav />}
               <Component {...pageProps} />
 

@@ -23,7 +23,7 @@ const Gallery = () => {
   return (
     <div>
       <div className='py-3 lg:py-6'>
-        <h1 className='text-3xl font-semibold mb-3 font-lexend pb-6'>
+        <h1 className='mb-3 pb-6 font-lexend text-3xl font-semibold'>
           Gallery
         </h1>
         <ImageGallery images={images} onClick={handleImageClick} />
@@ -42,13 +42,13 @@ const ImageGallery: React.FC<{
   onClick: (imageUrl: string) => void;
 }> = ({ images, onClick }) => {
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+    <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
       {images.map((imageUrl, index) => (
         <div key={index} className='relative' onClick={() => onClick(imageUrl)}>
           <img
             src={imageUrl}
             alt={`Image ${index + 1}`}
-            className='w-full h-56 object-cover object-center cursor-pointer rounded-md'
+            className='h-56 w-full cursor-pointer rounded-md object-cover object-center'
           />
         </div>
       ))}
@@ -62,19 +62,19 @@ const LightBox: React.FC<{ imageUrl: string; onClose: () => void }> = ({
 }) => {
   return (
     <div>
-      <div className='fixed inset-0 flex justify-center items-center bg-black bg-opacity-75 z-50'>
-        <div className='max-w-2xl w-full p-4'>
+      <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75'>
+        <div className='w-full max-w-2xl p-4'>
           <div className='relative'>
             <button
               onClick={onClose}
-              className='absolute top-2 right-2 text-white text-4xl focus:outline-none z-10 '
+              className='absolute right-2 top-2 z-10 text-4xl text-white focus:outline-none'
             >
               &times;
             </button>
             <img
               src={imageUrl}
               alt='Full-screen'
-              className='w-full h-auto md:scale-125'
+              className='h-auto w-full md:scale-125'
             />
           </div>
         </div>

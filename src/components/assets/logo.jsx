@@ -11,7 +11,7 @@ const Logo = () => {
         width='400'
         height='84.50704225352112'
         viewBox='0, 0, 400,84.50704225352112'
-        className='w-44 h-full xl:w-56'
+        className='h-full w-44 xl:w-56'
       >
         <g id='svgg'>
           <path

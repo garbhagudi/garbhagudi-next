@@ -99,7 +99,7 @@ const Doctor = ({ doctor }) => {
 
   if (router.isFallback) {
     return (
-      <div className='h-screen text-brandPink flex items-center justify-center text-content animate-ping'>
+      <div className='text-content flex h-screen animate-ping items-center justify-center text-brandPink'>
         Loading...
       </div>
     );
@@ -158,7 +158,7 @@ const Doctor = ({ doctor }) => {
       <main className='profile-page'>
         <section className='relative block' style={{ height: '500px' }}>
           <div
-            className='absolute top-0 w-full h-full bg-center bg-cover'
+            className='absolute top-0 h-full w-full bg-cover bg-center'
             style={{
               backgroundImage:
                 "url('https://res.cloudinary.com/garbhagudiivf/image/upload/v1643286880/Banner/Behind_Doctors_fssazq.jpg')",
@@ -166,11 +166,11 @@ const Doctor = ({ doctor }) => {
           >
             <span
               id='blackOverlay'
-              className='w-full h-full absolute opacity-30 dark:opacity-70 bg-black'
+              className='absolute h-full w-full bg-black opacity-30 dark:opacity-70'
             ></span>
           </div>
           <div
-            className='top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden'
+            className='pointer-events-none absolute bottom-0 left-0 right-0 top-auto w-full overflow-hidden'
             style={{ height: '70px' }}
           >
             <svg
@@ -183,32 +183,32 @@ const Doctor = ({ doctor }) => {
               y='0'
             >
               <polygon
-                className='text-gray-300 dark:text-gray-700 fill-current'
+                className='fill-current text-gray-300 dark:text-gray-700'
                 points='2560 0 2560 100 0 100'
               ></polygon>
             </svg>
           </div>
         </section>
-        <section className='relative py-16 bg-gray-300 dark:bg-gray-700'>
+        <section className='relative bg-gray-300 py-16 dark:bg-gray-700'>
           <div className='container mx-auto md:px-4'>
-            <div className='relative flex flex-col min-w-0 break-words bg-white dark:bg-gray-800 w-full mb-6 shadow-xl rounded-3xl -mt-64'>
+            <div className='relative -mt-64 mb-6 flex w-full min-w-0 flex-col break-words rounded-3xl bg-white shadow-xl dark:bg-gray-800'>
               <div className='px-2 md:px-6' key={doctor.id}>
                 <div className='flex flex-wrap justify-center'>
-                  <div className='w-full lg:w-3/12 px-4 lg:order-2 flex justify-center'>
+                  <div className='flex w-full justify-center px-4 lg:order-2 lg:w-3/12'>
                     <div className='relative'>
                       <img
                         alt={doctor.name}
                         src={doctor.image.url}
-                        className='shadow-xl rounded-full max-w-xs h-auto align-middle border-none -m-16 -mt-44 -ml-20 mb-4 lg:-ml-16 bg-gray-300/30 dark:bg-gray-600'
+                        className='-m-16 -ml-20 -mt-44 mb-4 h-auto max-w-xs rounded-full border-none bg-gray-300/30 align-middle shadow-xl dark:bg-gray-600 lg:-ml-16'
                       />
                     </div>
                   </div>
                 </div>
-                <div className='text-center mt-12 font-content'>
-                  <h1 className='text-4xl font-semibold leading-normal mb-2 text-gray-800 dark:text-gray-200'>
+                <div className='mt-12 text-center font-content'>
+                  <h1 className='mb-2 text-4xl font-semibold leading-normal text-gray-800 dark:text-gray-200'>
                     {doctor.name}
                   </h1>
-                  <div className='leading-normal mt-0 mb-2 textbrantext-brandPink2 font-bold text-xl'>
+                  <div className='textbrantext-brandPink2 mb-2 mt-0 text-xl font-bold leading-normal'>
                     {doctor.qualification}
                   </div>
                   <div className='mb-2 text-gray-800 dark:text-gray-200'>
@@ -231,7 +231,7 @@ const Doctor = ({ doctor }) => {
                     </div>
                   )}
                   <div>
-                    <button className='px-4 py-2 bg-brandPink hover:bg-brandPink3 text-white font-bold font-content rounded-md mt-6'>
+                    <button className='mt-6 rounded-md bg-brandPink px-4 py-2 font-content font-bold text-white hover:bg-brandPink3'>
                       <a href='tel:+919108910832' hrefLang='en-us'>
                         Give us a Call
                       </a>
@@ -244,9 +244,9 @@ const Doctor = ({ doctor }) => {
                     doctor?.marathahalliPhysical ||
                     doctor?.newBelRoadPhysical ||
                     doctor?.nagarbhaviPhysical) && (
-                    <section className='antialiased text-gray-600 mt-8 font-content overflow-hidden'>
-                      <div className='flex flex-col justify-center h-full'>
-                        <div className='w-full max-w-3xl mx-auto bg-white dark:bg-gray-700 shadow-xl rounded-2xl border border-pink-200 dark:border-gray-600'>
+                    <section className='mt-8 overflow-hidden font-content text-gray-600 antialiased'>
+                      <div className='flex h-full flex-col justify-center'>
+                        <div className='mx-auto w-full max-w-3xl rounded-2xl border border-pink-200 bg-white shadow-xl dark:border-gray-600 dark:bg-gray-700'>
                           <header className='px-5 py-2'>
                             <h2 className='font-semibold text-gray-800 dark:text-gray-200'>
                               Book Your Appointment
@@ -254,34 +254,34 @@ const Doctor = ({ doctor }) => {
                           </header>
                           <div className=''>
                             <div className='overflow-x-auto'>
-                              <table className='table-auto w-full'>
-                                <thead className='text-sm font-bold uppercase text-gray-800 dark:text-gray-200 bg-brandPink'>
+                              <table className='w-full table-auto'>
+                                <thead className='bg-brandPink text-sm font-bold uppercase text-gray-800 dark:text-gray-200'>
                                   <tr>
-                                    <th className='p-2 whitespace-nowrap '>
-                                      <div className='font-bold text-left ml-1'>
+                                    <th className='whitespace-nowrap p-2'>
+                                      <div className='ml-1 text-left font-bold'>
                                         Branch
                                       </div>
                                     </th>
-                                    <th className='p-2 whitespace-nowrap'>
-                                      <div className='font-bold text-left'>
+                                    <th className='whitespace-nowrap p-2'>
+                                      <div className='text-left font-bold'>
                                         Physical
                                       </div>
                                     </th>
-                                    <th className='p-2 whitespace-nowrap'>
-                                      <div className='font-bold text-left'>
+                                    <th className='whitespace-nowrap p-2'>
+                                      <div className='text-left font-bold'>
                                         Online
                                       </div>
                                     </th>
                                   </tr>
                                 </thead>
-                                <tbody className='text-sm divide-y divide-pink-100 dark:divide-gray-500'>
+                                <tbody className='divide-y divide-pink-100 text-sm dark:divide-gray-500'>
                                   {doctor.hanumanthaNagarOnline &&
                                     doctor.hanumanthaNagarPhysical && (
                                       <tr>
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='flex items-center'>
-                                            <div className='font-medium text-gray-800 flex items-center justify-center'>
-                                              <div className='w-10 h-10 bg-brandPink flex items-center justify-center mr-2 sm:mr-3 text-white rounded-lg'>
+                                            <div className='flex items-center justify-center font-medium text-gray-800'>
+                                              <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
                                                 <SiGooglemaps className='text-2xl' />
                                               </div>
                                               <Link
@@ -296,7 +296,7 @@ const Doctor = ({ doctor }) => {
                                           </div>
                                         </td>
 
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                             {doctor.hanumanthaNagarPhysical && (
                                               <button>
@@ -315,7 +315,7 @@ const Doctor = ({ doctor }) => {
                                             )}
                                           </div>
                                         </td>
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                             {doctor.hanumanthaNagarOnline && (
                                               <button>
@@ -339,11 +339,11 @@ const Doctor = ({ doctor }) => {
                                   {doctor.kalyanNagarOnline &&
                                     doctor.kalyanNagarPhysical && (
                                       <tr>
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='flex items-center'>
                                             <div className='font-medium text-gray-800'>
-                                              <div className='font-medium text-gray-800 flex items-center justify-center'>
-                                                <div className='w-10 h-10 bg-brandPink flex items-center justify-center mr-2 sm:mr-3 text-white rounded-lg'>
+                                              <div className='flex items-center justify-center font-medium text-gray-800'>
+                                                <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
                                                   <SiGooglemaps className='text-2xl' />
                                                 </div>
                                                 <Link
@@ -359,7 +359,7 @@ const Doctor = ({ doctor }) => {
                                           </div>
                                         </td>
 
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                             {doctor.kalyanNagarPhysical && (
                                               <button>
@@ -378,7 +378,7 @@ const Doctor = ({ doctor }) => {
                                             )}
                                           </div>
                                         </td>
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                             {doctor.kalyanNagarOnline && (
                                               <button>
@@ -402,11 +402,11 @@ const Doctor = ({ doctor }) => {
                                   {doctor.jayanagarOnline &&
                                     doctor.jayanagarPhysical && (
                                       <tr>
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='flex items-center'>
                                             <div className='font-medium text-gray-800'>
-                                              <div className='font-medium text-gray-800 flex items-center justify-center'>
-                                                <div className='w-10 h-10 bg-brandPink flex items-center justify-center mr-2 sm:mr-3 text-white rounded-lg'>
+                                              <div className='flex items-center justify-center font-medium text-gray-800'>
+                                                <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
                                                   <SiGooglemaps className='text-2xl' />
                                                 </div>
                                                 <Link
@@ -422,7 +422,7 @@ const Doctor = ({ doctor }) => {
                                           </div>
                                         </td>
 
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                             {doctor.jayanagarPhysical && (
                                               <button>
@@ -441,7 +441,7 @@ const Doctor = ({ doctor }) => {
                                             )}
                                           </div>
                                         </td>
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                             {doctor.jayanagarOnline && (
                                               <button>
@@ -463,11 +463,11 @@ const Doctor = ({ doctor }) => {
                                   {doctor.electronicCityOnline &&
                                     doctor.electronicCityPhysical && (
                                       <tr>
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='flex items-center'>
                                             <div className='font-medium'>
-                                              <div className='font-medium flex items-center justify-center'>
-                                                <div className='w-10 h-10 bg-brandPink flex items-center justify-center mr-2 sm:mr-3 text-white rounded-lg'>
+                                              <div className='flex items-center justify-center font-medium'>
+                                                <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
                                                   <SiGooglemaps className='text-2xl' />
                                                 </div>
                                                 <Link
@@ -483,7 +483,7 @@ const Doctor = ({ doctor }) => {
                                           </div>
                                         </td>
 
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                             {doctor.electronicCityPhysical && (
                                               <button>
@@ -502,7 +502,7 @@ const Doctor = ({ doctor }) => {
                                             )}
                                           </div>
                                         </td>
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                             {doctor.electronicCityOnline && (
                                               <button>
@@ -510,7 +510,7 @@ const Doctor = ({ doctor }) => {
                                                   href={
                                                     doctor.electronicCityOnline
                                                   }
-                                                  className=' hover:underline'
+                                                  className='hover:underline'
                                                   target='_blank'
                                                   hrefLang='en-us'
                                                   rel='noreferrer'
@@ -526,10 +526,10 @@ const Doctor = ({ doctor }) => {
                                   {(doctor.marathahalliOnline ||
                                     doctor.marathahalliPhysical) && (
                                     <tr>
-                                      <td className='p-2 whitespace-nowrap'>
+                                      <td className='whitespace-nowrap p-2'>
                                         <div className='flex items-center'>
-                                          <div className='font-medium flex items-center justify-center'>
-                                            <div className='w-10 h-10 bg-brandPink flex items-center justify-center mr-2 sm:mr-3 text-white rounded-lg'>
+                                          <div className='flex items-center justify-center font-medium'>
+                                            <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
                                               <SiGooglemaps className='text-2xl' />
                                             </div>
                                             <Link
@@ -545,7 +545,7 @@ const Doctor = ({ doctor }) => {
                                       </td>
 
                                       {doctor?.marathahalliPhysical && (
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                             <button>
                                               <a
@@ -555,7 +555,7 @@ const Doctor = ({ doctor }) => {
                                                 target='_blank'
                                                 rel='noreferrer'
                                                 hrefLang='en-us'
-                                                className=' hover:underline'
+                                                className='hover:underline'
                                               >
                                                 Book Now
                                               </a>
@@ -564,12 +564,12 @@ const Doctor = ({ doctor }) => {
                                         </td>
                                       )}
                                       {doctor?.marathahalliOnline && (
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                             <button>
                                               <a
                                                 href={doctor.marathahalliOnline}
-                                                className=' hover:underline'
+                                                className='hover:underline'
                                                 target='_blank'
                                                 hrefLang='en-us'
                                                 rel='noreferrer'
@@ -585,10 +585,10 @@ const Doctor = ({ doctor }) => {
                                   {(doctor.newBelRoadOnline ||
                                     doctor.newBelRoadPhysical) && (
                                     <tr>
-                                      <td className='p-2 whitespace-nowrap'>
+                                      <td className='whitespace-nowrap p-2'>
                                         <div className='flex items-center'>
-                                          <div className='font-medium flex items-center justify-center'>
-                                            <div className='w-10 h-10 bg-brandPink flex items-center justify-center mr-2 sm:mr-3 text-white rounded-lg'>
+                                          <div className='flex items-center justify-center font-medium'>
+                                            <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
                                               <SiGooglemaps className='text-2xl' />
                                             </div>
                                             <Link
@@ -604,7 +604,7 @@ const Doctor = ({ doctor }) => {
                                       </td>
 
                                       {doctor?.newBelRoadPhysical && (
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                             <button>
                                               <a
@@ -612,7 +612,7 @@ const Doctor = ({ doctor }) => {
                                                 target='_blank'
                                                 rel='noreferrer'
                                                 hrefLang='en-us'
-                                                className=' hover:underline'
+                                                className='hover:underline'
                                               >
                                                 Book Now
                                               </a>
@@ -621,7 +621,7 @@ const Doctor = ({ doctor }) => {
                                         </td>
                                       )}
                                       {doctor?.newBelRoadOnline && (
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                             <button>
                                               <a
@@ -642,10 +642,10 @@ const Doctor = ({ doctor }) => {
                                   {(doctor.nagarbhaviOnline ||
                                     doctor.nagarbhaviPhysical) && (
                                     <tr>
-                                      <td className='p-2 whitespace-nowrap'>
+                                      <td className='whitespace-nowrap p-2'>
                                         <div className='flex items-center'>
-                                          <div className='font-medium flex items-center justify-center'>
-                                            <div className='w-10 h-10 bg-brandPink flex items-center justify-center mr-2 sm:mr-3 text-white rounded-lg'>
+                                          <div className='flex items-center justify-center font-medium'>
+                                            <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
                                               <SiGooglemaps className='text-2xl' />
                                             </div>
                                             <Link
@@ -661,7 +661,7 @@ const Doctor = ({ doctor }) => {
                                       </td>
 
                                       {doctor?.nagarbhaviPhysical && (
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                             <button>
                                               <a
@@ -669,7 +669,7 @@ const Doctor = ({ doctor }) => {
                                                 target='_blank'
                                                 rel='noreferrer'
                                                 hrefLang='en-us'
-                                                className=' hover:underline'
+                                                className='hover:underline'
                                               >
                                                 Book Now
                                               </a>
@@ -678,7 +678,7 @@ const Doctor = ({ doctor }) => {
                                         </td>
                                       )}
                                       {doctor?.nagarbhaviOnline && (
-                                        <td className='p-2 whitespace-nowrap'>
+                                        <td className='whitespace-nowrap p-2'>
                                           <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                             <button>
                                               <a
@@ -702,7 +702,7 @@ const Doctor = ({ doctor }) => {
                           </div>
                         </div>
                       </div>
-                      <p className='text-xs mt-5 text-gray-800 dark:text-gray-200'>
+                      <p className='mt-5 text-xs text-gray-800 dark:text-gray-200'>
                         *Appointments are subject to doctor availability.
                         Please, make sure you have given your registered number
                         if you have already visited GarbhaGudi.
@@ -710,10 +710,10 @@ const Doctor = ({ doctor }) => {
                     </section>
                   )}
                 </div>
-                <div className='mt-10 py-10 border-t border-gray-300'>
+                <div className='mt-10 border-t border-gray-300 py-10'>
                   <div className='flex justify-center'>
-                    <div className='w-full lg:w-9/12 px-4'>
-                      <div className='mb-4 text-gray-800 dark:text-gray-200 prose'>
+                    <div className='w-full px-4 lg:w-9/12'>
+                      <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
                         <RichText content={doctor?.bio?.raw?.children} />
                       </div>
                     </div>

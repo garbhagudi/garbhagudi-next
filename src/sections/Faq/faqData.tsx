@@ -32,7 +32,7 @@ export const maleInfertility = [
       <div>
         World Health Organization (WHO) has recommended the following as
         guidelines for typical semen Parameters.
-        <table className='table-auto mt-6'>
+        <table className='mt-6 table-auto'>
           <tr className='text-left'>
             <th className='w-48'>Paramater</th>
             <th className='w-48'>WHO 2010</th>
@@ -74,12 +74,12 @@ export const maleInfertility = [
     title: 'Which diet modification will improve sperm count?',
     contents: (
       <div>
-        <ol className='list-decimal ml-5'>
+        <ol className='ml-5 list-decimal'>
           <li>Increased intake of fruits and vegetables.</li>
           <li>Increased intake of more lentils and spinach</li>
           <li>
             Avoid saturated fat containing diets like
-            <ul className='list-disc ml-10'>
+            <ul className='ml-10 list-disc'>
               <li>Processed foods</li>
               <li>Meat</li>
               <li>Dairy products like cheese</li>
@@ -140,14 +140,14 @@ export const femaleInfertility = [
           <span className='font-semibold'>
             Some causes of female factor infertility are:{' '}
           </span>
-          <h1 className='text-xl font-bold my-2'>Problems with the uterus:</h1>
+          <h1 className='my-2 text-xl font-bold'>Problems with the uterus:</h1>
           <p className='text-md my-2'>
             This includes polyps, fibroids, septum o,r adhesions inside the
             uterus. There may be no reason for the polyps and fibroids to form.
             But abnormality like a septum is present at birth. Adhesions can
             occur after a surgery like dilation and curettage (D&C).
           </p>
-          <h1 className='text-xl font-bold my-2'>
+          <h1 className='my-2 text-xl font-bold'>
             Problems with the fallopian tubes:
           </h1>
           <p className='text-md my-2'>
@@ -155,14 +155,14 @@ export const femaleInfertility = [
             usually caused by chlamydia and gonorrhea, TB, or an earlier ectopic
             pregnancy.
           </p>
-          <h1 className='text-xl font-bold my-2'>Problems with ovulation:</h1>
+          <h1 className='my-2 text-xl font-bold'>Problems with ovulation:</h1>
           <p className='text-md my-2'>
             There are many reasons; why a woman will not ovulate (release an
             egg) regularly. Hormonal imbalances, a past disorder, drug abuse,
             thyroid conditions, severe stress & pituitary tumors are all a
             couple of things that can affect ovulation.
           </p>
-          <h1 className='text-xl font-bold my-2'>
+          <h1 className='my-2 text-xl font-bold'>
             Problems with the number and quality of eggs:
           </h1>
           <p className='text-md my-2'>

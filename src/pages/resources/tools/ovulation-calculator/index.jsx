@@ -60,27 +60,27 @@ const IndexPage = () => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg'
         />
       </Head>
-      <div className='max-w-7xl mx-auto'>
+      <div className='mx-auto max-w-7xl'>
         <div className='text-center'>
-          <div className='container text-center mx-auto'>
-            <h1 className='pt-8 text-3xl sm:text-4xl font-bold font-heading text-gray-800 dark:text-gray-200 '>
+          <div className='container mx-auto text-center'>
+            <h1 className='pt-8 font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 sm:text-4xl'>
               Ovulation and Pregnancy Due Date Calculator
             </h1>
-            <p className='text-sm mt-3 px-2 sm:px-0 text-gray-800 dark:text-gray-200 font-lexend'>
+            <p className='mt-3 px-2 font-lexend text-sm text-gray-800 dark:text-gray-200 sm:px-0'>
               Menstrual periods are different from woman to woman and month to
               month. Use this calculator to see when you may be ovulating to
               help find your most fertile days.
             </p>
           </div>
         </div>
-        <div className='text-center mt-8 text-base flex items-center justify-center space-x-4 text-gray-800 dark:text-gray-200'>
+        <div className='mt-8 flex items-center justify-center space-x-4 text-center text-base text-gray-800 dark:text-gray-200'>
           <label htmlFor='cycle' className='font-content'>
             How long is your average cycle ?{' '}
           </label>
           <select
             onChange={(e) => cycleValue(e.target.value)}
             defaultValue={cycle}
-            className='w-24 text-center border-b-2 py-1.5 outline-none border-brandPurpleDark dark:bg-gray-600 text-gray-800 dark:text-gray-200 shadow-2xl drop-shadow-2xl font-content rounded-md'
+            className='w-24 rounded-md border-b-2 border-brandPurpleDark py-1.5 text-center font-content text-gray-800 shadow-2xl outline-none drop-shadow-2xl dark:bg-gray-600 dark:text-gray-200'
           >
             <option value='28'>28 Days</option>
             <option value='29'>29 Days</option>
@@ -102,21 +102,21 @@ const IndexPage = () => {
             <option value='45'>45 Days</option>
           </select>
         </div>
-        <div className='pt-8 text-center grid grid-cols-1 md:grid-cols-2'>
+        <div className='grid grid-cols-1 pt-8 text-center md:grid-cols-2'>
           <div className='scale-75 md:scale-100'>
-            <p className='text-center text-lg font-lexend'>
+            <p className='text-center font-lexend text-lg'>
               Select the first day of your last period
             </p>
-            <div className='flex justify-center text-gray-800 dark:text-gray-200 '>
+            <div className='flex justify-center text-gray-800 dark:text-gray-200'>
               <Calendar
                 onChange={onChange}
                 value={value}
-                className='mx-auto mt-4 shadow-2xl rounded-2xl'
+                className='mx-auto mt-4 rounded-2xl shadow-2xl'
               />
             </div>
           </div>
-          <div className='text-center flex flex-col items-center justify-center p-2 font-content text-gray-800 dark:text-gray-200 '>
-            <div className='mx-auto mt-8 p-3 text-center rounded-2xl border text-base shadow-2xl w-96'>
+          <div className='flex flex-col items-center justify-center p-2 text-center font-content text-gray-800 dark:text-gray-200'>
+            <div className='mx-auto mt-8 w-96 rounded-2xl border p-3 text-center text-base shadow-2xl'>
               <p> Approximate Ovulation :</p>
               <div className='font-bold'>
                 <Moment format='DD MMMM YYYY' add={{ days: cycleLength - 14 }}>
@@ -125,7 +125,7 @@ const IndexPage = () => {
               </div>
             </div>
 
-            <div className='mx-auto mt-3 p-3 text-center rounded-2xl border text-base shadow-2xl w-96'>
+            <div className='mx-auto mt-3 w-96 rounded-2xl border p-3 text-center text-base shadow-2xl'>
               <p>Fertile Window</p>
               <div className='font-bold'>
                 <Moment format='DD MMMM YYYY' add={{ days: cycleLength - 17 }}>
@@ -137,7 +137,7 @@ const IndexPage = () => {
                 </Moment>
               </div>
             </div>
-            <div className='mx-auto mt-3 p-3 text-center rounded-2xl border text-base shadow-2xl w-96'>
+            <div className='mx-auto mt-3 w-96 rounded-2xl border p-3 text-center text-base shadow-2xl'>
               <p> Approximate Pregnancy Test :</p>
               <div className='font-bold'>
                 <Moment format='DD MMMM YYYY' add={{ days: cycleLength + 1 }}>
@@ -145,7 +145,7 @@ const IndexPage = () => {
                 </Moment>
               </div>
             </div>
-            <div className='mx-auto mt-3 p-3 text-center rounded-2xl border text-base shadow-2xl w-96'>
+            <div className='mx-auto mt-3 w-96 rounded-2xl border p-3 text-center text-base shadow-2xl'>
               <p>
                 If conceived with-in the fertile window, estimated pregnancy due
                 date :{' '}
@@ -169,7 +169,7 @@ const IndexPage = () => {
                 )}
               </div>
             </div>
-            <div className='mx-auto mt-3 p-3 text-center rounded-2xl border text-base shadow-2xl w-96'>
+            <div className='mx-auto mt-3 w-96 rounded-2xl border p-3 text-center text-base shadow-2xl'>
               <p>Next Menstrual Cycle :</p>
               <div className='font-bold'>
                 <Moment format='DD MMMM YYYY' add={{ days: cycleLength + 0 }}>
@@ -179,7 +179,7 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        <div className='px-3 sm:px-0 text-center mt-5 mb-3 text-xs text-gray-800 dark:text-gray-200 font-lexend'>
+        <div className='mb-3 mt-5 px-3 text-center font-lexend text-xs text-gray-800 dark:text-gray-200 sm:px-0'>
           Only your physician can accurately determine your due date or the date
           of your conception based on his/her knowledge of your complete medical
           condition.

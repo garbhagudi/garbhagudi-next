@@ -6,14 +6,14 @@ import WhyGarbhagudi from 'assets/landing-page/why-garbhagudi.webp';
 const WhyGarbhaGudi = () => {
   return (
     <>
-      <div className='max-w-7xl mx-auto'>
-        <div className='grid lg:grid-cols-2 gap-4 mx-auto px-2 py-4'>
-          <div className='flex items-center justify-center flex-col'>
-            <h4 className='pt-4 pb-8 lg:py-8 text-3xl lg:text-4xl font-lexend font-bold text-gg-500'>
+      <div className='mx-auto max-w-7xl'>
+        <div className='mx-auto grid gap-4 px-2 py-4 lg:grid-cols-2'>
+          <div className='flex flex-col items-center justify-center'>
+            <h4 className='pb-8 pt-4 font-lexend text-3xl font-bold text-gg-500 lg:py-8 lg:text-4xl'>
               What makes GarbhaGudi the perfect choice for you?
             </h4>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 px-2 font-lexend text-sm'>
-              <div className='flex items-center justify-start space-y-8 flex-col'>
+            <div className='grid grid-cols-1 gap-8 px-2 font-lexend text-sm lg:grid-cols-2'>
+              <div className='flex flex-col items-center justify-start space-y-8'>
                 <FaPercent className='text-5xl text-brandPurpleDark dark:text-gg-500' />
                 <p className='leading-relaxed'>
                   Industry-Leading 75% IVF Success Rates: We take pride in our
@@ -22,7 +22,7 @@ const WhyGarbhaGudi = () => {
                   likelihood of successful outcomes for our patients.
                 </p>
               </div>
-              <div className='flex items-center justify-start space-y-8 flex-col'>
+              <div className='flex flex-col items-center justify-start space-y-8'>
                 <FaUserDoctor className='text-5xl text-brandPurpleDark dark:text-gg-500' />
                 <p className='leading-relaxed'>
                   15+ Years of Experience: Our fertility doctors bring over 15
@@ -30,7 +30,7 @@ const WhyGarbhaGudi = () => {
                   from seasoned professionals dedicated to your success.
                 </p>
               </div>
-              <div className='flex items-center justify-start space-y-8 flex-col'>
+              <div className='flex flex-col items-center justify-start space-y-8'>
                 <FaMap className='text-5xl text-brandPurpleDark dark:text-gg-500' />
                 <p className='leading-relaxed'>
                   7 Convenient IVF Centers Across Bangalore: With a widespread
@@ -39,7 +39,7 @@ const WhyGarbhaGudi = () => {
                   readily available.
                 </p>
               </div>
-              <div className='flex items-center justify-start space-y-8 flex-col'>
+              <div className='flex flex-col items-center justify-start space-y-8'>
                 <FaCircleCheck className='text-5xl text-brandPurpleDark dark:text-gg-500' />
                 <p className='leading-relaxed'>
                   Over 10,000 Successful IVF Cases: Demonstrating a proven track

@@ -1,13 +1,13 @@
 const CoreVision = () => {
   return (
-    <div className='py-16 xl:py-36 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800 overflow-hidden'>
-      <div className='max-w-max lg:max-w-7xl mx-auto'>
+    <div className='overflow-hidden bg-white px-4 py-16 dark:bg-gray-800 sm:px-6 lg:px-8 xl:py-36'>
+      <div className='mx-auto max-w-max lg:max-w-7xl'>
         <div className='relative z-10 mb-8 md:mb-2 md:px-6'>
-          <div className='text-base max-w-prose lg:max-w-none'></div>
+          <div className='max-w-prose text-base lg:max-w-none'></div>
         </div>
         <div className='relative'>
           <svg
-            className='hidden md:block absolute top-0 right-0 -mt-20 -mr-20'
+            className='absolute right-0 top-0 -mr-20 -mt-20 hidden md:block'
             width={404}
             height={384}
             fill='none'
@@ -40,7 +40,7 @@ const CoreVision = () => {
             />
           </svg>
           <svg
-            className='hidden md:block absolute bottom-0 left-0 -mb-20 -ml-20'
+            className='absolute bottom-0 left-0 -mb-20 -ml-20 hidden md:block'
             width={404}
             height={384}
             fill='none'
@@ -73,7 +73,7 @@ const CoreVision = () => {
             />
           </svg>
           <div className='relative md:p-6'>
-            <p className='mt-2 text-4xl leading-8 font-bold tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl my-4 font-content'>
+            <p className='my-4 mt-2 font-content text-4xl font-bold leading-8 tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl'>
               Core Values
             </p>
             <div className='lg:grid lg:grid-cols-2 lg:gap-6'>
@@ -101,10 +101,10 @@ const CoreVision = () => {
               </div>
 
               <div className='mt-6 text-gray-500 lg:mt-0'>
-                <p className='text-4xl leading-8 font-bold tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl my-4 font-content lg:-mt-[72px]'>
+                <p className='my-4 font-content text-4xl font-bold leading-8 tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl lg:-mt-[72px]'>
                   Vision
                 </p>
-                <p className='italic font-content text-gray-800 dark:text-gray-200'>
+                <p className='font-content italic text-gray-800 dark:text-gray-200'>
                   &quot;My GarbhaGudi shall be a globally renowned reproductive
                   health university, having superlative success rates, due to
                   strong scientific approach, ethical values and humane

@@ -12,6 +12,7 @@ const nextConfig = {
       'media.graphassets.com',
       'avatars.dicebear.com',
       'app.unbounce.com',
+      'https://yogachallenge.in/',
     ],
   },
 

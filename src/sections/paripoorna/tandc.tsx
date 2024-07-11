@@ -2,11 +2,11 @@ import React from 'react';
 
 const TermsConditions = () => {
   return (
-    <div className='px-3 lg:px-00'>
-      <h3 className='text-3xl lg:text-4xl font-heading font-bold text-center py-10 lg:py-16 text-gray-800 dark:text-gray-200'>
+    <div className='lg:px-00 px-3'>
+      <h3 className='py-10 text-center font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 lg:py-16 lg:text-4xl'>
         Terms and Conditions
       </h3>
-      <div className='max-w-5xl mx-auto font-lexend pb-10 text-base text-gray-800 dark:text-gray-200'>
+      <div className='mx-auto max-w-5xl pb-10 font-lexend text-base text-gray-800 dark:text-gray-200'>
         The GarbhaGnan Foundation is one of the foremost foundations in the
         country that offers specialised and the latest healthcare for women.
         with growing rates of infertility across the globe due to various
@@ -29,7 +29,7 @@ const TermsConditions = () => {
         {items.map((item) => (
           <li
             key={item.id}
-            className='text-base list-outside list-disc py-2 sm:px-6 rounded-md text-left max-w-5xl ml-4 lg:mx-auto font-lexend text-gray-800 dark:text-gray-200'
+            className='ml-4 max-w-5xl list-outside list-disc rounded-md py-2 text-left font-lexend text-base text-gray-800 dark:text-gray-200 sm:px-6 lg:mx-auto'
           >
             {item.title}
           </li>

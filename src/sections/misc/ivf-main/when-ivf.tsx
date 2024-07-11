@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 const WhenIvf = () => {
   return (
-    <div className='py-10 container mx-auto lg:py-16 px-3'>
+    <div className='container mx-auto px-3 py-10 lg:py-16'>
       <div className='grid grid-cols-1 lg:grid-cols-2'>
-        <div className='max-w-lg flex items-center justify-center mx-auto p-3 lg:p-10'>
+        <div className='mx-auto flex max-w-lg items-center justify-center p-3 lg:p-10'>
           <img
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1671190677/Misc/avn-min_jo63l5.png'
             alt='When is IVF Treatment Recommended?'
@@ -14,12 +14,12 @@ const WhenIvf = () => {
         </div>
         <div className='text-gray-800 dark:text-gray-200'>
           <div className='mt-6 max-w-2xl'>
-            <h2 className='text-3xl font-extrabold tracking-tight font-heading '>
+            <h2 className='font-heading text-3xl font-extrabold tracking-tight'>
               When is IVF Recommended?
             </h2>
-            <div className='mt-4 text-lg font-content'>
+            <div className='mt-4 font-content text-lg'>
               Some common reasons for recommending IVF include:
-              <ul className='space-y-3 text-base mt-4'>
+              <ul className='mt-4 space-y-3 text-base'>
                 <li>
                   <strong>Blocked or damaged fallopian tubes:</strong> If the
                   fallopian tubes are blocked or damaged, the egg may not be
@@ -59,7 +59,7 @@ const WhenIvf = () => {
             <div className='mt-6 text-center lg:text-left'>
               <Link
                 href='/blogs/when-and-what-should-you-consider-to-evaluate-for-pregnancy'
-                className='inline-flex px-3 py-2 rounded bg-gg-500 dark:bg-gray-500 font-content font-bold text-white hover:bg-gg-400 dark:hover:bg-gg-500'
+                className='inline-flex rounded bg-gg-500 px-3 py-2 font-content font-bold text-white hover:bg-gg-400 dark:bg-gray-500 dark:hover:bg-gg-500'
               >
                 Know More
               </Link>

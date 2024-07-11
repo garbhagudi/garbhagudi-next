@@ -24,18 +24,18 @@ const PriceSlash: React.FC<PriceSlashProps> = ({
   };
 
   return (
-    <div className='flex items-start flex-col py-8'>
-      <div className='flex items-center space-x-4 '>
-        <div className=' text-gray-600 dark:text-gray-300 font-lexend text-3xl'>
-          <span className='line-through font-bold font-heading'>
+    <div className='flex flex-col items-start py-8'>
+      <div className='flex items-center space-x-4'>
+        <div className='font-lexend text-3xl text-gray-600 dark:text-gray-300'>
+          <span className='font-heading font-bold line-through'>
             ₹{formatNumberWithCommas(originalPrice)}
           </span>{' '}
           IVF Package
         </div>
       </div>
-      <div className='text-gg-500 dark:text-gg-400 font-lexend text-3xl mt-5 flex items-center'>
+      <div className='mt-5 flex items-center font-lexend text-3xl text-gg-500 dark:text-gg-400'>
         Now at &nbsp;
-        <span className='font-bold font-heading'>
+        <span className='font-heading font-bold'>
           ₹{formatNumberWithCommas(slashedPrice)}
         </span>
         <div className='ml-2 text-sm text-green-600 dark:text-green-500'>
@@ -56,7 +56,7 @@ const PriceSlash: React.FC<PriceSlashProps> = ({
           <li>Embryo Freezing (3 - Months)</li>
           <li>ET / FET Procedure </li>
         </ul>
-        <div className='text-xs mt-8'>
+        <div className='mt-8 text-xs'>
           * Included particulars are applicable for 1 cycle only. Other terms
           and conditions apply
         </div>
@@ -68,17 +68,17 @@ const PriceSlash: React.FC<PriceSlashProps> = ({
 const Home = () => {
   return (
     <div>
-      <div className='max-w-7xl mx-auto'>
-        <div className='text-4xl lg:text-5xl font-heading text-center text-gg-600 font-bold py-12 lg:py-24'>
-          <h1 className='dark:bg-gray-200 max-w-lg mx-auto py-2 rounded-md dark:bg-opacity-80'>
+      <div className='mx-auto max-w-7xl'>
+        <div className='py-12 text-center font-heading text-4xl font-bold text-gg-600 lg:py-24 lg:text-5xl'>
+          <h1 className='mx-auto max-w-lg rounded-md py-2 dark:bg-gray-200 dark:bg-opacity-80'>
             Paripoorna 2023
           </h1>
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
-          <div className='flex items-start justify-center flex-col px-3'>
-            <div className='font-heading text-2xl py-8 text-gg-500 dark:text-gg-400 font-bold'>
+          <div className='flex flex-col items-start justify-center px-3'>
+            <div className='py-8 font-heading text-2xl font-bold text-gg-500 dark:text-gg-400'>
               &quot;Get a massive 90,000/-* off on your IVF Treatments&quot;
-              <div className='block text-right text-gray-800 dark:text-gray-200 text-xs'>
+              <div className='block text-right text-xs text-gray-800 dark:text-gray-200'>
                 *Terms and conditions apply
               </div>
             </div>
@@ -97,16 +97,16 @@ const Home = () => {
               IVF cycle cost. Visit the GarbhaGudi branch nearest to you to
               avail the offer and take the first steps in your journey towards
               completeness.
-              <div className='mt-10 flex items-start md:items-center justify-between flex-col lg:flex-row space-y-3 lg:space-y-0'>
-                <div className='font-lexend px-3 py-2 bg-gg-500 dark:bg-gg-600 text-white rounded-xl'>
+              <div className='mt-10 flex flex-col items-start justify-between space-y-3 md:items-center lg:flex-row lg:space-y-0'>
+                <div className='rounded-xl bg-gg-500 px-3 py-2 font-lexend text-white dark:bg-gg-600'>
                   <WatchVideo />
                 </div>
-                <div className='font-lexend px-3 py-2 bg-purple-700 dark:bg-purple-800 text-white rounded-xl'>
+                <div className='rounded-xl bg-purple-700 px-3 py-2 font-lexend text-white dark:bg-purple-800'>
                   <Link href='/contact.html'>
                     <div>Book an Appointment</div>
                   </Link>
                 </div>
-                <div className='font-lexend px-3 py-2 bg-yellow-500 dark:bg-yellow-600 text-white rounded-xl'>
+                <div className='rounded-xl bg-yellow-500 px-3 py-2 font-lexend text-white dark:bg-yellow-600'>
                   <Link href='/features/paripoorna-2023/#how-to'>
                     <div>Know More</div>
                   </Link>
@@ -120,7 +120,7 @@ const Home = () => {
               alt='pp logo'
               width={500}
               height={500}
-              className='aspect-square mx-auto scale-90 lg:scale-105'
+              className='mx-auto aspect-square scale-90 lg:scale-105'
             />
           </div>
         </div>
@@ -178,13 +178,13 @@ const WatchVideo = () => {
                 <Dialog.Panel className='w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
                   <Dialog.Title
                     as='h3'
-                    className='text-2xl text-center font-heading font-bold leading-6 text-gray-900'
+                    className='text-center font-heading text-2xl font-bold leading-6 text-gray-900'
                   >
                     Paripoorna Launch
                   </Dialog.Title>
 
                   <div>
-                    <div className='mt-8 overflow-hidden border-2 rounded-xl border-brandPink'>
+                    <div className='mt-8 overflow-hidden rounded-xl border-2 border-brandPink'>
                       <LiteYouTubeEmbed
                         id={'0G4ZkeVVX6M'}
                         title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
@@ -196,7 +196,7 @@ const WatchVideo = () => {
                   <div className='mt-4 text-center'>
                     <button
                       type='button'
-                      className='inline-flex font-lexend justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2'
+                      className='inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 font-lexend text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2'
                       onClick={closeModal}
                     >
                       Got it, thanks!

@@ -57,28 +57,28 @@ const Locations = ({ branches }) => {
       </Head>
       <div className=''>
         <Banner branchTitle={''} />
-        <h1 className='pt-10 lg:pt-16 text-center font-heading text-3xl lg:text-4xl font-bold'>
+        <h1 className='pt-10 text-center font-heading text-3xl font-bold lg:pt-16 lg:text-4xl'>
           Our Branches
         </h1>
-        <div className='flex items-center justify-center flex-wrap max-w-7xl mx-auto gap-6 py-10 lg:py-16'>
+        <div className='mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-6 py-10 lg:py-16'>
           {branches.map((items) => (
             <Link
               href={`locations/${items?.slug}`}
               key={items?.id}
-              className='hover:shadow-2xl rounded-xl transition-all duration-150'
+              className='rounded-xl transition-all duration-150 hover:shadow-2xl'
             >
-              <div className='flex flex-col items-center justify-center border-2 border-brandPink rounded-xl overflow-hidden max-w-sm mx-auto'>
+              <div className='mx-auto flex max-w-sm flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-brandPink'>
                 <div className='overflow-hidden'>
                   <Image
                     src={items?.branchPicture?.url}
                     alt={items?.title}
                     width={480}
                     height={100}
-                    className='hover:scale-125 transition-all duration-500 overflow-hidden'
+                    className='overflow-hidden transition-all duration-500 hover:scale-125'
                   />
                 </div>
-                <div className='flex items-center justify-evenly w-full px-3 py-3 border-t-2 border-brandPink'>
-                  <div className='ml-4 font-heading font-bold text-xl'>
+                <div className='flex w-full items-center justify-evenly border-t-2 border-brandPink px-3 py-3'>
+                  <div className='ml-4 font-heading text-xl font-bold'>
                     {items?.title}
                   </div>
                 </div>

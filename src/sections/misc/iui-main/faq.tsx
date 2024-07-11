@@ -7,15 +7,15 @@ type Props = {};
 const Faq = (props: Props) => {
   const [activeIndex1, setActiveIndex1] = useState(1);
   return (
-    <div className='px-3 scroll-m-16' id='faq'>
-      <h2 className='text-center text-2xl  lg:text-3xl font-heading pt-12 font-semibold text-gray-800 dark:text-gray-200'>
+    <div className='scroll-m-16 px-3' id='faq'>
+      <h2 className='pt-12 text-center font-heading text-2xl font-semibold text-gray-800 dark:text-gray-200 lg:text-3xl'>
         Frequently Asked Questions
       </h2>
-      <div className='text-lg font-content mt-8 text-center'>
+      <div className='mt-8 text-center font-content text-lg'>
         Here are some of the most frequently asked questions about infertility
         and its treatment options.
       </div>
-      <div className='flex flex-col justify-center max-w-6xl mx-auto mt-10'>
+      <div className='mx-auto mt-10 flex max-w-6xl flex-col justify-center'>
         {Data.map((items) => (
           <AccordionLayout
             title={items.q}

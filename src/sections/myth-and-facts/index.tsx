@@ -2,25 +2,25 @@ import { MythsData } from './mafdata';
 
 const IndexPage = () => {
   return (
-    <div className='bg-white dark:bg-gray-800 '>
-      <div className='max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8'>
+    <div className='bg-white dark:bg-gray-800'>
+      <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8'>
         <div className='max-w-2xl lg:mx-auto lg:text-center'>
-          <h1 className='text-3xl font-bold tracking-tight font-heading text-gray-800 dark:text-gray-200  sm:text-4xl'>
+          <h1 className='font-heading text-3xl font-bold tracking-tight text-gray-800 dark:text-gray-200 sm:text-4xl'>
             Mythbusters
           </h1>
-          <p className='mt-4 text-brandDark'>
+          <p className='text-brandDark mt-4'>
             Here are some of the most common myths related to health and
             fertility and the associated facts.
           </p>
         </div>
         <div className='mt-20'>
-          <dl className='space-y-10 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-10 font-content'>
+          <dl className='space-y-10 font-content lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-10 lg:space-y-0'>
             {MythsData.map((faq) => (
               <div key={faq.id}>
-                <dt className='font-semibold text-gray-200 font-heading bg-gg-500 dark:bg-gray-600 pt-2 py-1 px-3 rounded-lg shadow-md'>
+                <dt className='rounded-lg bg-gg-500 px-3 py-1 pt-2 font-heading font-semibold text-gray-200 shadow-md dark:bg-gray-600'>
                   {faq.myth}
                 </dt>
-                <dd className='mt-3 text-gray-800 dark:text-gray-200 text-md font-semibold px-3'>
+                <dd className='text-md mt-3 px-3 font-semibold text-gray-800 dark:text-gray-200'>
                   {faq.fact}
                 </dd>
               </div>

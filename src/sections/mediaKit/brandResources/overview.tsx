@@ -4,10 +4,10 @@ const Overview = () => {
   return (
     <div>
       <div>
-        <h2 className='text-2xl font-heading py-4 font-bold underline text-gray-800 dark:text-gray-200'>
+        <h2 className='py-4 font-heading text-2xl font-bold text-gray-800 underline dark:text-gray-200'>
           Overview
         </h2>
-        <p className='text-gray-800 dark:text-gray-200 font-lexend'>
+        <p className='font-lexend text-gray-800 dark:text-gray-200'>
           Welcome to the GarbhaGudi IVF Centre Media Kit, a comprehensive
           resource designed to provide journalists, influencers, and
           stakeholders with detailed insights into our institution's mission,
@@ -16,10 +16,10 @@ const Overview = () => {
           challenges and our commitment to providing world-class fertility
           solutions.
         </p>
-        <h3 className='font-heading text-2xl underline font-bold py-4 text-gray-800 dark:text-gray-200'>
+        <h3 className='py-4 font-heading text-2xl font-bold text-gray-800 underline dark:text-gray-200'>
           Purpose
         </h3>
-        <p className='text-gray-800 dark:text-gray-200 font-lexend'>
+        <p className='font-lexend text-gray-800 dark:text-gray-200'>
           This media kit aims to provide a comprehensive understanding of
           GarbhaGudi IVF Centre, empowering media professionals to tell our
           story accurately and comprehensively. Whether you're a journalist
@@ -28,7 +28,7 @@ const Overview = () => {
           go-to resource for a deeper insight into GarbhaGudi's commitment to
           reproductive health.
         </p>
-        <p className='text-gray-800 dark:text-gray-200 font-lexend pt-4'>
+        <p className='pt-4 font-lexend text-gray-800 dark:text-gray-200'>
           We encourage you to explore each section, and we remain available for
           any additional information or media inquiries. Thank you for your
           interest in GarbhaGudi IVF Centre.

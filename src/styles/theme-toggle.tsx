@@ -21,13 +21,13 @@ const ThemeToggle = () => {
 
   return (
     <button
-      className={`rounded-md hover:scale-110 active:scale-100 duration-200 flex w-8 h-8 items-center justify-center`}
+      className={`flex h-8 w-8 items-center justify-center rounded-md duration-200 hover:scale-110 active:scale-100`}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {theme === 'light' ? (
-        <HiOutlineLightBulb className='w-7 h-7 text-gg-500' />
+        <HiOutlineLightBulb className='h-7 w-7 text-gg-500' />
       ) : (
-        <LiaLightbulb className='w-7 h-7 text-white' />
+        <LiaLightbulb className='h-7 w-7 text-white' />
       )}
     </button>
   );
