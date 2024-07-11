@@ -88,7 +88,7 @@ const Floating: React.FC = () => {
               </div>
               <div className='flex items-center justify-start space-x-3 pt-3 font-content'>
                 <FaIndianRupeeSign className='text-2xl text-gg-500' />{' '}
-                <div>Contribution: Rs: 990</div>
+                <div>Contribution: Free</div>
               </div>
               <div className='py-6'>
                 <Link href='#register'>

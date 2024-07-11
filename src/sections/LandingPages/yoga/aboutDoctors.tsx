@@ -2,6 +2,7 @@ import React from 'react';
 import Suraksha from 'assets/Suraksha.webp';
 import aswinimohan from 'assets/aswinimohan.png';
 import Image from 'next/image';
+import Sridevi from 'assets/sridevi.png';
 
 const Doctor = () => {
   return (
@@ -55,8 +56,7 @@ const doctors = [
   {
     id: 3,
     name: 'Nutritionuist – Dr. Sridevi',
-    image:
-      '',
+    image:Sridevi,
     content:
       'Dedicated and innovative Ayurvedic professional with a Doctor of Medicine in Ayurveda (MD(Ayu)) and a Bachelor of Ayurveda Medicine and Surgery (BAMS). Currently serving as an Assistant Professor at Transdisciplinary University, Bangalore, with extensive experience in Ayurvedic consulting, research, and teaching. Skilled in nutrition expertise, product development, database management, and regulatory compliance. Passionate about integrating traditional knowledge with modern science for holistic wellness solutions.',
   },
