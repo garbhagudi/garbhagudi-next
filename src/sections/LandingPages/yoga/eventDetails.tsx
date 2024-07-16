@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaCalendar, FaClock, FaGlobeAsia } from 'react-icons/fa';
 import { GrYoga } from 'react-icons/gr';
-import Banner_1 from 'assets/90-minute-recorded.svg'
+import Banner_1 from 'assets/45-minute-recorded.svg';
 import Banner_2 from 'assets/Meal-Plans-Diet.svg' 
 import Banner_3 from 'assets/Recordings-of-All-Sessions.svg'
 
@@ -115,7 +115,7 @@ const eventHeader = [
 const whatToExpect = [
   {
     id: 1,
-    title: '90 Minute recorded session every morning',
+    title: '45 Minute recorded session every morning',
     image:Banner_1,
     description:
       'Every session will include 15 minutes of Yoga explained in an applicable way to help you take control of your thoughts & emotions (Pranayama and relaxation). This will be followed by 30 minutes of step-by-step asana practice. The practice will include asanas which can be done comfortably by all including people who are taking some treatments. You will learn the benefits of these asanas in this session.',
