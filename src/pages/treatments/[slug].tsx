@@ -261,7 +261,7 @@ const Treatment = ({ treatment }) => {
           content={treatment?.content?.text.slice(0, 160)}
         />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content={treatment?.image.url} />
+        <meta property='og:image' content={treatment?.image?.url} />
 
         {/* Twitter*/}
 
@@ -275,7 +275,7 @@ const Treatment = ({ treatment }) => {
           name='twitter:description'
           content={treatment?.content?.text.slice(0, 160)}
         />
-        <meta name='twitter:image' content={treatment?.image.url} />
+        <meta name='twitter:image' content={treatment?.image?.url} />
       </Head>
       <BreadCrumbs
         link1='/treatments'
@@ -401,7 +401,7 @@ const Treatment = ({ treatment }) => {
             <figure>
               <img
                 className='mb-5 mt-10 w-full rounded-lg'
-                src={treatment?.image.url}
+                src={treatment?.image?.url}
                 alt={treatment?.imageAlt || treatment?.title}
                 width={1310}
                 height={873}
