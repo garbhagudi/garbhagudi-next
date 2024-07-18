@@ -118,7 +118,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                               <div className='w-1/3'>
                                 <img
                                   className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
-                                  src={item?.icon.url}
+                                  src={item?.icon?.url}
                                   alt={item?.title}
                                 />
                               </div>
@@ -190,7 +190,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                               <div className='w-1/3'>
                                 <img
                                   className='h-16 w-16 rounded-full object-cover'
-                                  src={item?.icon.url}
+                                  src={item?.icon?.url}
                                   alt={item?.title}
                                 />
                               </div>
@@ -222,7 +222,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                               <div className='w-1/3'>
                                 <img
                                   className='h-16 w-16 rounded-full object-cover'
-                                  src={item?.icon.url}
+                                  src={item?.icon?.url}
                                   alt={item?.title}
                                 />
                               </div>

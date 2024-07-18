@@ -9,7 +9,6 @@ import Share from 'components/share';
 import Loading from 'components/Loading';
 
 export const getStaticProps = async ({ params }) => {
-    console.log('params' , params);
     const { data } = await apolloClient.query({
     query: gql`
       query ($slug: String!) {
@@ -35,7 +34,6 @@ export const getStaticProps = async ({ params }) => {
       slug: params.slug,
     },
   });
-  console.log("graph data" , data)
   return {
     props: {
       clinic: data.clinic,
