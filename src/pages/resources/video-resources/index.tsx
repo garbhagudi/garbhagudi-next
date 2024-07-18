@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tab } from '@headlessui/react';
+import { Tab, TabGroup, TabList, TabPanels, TabPanel } from '@headlessui/react';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import Head from 'next/head';
@@ -65,7 +65,6 @@ const IndexPage = ({
     testimonials?.items[0].snippet.resourceId.videoId,
   );
 
-  console.log(recommended);
 
   const renderRecommended = (
     image: string,
@@ -82,14 +81,14 @@ const IndexPage = ({
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
-            <div
+            <button
               onClick={() => {
                 setUrl(url);
               }}
               className='ml-4 cursor-pointer text-left text-sm md:text-base'
             >
               {label}
-            </div>
+            </button>
             <div className='ml-4 mt-2 flex items-center space-x-2 text-sm'>
               <span>{by}</span>{' '}
               <VscVerified className='h-5 w-5 fill-brandPink dark:fill-gray-200' />
@@ -115,14 +114,14 @@ const IndexPage = ({
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
-            <div
+            <button
               onClick={() => {
                 setUrl2(url2);
               }}
               className='ml-4 cursor-pointer text-left text-base'
             >
               {label}
-            </div>
+            </button>
             <div className='ml-4 mt-2 flex items-center space-x-2 text-sm'>
               <span>{by}</span>{' '}
               <VscVerified className='h-5 w-5 fill-brandPink dark:fill-gray-200' />
@@ -148,14 +147,14 @@ const IndexPage = ({
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
-            <div
+            <button
               onClick={() => {
                 setUrl3(url3);
               }}
               className='ml-4 cursor-pointer text-left text-base'
             >
               {label}
-            </div>
+            </button>
             <div className='ml-4 mt-2 flex items-center space-x-2 text-sm'>
               <span>{by}</span>{' '}
               <VscVerified className='h-5 w-5 fill-brandPink dark:fill-gray-200' />
@@ -181,14 +180,14 @@ const IndexPage = ({
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
-            <div
+            <button
               onClick={() => {
                 setUrl4(url4);
               }}
               className='ml-4 cursor-pointer text-left text-base'
             >
               {label}
-            </div>
+            </button>
             <div className='ml-4 mt-2 flex items-center space-x-2 text-sm'>
               <span>{by}</span>{' '}
               <VscVerified className='h-5 w-5 fill-brandPink dark:fill-gray-200' />
@@ -250,8 +249,8 @@ const IndexPage = ({
             Video Resources
           </h1>
         </div>
-        <Tab.Group>
-          <Tab.List className='mx-auto grid max-w-7xl grid-cols-2 rounded-xl bg-gg-500 p-1 transition-all duration-300 ease-linear dark:bg-gg-400 md:grid-cols-4 lg:flex lg:flex-nowrap lg:space-x-1'>
+        <TabGroup>
+          <TabList className='mx-auto grid max-w-7xl grid-cols-2 rounded-xl bg-gg-500 p-1 transition-all duration-300 ease-linear dark:bg-gg-400 md:grid-cols-4 lg:flex lg:flex-nowrap lg:space-x-1'>
             <Tab className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'>
               Recommended
             </Tab>
@@ -265,9 +264,9 @@ const IndexPage = ({
             <Tab className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'>
               Testimonials
             </Tab>
-          </Tab.List>
-          <Tab.Panels className={'px-3 lg:px-4 xl:px-10'}>
-            <Tab.Panel>
+          </TabList>
+          <TabPanels className={'px-3 lg:px-4 xl:px-10'}>
+            <TabPanel>
               <div className='mx-auto grid grid-cols-1 gap-6 xl:grid-cols-3'>
                 <section className='xl:col-span-2'>
                   <div className='mt-8 overflow-hidden rounded-lg border-2 border-brandPink'>
@@ -338,8 +337,8 @@ const IndexPage = ({
                   </div>
                 </section>
               </div>
-            </Tab.Panel>
-            <Tab.Panel>
+            </TabPanel>
+            <TabPanel>
               <div className='mx-auto grid grid-cols-1 gap-6 xl:grid-cols-3'>
                 <section className='xl:col-span-2'>
                   <div className='mt-8 overflow-hidden rounded-lg border-2 border-brandPink'>
@@ -410,8 +409,8 @@ const IndexPage = ({
                   </div>
                 </section>
               </div>
-            </Tab.Panel>
-            <Tab.Panel>
+            </TabPanel>
+            <TabPanel>
               <div className='mx-auto grid grid-cols-1 gap-6 xl:grid-cols-3'>
                 <section className='xl:col-span-2'>
                   <div className='mt-8 overflow-hidden rounded-lg border-2 border-brandPink'>
@@ -482,8 +481,8 @@ const IndexPage = ({
                   </div>
                 </section>
               </div>
-            </Tab.Panel>
-            <Tab.Panel>
+            </TabPanel>
+            <TabPanel>
               <div className='mx-auto grid grid-cols-1 gap-6 xl:grid-cols-3'>
                 <section className='xl:col-span-2'>
                   <div className='mt-8 overflow-hidden rounded-lg border-2 border-brandPink'>
@@ -554,9 +553,9 @@ const IndexPage = ({
                   </div>
                 </section>
               </div>
-            </Tab.Panel>
-          </Tab.Panels>
-        </Tab.Group>
+            </TabPanel>
+          </TabPanels>
+        </TabGroup>
       </div>
     </>
   );
