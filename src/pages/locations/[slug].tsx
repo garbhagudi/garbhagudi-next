@@ -46,7 +46,7 @@ const Branch = ({ branch }) => {
         <meta name='twitter:image' content={branch?.branchPicture.url} />
       </Head>
       <Banner branchTitle={branch.title} />
-      <TreatmentOptions branch={branch?.title} />
+      <TreatmentOptions branch={branch?.title} image={branch?.nabh?.url || ''}/>
       <MapSection
         maplink={branch?.mapLink}
         address={branch?.address}
@@ -80,6 +80,9 @@ export const getStaticProps = async ({ params }) => {
           address
           about {
             raw
+          }
+          nabh {
+            url
           }
           slug
           metaTitle
