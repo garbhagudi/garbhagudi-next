@@ -266,12 +266,13 @@
           </div>
         </div>
         <script>
-          window.addEventListener('message', function(event) {
-          const data = event.data;
-          if (data && data.utm_campaign) {
-            document.getElementById('LEADCF122').value = data.utm_campaign;
-          }
-          });
+          document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const utmCampaign = urlParams.get('utm_campaign');
+      if (utmCampaign) {
+        document.getElementById('LEADCF122').value = utmCampaign;
+      }
+    });
 
           function validateEmail3505252000276132002()
 	{

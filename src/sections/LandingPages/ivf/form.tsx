@@ -1,21 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect , useState } from 'react';
 
 const Form = () => {
+  const [iframeSrc, setIframeSrc] = useState('/contact5.html');
+
   useEffect(() => {
-    const iframeElement = document.getElementById('contact5-iframe') as HTMLIFrameElement;
-    if (iframeElement) {
-      const queryParams = new URLSearchParams(window.location.search);
-      const utmCampaign = queryParams.get('utm_campaign');
-      iframeElement.onload = () => {
-        iframeElement.contentWindow?.postMessage({ utm_campaign: utmCampaign }, '*');
-      };
+    const queryParams = new URLSearchParams(window.location.search);
+    const utmCampaign = queryParams.get('utm_campaign');
+    if (utmCampaign) {
+      setIframeSrc(`/contact5.html?utm_campaign=${utmCampaign}`);
     }
   }, []);
   return (
     <>
       <iframe
         id = 'contact5-iframe'
-        src='/contact5.html'
+        src={iframeSrc}
         className='h-screen max-h-[350px] w-screen max-w-sm'
         loading='lazy'
       ></iframe>
