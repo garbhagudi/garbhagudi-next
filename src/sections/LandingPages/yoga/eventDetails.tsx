@@ -94,7 +94,7 @@ const eventHeader = [
   {
     id: 2,
     title: 'Timing',
-    description: '6:30 AM - 7:30 AM (IST)',
+    description: '7:30 AM - 8:30 AM (IST)',
     icon: <FaClock />,
     misc: '(Rec. available for 1 day)',
   },
@@ -132,6 +132,6 @@ const whatToExpect = [
     title: 'Recordings of All Sessions',
     image:Banner_3,
     description:
-      'If you live outside India or miss a session due to an emergency, no worries! The replay links of each session will be provided for 1 day.',
+      'If you live outside India or miss a session due to an emergency, no worries! The replay links of each session will be provided.',
   },
 ];
