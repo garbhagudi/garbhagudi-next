@@ -2,9 +2,26 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const TreatmentOptions = ({ branch }) => {
+interface TreatmentOptionsProps {
+  branch : string;
+  image?: string;
+}
+
+const TreatmentOptions = ({ branch, image }: TreatmentOptionsProps) => {
   return (
     <div className='container mx-auto'>
+      {image && (
+      <div className='mt-16 mx-auto flex items-center max-w-fit justify-center space-x-3 border dark:border-gray-600 py-2.5 px-2.5 rounded-lg'>
+        <Image
+          src={image}
+          alt='IVF Treatment'
+          width={100}
+          height={100}
+          className='w-20 bg-white dark:bg-gray-200/70 rounded-lg'
+        />
+        <div className='font-lexend text-xl font-bold'>NABH Certified*</div>
+      </div>
+      )}
       <div className='px-2 py-16 text-center font-heading text-xl font-bold lg:py-20 lg:text-2xl'>
         Infertility Treatment Options at {branch}
       </div>

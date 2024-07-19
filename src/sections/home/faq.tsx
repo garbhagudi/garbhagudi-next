@@ -34,7 +34,7 @@ const data = [
     id: 1,
     Question: 'How much does IVF treatment cost in Bangalore?',
     Answer:
-      'The cost of IVF treatment in Bangalore may vary depending on individual circumstances and treatment requirements. At Garbhagudi IVF Centre, we offer various IVF packages starting from INR 90,000.',
+      'The cost of IVF treatment in Bangalore may vary depending on individual circumstances and treatment requirements. At Garbhagudi IVF Centre, we offer various IVF packages',
   },
   {
     id: 2,

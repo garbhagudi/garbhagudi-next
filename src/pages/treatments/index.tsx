@@ -2,7 +2,7 @@ import React from 'react';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Link from 'next/link';
-import { Tab } from '@headlessui/react';
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 
@@ -10,7 +10,19 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-const IndexPage = ({ treatments }) => {
+interface TreatmentProps {
+  treatments: {
+    category: string;
+    title: string;
+    id: string;
+    icon: {
+      url: string;
+    };
+    slug: string;
+  }[];
+  }
+
+const IndexPage = ({ treatments }: TreatmentProps) => {
   return (
     <div>
       <Head>
@@ -71,8 +83,8 @@ const IndexPage = ({ treatments }) => {
           Treatment Options
         </h1>
         <div className='w-full max-w-7xl px-2 py-16 sm:px-0'>
-          <Tab.Group>
-            <Tab.List className={'flex space-x-1 rounded-xl bg-brandPink p-1'}>
+          <TabGroup>
+            <TabList className={'flex space-x-1 rounded-xl bg-brandPink p-1'}>
               <Tab className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'>
                 <div className='mx-auto max-w-7xl text-center font-heading text-base font-semibold md:text-2xl'>
                   Female Infertility
@@ -88,31 +100,31 @@ const IndexPage = ({ treatments }) => {
                   Advanced Options
                 </div>
               </Tab>
-            </Tab.List>
-            <Tab.Panels>
-              <Tab.Panel>
+            </TabList>
+            <TabPanels>
+              <TabPanel>
                 <div className='mx-auto flex max-w-7xl py-6 sm:py-12'>
                   <div className='mx-auto grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {treatments.map((item) => {
-                      if (item.category == 'Female') {
+                      if (item?.category == 'Female') {
                         return (
                           <Link
-                            href={`treatments/${item.slug}`}
+                            href={`treatments/${item?.slug}`}
                             passHref
-                            key={item.id}
+                            key={item?.id}
                             className='group'
                           >
                             <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-all duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-700 dark:hover:border-gg-400 dark:hover:bg-gray-600 md:w-96'>
                               <div className='w-1/3'>
                                 <img
                                   className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
-                                  src={item.icon.url}
-                                  alt={item.title}
+                                  src={item?.icon?.url}
+                                  alt={item?.title}
                                 />
                               </div>
                               <div className='flex w-2/3 flex-col justify-center text-left'>
                                 <p className='font-qs text-lg font-semibold'>
-                                  {item.title}
+                                  {item?.title}
                                 </p>
                               </div>
                             </div>
@@ -162,29 +174,29 @@ const IndexPage = ({ treatments }) => {
                     </Link>
                   </div>
                 </div>
-              </Tab.Panel>
-              <Tab.Panel>
+              </TabPanel>
+              <TabPanel>
                 <div className='mx-auto flex max-w-7xl py-6 sm:py-12'>
                   <div className='mx-auto grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {treatments.map((item) => {
-                      if (item.category == 'Male') {
+                      if (item?.category == 'Male') {
                         return (
                           <Link
-                            href={`treatments/${item.slug}`}
+                            href={`treatments/${item?.slug}`}
                             passHref
-                            key={item.id}
+                            key={item?.id}
                           >
                             <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white md:w-96'>
                               <div className='w-1/3'>
                                 <img
                                   className='h-16 w-16 rounded-full object-cover'
-                                  src={item.icon.url}
-                                  alt={item.title}
+                                  src={item?.icon?.url}
+                                  alt={item?.title}
                                 />
                               </div>
                               <div className='flex w-2/3 flex-col justify-center text-left'>
                                 <p className='font-qs text-lg font-semibold'>
-                                  {item.title}
+                                  {item?.title}
                                 </p>
                               </div>
                             </div>
@@ -194,29 +206,29 @@ const IndexPage = ({ treatments }) => {
                     })}
                   </div>
                 </div>
-              </Tab.Panel>
-              <Tab.Panel>
+              </TabPanel>
+              <TabPanel>
                 <div className='mx-auto flex max-w-7xl py-6 sm:py-12'>
                   <div className='mx-auto grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-                    {treatments.map((item) => {
-                      if (item.category == 'Advanced') {
+                    {treatments?.map((item) => {
+                      if (item?.category == 'Advanced') {
                         return (
                           <Link
-                            href={`treatments/${item.slug}`}
+                            href={`treatments/${item?.slug}`}
                             passHref
-                            key={item.id}
+                            key={item?.id}
                           >
                             <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white md:w-96'>
                               <div className='w-1/3'>
                                 <img
                                   className='h-16 w-16 rounded-full object-cover'
-                                  src={item.icon.url}
-                                  alt={item.title}
+                                  src={item?.icon?.url}
+                                  alt={item?.title}
                                 />
                               </div>
                               <div className='flex w-2/3 flex-col justify-center text-left'>
                                 <p className='font-qs text-lg font-semibold'>
-                                  {item.title}
+                                  {item?.title}
                                 </p>
                               </div>
                             </div>
@@ -226,9 +238,9 @@ const IndexPage = ({ treatments }) => {
                     })}
                   </div>
                 </div>
-              </Tab.Panel>
-            </Tab.Panels>
-          </Tab.Group>
+              </TabPanel>
+            </TabPanels>
+          </TabGroup>
         </div>
       </div>
     </div>

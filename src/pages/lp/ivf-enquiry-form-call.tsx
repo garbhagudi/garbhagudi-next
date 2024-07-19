@@ -1,12 +1,11 @@
 import Head from 'next/head';
-import { useState , useEffect } from 'react';
-import Image from 'next/image';
+import {  useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Header from 'sections/LandingPages/ivf/header';
 import Offer from 'sections/LandingPages/ivf/offer';
 import KeyBenefits from 'sections/LandingPages/ivf/keybenefits';
 import Features from 'sections/LandingPages/ivf/features';
-import PopupImage from 'sections/LandingPages/ivf/popup';
+
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 
@@ -89,7 +88,7 @@ export default function LandingPage_call({doctors}) {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
         />
             </Head>
-            <>
+
             <Header/>
             <Offer/>
             <KeyBenefits/>
@@ -100,7 +99,7 @@ export default function LandingPage_call({doctors}) {
             <Testimonial />
             <Faq/>
             <EndForm/>
-            </> 
+
         </div>
     );
 }
