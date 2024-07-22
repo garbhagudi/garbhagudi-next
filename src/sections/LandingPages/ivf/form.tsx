@@ -5,7 +5,7 @@ const Form = () => {
 
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
-    const utmCampaign = queryParams.get('campaign');
+    const utmCampaign = queryParams.get('campaignid');
     if (utmCampaign) {
       setIframeSrc(`/contact5.html?utm_campaign=${utmCampaign}`);
     }
