@@ -106,6 +106,46 @@ const nextConfig = {
         destination: '/features/world-class-fertility-care',
         permanent: true,
       },
+      {
+        source: '/treatments/intracytoplasmic-sperm-injection-icsi',
+        destination: '/treatments/icsi-treatment-in-bangalore',
+        permanent: true
+      },
+      {
+        source: '/treatments/intra-uterine-insemination-iui',
+        destination: '/treatments/iui-treatment-in-bangalore',
+        permanent: true
+      },
+      {
+        source:'/index',
+        destination:'/',
+        permanent: true
+      },
+      {
+        source: '/treatments/infertility',
+        destination: '/treatments/infertility-treatment-in-bangalore',
+        permanent:true
+      },
+      {
+        source: '/treatments/in-vitro-fertilization-ivf',
+        destination: '/treatments/ivf-treatment-in-bangalore',
+        permanent:true
+      },
+      {
+        source:'/blogs/page/0',
+        destination:'/blogs/page/1',
+        permanent:true
+      },
+      {
+        source:'/treatments/laparoscopy',
+        destination:'/treatments/laparoscopy-treatment-in-bangalore',
+        permanent:true
+      },
+      {
+        source:'/treatments/hysteroscopy',
+        destination:'/treatments/hysteroscopy-treatment-in-bangalore',
+        permanent : true
+      }
     ];
   },
 };
