@@ -6,7 +6,7 @@ import banner from 'assets/FAQImage.jpg'
 const Faq = () => {
   const [activeIndex1, setActiveIndex1] = React.useState(1);
   return (
-    <div className='mx-auto max-w-7xl px-4'>
+    <div className='mx-auto max-w-7xl px-4' id='faq'>
       <div className='xl:max-w-3xl'>
         <h2 className='lg:pt:16 pt-10 text-center font-heading text-3xl font-bold text-gray-800 dark:text-white lg:text-4xl'>
           Frequently asked questions
