@@ -41,5 +41,5 @@ const menuitems = [
   { title: 'Benefits', url: '#benefits' },
   { title: 'Curriculum', url: '#curriculum' },
   { title: 'Testimonial', url: '#testimonial' },
-  { title: 'FAQ', url: '#contact' },
+  { title: 'FAQ', url: '#faq' },
 ];

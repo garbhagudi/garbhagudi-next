@@ -45,7 +45,7 @@ const yogaWorkshopDetails = [
     category: 'For Homemakers',
     image: 'https://yoga-satvicmovement-org.b-cdn.net/resources/img/woman.png',
     description:
-      "They always taking care of others but forget to do something meaningful for their own health? It's time to do something wonderful for yourself so you can support your family even better.",
+      "They always take care of others but forget to do something meaningful for their own health? It's time to do something wonderful for yourself so you can support your family even better.",
   },
   {
     category: 'For Senior Citizens',
