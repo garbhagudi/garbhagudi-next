@@ -87,9 +87,9 @@
         accept-charset="UTF-8"
         class=""
       >
-      <input type='text' style='display:none;' name='xnQsjsdp' value='cd9de6748c089ef36d0b33fdfbe00b36be9571c31f4080f481c3306875fe8d9f'></input> 
+      <input type='text' style='display:none;' name='xnQsjsdp' value='8ddc8105f1ac14f39c1ad266125d2f10a64b3909631be394434e9e3208e90186'></input> 
  <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
- <input type='text' style='display:none;' name='xmIwtLD' value='bbac58f0441fc83c4e365a0c2efbf3ff84ebec82ce00e859c88a0c3d8cedd45da46c6ca297db4af1e3f4a9af3b501b4e'></input> 
+ <input type='text' style='display:none;' name='xmIwtLD' value='cf02aa3104370894050c8c15692e22c24e3fb6e403dbf0e6200575dad620ccb7cc11719034a82d3c7e3f05015be3a8ae'></input> 
  <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
  <input type='text' style='display:none;' name='returnURL' value='https&#x3a;&#x2f;&#x2f;garbhagudi.com&#x2f;thank-you.html' > </input>
         <!-- Do not remove this code. -->
@@ -253,7 +253,8 @@
               </option>
               <option selected value='Catalyst_LP_v1'>Catalyst_LP_v1</option>
 		</select><div class='zcwf_col_help'></div></div></div><div  style='display:none;' class='zcwf_row wfrm_fld_dpNn'><div class='zcwf_col_lab'><label for='LEADCF122'>UTM Campaign</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF122' name='LEADCF122' maxlength='255' value='Camapaign'></input><div class='zcwf_col_help'></div></div></div>
-        <div class="zcwf_row">
+    <div  style='display:none;' class='zcwf_row wfrm_fld_dpNn'><div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='LEADCF10'>GCLID</label></div><div class='zcwf_col_fld'><input type='text' id='LEADCF10' name='LEADCF10' maxlength='255' value='GCLID'></input><div class='zcwf_col_help'></div></div></div>     
+    <div class="zcwf_row">
           <div class="zcwf_col_lab"></div>
           <div class="zcwf_col_fld flex items-center justify-center space-x-3">
             <input
@@ -269,8 +270,12 @@
           document.addEventListener('DOMContentLoaded', function() {
       const urlParams = new URLSearchParams(window.location.search);
       const utmCampaign = urlParams.get('utm_campaign');
+      const gclid = urlParams.get('gclid');
       if (utmCampaign) {
         document.getElementById('LEADCF122').value = utmCampaign;
+      }
+      if(gclid){
+        document.getElementById('LEADCF10').value = gclid;
       }
     });
 
@@ -349,6 +354,7 @@
 		document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
     window.top.location.href = 'https://garbhagudi.com/thank-you.html';
           
+
   }
 
 function tooltipShow3505252000276132002(el){
@@ -366,7 +372,7 @@ function tooltipShow3505252000276132002(el){
 }
         </script>
         <!-- Do not remove this --- Analytics Tracking code starts -->
-        <script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=08b8f5c36ecaa335fdbd6788a24abe48099510bfa0d6c7ebd8d5488d0250f6cd312bc5121d2825c87becb1ecb951a933gid77a3c92bb69ab001644683f4517ea0fef387eea4d6dec0b085af7cf067c49427gidc539ac53142fbc8cf2af00d3ccbd786c6642c3d9cd3b38633263c3c80fb9ec59gid76895398b8bf6bad5893382c29f582ad9d305ec9af1eab676c8a2e80c2acf6ca&tw=91bf10309fd22ab2c3817328d9be12da9943b98ee2f980a4230ec78c2b362bcd'></script>
+        <script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=59b55fcf752eb5783de7141104596d401d9d5776e98db2bc0ef2a3bad5af714fd936979912f3635c1dc87b8a6018e455gid911fe8046a390325550f023fe38f3d52d9dfbf160d69697f113e8c39baaafcf2gide6e68219b1a2cb924bbe60a3560a57b09d87a7d19e385b90c603c1a9e9c2b3begid6c9a50c04cc169e8813b1b7d9dde8d25af49c33a277b09d2612c3d48dcc1d7d5&tw=520a4097b09ba8ed21e92bfc72c973a1793e918ba09f557cba84c00a1d61102c'></script>
         <!-- Do not remove this --- Analytics Tracking code ends. -->
       </form>
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>

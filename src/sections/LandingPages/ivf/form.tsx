@@ -6,8 +6,9 @@ const Form = () => {
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
     const utmCampaign = queryParams.get('campaignid');
+    const gclid = queryParams.get('gclid');
     if (utmCampaign) {
-      setIframeSrc(`/contact5.html?utm_campaign=${utmCampaign}`);
+      setIframeSrc(`/contact5.html?utm_campaign=${utmCampaign}&gclid=${gclid}`);
     }
   }, []);
   return (
