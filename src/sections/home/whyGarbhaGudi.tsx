@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const WhyGG = () => {
   return (
@@ -9,7 +10,9 @@ const WhyGG = () => {
           <div className='shadow-3xl block rounded-lg bg-white drop-shadow-2xl dark:bg-gray-800'>
             <div className='flex flex-wrap items-center'>
               <div className='flex lg:w-6/12 xl:w-4/12'>
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1677492148/Misc/coup-min_g3kq4k.webp'
                   alt='Why choose garbhagudi as the Best IVF Centre in Bangalore'
                   className='w-full rounded-t-lg lg:rounded-bl-lg lg:rounded-tr-none'
