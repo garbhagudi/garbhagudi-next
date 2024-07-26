@@ -1,18 +1,10 @@
 import Head from 'next/head';
-import BreadCrumbs from 'components/breadcrumbs';
 import dynamic from 'next/dynamic';
 import ParagraphSection from 'sections/misc/international-ivf-day/ParagraphSection';
 import CallToAction from 'sections/misc/international-ivf-day/CallToAction';
-import { Location } from 'components/header/headerData';
 import Image from 'next/image';
 import banner from 'assets/Landing-Page-Banners.jpg';
 
-const ImageBanner = dynamic(
-  () => import('sections/misc/international-ivf-day/ImageBanner'),
-);
-const Calender = dynamic(
-  () => import('sections/misc/international-ivf-day/Calendar'),
-);
 const Yoga = dynamic(
   () => import('sections/misc/international-ivf-day/Yoga'),
 );

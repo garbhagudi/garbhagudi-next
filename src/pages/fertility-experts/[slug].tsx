@@ -8,6 +8,7 @@ import { gql } from '@apollo/client';
 import { useRouter } from 'next/router';
 import Share from 'components/share';
 import { SiGooglemaps } from 'react-icons/si';
+import Image from 'next/image';
 
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
@@ -196,7 +197,9 @@ const Doctor = ({ doctor }) => {
                 <div className='flex flex-wrap justify-center'>
                   <div className='flex w-full justify-center px-4 lg:order-2 lg:w-3/12'>
                     <div className='relative'>
-                      <img
+                      <Image
+                        width={340}
+                        height={340}
                         alt={doctor.name}
                         src={doctor.image.url}
                         className='-m-16 -ml-20 -mt-44 mb-4 h-auto max-w-xs rounded-full border-none bg-gray-300/30 align-middle shadow-xl dark:bg-gray-600 lg:-ml-16'

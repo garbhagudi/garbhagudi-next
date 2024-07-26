@@ -8,6 +8,7 @@ import Loading from 'components/Loading';
 import Link from 'next/link';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
+import Image from 'next/image';
 
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
@@ -135,7 +136,9 @@ const Career = ({ career }) => {
               </h1>
               <Link href='/about/awards-and-accolades/garbhagudi-certified-healthy-workplace'>
                 <div>
-                  <img
+                  <Image
+                    width={1524}
+                    height={764}
                     src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1657979955/Banner/Argoya_Silver_Award_Web_Bnr-min_bx7xeo.webp'
                     alt='arogya world banner'
                     className='rounded-xl'
