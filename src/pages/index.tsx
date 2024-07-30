@@ -17,6 +17,23 @@ const YOUTUBE_PLAYLIST_ITEMS_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
 
 const Home = ({ data, testimonials }) => {
+  function addBreadcrumbJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://garbhagudi.com"
+          }
+        ]
+      }`,
+    };
+  }
+
   function addOrgJsonLd() {
     return {
       __html: `{
@@ -105,6 +122,11 @@ const Home = ({ data, testimonials }) => {
           type='application/ld+json'
           dangerouslySetInnerHTML={addWebJsonLd()}
           key='web-jsonld'
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbJsonLd()}
+          key='breadcrumb-jsonld'
         />
 
         {/* Open Graph / Facebook */}

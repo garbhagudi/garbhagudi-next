@@ -81,7 +81,46 @@ const Blog = ({ blog }) => {
   }`;
   const keywords = `${blog?.metaKeywords || blog?.title}`;
   const router = useRouter();
-
+  
+  function addBreadcrumbJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://garbhagudi.com"
+          }
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "blogs",
+            "item": "https://garbhagudi.com/blogs"
+          }
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "${blog?.title}",
+            "item": "https://garbhagudi.com/blogs/${blog?.slug}"
+          }
+        ]
+      }`,
+    };
+  }
+  function addOrgJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "GarbhaGudi IVF Centre Pvt Ltd",
+        "url": "https://garbhagudi.com",
+        "logo": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg"
+      }`,
+    };
+  }
   function addBlogJsonLd() {
     return {
       __html: `
@@ -139,6 +178,18 @@ const Blog = ({ blog }) => {
           type='application/ld+json'
           dangerouslySetInnerHTML={addBlogJsonLd()}
           key='org-jsonld'
+        />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addOrgJsonLd()}
+          key='org-jsonld'
+        />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbJsonLd()}
+          key='breadcrumb-jsonld'
         />
 
         {/* Open Graph / Facebook */}
