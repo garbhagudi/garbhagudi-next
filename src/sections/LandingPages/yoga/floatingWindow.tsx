@@ -91,11 +91,13 @@ const Floating: React.FC = () => {
                 <div>Contribution: Free</div>
               </div>
               <div className='py-6'>
-                <Link href='#register'>
+              <a href="https://chat.whatsapp.com/DxWPnWHqQqIHo0PEY5RFyV" 
+               target="_blank"
+               rel="noopener noreferrer">
                   <button className='rounded-lg bg-gg-500 px-4 py-2 font-lexend text-white hover:bg-gg-600'>
-                    Register
+                   Join the Whatsapp group
                   </button>
-                </Link>
+               </a>
               </div>
             </div>
           </div>
