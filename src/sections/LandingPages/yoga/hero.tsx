@@ -15,11 +15,13 @@ const Hero = () => {
               21 - Day Yoga Challenge
             </div>
             <p className='text-lg'>Meet online to practise yoga for 21 days</p>
-            <Link href={'#register'}>
-              <button className='w-44 rounded-lg bg-gg-500 px-5 py-3 text-xl text-white hover:bg-gg-600'>
-                Register
+            <a href="https://chat.whatsapp.com/DxWPnWHqQqIHo0PEY5RFyV" 
+               target="_blank"
+               rel="noopener noreferrer">
+              <button className='w-70 rounded-lg bg-gg-500 px-5 py-3 text-xl text-white hover:bg-gg-600'>
+                Join the Whatsapp group
               </button>
-            </Link>
+            </a>
             <p className='text-xs'>200,000+ people have already attended</p>
             <div className='h-1 w-full border-b-2 border-gray-400 pt-4 lg:w-[500px]'></div>
             <div className=''>
