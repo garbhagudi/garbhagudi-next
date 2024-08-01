@@ -52,7 +52,7 @@ const Content = () => {
               <div className='-right-0 mx-auto mt-4 max-w-[50rem] lg:p-4'>
                 <div className='relative w-full'>
                   <img
-                    src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1671177124/Misc/PNG_25_yoa08y.png'
+                    src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722510346/Misc/PNG_25_yoa08y_1_cr2fpg.png'
                     className='relative w-full bg-white/10 dark:brightness-75 dark:invert'
                     alt='Process of IVF Treatment in Bangalore'
                     loading='lazy'
