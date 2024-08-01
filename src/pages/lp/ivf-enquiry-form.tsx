@@ -1,12 +1,9 @@
 import Head from 'next/head';
-import { useState , useEffect } from 'react';
-import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import Header from 'sections/LandingPages/ivf/header';
 import Offer from 'sections/LandingPages/ivf/offer_new';
 import KeyBenefits from 'sections/LandingPages/ivf/keybenefits';
 import Features from 'sections/LandingPages/ivf/features';
-import PopupImage from 'sections/LandingPages/ivf/popup';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 

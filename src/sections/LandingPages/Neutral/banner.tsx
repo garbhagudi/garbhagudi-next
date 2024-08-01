@@ -29,11 +29,11 @@ const Banner = () => {
                       Offer of the Month* :{' '}
                     </span>
                     <span className='font-lexend'>
-                      ₹ 55000/- OFF on IVF Treatment
+                      Free Fertility Screening
                     </span>
                   </div>
                   <span className='w-full text-right font-lexend text-xs'>
-                    *Valid through May/2024
+                    *Valid till  Aug 31st 2024
                   </span>
                 </div>
               </div>
@@ -42,8 +42,8 @@ const Banner = () => {
                   Welcome to the Best IVF Centre In Bangalore
                 </h1>
                 <p className='mt-6 text-xl'>
-                  Get start on your journey towards parenthood with ₹ 55000/-
-                  OFF on IVF Treatment, valid throught out May/2024.
+                Get start on your journey towards parenthood with Free Fertility Screening Offer 
+                , valid till  Aug 31st 2024.
                 </p>
                 <p className='mt-2 text-xl'>
                   EMI Facility Available at 0% Interest.

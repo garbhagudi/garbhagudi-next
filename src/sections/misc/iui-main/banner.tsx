@@ -40,7 +40,7 @@ const Banner = () => {
         </div>
         <div className='lg:py-10'>
           <img
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.jpg'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722501966/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0_1_i7oozx.jpg'
             alt='IUI treatment in Bangalore'
             className='rounded-xl'
           />
