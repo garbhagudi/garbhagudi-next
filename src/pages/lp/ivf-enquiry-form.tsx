@@ -10,24 +10,19 @@ import { gql } from '@apollo/client';
 const EndForm = dynamic(() => import('sections/LandingPages/ivf/endform_new'));
 
 const WhyGarbhaGudi = dynamic(
-    () => import('sections/LandingPages/ivf/whygarbhagudi'),
+  () => import('sections/LandingPages/ivf/whygarbhagudi'),
 );
 const Testimonial = dynamic(() => import('sections/home/testimonial'));
-const Plans = dynamic(
-    () => import('sections/LandingPages/ivf/plans'),
-);
-const Doctors = dynamic(
-    () => import('sections/LandingPages/ivf/Doctors'),
-);
+const Plans = dynamic(() => import('sections/LandingPages/ivf/plans'));
+const Doctors = dynamic(() => import('sections/LandingPages/ivf/Doctors'));
 
 const Faq = dynamic(() => import('sections/home/faq'));
 
-
-export default function LandingPage({doctors}) {
-    return (
-        <div>
-            <Head>
-            <meta name='viewport' content='width=device-width, initial-scale=1' />
+export default function LandingPage({ doctors }) {
+  return (
+    <div>
+      <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>
           GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India
         </title>
@@ -74,49 +69,46 @@ export default function LandingPage({doctors}) {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
         />
-            </Head>
-            <>
-            <Header/>
-            <Offer/>
-            <KeyBenefits/>
-            <Features/>
-            <WhyGarbhaGudi/>
-            <Plans/>
-            <Doctors doctors={doctors}/>
-            <Testimonial />
-            <Faq/>
-            <EndForm/>
-            </> 
-        </div>
-    );
+      </Head>
+      <Header />
+      <Offer />
+      <KeyBenefits />
+      <Features />
+      <WhyGarbhaGudi />
+      <Plans />
+      <Doctors doctors={doctors} />
+      <Testimonial />
+      <Faq />
+      <EndForm />
+    </div>
+  );
 }
 
-
 export const getStaticProps = async () => {
-    const { data } = await apolloClient.query({
-      query: gql`
-        {
-          doctors(orderBy: order_ASC, first: 8) {
-            id
-            name
-            designation
-            qualification
-            location
-            image {
-              url
-            }
-            imageAlt
-            bio {
-              raw
-            }
+  const { data } = await apolloClient.query({
+    query: gql`
+      {
+        doctors(orderBy: order_ASC, first: 8) {
+          id
+          name
+          designation
+          qualification
+          location
+          image {
+            url
+          }
+          imageAlt
+          bio {
+            raw
           }
         }
-      `,
-    });
-    return {
-      props: {
-        doctors: data.doctors,
-        fallback: true,
-      },
-    };
+      }
+    `,
+  });
+  return {
+    props: {
+      doctors: data.doctors,
+      fallback: true,
+    },
   };
+};
