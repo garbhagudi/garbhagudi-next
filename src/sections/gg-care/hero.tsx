@@ -1,4 +1,5 @@
 import { HiChatAlt, HiPhone, HiCalendar } from 'react-icons/hi';
+import Link from 'next/link';
 
 const supportLinks = [
   {
@@ -8,7 +9,7 @@ const supportLinks = [
     icon: HiChatAlt,
     ctaAction: 'Chat Now',
     ctaLink:
-      'https://salesiq.zoho.com/signaturesupport.ls?widgetcode=93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0',
+      '/contact/enquiry?utm_source=ggcare&utm_medium=chat&utm_campaign=ggcare_chat',
   },
   {
     name: 'Call Support',
@@ -77,9 +78,9 @@ const Hero = () => {
                 </p>
               </div>
               <button className='rounded-b-xl bg-gg-400 px-4 py-2 font-content font-semibold text-white transition-all duration-150 dark:bg-gray-600 dark:group-hover:bg-gg-400'>
-                <a href={link.ctaLink} target='_blank' rel='noreferrer'>
+                <Link href={link.ctaLink} target='_blank' rel='noreferrer'>
                   {link.ctaAction}
-                </a>
+                </Link>
               </button>
             </div>
           ))}

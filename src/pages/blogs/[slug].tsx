@@ -11,6 +11,7 @@ import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
 import Link from 'next/link';
+import BlogPopUp from 'components/blogPopup';
 
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
@@ -81,7 +82,7 @@ const Blog = ({ blog }) => {
   }`;
   const keywords = `${blog?.metaKeywords || blog?.title}`;
   const router = useRouter();
-  
+
   function addBreadcrumbJsonLd() {
     return {
       __html: `{
@@ -366,6 +367,7 @@ const Blog = ({ blog }) => {
       ) : (
         <Error statusCode={404} />
       )}
+      <BlogPopUp />
     </div>
   );
 };
