@@ -8,6 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
+import FloatingFooter from 'components/floatingFooter';
 
 // Use dynamic imports for non-essential components
 const Footer = dynamic(() => import('components/footer/footer'));
@@ -17,7 +18,12 @@ const Loading = dynamic(() => import('components/Loading'));
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const noRenderPaths = ['/ivf/landing','/lp/ivf-enquiry-form','/lp/ivf-enquiry-form-call','/ivf/yoga'];
+  const noRenderPaths = [
+    '/ivf/landing',
+    '/lp/ivf-enquiry-form',
+    '/lp/ivf-enquiry-form-call',
+    '/ivf/yoga',
+  ];
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
 
@@ -71,8 +77,8 @@ function MyApp({ Component, pageProps }) {
             <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
               {shouldDisplay && <Nav />}
               <Component {...pageProps} />
-
               <Footer />
+              <FloatingFooter />
             </div>
           </>
         )}
