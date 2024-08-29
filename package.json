@@ -10,7 +10,7 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
-    "@apollo/client": "^3.11.4",
+    "@apollo/client": "^3.11.5",
     "@graphcms/rich-text-react-renderer": "^0.6.2",
     "@headlessui/react": "^2.1.3",
     "@headlessui/tailwindcss": "^0.2.1",
