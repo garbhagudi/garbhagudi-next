@@ -26,14 +26,15 @@ const Banner = () => {
                 <div className='flex flex-col items-start rounded-lg bg-transparent px-2.5 py-2 text-base font-bold text-white'>
                   <div>
                     <span className='font-lexend font-semibold uppercase'>
-                      Offer of the Month* :{' '}
+                      Offer of the Month* :Upto 50% OFF on Blood Investigations
+                      & Free consultations
                     </span>
                     <span className='font-lexend'>
                       Free Fertility Screening
                     </span>
                   </div>
                   <span className='w-full text-right font-lexend text-xs'>
-                    *Valid till Aug 31st 2024
+                    *Valid till Oct 31st 2024
                   </span>
                 </div>
               </div>
