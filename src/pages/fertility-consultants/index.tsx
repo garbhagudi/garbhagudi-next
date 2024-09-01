@@ -124,9 +124,9 @@ export const getStaticProps = async () => {
           icon {
             url
           }
-          image [
+          image {
             url
-          ]
+          }
           slug
           id
           title
