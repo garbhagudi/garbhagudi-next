@@ -207,6 +207,12 @@ export const Resources = [
     href: '/events/ghar-ghar-garbhagudi',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642839833/Icons/Resources/Events_Webinars_buec8s.svg',
   },
+  {
+    name: 'Solutions',
+    description: 'Advanced Fertility Solutions',
+    href: '/solutions',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg',
+  },
 ];
 
 export const Location = [
@@ -315,6 +321,11 @@ export const ValueAddedServices = [
     href: '/features/garbhagriha',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841473/Icons/Why%20GarbhaGudi/GarbhaGriha_gyai6w.svg',
   },
+  {
+    name: 'Facilities',
+    href: '/facilities',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg',
+  },
 ];
 
 export const AboutUs = [
@@ -357,5 +368,15 @@ export const AboutUs = [
     name: 'Awards & Accolades',
     href: '/about/awards-and-accolades',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/Awards_Accorlads_z68rlr.svg',
+  },
+  {
+    name: 'Fertility Consultants',
+    href: '/fertility-consultants',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg',
+  },
+  {
+    name: 'Fertility Centre',
+    href: '/fertility-center',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg',
   },
 ];
