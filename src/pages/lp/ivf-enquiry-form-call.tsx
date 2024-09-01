@@ -1,31 +1,25 @@
 import Head from 'next/head';
-import {  useEffect } from 'react';
+import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Header from 'sections/LandingPages/ivf/header';
-import Offer from 'sections/LandingPages/ivf/offer';
+import Offer from 'sections/LandingPages/ivf/offer_new';
 import KeyBenefits from 'sections/LandingPages/ivf/keybenefits';
 import Features from 'sections/LandingPages/ivf/features';
 
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 
-
 const EndForm = dynamic(() => import('sections/LandingPages/ivf/endform'));
 const WhyGarbhaGudi = dynamic(
-    () => import('sections/LandingPages/ivf/whygarbhagudi'),
+  () => import('sections/LandingPages/ivf/whygarbhagudi'),
 );
 const Testimonial = dynamic(() => import('sections/home/testimonial'));
-const Plans = dynamic(
-    () => import('sections/LandingPages/ivf/plans'),
-);
-const Doctors = dynamic(
-    () => import('sections/LandingPages/ivf/Doctors'),
-);
+const Plans = dynamic(() => import('sections/LandingPages/ivf/plans'));
+const Doctors = dynamic(() => import('sections/LandingPages/ivf/Doctors'));
 
 const Faq = dynamic(() => import('sections/home/faq'));
 
-
-export default function LandingPage_call({doctors}) {
+export default function LandingPage_call({ doctors }) {
   useEffect(() => {
     const redirectToPhoneDialer = () => {
       window.location.href = 'tel:+919071234006'; // Replace with your phone number
@@ -37,10 +31,10 @@ export default function LandingPage_call({doctors}) {
       document.removeEventListener('click', redirectToPhoneDialer);
     };
   }, []);
-    return (
-        <div>
-            <Head>
-            <meta name='viewport' content='width=device-width, initial-scale=1' />
+  return (
+    <div>
+      <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>
           GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India
         </title>
@@ -87,49 +81,47 @@ export default function LandingPage_call({doctors}) {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
         />
-            </Head>
+      </Head>
 
-            <Header/>
-            <Offer/>
-            <KeyBenefits/>
-            <Features/>
-            <WhyGarbhaGudi/>
-            <Plans/>
-            <Doctors doctors={doctors}/>
-            <Testimonial />
-            <Faq/>
-            <EndForm/>
-
-        </div>
-    );
+      <Header />
+      <Offer />
+      <KeyBenefits />
+      <Features />
+      <WhyGarbhaGudi />
+      <Plans />
+      <Doctors doctors={doctors} />
+      <Testimonial />
+      <Faq />
+      <EndForm />
+    </div>
+  );
 }
 
-
 export const getStaticProps = async () => {
-    const { data } = await apolloClient.query({
-      query: gql`
-        {
-          doctors(orderBy: order_ASC, first: 8) {
-            id
-            name
-            designation
-            qualification
-            location
-            image {
-              url
-            }
-            imageAlt
-            bio {
-              raw
-            }
+  const { data } = await apolloClient.query({
+    query: gql`
+      {
+        doctors(orderBy: order_ASC, first: 8) {
+          id
+          name
+          designation
+          qualification
+          location
+          image {
+            url
+          }
+          imageAlt
+          bio {
+            raw
           }
         }
-      `,
-    });
-    return {
-      props: {
-        doctors: data.doctors,
-        fallback: true,
-      },
-    };
+      }
+    `,
+  });
+  return {
+    props: {
+      doctors: data.doctors,
+      fallback: true,
+    },
   };
+};
