@@ -55,6 +55,7 @@ export function About() {
                       <div
                         onClick={() => close()}
                         className='-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gg-200 focus:outline-none dark:hover:bg-gray-600'
+                        role='none'
                       >
                         <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12'>
                           <img src={item.icon} alt={item.name} loading='lazy' />
@@ -116,6 +117,7 @@ export function WhyGarbhaGudi() {
                       <div
                         className='-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gg-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 dark:hover:bg-gray-600'
                         onClick={() => close()}
+                        role='none'
                       >
                         <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12'>
                           <img src={item.icon} alt={item.name} loading='lazy' />
@@ -176,6 +178,7 @@ export function KnowledgeCenter() {
                       <div
                         className='-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gg-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 dark:hover:bg-gray-600'
                         onClick={() => close()}
+                        role='none'
                       >
                         <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12'>
                           <img src={item.icon} alt={item.name} loading='lazy' />
@@ -238,6 +241,7 @@ export function Contacts() {
                     >
                       <div
                         onClick={() => close()}
+                        role='none'
                         className='-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gg-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 dark:hover:bg-gray-600'
                       >
                         <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12'>
@@ -293,6 +297,7 @@ export function Locations() {
                     <Link key={item.name} href={item.href} className='group'>
                       <div
                         onClick={() => close()}
+                        role='none'
                         className='-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gg-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 dark:hover:bg-gray-600'
                       >
                         <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gg-500 text-center text-base text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12 lg:text-2xl'>
