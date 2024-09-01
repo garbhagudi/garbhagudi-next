@@ -11,8 +11,8 @@ const Banner = () => {
             <div className='relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12'>
               <Image
                 className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1676448333/Misc/Landing/Neutral/happy-family-with-their-first-child-min_fgylvk.webp'
-                alt='happy copuple with a baby'
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1725183349/Ads%20and%20offers/Web_Banner-min_rgm3ts.webp'
+                alt='happy couple with a baby'
                 width={1024}
                 height={1024}
               />
@@ -33,7 +33,7 @@ const Banner = () => {
                     </span>
                   </div>
                   <span className='w-full text-right font-lexend text-xs'>
-                    *Valid till  Aug 31st 2024
+                    *Valid till Aug 31st 2024
                   </span>
                 </div>
               </div>
@@ -42,8 +42,8 @@ const Banner = () => {
                   Welcome to the Best IVF Centre In Bangalore
                 </h1>
                 <p className='mt-6 text-xl'>
-                Get start on your journey towards parenthood with Free Fertility Screening Offer 
-                , valid till  Aug 31st 2024.
+                  Get start on your journey towards parenthood with Free
+                  Fertility Screening Offer , valid till Aug 31st 2024.
                 </p>
                 <p className='mt-2 text-xl'>
                   EMI Facility Available at 0% Interest.
@@ -170,8 +170,8 @@ const Banner = () => {
             <div className='relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12'>
               <Image
                 className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1676448333/Misc/Landing/Neutral/happy-family-with-their-first-child-min_fgylvk.webp'
-                alt='happy copuple with a baby'
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1725183349/Ads%20and%20offers/Web_Banner-min_rgm3ts.webp'
+                alt='happy couple with a baby'
                 width={500}
                 height={500}
               />
