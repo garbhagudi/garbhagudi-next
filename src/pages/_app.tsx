@@ -73,14 +73,12 @@ function MyApp({ Component, pageProps }) {
         {loading ? (
           <Loading />
         ) : (
-          <>
-            <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
-              {shouldDisplay && <Nav />}
-              <Component {...pageProps} />
-              <Footer />
-              <FloatingFooter />
-            </div>
-          </>
+          <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
+            {shouldDisplay && <Nav />}
+            <Component {...pageProps} />
+            <Footer />
+            <FloatingFooter />
+          </div>
         )}
         {shouldDisplay && (
           <Salesiq
