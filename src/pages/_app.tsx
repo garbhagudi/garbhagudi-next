@@ -23,6 +23,7 @@ function MyApp({ Component, pageProps }) {
     '/lp/ivf-enquiry-form',
     '/lp/ivf-enquiry-form-call',
     '/ivf/yoga',
+    '/lp/dh/enquiry',
   ];
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
