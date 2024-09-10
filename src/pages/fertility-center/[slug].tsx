@@ -229,7 +229,7 @@ const Blog = ({ article }: BlogProps) => {
             <figure>
               <img
                 className='mb-5 mt-10 w-full rounded-lg'
-                src={article?.image.url}
+                src={article?.image?.url}
                 alt={article?.imageAlt}
                 width={1310}
                 height={873}
