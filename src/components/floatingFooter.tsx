@@ -9,11 +9,11 @@ const FloatingFooter = () => {
       <div className='grid grid-cols-2 bg-gg-500 px-2 py-2 dark:bg-gray-800'>
         <FormPopUp />
         <Link
-          href={'tel:+919108910832'}
+          href={'tel:+919071234006'}
           className='flex items-center space-x-3 font-bold'
         >
           <HiOutlinePhone className='text-2xl text-white' />{' '}
-          <div>+919108910832</div>
+          <div>+919071234006</div>
         </Link>
       </div>
     </div>
