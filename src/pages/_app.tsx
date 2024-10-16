@@ -8,9 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
-import FloatingFooter from 'components/floatingFooter';
 
-// Use dynamic imports for non-essential components
 const Footer = dynamic(() => import('components/footer/footer'));
 const Nav = dynamic(() => import('components/header/header'));
 const Salesiq = dynamic(() => import('components/SalesIQ'));
@@ -78,7 +76,6 @@ function MyApp({ Component, pageProps }) {
             {shouldDisplay && <Nav />}
             <Component {...pageProps} />
             <Footer />
-            <FloatingFooter />
           </div>
         )}
         {shouldDisplay && (
