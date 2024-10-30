@@ -35,7 +35,7 @@
     "react-responsive-masonry": "^2.2.1"
   },
   "devDependencies": {
-    "@types/node": "^22.7.9",
+    "@types/node": "^22.8.4",
     "@types/react": "^18.3.12",
     "@types/react-gtm-module": "^2.0.4",
     "@types/react-responsive-masonry": "^2.1.3",
