@@ -115,7 +115,7 @@ export const contactData = {
       id: 1,
       name: 'Appointments & Queries',
       email: 'dreams@garbhagudi.com',
-      phone: '+91 907 1234 003',
+      phone: '+91 94809 48005',
     },
     {
       id: 2,

@@ -379,6 +379,19 @@
             return false;
           }
 
+          // Create and fire tracking pixel after validation passes
+          const trackingPixel = new Image();
+          trackingPixel.src =
+            'https://money.dailyhunt.in/tracker?orderId=1637251295&key=1637251295-118ceb54a3dca7f970659b93bf4296dc&eventName=lead';
+          trackingPixel.width = 0;
+          trackingPixel.height = 0;
+          document.body.appendChild(trackingPixel);
+
+          // Cleanup after a short delay
+          setTimeout(() => {
+            trackingPixel.remove();
+          }, 1000);
+
           var urlparams = new URLSearchParams(window.location.search);
           if (
             urlparams.has('service') &&
