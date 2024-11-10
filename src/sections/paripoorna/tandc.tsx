@@ -7,23 +7,12 @@ const TermsConditions = () => {
         Terms and Conditions
       </h3>
       <div className='mx-auto max-w-5xl pb-10 font-lexend text-base text-gray-800 dark:text-gray-200'>
-        The GarbhaGnan Foundation is one of the foremost foundations in the
-        country that offers specialised and the latest healthcare for women.
-        with growing rates of infertility across the globe due to various
-        reasons, The GarbhaGnan Foundation remains steadfast in helping in
-        helping couples experience the joy of parenthood and the bliss of family
-        life.
+        The GarbhaGnan Foundation is one of the foremost foundations in the country that offers specialised and the latest healthcare for women. with growing rates of infertility across the globe due to various reasons, The GarbhaGnan Foundation remains steadfast in helping couples experience the joy of parenthood and the bliss of family life.
         <br />
         <br />
-        In its pursuit of rendering service to couples looking for progeny,
-        Garbhagnan Foundation has decided to offer{' '}
-        <span className='font-bold'>&quot;PARIPOORNA 2023&quot;</span>, where
-        the discount offered by the GarbhaGudi IVF Center is being borne by
-        GarbhaGnan Foundation as a part of its CSR activity. <br />
+        This year we are extending this offer of Rs. 1,00,000 discount to woman, Egg Freezing facility, who are wanting to wait due to professional career goals or want to postpone extension of family due to various other reasons.<br />
         <br />
-        Deserving couples are selected by a committee put in place by the
-        Foundation. The selection process and merits are defined by the
-        GarbhaGnan Foundation and the decision of the committee is final.
+        In its pursuit of rendering service to couples looking for progeny, Garbhagnan Foundation has decided to offer <strong> "PARIPOORNA 2024"</strong>, where the discount offered by the GarbhaGudi IVF Center is being borne by GarbhaGnan Foundation as a part of its CSR activity.
       </div>
       <ul role='list' className='pb-8'>
         {items.map((item) => (
@@ -47,28 +36,22 @@ const items = [
     title: 'The couple should be citizens and residents of India',
   },
   {
-    id: 3,
+    id: 2,
     title:
       'Paripoorna cannot be combined with any other benefit plans provided at GarbhaGudi',
   },
   {
-    id: 4,
-    title:
-      'Benefits will be applied to all the couples who opt for the all-inclusive IVF package of ₹2,50,000',
+    id: 3,
+    title: 'Paripoorna Benefit plan is non-transferrable',
   },
   {
-    id: 5,
-    title: 'Paripoorna Benefit plan is non-transferrable',
+    id: 4,
+    title: 'No Offer code required to avail the benefit',
   },
   {
     id: 6,
     title:
       'The benefit plan ends on the mentioned date and cannot be extended under any circumstances, unless specified by GarbhaGudi Management',
-  },
-  {
-    id: 7,
-    title:
-      'On approval, an amount of ₹50,000 is to be paid to GarbhaGudi in advance, which will be adjusted in the final bill',
   },
   {
     id: 9,
@@ -78,6 +61,6 @@ const items = [
   {
     id: 10,
     title:
-      "Additional terms and conditions may apply. Please refer to the 'PARIPOORNA - 2023 Application form' for more information",
+      "Additional terms and conditions may apply",
   },
 ];

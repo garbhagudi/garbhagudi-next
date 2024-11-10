@@ -156,7 +156,14 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
 
 export default IndexPage;
 
-const ImageComponent = ({ name, image, designation, imageAlt }) => {
+interface ImageComponentProps {
+  name: string;
+  image: string;
+  designation: string;
+  imageAlt: string;
+}
+
+const ImageComponent = ({ name, image, designation, imageAlt }: ImageComponentProps) => {
   return (
     <div className='flex flex-col items-center justify-center md:h-[21rem]'>
       <div className='relative h-44 w-44'>

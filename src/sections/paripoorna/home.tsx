@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, Transition } from '@headlessui/react';
+import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import Link from 'next/link';
@@ -45,8 +45,8 @@ const PriceSlash: React.FC<PriceSlashProps> = ({
       <div className='mt-5 text-sm'>
         Includes*:
         <ul className='list-inside list-disc'>
-          <li>Consultations and scans during stimulations</li>
-          <li>Ovatian Stimulation Injections</li>
+          <li>Consultations and scans during stimulation</li>
+          <li>Ovarian Stimulation Injections</li>
           <li>Limited Lab investigations during stimulation</li>
           <li>OT Consumables ({'<'} ₹ 5000)</li>
           <li>Pre & Post Op Medications</li>
@@ -77,7 +77,7 @@ const Home = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2'>
           <div className='flex flex-col items-start justify-center px-3'>
             <div className='py-8 font-heading text-2xl font-bold text-gg-500 dark:text-gg-400'>
-              &quot;Get a massive 90,000/-* off on your IVF Treatments&quot;
+              &quot;Get a massive 1,00,000/-* off on your IVF Treatments&quot;
               <div className='block text-right text-xs text-gray-800 dark:text-gray-200'>
                 *Terms and conditions apply
               </div>
@@ -89,11 +89,11 @@ const Home = () => {
               many couples cannot afford IVF. Keeping this in mind, GarbhaGudi
               IVF Centre in association with GarbhaGnan Foundation, has
               initiated this program called{' '}
-              <span className='font-bold underline'>PARIPOORNA-2023. </span>
-              <PriceSlash originalPrice={250000} slashedPrice={160000} />
+              <span className='font-bold underline'>PARIPOORNA-2024. </span>
+              <PriceSlash originalPrice={260000} slashedPrice={160000} />
               This December, celebrate the season of parenthood, with
               Paripoorna. GarbhaGudi IVF Centre is offering a flat{' '}
-              <span className='font-bold underline'>₹90,000/-</span> off on your
+              <span className='font-bold underline'>₹1,00,000/-</span> off on your
               IVF cycle cost. Visit the GarbhaGudi branch nearest to you to
               avail the offer and take the first steps in your journey towards
               completeness.
@@ -107,7 +107,7 @@ const Home = () => {
                   </Link>
                 </div>
                 <div className='rounded-xl bg-yellow-500 px-3 py-2 font-lexend text-white dark:bg-yellow-600'>
-                  <Link href='/features/paripoorna-2023/#how-to'>
+                  <Link href='/features/paripoorna-2024.tsx/#how-to'>
                     <div>Know More</div>
                   </Link>
                 </div>
@@ -116,7 +116,7 @@ const Home = () => {
           </div>
           <div className='flex items-center justify-center lg:ml-10'>
             <Image
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1699869285/paripoorna/Paripoorna_2023_Ver_Logo_Eng_bridnx.png'
+              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1731247437/paripoorna/Paripoorna_English_tfrujt.webp'
               alt='pp logo'
               width={500}
               height={500}
@@ -152,7 +152,7 @@ const WatchVideo = () => {
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as='div' className='relative z-10' onClose={closeModal}>
-          <Transition.Child
+          <TransitionChild
             as={Fragment}
             enter='ease-out duration-300'
             enterFrom='opacity-0'
@@ -162,11 +162,11 @@ const WatchVideo = () => {
             leaveTo='opacity-0'
           >
             <div className='fixed inset-0 bg-black bg-opacity-25' />
-          </Transition.Child>
+          </TransitionChild>
 
           <div className='fixed inset-0 overflow-y-auto'>
             <div className='flex min-h-full items-center justify-center p-4 text-center'>
-              <Transition.Child
+              <TransitionChild
                 as={Fragment}
                 enter='ease-out duration-300'
                 enterFrom='opacity-0 scale-95'
@@ -175,13 +175,13 @@ const WatchVideo = () => {
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'
               >
-                <Dialog.Panel className='w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
-                  <Dialog.Title
+                <DialogPanel className='w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
+                  <DialogTitle
                     as='h3'
                     className='text-center font-heading text-2xl font-bold leading-6 text-gray-900'
                   >
                     Paripoorna Launch
-                  </Dialog.Title>
+                  </DialogTitle>
 
                   <div>
                     <div className='mt-8 overflow-hidden rounded-xl border-2 border-brandPink'>
@@ -202,8 +202,8 @@ const WatchVideo = () => {
                       Got it, thanks!
                     </button>
                   </div>
-                </Dialog.Panel>
-              </Transition.Child>
+                </DialogPanel>
+              </TransitionChild>
             </div>
           </div>
         </Dialog>
