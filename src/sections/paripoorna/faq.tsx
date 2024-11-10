@@ -84,7 +84,7 @@ const Data = [
   {
     title: `What is the last date to apply for PARIPOORNA program?`,
     contents: (
-      <div>Register for the PARIPOORNA program before 31st Dec&apos;2023.</div>
+      <div>Register for the PARIPOORNA program before 31st Dec&apos;2024.</div>
     ),
   },
   {

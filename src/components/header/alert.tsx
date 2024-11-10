@@ -24,13 +24,13 @@ const Alert = () => {
                 </span>
                 <span className='hidden md:inline'>
                   PARIPOORNA: It's the season of JOY of being COMPLETE 👶💖 Get
-                  ₹ 90,000/- Discount on IVF Treatment
+                  ₹ 1,00,000/- Discount on IVF Treatment
                 </span>
               </p>
             </div>
             <div className='order-3 mt-2 w-full flex-shrink-0 sm:order-2 sm:mt-0 sm:w-auto'>
               <Link
-                href='/features/paripoorna-2023'
+                href='/features/paripoorna-2024'
                 className='flex items-center justify-center rounded-md border border-transparent bg-gg-500 px-3 py-1 font-lexend text-sm text-white shadow-sm hover:bg-gg-600 dark:bg-gray-500 dark:hover:bg-gray-600 md:py-2'
               >
                 Learn more
