@@ -1,5 +1,11 @@
 import React from 'react';
-import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react';
+import {
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  Transition,
+  TransitionChild,
+} from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import Link from 'next/link';
@@ -71,7 +77,7 @@ const Home = () => {
       <div className='mx-auto max-w-7xl'>
         <div className='py-12 text-center font-heading text-4xl font-bold text-gg-600 lg:py-24 lg:text-5xl'>
           <h1 className='mx-auto max-w-lg rounded-md py-2 dark:bg-gray-200 dark:bg-opacity-80'>
-            Paripoorna 2023
+            Paripoorna 2024
           </h1>
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
@@ -93,8 +99,8 @@ const Home = () => {
               <PriceSlash originalPrice={260000} slashedPrice={160000} />
               This December, celebrate the season of parenthood, with
               Paripoorna. GarbhaGudi IVF Centre is offering a flat{' '}
-              <span className='font-bold underline'>₹1,00,000/-</span> off on your
-              IVF cycle cost. Visit the GarbhaGudi branch nearest to you to
+              <span className='font-bold underline'>₹1,00,000/-</span> off on
+              your IVF cycle cost. Visit the GarbhaGudi branch nearest to you to
               avail the offer and take the first steps in your journey towards
               completeness.
               <div className='mt-10 flex flex-col items-start justify-between space-y-3 md:items-center lg:flex-row lg:space-y-0'>
