@@ -432,6 +432,8 @@ module.exports = {
       content: ['var(--font-nunito), sans-serif'],
       benne: ['var(--font-benne), sans-serif'],
       lexend: ['var(--font-lexend), sans-serif'],
+      'nunito-Sans': ['Nunito Sans'],
+      figtree: ['Figtree'],
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

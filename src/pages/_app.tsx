@@ -8,11 +8,24 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
+import { Nunito_Sans, Figtree } from 'next/font/google';
 
+// Dynamically import components
 const Footer = dynamic(() => import('components/footer/footer'));
 const Nav = dynamic(() => import('components/header/header'));
 const Salesiq = dynamic(() => import('components/SalesIQ'));
 const Loading = dynamic(() => import('components/Loading'));
+
+// Use next/font to load the fonts
+const nunitoSans = Nunito_Sans({
+  weight: ['400', '500', '600', '800'],
+  subsets: ['latin'],
+});
+
+const figtree = Figtree({
+  weight: ['400', '500', '600'],
+  subsets: ['latin'],
+});
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -46,23 +59,23 @@ function MyApp({ Component, pageProps }) {
       router.events.off('routeChangeError', end);
     };
   }, [router.events]);
+
   const path = router.asPath.endsWith('/index') ? '' : router.asPath;
+
   return (
     <RootLayout>
       <Head>
-        <>
-          <link
-            rel='alternative'
-            href={`https://www.garbhagudi.com${path}`}
-            hrefLang='en-us'
-          />
-          <link rel='canonical' href={`https://www.garbhagudi.com${path}`} />
-        </>
+        <link
+          rel='alternative'
+          href={`https://www.garbhagudi.com${path}`}
+          hrefLang='en-us'
+        />
+        <link rel='canonical' href={`https://www.garbhagudi.com${path}`} />
         <meta
           name='viewport'
           content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover'
         />
-        <meta httpEquiv='content-language' content='en-gb'></meta>
+        <meta httpEquiv='content-language' content='en-gb' />
         <meta
           name='robots'
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
@@ -72,7 +85,9 @@ function MyApp({ Component, pageProps }) {
         {loading ? (
           <Loading />
         ) : (
-          <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
+          <div
+            className={`min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800 ${nunitoSans.className} ${figtree.className}`}
+          >
             {shouldDisplay && <Nav />}
             <Component {...pageProps} />
             <Footer />

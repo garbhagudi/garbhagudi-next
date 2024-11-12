@@ -63,6 +63,12 @@ export const TreatmentHeader = {
       icon: 'https://media.graphassets.com/LLcPNLXqTVenv25alNry',
       link: '/treatments/egg-donation',
     },
+    {
+      id: '11',
+      name: 'Fertility',
+      icon: 'https://media.graphassets.com/supeMyA2Q3KcYwbmmvv9',
+      link: '/treatments/ivf-treatment-fertility',
+    },
   ],
   male: [
     {
