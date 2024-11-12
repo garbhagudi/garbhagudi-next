@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import BookAnAppointment from './bookAnAppointment';
 
 const CTA: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
   return (
     <div
       className='relative flex h-screen max-h-64 items-center justify-center bg-cover bg-center shadow-xl'
@@ -18,10 +24,21 @@ const CTA: React.FC = () => {
           Contact us now to start your journey with us and experience the joy of
           parenthood.
         </p>
-        <button className='rounded-lg bg-gg-500 px-4 py-2 font-semibold text-white hover:bg-gg-400 focus:outline-none dark:bg-gray-600 dark:hover:bg-gg-400'>
-          <Link href=''>Book an Appointment</Link>
+        <button
+          onClick={() => setIsOpen(true)}
+          className='rounded-lg bg-gg-500 px-4 py-2 font-semibold text-white hover:bg-gg-400 focus:outline-none dark:bg-gray-600 dark:hover:bg-gg-400'
+        >
+          Book an Appointment{' '}
         </button>
       </div>
+      {isOpen && (
+        <div
+          className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'
+          onClick={handleClose}
+        >
+          <BookAnAppointment />
+        </div>
+      )}
     </div>
   );
 };

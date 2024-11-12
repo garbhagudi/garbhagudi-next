@@ -74,7 +74,7 @@ export default function Overview() {
   return (
     <div className='pb-5 pt-10'>
       <div className='flex flex-col'>
-        <div className='my-10 mr-10 pb-5 text-center text-4xl font-extrabold leading-8 text-[#1D1D1D]'>
+        <div className='my-10 mr-10 pb-5 text-center text-4xl font-extrabold leading-8 text-[#1D1D1D] dark:text-white ' >
           Overview
         </div>
         <div className='flex items-start gap-28 px-14 text-center'>

@@ -88,7 +88,7 @@ export default function PlannedSteps() {
         experienced fertility experts to ensure safety and comfort.
       </div>
 
-      <div className='mx-auto w-[95%]  p-10'>
+      <div className='mx-auto w-[95%] p-10'>
         {renderData.map((ele, index) => (
           <div key={index + 1}>
             <div className='mb-5 flex items-center gap-5 py-5'>
@@ -100,19 +100,21 @@ export default function PlannedSteps() {
                 loading='lazy'
                 // layout="responsive"
                 // layout='intrinsic' // or layout="responsive"
-                objectFit='cover'
+                // objectFit='cover'
               />
 
               <div>
-                <span className='py-2 text-xl font-bold'>{ele.title}</span>
-                <ul className='list-inside list-disc py-3  opacity-70'>
+                <span className='py-2 text-lg font-bold tracking-tighter'>
+                  {ele.title}
+                </span>
+                <ul className='list-inside list-disc py-2 opacity-70'>
                   {ele.subHeading.map((el, index) => (
                     <li
                       key={index}
-                      className='custom-list-item text-wrap text-lg font-nunito-Sans'
+                      className='custom-list-item font-nunito-Sans text-wrap'
                     >
-                      <span className='font-bold'>{el.subTitle}</span>
-                      <span className='font-normal leading-6 text-[#6C6C6C]'>
+                      <span className='text-base font-bold'>{el.subTitle}</span>
+                      <span className='text-base font-normal text-[#6C6C6C]'>
                         {' '}
                         {el.subContent}
                       </span>
