@@ -30,7 +30,7 @@ export const getStaticProps = async ({ params }) => {
     variables: {
       slug: params.slug,
     },
-  });
+  })||{};
 
   return {
     props: {

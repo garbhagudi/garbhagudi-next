@@ -114,8 +114,8 @@ export default function Overview() {
           Statistic & Findings
         </div>
         <div className='flex items-center justify-center gap-20'>
-          {statistic.map((ele) => (
-            <div className='flex h-32 w-72 flex-col items-center justify-center bg-[#F9F9F9] py-16 px-5'>
+          {statistic.map((ele,index) => (
+            <div key={index} className='flex h-32 w-72 flex-col items-center justify-center bg-[#F9F9F9] py-16 px-5'>
               <div className='text-4xl font-extrabold text-[#D9576C]'>
                 {ele.value}
               </div>

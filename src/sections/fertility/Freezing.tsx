@@ -80,8 +80,8 @@ export default function Freezing() {
                   {ele.title}
                 </div>
                 <div className='py-1 text-lg font-normal'>
-                  {ele.content.map((el) => (
-                    <div className='py-1'>
+                  {ele.content.map((el,index) => (
+                    <div key={index} className='py-1'>
                       <span className='font-bold opacity-80'>{el.title}</span>
                       <span className='text-[#6C6C6C] font-normal opacity-80'> {el.content}</span>
                     </div>
