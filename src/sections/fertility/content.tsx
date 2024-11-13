@@ -6,7 +6,7 @@ import imag2 from '../../assets/union-page/Union-2.png';
 
 export default function Content() {
   return (
-    <div className='mx-auto my-10 flex w-full flex-col items-center justify-center font-nunito-Sans '>
+    <div className='mx-auto  mt-20 mb-10 flex w-full flex-col items-center justify-center font-nunito-Sans '>
       <div className='py-6 text-4xl font-extrabold text-[#1D1D1D] text-center dark:text-white'>
         Understanding Egg Freezing: A Modern Option for Future Planning
       </div>

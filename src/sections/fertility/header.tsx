@@ -21,7 +21,7 @@ export default function Banner() {
             height={150}
             alt={`Image `}
             loading='lazy'
-            className='absolute left-0 top-0 h-screen w-screen object-fill'
+            className='absolute bottom-[100px] left-0 top-0  h-screen w-screen '
           />
 
           <div className='absolute inset-0 bg-gradient-to-r dark:from-gray-800/90 dark:to-gray-800/30 sm:bg-transparent'></div>
@@ -65,6 +65,21 @@ export default function Banner() {
               </div>
             </div>
           </div>
+
+          <div className='custom-shape-divider-bottom-1731505107'>
+            <svg
+              data-name='Layer 1'
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 1200 120'
+              preserveAspectRatio='none'
+            >
+              <path
+                d='M985.66,27.17C906.67,48,823.78,89,743.84,105.81c-82.26,17.34-168.06,16.33-250.45-.39-57.84-11.73-114-31.07-172-41.86A600.21,600.21,0,0,0,0,92.65V120H1200V24.2C1132.19,1.08,1055.71,8.69,985.66,27.17Z'
+                className='shape-fill'
+                transform='scale(-1, -1) translateX (-1200, -120)'
+              ></path>
+            </svg>
+          </div>
         </section>
       </div>
       {isOpen && (
@@ -76,43 +91,31 @@ export default function Banner() {
         </div>
       )}
 
-      {/* <div className='custom-shape-divider-bottom-1731475842'>
-        <svg
-          data-name='Layer 1'
-          xmlns='http://www.w3.org/2000/svg'
-          viewBox='0 0 1200 120'
-          preserveAspectRatio='none'
-        >
-          <path
-            d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z'
-            className='shape-fill'
-          ></path>
-        </svg>
-      </div> */}
-
-      {/* <style>{`
- .custom-shape-divider-bottom-1731475842 {
+     
+      <style>{`
+ .custom-shape-divider-bottom-1731505107 {
     position: absolute;
     bottom: 0;
-    left: -50%;
-    width: 100%;
+    left: 0;
+    width: 130%;
     overflow: hidden;
     line-height: 0;
+    
 }
 
-.custom-shape-divider-bottom-1731475842 svg {
+.custom-shape-divider-bottom-1731505107 svg {
     position: relative;
     display: block;
-    width: calc(156% + 1.3px);
-    height: 93px;
-    transform: rotateY(180deg);
+    width: calc(100% + 1.3px);
+    height: 90px;
+  
 }
 
-.custom-shape-divider-bottom-1731475842 .shape-fill {
-    fill: #FFFFFF;
+.custom-shape-divider-bottom-1731505107 .shape-fill {
+    fill: white;
+    
 }
-C
-`}</style> */}
+`}</style>
     </Fragment>
   );
 }
