@@ -28,22 +28,22 @@ export default function Banner() {
           <div className='relative mx-auto max-w-screen-xl px-4 py-28 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8'>
             <div className='max-w-2xl text-center sm:text-left'>
               <h1 className='flex flex-col text-white'>
-                <span className='font-nunito-Sans py-2 text-5xl font-extrabold dark:text-gray-200 sm:text-5xl'>
+                <span className='py-2 font-nunito-Sans text-5xl font-extrabold dark:text-gray-200 sm:text-5xl'>
                   Preserve Your Fertility, Empower Your Choices!
                 </span>
               </h1>
-              <h3 className='font-nunito-Sans mt-3 max-w-lg text-white dark:text-gray-200 sm:text-xl sm:leading-relaxed'>
+              <h3 className='mt-3 max-w-lg font-nunito-Sans text-white dark:text-gray-200 sm:text-xl sm:leading-relaxed'>
                 Egg freezing allows you to plan for the future on your terms.
                 Discover the science, support, and possibilities behind
                 preserving your fertility with expert care.
               </h3>
 
-              <div className='font-figtree mt-8 flex flex-wrap items-center gap-4 text-base font-semibold'>
+              <div className='mt-8 flex flex-wrap items-center gap-4 font-figtree text-base font-semibold'>
                 <Link
                   href='https://api.whatsapp.com/send/?phone=916383697088&text=Hi.'
                   className='block w-full rounded-[10px] border-2 border-white bg-[#49C958] px-4 py-2 font-content text-white hover:bg-green-400 focus:outline-none focus:ring active:bg-green-300 sm:w-auto'
                 >
-                  <span className='font-figtree flex items-center justify-center gap-2 text-lg'>
+                  <span className='flex items-center justify-center gap-2 font-figtree text-lg'>
                     <BsWhatsapp size={22} className='text-white' /> Drop us a
                     "Hi" here
                   </span>
@@ -66,9 +66,6 @@ export default function Banner() {
             </div>
           </div>
         </section>
-        {/* <div className='container-style-left absolute -bottom-[6em] left-0 h-20 w-[60%] bg-white'></div>
-<div className='container-style-right absolute -bottom-24 right-0 h-20 w-[45%] bg-white'></div>
-<div className='connecting-line absolute bottom-0 left-[60%] h-[1px] w-[40%] bg-white'></div> */}
       </div>
       {isOpen && (
         <div
@@ -79,22 +76,43 @@ export default function Banner() {
         </div>
       )}
 
-      <style>{`
-  .container-style-left {
-    border-top-left-radius: 100rem 15rem;
-    border-top-right-radius: 180rem 30rem;
-  }
-  .container-style-right {
-    border-top-left-radius: 50rem 10rem;
-    border-top-right-radius: 100rem 20rem;
-  }
-  .connecting-line {
+      {/* <div className='custom-shape-divider-bottom-1731475842'>
+        <svg
+          data-name='Layer 1'
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 1200 120'
+          preserveAspectRatio='none'
+        >
+          <path
+            d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z'
+            className='shape-fill'
+          ></path>
+        </svg>
+      </div> */}
+
+      {/* <style>{`
+ .custom-shape-divider-bottom-1731475842 {
+    position: absolute;
+    bottom: 0;
+    left: -50%;
     width: 100%;
-    height: 1px;
-    background-color: #fff;
-    /* Adjust to place the line perfectly in between */
-  }
-`}</style>
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1731475842 svg {
+    position: relative;
+    display: block;
+    width: calc(156% + 1.3px);
+    height: 93px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1731475842 .shape-fill {
+    fill: #FFFFFF;
+}
+C
+`}</style> */}
     </Fragment>
   );
 }
