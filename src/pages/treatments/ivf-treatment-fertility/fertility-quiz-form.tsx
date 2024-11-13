@@ -179,13 +179,13 @@ export default function FertilityForm() {
               {submit.range}.
             </p>
             <p className='mx-auto mt-4 w-3/4 text-center text-lg text-[#6C6C6C]'>
-              {submit.range < 20 ? (
+              {submit.range <= 20 ? (
                 <span>
                   <span className='font-bold'>Low Risk:</span> Fertility health
                   appears stable. Routine check-ups recommended, but no
                   immediate concerns.
                 </span>
-              ) : submit.range > 41 ? (
+              ) : submit.range >= 41 ? (
                 <span>
                   <span className='font-bold'>High Risk:</span> Significant
                   factors indicate that egg freezing may be beneficial for
