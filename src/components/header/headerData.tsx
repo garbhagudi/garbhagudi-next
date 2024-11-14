@@ -65,9 +65,9 @@ export const TreatmentHeader = {
     },
     {
       id: '11',
-      name: 'Fertility',
+      name: 'Egg Freezing',
       icon: 'https://media.graphassets.com/supeMyA2Q3KcYwbmmvv9',
-      link: '/treatments/ivf-treatment-fertility',
+      link: '/treatments/ivf-treatment-egg-freezing',
     },
   ],
   male: [

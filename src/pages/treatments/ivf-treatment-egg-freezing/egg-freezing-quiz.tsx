@@ -24,7 +24,7 @@ export default function Fertility() {
           fertility profile and next steps. Let’s get started!
         </div>
         <div className='zcwf_button cursor-pointer rounded-lg bg-[#ea4b6a] px-10 py-2 text-center font-[nunito] font-bold text-white hover:bg-[#ee6f88] hover:opacity-75 focus:outline-none active:outline-none z-20'>
-          <Link href='/treatments/ivf-treatment-fertility/fertility-quiz-form'>
+          <Link href='/treatments/ivf-treatment-egg-freezing/egg-freezing-quiz-form'>
             Get Started
           </Link>
         </div>

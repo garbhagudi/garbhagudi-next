@@ -57,7 +57,7 @@ export default function Banner() {
                   Book an Appointment
                 </Link>
                 <Link
-                  href='/treatments/ivf-treatment-fertility/fertility-quiz'
+                  href='/treatments/ivf-treatment-egg-freezing/egg-freezing-quiz'
                   className='block w-full scroll-smooth rounded-[10px] border-2 bg-[#1D1D1D] px-4 py-2 font-content text-lg text-white shadow hover:opacity-80 focus:outline-none focus:ring active:text-rose-500 dark:text-white sm:w-auto'
                 >
                   Take a Quiz
