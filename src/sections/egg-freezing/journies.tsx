@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import profile from '../../assets/union-page/Ellipse 1.png';
 
 export default function Journies() {
   const renderData = [
@@ -38,7 +37,7 @@ export default function Journies() {
               <div className='flex justify-center gap-3'>
                 <div>
                   <Image
-                    src={profile}
+                    src={"https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567194/eggFreezing/xvwtrr5loef21sk4yprc.png"}
                     width={200}
                     height={150}
                     alt={`Image `}

@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import colorImage from '../../assets/union-page/Union3.png';
-import image from '../../assets/union-page/Union (1).png';
-import image1 from '../../assets/fetility-explore-package/image.png';
-import image2 from '../../assets/fetility-explore-package/image (1).png';
-import image3 from '../../assets/fetility-explore-package/image (2).png';
 import Link from 'next/link';
 
 export default function FertilityTest() {
@@ -43,7 +38,8 @@ export default function FertilityTest() {
       price: '₹3,500',
       taxes: '(Incl. of all taxes)',
       buttonText: 'Buy Now',
-      image: image1,
+      image:
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568282/eggFreezing/koaxrqjuxyaiqkcnj4is.png',
     },
     {
       title: 'Essential Reproductive Health Check (Male)',
@@ -52,7 +48,8 @@ export default function FertilityTest() {
       price: '₹3,500',
       taxes: '(Incl. of all taxes)',
       buttonText: 'Buy Now',
-      image: image2,
+      image:
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568282/eggFreezing/xmqgi7cqorspafwmbcfd.png',
     },
     {
       title: 'Oocyte Freezing Package',
@@ -61,18 +58,21 @@ export default function FertilityTest() {
       price: '₹1,50,000',
       taxes: '(Incl. of all taxes)',
       buttonText: 'Contact Us',
-      image: image3,
+      image:
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568282/eggFreezing/cyaj5on2avd7yxfzs3tb.png',
     },
   ];
   return (
     <div className='bg-[#B03146] pb-20 pt-10'>
-      <div className='font-nunito-Sans flex items-center justify-center pb-10 text-4xl font-extrabold text-white'>
+      <div className='flex items-center justify-center pb-10 font-nunito-Sans text-4xl font-extrabold text-white'>
         Fertility Test - 4 Simple Steps
       </div>
       <div className='mx-auto flex w-10/12 flex-row justify-between gap-10'>
         <div className='relative h-[350px] w-full'>
           <Image
-            src={colorImage}
+            src={
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567197/eggFreezing/h55ajjflanab267q8ssm.png'
+            }
             width={350}
             height={350}
             alt='Image 1'
@@ -82,7 +82,9 @@ export default function FertilityTest() {
 
           {/* Second Image (middle layer) */}
           <Image
-            src={image}
+            src={
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567197/eggFreezing/h2rbj9cognzqtpzelove.png'
+            }
             width={350}
             height={350}
             alt='Image 2'
@@ -91,7 +93,7 @@ export default function FertilityTest() {
           />
         </div>
 
-        <div className='font-nunito-Sans mt-10 w-full'>
+        <div className='mt-10 w-full font-nunito-Sans'>
           {renderData.map((ele, index) => (
             <div key={index} className='py-2 text-white'>
               <div className='text-xl font-semibold leading-6'>
@@ -102,14 +104,11 @@ export default function FertilityTest() {
               </div>
               {renderData.length === index + 1 && (
                 <div className='mt-14 w-1/3'>
-                  <span>
-                    <Link
-                      href=''
-                      className='flex items-center justify-center scroll-smooth rounded bg-white px-4 py-2 font-content font-semibold text-[#D9576C] shadow hover:text-gg-400 focus:outline-none focus:ring active:text-rose-500 dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
-                      onClick={openModal}
-                    >
-                      Explore Packages
-                    </Link>
+                  <span
+                    className='flex cursor-pointer items-center justify-center scroll-smooth rounded bg-white px-4 py-2 font-content font-semibold text-[#D9576C] shadow hover:text-gg-400 focus:outline-none focus:ring active:text-rose-500 dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
+                    onClick={openModal}
+                  >
+                    Explore Packages
                   </span>
                 </div>
               )}
@@ -139,8 +138,10 @@ export default function FertilityTest() {
                 key={index}
                 className='mb-4 flex items-center gap-4 rounded-lg border p-2'
               >
-                <img
-                  src={pkg.image.src}
+                <Image
+                  src={pkg.image}
+                  width={100}
+                  height={100}
                   alt={pkg.title}
                   className='h-28 w-28 rounded-md object-cover'
                 />

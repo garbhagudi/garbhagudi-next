@@ -1,11 +1,5 @@
 import React, { Fragment, useState } from 'react';
 import Image from 'next/image';
-import image1 from '../../assets/union-page/Dr. Shreya Thaparkar.png';
-import image2 from '../../assets/union-page/Dr. Arjun Mehra.png';
-import image3 from '../../assets/union-page/Dr. Mahika Singh.png';
-import image4 from '../../assets/union-page/Dr. Avigyan Kapoor.png';
-import image5 from '../../assets/union-page/image (4).png';
-import image6 from '../../assets/union-page/image (5).png';
 import { BsWhatsapp } from 'react-icons/bs';
 import Link from 'next/link';
 import BookAnAppointment from './bookAnAppointment';
@@ -13,32 +7,38 @@ import BookAnAppointment from './bookAnAppointment';
 export default function Expects() {
   const renderDate = [
     {
-      image: image1,
+      image:
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/j328gmwzbhjalc9zuqeh.png',
       name: 'Dr. Shreya Thaparkar',
       designation: ' MBBS, MD(Gynaecology)',
     },
     {
-      image: image2,
+      image:
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/e3my0oczhjvsddbeq0rz.png',
       name: 'Dr. Arjun Mehra',
       designation: 'MBBS, MD (Medicine)',
     },
     {
-      image: image3,
+      image:
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/njqms3mdm883azztpwbu.png',
       name: 'Dr. Mahika Singh',
       designation: 'MBBS, MD (Gynaecology)',
     },
     {
-      image: image4,
+      image:
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/qlbrvtdvwidbihx4e6nx.png',
       name: 'Dr. Avigyan Kapoor',
       designation: ' MBBS, MD(Gynaecology)',
     },
     {
-      image: image5,
+      image:
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/zlwt6aymkp4by8taozmp.png',
       name: 'Dr. Vishal Kamra',
       designation: 'MBBS, MD (Medicine)',
     },
     {
-      image: image6,
+      image:
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/a8oypa5u7p8uihmrfyg4.png',
       name: 'Dr. Vishal Kamra',
       designation: 'MBBS, MD (Medicine)',
     },
@@ -119,7 +119,6 @@ export default function Expects() {
                   width={320}
                   height={160}
                   alt={`Image ${index + 1}`}
-                  loading='lazy'
                 />
                 <div className='flex flex-col items-center justify-center font-nunito-Sans font-semibold'>
                   <span className='pb-1 pt-2 text-xl'>{ele.name}</span>

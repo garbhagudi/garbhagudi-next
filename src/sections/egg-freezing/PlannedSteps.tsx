@@ -1,15 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
-import image1 from '../../assets/union-page/image.png';
-import image2 from '../../assets/union-page/image (1).png';
-import image3 from '../../assets/union-page/image (2).png';
-import image4 from '../../assets/union-page/image (3).png';
 
 export default function PlannedSteps() {
   const renderData = [
     {
       title: 'Step 1: Initial Consultation and Assessment',
-      image: image1,
+      image:
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567197/eggFreezing/tbqrnyfvi5u723rr0iiv.png',
       className: 'h-36 w-52 bg-cover',
 
       subHeading: [
@@ -27,7 +24,8 @@ export default function PlannedSteps() {
     },
     {
       title: 'Step 2: Ovarian Stimulation and Monitoring',
-      image: image2,
+      image:
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/etsi7dqpudfd6mvpl0pu.png',
       className: 'h-36 w-52 bg-cover',
 
       subHeading: [
@@ -45,7 +43,8 @@ export default function PlannedSteps() {
     },
     {
       title: 'Step 3: Egg Retrieval',
-      image: image3,
+      image:
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567197/eggFreezing/oiyciatjsnj702iq4ili.png',
       className: 'h-36 w-52 bg-cover',
 
       subHeading: [
@@ -63,7 +62,8 @@ export default function PlannedSteps() {
     },
     {
       title: 'Step 4: Long-Term Storage and Future Use',
-      image: image4,
+      image:
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/sfcp1uzcnvk7tdoynu9d.png',
       className: "'h-36 w-48 bg-cover'",
       subHeading: [
         {
@@ -79,7 +79,7 @@ export default function PlannedSteps() {
     },
   ];
   return (
-    <div className='font-nunito-Sans mx-auto w-10/12 py-14'>
+    <div className='mx-auto w-10/12 py-14 font-nunito-Sans'>
       <div className='flex items-center justify-center py-5 text-4xl font-extrabold'>
         Guided Support Every Step of the Way
       </div>
@@ -111,7 +111,7 @@ export default function PlannedSteps() {
                   {ele.subHeading.map((el, index) => (
                     <li
                       key={index}
-                      className='custom-list-item font-nunito-Sans text-wrap'
+                      className='custom-list-item text-wrap font-nunito-Sans'
                     >
                       <span className='text-base font-bold'>{el.subTitle}</span>
                       <span className='text-base font-normal text-[#6C6C6C]'>

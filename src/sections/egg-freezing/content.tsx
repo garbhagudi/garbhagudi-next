@@ -1,13 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-import imag from '../../assets/union-page/Union.png';
-import imag1 from '../../assets/union-page/Union-1.png';
-import imag2 from '../../assets/union-page/Union-2.png';
 
 export default function Content() {
   return (
-    <div className='mx-auto  mt-20 mb-10 flex w-full flex-col items-center justify-center font-nunito-Sans '>
-      <div className='py-6 text-4xl font-extrabold text-[#1D1D1D] text-center dark:text-white'>
+    <div className='mx-auto mb-10 mt-20 flex w-full flex-col items-center justify-center font-nunito-Sans'>
+      <div className='py-6 text-center text-4xl font-extrabold text-[#1D1D1D] dark:text-white'>
         Understanding Egg Freezing: A Modern Option for Future Planning
       </div>
       <div className='mx-auto w-9/12 text-center text-lg font-normal text-[#1D1D1D] opacity-70 dark:text-white'>
@@ -21,24 +18,36 @@ export default function Content() {
       <div className='w-8/12'>
         <div className='relative my-16 h-[350px]'>
           <Image
-            src={imag1}
+            src={
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/ld50vuhzlttzu1pzikx8.png'
+            }
             alt='Image 1'
+            width={100}
+            height={100}
             loading='lazy'
             className='absolute inset-0 w-full'
           />
 
           {/* Second Image (middle layer) */}
           <Image
-            src={imag}
+            src={
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567197/eggFreezing/da3109fxnfronek7kcxo.png'
+            }
             alt='Image 2'
+            width={100}
+            height={100}
             loading='lazy'
-            className='absolute inset-0'
+            className='absolute inset-0 w-full'
           />
 
           {/* Third Image (top layer) */}
           <Image
-            src={imag2}
+            src={
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567197/eggFreezing/scmqnfg4rnjfnfmjtibw.png'
+            }
             alt='Image 3'
+            width={100}
+            height={100}
             loading='lazy'
             className='absolute inset-0 mx-auto mt-4 w-[90%]'
           />
