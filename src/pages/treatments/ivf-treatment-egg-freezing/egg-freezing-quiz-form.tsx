@@ -140,8 +140,7 @@ export default function FertilityForm() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'api-key':
-            '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',
+          'api-key': process.env.NEXT_PUBLIC_EMAIL_API_KEY,
         },
         body: JSON.stringify({
           sender: { email: 'vivek.singh@witarist.in' },
