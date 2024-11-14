@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import Image from 'next/image';
 import image1 from '../../assets/union-page/Dr. Shreya Thaparkar.png';
 import image2 from '../../assets/union-page/Dr. Arjun Mehra.png';
@@ -8,6 +8,7 @@ import image5 from '../../assets/union-page/image (4).png';
 import image6 from '../../assets/union-page/image (5).png';
 import { BsWhatsapp } from 'react-icons/bs';
 import Link from 'next/link';
+import BookAnAppointment from './bookAnAppointment';
 
 export default function Expects() {
   const renderDate = [
@@ -54,7 +55,7 @@ export default function Expects() {
           href='https://api.whatsapp.com/send/?phone=916383697088&text=Hi.'
           className='block w-full rounded-[10px] border-2 border-white bg-[#49C958] px-4 py-2 font-content text-white hover:bg-green-400 focus:outline-none focus:ring active:bg-green-300 sm:w-auto'
         >
-          <span className='font-figtree flex items-center justify-center gap-2 text-lg'>
+          <span className='flex items-center justify-center gap-2 font-figtree text-lg'>
             <BsWhatsapp size={22} className='text-white' /> Drop us a "Hi" here
           </span>
         </Link>
@@ -66,12 +67,12 @@ export default function Expects() {
         'Speak directly with one of our experts for an in-depth consultation, guiding you through every option.',
 
       btn: (
-        <Link
-          href='#know-more'
+        <div
+          onClick={() => setIsOpen(true)}
           className='block w-full scroll-smooth rounded-[10px] bg-[#D9576C] px-4 py-2 font-content text-lg text-white shadow hover:opacity-80 focus:outline-none focus:ring active:text-rose-500 dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
         >
           Call Us
-        </Link>
+        </div>
       ),
     },
     {
@@ -89,13 +90,19 @@ export default function Expects() {
       ),
     },
   ];
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
   return (
     <Fragment>
       <div className='py-5'>
-        <div className='font-nunito-Sans py-5 text-center text-4xl font-extrabold'>
+        <div className='py-5 text-center font-nunito-Sans text-4xl font-extrabold'>
           Meet our Fertility Experts
         </div>
-        <div className='font-nunito-Sans mx-auto w-10/12 text-center text-xl text-[#1D1D1D] opacity-70'>
+        <div className='mx-auto w-10/12 text-center font-nunito-Sans text-xl text-[#1D1D1D] opacity-70'>
           Our dedicated team brings years of experience and a compassionate
           approach to fertility care. Meet the specialists committed to
           supporting your journey.
@@ -114,7 +121,7 @@ export default function Expects() {
                   alt={`Image ${index + 1}`}
                   loading='lazy'
                 />
-                <div className='font-nunito-Sans flex flex-col items-center justify-center font-semibold'>
+                <div className='flex flex-col items-center justify-center font-nunito-Sans font-semibold'>
                   <span className='pb-1 pt-2 text-xl'>{ele.name}</span>
                   <span className='text-lg text-[#6C6C6C]'>
                     {ele.designation}
@@ -126,25 +133,41 @@ export default function Expects() {
         </div>
       </div>
 
-      <div className='bg-[#FFD9E038] pt-10 pb-20 '>
-        <div className='font-nunito-Sans py-5 text-center text-4xl font-extrabold dark:text-white '>
+      <div className='bg-[#FFD9E038] pb-20 pt-10'>
+        <div className='py-5 text-center font-nunito-Sans text-4xl font-extrabold dark:text-white'>
           What Next?
         </div>
-        <div className='font-nunito-Sans mx-auto w-10/12 text-center text-xl dark:text-white text-[#1D1D1D] opacity-70 pb-16'>
+        <div className='mx-auto w-10/12 pb-16 text-center font-nunito-Sans text-xl text-[#1D1D1D] opacity-70 dark:text-white'>
           Now since you read so much, here’s what you can do next
         </div>
-        <div className='flex justify-evenly items-center gap-7 w-9/12 mx-auto'>
+        <div className='mx-auto flex w-9/12 items-center justify-evenly gap-7'>
           {staticData.map((ele, index) => {
             return (
-              <div key={index} className='border-2 border-[#F4F4F4] p-5 bg-white text-center rounded-lg'>
-                <div className='font-figtree font-bold text-lg pb-2 text-black '>{ele.title}</div>
-                <div className='text-base pb-3 tracking-tight text-[#6A6A6A]'>{ele.content}</div>
+              <div
+                key={index}
+                className='rounded-lg border-2 border-[#F4F4F4] bg-white p-5 text-center'
+              >
+                <div className='pb-2 font-figtree text-lg font-bold text-black'>
+                  {ele.title}
+                </div>
+                <div className='pb-3 text-base tracking-tight text-[#6A6A6A]'>
+                  {ele.content}
+                </div>
                 <div>{ele.btn}</div>
               </div>
             );
           })}
         </div>
       </div>
+
+      {isOpen && (
+        <div
+          className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'
+          onClick={handleClose}
+        >
+          <BookAnAppointment />
+        </div>
+      )}
     </Fragment>
   );
 }

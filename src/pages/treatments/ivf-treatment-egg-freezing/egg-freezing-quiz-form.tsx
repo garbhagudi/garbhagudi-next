@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import BackgroundImage from '../../../assets/fertility-quiz/background1.png';
 import Link from 'next/link';
 import { BsWhatsapp } from 'react-icons/bs';
-import BookAnAppointment from 'sections/fertility/bookAnAppointment';
+import BookAnAppointment from 'sections/egg-freezing/bookAnAppointment';
 
 const genderOptions = ['male', 'female'];
 const statusOptions = ['single', 'married', 'committed'];

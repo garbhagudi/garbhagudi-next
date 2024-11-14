@@ -50,7 +50,7 @@ export default function Banner() {
                 </Link>
 
                 <Link
-                  href='#know-more'
+                  href=''
                   onClick={() => setIsOpen(true)}
                   className='block w-full scroll-smooth rounded-[10px] bg-white px-4 py-2 font-content text-lg text-brandPink shadow hover:opacity-80 focus:outline-none focus:ring active:text-rose-500 dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
                 >

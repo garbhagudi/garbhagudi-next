@@ -104,7 +104,7 @@ export default function FertilityTest() {
                 <div className='mt-14 w-1/3'>
                   <span>
                     <Link
-                      href='#know-more'
+                      href=''
                       className='flex items-center justify-center scroll-smooth rounded bg-white px-4 py-2 font-content font-semibold text-[#D9576C] shadow hover:text-gg-400 focus:outline-none focus:ring active:text-rose-500 dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
                       onClick={openModal}
                     >
