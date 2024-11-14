@@ -11,26 +11,27 @@ import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 
 export const getStaticProps = async ({ params }) => {
-  const { data } = await apolloClient.query({
-    query: gql`
-      query ($slug: String!) {
-        award(where: { slug: $slug }) {
-          id
-          image {
-            url
+  const { data } =
+    (await apolloClient.query({
+      query: gql`
+        query ($slug: String!) {
+          award(where: { slug: $slug }) {
+            id
+            image {
+              url
+            }
+            content {
+              raw
+              text
+            }
+            title
           }
-          content {
-            raw
-            text
-          }
-          title
         }
-      }
-    `,
-    variables: {
-      slug: params.slug,
-    },
-  });
+      `,
+      variables: {
+        slug: params.slug,
+      },
+    })) || {};
 
   return {
     props: {
