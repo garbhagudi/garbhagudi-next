@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-
 import Link from 'next/link';
 import { BsWhatsapp } from 'react-icons/bs';
 import BookAnAppointment from 'sections/egg-freezing/bookAnAppointment';
@@ -56,15 +55,19 @@ const RadioButton = ({
           onChange={onChange}
           className={`radio-oval ${className} h-4 w-4`}
         />
-        <span className='capitalize'>{label}</span>
+        <span className='cursor-pointer capitalize'>{label}</span>
       </label>
     </div>
   );
 };
 
 export default function FertilityForm() {
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const inchesRegex = /^(?:[0-9]|1[0-1])$/;
+
   const [isOpen, setIsOpen] = useState(false);
   const [BMIval, setBMIVal] = useState('');
+  const [error, setError] = useState(false);
   const [submit, setSubmit] = useState<any>({ range: 0, isSubmited: false });
   const [formData, setFormData] = useState<{
     gender: string;
@@ -74,6 +77,9 @@ export default function FertilityForm() {
     thyroid: string;
     diabetes: string;
     blood: string;
+    number: string;
+    name: string;
+    email: string;
     abortions: string;
     smoke: string;
     alcohol: string;
@@ -81,11 +87,13 @@ export default function FertilityForm() {
     drugs: string;
     age: number | string;
     weight: number | string;
-    height: number | string;
+    feet: number | string;
+    inches: number | string;
   }>({
     gender: '',
     age: '',
-    height: '',
+    feet: '',
+    inches: '',
     weight: '',
     abortions: '',
     alcohol: '',
@@ -98,14 +106,20 @@ export default function FertilityForm() {
     smoke: '',
     status: '',
     thyroid: '',
+    email: '',
+    name: '',
+    number: '',
   });
 
   useEffect(() => {
-    if (formData.height && formData.weight) {
-      const { height, weight } = formData;
-      const heightInMeters = Number(height) / 100; // Convert cm to meters
-      const calculatedBMI = Number(weight) / (heightInMeters * heightInMeters);
-      setBMIVal(calculatedBMI.toFixed(2)); // Set BMI with 2 decimal points
+    if ((formData.feet || formData.inches) && formData.weight) {
+      const { feet, weight, inches } = formData;
+      const num = Number(feet) || 0;
+      const heightInInches = num * 12 + Number(inches); // Total height in inches
+      const heightInMeters = heightInInches * 0.0254; // Convert height to meters
+      // Calculate BMI
+      const bmi = Number(weight) / (heightInMeters * heightInMeters);
+      setBMIVal(bmi.toFixed(2));
     } else {
       setBMIVal('');
     }
@@ -120,7 +134,152 @@ export default function FertilityForm() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
+  const sendMailsToUserApi = async (mail: string, htmlBodyContent: string) => {
+    try {
+      const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'api-key':
+            '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',
+        },
+        body: JSON.stringify({
+          sender: { email: 'vivek.singh@witarist.in' },
+          to: [{ email: mail }],
+          subject: 'Egg Freezing Quiz Results',
+          htmlContent: htmlBodyContent,
+        }),
+      });
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  const sendMail = async (range: number) => {
+    const getMessage = () => {
+      if (range <= 20) {
+        return `<span class="low-risk">Low Risk:</span> Fertility health appears stable. Routine check-ups recommended, but no immediate concerns.`;
+      } else if (range >= 41) {
+        return `<span class="high-risk">High Risk:</span> Significant factors indicate that egg freezing may be beneficial for future planning. Consulting with a fertility expert could provide additional insights.`;
+      } else {
+        return `<span class="moderate-risk">Moderate Risk:</span> Certain factors suggest considering fertility preservation or lifestyle adjustments.`;
+      }
+    };
+
+    const htmlBodyContent = `
+      <style>
+        .text-container {
+          font-family: Arial, sans-serif;
+          color: #333;
+          line-height: 1.6;
+        }
+        .score-text {
+          font-size: 1.875rem;
+          font-weight: bold;
+          padding: 20px;
+          max-width: 600px;
+          margin: auto;
+          text-align: center;
+
+        }
+        .result-text {
+          font-size: 1.125rem;
+          color: #555;
+          text-align: center;
+
+        }
+        .low-risk {
+          color: #2d6a4f;
+          font-weight: bold;
+          ext-align: center;
+
+        }
+        .moderate-risk {
+          color: #ffb703;
+          font-weight: bold;
+          text-align: center;
+
+        }
+        .high-risk {
+          color: #d90429;
+          font-weight: bold;
+          text-align: center;
+
+        }
+        h1 {
+          color: #D9576C;
+          font-size: 24px;
+          border-bottom: 2px solid #D9576C;
+          padding-bottom: 8px;
+          margin-top: 20px;
+        }
+        .info-section {
+          margin-bottom: 10px;
+          text-transform: capitalize;
+          
+        }
+          .email-section {
+            margin-bottom: 10px;
+          }
+        .info-section span {
+          font-weight: bold;
+        }
+      </style>
+      <div class="text-container">
+        <div class="score-text">The total scoring range of quiz is <strong>${range}</strong></div>
+        <div class="result-text">${getMessage()}</div>
+  
+        <h1>Basic Information</h1>
+        <div class="info-section">1. Name: <span>${formData.name}</span></div>
+        <div class="email-section">2. Email: <span>${formData.email}</span></div>
+        <div class="info-section">3. Mobile: <span>${formData.number}</span></div>
+        <div class="info-section">4. Gender: <span>${formData.gender}</span></div>
+        <div class="info-section">5. Age: <span>${formData.age}</span></div>
+        <div class="info-section">6. Weight: <span>${formData.weight} KG</span></div>
+        <div class="info-section">7. Height: <span>${formData.feet} Feet ${formData.inches} inches</span></div>
+  
+        <h1>BMI Calculation</h1>
+        <div class="info-section">1. BMI value: <span>${BMIval}</span></div>
+  
+        <h1>Marital & Family Status</h1>
+        <div class="info-section">1. Marital Status: <span>${formData.status}</span></div>
+        <div class="info-section">2. If married, do you currently have children: <span>${formData.children}</span></div>
+        <div class="info-section">3. Are you actively planning for pregnancy: <span>${formData.pregnancy}</span></div>
+  
+        <h1>Medical History</h1>
+        <div class="info-section">1. Do you have a history of thyroid-related issues: <span>${formData.thyroid}</span></div>
+        <div class="info-section">2. Are you diagnosed with diabetes or high blood sugar: <span>${formData.diabetes}</span></div>
+        <div class="info-section">3. Do you have a history of high blood pressure (BP): <span>${formData.blood}</span></div>
+        <div class="info-section">4. Have you experienced any pregnancy terminations or abortions?: <span>${formData.abortions}</span></div>
+  
+        <h1>Lifestyle Factors</h1>
+        <div class="info-section">1. Do you smoke: <span>${formData.smoke}</span></div>
+        <div class="info-section">2. Do you consume alcohol regularly: <span>${formData.alcohol}</span></div>
+        <div class="info-section">3. Do you experience frequent insomnia or have trouble sleeping: <span>${formData.sleeping}</span></div>
+        <div class="info-section">4. Have you used recreational drugs such as marijuana/weed: <span>${formData.drugs}</span></div>
+      </div>`;
+
+    const mailsToSend = [
+      'shruthireddy@garbhagudi.com',
+      'hemanth@garbhagudi.com',
+    ];
+    mailsToSend.forEach(async (ele) => {
+      await sendMailsToUserApi(ele, htmlBodyContent);
+    });
+  };
+
+  const handleSubmit = async () => {
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.number ||
+      !emailRegex.test(formData.email) ||
+      (formData.inches && !inchesRegex.test(formData.inches.toString()))
+    ) {
+      setError(true);
+      return;
+    }
+
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -160,6 +319,7 @@ export default function FertilityForm() {
     });
 
     setSubmit({ range: val, isSubmited: true });
+    await sendMail(val);
   };
 
   return (
@@ -167,39 +327,67 @@ export default function FertilityForm() {
       {submit.isSubmited ? (
         <div className='flex min-h-screen items-center justify-center bg-[#FCFAF7]'>
           <Image
-            src={"https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568598/eggFreezing/z3jyuyfnzutxoup7yx27.png"}
+            src={
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568598/eggFreezing/z3jyuyfnzutxoup7yx27.png'
+            }
             alt='timer_icon'
             width={100}
             height={100}
             className='absolute left-0 top-0 h-screen w-screen object-fill'
           />
-          <div className='absolute left-[20%] top-[40%] text-center font-nunito-Sans'>
+          <div className='absolute z-20 text-center font-nunito-Sans'>
             <div className='text-4xl font-bold text-[#1D1D1D]'>
               Wohoo! You just came closer to your goal!
             </div>
-            <p className='mt-4 text-lg text-[#6C6C6C]'>
+            <p className='mt-4 text-lg font-semibold text-[#1D1D1D] opacity-90'>
               Thanks for taking the quiz and the result of quiz is{' '}
-              {submit.range}.
+              <strong>{submit.range}</strong>.
             </p>
             <p className='mx-auto mt-4 w-3/4 text-center text-lg text-[#6C6C6C]'>
               {submit.range <= 20 ? (
-                <span>
-                  <span className='font-bold'>Low Risk:</span> Fertility health
-                  appears stable. Routine check-ups recommended, but no
-                  immediate concerns.
+                <span className='flex flex-col gap-2'>
+                  <span className='mx-auto w-11/12'>
+                    Great news! Your fertility health looks stable 🌱 But why
+                    leave it to chance? Take the next step to understand your
+                    fertility better—an AMH test offers a clear picture. Secure
+                    peace of mind with one simple test!
+                  </span>
+                  <span>
+                    <span className='font-bold'>Low Risk:</span> Fertility
+                    health appears stable. Routine check-ups recommended, but no
+                    immediate concerns.
+                  </span>
                 </span>
               ) : submit.range >= 41 ? (
-                <span>
-                  <span className='font-bold'>High Risk:</span> Significant
-                  factors indicate that egg freezing may be beneficial for
-                  future planning. Consulting with a fertility expert could
-                  provide additional insights.
+                <span className='flex flex-col gap-2'>
+                  <span className='mx-auto w-11/12'>
+                    Your future family goals are worth planning for! 🌟 With a
+                    few key factors affecting your fertility, egg freezing might
+                    be a valuable option. An AMH test and a chat with a
+                    fertility expert can give you clarity and control over your
+                    next steps. Embrace the future on your terms!
+                  </span>
+                  <span>
+                    <span className='font-bold'>High Risk:</span> Significant
+                    factors indicate that egg freezing may be beneficial for
+                    future planning. Consulting with a fertility expert could
+                    provide additional insights.
+                  </span>
                 </span>
               ) : (
-                <span>
-                  <span className='font-bold'>Moderate Risk:</span> Certain
-                  factors suggest considering fertility preservation or
-                  lifestyle adjustments.
+                <span className='flex flex-col gap-2'>
+                  <span className='mx-auto w-11/12'>
+                    You're on the right track, but a little insight can go a
+                    long way! 🌸 Certain factors suggest exploring fertility
+                    preservation or small lifestyle tweaks. An AMH test can help
+                    you understand your fertility health better—empower your
+                    future with knowledge!
+                  </span>
+                  <span>
+                    <span className='font-bold'>Moderate Risk:</span> Certain
+                    factors suggest considering fertility preservation or
+                    lifestyle adjustments.
+                  </span>
                 </span>
               )}
             </p>
@@ -243,12 +431,65 @@ export default function FertilityForm() {
                 Basic Information
               </div>
               <div className='mx-14 grid grid-cols-1 items-center justify-evenly gap-6 md:grid-cols-2'>
-                <div className='text-lg'>1. Are you male or female?</div>
+                <div className='text-lg'>1. What is your name?</div>
+                <div className='flex flex-col gap-1'>
+                  <FormInput
+                    id='1'
+                    type='text'
+                    name='name'
+                    value={formData.name}
+                    onChange={handleFormChange}
+                    className={`rounded-md border ${error && !formData.name ? 'border-red-600' : 'border-gray-300'} p-2 focus:outline-none focus:ring-2 focus:ring-rose-400`}
+                  />
+                  {error && !formData.name && (
+                    <div className='text-rose-700'>This field is required</div>
+                  )}
+                </div>
+
+                <div className='text-lg'>2. What is your Email?</div>
+                <div className='flex flex-col gap-1'>
+                  <FormInput
+                    id='1'
+                    type='email'
+                    name='email'
+                    value={formData.email}
+                    onChange={handleFormChange}
+                    className={`rounded-md border ${error && !emailRegex.test(formData.email) ? 'border-red-600' : 'border-gray-300'} p-2 focus:outline-none focus:ring-2 focus:ring-rose-400`}
+                  />
+                  {error && !emailRegex.test(formData.email) && (
+                    <div className='text-rose-700'>
+                      Please enter a valid email address
+                    </div>
+                  )}
+                </div>
+
+                <div className='text-lg'>3. What is your Mobile Number?</div>
+                <div className='flex flex-col'>
+                  <FormInput
+                    id='1'
+                    type='number'
+                    name='number'
+                    value={formData.number}
+                    onChange={handleFormChange}
+                    className={`rounded-md border ${
+                      error && formData.number.length !== 10
+                        ? 'border-red-600'
+                        : 'border-gray-300'
+                    } p-2 focus:outline-none focus:ring-2 focus:ring-rose-400`}
+                  />
+                  {error && formData.number.length !== 10 && (
+                    <div className='text-rose-700'>
+                      Please enter a valid 10 digit mobile number
+                    </div>
+                  )}
+                </div>
+
+                <div className='text-lg'>4. Are you male or female?</div>
                 <div className='flex'>
                   {genderOptions.map((ele, index) => (
                     <RadioButton
                       key={index}
-                      id={ele}
+                      id={`gender${index}`}
                       name={'gender'}
                       label={ele}
                       value={ele}
@@ -259,8 +500,8 @@ export default function FertilityForm() {
                   ))}
                 </div>
 
-                <div className='text-lg'>2. What is your age?</div>
-                <div className='flex'>
+                <div className='text-lg'>5. What is your age?</div>
+                <div className='flex flex-col'>
                   <FormInput
                     id='1'
                     type='number'
@@ -271,8 +512,8 @@ export default function FertilityForm() {
                   />
                 </div>
 
-                <div className='text-lg'>3. Please enter your weight.</div>
-                <div className='flex'>
+                <div className='text-lg'>6. Please enter your weight.</div>
+                <div className='flex flex-col'>
                   <FormInput
                     id='1'
                     type='number'
@@ -284,17 +525,39 @@ export default function FertilityForm() {
                   />
                 </div>
 
-                <div className='text-lg'>4. Please enter your height.</div>
-                <div className='flex'>
-                  <FormInput
-                    id='1'
-                    type='number'
-                    name='height'
-                    placeholder={'Enter in CM'}
-                    value={formData.height}
-                    onChange={handleFormChange}
-                    className='rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-rose-400'
-                  />
+                <div className='text-lg'>7. Please enter your height.</div>
+                <div className='flex flex-col'>
+                  <div className='flex flex-row gap-3'>
+                    <FormInput
+                      id='1'
+                      type='number'
+                      name='feet'
+                      placeholder={'Enter in Feet'}
+                      value={formData.feet}
+                      onChange={handleFormChange}
+                      className='w-1/2 rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-rose-400'
+                    />
+                    <FormInput
+                      id='2'
+                      type='number'
+                      name='inches'
+                      placeholder={'Enter in Inches'}
+                      value={formData.inches}
+                      onChange={handleFormChange}
+                      className={`w-1/2 rounded-md border ${
+                        error &&
+                        formData.inches &&
+                        !inchesRegex.test(formData.inches.toString())
+                          ? 'border-red-600'
+                          : 'border-gray-300'
+                      } p-2 focus:outline-none focus:ring-2 focus:ring-rose-400`}
+                    />
+                  </div>
+                  {error &&
+                    formData.inches &&
+                    !inchesRegex.test(formData.inches.toString()) && (
+                      <div>Please enter a value between 0 to 11</div>
+                    )}
                 </div>
               </div>
             </div>
@@ -320,10 +583,10 @@ export default function FertilityForm() {
               <div className='mx-14 grid grid-cols-1 items-center gap-6 md:grid-cols-2'>
                 <div className='text-lg'>1. Are you currently?</div>
                 <div className='flex space-x-4'>
-                  {statusOptions.map((ele,index) => (
+                  {statusOptions.map((ele, index) => (
                     <RadioButton
-                    key={index}
-                      id={ele}
+                      key={index}
+                      id={`status${index}`}
                       name={'status'}
                       label={ele}
                       value={ele}
@@ -338,10 +601,10 @@ export default function FertilityForm() {
                   2. If married, do you currently have children?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele,index) => (
+                  {yesOrNoOptions.map((ele, index) => (
                     <RadioButton
-                    key={index}
-                      id={ele}
+                      key={index}
+                      id={`children${index}`}
                       name={'children'}
                       label={ele}
                       value={ele}
@@ -355,10 +618,10 @@ export default function FertilityForm() {
                   3. Are you actively planning for pregnancy?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele,index) => (
+                  {yesOrNoOptions.map((ele, index) => (
                     <RadioButton
-                    key={index}
-                      id={ele}
+                      key={index}
+                      id={`pregnancy${index}`}
                       name={'pregnancy'}
                       label={ele}
                       value={ele}
@@ -382,10 +645,10 @@ export default function FertilityForm() {
                   1. Do you have a history of thyroid-related issues?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele,index) => (
+                  {yesOrNoOptions.map((ele, index) => (
                     <RadioButton
-                    key={index}
-                      id={ele}
+                      key={index}
+                      id={`thyroid${index}`}
                       name={'thyroid'}
                       label={ele}
                       value={ele}
@@ -400,10 +663,10 @@ export default function FertilityForm() {
                   2. Are you diagnosed with diabetes or high blood sugar?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele,index) => (
+                  {yesOrNoOptions.map((ele, index) => (
                     <RadioButton
-                    key={index}
-                      id={ele}
+                      key={index}
+                      id={`diabetes${index}`}
                       name={'diabetes'}
                       label={ele}
                       value={ele}
@@ -417,9 +680,9 @@ export default function FertilityForm() {
                   3. Do you have a history of high blood pressure (BP)?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele,index) => (
+                  {yesOrNoOptions.map((ele, index) => (
                     <RadioButton
-                      id={ele}
+                      id={`blood${index}`}
                       key={index}
                       name={'blood'}
                       label={ele}
@@ -436,9 +699,9 @@ export default function FertilityForm() {
                   abortions?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele,index) => (
+                  {yesOrNoOptions.map((ele, index) => (
                     <RadioButton
-                      id={ele}
+                      id={`abortions${index}`}
                       key={index}
                       name={'abortions'}
                       label={ele}
@@ -461,9 +724,9 @@ export default function FertilityForm() {
               <div className='mx-10 grid grid-cols-1 items-center gap-6 md:grid-cols-2'>
                 <div className='text-lg'>1. Do you smoke?</div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele,index) => (
+                  {yesOrNoOptions.map((ele, index) => (
                     <RadioButton
-                      id={ele}
+                      id={`smoke${index}`}
                       key={index}
                       name={'smoke'}
                       label={ele}
@@ -479,10 +742,10 @@ export default function FertilityForm() {
                   2. Do you consume alcohol regularly?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele,index) => (
+                  {yesOrNoOptions.map((ele, index) => (
                     <RadioButton
-                    key={index}
-                      id={ele}
+                      key={index}
+                      id={`alcohol${index}`}
                       name={'alcohol'}
                       label={ele}
                       value={ele}
@@ -497,10 +760,10 @@ export default function FertilityForm() {
                   sleeping?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele,index) => (
+                  {yesOrNoOptions.map((ele, index) => (
                     <RadioButton
-                    key={index}
-                      id={ele}
+                      key={index}
+                      id={`sleeping${index}`}
                       name={'sleeping'}
                       label={ele}
                       value={ele}
@@ -515,10 +778,10 @@ export default function FertilityForm() {
                   4. Have you used recreational drugs such as marijuana/weed?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele,index) => (
+                  {yesOrNoOptions.map((ele, index) => (
                     <RadioButton
-                    key={index}
-                      id={ele}
+                      key={index}
+                      id={`drugs${index}`}
                       name={'drugs'}
                       label={ele}
                       value={ele}
