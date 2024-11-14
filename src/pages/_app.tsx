@@ -8,7 +8,6 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
-import { Nunito_Sans, Figtree } from 'next/font/google';
 
 // Dynamically import components
 const Footer = dynamic(() => import('components/footer/footer'));
@@ -16,16 +15,7 @@ const Nav = dynamic(() => import('components/header/header'));
 const Salesiq = dynamic(() => import('components/SalesIQ'));
 const Loading = dynamic(() => import('components/Loading'));
 
-// Use next/font to load the fonts
-const nunitoSans = Nunito_Sans({
-  weight: ['400', '500', '600', '800'],
-  subsets: ['latin'],
-});
 
-const figtree = Figtree({
-  weight: ['400', '500', '600'],
-  subsets: ['latin'],
-});
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -86,7 +76,7 @@ function MyApp({ Component, pageProps }) {
           <Loading />
         ) : (
           <div
-            className={`min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800 ${nunitoSans.className} ${figtree.className}`}
+            className={`min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800 `}
           >
             {shouldDisplay && <Nav />}
             <Component {...pageProps} />

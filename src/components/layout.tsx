@@ -1,5 +1,12 @@
 import React from 'react';
-import { Lexend, Nunito, B612, Benne } from 'next/font/google';
+import {
+  Lexend,
+  Nunito,
+  B612,
+  Benne,
+  Nunito_Sans,
+  Figtree,
+} from 'next/font/google';
 
 const lexend = Lexend({
   subsets: ['latin'],
@@ -27,6 +34,17 @@ const benne = Benne({
   weight: ['400'],
 });
 
+// Use next/font to load the fonts
+const nunitoSans = Nunito_Sans({
+  weight: ['400', '500', '600', '800'],
+  subsets: ['latin'],
+});
+
+const figtree = Figtree({
+  weight: ['400', '500', '600'],
+  subsets: ['latin'],
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -35,7 +53,7 @@ export default function RootLayout({
   return (
     <>
       <main
-        className={`${lexend.variable} ${nunito.variable} ${b612.variable} ${benne.variable}`}
+        className={`${lexend.variable} ${nunito.variable} ${b612.variable} ${benne.variable} ${nunitoSans.className} ${figtree.className}`}
       >
         {children}
       </main>
