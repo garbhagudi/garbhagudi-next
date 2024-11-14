@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-import BackgroundImage from '../../../assets/fertility-quiz/background1.png';
+
 import Link from 'next/link';
 import { BsWhatsapp } from 'react-icons/bs';
 import BookAnAppointment from 'sections/egg-freezing/bookAnAppointment';
+import Image from 'next/image';
 
 const genderOptions = ['male', 'female'];
 const statusOptions = ['single', 'married', 'committed'];
@@ -165,9 +166,11 @@ export default function FertilityForm() {
     <div>
       {submit.isSubmited ? (
         <div className='flex min-h-screen items-center justify-center bg-[#FCFAF7]'>
-          <img
-            src={BackgroundImage.src}
+          <Image
+            src={"https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568598/eggFreezing/z3jyuyfnzutxoup7yx27.png"}
             alt='timer_icon'
+            width={100}
+            height={100}
             className='absolute left-0 top-0 h-screen w-screen object-fill'
           />
           <div className='absolute left-[20%] top-[40%] text-center font-nunito-Sans'>

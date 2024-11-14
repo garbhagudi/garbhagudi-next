@@ -1,7 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import cellImage from '../../assets/union-page/cell.png';
-import outerImage from '../../assets/union-page/outer-cell.png';
 
 export default function Freezing() {
   const renderData = [
@@ -42,18 +40,20 @@ export default function Freezing() {
     },
   ];
   return (
-    <div className=' pb-16 font-nunito-Sans'>
+    <div className='pb-16 font-nunito-Sans'>
       <div className='flex items-center justify-center py-6 text-3xl font-extrabold'>
         Why Choose Egg Freezing?
       </div>
-      <div className='text-center w-9/12 mx-auto text-xl font-normal text-[#1D1D1D] opacity-70 mb-20'>
+      <div className='mx-auto mb-20 w-9/12 text-center text-xl font-normal text-[#1D1D1D] opacity-70'>
         Egg freezing involves a few carefully planned steps, all overseen by
         experienced fertility experts to ensure safety and comfort.
       </div>
       <div className='mx-auto flex w-11/12 flex-row justify-between gap-10'>
         <div className='relative w-1/2'>
-        <Image
-            src={outerImage}
+          <Image
+            src={
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/or3urzy42lxwtwcedur1.png'
+            }
             width={350}
             height={300}
             alt='Image 2'
@@ -63,12 +63,14 @@ export default function Freezing() {
 
           {/* Second Image (middle layer) */}
           <Image
-            src={cellImage}
+            src={
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/hydkajxdwnzhc6g1o1ya.png'
+            }
             width={350}
             height={300}
             alt='Image 2'
             loading='lazy'
-            className='absolute left-3 top-3 '
+            className='absolute left-3 top-3'
           />
         </div>
 
@@ -76,19 +78,20 @@ export default function Freezing() {
           {renderData.map((ele, index) => {
             return (
               <div key={index} className='py-3 font-nunito-Sans'>
-                <div className='text-xl font-bold leading-8'>
-                  {ele.title}
-                </div>
+                <div className='text-xl font-bold leading-8'>{ele.title}</div>
                 <div className='py-1 text-lg font-normal'>
-                  {ele.content.map((el,index) => (
+                  {ele.content.map((el, index) => (
                     <div key={index} className='py-1'>
                       <span className='font-bold opacity-80'>{el.title}</span>
-                      <span className='text-[#6C6C6C] font-normal opacity-80'> {el.content}</span>
+                      <span className='font-normal text-[#6C6C6C] opacity-80'>
+                        {' '}
+                        {el.content}
+                      </span>
                     </div>
                   ))}
                 </div>
                 {renderData.length !== index + 1 && (
-                  <div className=' w-10/12 border border-[#D9576C4D]'></div>
+                  <div className='w-10/12 border border-[#D9576C4D]'></div>
                 )}
               </div>
             );

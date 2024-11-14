@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React, { Fragment, useState } from 'react';
 import { BsWhatsapp } from 'react-icons/bs';
-import BackgroundImage from '../../assets/fertility-quiz/human-fetus-prenatal-development-stage-womb 1 (1).png';
 import Image from 'next/image';
 import BookAnAppointment from './bookAnAppointment';
 
@@ -14,14 +13,15 @@ export default function Banner() {
   return (
     <Fragment>
       <div>
-        <section className='relative bg-cover bg-right bg-no-repeat sm:bg-center'>
+        <section className='relative bg-cover bg-right bg-no-repeat sm:bg-center overflow-hidden'>
           <Image
-            src={BackgroundImage.src}
+            src={
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568618/eggFreezing/n6oqsb7gexcuusccltql.png'
+            }
             width={200}
             height={150}
             alt={`Image `}
-            loading='lazy'
-            className='absolute bottom-[100px] left-0 top-0  h-screen w-screen '
+            className='absolute bottom-[100px] left-0 top-0 h-screen w-screen'
           />
 
           <div className='absolute inset-0 bg-gradient-to-r dark:from-gray-800/90 dark:to-gray-800/30 sm:bg-transparent'></div>
@@ -49,16 +49,15 @@ export default function Banner() {
                   </span>
                 </Link>
 
-                <Link
-                  href=''
+                <div
                   onClick={() => setIsOpen(true)}
-                  className='block w-full scroll-smooth rounded-[10px] bg-white px-4 py-2 font-content text-lg text-brandPink shadow hover:opacity-80 focus:outline-none focus:ring active:text-rose-500 dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
+                  className='block w-full cursor-pointer scroll-smooth rounded-[10px] bg-white px-4 py-2 font-content text-lg text-brandPink shadow hover:opacity-80 focus:outline-none focus:ring active:text-rose-500 dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
                 >
                   Book an Appointment
-                </Link>
+                </div>
                 <Link
                   href='/treatments/ivf-treatment-egg-freezing/egg-freezing-quiz'
-                  className='block w-full scroll-smooth rounded-[10px] border-2 bg-[#1D1D1D] px-4 py-2 font-content text-lg text-white shadow hover:opacity-80 focus:outline-none focus:ring active:text-rose-500 dark:text-white sm:w-auto'
+                  className='block w-full scroll-smooth rounded-[10px] border-2 bg-[#1D1D1D] px-4 py-2 font-content text-lg text-white shadow hover:opacity-80 focus:outline-none focus:ring dark:text-white sm:w-auto'
                 >
                   Take a Quiz
                 </Link>
@@ -91,7 +90,6 @@ export default function Banner() {
         </div>
       )}
 
-     
       <style>{`
  .custom-shape-divider-bottom-1731505107 {
     position: absolute;
@@ -108,11 +106,13 @@ export default function Banner() {
     display: block;
     width: calc(100% + 1.3px);
     height: 90px;
+    overflow: hidden;
   
 }
 
 .custom-shape-divider-bottom-1731505107 .shape-fill {
     fill: white;
+    overflow: hidden;
     
 }
 `}</style>
