@@ -215,7 +215,7 @@ export default function FertilityForm() {
               </Link>
 
               <div
-                className=' cursor-pointer hover:text-white-400 w-full scroll-smooth rounded-[10px] bg-[#DD6F6F] px-4 py-2 font-content text-white shadow focus:outline-none focus:ring active:text-white dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
+                className='hover:text-white-400 w-full cursor-pointer scroll-smooth rounded-[10px] bg-[#DD6F6F] px-4 py-2 font-content text-white shadow focus:outline-none focus:ring active:text-white dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
                 onClick={() => setIsOpen(true)}
               >
                 Book an Appointment
@@ -242,8 +242,9 @@ export default function FertilityForm() {
               <div className='mx-14 grid grid-cols-1 items-center justify-evenly gap-6 md:grid-cols-2'>
                 <div className='text-lg'>1. Are you male or female?</div>
                 <div className='flex'>
-                  {genderOptions.map((ele) => (
+                  {genderOptions.map((ele, index) => (
                     <RadioButton
+                      key={index}
                       id={ele}
                       name={'gender'}
                       label={ele}
@@ -316,8 +317,9 @@ export default function FertilityForm() {
               <div className='mx-14 grid grid-cols-1 items-center gap-6 md:grid-cols-2'>
                 <div className='text-lg'>1. Are you currently?</div>
                 <div className='flex space-x-4'>
-                  {statusOptions.map((ele) => (
+                  {statusOptions.map((ele,index) => (
                     <RadioButton
+                    key={index}
                       id={ele}
                       name={'status'}
                       label={ele}
@@ -333,8 +335,9 @@ export default function FertilityForm() {
                   2. If married, do you currently have children?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele) => (
+                  {yesOrNoOptions.map((ele,index) => (
                     <RadioButton
+                    key={index}
                       id={ele}
                       name={'children'}
                       label={ele}
@@ -349,8 +352,9 @@ export default function FertilityForm() {
                   3. Are you actively planning for pregnancy?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele) => (
+                  {yesOrNoOptions.map((ele,index) => (
                     <RadioButton
+                    key={index}
                       id={ele}
                       name={'pregnancy'}
                       label={ele}
@@ -375,8 +379,9 @@ export default function FertilityForm() {
                   1. Do you have a history of thyroid-related issues?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele) => (
+                  {yesOrNoOptions.map((ele,index) => (
                     <RadioButton
+                    key={index}
                       id={ele}
                       name={'thyroid'}
                       label={ele}
@@ -392,8 +397,9 @@ export default function FertilityForm() {
                   2. Are you diagnosed with diabetes or high blood sugar?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele) => (
+                  {yesOrNoOptions.map((ele,index) => (
                     <RadioButton
+                    key={index}
                       id={ele}
                       name={'diabetes'}
                       label={ele}
@@ -408,9 +414,10 @@ export default function FertilityForm() {
                   3. Do you have a history of high blood pressure (BP)?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele) => (
+                  {yesOrNoOptions.map((ele,index) => (
                     <RadioButton
                       id={ele}
+                      key={index}
                       name={'blood'}
                       label={ele}
                       value={ele}
@@ -426,9 +433,10 @@ export default function FertilityForm() {
                   abortions?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele) => (
+                  {yesOrNoOptions.map((ele,index) => (
                     <RadioButton
                       id={ele}
+                      key={index}
                       name={'abortions'}
                       label={ele}
                       value={ele}
@@ -450,9 +458,10 @@ export default function FertilityForm() {
               <div className='mx-10 grid grid-cols-1 items-center gap-6 md:grid-cols-2'>
                 <div className='text-lg'>1. Do you smoke?</div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele) => (
+                  {yesOrNoOptions.map((ele,index) => (
                     <RadioButton
                       id={ele}
+                      key={index}
                       name={'smoke'}
                       label={ele}
                       value={ele}
@@ -467,8 +476,9 @@ export default function FertilityForm() {
                   2. Do you consume alcohol regularly?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele) => (
+                  {yesOrNoOptions.map((ele,index) => (
                     <RadioButton
+                    key={index}
                       id={ele}
                       name={'alcohol'}
                       label={ele}
@@ -484,8 +494,9 @@ export default function FertilityForm() {
                   sleeping?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele) => (
+                  {yesOrNoOptions.map((ele,index) => (
                     <RadioButton
+                    key={index}
                       id={ele}
                       name={'sleeping'}
                       label={ele}
@@ -501,8 +512,9 @@ export default function FertilityForm() {
                   4. Have you used recreational drugs such as marijuana/weed?
                 </div>
                 <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele) => (
+                  {yesOrNoOptions.map((ele,index) => (
                     <RadioButton
+                    key={index}
                       id={ele}
                       name={'drugs'}
                       label={ele}

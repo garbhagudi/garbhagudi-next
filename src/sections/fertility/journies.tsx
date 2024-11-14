@@ -32,9 +32,9 @@ export default function Journies() {
         experienced through egg freezing.
       </div>
       <div className='ml-auto flex w-11/12 justify-evenly gap-3 pb-5'>
-        {renderData.map((ele) => {
+        {renderData.map((ele,index) => {
           return (
-            <div className='rounded-xl border p-5 shadow'>
+            <div key={index} className='rounded-xl border p-5 shadow'>
               <div className='flex justify-center gap-3'>
                 <div>
                   <Image
