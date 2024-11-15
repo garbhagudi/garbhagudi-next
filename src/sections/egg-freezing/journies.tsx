@@ -21,23 +21,25 @@ export default function Journies() {
   ];
   return (
     <div className='py-10'>
-      <div className='font-nunito-Sans py-5 text-center text-4xl font-extrabold dark:text-white '>
+      <div className='py-2 text-center font-nunito-Sans text-2xl font-extrabold dark:text-white md:py-5 md:text-4xl'>
         Inspiring Journeys to Fertility Freedom
       </div>
-      <div className='font-nunito-Sans mx-auto w-9/12 pb-10 text-center dark:text-white  text-xl text-[#1D1D1D] opacity-70'>
+      <div className='mx-auto w-8/12 pb-10 text-center font-nunito-Sans text-lg text-[#1D1D1D] opacity-70 dark:text-white md:w-9/12 md:text-xl'>
         Hearing from real clients who took the step toward fertility
         preservation can be powerful. We share anonymized testimonials and video
         snippets highlighting the reasons and positive outcomes our clients have
         experienced through egg freezing.
       </div>
-      <div className='ml-auto flex w-11/12 justify-evenly gap-3 pb-5'>
-        {renderData.map((ele,index) => {
+      <div className='m-auto flex w-11/12 flex-col justify-evenly gap-3 md:ml-auto md:mr-0 md:flex-row md:pb-5'>
+        {renderData.map((ele, index) => {
           return (
             <div key={index} className='rounded-xl border p-5 shadow'>
               <div className='flex justify-center gap-3'>
                 <div>
                   <Image
-                    src={"https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567194/eggFreezing/xvwtrr5loef21sk4yprc.png"}
+                    src={
+                      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567194/eggFreezing/xvwtrr5loef21sk4yprc.png'
+                    }
                     width={200}
                     height={150}
                     alt={`Image `}
@@ -48,10 +50,10 @@ export default function Journies() {
                   <span className='font-figtree text-xl font-semibold'>
                     {ele.name}
                   </span>
-                  <span className='font-figtree text-base font-semibold text-[#B9B9B9] pb-2'>
+                  <span className='pb-2 font-figtree text-base font-semibold text-[#B9B9B9]'>
                     Recently Consulted
                   </span>
-                  <span className='font-nunito-Sans text-base font-normal text-[#1A1B1D] dark:text-white '>
+                  <span className='font-nunito-Sans text-base font-normal text-[#1A1B1D] dark:text-white'>
                     {ele.content}
                   </span>
                 </div>

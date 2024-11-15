@@ -5,17 +5,17 @@ const Faq = () => {
   const [activeIndex1, setActiveIndex1] = React.useState(1);
   return (
     <div className='bg-white dark:bg-gray-700'>
-      <div className='lg:pt:16 pt-10 text-center font-heading text-4xl font-bold text-black dark:text-white lg:text-4xl'>
+      <div className='lg:pt:16 pt-5 w-11/12 mx-auto text-center font-heading text-2xl font-bold text-black dark:text-white lg:text-4xl'>
         Frequently Asked Questions (FAQs)
       </div>
-      <div className='font-nunito-Sans mx-auto w-9/12 py-5 text-center text-xl font-normal text-[#1D1D1D] dark:text-white'>
+      <div className='font-nunito-Sans mx-auto text-lg w-9/12 py-5 text-center md:text-xl font-normal text-[#1D1D1D] dark:text-white'>
         Hearing from real clients who took the step toward fertility
         preservation can be powerful. We share anonymized testimonials and video
         snippets highlighting the reasons and positive outcomes our clients have
         experienced through egg freezing.
       </div>
-      <div className='px-3 pb-10 lg:pb-16'>
-        <div className='mx-auto mt-10 flex max-w-6xl flex-col justify-center'>
+      <div className='px-3 pb-5 lg:pb-16'>
+        <div className='mx-auto mt-3 md:mt-10 flex max-w-6xl flex-col justify-center'>
           {data.map((items) => (
             <AccordionLayout
               title={items.Question}
