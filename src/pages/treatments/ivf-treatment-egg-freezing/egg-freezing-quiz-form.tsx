@@ -335,14 +335,14 @@ export default function FertilityForm() {
             className='absolute left-0 top-0 h-screen w-screen object-fill'
           />
           <div className='absolute z-20 text-center font-nunito-Sans'>
-            <div className='text-4xl font-bold text-[#1D1D1D]'>
-              Wohoo! You just came closer to your goal!
+            <div className='text-2xl font-bold text-[#1D1D1D] md:text-4xl'>
+              You just came closer to your goal!
             </div>
-            <p className='mt-4 text-lg font-semibold text-[#1D1D1D] opacity-90'>
+            <p className='mt-4 text-base font-semibold text-[#1D1D1D] opacity-90 md:text-lg'>
               Thanks for taking the quiz and the result of quiz is{' '}
               <strong>{submit.range}</strong>.
             </p>
-            <p className='mx-auto mt-4 w-3/4 text-center text-lg text-[#6C6C6C]'>
+            <p className='mx-auto mt-4 w-10/12 text-center text-base text-[#6C6C6C] md:w-3/4 md:text-lg'>
               {submit.range <= 20 ? (
                 <span className='flex flex-col gap-2'>
                   <span className='mx-auto w-11/12'>
@@ -390,10 +390,10 @@ export default function FertilityForm() {
                 </span>
               )}
             </p>
-            <div className='mt-5 flex flex-wrap items-center justify-center gap-4 text-base font-semibold'>
+            {/* <div className='mt-5 flex flex-wrap items-center justify-center gap-2 text-base font-semibold md:gap-4'>
               <Link
                 href='https://api.whatsapp.com/send/?phone=916383697088&text=Hi.'
-                className='w-full rounded-[10px] border-2 border-white bg-[#49C958] px-4 py-2 font-content text-white hover:bg-green-400 focus:outline-none focus:ring active:bg-green-300 sm:w-auto'
+                className='rounded-[10px] border-2 border-white bg-[#49C958] px-4 py-2 font-content text-white hover:bg-green-400 focus:outline-none focus:ring active:bg-green-300 sm:w-auto'
               >
                 <span className='flex items-center justify-center gap-2'>
                   <BsWhatsapp
@@ -405,19 +405,19 @@ export default function FertilityForm() {
               </Link>
 
               <div
-                className='hover:text-white-400 w-full cursor-pointer scroll-smooth rounded-[10px] bg-[#DD6F6F] px-4 py-2 font-content text-white shadow focus:outline-none focus:ring active:text-white dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
+                className='hover:text-white-400 cursor-pointer scroll-smooth rounded-[10px] bg-[#DD6F6F] px-4 py-2 font-content text-white shadow focus:outline-none focus:ring active:text-white dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
                 onClick={() => setIsOpen(true)}
               >
                 Book an Appointment
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       ) : (
         <div className='flex min-h-screen w-full flex-col items-center justify-center rounded-md bg-[#FCFAF7] p-6 md:p-10'>
-          <div className='mx-auto w-3/5 font-nunito-Sans'>
-            <div className='my-8 flex flex-col items-center text-center'>
-              <h1 className='text-4xl font-bold text-[#1D1D1D]'>
+          <div className='mx-auto font-nunito-Sans lg:w-3/5'>
+            <div className='my-4 flex flex-col items-center text-center md:my-8'>
+              <h1 className='text-2xl font-bold text-[#1D1D1D] md:text-4xl'>
                 Tell us more about yourself
               </h1>
               <p className='mt-2 w-10/12 text-center text-lg text-[#6C6C6C]'>
@@ -426,10 +426,10 @@ export default function FertilityForm() {
               </p>
             </div>
             <div className='flex flex-col justify-center gap-5'>
-              <div className='py-5 text-center text-2xl font-bold'>
+              <div className='py-2 text-center text-xl font-bold md:py-5 md:text-2xl'>
                 Basic Information
               </div>
-              <div className='mx-14 grid grid-cols-1 items-center justify-evenly gap-6 md:grid-cols-2'>
+              <div className='mx-5 grid grid-cols-1 items-center justify-evenly gap-3 md:mx-14 md:grid-cols-2 md:gap-6'>
                 <div className='text-lg'>1. What is your name?</div>
                 <div className='flex flex-col gap-1'>
                   <FormInput
@@ -562,8 +562,8 @@ export default function FertilityForm() {
             </div>
 
             {BMIval && (
-              <div className='py-10'>
-                <div className='py-5 text-center text-2xl font-bold'>
+              <div className='pb-3 pt-10 md:pb-10'>
+                <div className='mx-3 py-3 text-center text-xl font-bold md:mx-0 md:py-5 md:text-2xl'>
                   BMI Calculation
                 </div>
                 <div className='grid grid-cols-1 items-center gap-6'>
@@ -576,10 +576,10 @@ export default function FertilityForm() {
             )}
 
             <div className='py-7'>
-              <div className='py-5 text-center text-2xl font-bold'>
+              <div className='py-3 text-center text-xl font-bold md:py-5 md:text-2xl'>
                 Marital & Family Status
               </div>
-              <div className='mx-14 grid grid-cols-1 items-center gap-6 md:grid-cols-2'>
+              <div className='mx-5 grid grid-cols-1 items-center justify-evenly gap-3 md:mx-10 md:grid-cols-2 md:gap-6'>
                 <div className='text-lg'>1. Are you currently?</div>
                 <div className='flex space-x-4'>
                   {statusOptions.map((ele, index) => (
@@ -636,10 +636,10 @@ export default function FertilityForm() {
             </div>
 
             <div className='pb-7'>
-              <div className='py-7 text-center text-2xl font-bold'>
+              <div className='py-3 text-center text-xl font-bold md:py-7 md:text-2xl'>
                 Medical History
               </div>
-              <div className='mx-10 grid grid-cols-1 items-center gap-6 md:grid-cols-2'>
+              <div className='mx-5 grid grid-cols-1 items-center justify-evenly gap-3 md:mx-10 md:grid-cols-2 md:gap-6'>
                 <div className='text-lg'>
                   1. Do you have a history of thyroid-related issues?
                 </div>
@@ -717,10 +717,10 @@ export default function FertilityForm() {
             </div>
 
             <div className='pb-7'>
-              <div className='py-7 text-center text-2xl font-bold'>
+              <div className='py-3 text-center text-xl font-bold md:py-7 md:text-2xl'>
                 Lifestyle Factors
               </div>
-              <div className='mx-10 grid grid-cols-1 items-center gap-6 md:grid-cols-2'>
+              <div className='mx-5 grid grid-cols-1 items-center justify-evenly gap-3 md:mx-10 md:grid-cols-2 md:gap-6'>
                 <div className='text-lg'>1. Do you smoke?</div>
                 <div className='flex space-x-4'>
                   {yesOrNoOptions.map((ele, index) => (

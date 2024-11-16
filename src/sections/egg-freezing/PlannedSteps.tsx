@@ -79,32 +79,30 @@ export default function PlannedSteps() {
     },
   ];
   return (
-    <div className='mx-auto w-10/12 py-14 font-nunito-Sans'>
-      <div className='flex items-center justify-center py-5 text-4xl font-extrabold'>
+    <div className='mx-auto w-10/12 pt-7 lg:py-14 font-nunito-Sans'>
+      <div className='flex items-center justify-center py-2 text-center text-2xl font-extrabold md:py-5 md:text-4xl'>
         Guided Support Every Step of the Way
       </div>
-      <div className='mx-auto w-full text-center text-xl font-normal text-[#1D1D1D] opacity-70'>
+      <div className='mx-auto w-full text-center text-lg font-normal text-[#1D1D1D] opacity-70 md:text-xl'>
         Egg freezing involves a few carefully planned steps, all overseen by
         experienced fertility experts to ensure safety and comfort.
       </div>
 
-      <div className='mx-auto w-[95%] p-10'>
+      <div className='mx-auto w-full p-2 lg:w-[95%] lg:p-10'>
         {renderData.map((ele, index) => (
           <div key={index + 1}>
-            <div className='mb-5 flex items-center gap-5 py-5'>
+            <div className='mb-5 flex flex-col items-center gap-5 py-5 lg:flex-row'>
               <Image
                 src={ele.image}
                 width={200}
                 height={200}
                 alt={`Image ${index + 1}`}
                 loading='lazy'
-                // layout="responsive"
-                // layout='intrinsic' // or layout="responsive"
-                // objectFit='cover'
+                className='w-10/12 pb-2 md:h-[200px] md:w-[200px]'
               />
 
-              <div>
-                <span className='py-2 text-lg font-bold tracking-tighter'>
+              <div className='text-center  md:text-start'>
+                <span className='py-2 text-xl w-10/12 md:w-full mx-auto font-bold tracking-tighter'>
                   {ele.title}
                 </span>
                 <ul className='list-inside list-disc py-2 opacity-70'>
@@ -124,7 +122,7 @@ export default function PlannedSteps() {
               </div>
             </div>
             {renderData.length !== index + 1 && (
-              <div className='mx-auto my-5 w-10/12 border border-[#00000033]'></div>
+              <div className='mx-auto my-5 hidden w-10/12 border border-[#00000033] md:visible'></div>
             )}
           </div>
         ))}

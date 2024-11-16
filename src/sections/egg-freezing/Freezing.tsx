@@ -40,16 +40,16 @@ export default function Freezing() {
     },
   ];
   return (
-    <div className='pb-16 font-nunito-Sans'>
-      <div className='flex items-center justify-center py-6 text-3xl font-extrabold'>
+    <div className=' font-nunito-Sans lg:pb-16'>
+      <div className='flex items-center justify-center py-3 text-2xl font-extrabold md:py-6 md:text-4xl'>
         Why Choose Egg Freezing?
       </div>
-      <div className='mx-auto mb-20 w-9/12 text-center text-xl font-normal text-[#1D1D1D] opacity-70'>
+      <div className='mx-auto mb-10 w-8/12 text-center text-lg font-normal text-[#1D1D1D] opacity-70 md:mb-20 md:w-9/12 md:text-xl'>
         Egg freezing involves a few carefully planned steps, all overseen by
         experienced fertility experts to ensure safety and comfort.
       </div>
-      <div className='mx-auto flex w-11/12 flex-row justify-between gap-10'>
-        <div className='relative w-1/2'>
+      <div className='mx-auto flex w-11/12 flex-col items-center justify-between gap-10 lg:flex-row lg:items-start'>
+        <div className='relative h-60 w-1/2 md:h-96 lg:h-0'>
           <Image
             src={
               'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/or3urzy42lxwtwcedur1.png'
@@ -78,10 +78,12 @@ export default function Freezing() {
           {renderData.map((ele, index) => {
             return (
               <div key={index} className='py-3 font-nunito-Sans'>
-                <div className='text-xl font-bold leading-8'>{ele.title}</div>
-                <div className='py-1 text-lg font-normal'>
+                <div className='text-center text-lg font-bold leading-8 md:text-start md:text-xl'>
+                  {ele.title}
+                </div>
+                <div className='w-11/12 py-2 text-center text-base font-normal md:w-full md:text-start md:py-1 md:text-lg'>
                   {ele.content.map((el, index) => (
-                    <div key={index} className='py-1'>
+                    <div key={index} className='py-2 md:py-1'>
                       <span className='font-bold opacity-80'>{el.title}</span>
                       <span className='font-normal text-[#6C6C6C] opacity-80'>
                         {' '}
@@ -91,7 +93,7 @@ export default function Freezing() {
                   ))}
                 </div>
                 {renderData.length !== index + 1 && (
-                  <div className='w-10/12 border border-[#D9576C4D]'></div>
+                  <div className='hidden w-10/12 border border-[#D9576C4D] md:visible'></div>
                 )}
               </div>
             );

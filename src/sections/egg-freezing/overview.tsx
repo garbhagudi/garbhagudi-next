@@ -37,17 +37,17 @@ export default function Overview() {
   ];
 
   return (
-    <div className='pb-5 pt-10'>
+    <div className='pb-5 md:pt-10'>
       <div className='flex flex-col'>
-        <div className='my-10 mr-10 pb-5 text-center text-4xl font-extrabold leading-8 text-[#1D1D1D] dark:text-white'>
+        <div className='my-5 md:my-10 md:mr-10 pb-5 text-center text-2xl md:text-4xl font-extrabold leading-8 text-[#1D1D1D] dark:text-white'>
           Overview
         </div>
-        <div className='flex items-start gap-28 px-14 text-center'>
+        <div className='flex flex-col items-start gap-2 md:gap-28 px-14 text-center md:flex-row'>
           {renderData.map((ele, index) => {
             return (
               <div
                 key={index}
-                className='relative flex items-center justify-between'
+                className='relative flex items-center justify-between flex-col md:flex-row'
               >
                 <div className='flex flex-col items-center justify-center'>
                   <div className='flex h-16 w-16 items-center justify-center rounded-[50%] bg-[#FFE9EC]'>
@@ -72,7 +72,7 @@ export default function Overview() {
                 ></div> */}
 
                 <div
-                  className={`${renderData.length == index + 1 ? 'hidden' : 'absolute bottom-[55%] left-[110%] w-[6em] rotate-90 border-2 border-l-4 border-[#FFE9EC]'}`}
+                  className={`${renderData.length == index + 1 ? 'hidden' : ' my-10 md:py-0 md:absolute md:bottom-[55%] left-[110%] w-[6em] md:rotate-90 border-2 border-l-4 border-[#FFE9EC]'}`}
                 ></div>
               </div>
             );
@@ -83,16 +83,16 @@ export default function Overview() {
         <div className='py-10 text-3xl font-extrabold text-[#1D1D1D]'>
           Statistic & Findings
         </div>
-        <div className='flex items-center justify-center gap-20'>
+        <div className='flex flex-col items-center justify-center gap-6 md:gap-20 md:flex-row'>
           {statistic.map((ele, index) => (
             <div
               key={index}
               className='flex h-32 w-72 flex-col items-center justify-center bg-[#F9F9F9] px-5 py-16'
             >
-              <div className='text-4xl font-extrabold text-[#D9576C]'>
+              <div className=' text-2xl md:text-4xl font-extrabold text-[#D9576C]'>
                 {ele.value}
               </div>
-              <div className='text-lg font-bold text-black'>{ele.title}</div>
+              <div className='text-base md:text-lg font-bold text-black'>{ele.title}</div>
               <div className='py-1 text-center text-[14px] font-normal text-[#1D1D1D]'>
                 {ele.content}
               </div>

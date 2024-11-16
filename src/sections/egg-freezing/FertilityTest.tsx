@@ -63,12 +63,12 @@ export default function FertilityTest() {
     },
   ];
   return (
-    <div className='bg-[#B03146] pb-20 pt-10'>
-      <div className='flex items-center justify-center pb-10 font-nunito-Sans text-4xl font-extrabold text-white'>
+    <div className='bg-[#B03146] pb-10 pt-10 md:pb-20'>
+      <div className='flex items-center justify-center pb-10 font-nunito-Sans text-2xl font-extrabold text-white md:text-4xl'>
         Fertility Test - 4 Simple Steps
       </div>
-      <div className='mx-auto flex w-10/12 flex-row justify-between gap-10'>
-        <div className='relative h-[350px] w-full'>
+      <div className='mx-auto flex w-10/12 flex-col justify-between gap-10 md:flex-row'>
+        <div className='relative h-[400px] md:h-[350px] md:w-full'>
           <Image
             src={
               'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567197/eggFreezing/h55ajjflanab267q8ssm.png'
@@ -77,7 +77,7 @@ export default function FertilityTest() {
             height={350}
             alt='Image 1'
             loading='lazy'
-            className='absolute left-0 top-0 h-[500px] w-[450px]'
+            className='absolute left-7 md:left-0 top-0 h-[400px] w-[300px] md:h-[500px] md:w-[450px]'
           />
 
           {/* Second Image (middle layer) */}
@@ -89,21 +89,21 @@ export default function FertilityTest() {
             height={350}
             alt='Image 2'
             loading='lazy'
-            className='absolute left-3 top-3 h-[500px] w-[450px]'
+            className='absolute left-10 md:left-3 top-3 h-[400px] w-[300px] md:h-[500px] md:w-[450px]'
           />
         </div>
 
-        <div className='mt-10 w-full font-nunito-Sans'>
+        <div className='mt-10 mx-auto w-11/12 md:w-full  font-nunito-Sans md:text-start'>
           {renderData.map((ele, index) => (
             <div key={index} className='py-2 text-white'>
-              <div className='text-xl font-semibold leading-6'>
+              <div className='py-2 text-lg font-semibold leading-5 md:py-0 md:text-xl md:leading-6'>
                 {index + 1}. {ele.title}
               </div>
               <div className='py-1 pl-5 text-lg font-medium opacity-80'>
                 {ele.subTitle}
               </div>
               {renderData.length === index + 1 && (
-                <div className='mt-14 w-1/3'>
+                <div className='mt-7 w-1/2 lg:mt-14 md:w-2/3 lg:w-1/3'>
                   <span
                     className='flex cursor-pointer items-center justify-center scroll-smooth rounded bg-white px-4 py-2 font-content font-semibold text-[#D9576C] shadow hover:text-gg-400 focus:outline-none focus:ring active:text-rose-500 dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
                     onClick={openModal}

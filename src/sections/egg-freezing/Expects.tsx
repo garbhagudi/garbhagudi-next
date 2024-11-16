@@ -99,15 +99,15 @@ export default function Expects() {
   return (
     <Fragment>
       <div className='py-5'>
-        <div className='py-5 text-center font-nunito-Sans text-4xl font-extrabold'>
+        <div className='py-2 text-center font-nunito-Sans text-2xl  font-extrabold md:text-4xl md:py-5'>
           Meet our Fertility Experts
         </div>
-        <div className='mx-auto w-10/12 text-center font-nunito-Sans text-xl text-[#1D1D1D] opacity-70'>
+        <div className='mx-auto w-9/12 text-center font-nunito-Sans text-lg md:text-xl md:w-10/12 text-[#1D1D1D] opacity-70'>
           Our dedicated team brings years of experience and a compassionate
           approach to fertility care. Meet the specialists committed to
           supporting your journey.
         </div>
-        <div className='mx-auto mt-5 grid w-10/12 grid-cols-3 items-center justify-center gap-5'>
+        <div className='mx-auto mt-5 grid w-10/12 grid-cols-1 items-center justify-center gap-5 md:grid-cols-3'>
           {renderDate.map((ele, index) => {
             return (
               <div
@@ -121,8 +121,8 @@ export default function Expects() {
                   alt={`Image ${index + 1}`}
                 />
                 <div className='flex flex-col items-center justify-center font-nunito-Sans font-semibold'>
-                  <span className='pb-1 pt-2 text-xl'>{ele.name}</span>
-                  <span className='text-lg text-[#6C6C6C]'>
+                  <span className='pb-1 pt-2 md:text-xl text-lg'>{ele.name}</span>
+                  <span className='text-base md:text-lg text-[#6C6C6C]'>
                     {ele.designation}
                   </span>
                 </div>
@@ -133,20 +133,20 @@ export default function Expects() {
       </div>
 
       <div className='bg-[#FFD9E038] pb-20 pt-10'>
-        <div className='py-5 text-center font-nunito-Sans text-4xl font-extrabold dark:text-white'>
+        <div className=' text-center font-nunito-Sans text-2xl py-2 md:text-4xl md:py-5 font-extrabold dark:text-white'>
           What Next?
         </div>
-        <div className='mx-auto w-10/12 pb-16 text-center font-nunito-Sans text-xl text-[#1D1D1D] opacity-70 dark:text-white'>
+        <div className='mx-auto text-lg w-8/12 md:w-10/12 pb-8 md:pb-16 text-center font-nunito-Sans md:text-xl text-[#1D1D1D] opacity-70 dark:text-white'>
           Now since you read so much, here’s what you can do next
         </div>
-        <div className='mx-auto flex w-9/12 items-center justify-evenly gap-7'>
+        <div className='mx-auto flex w-10/12 lg:w-9/12 flex-col items-center justify-evenly  gap-4 lg:gap-7 md:flex-row'>
           {staticData.map((ele, index) => {
             return (
               <div
                 key={index}
                 className='rounded-lg border-2 border-[#F4F4F4] bg-white p-5 text-center'
               >
-                <div className='pb-2 font-figtree text-lg font-bold text-black'>
+                <div className='pb-2 font-figtree text-xl md:text-lg font-bold text-black'>
                   {ele.title}
                 </div>
                 <div className='pb-3 text-base tracking-tight text-[#6A6A6A]'>

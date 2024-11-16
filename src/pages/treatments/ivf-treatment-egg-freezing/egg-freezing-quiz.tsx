@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function Fertility() {
   return (
     <div className='bg-[#FCFAF7]'>
-      <div className='flex h-screen w-screen flex-col items-start justify-center gap-4 pl-5 md:w-[70%] md:pl-20'>
+      <div className='flex h-[45rem] md:h-screen w-screen flex-col items-start mt-32 md:mt-0 md:justify-center gap-4 pl-5 md:w-[70%] md:pl-20'>
         <Image
           src={
             'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568598/eggFreezing/azpbdaygrirxycn4jiwh.png'
@@ -14,12 +14,12 @@ export default function Fertility() {
           width={100}
           height={100}
           alt='background_image'
-          className='absolute left-0 top-0 h-screen w-screen object-fill'
+          className='absolute left-0 top-0 bottom-0 h-screen w-screen object-fill'
         />
-        <div className='underline-from-font text-decoration-skip-none text-left font-nunito-Sans text-4xl font-bold leading-[54px] md:text-6xl md:leading-[78px] lg:text-7xl'>
+        <div className='underline-from-font text-decoration-skip-none text-left font-nunito-Sans text-2xl font-bold leading-[54px] md:text-6xl md:leading-[78px] lg:text-7xl'>
           Welcome to Your Fertility Quiz! Let’s Get Started
         </div>
-        <div className='text-underline-position-from-font text-decoration-skip-ink-none w-full text-left font-nunito-Sans text-[20px] font-semibold leading-[28px] md:w-[85%] md:text-[28px] md:leading-[38.19px]'>
+        <div className='text-underline-position-from-font text-decoration-skip-ink-none w-11/12 text-left font-nunito-Sans text-lg font-semibold leading-[28px] md:w-[85%] md:text-[28px] md:leading-[38.19px]'>
           Let’s dive into some simple questions about you, your lifestyle, and
           your goals. At the end, you’ll get a personalised insight into your
           fertility profile and next steps. Let’s get started!
