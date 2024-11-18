@@ -103,7 +103,7 @@ export default function FertilityTest() {
                 {ele.subTitle}
               </div>
               {renderData.length === index + 1 && (
-                <div className='mt-7 w-1/2 lg:mt-14 md:w-2/3 lg:w-1/3'>
+                <div className='mt-7 w-2/3 lg:mt-14  lg:w-1/3'>
                   <span
                     className='flex cursor-pointer items-center justify-center scroll-smooth rounded bg-white px-4 py-2 font-content font-semibold text-[#D9576C] shadow hover:text-gg-400 focus:outline-none focus:ring active:text-rose-500 dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
                     onClick={openModal}
@@ -122,13 +122,13 @@ export default function FertilityTest() {
           onClick={closeModal}
         >
           <div
-            className='relative w-full max-w-3xl rounded-lg bg-white p-6 shadow-lg'
+            className='relative w-11/12 h-4/6 overflow-scroll z-10 lg:w-full lg:h-fit lg:overflow-hidden max-w-3xl rounded-lg bg-white p-6 shadow-lg'
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className='mb-2 text-center text-2xl font-semibold text-gray-900'>
               Fertility Screening Packages
             </h2>
-            <p className='font-nunito-sans decoration-none mb-6 ml-[28%] flex w-80 items-center justify-center text-center text-[14px] font-thin leading-[17.28px] text-gray-600 underline-offset-[from-font]'>
+            <p className='font-nunito-sans decoration-none mb-6 md:ml-[28%] flex w-80 items-center justify-center text-center text-[14px] font-thin leading-[17.28px] text-gray-600 underline-offset-[from-font]'>
               Following fertility screening packages will be available till 31st
               December 2024
             </p>
@@ -136,14 +136,14 @@ export default function FertilityTest() {
             {packages.map((pkg, index) => (
               <div
                 key={index}
-                className='mb-4 flex items-center gap-4 rounded-lg border p-2'
+                className='mb-4 flex flex-col lg:flex-row  items-center gap-4 rounded-lg border p-2'
               >
                 <Image
                   src={pkg.image}
                   width={100}
                   height={100}
                   alt={pkg.title}
-                  className='h-28 w-28 rounded-md object-cover'
+                  className='h-52 w-9/12 rounded-md object-cover lg:h-28 lg:w-28'
                 />
                 <div className='flex-1 px-2'>
                   <h3 className='text-lg font-semibold text-gray-900'>
@@ -159,7 +159,7 @@ export default function FertilityTest() {
                   </div>
                 </div>
 
-                <div className='flex flex-col items-center justify-start self-start'>
+                <div className='flex flex-row gap-2 lg:flex-col items-center justify-start self-start'>
                   <span className='text-xl font-semibold text-gray-900'>
                     {pkg.price}
                   </span>
