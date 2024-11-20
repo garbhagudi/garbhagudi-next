@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import BookAnAppointment from './bookAnAppointment';
 
 export default function FertilityTest() {
   const renderData = [
@@ -26,6 +27,7 @@ export default function FertilityTest() {
   ];
 
   const [isOpen, setIsOpen] = useState(false);
+  const [bookNow, setBookNow] = useState(false);
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
@@ -77,7 +79,7 @@ export default function FertilityTest() {
             height={350}
             alt='Image 1'
             loading='lazy'
-            className='absolute left-7 md:left-0 top-0 h-[400px] w-[300px] md:h-[500px] md:w-[450px]'
+            className='absolute left-7 top-0 h-[400px] w-[300px] md:left-0 md:h-[500px] md:w-[450px]'
           />
 
           {/* Second Image (middle layer) */}
@@ -89,11 +91,11 @@ export default function FertilityTest() {
             height={350}
             alt='Image 2'
             loading='lazy'
-            className='absolute left-10 md:left-3 top-3 h-[400px] w-[300px] md:h-[500px] md:w-[450px]'
+            className='absolute left-10 top-3 h-[400px] w-[300px] md:left-3 md:h-[500px] md:w-[450px]'
           />
         </div>
 
-        <div className='mt-10 mx-auto w-11/12 md:w-full  font-nunito-Sans md:text-start'>
+        <div className='mx-auto mt-10 w-11/12 font-nunito-Sans md:w-full md:text-start'>
           {renderData.map((ele, index) => (
             <div key={index} className='py-2 text-white'>
               <div className='py-2 text-lg font-semibold leading-5 md:py-0 md:text-xl md:leading-6'>
@@ -103,7 +105,7 @@ export default function FertilityTest() {
                 {ele.subTitle}
               </div>
               {renderData.length === index + 1 && (
-                <div className='mt-7 w-2/3 lg:mt-14  lg:w-1/3'>
+                <div className='mt-7 w-2/3 lg:mt-14 lg:w-1/3'>
                   <span
                     className='flex cursor-pointer items-center justify-center scroll-smooth rounded bg-white px-4 py-2 font-content font-semibold text-[#D9576C] shadow hover:text-gg-400 focus:outline-none focus:ring active:text-rose-500 dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
                     onClick={openModal}
@@ -122,13 +124,13 @@ export default function FertilityTest() {
           onClick={closeModal}
         >
           <div
-            className='relative w-11/12 h-4/6 overflow-scroll z-10 lg:w-full lg:h-fit lg:overflow-hidden max-w-3xl rounded-lg bg-white p-6 shadow-lg'
+            className='relative z-10 h-4/6 w-11/12 max-w-3xl overflow-scroll rounded-lg bg-white p-6 shadow-lg lg:h-fit lg:w-full lg:overflow-hidden'
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className='mb-2 text-center text-2xl font-semibold text-gray-900'>
               Fertility Screening Packages
             </h2>
-            <p className='font-nunito-sans decoration-none mb-6 md:ml-[28%] flex w-80 items-center justify-center text-center text-[14px] font-thin leading-[17.28px] text-gray-600 underline-offset-[from-font]'>
+            <p className='font-nunito-sans decoration-none mb-6 flex w-80 items-center justify-center text-center text-[14px] font-thin leading-[17.28px] text-gray-600 underline-offset-[from-font] md:ml-[28%]'>
               Following fertility screening packages will be available till 31st
               December 2024
             </p>
@@ -136,7 +138,7 @@ export default function FertilityTest() {
             {packages.map((pkg, index) => (
               <div
                 key={index}
-                className='mb-4 flex flex-col lg:flex-row  items-center gap-4 rounded-lg border p-2'
+                className='mb-4 flex flex-col items-center gap-4 rounded-lg border p-2 lg:flex-row'
               >
                 <Image
                   src={pkg.image}
@@ -153,13 +155,16 @@ export default function FertilityTest() {
                     {pkg.description}
                   </p>
                   <div className='mt-2 flex items-center justify-between'>
-                    <button className='rounded-md bg-[#DD6F6F] px-8 py-1 text-white'>
-                      {pkg.buttonText}
+                    <button
+                      onClick={() => setBookNow(true)}
+                      className='rounded-md bg-[#DD6F6F] px-4 py-1 text-white'
+                    >
+                      Book an appointment
                     </button>
                   </div>
                 </div>
 
-                <div className='flex flex-row gap-2 lg:flex-col items-center justify-start self-start'>
+                <div className='flex flex-row items-center justify-start gap-2 self-start lg:flex-col'>
                   <span className='text-xl font-semibold text-gray-900'>
                     {pkg.price}
                   </span>
@@ -168,6 +173,15 @@ export default function FertilityTest() {
               </div>
             ))}
           </div>
+        </div>
+      )}
+
+      {bookNow && (
+        <div
+          className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'
+          onClick={() => setBookNow(false)}
+        >
+          <BookAnAppointment />
         </div>
       )}
     </div>
