@@ -100,6 +100,7 @@
   resolved "https://registry.yarnpkg.com/@eslint/object-schema/-/object-schema-2.1.4.tgz#9e69f8bb4031e11df79e03db09f9dbbae1740843"
   integrity sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==
 
+
 "@eslint/plugin-kit@^0.2.3":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@eslint/plugin-kit/-/plugin-kit-0.2.3.tgz#812980a6a41ecf3a8341719f92a6d1e784a2e0e8"
