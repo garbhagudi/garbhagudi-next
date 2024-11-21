@@ -3,6 +3,9 @@
 
 const nextConfig = {
   reactStrictMode: false,
+  experimental: {
+    workerThreads: false,
+  },
   images: {
     dangerouslyAllowSVG: true,
     unoptimized: true,
