@@ -45,22 +45,22 @@ export default function Expects() {
   ];
 
   const staticData = [
-    {
-      title: 'Chat with us over Whatsapp',
-      content:
-        'Connect instantly for questions or to learn more about egg freezing, without needing an appointment.',
+    // {
+    //   title: 'Chat with us over Whatsapp',
+    //   content:
+    //     'Connect instantly for questions or to learn more about egg freezing, without needing an appointment.',
 
-      btn: (
-        <Link
-          href='https://api.whatsapp.com/send/?phone=916383697088&text=Hi.'
-          className='block w-full rounded-[10px] border-2 border-white bg-[#49C958] px-4 py-2 font-content text-white hover:bg-green-400 focus:outline-none focus:ring active:bg-green-300 sm:w-auto'
-        >
-          <span className='flex items-center justify-center gap-2 font-figtree text-lg'>
-            <BsWhatsapp size={22} className='text-white' /> Drop us a "Hi" here
-          </span>
-        </Link>
-      ),
-    },
+    //   btn: (
+    //     <Link
+    //       href='https://api.whatsapp.com/send/?phone=919480948005&text=Hi.'
+    //       className='block w-full rounded-[10px] border-2 border-white bg-[#49C958] px-4 py-2 font-content text-white hover:bg-green-400 focus:outline-none focus:ring active:bg-green-300 sm:w-auto'
+    //     >
+    //       <span className='flex items-center justify-center gap-2 font-figtree text-lg'>
+    //         <BsWhatsapp size={22} className='text-white' /> Drop us a "Hi" here
+    //       </span>
+    //     </Link>
+    //   ),
+    // },
     {
       title: 'Call Us/Book an Appointment',
       content:
@@ -139,7 +139,7 @@ export default function Expects() {
         <div className='mx-auto text-lg w-8/12 md:w-10/12 pb-8 md:pb-16 text-center font-nunito-Sans md:text-xl text-[#1D1D1D] opacity-70 dark:text-white'>
           Now since you read so much, here’s what you can do next
         </div>
-        <div className='mx-auto flex w-10/12 lg:w-9/12 flex-col items-center justify-evenly  gap-4 lg:gap-7 md:flex-row'>
+        <div className='mx-auto flex w-10/12 lg:w-6/12 flex-col items-center justify-evenly  gap-4 lg:gap-7 md:flex-row'>
           {staticData.map((ele, index) => {
             return (
               <div

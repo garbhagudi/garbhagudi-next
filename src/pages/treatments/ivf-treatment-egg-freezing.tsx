@@ -21,7 +21,7 @@ export default function fertility() {
       <PlannedSteps />
       <Freezing />
       <Expects />
-      <Journies />
+      {/* <Journies /> */}
       <Faq/>
       <CTA />
     </div>

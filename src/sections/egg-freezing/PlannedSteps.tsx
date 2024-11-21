@@ -79,16 +79,26 @@ export default function PlannedSteps() {
     },
   ];
   return (
-    <div className='mx-auto w-10/12 pt-7 lg:py-14 font-nunito-Sans'>
-      <div className='flex items-center justify-center py-2 text-center text-2xl font-extrabold md:py-5 md:text-4xl'>
-        Guided Support Every Step of the Way
+    <div className='mx-auto w-11/12 pt-7 font-nunito-Sans lg:w-10/12 lg:py-14'>
+      <div className='flex items-center justify-center py-2 text-center text-2xl font-extrabold md:mb-5 md:py-5 md:text-4xl'>
+        Guided Support – Step by Step
       </div>
-      <div className='mx-auto w-full text-center text-lg font-normal text-[#1D1D1D] opacity-70 md:text-xl'>
+      <Image
+        src={
+          'https://res.cloudinary.com/garbhagudiivf/image/upload/v1732187209/eggFreezing/ijuhv5e8w39qnmydxj56.png'
+        }
+        alt={'Guided'}
+        width={100}
+        height={100}
+        className='mx-auto h-[500px] w-full rounded-lg lg:w-10/12'
+      />
+
+      {/* <div className='mx-auto w-full text-center text-lg font-normal text-[#1D1D1D] opacity-70 md:text-xl'>
         Egg freezing involves a few carefully planned steps, all overseen by
         experienced fertility experts to ensure safety and comfort.
-      </div>
+      </div> */}
 
-      <div className='mx-auto w-full p-2 lg:w-[95%] lg:p-10'>
+      {/* <div className='mx-auto w-full p-2 lg:w-[95%] lg:p-10'>
         {renderData.map((ele, index) => (
           <div key={index + 1}>
             <div className='mb-5 flex flex-col items-center gap-5 py-5 lg:flex-row'>
@@ -126,7 +136,7 @@ export default function PlannedSteps() {
             )}
           </div>
         ))}
-      </div>
+      </div> */}
       <style>{`.custom-list-item {
   position: relative;
   padding-left: 1.2em; /* Creates space for the dot */

@@ -8,46 +8,47 @@ export default function Overview() {
       icon: image1,
       title: 'Science of Preservation',
       content:
-        'Eggs are safely retrieved, frozen, and stored, maintaining their quality and viability for when you’re ready.',
+        'Egg Freezing Technology has improved drastically in the past decade',
     },
     {
       icon: image2,
       title: 'Empowerment through Choice',
-      content:
-        'Egg freezing provides flexibility for women who are focusing on career, personal goals, or simply aren’t ready to have children yet.',
+      content: 'Freezing Eggs will not affect having a healthy pregnancy',
     },
     {
       icon: image3,
       title: 'Why Now?',
       content:
-        'Advancements in cryopreservation and storage techniques mean that eggs can be preserved with high success rates.',
+        'If you freeze your eggs before the age of 35, there are 90% chances of achieving a successful pregnancy',
     },
   ];
   const statistic = [
     {
       value: '~90%',
       title: 'Egg Survival Rate',
-      content: 'This has been observed in women under 35 years of age',
+      content:
+        'The success rate for egg freezing in women under 35 years of age is between 75% &amp 99%',
     },
     {
       value: '~95%',
       title: 'Eggs Retain-up',
-      content: 'Frozen eggs retain-up using modern cryopreservation methods.',
+      content:
+        'Females who froze 15 eggs before 35 years old attempted a 70 – 80 % opportunity of having a live birth. 20 additional frozen eggs will scale their chance up to 90%. Egg Freezing or oocyte cryopreservation, is a method for women to preserve fertility by freezing eggs.',
     },
   ];
 
   return (
-    <div className='pb-5 md:pt-10'>
+    <div className='pb-5 md:pt-14'>
       <div className='flex flex-col'>
-        <div className='my-5 md:my-10 md:mr-10 pb-5 text-center text-2xl md:text-4xl font-extrabold leading-8 text-[#1D1D1D] dark:text-white'>
-          Overview
+        <div className='my-5 pb-5 text-center text-2xl font-extrabold leading-8 text-[#1D1D1D] dark:text-white md:my-10 md:mr-10 md:text-4xl'>
+          Did You Know?
         </div>
-        <div className='flex flex-col items-start gap-2 md:gap-28 px-14 text-center md:flex-row'>
+        <div className='flex flex-col items-start gap-2 px-14 text-center md:flex-row md:gap-28'>
           {renderData.map((ele, index) => {
             return (
               <div
                 key={index}
-                className='relative flex items-center justify-between flex-col md:flex-row'
+                className='relative flex flex-col lg:w-1/3 items-center justify-between md:flex-row'
               >
                 <div className='flex flex-col items-center justify-center'>
                   <div className='flex h-16 w-16 items-center justify-center rounded-[50%] bg-[#FFE9EC]'>
@@ -58,21 +59,18 @@ export default function Overview() {
                       height={32}
                     />
                   </div>
-                  <div className='py-2 font-figtree text-2xl font-semibold'>
+                  {/* <div className='py-2 font-figtree text-2xl font-semibold'>
                     {ele.title}
-                  </div>
+                  </div> */}
                   <div
-                    className={`w-full font-nunito-Sans text-lg font-normal opacity-70 ${renderData.length == index + 1 && 'pr-6'}`}
+                    className={`w-full py-5 font-nunito-Sans text-lg font-normal opacity-70 ${renderData.length == index + 1 && 'pr-6'}`}
                   >
                     {ele.content}
                   </div>
                 </div>
-                {/* <div
-                  className={`w-2/3 rotate-90 border-[2px] border-[#FFE9EC] ${renderData.length == index + 1 && 'hidden'}`}
-                ></div> */}
 
                 <div
-                  className={`${renderData.length == index + 1 ? 'hidden' : ' my-10 md:py-0 md:absolute md:bottom-[55%] left-[110%] w-[6em] md:rotate-90 border-2 border-l-4 border-[#FFE9EC]'}`}
+                  className={`${renderData.length == index + 1 ? 'hidden' : 'left-[110%] top-10 my-10 w-[6em] border-2 border-l-4 border-[#FFE9EC] md:absolute md:bottom-[55%] md:rotate-90 md:py-0'}`}
                 ></div>
               </div>
             );
@@ -83,17 +81,17 @@ export default function Overview() {
         <div className='py-10 text-3xl font-extrabold text-[#1D1D1D]'>
           Statistic & Findings
         </div>
-        <div className='flex flex-col items-center justify-center gap-6 md:gap-20 md:flex-row'>
+        <div className='flex flex-col items-center justify-center gap-6 px-5 lg:px-0 lg:flex-row lg:gap-20'>
           {statistic.map((ele, index) => (
             <div
               key={index}
-              className='flex h-32 w-72 flex-col items-center justify-center bg-[#F9F9F9] px-5 py-16'
+              className='flex   lg:h-56 lg:w-96 flex-col items-center justify-center bg-[#F9F9F9] px-5 py-16'
             >
-              <div className=' text-2xl md:text-4xl font-extrabold text-[#D9576C]'>
+              {/* <div className=' text-2xl md:text-4xl font-extrabold text-[#D9576C]'>
                 {ele.value}
               </div>
-              <div className='text-base md:text-lg font-bold text-black'>{ele.title}</div>
-              <div className='py-1 text-center text-[14px] font-normal text-[#1D1D1D]'>
+              <div className='text-base md:text-lg font-bold text-black'>{ele.title}</div> */}
+              <div className='lg:py-10 text-center text-[14px] font-medium text-[#1D1D1D] md:text-[18px]'>
                 {ele.content}
               </div>
             </div>

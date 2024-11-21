@@ -37,7 +37,7 @@ export default function Banner() {
 
               <div className='mt-8 flex flex-wrap items-center gap-4 font-figtree text-base font-semibold'>
                   {/* <Link
-                    href='https://api.whatsapp.com/send/?phone=916383697088&text=Hi.'
+                    href='https://api.whatsapp.com/send/?phone=919480948005&text=Hi.'
                     className='block w-full rounded-[10px] border-2 border-white bg-[#49C958] px-4 py-2 font-content text-white hover:bg-green-400 focus:outline-none focus:ring active:bg-green-300 sm:w-auto'
                   >
                     <span className='flex items-center justify-center gap-2 font-figtree text-lg'>
@@ -61,7 +61,8 @@ export default function Banner() {
               </div>
             </div>
           </div>
-          <div className='custom-shape-divider-bottom-1731505107 hidden lg:visible'>
+          <div className="custom-shape-divider-bottom-1731505107 hidden lg:block">
+
             <svg
               data-name='Layer 1'
               xmlns='http://www.w3.org/2000/svg'
