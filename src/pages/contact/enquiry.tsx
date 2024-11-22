@@ -52,7 +52,8 @@ const IndexPage = () => {
           src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722509021/Banner/Google_Form_Header-min_tjenif_1_1_k8jrow.jpg'
           alt='formBanner'
           className='mx-auto mt-4 md:max-w-2xl'
-          fill
+          width={1024}
+          height={400}
         />
         <div className='mx-auto max-w-2xl bg-gray-800'>
           <h1 className='pt-4 text-center font-lexend text-3xl text-white'>Enquiry Form</h1>
