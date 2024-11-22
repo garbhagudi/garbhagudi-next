@@ -106,29 +106,27 @@ const BranchEvents = () => {
 
   return (
     <div>
-      <h2 className='text-xl font-bold mt-10'>Events at Branch Level</h2>
+      <h2 className='mt-10 text-xl font-bold'>Events at Branch Level</h2>
       {Location.map((item, index) => (
         <div key={index} className='my-8'>
           <div className='group'>
             <div
               onClick={() => toggleLocation(item.name)}
-              className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gg-200 dark:hover:bg-gray-600 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 cursor-pointer'
+              className='-m-3 flex cursor-pointer items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gg-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 dark:hover:bg-gray-600'
             >
-              <div className='flex items-center justify-center bg-gg-500 dark:grayscale dark:group-hover:grayscale-0 transition-all duration-150 ease-in-out rounded-lg flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12 text-base text-center lg:text-2xl'>
-                <div className='mt-1 text-center flex items-center justify-center flex-col'>
+              <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gg-500 text-center text-base text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12 lg:text-2xl'>
+                <div className='mt-1 flex flex-col items-center justify-center text-center'>
                   {item.icon}
-                  <div className='text-xs text-center'>{item.short}</div>
+                  <div className='text-center text-xs'>{item.short}</div>
                 </div>
               </div>
               <div className='ml-4 flex-1'>
-                <p className='text-sm font-medium text-gray-800 dark:text-white'>
-                  {item.name}
-                </p>
+                <p className='text-sm font-medium text-gray-800 dark:text-white'>{item.name}</p>
               </div>
               <div className='ml-2'>
                 {openLocation === item.name ? (
                   <svg
-                    className='w-5 h-5 text-gray-500'
+                    className='h-5 w-5 text-gray-500'
                     fill='none'
                     stroke='currentColor'
                     viewBox='0 0 24 24'
@@ -143,7 +141,7 @@ const BranchEvents = () => {
                   </svg>
                 ) : (
                   <svg
-                    className='w-5 h-5 text-gray-500'
+                    className='h-5 w-5 text-gray-500'
                     fill='none'
                     stroke='currentColor'
                     viewBox='0 0 24 24'
@@ -161,24 +159,24 @@ const BranchEvents = () => {
             </div>
           </div>
           <div
-            className={`overflow-hidden transition-max-height duration-500 ${
+            className={`transition-max-height overflow-hidden duration-500 ${
               openLocation === item.name ? 'max-h-96' : 'max-h-0'
             }`}
           >
             {openLocation === item.name && (
-              <div className='p-4 mt-3 bg-white dark:bg-gray-800'>
+              <div className='mt-3 bg-white p-4 dark:bg-gray-800'>
                 {item.events.map((event, eventIndex) => (
                   <div key={eventIndex} className='mb-4'>
                     <p className='text-gray-800 dark:text-gray-200'>
                       <strong>Date:</strong> {event.date}
                     </p>
-                    <p className='text-gray-800 mt-2 dark:text-gray-200'>
+                    <p className='mt-2 text-gray-800 dark:text-gray-200'>
                       <strong>Activity:</strong> {event.activity}
                     </p>
-                    <Link href={"https://www.garbhagudi.com/ivf/yoga"}>
-                    <button className='mt-2 bg-gg-500 text-white px-4 py-2 rounded'>
-                      Register
-                    </button>
+                    <Link href={'https://www.garbhagudi.com/ivf/yoga'}>
+                      <button className='mt-2 rounded bg-gg-500 px-4 py-2 text-white'>
+                        Register
+                      </button>
                     </Link>
                   </div>
                 ))}

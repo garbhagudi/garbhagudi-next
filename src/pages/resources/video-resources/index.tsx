@@ -6,25 +6,25 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { VscVerified } from 'react-icons/vsc';
 import moment from 'moment';
+import Image from 'next/image';
 
-const YOUTUBE_PLAYLIST_ITEMS_API =
-  'https://www.googleapis.com/youtube/v3/playlistItems';
+const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
 export async function getServerSideProps() {
   const recommendedData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const tvAppearanceData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const garbhasandeshaData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const testimonialData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const recommended = await recommendedData.json();
@@ -42,42 +42,21 @@ export async function getServerSideProps() {
   };
 }
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
+const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) => {
+  const [url, setUrl] = useState(recommended?.items[0].snippet.resourceId.videoId);
+  const [url2, setUrl2] = useState(garbhasandesha?.items[0].snippet.resourceId.videoId);
+  const [url3, setUrl3] = useState(tvAppearance?.items[0].snippet.resourceId.videoId);
+  const [url4, setUrl4] = useState(testimonials?.items[0].snippet.resourceId.videoId);
 
-const IndexPage = ({
-  recommended,
-  garbhasandesha,
-  tvAppearance,
-  testimonials,
-}) => {
-  let [url, setUrl] = useState(
-    recommended?.items[0].snippet.resourceId.videoId,
-  );
-  let [url2, setUrl2] = useState(
-    garbhasandesha?.items[0].snippet.resourceId.videoId,
-  );
-  let [url3, setUrl3] = useState(
-    tvAppearance?.items[0].snippet.resourceId.videoId,
-  );
-  let [url4, setUrl4] = useState(
-    testimonials?.items[0].snippet.resourceId.videoId,
-  );
-
-
-  const renderRecommended = (
-    image: string,
-    url: string,
-    label: string,
-    by: string,
-  ) => {
+  const renderRecommended = (image: string, url: string, label: string, by: string) => {
     return (
       <div className='flex items-center justify-start border-b pb-4 font-sans md:border-none md:pb-0'>
-        <img
+        <Image
           src={image}
           alt={label}
           className='col-span-1 max-w-[200px] rounded-lg sm:w-32 md:max-w-[230px] xl:w-48'
+          width={200}
+          height={200}
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
@@ -99,18 +78,15 @@ const IndexPage = ({
     );
   };
 
-  const renderGarbhaSandesha = (
-    image: string,
-    url2: string,
-    label: string,
-    by: string,
-  ) => {
+  const renderGarbhaSandesha = (image: string, url2: string, label: string, by: string) => {
     return (
       <div className='flex items-center justify-start font-sans'>
-        <img
+        <Image
           src={image}
           alt={label}
           className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'
+          width={200}
+          height={200}
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
@@ -132,18 +108,15 @@ const IndexPage = ({
     );
   };
 
-  const renderTvAppreances = (
-    image: string,
-    url3: string,
-    label: string,
-    by: string,
-  ) => {
+  const renderTvAppreances = (image: string, url3: string, label: string, by: string) => {
     return (
       <div className='flex items-center justify-start font-sans'>
-        <img
+        <Image
           src={image}
           alt={label}
           className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'
+          width={200}
+          height={200}
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
@@ -165,18 +138,15 @@ const IndexPage = ({
     );
   };
 
-  const renderTestimonials = (
-    image: string,
-    url4: string,
-    label: string,
-    by: string,
-  ) => {
+  const renderTestimonials = (image: string, url4: string, label: string, by: string) => {
     return (
       <div className='flex items-center justify-start font-sans'>
-        <img
+        <Image
           src={image}
           alt={label}
           className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'
+          width={200}
+          height={200}
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
@@ -205,10 +175,7 @@ const IndexPage = ({
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Video Resources | GarbhaGudi</title>
-        <meta
-          name='title'
-          content='Tools and Calculator | GarbhaGudi IVF Centre'
-        />
+        <meta name='title' content='Tools and Calculator | GarbhaGudi IVF Centre' />
         <meta
           name='description'
           content='Informational Videos from our various social platforms consolidated for your viewing...'
@@ -329,7 +296,7 @@ const IndexPage = ({
                             medium.url,
                             snippet.resourceId.videoId,
                             title,
-                            snippet.channelTitle,
+                            snippet.channelTitle
                           )}
                         </div>
                       );
@@ -401,7 +368,7 @@ const IndexPage = ({
                             medium.url,
                             snippet.resourceId.videoId,
                             title,
-                            snippet.channelTitle,
+                            snippet.channelTitle
                           )}
                         </div>
                       );
@@ -473,7 +440,7 @@ const IndexPage = ({
                             medium.url,
                             snippet.resourceId.videoId,
                             title,
-                            snippet.channelTitle,
+                            snippet.channelTitle
                           )}
                         </div>
                       );
@@ -545,7 +512,7 @@ const IndexPage = ({
                             medium.url,
                             snippet.resourceId.videoId,
                             title,
-                            snippet.channelTitle,
+                            snippet.channelTitle
                           )}
                         </div>
                       );

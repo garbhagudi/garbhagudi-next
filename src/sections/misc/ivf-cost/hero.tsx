@@ -12,30 +12,27 @@ const Banner = () => {
         <div className='relative mx-auto max-w-7xl px-3 font-content text-gray-800 dark:text-gray-200'>
           <div>
             <p className='font-semibold'>
-              The preliminary cost of IVF treatment in Bangalore fall between
-              ₹1,00,000 and ₹4,00,000 varies from person to person and depends
-              on a variety of variables depending on the complexity of the case
+              The preliminary cost of IVF treatment in Bangalore fall between ₹1,00,000 and
+              ₹4,00,000 varies from person to person and depends on a variety of variables depending
+              on the complexity of the case
             </p>
             <div className='grid grid-cols-1 font-semibold lg:grid-cols-2'>
               <div className='mt-8 flex max-w-lg flex-col items-start justify-start'>
-                At GarbhaGudi, we offer various packages starting from as low as
-                ₹90,000
+                At GarbhaGudi, we offer various packages starting from as low as ₹90,000
                 <ul className='ml-4 mt-4 list-outside list-disc space-y-2'>
                   <li>
-                    GarbhaGudi has over a decade of experience treating the most
-                    challenging cases of Infertility
+                    GarbhaGudi has over a decade of experience treating the most challenging cases
+                    of Infertility
                   </li>
                   <li>
-                    GarbhaGudi is known for its extra-ordinary success rates and
-                    hoslistic approach to infertility treatment, and affordable
-                    costs{' '}
+                    GarbhaGudi is known for its extra-ordinary success rates and hoslistic approach
+                    to infertility treatment, and affordable costs{' '}
                   </li>
                   <li>
                     <Link href={'/'} className='text-brandPink hover:underline'>
                       GarbhaGudi IVF centre
                     </Link>{' '}
-                    has been nominated for and won numerous awards in the field
-                    of{' '}
+                    has been nominated for and won numerous awards in the field of{' '}
                     <Link
                       href={'/treatments/infertility'}
                       className='text-brandPink hover:underline'
@@ -49,9 +46,7 @@ const Banner = () => {
                     <Link href={'/gg-care'}>Get a Quote</Link>
                   </button>
                   <button className='mx-auto mt-4 rounded-lg border bg-brandPurpleDark px-3 py-2 text-lg font-bold text-white hover:bg-opacity-80 dark:border-gray-600 dark:bg-gray-500 dark:hover:bg-brandPurpleDark/90 lg:mx-0'>
-                    <Link
-                      href={'/blogs/what-is-the-cost-of-ivf-treatment-in-india'}
-                    >
+                    <Link href={'/blogs/what-is-the-cost-of-ivf-treatment-in-india'}>
                       Read More on IVF Pricing
                     </Link>
                   </button>

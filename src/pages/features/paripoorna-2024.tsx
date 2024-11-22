@@ -15,10 +15,7 @@ const Paripoorna = () => {
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Paripoorna | Get flat ₹1,00,000 off on IVF Treatments</title>
-        <meta
-          name='title'
-          content='Paripoorna | Get a flat ₹1,00,000 off on IVF Treatments'
-        />
+        <meta name='title' content='Paripoorna | Get a flat ₹1,00,000 off on IVF Treatments' />
         <meta
           name='description'
           content='GarbhaGudi is where dreams come alive, hopes never fade and possibilities never end. We work to help you cherish the golden moment of holding your bundle of joy'

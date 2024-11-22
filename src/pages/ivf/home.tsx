@@ -18,8 +18,7 @@ import { gql } from '@apollo/client';
 import Image from 'next/image';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 
-const YOUTUBE_PLAYLIST_ITEMS_API =
-  'https://www.googleapis.com/youtube/v3/playlistItems';
+const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
 const IndexPage = ({ doctors, testimonials, branches }) => {
   const [activeIndex, setActiveIndex] = React.useState(1);
@@ -35,10 +34,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Bangalore's Best IVF Centres | GarbhaGudi IVF Centre</title>
-        <meta
-          name='title'
-          content="Bangalore's Best IVF Centres | GarbhaGudi IVF Centre"
-        />
+        <meta name='title' content="Bangalore's Best IVF Centres | GarbhaGudi IVF Centre" />
         <meta
           name='description'
           content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
@@ -46,10 +42,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content="Bangalore's Best IVF Centres | GarbhaGudi IVF Centre"
-        />
+        <meta property='og:title' content="Bangalore's Best IVF Centres | GarbhaGudi IVF Centre" />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -66,10 +59,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content="Bangalore's Best IVF Centres | GarbhaGudi IVF Centre"
-        />
+        <meta name='twitter:title' content="Bangalore's Best IVF Centres | GarbhaGudi IVF Centre" />
         <meta
           name='twitter:description'
           content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
@@ -216,7 +206,7 @@ export const getStaticProps = async () => {
   });
 
   const testimonialsData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const testimonials = await testimonialsData.json();

@@ -24,8 +24,7 @@ const Contact = () => {
                       className='text-purple-800 hover:underline dark:text-purple-300'
                     >
                       <div>
-                        <MdAlternateEmail className='inline-flex' />{' '}
-                        {items.email}
+                        <MdAlternateEmail className='inline-flex' /> {items.email}
                       </div>
                     </Link>
                     <div className='mt-1'>
@@ -35,8 +34,7 @@ const Contact = () => {
                         className='text-gg-500 hover:underline dark:text-gg-400'
                       >
                         <div>
-                          <MdPhone className='inline-block h-5 w-5' />{' '}
-                          {items.phone}
+                          <MdPhone className='inline-block h-5 w-5' /> {items.phone}
                         </div>
                       </Link>
                     </div>
@@ -62,8 +60,7 @@ const Contact = () => {
                         className='text-gg-500 hover:underline dark:text-gg-400'
                       >
                         <div>
-                          <MdPhone className='inline-block h-5 w-5' />{' '}
-                          {items.phone}
+                          <MdPhone className='inline-block h-5 w-5' /> {items.phone}
                         </div>
                       </Link>
                     </div>
@@ -78,9 +75,7 @@ const Contact = () => {
                         <span>
                           <SiGooglemaps className='ml-2 flex items-center text-base' />
                         </span>
-                        <span className='whitespace-nowrap pl-2 pr-4'>
-                          Direction
-                        </span>
+                        <span className='whitespace-nowrap pl-2 pr-4'>Direction</span>
                       </Link>
                       <Link
                         href={`tel:${items.phone}`}
@@ -91,9 +86,7 @@ const Contact = () => {
                         <span>
                           <MdPhone className='ml-2 flex items-center text-base' />
                         </span>
-                        <span className='whitespace-nowrap pl-2 pr-4'>
-                          Phone Call
-                        </span>
+                        <span className='whitespace-nowrap pl-2 pr-4'>Phone Call</span>
                       </Link>
                     </div>
                   </div>
@@ -143,8 +136,8 @@ export const contactData = {
       address: (
         <div>
           <p>
-            Subhasri Complex, 210/A, Kumaraswamy Temple Rd, 2nd Block, Phase 1,
-            Banashankari Stage I, Banashankari,
+            Subhasri Complex, 210/A, Kumaraswamy Temple Rd, 2nd Block, Phase 1, Banashankari Stage
+            I, Banashankari,
           </p>
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560050</p>
         </div>
@@ -158,8 +151,8 @@ export const contactData = {
       address: (
         <div>
           <p>
-            Park Landing, 5AC-709, Outer Ring Rd, Balachandra Layout, HRBR
-            Layout 2nd Block, Chelekare, Extension,
+            Park Landing, 5AC-709, Outer Ring Rd, Balachandra Layout, HRBR Layout 2nd Block,
+            Chelekare, Extension,
           </p>
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560043</p>
         </div>
@@ -173,8 +166,7 @@ export const contactData = {
       address: (
         <div>
           <p>
-            #26, Pattalamma Temple Road, Behind South End Circle Metro Station,
-            Basavanagudi, <br />
+            #26, Pattalamma Temple Road, Behind South End Circle Metro Station, Basavanagudi, <br />
             Jayanagar
           </p>
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560004</p>
@@ -189,8 +181,8 @@ export const contactData = {
       address: (
         <div>
           <p>
-            Ganesh Towers, 3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra Bank,
-            Konappana Agrahara, Electronic City,
+            Ganesh Towers, 3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra Bank, Konappana Agrahara,
+            Electronic City,
           </p>
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560100</p>
         </div>
@@ -204,8 +196,8 @@ export const contactData = {
       address: (
         <div>
           <p>
-            4TH floor, Chirag Towers, Born Babies Building, 24 & 64, Service Rd,
-            next to कलामंदिर, <br />
+            4TH floor, Chirag Towers, Born Babies Building, 24 & 64, Service Rd, next to कलामंदिर,{' '}
+            <br />
             Marathahalli,
           </p>
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560037</p>
@@ -220,8 +212,8 @@ export const contactData = {
       address: (
         <div>
           <p>
-            #3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage,
-            Ashwath Nagar, Devasandra Layout, Sadashivnagar
+            #3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage, Ashwath Nagar,
+            Devasandra Layout, Sadashivnagar
           </p>
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560094</p>
         </div>
@@ -234,10 +226,7 @@ export const contactData = {
       name: 'Nagarbhavi',
       address: (
         <div>
-          <p>
-            1st Floor, 80ft Main Road, NGCF Layout, 2nd Stage, BDA Road,
-            Naagarabhaavi,
-          </p>
+          <p>1st Floor, 80ft Main Road, NGCF Layout, 2nd Stage, BDA Road, Naagarabhaavi,</p>
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560072</p>
         </div>
       ),

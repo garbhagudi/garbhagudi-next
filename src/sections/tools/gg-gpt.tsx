@@ -32,7 +32,7 @@ const ChatComponent = ({ apiKey }) => {
 
   const isRelatedToHealth = (query) => {
     const matchedKeywords = healthKeywords.filter((keyword) =>
-      fuzzysearch(keyword.toLowerCase(), query.toLowerCase()),
+      fuzzysearch(keyword.toLowerCase(), query.toLowerCase())
     );
     return matchedKeywords.length > 0;
   };
@@ -53,7 +53,7 @@ const ChatComponent = ({ apiKey }) => {
           headers: {
             Authorization: `Bearer ${apiKey}`,
           },
-        },
+        }
       );
       return response.data.choices[0].text;
     } catch (error) {
@@ -80,14 +80,8 @@ const ChatComponent = ({ apiKey }) => {
           setChatResponse(response);
           setIsFetchingResponse(false);
         } catch (error) {
-          if (
-            axios.isAxiosError(error) &&
-            error.response &&
-            error.response.status === 429
-          ) {
-            setChatResponse(
-              'API rate limit exceeded. Please wait and try again.',
-            );
+          if (axios.isAxiosError(error) && error.response && error.response.status === 429) {
+            setChatResponse('API rate limit exceeded. Please wait and try again.');
           } else {
             console.error('Error:', error);
           }
@@ -99,7 +93,7 @@ const ChatComponent = ({ apiKey }) => {
       }
     } else {
       setChatResponse(
-        'Sorry, this chatbot is focused on health-related topics. keep your query related to health.',
+        'Sorry, this chatbot is focused on health-related topics. keep your query related to health.'
       );
       setIsFetchingResponse(false);
     }
@@ -135,15 +129,12 @@ const ChatComponent = ({ apiKey }) => {
           <div className='mb-2 flex flex-col items-start justify-start'>
             <div className='flex space-x-1 py-2'>
               <div className='mr-2 h-4 w-4 rounded-full bg-green-500'></div>
-              <p className='text-sm font-medium text-gray-800 dark:text-gray-200'>
-                GG Care Bot
-              </p>
+              <p className='text-sm font-medium text-gray-800 dark:text-gray-200'>GG Care Bot</p>
             </div>
             <p className='text-sm font-normal text-gray-800 dark:text-gray-200'>
-              Hello! I'm here to help with any questions you have about
-              infertility and reproductive health. Let's keep our conversation
-              focused on these topics to make the most of our chat. Feel free to
-              ask away and let's explore the world of fertility together! 🌟
+              Hello! I'm here to help with any questions you have about infertility and reproductive
+              health. Let's keep our conversation focused on these topics to make the most of our
+              chat. Feel free to ask away and let's explore the world of fertility together! 🌟
             </p>
           </div>
           <div className='mb-4'>
@@ -169,9 +160,7 @@ const ChatComponent = ({ apiKey }) => {
             </button>
           </div>
           <div className='mt-4'>
-            <p className='text-sm text-gray-800 dark:text-gray-200'>
-              GG Care Bot:{' '}
-            </p>
+            <p className='text-sm text-gray-800 dark:text-gray-200'>GG Care Bot: </p>
             <p className='mt-2 rounded-md bg-gray-100 px-3 py-2 text-gray-800 dark:bg-gray-700 dark:text-gray-200'>
               {chatResponse}
             </p>

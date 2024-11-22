@@ -9,10 +9,7 @@ const Refund = () => {
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Cancellation &amp; Refund Policy | GarbhaGudi IVF Centre</title>
-        <meta
-          name='title'
-          content='Cancellation &amp; Refund Policy | GarbhaGudi IVF Centre'
-        />
+        <meta name='title' content='Cancellation &amp; Refund Policy | GarbhaGudi IVF Centre' />
         <meta
           name='description'
           content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
@@ -20,10 +17,7 @@ const Refund = () => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content='Privacy Policy | GarbhaGudi IVF Centre'
-        />
+        <meta property='og:title' content='Privacy Policy | GarbhaGudi IVF Centre' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -65,10 +59,7 @@ const Refund = () => {
       />
       <div className='relative overflow-hidden bg-white py-8'>
         <div className='hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full'>
-          <div
-            className='relative mx-auto h-full max-w-prose text-lg'
-            aria-hidden='true'
-          >
+          <div className='relative mx-auto h-full max-w-prose text-lg' aria-hidden='true'>
             <svg
               className='absolute left-full top-12 translate-x-32 transform'
               width={404}
@@ -95,11 +86,7 @@ const Refund = () => {
                   />
                 </pattern>
               </defs>
-              <rect
-                width={404}
-                height={384}
-                fill='url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)'
-              />
+              <rect width={404} height={384} fill='url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)' />
             </svg>
             <svg
               className='absolute right-full top-1/2 -translate-x-32 -translate-y-1/2 transform'
@@ -127,11 +114,7 @@ const Refund = () => {
                   />
                 </pattern>
               </defs>
-              <rect
-                width={404}
-                height={384}
-                fill='url(#f210dbf6-a58d-4871-961e-36d5016a0f49)'
-              />
+              <rect width={404} height={384} fill='url(#f210dbf6-a58d-4871-961e-36d5016a0f49)' />
             </svg>
             <svg
               className='absolute bottom-12 left-full translate-x-32 transform'
@@ -159,11 +142,7 @@ const Refund = () => {
                   />
                 </pattern>
               </defs>
-              <rect
-                width={404}
-                height={384}
-                fill='url(#d3eb07ae-5182-43e6-857d-35c643af9034)'
-              />
+              <rect width={404} height={384} fill='url(#d3eb07ae-5182-43e6-857d-35c643af9034)' />
             </svg>
           </div>
         </div>
@@ -175,9 +154,8 @@ const Refund = () => {
               </span>
             </h1>
             <p className='text-gray-00 mt-8 font-content text-xl leading-8'>
-              GarbhaGudi IVF believes in helping its patients as far as possible
-              and has a liberal cancellation policy for consultation booked
-              online.
+              GarbhaGudi IVF believes in helping its patients as far as possible and has a liberal
+              cancellation policy for consultation booked online.
             </p>
 
             <div className='mx-auto mt-6 max-w-7xl text-gray-800'>
@@ -185,38 +163,33 @@ const Refund = () => {
                 Under this policy
               </span>
               <p className='mt-4 font-content text-lg'>
-                Cancellations are into consideration only if our doctors have
-                cancelled the consultation. There will be no refund for
-                cancellation if it comes from the other end (patients). Refund
-                for Cancellations is not applicable for the consultation
-                services obtained on special occasions like Holi, Diwali,
-                Valentine’s Day etc. Cancellations are not possible for these
-                appointments however, you can reschedule the appointments to a
-                desired future date and avail the benefit for payment done.
+                Cancellations are into consideration only if our doctors have cancelled the
+                consultation. There will be no refund for cancellation if it comes from the other
+                end (patients). Refund for Cancellations is not applicable for the consultation
+                services obtained on special occasions like Holi, Diwali, Valentine’s Day etc.
+                Cancellations are not possible for these appointments however, you can reschedule
+                the appointments to a desired future date and avail the benefit for payment done.
               </p>
               <p className='mt-4 font-content text-lg'>
-                In case one feels that the consultation services received is not
-                as shown on the website, one must bring it to the notice of our
-                customer service within 24 hours after making the appointment
-                and payment online. The concerned team will look into your
-                complaint and will take an appropriate decision after validating
-                the case; however, no refund will be provided in case of
-                dissatisfactory consultation experience.
+                In case one feels that the consultation services received is not as shown on the
+                website, one must bring it to the notice of our customer service within 24 hours
+                after making the appointment and payment online. The concerned team will look into
+                your complaint and will take an appropriate decision after validating the case;
+                however, no refund will be provided in case of dissatisfactory consultation
+                experience.
               </p>
               <p className='mt-4 font-content text-lg'>
-                Auto-refunds to your account are not there. You will have to
-                request (within seven days of cancellation) a Refund using our
-                Contact Page. The Refund shall be processed within 7 working
-                days as it involves bank transactions. Refund amounts to
-                deduction of bank charges any.
+                Auto-refunds to your account are not there. You will have to request (within seven
+                days of cancellation) a Refund using our Contact Page. The Refund shall be processed
+                within 7 working days as it involves bank transactions. Refund amounts to deduction
+                of bank charges any.
               </p>
               <p className='mt-4 font-content text-lg'>
-                It will be our earnest attempt to respond to your online query
-                or online consultation request within the stipulated time frame
-                of three Working days. But in case you do not receive any
-                communication (auto-generated email is not a form of
-                communication) from the Clinic, one is eligible for a Refund OR
-                Cancel the Request, whichever is applicable.
+                It will be our earnest attempt to respond to your online query or online
+                consultation request within the stipulated time frame of three Working days. But in
+                case you do not receive any communication (auto-generated email is not a form of
+                communication) from the Clinic, one is eligible for a Refund OR Cancel the Request,
+                whichever is applicable.
               </p>
             </div>
           </div>

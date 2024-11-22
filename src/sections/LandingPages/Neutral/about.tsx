@@ -20,18 +20,17 @@ const About = () => {
           </div>
           <div className='col-span-3 mt-6 flex flex-col items-center justify-center px-3 font-content text-gray-800 dark:text-gray-200 md:mt-0'>
             <div>
-              Spanning over a decade, GarbhaGudi has served as a beacon of hope
-              to thousands of infertile couples. Our experienced and dedicated
-              specialists, nurses, and embryologists work to cater for your
-              needs and respond to them quickly, professionally and warmly.
+              Spanning over a decade, GarbhaGudi has served as a beacon of hope to thousands of
+              infertile couples. Our experienced and dedicated specialists, nurses, and
+              embryologists work to cater for your needs and respond to them quickly, professionally
+              and warmly.
             </div>
             <div className='pt-3'>
-              GarbhaGudi IVF Hospital in Bangalore was founded in 2011, our
-              pioneering work has led to the progression and implementation of
-              the latest medical technologies and methods to overcome female and
-              male infertility. Our centre has been helping couples from every
-              corner of the world, to fulfil their ardent desire to have a baby.
-              It is our sincere wish that you will be our next success story.
+              GarbhaGudi IVF Hospital in Bangalore was founded in 2011, our pioneering work has led
+              to the progression and implementation of the latest medical technologies and methods
+              to overcome female and male infertility. Our centre has been helping couples from
+              every corner of the world, to fulfil their ardent desire to have a baby. It is our
+              sincere wish that you will be our next success story.
             </div>
           </div>
         </div>

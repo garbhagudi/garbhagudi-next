@@ -4,6 +4,7 @@ import { gql } from '@apollo/client';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import apolloClient from 'lib/apollo-graphcms';
+import Image from 'next/image';
 
 const IndexPage = ({ careers }) => {
   return (
@@ -65,10 +66,11 @@ const IndexPage = ({ careers }) => {
           </h1>
           <Link href='/about/awards-and-accolades/garbhagudi-certified-healthy-workplace'>
             <div>
-              <img
+              <Image
                 src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1657979955/Banner/Argoya_Silver_Award_Web_Bnr-min_bx7xeo.webp'
                 alt='arogya world banner'
                 className='rounded-xl'
+                fill
               />
             </div>
           </Link>
@@ -78,17 +80,16 @@ const IndexPage = ({ careers }) => {
             Careers at GarbhaGudi
           </div>
           <p className='mx-auto mt-4 max-w-7xl py-2 font-content text-lg'>
-            At GarbhaGudi, we’re all on a mission to transform the way
-            infertility is treated, one patient at a time.{' '}
+            At GarbhaGudi, we’re all on a mission to transform the way infertility is treated, one
+            patient at a time.{' '}
           </p>
           <div className='mx-auto mt-2 max-w-7xl font-content text-lg'>
-            We go against the status quo and make actual transformation in
-            patients’ lives. All our employees are empowered to do the best work
-            of their lives by making daily impact and growing quickly.
+            We go against the status quo and make actual transformation in patients’ lives. All our
+            employees are empowered to do the best work of their lives by making daily impact and
+            growing quickly.
           </div>
           <div className='mx-auto mt-2 max-w-7xl font-content text-lg'>
-            If you feel that you need an organization where you can do your best
-            work, apply now!
+            If you feel that you need an organization where you can do your best work, apply now!
           </div>
         </div>
         <div className='pt-8 text-center font-heading text-3xl font-semibold'>
@@ -97,19 +98,15 @@ const IndexPage = ({ careers }) => {
         <div className='container mx-auto mb-2 flex w-full items-center justify-center'>
           <div className='mt-6 grid grid-cols-1 gap-6 px-3 pb-6 md:grid-cols-2 lg:grid-cols-3'>
             {careers.map((items) => (
-              <Link
-                href={`careers/${items?.slug}`}
-                passHref
-                key={items.id}
-                className='group'
-              >
+              <Link href={`careers/${items?.slug}`} passHref key={items.id} className='group'>
                 <div className='mx-auto rounded-lg border bg-gradient-to-br from-pink-50 to-purple-50 shadow-md duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:bg-gradient-to-br hover:from-pink-100 hover:via-brandPurple2 hover:to-brandPurple hover:shadow-2xl hover:transition-all dark:border-gray-600 dark:from-gray-800 dark:to-slate-800 dark:hover:from-gray-700 dark:hover:to-transparent'>
                   <div className='flex flex-col justify-between p-4 leading-normal'>
                     <div className='flex items-center space-x-2'>
-                      <img
+                      <Image
                         src={items?.image?.url}
                         alt={items?.position}
                         className='h-24 w-24 rounded-full object-cover'
+                        fill
                       />
                       <h5 className='mb-2 font-content text-xl font-bold tracking-tight text-gray-800 dark:text-gray-200'>
                         {items?.position}

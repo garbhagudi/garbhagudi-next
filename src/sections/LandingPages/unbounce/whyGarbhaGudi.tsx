@@ -16,35 +16,32 @@ const WhyGarbhaGudi = () => {
               <div className='flex flex-col items-center justify-start space-y-8'>
                 <FaPercent className='text-5xl text-brandPurpleDark dark:text-gg-500' />
                 <p className='leading-relaxed'>
-                  Industry-Leading 75% IVF Success Rates: We take pride in our
-                  exceptional success rates, standing out as the best in the
-                  industry. Our commitment to excellence ensures a higher
-                  likelihood of successful outcomes for our patients.
+                  Industry-Leading 75% IVF Success Rates: We take pride in our exceptional success
+                  rates, standing out as the best in the industry. Our commitment to excellence
+                  ensures a higher likelihood of successful outcomes for our patients.
                 </p>
               </div>
               <div className='flex flex-col items-center justify-start space-y-8'>
                 <FaUserDoctor className='text-5xl text-brandPurpleDark dark:text-gg-500' />
                 <p className='leading-relaxed'>
-                  15+ Years of Experience: Our fertility doctors bring over 15
-                  years of extensive expertise, ensuring that you receive care
-                  from seasoned professionals dedicated to your success.
+                  15+ Years of Experience: Our fertility doctors bring over 15 years of extensive
+                  expertise, ensuring that you receive care from seasoned professionals dedicated to
+                  your success.
                 </p>
               </div>
               <div className='flex flex-col items-center justify-start space-y-8'>
                 <FaMap className='text-5xl text-brandPurpleDark dark:text-gg-500' />
                 <p className='leading-relaxed'>
-                  7 Convenient IVF Centers Across Bangalore: With a widespread
-                  presence, we provide accessibility and convenience for
-                  individuals seeking fertility treatments, making quality care
-                  readily available.
+                  7 Convenient IVF Centers Across Bangalore: With a widespread presence, we provide
+                  accessibility and convenience for individuals seeking fertility treatments, making
+                  quality care readily available.
                 </p>
               </div>
               <div className='flex flex-col items-center justify-start space-y-8'>
                 <FaCircleCheck className='text-5xl text-brandPurpleDark dark:text-gg-500' />
                 <p className='leading-relaxed'>
-                  Over 10,000 Successful IVF Cases: Demonstrating a proven track
-                  record of achieving positive outcomes and fulfilling the
-                  dreams of numerous families.
+                  Over 10,000 Successful IVF Cases: Demonstrating a proven track record of achieving
+                  positive outcomes and fulfilling the dreams of numerous families.
                 </p>
               </div>
             </div>

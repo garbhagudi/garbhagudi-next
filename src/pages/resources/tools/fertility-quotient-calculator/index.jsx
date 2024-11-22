@@ -5,36 +5,35 @@ import Head from 'next/head';
 const IndexPage = () => {
   function calculate() {
     var values = [
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-      22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
-      40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57,
-      58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75,
-      76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93,
-      94, 95, 96, 97, 98, 99, 100,
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
+      27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
+      50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
+      73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95,
+      96, 97, 98, 99, 100,
     ];
     var age = [
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-      4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 3,
+      3, 3, 3, 3, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0,
     ];
     var bmi = [
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 4, 5, 5, 5, 4, 4, 4, 3,
-      3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 4, 5, 5, 5, 4, 4, 4, 3, 3, 3, 2, 2, 2, 1,
+      1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0,
     ];
     var afc = [
-      1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 3, 3,
-      3, 3, 3, 2, 2, 2, 2, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 2, 2, 2,
+      2, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0,
     ];
     var amh10 = [
-      0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5,
-      5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5,
+      5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0,
     ];
 
     const ageInput = document.getElementById('age').value;
@@ -43,21 +42,10 @@ const IndexPage = () => {
     const amhInput = Number(document.getElementById('amh').value) * 10;
 
     //Handle Empty Inputs
-    if (
-      ageInput === '' ||
-      bmiInput === '' ||
-      afcInput === '' ||
-      amhInput === ''
-    ) {
-      return (document.getElementById('error').innerHTML =
-        'Error! : Please check your inputs...');
+    if (ageInput === '' || bmiInput === '' || afcInput === '' || amhInput === '') {
+      return (document.getElementById('error').innerHTML = 'Error! : Please check your inputs...');
     }
-    if (
-      ageInput !== '' &&
-      bmiInput !== '' &&
-      afcInput !== '' &&
-      amhInput !== ''
-    ) {
+    if (ageInput !== '' && bmiInput !== '' && afcInput !== '' && amhInput !== '') {
       document.getElementById('error').innerHTML = '';
     }
 
@@ -78,8 +66,7 @@ const IndexPage = () => {
       return amh10[index] * 3;
     }
 
-    const score =
-      map1(ageInput) + map2(bmiInput) + map3(afcInput) + map4(amhInput);
+    const score = map1(ageInput) + map2(bmiInput) + map3(afcInput) + map4(amhInput);
     const percent = score * 2;
 
     document.getElementById('result').classList.remove('hidden');
@@ -113,10 +100,7 @@ const IndexPage = () => {
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Fertility Quotient Calculator | GarbhaGudi</title>
-        <meta
-          name='title'
-          content='Fertility Quotient Calculator | GarbhaGudi IVF Centre'
-        />
+        <meta name='title' content='Fertility Quotient Calculator | GarbhaGudi IVF Centre' />
         <meta
           name='description'
           content='Fertility quotient is an indicator of an individual’s capability to reproduce. The subjective topic of fertility reserve is being converted to an objective score. It is ascore against 100, given against inputs provided by the user. The score is then converted to an indicative value to help the person understand the status of his/her fertility levels.'
@@ -166,22 +150,19 @@ const IndexPage = () => {
           id='intro'
         >
           <p className='mt-2'>
-            Fertility quotient is an indicator of an individual’s capability to
-            reproduce. The subjective topic of fertility reserve is being
-            converted to an objective score. It is ascore against 100, given
-            against inputs provided by the user. The score is then converted to
-            an indicative value to help the person understand the status of
-            his/her fertility levels.
+            Fertility quotient is an indicator of an individual’s capability to reproduce. The
+            subjective topic of fertility reserve is being converted to an objective score. It is
+            ascore against 100, given against inputs provided by the user. The score is then
+            converted to an indicative value to help the person understand the status of his/her
+            fertility levels.
           </p>
           <p className='mt-2'>
-            There have many research articles that address this topic of
-            fertility capability. All research articles are more or less
-            unanimous in their findings that a lady’s fertility is based on
-            several factors which include her age, her Antral Follicular Count
-            (AFC), her AMH hormone levels and her general health condition.
-            There are also other fringe factors that contribute to the fertility
-            aspect – like tobacco usage, addiction to alcohol or other drugs
-            etc.
+            There have many research articles that address this topic of fertility capability. All
+            research articles are more or less unanimous in their findings that a lady’s fertility
+            is based on several factors which include her age, her Antral Follicular Count (AFC),
+            her AMH hormone levels and her general health condition. There are also other fringe
+            factors that contribute to the fertility aspect – like tobacco usage, addiction to
+            alcohol or other drugs etc.
           </p>
         </div>
         <hr className='my-5' />
@@ -328,10 +309,7 @@ const IndexPage = () => {
               <div id='best-fertility' className='hidden'>
                 <Best />
               </div>
-              <div
-                id='overflow'
-                className='hidden text-center text-lg text-red-500'
-              >
+              <div id='overflow' className='hidden text-center text-lg text-red-500'>
                 {' '}
                 Please check your Inputs.
               </div>
@@ -348,21 +326,18 @@ const IndexPage = () => {
         </div>
         <div className='mb-5 px-3 text-xs'>
           <p>
-            The score is calculated based on the woman’s fertility factors -
-            AMH, AFC, Age and BMI. Some of these factors play a role more
-            critical than the others. So, proper adjustments have been done in
-            the algorithm to manage these variations.{' '}
+            The score is calculated based on the woman’s fertility factors - AMH, AFC, Age and BMI.
+            Some of these factors play a role more critical than the others. So, proper adjustments
+            have been done in the algorithm to manage these variations.{' '}
           </p>
           <p className='mt-2'>
-            Please note that the fertility quotient is an indicator of the
-            fertility status. It is not a definitive advice from the doctor.
-            Consult a fertility specialist to know more about your fertility
-            quotient and fertility status. It is also important to note that a
-            woman may move from one stage to another rather quickly based on the
-            parameters that play a role. For example, a lady with a fertility
-            quotient of “Best Fertility” may move to “Good Fertility” within the
-            matter of a few months if her age is beyond 30 and if her AMH or AFC
-            starts dropping quickly.
+            Please note that the fertility quotient is an indicator of the fertility status. It is
+            not a definitive advice from the doctor. Consult a fertility specialist to know more
+            about your fertility quotient and fertility status. It is also important to note that a
+            woman may move from one stage to another rather quickly based on the parameters that
+            play a role. For example, a lady with a fertility quotient of “Best Fertility” may move
+            to “Good Fertility” within the matter of a few months if her age is beyond 30 and if her
+            AMH or AFC starts dropping quickly.
           </p>
         </div>
       </div>

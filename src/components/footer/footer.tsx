@@ -152,21 +152,14 @@ export default function Footer() {
       <div className='mx-auto max-w-7xl border-t border-gray-200 dark:border-gray-600'>
         <div className='items-ceter mt-8 flex justify-center space-x-2 sm:space-x-3'>
           {SocialIcon.map((item) => (
-            <Link
-              key={item.name}
-              href={item.url}
-              target='_blank'
-              rel='noreferrer'
-              className=''
-            >
+            <Link key={item.name} href={item.url} target='_blank' rel='noreferrer' className=''>
               <span className='sr-only'>{item.name}</span>
               {item.icon}
             </Link>
           ))}
         </div>
         <p className='py-8 text-center font-content text-gray-800 dark:text-white'>
-          &copy; {new Date().getFullYear()} GarbhaGudi IVF Centre, Inc. All
-          rights reserved.
+          &copy; {new Date().getFullYear()} GarbhaGudi IVF Centre, Inc. All rights reserved.
         </p>
       </div>
     </footer>
@@ -197,16 +190,12 @@ const SocialIcon = [
   {
     name: 'WhatsApp',
     url: 'https://api.whatsapp.com/send/?phone=918884183338&text=Hi.',
-    icon: (
-      <BsWhatsapp className='text-3xl text-green-600 dark:text-green-500' />
-    ),
+    icon: <BsWhatsapp className='text-3xl text-green-600 dark:text-green-500' />,
   },
   {
     name: 'Twitch',
     url: 'https://www.twitch.tv/garbhagudi',
-    icon: (
-      <BsTwitch className='text-3xl text-purple-600 dark:text-purple-500' />
-    ),
+    icon: <BsTwitch className='text-3xl text-purple-600 dark:text-purple-500' />,
   },
   {
     name: 'X',
@@ -221,8 +210,6 @@ const SocialIcon = [
   {
     name: 'Mail',
     url: 'mailto:dreams@garbhagudi.com',
-    icon: (
-      <BsFillEnvelopeAtFill className='text-3xl text-gray-600 dark:text-gray-200' />
-    ),
+    icon: <BsFillEnvelopeAtFill className='text-3xl text-gray-600 dark:text-gray-200' />,
   },
 ];

@@ -66,38 +66,24 @@ const Features = () => {
           <div className='py-3 lg:pt-8'>
             <div className='font-content'>
               <div className='pb-4'>
-                GarbhaGudi IVF Centre stands as the epitome of excellence,
-                making it the{' '}
-                <span className='font-bold'>
-                  {' '}
-                  Best Fertility Hospital in Bangalore
-                </span>
-                . We take pride in offering a comprehensive range of{' '}
-                <span className='font-bold'> Infertility treatments</span> to
-                cater to diverse needs, ensuring that every couple receives
-                personalized care and attention.
+                GarbhaGudi IVF Centre stands as the epitome of excellence, making it the{' '}
+                <span className='font-bold'> Best Fertility Hospital in Bangalore</span>. We take
+                pride in offering a comprehensive range of{' '}
+                <span className='font-bold'> Infertility treatments</span> to cater to diverse
+                needs, ensuring that every couple receives personalized care and attention.
               </div>{' '}
               <div className='pb-4'>
-                As a prominent{' '}
-                <span className='font-bold'>
-                  {' '}
-                  Infertility Hospital in Bangalore
-                </span>
-                , our facility houses state-of-the-art infrastructure and
-                cutting-edge technologies. Our dedicated team of fertility
-                experts brings together years of experience and expertise to
-                provide the highest level of care.
+                As a prominent <span className='font-bold'> Infertility Hospital in Bangalore</span>
+                , our facility houses state-of-the-art infrastructure and cutting-edge technologies.
+                Our dedicated team of fertility experts brings together years of experience and
+                expertise to provide the highest level of care.
               </div>{' '}
               <div className='pb-4'>
-                With a commitment to excellence, compassionate care, and a high
-                success rate, GarbhaGudi IVF Centre has rightfully earned its
-                reputation as the{' '}
-                <span className='font-bold'>
-                  {' '}
-                  Best Fertility Hospital in Bangalore
-                </span>
-                . Trust us to accompany you on your journey to parenthood and
-                make your dreams of a complete family a reality.
+                With a commitment to excellence, compassionate care, and a high success rate,
+                GarbhaGudi IVF Centre has rightfully earned its reputation as the{' '}
+                <span className='font-bold'> Best Fertility Hospital in Bangalore</span>. Trust us
+                to accompany you on your journey to parenthood and make your dreams of a complete
+                family a reality.
               </div>
             </div>
           </div>
@@ -109,9 +95,7 @@ const Features = () => {
                 <div className='shadow-3xl overflow-hidden rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-2xl'>
                   <div className='grid grid-cols-6'>
                     <div className='col-span-1 flex h-full items-center justify-center bg-brandPink'>
-                      <div className='text-4xl font-bold text-white'>
-                        {feature.icon}
-                      </div>
+                      <div className='text-4xl font-bold text-white'>{feature.icon}</div>
                     </div>
                     <div className='col-span-5 flex flex-col rounded-br-lg rounded-tr-lg border-2 border-brandPink px-2'>
                       <h3 className='text-brandDark mt-3 font-heading text-base font-semibold tracking-tight'>

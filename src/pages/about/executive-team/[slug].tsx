@@ -7,30 +7,32 @@ import BreadCrumbs from 'components/breadcrumbs';
 import Share from 'components/share';
 import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
+import Image from 'next/image';
 
 export const getStaticProps = async ({ params }) => {
-  const { data } = await apolloClient.query({
-    query: gql`
-      query ($slug: String!) {
-        director(where: { slug: $slug }) {
-          id
-          name
-          details
-          link
-          image {
-            url
-          }
-          bio {
-            raw
-            text
+  const { data } =
+    (await apolloClient.query({
+      query: gql`
+        query ($slug: String!) {
+          director(where: { slug: $slug }) {
+            id
+            name
+            details
+            link
+            image {
+              url
+            }
+            bio {
+              raw
+              text
+            }
           }
         }
-      }
-    `,
-    variables: {
-      slug: params.slug,
-    },
-  })||{};
+      `,
+      variables: {
+        slug: params.slug,
+      },
+    })) || {};
 
   return {
     props: {
@@ -72,24 +74,15 @@ const ExecutiveTeam = ({ director }) => {
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
-        <meta
-          name='title'
-          content={`${director.name} | GarbhaGudi IVF Centre`}
-        />
+        <meta name='title' content={`${director.name} | GarbhaGudi IVF Centre`} />
         <meta name='description' content={director?.bio?.text.slice(0, 160)} />
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content={`${director.name} | GarbhaGudi IVF Centre`}
-        />
+        <meta property='og:title' content={`${director.name} | GarbhaGudi IVF Centre`} />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
-        <meta
-          property='og:description'
-          content={director?.bio?.text.slice(0, 160)}
-        />
+        <meta property='og:description' content={director?.bio?.text.slice(0, 160)} />
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
@@ -100,14 +93,8 @@ const ExecutiveTeam = ({ director }) => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content={`${director.name} | GarbhaGudi IVF Centre`}
-        />
-        <meta
-          name='twitter:description'
-          content={director?.bio?.text.slice(0, 160)}
-        />
+        <meta name='twitter:title' content={`${director.name} | GarbhaGudi IVF Centre`} />
+        <meta name='twitter:description' content={director?.bio?.text.slice(0, 160)} />
         <meta
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Directors_jbvcep.jpg'
@@ -127,19 +114,23 @@ const ExecutiveTeam = ({ director }) => {
         <div className='mx-auto flex flex-col py-24 md:px-5'>
           <div className='mx-auto lg:w-4/6'>
             <div className='h-56 overflow-hidden rounded-lg md:h-96'>
-              <img
+              <Image
                 alt='content'
                 className='h-full w-full object-cover'
                 src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643287945/Banner/1200x500_4Directors_nqn9eg.jpg'
+                width={1200}
+                height={500}
               />
             </div>
             <div className='mt-10 flex flex-col sm:flex-row'>
               <div className='text-center sm:w-1/3 sm:py-8 sm:pr-8'>
                 <div className='inline-flex w-72 items-center justify-center rounded-full md:w-64'>
-                  <img
+                  <Image
                     src={director?.image.url}
                     alt={director?.name}
                     className='rounded-full'
+                    width={500}
+                    height={500}
                   />
                 </div>
                 <div className='flex flex-col items-center justify-center text-center'>

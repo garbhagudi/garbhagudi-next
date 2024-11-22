@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from 'react';
 import Image from 'next/image';
-import { BsWhatsapp } from 'react-icons/bs';
 import Link from 'next/link';
 import BookAnAppointment from './bookAnAppointment';
 
@@ -99,32 +98,21 @@ export default function Expects() {
   return (
     <Fragment>
       <div className='py-5'>
-        <div className='py-2 text-center font-nunito-Sans text-2xl  font-extrabold md:text-4xl md:py-5'>
+        <div className='py-2 text-center font-nunito-Sans text-2xl font-extrabold md:py-5 md:text-4xl'>
           Meet our Fertility Experts
         </div>
-        <div className='mx-auto w-9/12 text-center font-nunito-Sans text-lg md:text-xl md:w-10/12 text-[#1D1D1D] opacity-70'>
-          Our dedicated team brings years of experience and a compassionate
-          approach to fertility care. Meet the specialists committed to
-          supporting your journey.
+        <div className='mx-auto w-9/12 text-center font-nunito-Sans text-lg text-[#1D1D1D] opacity-70 md:w-10/12 md:text-xl'>
+          Our dedicated team brings years of experience and a compassionate approach to fertility
+          care. Meet the specialists committed to supporting your journey.
         </div>
         <div className='mx-auto mt-5 grid w-10/12 grid-cols-1 items-center justify-center gap-5 md:grid-cols-3'>
           {renderDate.map((ele, index) => {
             return (
-              <div
-                key={index}
-                className='my-5 flex flex-col items-center justify-center'
-              >
-                <Image
-                  src={ele.image}
-                  width={320}
-                  height={160}
-                  alt={`Image ${index + 1}`}
-                />
+              <div key={index} className='my-5 flex flex-col items-center justify-center'>
+                <Image src={ele.image} width={320} height={160} alt={`Image ${index + 1}`} />
                 <div className='flex flex-col items-center justify-center font-nunito-Sans font-semibold'>
-                  <span className='pb-1 pt-2 md:text-xl text-lg'>{ele.name}</span>
-                  <span className='text-base md:text-lg text-[#6C6C6C]'>
-                    {ele.designation}
-                  </span>
+                  <span className='pb-1 pt-2 text-lg md:text-xl'>{ele.name}</span>
+                  <span className='text-base text-[#6C6C6C] md:text-lg'>{ele.designation}</span>
                 </div>
               </div>
             );
@@ -133,25 +121,23 @@ export default function Expects() {
       </div>
 
       <div className='bg-[#FFD9E038] pb-20 pt-10'>
-        <div className=' text-center font-nunito-Sans text-2xl py-2 md:text-4xl md:py-5 font-extrabold dark:text-white'>
+        <div className='py-2 text-center font-nunito-Sans text-2xl font-extrabold dark:text-white md:py-5 md:text-4xl'>
           What Next?
         </div>
-        <div className='mx-auto text-lg w-8/12 md:w-10/12 pb-8 md:pb-16 text-center font-nunito-Sans md:text-xl text-[#1D1D1D] opacity-70 dark:text-white'>
+        <div className='mx-auto w-8/12 pb-8 text-center font-nunito-Sans text-lg text-[#1D1D1D] opacity-70 dark:text-white md:w-10/12 md:pb-16 md:text-xl'>
           Now since you read so much, here’s what you can do next
         </div>
-        <div className='mx-auto flex w-10/12 lg:w-6/12 flex-col items-center justify-evenly  gap-4 lg:gap-7 md:flex-row'>
+        <div className='mx-auto flex w-10/12 flex-col items-center justify-evenly gap-4 md:flex-row lg:w-6/12 lg:gap-7'>
           {staticData.map((ele, index) => {
             return (
               <div
                 key={index}
                 className='rounded-lg border-2 border-[#F4F4F4] bg-white p-5 text-center'
               >
-                <div className='pb-2 font-figtree text-xl md:text-lg font-bold text-black'>
+                <div className='pb-2 font-figtree text-xl font-bold text-black md:text-lg'>
                   {ele.title}
                 </div>
-                <div className='pb-3 text-base tracking-tight text-[#6A6A6A]'>
-                  {ele.content}
-                </div>
+                <div className='pb-3 text-base tracking-tight text-[#6A6A6A]'>{ele.content}</div>
                 <div>{ele.btn}</div>
               </div>
             );

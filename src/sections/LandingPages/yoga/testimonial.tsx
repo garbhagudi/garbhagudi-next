@@ -90,7 +90,7 @@ const yogaReviews = [
     id: 2,
     name: 'Rahul Patel',
     review:
-     'I just wanted to say thank you for helping me to make that positive change to my life. Just wanted to thank you again for the yoga class. It was really nice to see how you genuinely enjoy teaching and the pleasure you get from sharing your knowledge with others - your passion for yoga is very infectious.',
+      'I just wanted to say thank you for helping me to make that positive change to my life. Just wanted to thank you again for the yoga class. It was really nice to see how you genuinely enjoy teaching and the pleasure you get from sharing your knowledge with others - your passion for yoga is very infectious.',
   },
   {
     id: 3,

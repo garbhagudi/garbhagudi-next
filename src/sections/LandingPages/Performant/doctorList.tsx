@@ -39,19 +39,15 @@ const DoctorList = (doctorList: doctorListProps) => {
                 Meet our Fertility Experts
               </h2>
               <p className='text-md font-content text-gray-800 dark:text-gray-200'>
-                Our team of IVF specialists in Bangalore have been known for
-                their extensive clinical experience and research contributions
-                and their success in treating the most challenging fertility
-                cases.
+                Our team of IVF specialists in Bangalore have been known for their extensive
+                clinical experience and research contributions and their success in treating the
+                most challenging fertility cases.
               </p>
             </div>
             <div className='mx-auto hidden grid-cols-2 space-y-0 sm:gap-8 sm:space-y-0 lg:grid lg:grid-cols-6'>
               {doctorList?.doctors.map((item) => {
                 return (
-                  <div
-                    key={item?.id}
-                    className='transition-all duration-300 hover:scale-115'
-                  >
+                  <div key={item?.id} className='transition-all duration-300 hover:scale-115'>
                     <Link href={`/fertility-experts/${item?.slug}`} passHref>
                       <div className='space-y-4'>
                         <div className='relative mx-auto h-44 w-44'>
@@ -110,10 +106,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                 )}
               >
                 {doctorList?.doctors.map((item) => (
-                  <div
-                    className='rounded-xl transition-all duration-500'
-                    key={item.id}
-                  >
+                  <div className='rounded-xl transition-all duration-500' key={item.id}>
                     <Link href={`/fertility-experts/${item?.slug}`} passHref>
                       <div className='space-y-4'>
                         <div className='mx-auto flex w-64 flex-col items-center justify-center'>

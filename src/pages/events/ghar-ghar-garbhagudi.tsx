@@ -1,9 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import {
-  ContentOne,
-  ContentTwo,
-} from 'sections/misc/ghar-ghar-garbhagudi/content';
+import { ContentOne, ContentTwo } from 'sections/misc/ghar-ghar-garbhagudi/content';
 import CTA from 'sections/misc/ghar-ghar-garbhagudi/cta';
 import EventInfo from 'sections/misc/ghar-ghar-garbhagudi/eventInfo';
 import Gallery from 'sections/misc/ghar-ghar-garbhagudi/gallery';
@@ -17,10 +14,7 @@ const IndexPage = () => {
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Ghar Ghar GarbhaGudi | GarbhaGudi</title>
-        <meta
-          name='title'
-          content='Ghar Ghar GarbhaGudi | GarbhaGudi IVF Centre'
-        />
+        <meta name='title' content='Ghar Ghar GarbhaGudi | GarbhaGudi IVF Centre' />
         <meta
           name='description'
           content='Every couple deserves to experience the joy of parenthood and with Ghar Ghar Garbhagudi we are making it possible for everyone.'

@@ -12,8 +12,8 @@ function FeaturesBlocks() {
               Why we are the Industry Leaders?
             </h2>
             <p className='font-content text-xl text-gray-800 dark:text-gray-200'>
-              GarbhaGudi has won numerous awards from various organisations for
-              its exceptional service and high success rates
+              GarbhaGudi has won numerous awards from various organisations for its exceptional
+              service and high success rates
             </p>
           </div>
 
@@ -34,9 +34,7 @@ function FeaturesBlocks() {
                 <h4 className='mb-1 mt-3 text-center text-xl font-bold leading-snug tracking-tight text-gray-800 dark:text-gray-200'>
                   {items.title}
                 </h4>
-                <p className='text-center text-gray-800 dark:text-gray-200'>
-                  {items.desc}
-                </p>
+                <p className='text-center text-gray-800 dark:text-gray-200'>{items.desc}</p>
               </div>
             ))}
           </div>

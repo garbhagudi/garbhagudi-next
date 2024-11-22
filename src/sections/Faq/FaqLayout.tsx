@@ -2,15 +2,26 @@ import React from 'react';
 import { HiChevronDown } from 'react-icons/hi';
 import { Transition } from '@headlessui/react';
 
+interface AccordionLayoutProps {
+  title: string;
+  children: React.ReactNode;
+  index: number;
+  activeIndex: number | null;
+  setActiveIndex: (index: number | null) => void;
+}
 const AccordionLayout = ({
   title,
   children,
   index,
   activeIndex,
   setActiveIndex,
-}) => {
-  const handleSetIndex = (index: any) => {
-    activeIndex !== index && setActiveIndex(index);
+}: AccordionLayoutProps) => {
+  const handleSetIndex = (index: number) => {
+    if (activeIndex === index) {
+      setActiveIndex(null);
+    } else {
+      setActiveIndex(index);
+    }
   };
 
   return (

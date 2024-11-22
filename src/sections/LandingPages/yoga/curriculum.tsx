@@ -101,7 +101,7 @@ const yogaSchedule = [
     Week: 1,
     title: 'Day 4',
     Day: 'Sun',
-    Special : 'Diet & Ayurveda'
+    Special: 'Diet & Ayurveda',
   },
   {
     Week: 2,
@@ -122,7 +122,7 @@ const yogaSchedule = [
     title: 'Day 7',
     Day: 'Wed',
     Practice: 'Full Body Flow',
-    Kriya :'Kapalabhathi'
+    Kriya: 'Kapalabhathi',
   },
   {
     Week: 2,

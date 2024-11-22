@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const GarbhaGudiWay = () => {
@@ -8,8 +9,8 @@ const GarbhaGudiWay = () => {
           GarbhaGudi Way
         </h1>
         <p className='mx-auto max-w-4xl pb-8 text-center font-lexend text-lg'>
-          Whether you are an individual contributor or the manager of a large
-          team, you are a GarbhaGudi leader - A GarbhaGudian.{' '}
+          Whether you are an individual contributor or the manager of a large team, you are a
+          GarbhaGudi leader - A GarbhaGudian.{' '}
           <span className='font-extrabold text-brandPink4'>
             All GarbhaGudians work with 11 guiding principles.
           </span>
@@ -17,10 +18,7 @@ const GarbhaGudiWay = () => {
       </div>
       <div className='flex flex-wrap items-center justify-center gap-5 bg-purple-50 px-3 py-10 sm:px-0'>
         {ggway.map((items) => (
-          <div
-            className='group aspect-square w-full max-w-sm [perspective:1000px]'
-            key={items.id}
-          >
+          <div className='group aspect-square w-full max-w-sm [perspective:1000px]' key={items.id}>
             <div className='relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
               <div className='relative inset-0 h-full w-full'>
                 <div className='absolute h-full w-full rounded-lg bg-black/70'>
@@ -28,10 +26,12 @@ const GarbhaGudiWay = () => {
                     {items.title}
                   </div>
                 </div>
-                <img
+                <Image
                   className='h-full w-full rounded-xl object-cover shadow-xl shadow-black/50'
                   src={items.bgImage}
                   alt='Image'
+                  width={640}
+                  height={640}
                 />
               </div>
               <div className='bg-brandDark/70 absolute inset-0 h-full w-full rounded-xl px-3 py-1 text-center text-white [backface-visibility:hidden] [transform:rotateY(180deg)] md:px-12'>
@@ -55,9 +55,9 @@ const ggway = [
     title: "Couple's Delight",
     way: (
       <div>
-        Every couple who walks in, will be treated like a King and Queen. Every
-        couple will feel that they are in the right place to complete their
-        family. Every couple who walks in will walk out with a smile.{' '}
+        Every couple who walks in, will be treated like a King and Queen. Every couple will feel
+        that they are in the right place to complete their family. Every couple who walks in will
+        walk out with a smile.{' '}
         <span className='font-extrabold text-brandPink4'>
           We believe that a satisfied client is our best brand evangelist.
         </span>
@@ -70,11 +70,9 @@ const ggway = [
     title: 'Ownership',
     way: (
       <div>
-        Leaders are owners. They think long term and don't sacrifice long term
-        values for short term results. They always say,{' '}
-        <span className='font-extrabold text-brandPink4'>
-          I am ready to take responsibility.
-        </span>
+        Leaders are owners. They think long term and don't sacrifice long term values for short term
+        results. They always say,{' '}
+        <span className='font-extrabold text-brandPink4'>I am ready to take responsibility.</span>
       </div>
     ),
     bgImage: 'https://unsplash.it/640/641',
@@ -84,8 +82,7 @@ const ggway = [
     title: 'Passion for Excellance',
     way: (
       <div>
-        Leaders strive for excellence in everything they do to deliver higher
-        standards.{' '}
+        Leaders strive for excellence in everything they do to deliver higher standards.{' '}
         <span className='font-extrabold text-brandPink4'>
           Leaders find solutions in all situations that stare at them.
         </span>
@@ -98,8 +95,7 @@ const ggway = [
     title: 'Growth',
     way: (
       <div>
-        Growth is at the center of our personal, professional and organizational
-        aspirations. We{' '}
+        Growth is at the center of our personal, professional and organizational aspirations. We{' '}
         <span className='font-extrabold text-brandPink4'>
           dare to think big and aspire to achieve them all.
         </span>
@@ -114,8 +110,7 @@ const ggway = [
       <div>
         We as leaders always adhere to{' '}
         <span className='font-extrabold text-brandPink4'>
-          GarbhaGudi culture of strong ethical values, transparency and humane
-          touch.
+          GarbhaGudi culture of strong ethical values, transparency and humane touch.
         </span>
       </div>
     ),
@@ -128,8 +123,7 @@ const ggway = [
       <div>
         We as leaders believe in{' '}
         <span className='font-extrabold text-brandPink4'>
-          financial loyalty to the organization and service loyalty to the
-          couple.
+          financial loyalty to the organization and service loyalty to the couple.
         </span>
       </div>
     ),
@@ -140,11 +134,10 @@ const ggway = [
     title: 'Team Work',
     way: (
       <div>
-        Together we work as a team to accomplish our common vision. We never
-        say, that's not my job. Instead, we assume{' '}
+        Together we work as a team to accomplish our common vision. We never say, that's not my job.
+        Instead, we assume{' '}
         <span className='font-extrabold text-brandPink4'>
-          unconditional responsibility to fix an issue even if it is beyond the
-          scope of one's role.
+          unconditional responsibility to fix an issue even if it is beyond the scope of one's role.
         </span>
       </div>
     ),
@@ -155,8 +148,7 @@ const ggway = [
     title: 'Hire and develop to raise the bar',
     way: (
       <div>
-        Leaders raise the performance bar with every hire and promotion. They
-        are willing to{' '}
+        Leaders raise the performance bar with every hire and promotion. They are willing to{' '}
         <span className='font-extrabold text-brandPink4'>
           recognise exceptional talent, coach them and guide them throughout
         </span>
@@ -171,14 +163,10 @@ const ggway = [
       <div>
         As Leaders{' '}
         <span className='font-extrabold text-brandPink4'>
-          we respect every individual, including Suppliers, Vendors & Service
-          Providers
+          we respect every individual, including Suppliers, Vendors & Service Providers
         </span>{' '}
         because we know they are our{' '}
-        <span className='font-extrabold text-brandPink4'>
-          Brand Ambassadors
-        </span>
-        .
+        <span className='font-extrabold text-brandPink4'>Brand Ambassadors</span>.
       </div>
     ),
     bgImage: 'https://unsplash.it/640/636',
@@ -189,13 +177,9 @@ const ggway = [
     way: (
       <div>
         At the end of the day,{' '}
-        <span className='font-extrabold text-brandPink4'>
-          results speak louder than words.
-        </span>{' '}
+        <span className='font-extrabold text-brandPink4'>results speak louder than words.</span>{' '}
         Leaders for delivering{' '}
-        <span className='font-extrabold text-brandPink4'>
-          results by going the extra mile.
-        </span>
+        <span className='font-extrabold text-brandPink4'>results by going the extra mile.</span>
       </div>
     ),
     bgImage: 'https://unsplash.it/640/635',
@@ -207,8 +191,8 @@ const ggway = [
       <div>
         Leaders will not be one role wonders. They will{' '}
         <span className='font-extrabold text-brandPink4'>
-          always be holistic growing in all dimensions - Healthy, Wealthy,
-          Loving, Blissful and Peaceful.
+          always be holistic growing in all dimensions - Healthy, Wealthy, Loving, Blissful and
+          Peaceful.
         </span>
       </div>
     ),

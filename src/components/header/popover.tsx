@@ -12,6 +12,7 @@ import {
 import { HiChevronDown } from 'react-icons/hi';
 import { Fragment } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Contact,
   Language,
@@ -29,9 +30,7 @@ export function About() {
         <>
           <PopoverButton
             className={` ${
-              close
-                ? 'w-screen text-left outline-none sm:w-full'
-                : 'text-opacity-90 outline-none'
+              close ? 'w-screen text-left outline-none sm:w-full' : 'text-opacity-90 outline-none'
             } `}
           >
             <div className='px-2 py-2'>
@@ -58,7 +57,13 @@ export function About() {
                         role='none'
                       >
                         <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12'>
-                          <img src={item.icon} alt={item.name} loading='lazy' />
+                          <Image
+                            src={item.icon}
+                            alt={item.name}
+                            loading='lazy'
+                            width={50}
+                            height={50}
+                          />
                         </div>
                         <div className='ml-4'>
                           <p className='font-content text-sm font-medium text-gray-800 dark:text-gray-200'>
@@ -85,9 +90,7 @@ export function WhyGarbhaGudi() {
         <>
           <PopoverButton
             className={` ${
-              close
-                ? 'w-screen text-left outline-none sm:w-full'
-                : 'text-opacity-90 outline-none'
+              close ? 'w-screen text-left outline-none sm:w-full' : 'text-opacity-90 outline-none'
             } `}
           >
             <div className='px-2 py-2'>
@@ -108,19 +111,20 @@ export function WhyGarbhaGudi() {
               <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-gray-600 dark:ring-opacity-100'>
                 <div className='relative grid grid-cols-2 gap-8 bg-white bg-opacity-95 p-5 backdrop-blur-2xl dark:bg-gray-800 dark:bg-opacity-95 lg:grid-cols-3'>
                   {ValueAddedServices.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      passHref
-                      className='group'
-                    >
+                    <Link key={item.name} href={item.href} passHref className='group'>
                       <div
                         className='-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gg-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 dark:hover:bg-gray-600'
                         onClick={() => close()}
                         role='none'
                       >
                         <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12'>
-                          <img src={item.icon} alt={item.name} loading='lazy' />
+                          <Image
+                            src={item.icon}
+                            alt={item.name}
+                            loading='lazy'
+                            width={50}
+                            height={50}
+                          />
                         </div>
                         <div className='ml-4'>
                           <p className='text-sm font-medium text-gray-800 dark:text-gray-200'>
@@ -147,9 +151,7 @@ export function KnowledgeCenter() {
         <>
           <PopoverButton
             className={` ${
-              close
-                ? 'w-screen text-left outline-none sm:w-full'
-                : 'text-opacity-90 outline-none'
+              close ? 'w-screen text-left outline-none sm:w-full' : 'text-opacity-90 outline-none'
             } `}
           >
             <div className='px-2 py-2'>
@@ -169,19 +171,20 @@ export function KnowledgeCenter() {
               <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-gray-600 dark:ring-opacity-100'>
                 <div className='relative grid grid-cols-2 gap-8 bg-white bg-opacity-95 p-5 backdrop-blur-2xl dark:bg-gray-800 dark:bg-opacity-95'>
                   {Resources.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      passHref
-                      className='group'
-                    >
+                    <Link key={item.name} href={item.href} passHref className='group'>
                       <div
                         className='-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gg-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 dark:hover:bg-gray-600'
                         onClick={() => close()}
                         role='none'
                       >
                         <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12'>
-                          <img src={item.icon} alt={item.name} loading='lazy' />
+                          <Image
+                            src={item.icon}
+                            alt={item.name}
+                            loading='lazy'
+                            width={50}
+                            height={50}
+                          />
                         </div>
                         <div className='ml-4'>
                           <p className='text-sm font-medium text-gray-800 dark:text-gray-200'>
@@ -211,9 +214,7 @@ export function Contacts() {
         <>
           <PopoverButton
             className={` ${
-              close
-                ? 'w-screen text-left outline-none sm:w-full'
-                : 'text-opacity-90 outline-none'
+              close ? 'w-screen text-left outline-none sm:w-full' : 'text-opacity-90 outline-none'
             } `}
           >
             <div className='px-2 py-2'>
@@ -233,19 +234,20 @@ export function Contacts() {
               <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-gray-600 dark:ring-opacity-100'>
                 <div className='relative grid gap-8 bg-white bg-opacity-95 p-5 backdrop-blur-2xl dark:bg-gray-800 dark:bg-opacity-95 lg:grid-cols-1'>
                   {Contact.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      passHref
-                      className='group'
-                    >
+                    <Link key={item.name} href={item.href} passHref className='group'>
                       <div
                         onClick={() => close()}
                         role='none'
                         className='-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gg-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 dark:hover:bg-gray-600'
                       >
                         <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12'>
-                          <img src={item.icon} alt={item.name} loading='lazy' />
+                          <Image
+                            src={item.icon}
+                            alt={item.name}
+                            loading='lazy'
+                            width={50}
+                            height={50}
+                          />
                         </div>
                         <div className='ml-4'>
                           <p className='text-sm font-medium text-gray-800 dark:text-gray-200'>
@@ -272,9 +274,7 @@ export function Locations() {
         <>
           <PopoverButton
             className={` ${
-              close
-                ? 'w-screen text-left outline-none sm:w-full'
-                : 'text-opacity-90 outline-none'
+              close ? 'w-screen text-left outline-none sm:w-full' : 'text-opacity-90 outline-none'
             } `}
           >
             <div className='px-2 py-2'>
@@ -302,10 +302,7 @@ export function Locations() {
                       >
                         <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gg-500 text-center text-base text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12 lg:text-2xl'>
                           <div className='mt-1 flex flex-col items-center justify-center text-center'>
-                            {item.icon}{' '}
-                            <div className='text-center text-xs'>
-                              {item.short}
-                            </div>
+                            {item.icon} <div className='text-center text-xs'>{item.short}</div>
                           </div>
                         </div>
                         <div className='ml-4'>
@@ -333,9 +330,7 @@ export function Languages() {
         <>
           <PopoverButton
             className={` ${
-              open
-                ? 'w-screen text-left outline-none sm:w-full'
-                : 'text-opacity-90 outline-none'
+              open ? 'w-screen text-left outline-none sm:w-full' : 'text-opacity-90 outline-none'
             } `}
           >
             <div className='px-2 py-2'>
@@ -388,9 +383,7 @@ export function Treatments() {
         <>
           <PopoverButton
             className={` ${
-              close
-                ? 'w-screen text-left outline-none sm:w-full'
-                : 'text-opacity-90 outline-none'
+              close ? 'w-screen text-left outline-none sm:w-full' : 'text-opacity-90 outline-none'
             } `}
           >
             <div className='px-2 py-2'>
@@ -417,7 +410,7 @@ export function Treatments() {
                           'focus:outline-none',
                           selected
                             ? 'bg-gray-100 shadow ring-2 ring-brandPink2 dark:bg-gray-700 dark:ring-gray-500'
-                            : 'text-gray-100 hover:bg-brandPink3 hover:text-white',
+                            : 'text-gray-100 hover:bg-brandPink3 hover:text-white'
                         )
                       }
                     >
@@ -430,7 +423,7 @@ export function Treatments() {
                           'focus:outline-none',
                           selected
                             ? 'bg-gray-100 shadow ring-2 ring-brandPink2 dark:bg-gray-700 dark:ring-gray-500'
-                            : 'text-gray-100 hover:bg-brandPink3 hover:text-white',
+                            : 'text-gray-100 hover:bg-brandPink3 hover:text-white'
                         )
                       }
                     >
@@ -443,7 +436,7 @@ export function Treatments() {
                           'focus:outline-none',
                           selected
                             ? 'bg-gray-100 shadow ring-2 ring-brandPink2 dark:bg-gray-700 dark:ring-gray-500'
-                            : 'text-gray-100 hover:bg-brandPink3 hover:text-white',
+                            : 'text-gray-100 hover:bg-brandPink3 hover:text-white'
                         )
                       }
                     >
@@ -454,16 +447,14 @@ export function Treatments() {
                     <TabPanel>
                       <div className='grid grid-cols-3 text-center'>
                         {TreatmentHeader.female.map((items) => (
-                          <Link
-                            href={items.link}
-                            key={items.id}
-                            className='group'
-                          >
+                          <Link href={items.link} key={items.id} className='group'>
                             <div className='flex flex-col items-center justify-center rounded-xl py-2 hover:bg-gg-200 dark:hover:bg-gray-600'>
-                              <img
+                              <Image
                                 src={items.icon}
                                 alt={items.name}
                                 loading='lazy'
+                                width={50}
+                                height={50}
                                 className='mx-auto h-10 w-10 transition-all duration-300 ease-linear group-hover:grayscale-0 dark:grayscale'
                               />
                               <div className='pt-2 font-content text-sm font-medium dark:text-gray-200'>
@@ -477,16 +468,14 @@ export function Treatments() {
                     <TabPanel>
                       <div className='grid grid-cols-3 text-center'>
                         {TreatmentHeader.male.map((items) => (
-                          <Link
-                            href={items.link}
-                            key={items.id}
-                            className='group'
-                          >
+                          <Link href={items.link} key={items.id} className='group'>
                             <div className='flex flex-col items-center justify-center rounded-xl py-2 hover:bg-gg-200 dark:hover:bg-gray-600'>
-                              <img
+                              <Image
                                 src={items.icon}
                                 alt={items.name}
                                 loading='lazy'
+                                width={50}
+                                height={50}
                                 className='mx-auto h-10 w-10 transition-all duration-300 ease-linear group-hover:grayscale-0 dark:grayscale'
                               />
                               <div className='pt-2 font-content font-medium dark:text-gray-200'>
@@ -500,16 +489,14 @@ export function Treatments() {
                     <TabPanel>
                       <div className='grid grid-cols-3 text-center'>
                         {TreatmentHeader.advanced.map((items) => (
-                          <Link
-                            href={items.link}
-                            key={items.id}
-                            className='group'
-                          >
+                          <Link href={items.link} key={items.id} className='group'>
                             <div className='flex flex-col items-center justify-center rounded-xl py-2 hover:bg-gg-200 dark:hover:bg-gray-600'>
-                              <img
+                              <Image
                                 src={items.icon}
                                 alt={items.name}
                                 loading='lazy'
+                                width={50}
+                                height={50}
                                 className='mx-auto h-10 w-10 transition-all duration-300 ease-linear group-hover:grayscale-0 dark:grayscale'
                               />
                               <div className='pt-2 font-content text-sm font-medium dark:text-gray-200'>

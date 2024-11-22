@@ -54,12 +54,7 @@ const BannerComponent = (bannerData: bannerProps) => {
       >
         {bannerData ? (
           bannerData.banners.map((banner) => (
-            <Link
-              href={banner?.url || '#'}
-              target='_blank'
-              rel='noreferrer'
-              key={banner.id}
-            >
+            <Link href={banner?.url || '#'} target='_blank' rel='noreferrer' key={banner.id}>
               <Image
                 src={banner?.image?.url}
                 alt={banner?.title}

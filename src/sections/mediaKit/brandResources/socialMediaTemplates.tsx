@@ -5,20 +5,13 @@ import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 const SocialMediaTemplates = () => {
   return (
     <div>
-      <h2 className='font-heading text-2xl font-bold'>
-        Social Media Posts - Templates
-      </h2>
+      <h2 className='font-heading text-2xl font-bold'>Social Media Posts - Templates</h2>
       <div className='py-10'>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <Masonry gutter='8px'>
             {data.map((items) => (
               <div key={items.id}>
-                <Image
-                  src={items.image}
-                  alt={items.desccription}
-                  height={500}
-                  width={500}
-                />
+                <Image src={items.image} alt={items.desccription} height={500} width={500} />
                 <p className='bg-gg-500 py-0.5 text-center font-lexend text-sm text-white'>
                   {items.desccription}
                 </p>

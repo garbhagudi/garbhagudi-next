@@ -15,15 +15,13 @@ const Banner = ({ branchTitle }) => {
                 <h1 className='font-heading text-3xl font-bold leading-tight lg:text-4xl'>
                   {' '}
                   IVF Centre
-                  {branchTitle && (
-                    <span className='text-brandPink'> in {branchTitle}</span>
-                  )}
+                  {branchTitle && <span className='text-brandPink'> in {branchTitle}</span>}
                 </h1>
                 <h3 className='mt-4 font-content font-semibold leading-7 text-gray-800 dark:text-gray-200'>
-                  We are proud to offer infertility treatment at 6 locations
-                  across Bangalore. <br />
-                  Please contact us today to learn more about our services and
-                  find the location nearest you.
+                  We are proud to offer infertility treatment at 6 locations across Bangalore.{' '}
+                  <br />
+                  Please contact us today to learn more about our services and find the location
+                  nearest you.
                 </h3>
               </div>
               <div className='text-center lg:px-3 lg:text-left'>

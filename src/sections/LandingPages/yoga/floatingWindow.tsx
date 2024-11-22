@@ -1,11 +1,5 @@
-import Link from 'next/link';
 import React, { useEffect } from 'react';
-import {
-  FaCalendar,
-  FaClock,
-  FaIndianRupeeSign,
-  FaCheck,
-} from 'react-icons/fa6';
+import { FaCalendar, FaClock, FaIndianRupeeSign, FaCheck } from 'react-icons/fa6';
 
 const Floating: React.FC = () => {
   useEffect(() => {
@@ -79,32 +73,30 @@ const Floating: React.FC = () => {
             <div className='font-lexend text-2xl'>21 - Days Yoga Challenge</div>
             <div className='space-y-1'>
               <div className='flex items-center justify-start space-x-3 pt-6 font-content'>
-                <FaCalendar className='text-2xl text-gg-500' />{' '}
-                <div>25th Jul - 14th Aug</div>
+                <FaCalendar className='text-2xl text-gg-500' /> <div>25th Jul - 14th Aug</div>
               </div>
               <div className='flex items-center justify-start space-x-3 pt-3 font-content'>
-                <FaClock className='text-2xl text-gg-500' />{' '}
-                <div>7:30 AM to 8:30 AM (IST)</div>
+                <FaClock className='text-2xl text-gg-500' /> <div>7:30 AM to 8:30 AM (IST)</div>
               </div>
               <div className='flex items-center justify-start space-x-3 pt-3 font-content'>
-                <FaIndianRupeeSign className='text-2xl text-gg-500' />{' '}
-                <div>Contribution: Free</div>
+                <FaIndianRupeeSign className='text-2xl text-gg-500' /> <div>Contribution: Free</div>
               </div>
               <div className='py-6'>
-              <a href="https://chat.whatsapp.com/DxWPnWHqQqIHo0PEY5RFyV" 
-               target="_blank"
-               rel="noopener noreferrer">
+                <a
+                  href='https://chat.whatsapp.com/DxWPnWHqQqIHo0PEY5RFyV'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   <button className='rounded-lg bg-gg-500 px-4 py-2 font-lexend text-white hover:bg-gg-600'>
-                   Join the Whatsapp group
+                    Join the Whatsapp group
                   </button>
-               </a>
+                </a>
               </div>
             </div>
           </div>
           <ul className='space-y-1 font-content'>
             <li className='flex items-center justify-start space-x-3'>
-              <FaCheck className='text-2xl text-gg-500' />{' '}
-              <div>Sleep better and eat healthier</div>
+              <FaCheck className='text-2xl text-gg-500' /> <div>Sleep better and eat healthier</div>
             </li>
             <li className='flex items-center justify-start space-x-3'>
               <FaCheck className='text-2xl text-gg-500' />{' '}

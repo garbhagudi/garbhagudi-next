@@ -15,9 +15,8 @@ const Banner = () => {
               It&apos;s the season of JOY of being COMPLETE
             </div>
             <div className='px-3 py-2 pb-4 font-content text-xl font-bold'>
-              Get a flat discount of{' '}
-              <span className='text-[#064a63] underline'>₹90,000/-</span> on IVF
-              treatment program*
+              Get a flat discount of <span className='text-[#064a63] underline'>₹90,000/-</span> on
+              IVF treatment program*
             </div>
           </div>
           <div className='-mt-5 hidden font-content text-xs font-medium lg:block'>
@@ -48,10 +47,7 @@ const Banner = () => {
       <div className='mx-auto max-w-7xl sm:mt-10'>
         <div className='mx-auto mb-4 max-w-lg bg-gray-300 px-3 py-2 text-center text-base font-semibold sm:rounded-lg md:text-lg'>
           To Book Appointment call{' '}
-          <a
-            href='tel:+919108910832'
-            className='block text-brandPink sm:inline-block'
-          >
+          <a href='tel:+919108910832' className='block text-brandPink sm:inline-block'>
             +91 9108 9108 32
           </a>
         </div>

@@ -13,13 +13,15 @@ const DoctorLayout = ({
   setActiveIndex,
   bio,
 }) => {
-  let [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
   function closeModal() {
     setIsOpen(false);
   }
 
   const handleSetIndex = (index) => {
-    activeIndex !== index && setActiveIndex(index);
+    if (activeIndex !== index) {
+      setActiveIndex(index);
+    }
     setIsOpen(true);
   };
   return (
