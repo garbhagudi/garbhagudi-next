@@ -17,18 +17,9 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "src/components/SalesIQ.tsx",
-    "src/pages/tools/ovulation-calculator/index..jsx",
-    "src/sections/misc/ivf-cost/ivfProcess.jsx",
-    "src/pages/_app.tsx",
-    "src/sections/gg-care/MapComponent.jsx",
-    "src/pages/gg-care/nearest-location.tsx",
-    "src/pages/gg-care/find-your-nearest-centre.jsx",
-    "src/lib/chatgpt.js"
-  ],
+  "paths": {
+    "@/*": ["./src/*"]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
