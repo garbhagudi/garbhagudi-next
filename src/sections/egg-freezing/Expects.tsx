@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import Image from 'next/image';
-import { BsWhatsapp } from 'react-icons/bs';
+import { SlArrowRight } from 'react-icons/sl';
 import Link from 'next/link';
 import BookAnAppointment from './bookAnAppointment';
 
@@ -99,10 +99,26 @@ export default function Expects() {
   return (
     <Fragment>
       <div className='py-5'>
-        <div className='py-2 text-center font-nunito-Sans text-2xl  font-extrabold md:text-4xl md:py-5'>
-          Meet our Fertility Experts
-        </div>
-        <div className='mx-auto w-9/12 text-center font-nunito-Sans text-lg md:text-xl md:w-10/12 text-[#1D1D1D] opacity-70'>
+        <section className='flex flex-col items-center justify-center'>
+          <h1 className='mb-6 text-center text-4xl font-bold text-gray-800'>
+            Meet our Fertility Experts
+          </h1>
+          <p className='mb-8 max-w-3xl text-center text-lg text-gray-600'>
+            Our fertility experts are highly experienced professionals dedicated
+            to helping you through every step of your journey. Whether you’re
+            looking for advice or treatment, we are here to provide the support
+            and care you deserve.
+          </p>
+
+          <Link href={'https://www.garbhagudi-ivf.com/'}>
+            <button className='flex items-center gap-2 rounded-lg bg-[#D9576C] px-6 py-3 text-white shadow-lg transition duration-300 hover:opacity-90'>
+              <span>Meet Our Fertility Experts</span>
+
+              <SlArrowRight />
+            </button>
+          </Link>
+        </section>
+        {/* <div className='mx-auto w-9/12 text-center font-nunito-Sans text-lg md:text-xl md:w-10/12 text-[#1D1D1D] opacity-70'>
           Our dedicated team brings years of experience and a compassionate
           approach to fertility care. Meet the specialists committed to
           supporting your journey.
@@ -129,24 +145,24 @@ export default function Expects() {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </div>
 
       <div className='bg-[#FFD9E038] pb-20 pt-10'>
-        <div className=' text-center font-nunito-Sans text-2xl py-2 md:text-4xl md:py-5 font-extrabold dark:text-white'>
+        <div className='py-2 text-center font-nunito-Sans text-2xl font-extrabold dark:text-white md:py-5 md:text-4xl'>
           What Next?
         </div>
-        <div className='mx-auto text-lg w-8/12 md:w-10/12 pb-8 md:pb-16 text-center font-nunito-Sans md:text-xl text-[#1D1D1D] opacity-70 dark:text-white'>
+        <div className='mx-auto w-8/12 pb-8 text-center font-nunito-Sans text-lg text-[#1D1D1D] opacity-70 dark:text-white md:w-10/12 md:pb-16 md:text-xl'>
           Now since you read so much, here’s what you can do next
         </div>
-        <div className='mx-auto flex w-10/12 lg:w-6/12 flex-col items-center justify-evenly  gap-4 lg:gap-7 md:flex-row'>
+        <div className='mx-auto flex w-10/12 flex-col items-center justify-evenly gap-4 md:flex-row lg:w-6/12 lg:gap-7'>
           {staticData.map((ele, index) => {
             return (
               <div
                 key={index}
                 className='rounded-lg border-2 border-[#F4F4F4] bg-white p-5 text-center'
               >
-                <div className='pb-2 font-figtree text-xl md:text-lg font-bold text-black'>
+                <div className='pb-2 font-figtree text-xl font-bold text-black md:text-lg'>
                   {ele.title}
                 </div>
                 <div className='pb-3 text-base tracking-tight text-[#6A6A6A]'>

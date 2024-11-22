@@ -27,7 +27,7 @@ export default function Overview() {
       value: '~90%',
       title: 'Egg Survival Rate',
       content:
-        'The success rate for egg freezing in women under 35 years of age is between 75% &amp 99%',
+        'The success rate for egg freezing in women under 35 years of age is between 75% & 99%.',
     },
     {
       value: '~95%',
@@ -48,7 +48,7 @@ export default function Overview() {
             return (
               <div
                 key={index}
-                className='relative flex flex-col lg:w-1/3 items-center justify-between md:flex-row'
+                className='relative flex flex-col items-center justify-between md:flex-row lg:w-1/3'
               >
                 <div className='flex flex-col items-center justify-center'>
                   <div className='flex h-16 w-16 items-center justify-center rounded-[50%] bg-[#FFE9EC]'>
@@ -79,19 +79,19 @@ export default function Overview() {
       </div>
       <div className='flex flex-col items-center justify-center py-10'>
         <div className='py-10 text-3xl font-extrabold text-[#1D1D1D]'>
-          Statistic & Findings
+          Statistics
         </div>
-        <div className='flex flex-col items-center justify-center gap-6 px-5 lg:px-0 lg:flex-row lg:gap-20'>
+        <div className='flex flex-col items-center justify-center gap-6 px-5 lg:flex-row lg:gap-20 lg:px-0'>
           {statistic.map((ele, index) => (
             <div
               key={index}
-              className='flex   lg:h-56 lg:w-96 flex-col items-center justify-center bg-[#F9F9F9] px-5 py-16'
+              className='flex flex-col items-center justify-center bg-[#F9F9F9] px-5 py-16 lg:h-56 lg:w-96'
             >
               {/* <div className=' text-2xl md:text-4xl font-extrabold text-[#D9576C]'>
                 {ele.value}
               </div>
               <div className='text-base md:text-lg font-bold text-black'>{ele.title}</div> */}
-              <div className='lg:py-10 text-center text-[14px] font-medium text-[#1D1D1D] md:text-[18px]'>
+              <div className='text-center text-[14px] font-medium text-[#1D1D1D] md:text-[18px] lg:py-10'>
                 {ele.content}
               </div>
             </div>

@@ -39,8 +39,43 @@ export default function Freezing() {
       ],
     },
   ];
+
+  const data = [
+    {
+      title: 'To Delay Childbearing',
+      content:
+        "Women can choose to wait until they've found the right partner or are more comfortable with their careers before starting a family.",
+    },
+    {
+      title: '	To Preserve Fertility',
+      content:
+        'Egg freezing can help preserve fertility for women who are facing medical treatments or health conditions that could impact their fertility. This includes chemotherapy, pelvic radiation therapy, endometriosis, gender affirming surgery, or ovarian disease. ',
+    },
+    {
+      title: 'For Financial Reasons',
+      content:
+        'Some women choose to freeze their eggs because they want to wait until they have the financial resources to support a child.',
+    },
+    {
+      title: 'Enjoy Relationship Milestones First',
+      content:
+        ' For those who want to cherish early years of marriage or partnership without immediate family planning pressures, egg freezing provides peace of mind',
+    },
+
+    {
+      title: 'To have more options',
+      content:
+        'Egg freezing can give women more options and peace of mind when it comes to having children. ',
+    },
+
+    {
+      title: '	Genetic Considerations ',
+      content:
+        'Family history of early menopause, genetic conditions or fertility challenges can make egg freezing a proactive choice - preserving healthier egg for future use.',
+    },
+  ];
   return (
-    <div className=' font-nunito-Sans lg:pb-16'>
+    <div className='font-nunito-Sans lg:pb-16'>
       <div className='flex items-center justify-center py-3 text-2xl font-extrabold md:py-6 md:text-4xl'>
         Why Choose Egg Freezing?
       </div>
@@ -75,13 +110,15 @@ export default function Freezing() {
         </div>
 
         <div className='w-full'>
-          {renderData.map((ele, index) => {
+          {data.map((ele, index) => {
             return (
-              <div key={index} className='py-3 font-nunito-Sans'>
+              <div key={index} className='py-2 font-nunito-Sans'>
                 <div className='text-center text-lg font-bold leading-8 md:text-start md:text-xl'>
+                  {`${index + 1}). `}
                   {ele.title}
                 </div>
-                <div className='w-11/12 py-2 text-center text-base font-normal md:w-full md:text-start md:py-1 md:text-lg'>
+                <div>{ele.content}</div>
+                {/* <div className='w-11/12 py-2 text-center text-base font-normal md:w-full md:py-1 md:text-start md:text-lg'>
                   {ele.content.map((el, index) => (
                     <div key={index} className='py-2 md:py-1'>
                       <span className='font-bold opacity-80'>{el.title}</span>
@@ -91,7 +128,7 @@ export default function Freezing() {
                       </span>
                     </div>
                   ))}
-                </div>
+                </div> */}
                 {renderData.length !== index + 1 && (
                   <div className='hidden w-10/12 border border-[#D9576C4D] md:visible'></div>
                 )}
