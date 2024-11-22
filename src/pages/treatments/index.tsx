@@ -5,10 +5,7 @@ import Link from 'next/link';
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
+import Image from 'next/image';
 
 interface TreatmentProps {
   treatments: {
@@ -20,7 +17,7 @@ interface TreatmentProps {
     };
     slug: string;
   }[];
-  }
+}
 
 const IndexPage = ({ treatments }: TreatmentProps) => {
   return (
@@ -55,10 +52,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content='Treatment | GarbhaGudi IVF Centre'
-        />
+        <meta name='twitter:title' content='Treatment | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
           content='Treatment options, procedure details and advanced treatment options for male and female infertility treatment available at GarbhaGudi'
@@ -79,9 +73,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
         text4={''}
       />
       <div className='mx-auto max-w-7xl'>
-        <h1 className='pt-12 text-center font-heading text-4xl font-semibold'>
-          Treatment Options
-        </h1>
+        <h1 className='pt-12 text-center font-heading text-4xl font-semibold'>Treatment Options</h1>
         <div className='w-full max-w-7xl px-2 py-16 sm:px-0'>
           <TabGroup>
             <TabList className={'flex space-x-1 rounded-xl bg-brandPink p-1'}>
@@ -116,16 +108,16 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                           >
                             <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-all duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-700 dark:hover:border-gg-400 dark:hover:bg-gray-600 md:w-96'>
                               <div className='w-1/3'>
-                                <img
+                                <Image
                                   className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
                                   src={item?.icon?.url}
                                   alt={item?.title}
+                                  width={100}
+                                  height={100}
                                 />
                               </div>
                               <div className='flex w-2/3 flex-col justify-center text-left'>
-                                <p className='font-qs text-lg font-semibold'>
-                                  {item?.title}
-                                </p>
+                                <p className='font-qs text-lg font-semibold'>{item?.title}</p>
                               </div>
                             </div>
                           </Link>
@@ -139,16 +131,16 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                     >
                       <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-all duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-700 dark:hover:border-gg-400 dark:hover:bg-gray-600 md:w-96'>
                         <div className='w-1/3'>
-                          <img
+                          <Image
                             className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
                             src='https://media.graphassets.com/EwdJCRdtRiKDXeWF4toB'
                             alt='IVF Icon'
+                            width={100}
+                            height={100}
                           />
                         </div>
                         <div className='flex w-2/3 flex-col justify-center text-left'>
-                          <p className='font-qs text-lg font-semibold'>
-                            In-Vitro Fertilization
-                          </p>
+                          <p className='font-qs text-lg font-semibold'>In-Vitro Fertilization</p>
                         </div>
                       </div>
                     </Link>
@@ -159,10 +151,12 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                     >
                       <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-all duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-700 dark:hover:border-gg-400 dark:hover:bg-gray-600 md:w-96'>
                         <div className='w-1/3'>
-                          <img
+                          <Image
                             className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
                             src='https://media.graphassets.com/CpcAosCyRImJVMN1xA9O'
                             alt='IUI Icon'
+                            width={100}
+                            height={100}
                           />
                         </div>
                         <div className='flex w-2/3 flex-col justify-center text-left'>
@@ -181,23 +175,19 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                     {treatments.map((item) => {
                       if (item?.category == 'Male') {
                         return (
-                          <Link
-                            href={`treatments/${item?.slug}`}
-                            passHref
-                            key={item?.id}
-                          >
+                          <Link href={`treatments/${item?.slug}`} passHref key={item?.id}>
                             <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white md:w-96'>
                               <div className='w-1/3'>
-                                <img
+                                <Image
                                   className='h-16 w-16 rounded-full object-cover'
                                   src={item?.icon?.url}
                                   alt={item?.title}
+                                  width={100}
+                                  height={100}
                                 />
                               </div>
                               <div className='flex w-2/3 flex-col justify-center text-left'>
-                                <p className='font-qs text-lg font-semibold'>
-                                  {item?.title}
-                                </p>
+                                <p className='font-qs text-lg font-semibold'>{item?.title}</p>
                               </div>
                             </div>
                           </Link>
@@ -213,23 +203,19 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                     {treatments?.map((item) => {
                       if (item?.category == 'Advanced') {
                         return (
-                          <Link
-                            href={`treatments/${item?.slug}`}
-                            passHref
-                            key={item?.id}
-                          >
+                          <Link href={`treatments/${item?.slug}`} passHref key={item?.id}>
                             <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white md:w-96'>
                               <div className='w-1/3'>
-                                <img
+                                <Image
                                   className='h-16 w-16 rounded-full object-cover'
                                   src={item?.icon?.url}
                                   alt={item?.title}
+                                  width={100}
+                                  height={100}
                                 />
                               </div>
                               <div className='flex w-2/3 flex-col justify-center text-left'>
-                                <p className='font-qs text-lg font-semibold'>
-                                  {item?.title}
-                                </p>
+                                <p className='font-qs text-lg font-semibold'>{item?.title}</p>
                               </div>
                             </div>
                           </Link>

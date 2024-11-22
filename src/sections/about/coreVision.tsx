@@ -33,11 +33,7 @@ const CoreVision = () => {
                 />
               </pattern>
             </defs>
-            <rect
-              width={404}
-              height={384}
-              fill='url(#95e8f2de-6d30-4b7e-8159-f791729db21b)'
-            />
+            <rect width={404} height={384} fill='url(#95e8f2de-6d30-4b7e-8159-f791729db21b)' />
           </svg>
           <svg
             className='absolute bottom-0 left-0 -mb-20 -ml-20 hidden md:block'
@@ -66,11 +62,7 @@ const CoreVision = () => {
                 />
               </pattern>
             </defs>
-            <rect
-              width={404}
-              height={384}
-              fill='url(#7a00fe67-0343-4a3c-8e81-c145097a3ce0)'
-            />
+            <rect width={404} height={384} fill='url(#7a00fe67-0343-4a3c-8e81-c145097a3ce0)' />
           </svg>
           <div className='relative md:p-6'>
             <p className='my-4 mt-2 font-content text-4xl font-bold leading-8 tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl'>
@@ -80,22 +72,18 @@ const CoreVision = () => {
               <div className='prose prose-indigo prose-lg text-brandDark lg:max-w-none'>
                 <ul className='list-disc space-y-2 font-content text-gray-800 dark:text-gray-200'>
                   <li>
-                    Service loyalty to the patients and financial loyalty to the
-                    organization.
+                    Service loyalty to the patients and financial loyalty to the organization.
                   </li>
+                  <li>Complete adherence to ethical practices, at all times, in all situations.</li>
                   <li>
-                    Complete adherence to ethical practices, at all times, in
-                    all situations.
-                  </li>
-                  <li>
-                    Adhere to Government rules, Medical Council rules &
-                    guidelines and importantly to the rules of mother Nature.
+                    Adhere to Government rules, Medical Council rules & guidelines and importantly
+                    to the rules of mother Nature.
                   </li>
                   <li>Priority to patients, people and partners</li>
                   <li>Hire the best people, train them and retain them</li>
                   <li>
-                    Commitment to social responsibility in terms of treatments
-                    and costs to those who cannot afford treatments.
+                    Commitment to social responsibility in terms of treatments and costs to those
+                    who cannot afford treatments.
                   </li>
                 </ul>
               </div>
@@ -105,10 +93,9 @@ const CoreVision = () => {
                   Vision
                 </p>
                 <p className='font-content italic text-gray-800 dark:text-gray-200'>
-                  &quot;My GarbhaGudi shall be a globally renowned reproductive
-                  health university, having superlative success rates, due to
-                  strong scientific approach, ethical values and humane
-                  touch&quot;
+                  &quot;My GarbhaGudi shall be a globally renowned reproductive health university,
+                  having superlative success rates, due to strong scientific approach, ethical
+                  values and humane touch&quot;
                 </p>
               </div>
             </div>

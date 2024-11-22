@@ -1,14 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 
-type Props = {};
-
-const OurCentres = (props: Props) => {
+const OurCentres = () => {
   return (
-    <div
-      className='container mx-auto scroll-m-24 px-3'
-      id='iui-centres-in-bangalore'
-    >
+    <div className='container mx-auto scroll-m-24 px-3' id='iui-centres-in-bangalore'>
       <h2 className='pb-5 text-center font-heading text-2xl font-bold text-gray-800 dark:text-gray-200 lg:text-3xl'>
         GarbhaGudi IVF Centers in Bangalore
       </h2>
@@ -68,8 +63,7 @@ const OurCentres = (props: Props) => {
         </p>
       </div>
       <div className='pb-5 text-center font-content text-gray-800 dark:text-gray-200'>
-        "Experience the exceptional service and quality that has earned us a
-        4.8-star rating!"
+        "Experience the exceptional service and quality that has earned us a 4.8-star rating!"
       </div>
       <div className='flex flex-wrap items-center justify-center gap-4 lg:gap-10'>
         {Data.map((items) => (
@@ -85,9 +79,7 @@ const OurCentres = (props: Props) => {
               ></iframe>
             </div>
             <div className='max-w-md space-y-2 px-2 pb-2 pt-2 font-content'>
-              <div className='border-b border-brandPink4 font-heading text-xl'>
-                {items.branch}
-              </div>
+              <div className='border-b border-brandPink4 font-heading text-xl'>{items.branch}</div>
               <div className='h-16 pb-2 text-sm'>Address: {items.address}</div>
               <div className='flex items-center justify-between space-x-2'>
                 <button className='rounded-lg bg-gg-400 px-2.5 py-1.5 text-sm font-semibold text-white hover:bg-gg-400 dark:bg-gray-500 dark:hover:bg-gg-400'>
@@ -115,8 +107,8 @@ const Data = [
     phone: '+919108910832',
     address: (
       <span>
-        Subhasri Complex, 210/A, Kumaraswamy Temple Rd, 2nd Block, Phase
-        1,Banashankari Stage I, Bengaluru, Karnataka 560050
+        Subhasri Complex, 210/A, Kumaraswamy Temple Rd, 2nd Block, Phase 1,Banashankari Stage I,
+        Bengaluru, Karnataka 560050
       </span>
     ),
     link: 'https://g.page/GG1-HN?share',
@@ -128,8 +120,8 @@ const Data = [
     phone: '+919108910832',
     address: (
       <span>
-        Park Landing, 5AC-709, Outer Ring Rd, Balachandra Layout, HRBR Layout
-        2nd Block, Chelekare, Bengaluru, Karnataka 560043
+        Park Landing, 5AC-709, Outer Ring Rd, Balachandra Layout, HRBR Layout 2nd Block, Chelekare,
+        Bengaluru, Karnataka 560043
       </span>
     ),
     link: 'https://g.page/GarbhaGudi-IVF-Bangalore?share',
@@ -141,8 +133,8 @@ const Data = [
     phone: '+919108910832',
     address: (
       <span>
-        Ganesh Towers,3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra Bank,
-        Konappana Agrahara, Electronic City, Bengaluru, Karnataka 560100
+        Ganesh Towers,3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra Bank, Konappana Agrahara,
+        Electronic City, Bengaluru, Karnataka 560100
       </span>
     ),
     link: 'https://g.page/GG4-EC?share',
@@ -154,8 +146,8 @@ const Data = [
     phone: '+919108910832',
     address: (
       <span>
-        South End Circle, #26, Pattalamma Temple Road, Basavanagudi, Jayanagar
-        Bengaluru, Karnataka 560004
+        South End Circle, #26, Pattalamma Temple Road, Basavanagudi, Jayanagar Bengaluru, Karnataka
+        560004
       </span>
     ),
     link: 'https://g.page/ggivf?share',
@@ -167,8 +159,8 @@ const Data = [
     phone: '+919108910832',
     address: (
       <span>
-        4TH floor, Chirag Towers, Born Babies Building, 24 & 64, Service Rd,
-        next to कलामंदिर, Marathahalli, Bengaluru, Karnataka 560037
+        4TH floor, Chirag Towers, Born Babies Building, 24 & 64, Service Rd, next to कलामंदिर,
+        Marathahalli, Bengaluru, Karnataka 560037
       </span>
     ),
     link: 'https://goo.gl/maps/kxhfM5SCZuq6EDnE9',
@@ -180,8 +172,8 @@ const Data = [
     phone: '+919108910832',
     address: (
       <span>
-        No. 3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage,
-        Ashwath Nagar, Devasandra Layout, Bengaluru, Karnataka 560094, India
+        No. 3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage, Ashwath Nagar,
+        Devasandra Layout, Bengaluru, Karnataka 560094, India
       </span>
     ),
     link: 'https://goo.gl/maps/Fmiwn4ZCsSTxehnq9',
@@ -191,11 +183,7 @@ const Data = [
     branch: 'Nagarabhavi',
     map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d486.02095515674114!2d77.51104068056954!3d12.961122397852817!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fcd6ee8ee57%3A0x2b5769e83d027d93!2sGarbhaGudi%20IVF%20Centre%2C%20Nagarbhavi!5e0!3m2!1sen!2sin!4v1683275922959!5m2!1sen!2sin',
     phone: '+919886988665',
-    address: (
-      <span>
-        80 Feet Main Rd, 2 Stage, Naagarabhaavi, Bengaluru, Karnataka 560072
-      </span>
-    ),
+    address: <span>80 Feet Main Rd, 2 Stage, Naagarabhaavi, Bengaluru, Karnataka 560072</span>,
     link: 'https://www.google.com/maps/place/GarbhaGudi+IVF+Centre,+Nagarbhavi,+80+Feet+Main+Rd,+2+Stage,+Naagarabhaavi,+Bengaluru,+Karnataka+560072/@12.961096,77.5109731,19z/data=!4m6!3m5!1s0x3bae3fcd6ee8ee57:0x2b5769e83d027d93!8m2!3d12.961096!4d77.5109735!16s%2Fg%2F11ty4tr17s',
   },
 ];

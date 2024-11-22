@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
+import Image from 'next/image';
 
 const VisionMission = () => {
   return (
@@ -10,10 +11,7 @@ const VisionMission = () => {
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Vision &amp; Mission | GarbhaGudi</title>
-        <meta
-          name='title'
-          content='Vision &amp; Mission | GarbhaGudi IVF Centre'
-        />
+        <meta name='title' content='Vision &amp; Mission | GarbhaGudi IVF Centre' />
         <meta
           name='description'
           content='GarbhaGudi has served as a beacon of hope to thousands of infertile couples. Our experienced specialists, nurses, & embryologists work to cater for your needs'
@@ -21,10 +19,7 @@ const VisionMission = () => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content='Vision and Mission | GarbhaGudi IVF Centre'
-        />
+        <meta property='og:title' content='Vision and Mission | GarbhaGudi IVF Centre' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -72,22 +67,22 @@ const VisionMission = () => {
                 Vision
               </h2>
               <div className='h-64 overflow-hidden rounded-lg'>
-                <img
+                <Image
                   alt='content'
                   className='mb-2 h-full w-full object-cover object-center'
                   src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643278927/About/1201x501_Vision_c6ds1h.jpg'
+                  width={500}
+                  height={500}
                 />
               </div>
 
               <p className='text-brandDark mt-2 text-left font-content text-lg leading-relaxed'>
-                A mission followed by dedication and hard work turns into a
-                vision. Enormous amount of hard work goes into reaching out to
-                more and more people and create an awareness about infertility
-                and treatments for infertility. With a vision to help nurture
-                the happiest moments of life, our vision is to reach far and
-                wide, to have GarbhaGudi as a globally renowned health
-                university with superlative success rate, strong scientific
-                approach, ethical values, and humane touch.
+                A mission followed by dedication and hard work turns into a vision. Enormous amount
+                of hard work goes into reaching out to more and more people and create an awareness
+                about infertility and treatments for infertility. With a vision to help nurture the
+                happiest moments of life, our vision is to reach far and wide, to have GarbhaGudi as
+                a globally renowned health university with superlative success rate, strong
+                scientific approach, ethical values, and humane touch.
               </p>
             </div>
             <div className='mb-10 px-4 sm:w-1/2'>
@@ -95,26 +90,25 @@ const VisionMission = () => {
                 Mission
               </h2>
               <div className='h-64 overflow-hidden rounded-lg'>
-                <img
+                <Image
                   alt='content'
                   className='mb-2 h-full w-full object-cover object-center'
                   src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643278945/About/1201x501_Mission_wcctgt.jpg'
+                  width={500}
+                  height={500}
                 />
               </div>
 
               <p className='text-brandDark mt-2 text-left font-content text-lg leading-relaxed'>
-                Dr. Asha S. Vijay, a post graduate in Obstetrics &amp;
-                Gynecology from the prestigious Bangalore Medical College,
-                started her career with Kidwai Institute of Oncology, Bangalore
-                and subsequently set up her own practice with Sannidhi
-                Multi-Specialty Hospital. In years of her career, she saw the
-                struggle of infertility patients. Her observation of people
-                having misconceptions about infertility and infertility
-                treatments, cost, and procedure, motivated her to help and guide
-                people with reproductive disorders, who were clueless about the
-                right approach. It was at that time that she started on a
-                mission and the result of such a mission is what GarbhaGudi
-                exists today.
+                Dr. Asha S. Vijay, a post graduate in Obstetrics &amp; Gynecology from the
+                prestigious Bangalore Medical College, started her career with Kidwai Institute of
+                Oncology, Bangalore and subsequently set up her own practice with Sannidhi
+                Multi-Specialty Hospital. In years of her career, she saw the struggle of
+                infertility patients. Her observation of people having misconceptions about
+                infertility and infertility treatments, cost, and procedure, motivated her to help
+                and guide people with reproductive disorders, who were clueless about the right
+                approach. It was at that time that she started on a mission and the result of such a
+                mission is what GarbhaGudi exists today.
               </p>
             </div>
           </div>

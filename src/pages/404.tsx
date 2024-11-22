@@ -1,6 +1,7 @@
 import { HiChevronRight } from 'react-icons/hi';
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const links = [
   {
@@ -11,8 +12,7 @@ const links = [
   },
   {
     title: 'Resources & Knowledge Center',
-    description:
-      'Learn more about causes, diagnosis and treatment options of infertility.',
+    description: 'Learn more about causes, diagnosis and treatment options of infertility.',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264858/Icons/Resources/FAQs_x8rsvf.svg',
     path: '/resources',
   },
@@ -24,8 +24,7 @@ const links = [
   },
   {
     title: 'GG Care',
-    description:
-      'Contact our executives for more information and appointments.',
+    description: 'Contact our executives for more information and appointments.',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643459544/Icons/Contact/GG_Care_e7e1pc.svg',
     path: '/gg-care',
   },
@@ -44,10 +43,12 @@ const FourOhFour = () => {
       <div className='bg-white'>
         <main className='mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8'>
           <div className='flex-shrink-0 pt-16'>
-            <img
+            <Image
               className='mx-auto h-16 w-auto'
               src='https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg'
               alt='Workflow'
+              width={200}
+              height={200}
             />
           </div>
           <div className='mx-auto max-w-xl py-16 sm:py-24'>
@@ -71,17 +72,16 @@ const FourOhFour = () => {
                 className='mt-4 divide-y divide-gray-200 border-b border-t border-gray-200 font-content'
               >
                 {links.map((link, linkIdx) => (
-                  <li
-                    key={linkIdx}
-                    className='relative flex items-start space-x-4 border-b py-6'
-                  >
+                  <li key={linkIdx} className='relative flex items-start space-x-4 border-b py-6'>
                     <div className='flex-shrink-0'>
                       <span className='flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-50'>
-                        <img
+                        <Image
                           src={link.icon}
                           alt={link.title}
                           className=''
                           aria-hidden='true'
+                          width={40}
+                          height={40}
                         />
                       </span>
                     </div>
@@ -89,23 +89,15 @@ const FourOhFour = () => {
                       <h3 className='text-base font-medium text-gray-900'>
                         <span className='rounded-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2'>
                           <Link href={link.path} className='focus:outline-none'>
-                            <span
-                              className='absolute inset-0'
-                              aria-hidden='true'
-                            />
+                            <span className='absolute inset-0' aria-hidden='true' />
                             {link.title}
                           </Link>
                         </span>
                       </h3>
-                      <p className='text-base text-gray-500'>
-                        {link.description}
-                      </p>
+                      <p className='text-base text-gray-500'>{link.description}</p>
                     </div>
                     <div className='flex-shrink-0 self-center'>
-                      <HiChevronRight
-                        className='h-5 w-5 text-gray-400'
-                        aria-hidden='true'
-                      />
+                      <HiChevronRight className='h-5 w-5 text-gray-400' aria-hidden='true' />
                     </div>
                   </li>
                 ))}

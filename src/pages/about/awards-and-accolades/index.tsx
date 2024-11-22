@@ -4,6 +4,7 @@ import { gql } from '@apollo/client';
 import Link from 'next/link';
 import BreadCrumbs from 'components/breadcrumbs';
 import Head from 'next/head';
+import Image from 'next/image';
 
 export const getStaticProps = async () => {
   const { data } = await apolloClient.query({
@@ -29,7 +30,18 @@ export const getStaticProps = async () => {
   };
 };
 
-const Awards = ({ award }) => {
+interface Award {
+  award: {
+    id: string;
+    title: string;
+    slug: string;
+    image: {
+      url: string;
+    };
+  }[];
+}
+
+const Awards = ({ award }: Award) => {
   return (
     <div>
       <Head>
@@ -37,10 +49,7 @@ const Awards = ({ award }) => {
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Awards &amp; Accolades GarbhaGudi IVF Centre</title>
-        <meta
-          name='title'
-          content={`Awards & Accolades GarbhaGudi IVF Centre`}
-        />
+        <meta name='title' content={`Awards & Accolades GarbhaGudi IVF Centre`} />
         <meta
           name='description'
           content='GarbhaGudi Recognised as Best IVF & Fertility Hospital in India'
@@ -48,10 +57,7 @@ const Awards = ({ award }) => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content={`Awards & Accolades GarbhaGudi IVF Centre`}
-        />
+        <meta property='og:title' content={`Awards & Accolades GarbhaGudi IVF Centre`} />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -68,10 +74,7 @@ const Awards = ({ award }) => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content={`Awards & Accolades GarbhaGudi IVF Centre`}
-        />
+        <meta name='twitter:title' content={`Awards & Accolades GarbhaGudi IVF Centre`} />
         <meta
           name='twitter:description'
           content='GarbhaGudi Recognised as Best IVF & Fertility Hospital in India'
@@ -102,29 +105,25 @@ const Awards = ({ award }) => {
             </h1>
           </div>
           <div className='w mx-auto mt-12 grid max-w-xl gap-8 lg:max-w-none lg:grid-cols-3'>
-            {award?.map((item: any) => (
+            {award?.map((item) => (
               <div
                 key={item?.id}
                 className='flex flex-col overflow-hidden rounded-lg shadow-lg duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-2xl hover:transition-all'
               >
-                <Link
-                  href={`/about/awards-and-accolades/${item?.slug}`}
-                  passHref
-                >
+                <Link href={`/about/awards-and-accolades/${item?.slug}`} passHref>
                   <div className='flex-shrink-0'>
-                    <img
+                    <Image
                       className='h-38 w-full cursor-pointer rounded-t-lg object-contain'
                       src={item?.image?.url}
                       alt={item?.title}
+                      width={500}
+                      height={500}
                     />
                   </div>
                 </Link>
                 <div className='flex flex-1 flex-col justify-between p-6 text-gray-800 dark:bg-gray-700 dark:text-gray-200'>
                   <div className='flex-1'>
-                    <Link
-                      href={`/about/awards-and-accolades/${item?.slug}`}
-                      passHref
-                    >
+                    <Link href={`/about/awards-and-accolades/${item?.slug}`} passHref>
                       <p className='cursor-pointer font-heading text-lg font-semibold'>
                         {item?.title}
                       </p>

@@ -5,16 +5,10 @@ import HomeComponent from 'sections/home';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import BannerComponent from 'sections/home/bannerComponent';
-// import AddToHomeScreen from 'components/addToHomeScreen';
-const Faq = dynamic(
-  () => import('sections/home/faq'),
-);
-const DoctorList = dynamic(
-  () => import('sections/home/doctorList'),
-);
+const Faq = dynamic(() => import('sections/home/faq'));
+const DoctorList = dynamic(() => import('sections/home/doctorList'));
 
-const YOUTUBE_PLAYLIST_ITEMS_API =
-  'https://www.googleapis.com/youtube/v3/playlistItems';
+const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
 const Home = ({ data, testimonials }) => {
   function addBreadcrumbJsonLd() {
@@ -100,9 +94,7 @@ const Home = ({ data, testimonials }) => {
         {/* Primary Tags */}
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>
-          Best IVF Centre in Bangalore | IVF Hospital in Bangalore - GarbhaGudi
-        </title>
+        <title>Best IVF Centre in Bangalore | IVF Hospital in Bangalore - GarbhaGudi</title>
         <meta
           name='title'
           content='Best IVF Centre in Bangalore | IVF Hospital in Bangalore - GarbhaGudi'
@@ -171,12 +163,8 @@ const Home = ({ data, testimonials }) => {
         />
       </Head>
       <BannerComponent banners={data.banners} />
-      <HomeComponent
-        testimonialPassthrough={testimonials}
-        blogsPassthrough={data.blogs}
-      />
+      <HomeComponent testimonialPassthrough={testimonials} blogsPassthrough={data.blogs} />
       <DoctorList doctors={data.doctors} />
-      {/* <AddToHomeScreen /> */}
       <Faq />
     </div>
   );
@@ -232,7 +220,7 @@ export const getStaticProps = async () => {
   });
 
   const testimonialsData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const testimonials = await testimonialsData.json();

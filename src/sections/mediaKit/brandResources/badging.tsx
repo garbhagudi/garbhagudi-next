@@ -24,24 +24,16 @@ const Typography = () => {
           <p className='mt-3 font-heading text-xs'>
             This is a sample text for extra small text size
           </p>
-          <p className='mt-3 font-heading text-sm'>
-            This is a sample text for small text size
-          </p>
-          <p className='mt-3 font-heading text-base'>
-            This is a sample text for base text size
-          </p>
-          <p className='mt-3 font-heading text-lg'>
-            This is a sample text for large text size
-          </p>
+          <p className='mt-3 font-heading text-sm'>This is a sample text for small text size</p>
+          <p className='mt-3 font-heading text-base'>This is a sample text for base text size</p>
+          <p className='mt-3 font-heading text-lg'>This is a sample text for large text size</p>
           <p className='mt-3 font-heading text-xl'>
             This is a sample text for extra large text size
           </p>
         </div>
       </div>
       <div className=''>
-        <div className='mt-3 border-b pb-2 pt-3 font-lexend text-4xl'>
-          Content
-        </div>
+        <div className='mt-3 border-b pb-2 pt-3 font-lexend text-4xl'>Content</div>
         <div className='flex items-center space-x-2'>
           <div className='mt-4 flex items-center justify-start space-x-3 font-content text-2xl font-bold'>
             <div>Nunito</div>
@@ -72,15 +64,9 @@ const Typography = () => {
             <p className='mt-3 font-content text-xs'>
               This is a sample text for extra small text size
             </p>
-            <p className='mt-3 font-content text-sm'>
-              This is a sample text for small text size
-            </p>
-            <p className='mt-3 font-content text-base'>
-              This is a sample text for base text size
-            </p>
-            <p className='mt-3 font-content text-lg'>
-              This is a sample text for large text size
-            </p>
+            <p className='mt-3 font-content text-sm'>This is a sample text for small text size</p>
+            <p className='mt-3 font-content text-base'>This is a sample text for base text size</p>
+            <p className='mt-3 font-content text-lg'>This is a sample text for large text size</p>
             <p className='mt-3 font-content text-xl'>
               This is a sample text for extra large text size
             </p>
@@ -89,15 +75,9 @@ const Typography = () => {
             <p className='mt-3 font-lexend text-xs'>
               This is a sample text for extra small text size
             </p>
-            <p className='mt-3 font-lexend text-sm'>
-              This is a sample text for small text size
-            </p>
-            <p className='mt-3 font-lexend text-base'>
-              This is a sample text for base text size
-            </p>
-            <p className='mt-3 font-lexend text-lg'>
-              This is a sample text for large text size
-            </p>
+            <p className='mt-3 font-lexend text-sm'>This is a sample text for small text size</p>
+            <p className='mt-3 font-lexend text-base'>This is a sample text for base text size</p>
+            <p className='mt-3 font-lexend text-lg'>This is a sample text for large text size</p>
             <p className='mt-3 font-lexend text-xl'>
               This is a sample text for extra large text size
             </p>
@@ -105,15 +85,10 @@ const Typography = () => {
         </div>
       </div>
       <div>
-        <div className='mt-3 border-b pb-2 pt-3 font-lexend text-4xl'>
-          Icons
-        </div>
+        <div className='mt-3 border-b pb-2 pt-3 font-lexend text-4xl'>Icons</div>
         <div className='mt-4 flex items-center justify-start space-x-3 font-lexend text-2xl font-bold'>
           <div>React-icons</div>
-          <Link
-            href={'https://www.npmjs.com/package/react-icons'}
-            target='_blank'
-          >
+          <Link href={'https://www.npmjs.com/package/react-icons'} target='_blank'>
             <RxOpenInNewWindow />
           </Link>
           <div className='text-sm font-normal'>Preview</div>

@@ -14,10 +14,7 @@ const Benefits = () => {
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-2 xl:max-w-3xl'>
           {benefits.map((benefit) => (
-            <div
-              key={benefit.id}
-              className='flex flex-col items-center justify-center'
-            >
+            <div key={benefit.id} className='flex flex-col items-center justify-center'>
               <Image
                 width={300}
                 height={300}
@@ -40,21 +37,21 @@ const benefits = [
   {
     id: 1,
     title: 'Experience higher energy levels',
-    image:banner_1,
+    image: banner_1,
   },
   {
     id: 2,
     title: 'Understand your thoughts & emotions',
-    image:banner_2,
+    image: banner_2,
   },
   {
     id: 3,
     title: 'Feel more stable',
-    image:banner_3,
+    image: banner_3,
   },
   {
     id: 4,
     title: 'Have better relationships',
-    image:banner_4,
+    image: banner_4,
   },
 ];

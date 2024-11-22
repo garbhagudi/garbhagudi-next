@@ -1,14 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { Tab } from '@headlessui/react';
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import Loading from 'components/Loading';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
-const IndexPage = ({ branches }) => {
+interface Branches {
+  branches: {
+    title: string;
+    address: string;
+    mapLink: string;
+    id: string;
+    doctors: {
+      id: string;
+      category: string;
+      name: string;
+      slug: string;
+      image: {
+        url: string;
+      };
+      qualification: string;
+      designation: string;
+    }[];
+  }[];
+}
+
+const IndexPage = ({ branches }: Branches) => {
   const router = useRouter();
   if (router.isFallback) {
     return <Loading />;
@@ -28,10 +49,7 @@ const IndexPage = ({ branches }) => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content='Our Fertility Experts | GarbhaGudi IVF Centre'
-        />
+        <meta property='og:title' content='Our Fertility Experts | GarbhaGudi IVF Centre' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -48,10 +66,7 @@ const IndexPage = ({ branches }) => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content='Our Fertility Experts | GarbhaGudi IVF Centre'
-        />
+        <meta name='twitter:title' content='Our Fertility Experts | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
           content='GarbhaGudi is a well known and one of the best fertility hospitals in Bangalore and you can be sure of getting the best fertility care here. Our hospital specializes in IVF treatments and has helped hundreds of couples realize their dreams of parenthood.'
@@ -76,18 +91,17 @@ const IndexPage = ({ branches }) => {
           Our Fertility Experts
         </h1>
         <p className='text-md text-brandDark mx-auto mt-4 max-w-4xl text-center font-content'>
-          Our team of fertility specialists are known for their extensive
-          clinical experience and research contributions and their success in
-          treating the most challenging fertility cases.
+          Our team of fertility specialists are known for their extensive clinical experience and
+          research contributions and their success in treating the most challenging fertility cases.
         </p>
         <div className='w-full max-w-7xl px-2 py-16 sm:px-0'>
-          <Tab.Group>
-            <Tab.List
+          <TabGroup>
+            <TabList
               className={
                 'grid grid-cols-2 rounded-xl bg-gg-500 p-1 transition-all duration-300 ease-linear dark:bg-gg-400 md:grid-cols-3 lg:flex lg:flex-nowrap lg:space-x-1'
               }
             >
-              {branches.map((items: any) => (
+              {branches.map((items) => (
                 <Tab
                   className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'
                   key={items.id}
@@ -95,14 +109,14 @@ const IndexPage = ({ branches }) => {
                   {items?.title}
                 </Tab>
               ))}
-            </Tab.List>
-            <Tab.Panels
+            </TabList>
+            <TabPanels
               className={
                 'rounded-lg border border-t-0 bg-white bg-opacity-70 bg-gradient-to-br from-brandPink4 via-pink-50 to-white shadow-xl backdrop-blur-2xl dark:border-gray-800 dark:bg-opacity-5 dark:from-gray-800 dark:via-gray-800 dark:to-gray-700 lg:px-6'
               }
             >
-              {branches.map((items: any) => (
-                <Tab.Panel key={items.id}>
+              {branches.map((items) => (
+                <TabPanel key={items.id}>
                   <div className='body-font relative mx-auto mt-10 max-w-7xl text-gray-800 dark:text-gray-200'>
                     <div className='inset-0 flex flex-wrap lg:flex-nowrap lg:py-6'>
                       <div className='relative flex h-[44rem] w-full items-end justify-start overflow-hidden rounded-lg bg-gray-800 p-2 md:ml-auto lg:w-1/2 lg:p-10'>
@@ -137,9 +151,7 @@ const IndexPage = ({ branches }) => {
                               PHONE
                             </h2>
                             <div className='font-qs leading-relaxed text-gg-500 underline transition-all duration-100 hover:text-lg dark:text-gg-400'>
-                              <Link href='tel:+919108910832'>
-                                +91 9108 9108 32
-                              </Link>
+                              <Link href='tel:+919108910832'>+91 9108 9108 32</Link>
                             </div>
                             <h2 className='mt-4 font-qs text-xs font-semibold uppercase tracking-widest text-gray-800 dark:text-gray-200'>
                               WhatsApp
@@ -162,20 +174,16 @@ const IndexPage = ({ branches }) => {
                         </p>
                         <div className='col-span-full mx-auto grid grid-cols-2 space-y-0 sm:gap-x-14 sm:gap-y-5 sm:space-y-0 lg:max-w-7xl lg:grid-cols-2'>
                           {items?.doctors.map((doctor) => (
-                            <div
-                              className='rounded-lg text-center'
-                              key={doctor?.id}
-                            >
-                              <Link
-                                href={`/fertility-experts/${doctor?.slug}`}
-                                passHref
-                              >
+                            <div className='rounded-lg text-center' key={doctor?.id}>
+                              <Link href={`/fertility-experts/${doctor?.slug}`} passHref>
                                 <div>
                                   <div className='space-y-2'>
-                                    <img
+                                    <Image
                                       className='mx-auto my-auto mt-4 h-36 w-36 rounded-full bg-gray-400 dark:bg-gray-700'
                                       src={doctor?.image.url}
                                       alt={doctor?.name}
+                                      width={500}
+                                      height={500}
                                     />
                                     <div className='space-y-0.5 text-base font-medium leading-6'>
                                       <h3 className='text-brandDark font-heading font-bold'>
@@ -197,10 +205,10 @@ const IndexPage = ({ branches }) => {
                       </div>
                     </div>
                   </div>
-                </Tab.Panel>
+                </TabPanel>
               ))}
-            </Tab.Panels>
-          </Tab.Group>
+            </TabPanels>
+          </TabGroup>
         </div>
       </div>
     </div>

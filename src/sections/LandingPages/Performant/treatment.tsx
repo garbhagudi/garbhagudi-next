@@ -28,15 +28,10 @@ const TreatmentOptions = ({ branch }) => {
               <div className='pb-2 text-center font-heading text-base font-bold md:text-xl'>
                 {items?.treatent}
               </div>
-              <div className='px-3 text-center text-sm md:text-base'>
-                {items?.desc}
-              </div>
+              <div className='px-3 text-center text-sm md:text-base'>{items?.desc}</div>
             </div>
             <div className='w-full rounded-b-2xl border bg-brandPink4 py-1 text-center'>
-              <Link
-                href={items?.link}
-                className='font-content font-bold text-white'
-              >
+              <Link href={items?.link} className='font-content font-bold text-white'>
                 Learn More
               </Link>
             </div>

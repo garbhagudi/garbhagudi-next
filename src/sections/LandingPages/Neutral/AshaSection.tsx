@@ -41,14 +41,12 @@ const AshaSection = () => {
               <div className='flex flex-wrap justify-center'>
                 <div className='w-full px-4 lg:w-11/12'>
                   <p className='text-blueGray-700 mb-6 font-content text-base'>
-                    Dr Asha has well over two decades of experience in the
-                    fields of obstetrics, gynaecology and infertility. She is a
-                    well-known name in infertility – both in treating patients
-                    and also in infertility education. Many consider her as a
-                    medical genius with an overarching vision to eradicate
-                    infertility. Dr Asha has been instrumental in creating happy
-                    endings in the lives of more than 10000+ couples, by
-                    ensuring they have a child of their own.
+                    Dr Asha has well over two decades of experience in the fields of obstetrics,
+                    gynaecology and infertility. She is a well-known name in infertility – both in
+                    treating patients and also in infertility education. Many consider her as a
+                    medical genius with an overarching vision to eradicate infertility. Dr Asha has
+                    been instrumental in creating happy endings in the lives of more than 10000+
+                    couples, by ensuring they have a child of their own.
                   </p>
                   <MyModal
                     title={'Consult Dr. Asha S Vijay'}

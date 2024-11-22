@@ -10,9 +10,7 @@ import ContentXtra from 'sections/misc/iui-main/more-content';
 import OurCentres from 'sections/misc/iui-main/our-centres';
 import Risks from 'sections/misc/iui-main/risks';
 
-type Props = {};
-
-const Iui = (props: Props) => {
+const Iui = () => {
   function addReviewJsonLd() {
     return {
       __html: `{
@@ -161,10 +159,7 @@ const Iui = (props: Props) => {
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>IUI Treatment in Bangalore: Trusted Fertility Solutions</title>
-        <meta
-          name='title'
-          content='IUI Treatment in Bangalore: Trusted Fertility Solutions '
-        />
+        <meta name='title' content='IUI Treatment in Bangalore: Trusted Fertility Solutions ' />
         <meta
           name='description'
           content='Your Path to Parenthood with Expert Guidance. Experience the best IUI treatment in Bangalore, tailored to maximize your chances of conceiving. Contact us for personalized care'
@@ -217,10 +212,7 @@ const Iui = (props: Props) => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content='Intra-Uterine Insemination - IUI | GarbhaGudi'
-        />
+        <meta name='twitter:title' content='Intra-Uterine Insemination - IUI | GarbhaGudi' />
         <meta
           name='twitter:description'
           content="IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy."

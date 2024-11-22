@@ -22,10 +22,7 @@ const Locations = ({ branches }) => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content='Locations | GarbhaGudi IVF Centrea'
-        />
+        <meta property='og:title' content='Locations | GarbhaGudi IVF Centrea' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -42,10 +39,7 @@ const Locations = ({ branches }) => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content='Locations | GarbhaGudi IVF Centre'
-        />
+        <meta name='twitter:title' content='Locations | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
           content='GarbhaGudi is a place where dreams come alive, hopes never fade, and possibilities never end. We ceaselessly work to help you cherish the golden moment of holding your little bundles of joy.'
@@ -78,9 +72,7 @@ const Locations = ({ branches }) => {
                   />
                 </div>
                 <div className='flex w-full items-center justify-evenly border-t-2 border-brandPink px-3 py-3'>
-                  <div className='ml-4 font-heading text-xl font-bold'>
-                    {items?.title}
-                  </div>
+                  <div className='ml-4 font-heading text-xl font-bold'>{items?.title}</div>
                 </div>
               </div>
             </Link>

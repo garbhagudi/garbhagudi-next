@@ -18,10 +18,7 @@ const MythsAndFacts = () => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content='Frequently Asked Questions | GarbhaGudi IVF Centre'
-        />
+        <meta property='og:title' content='Frequently Asked Questions | GarbhaGudi IVF Centre' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -38,10 +35,7 @@ const MythsAndFacts = () => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content='Myths and Facts | GarbhaGudi IVF Centre'
-        />
+        <meta name='twitter:title' content='Myths and Facts | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
           content='Here are some of the most common myths related to health and fertility and the associated facts.'

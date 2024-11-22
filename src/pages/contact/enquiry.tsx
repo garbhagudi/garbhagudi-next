@@ -1,10 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Form from 'sections/LandingPages/Performant/form';
+import Image from 'next/image';
 
-type Props = {};
-
-const IndexPage = (props: Props) => {
+const IndexPage = () => {
   return (
     <div>
       <Head>
@@ -49,15 +48,14 @@ const IndexPage = (props: Props) => {
       </Head>
 
       <div className='mx-auto max-w-7xl'>
-        <img
+        <Image
           src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722509021/Banner/Google_Form_Header-min_tjenif_1_1_k8jrow.jpg'
           alt='formBanner'
           className='mx-auto mt-4 md:max-w-2xl'
+          fill
         />
         <div className='mx-auto max-w-2xl bg-gray-800'>
-          <h1 className='pt-4 text-center font-lexend text-3xl text-white'>
-            Enquiry Form
-          </h1>
+          <h1 className='pt-4 text-center font-lexend text-3xl text-white'>Enquiry Form</h1>
           <Form />
         </div>
       </div>

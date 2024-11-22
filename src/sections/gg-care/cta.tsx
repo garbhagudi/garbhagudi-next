@@ -7,8 +7,7 @@ const Cta = () => {
         <h2 className='font-heading text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
           <span className='block text-gg-400'>Ready to get started?</span>
           <span className='block text-xl text-gray-800 dark:text-gray-200 md:text-2xl'>
-            We&apos;re here to provide information, advice, support and
-            understanding.
+            We&apos;re here to provide information, advice, support and understanding.
           </span>
         </h2>
         <div className='mt-8 flex lg:mt-0 lg:flex-shrink-0'>

@@ -16,11 +16,10 @@ const faqs = [
     question: 'What is the average success rate of IVF?',
     answer: (
       <div>
-        In young women, the global average IVF success rate is roughly 40%.
-        Women under the age of 35 have a higher likelihood of success. The
-        success rate of this most widely used assisted reproductive technology
-        (ART) is often assessed in terms of live births per embryo transfer. The
-        live birth rate is the number of live births per embryo transfer.
+        In young women, the global average IVF success rate is roughly 40%. Women under the age of
+        35 have a higher likelihood of success. The success rate of this most widely used assisted
+        reproductive technology (ART) is often assessed in terms of live births per embryo transfer.
+        The live birth rate is the number of live births per embryo transfer.
         <br />
         <br />
         At GarbhaGudi, the average success rate of IVF is around 65-73%
@@ -52,15 +51,10 @@ const Faq = () => {
         <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20'>
           <div className='lg:grid lg:grid-cols-3 lg:gap-8'>
             <div>
-              <h2 className='font-heading text-3xl font-bold'>
-                Frequently asked questions
-              </h2>
+              <h2 className='font-heading text-3xl font-bold'>Frequently asked questions</h2>
               <p className='mt-4 font-content text-lg'>
                 Can’t find the answer you’re looking for? Reach out to our{' '}
-                <Link
-                  href='/gg-care'
-                  className='font-medium text-brandPink hover:text-brandPink3'
-                >
+                <Link href='/gg-care' className='font-medium text-brandPink hover:text-brandPink3'>
                   customer support
                 </Link>{' '}
                 team.
@@ -70,12 +64,8 @@ const Faq = () => {
               <dl className='space-y-12'>
                 {faqs.map((faq) => (
                   <div key={faq.question}>
-                    <div className='font-heading text-xl font-bold'>
-                      {faq.question}
-                    </div>
-                    <div className='mt-2 font-content text-lg'>
-                      {faq.answer}
-                    </div>
+                    <div className='font-heading text-xl font-bold'>{faq.question}</div>
+                    <div className='mt-2 font-content text-lg'>{faq.answer}</div>
                   </div>
                 ))}
               </dl>

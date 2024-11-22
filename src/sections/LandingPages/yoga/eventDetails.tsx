@@ -38,14 +38,11 @@ const EventDetails = () => {
           ))}
         </div>
         <div className='py-8 xl:max-w-3xl'>
-          <div className='my-8 font-lexend text-3xl font-bold lg:text-4xl'>
-            Yoga Challenge
-          </div>
+          <div className='my-8 font-lexend text-3xl font-bold lg:text-4xl'>Yoga Challenge</div>
           <div>
-            Join our exciting 21-Day Yoga Challenge and stand a chance to win
-            amazing vouchers! This challenge is designed to motivate you to stay
-            consistent with your yoga practice and improve your fertility and
-            overall well-being. Here’s how you can win:
+            Join our exciting 21-Day Yoga Challenge and stand a chance to win amazing vouchers! This
+            challenge is designed to motivate you to stay consistent with your yoga practice and
+            improve your fertility and overall well-being. Here’s how you can win:
           </div>
           <div className='mt-5 text-xl font-bold'>Prizes:</div>
           <div className='mt-2'>
@@ -88,30 +85,26 @@ const EventDetails = () => {
             <ul className='list-disc space-y-2 pl-5'>
               <li>
                 {' '}
-                <strong> Challenge Dates: </strong> 25th July to 14th August
-                2024.
+                <strong> Challenge Dates: </strong> 25th July to 14th August 2024.
               </li>
               <li>
                 {' '}
-                <strong> Eligibility: </strong> Open to all registered
-                participants.
+                <strong> Eligibility: </strong> Open to all registered participants.
               </li>
               <li>
                 {' '}
-                <strong> Winner Announcement: </strong> Winners will be
-                announced on 14th August during our closing ceremony.
+                <strong> Winner Announcement: </strong> Winners will be announced on 14th August
+                during our closing ceremony.
               </li>
             </ul>
           </div>
           <div className='mt-8 text-lg'>
-            Ready to take on the challenge? Sign up now and let’s embark on this
-            journey towards better health and wellness together!
+            Ready to take on the challenge? Sign up now and let’s embark on this journey towards
+            better health and wellness together!
           </div>
         </div>
         <div className='py-8 xl:max-w-3xl'>
-          <div className='my-6 font-lexend text-3xl font-bold lg:text-4xl'>
-            Whats Included?
-          </div>
+          <div className='my-6 font-lexend text-3xl font-bold lg:text-4xl'>Whats Included?</div>
           <div className='grid grid-cols-1 gap-3'>
             {whatToExpect.map((item) => (
               <div
@@ -126,18 +119,11 @@ const EventDetails = () => {
                   className='mx-auto aspect-auto w-40 object-contain'
                 />
                 <div className='-mt-16 flex flex-col rounded-lg p-3 pt-20 shadow-lg md:-mt-0 md:pt-0 lg:py-2'>
-                  <div className='py-2 font-lexend text-2xl font-bold'>
-                    {item.title}
-                  </div>
+                  <div className='py-2 font-lexend text-2xl font-bold'>{item.title}</div>
                   <div className='font-content text-base text-gray-500'>
-                    {expanded[item.id]
-                      ? item.description
-                      : truncate(item.description, 220)}
+                    {expanded[item.id] ? item.description : truncate(item.description, 220)}
                     {item.description.length > 220 && (
-                      <button
-                        onClick={() => toggleReadMore(item.id)}
-                        className='ml-2 text-gg-500'
-                      >
+                      <button onClick={() => toggleReadMore(item.id)} className='ml-2 text-gg-500'>
                         {expanded[item.id] ? 'Read Less' : 'Read More'}
                       </button>
                     )}

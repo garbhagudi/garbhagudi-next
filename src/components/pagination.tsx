@@ -14,16 +14,14 @@ const Pagination = ({
   isPrev,
 }) => {
   const [currentPage1, setCurrentPage] = useState(1);
-
+  console.log(currentPage1);
   const handlePageClick = (page) => {
     setCurrentPage(page);
   };
-
   const pageNumbers = [];
   for (let i = 1; i <= total / 6 + 1; i++) {
     pageNumbers.push(i);
   }
-
   return (
     <div className='mx-auto max-w-7xl'>
       <div className='mt-10 flex items-center justify-between'>
@@ -84,12 +82,9 @@ const Pagination = ({
       </div>
       <div className='mx-auto mt-10 text-center'>
         <p className='font-lexend text-sm text-gray-800 dark:text-gray-200'>
-          Showing{' '}
-          <span className='font-medium'>
-            {limitDefined * (currentPage - 1) + 1}
-          </span>{' '}
-          to <span className='font-medium'>{currentPage * limitDefined}</span>{' '}
-          of <span className='font-medium'>{total}</span> results
+          Showing <span className='font-medium'>{limitDefined * (currentPage - 1) + 1}</span> to{' '}
+          <span className='font-medium'>{currentPage * limitDefined}</span> of{' '}
+          <span className='font-medium'>{total}</span> results
         </p>
       </div>
     </div>

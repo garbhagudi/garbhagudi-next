@@ -79,16 +79,14 @@ const Data = [
     treatent: 'ICSI',
     desc: (
       <div>
-        Take the first step towards parenthood with GarbhaGudi's
-        state-of-the-art{' '}
+        Take the first step towards parenthood with GarbhaGudi's state-of-the-art{' '}
         <Link
           href={'/treatments/intracytoplasmic-sperm-injection-icsi'}
           className='text-gg-500 hover:underline dark:text-gg-400'
         >
           ICSI treatment In Banglore
         </Link>
-        , which offers a high success rate for couples struggling with
-        infertility.
+        , which offers a high success rate for couples struggling with infertility.
       </div>
     ),
     link: '/treatments/icsi-treatment-in-bangalore',
@@ -119,8 +117,7 @@ const Data = [
     treatent: 'Infertility Treatment',
     desc: (
       <div>
-        Garbhagudi IVF Centre - Your Path to Parenthood Begins Here. Discover
-        Advanced{' '}
+        Garbhagudi IVF Centre - Your Path to Parenthood Begins Here. Discover Advanced{' '}
         <Link
           href={'/treatments/infertility-treatment-in-bangalore'}
           className='text-gg-500 hover:underline dark:text-gg-400'

@@ -11,18 +11,15 @@ const Video = () => {
             <div>
               <div className='mt-1 block font-heading text-4xl font-extrabold tracking-tight sm:text-4xl xl:text-5xl'>
                 <h1 className='space-x-3'>
-                  <span className='text-gray-800 dark:text-gray-200'>
-                    GarbhaGudi’s
-                  </span>
+                  <span className='text-gray-800 dark:text-gray-200'>GarbhaGudi’s</span>
                   <span className='text-gg-400'>Mission </span>
                 </h1>
               </div>
             </div>
             <p className='mt-3 font-content text-base text-gray-500 dark:text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl'>
-              &quot;To provide reproductive health care of exceptional quality,
-              within reach of every aspiring couple. We remain steadfast to
-              achieving success and excellence in education, research, and
-              healthcare for the welfare of humanity.&quot;
+              &quot;To provide reproductive health care of exceptional quality, within reach of
+              every aspiring couple. We remain steadfast to achieving success and excellence in
+              education, research, and healthcare for the welfare of humanity.&quot;
             </p>
           </div>
           <div className='relative mt-12 sm:mx-auto sm:max-w-xl lg:col-span-6 lg:mx-0 lg:mt-0 lg:max-w-xl'>

@@ -23,8 +23,8 @@ const Offer = () => {
           Bengaluru's Most Trusted Fertility Center
         </h2>
         <p className='text-l py-2 text-center font-lexend text-gray-700'>
-          GarbhaGudi IVF Centre has been awarded as the Best IVF & Fertility
-          Centre in Bangalore by multiple organizations.
+          GarbhaGudi IVF Centre has been awarded as the Best IVF & Fertility Centre in Bangalore by
+          multiple organizations.
         </p>
         <div className='rounded-lg bg-[#005E7E]'>
           <h2 className='my-3 overflow-hidden rounded-lg text-center font-lexend text-xl font-bold text-white'>

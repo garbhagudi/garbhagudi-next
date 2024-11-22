@@ -10,9 +10,7 @@ import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 
 const EndForm = dynamic(() => import('sections/LandingPages/ivf/endform'));
-const WhyGarbhaGudi = dynamic(
-  () => import('sections/LandingPages/ivf/whygarbhagudi'),
-);
+const WhyGarbhaGudi = dynamic(() => import('sections/LandingPages/ivf/whygarbhagudi'));
 const Testimonial = dynamic(() => import('sections/home/testimonial'));
 const Plans = dynamic(() => import('sections/LandingPages/ivf/plans'));
 const Doctors = dynamic(() => import('sections/LandingPages/ivf/Doctors'));
@@ -35,9 +33,7 @@ export default function LandingPage_call({ doctors }) {
     <div>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>
-          GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India
-        </title>
+        <title>GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India</title>
         <meta
           name='title'
           content='GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India'

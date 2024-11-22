@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-type Props = {};
-
-const StatsPC = (props: Props) => {
+const StatsPC = () => {
   const [tooltipStatus, setTooltipStatus] = useState(0);
   return (
     <div className='hidden lg:block'>
@@ -29,9 +27,7 @@ const StatsPC = (props: Props) => {
                 />
 
                 {tooltipStatus == 1 && (
-                  <div className='absolute mt-44 text-sm'>
-                    Extensive Exprerience
-                  </div>
+                  <div className='absolute mt-44 text-sm'>Extensive Exprerience</div>
                 )}
               </div>
             </div>
@@ -65,9 +61,7 @@ const StatsPC = (props: Props) => {
                   loading='lazy'
                 />
                 {tooltipStatus == 2 && (
-                  <div className='absolute mt-44 text-sm'>
-                    Holistic Approach
-                  </div>
+                  <div className='absolute mt-44 text-sm'>Holistic Approach</div>
                 )}
               </div>
             </div>
@@ -85,9 +79,7 @@ const StatsPC = (props: Props) => {
                   height={200}
                   loading='lazy'
                 />
-                {tooltipStatus == 3 && (
-                  <div className='absolute mt-44 text-sm'>Humane Touch</div>
-                )}
+                {tooltipStatus == 3 && <div className='absolute mt-44 text-sm'>Humane Touch</div>}
               </div>
             </div>
             <div>
@@ -105,9 +97,7 @@ const StatsPC = (props: Props) => {
                   loading='lazy'
                 />
                 {tooltipStatus == 4 && (
-                  <div className='absolute mt-44 text-sm'>
-                    Successful Pregnancies
-                  </div>
+                  <div className='absolute mt-44 text-sm'>Successful Pregnancies</div>
                 )}
               </div>
             </div>
@@ -126,9 +116,7 @@ const StatsPC = (props: Props) => {
                   loading='lazy'
                 />
                 {tooltipStatus == 5 && (
-                  <div className='absolute mt-44 text-sm'>
-                    Renowned Specialists
-                  </div>
+                  <div className='absolute mt-44 text-sm'>Renowned Specialists</div>
                 )}
               </div>
             </div>
@@ -147,9 +135,7 @@ const StatsPC = (props: Props) => {
                   loading='lazy'
                 />
                 {tooltipStatus == 6 && (
-                  <div className='absolute mt-44 text-sm'>
-                    Transparent Pricing
-                  </div>
+                  <div className='absolute mt-44 text-sm'>Transparent Pricing</div>
                 )}
               </div>
             </div>
@@ -169,9 +155,7 @@ const StatsPC = (props: Props) => {
                   loading='lazy'
                 />
                 {tooltipStatus == 7 && (
-                  <div className='absolute mt-44 text-sm'>
-                    World-class Labrotories
-                  </div>
+                  <div className='absolute mt-44 text-sm'>World-class Labrotories</div>
                 )}
               </div>
             </div>
@@ -190,9 +174,7 @@ const StatsPC = (props: Props) => {
                   loading='lazy'
                 />
                 {tooltipStatus == 8 && (
-                  <div className='absolute mt-44 text-sm'>
-                    Cutting Edge Technologies
-                  </div>
+                  <div className='absolute mt-44 text-sm'>Cutting Edge Technologies</div>
                 )}
               </div>
             </div>

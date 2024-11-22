@@ -14,20 +14,14 @@ const GuidelineList = ({ category, guidelines }) => (
 const SocialPostsGuide = () => {
   return (
     <div className='px-3'>
-      <h2 className='font-heading text-2xl font-bold'>
-        Social Media Posts - Guidelines
-      </h2>
+      <h2 className='font-heading text-2xl font-bold'>Social Media Posts - Guidelines</h2>
       <p className='mt-4 font-lexend'>
-        You're welcome to use the GarbhaGudi's name, logo and icon as long as
-        you adhere to the logo and icon use guidelines mentioned below.
+        You're welcome to use the GarbhaGudi's name, logo and icon as long as you adhere to the logo
+        and icon use guidelines mentioned below.
       </p>
       <div className='py-10'>
         {Object.entries(guidelinesData).map(([category, guidelines]) => (
-          <GuidelineList
-            key={category}
-            category={category}
-            guidelines={guidelines}
-          />
+          <GuidelineList key={category} category={category} guidelines={guidelines} />
         ))}
       </div>
     </div>
@@ -45,16 +39,14 @@ const guidelinesData = {
     },
     {
       id: 2,
-      point:
-        'Maintain a consistent tone and style across all posts to reinforce brand identity.',
+      point: 'Maintain a consistent tone and style across all posts to reinforce brand identity.',
     },
   ],
 
   'High-Quality Imagery': [
     {
       id: 3,
-      point:
-        'Use high-resolution images that are clear and visually appealing.',
+      point: 'Use high-resolution images that are clear and visually appealing.',
     },
     {
       id: 4,

@@ -2,8 +2,25 @@ import React from 'react';
 import Link from 'next/link';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Image from 'next/image';
+import type { RichTextContent } from '@graphcms/rich-text-types';
 
-const MapSection = ({ maplink, address, description, doctors, title }) => {
+interface MapSectionProps {
+  maplink: string;
+  address: string;
+  description: RichTextContent;
+  doctors: {
+    id: string;
+    image: {
+      url: string;
+    };
+    name: string;
+    designation: string;
+    slug: string;
+  }[];
+  title: string;
+}
+
+const MapSection = ({ maplink, address, description, doctors, title }: MapSectionProps) => {
   return (
     <div className='px-3'>
       <div className='body-font relative mx-auto max-w-7xl text-gray-600'>
@@ -48,11 +65,7 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
                   WhatsApp
                 </div>
                 <p className='font-qs text-sm leading-relaxed text-gray-800 dark:text-gray-200'>
-                  <Link
-                    href='https://wa.me/918884183338?text=Hi.'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
+                  <Link href='https://wa.me/918884183338?text=Hi.' target='_blank' rel='noreferrer'>
                     +91 888 418 3338
                   </Link>
                 </p>
@@ -71,7 +84,7 @@ const MapSection = ({ maplink, address, description, doctors, title }) => {
             Fertility Specialists at {title}
           </h2>
           <div className='mx-auto grid grid-cols-2 gap-3 space-y-0 sm:gap-8 sm:space-y-0 lg:grid-cols-6'>
-            {doctors?.map((item: any) => {
+            {doctors?.map((item) => {
               return (
                 <div
                   className='mx-auto mb-2 flex transform flex-col items-center justify-start text-center transition-all duration-500 ease-in-out hover:scale-105'

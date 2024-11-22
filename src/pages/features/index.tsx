@@ -11,10 +11,7 @@ const IndexPage = () => {
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Our Versatile Approach | GarbhaGudi IVF Centre</title>
-        <meta
-          name='title'
-          content='Our Versatile Approach | GarbhaGudi IVF Centre'
-        />
+        <meta name='title' content='Our Versatile Approach | GarbhaGudi IVF Centre' />
         <meta
           name='description'
           content='At GarbhaGudi, We are always committed to providing a world of options and bringing a new ray of hope to many who are trying to conceive. So, you can expect:'
@@ -22,10 +19,7 @@ const IndexPage = () => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content='Our Versatile Approach | GarbhaGudi IVF Centre'
-        />
+        <meta property='og:title' content='Our Versatile Approach | GarbhaGudi IVF Centre' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -42,10 +36,7 @@ const IndexPage = () => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content='Our Versatile Approach | GarbhaGudi IVF Centre'
-        />
+        <meta name='twitter:title' content='Our Versatile Approach | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
           content='At GarbhaGudi, We are always committed to providing a world of options and bringing a new ray of hope to many who are trying to conceive. So, you can expect:'

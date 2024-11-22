@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const Gallery = () => {
@@ -23,13 +24,9 @@ const Gallery = () => {
   return (
     <div>
       <div className='py-3 lg:py-6'>
-        <h1 className='mb-3 pb-6 font-lexend text-3xl font-semibold'>
-          Gallery
-        </h1>
+        <h1 className='mb-3 pb-6 font-lexend text-3xl font-semibold'>Gallery</h1>
         <ImageGallery images={images} onClick={handleImageClick} />
-        {selectedImage && (
-          <LightBox imageUrl={selectedImage} onClose={closeLightBox} />
-        )}
+        {selectedImage && <LightBox imageUrl={selectedImage} onClose={closeLightBox} />}
       </div>
     </div>
   );
@@ -45,10 +42,12 @@ const ImageGallery: React.FC<{
     <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
       {images.map((imageUrl, index) => (
         <div key={index} className='relative' onClick={() => onClick(imageUrl)}>
-          <img
+          <Image
             src={imageUrl}
             alt={`Image ${index + 1}`}
             className='h-56 w-full cursor-pointer rounded-md object-cover object-center'
+            width={500}
+            height={500}
           />
         </div>
       ))}
@@ -56,10 +55,7 @@ const ImageGallery: React.FC<{
   );
 };
 
-const LightBox: React.FC<{ imageUrl: string; onClose: () => void }> = ({
-  imageUrl,
-  onClose,
-}) => {
+const LightBox: React.FC<{ imageUrl: string; onClose: () => void }> = ({ imageUrl, onClose }) => {
   return (
     <div>
       <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75'>
@@ -71,10 +67,12 @@ const LightBox: React.FC<{ imageUrl: string; onClose: () => void }> = ({
             >
               &times;
             </button>
-            <img
+            <Image
               src={imageUrl}
               alt='Full-screen'
               className='h-auto w-full md:scale-125'
+              width={500}
+              height={500}
             />
           </div>
         </div>

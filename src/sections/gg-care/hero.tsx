@@ -1,5 +1,6 @@
 import { HiChatAlt, HiPhone, HiCalendar } from 'react-icons/hi';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const supportLinks = [
   {
@@ -8,8 +9,7 @@ const supportLinks = [
       'Chat online with our team now from anywhere. We provide you with a seamless and hassle-free online chat experience from the comfort of your home. Get the proper assistance now!',
     icon: HiChatAlt,
     ctaAction: 'Chat Now',
-    ctaLink:
-      '/contact/enquiry?utm_source=ggcare&utm_medium=chat&utm_campaign=ggcare_chat',
+    ctaLink: '/contact/enquiry?utm_source=ggcare&utm_medium=chat&utm_campaign=ggcare_chat',
   },
   {
     name: 'Call Support',
@@ -36,10 +36,12 @@ const Hero = () => {
       {/* Header */}
       <div className='relative pb-32'>
         <div className='absolute inset-0'>
-          <img
+          <Image
             className='h-full w-full object-cover'
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1644049097/Banner/GG_Care_Web_Banner-6_iyxanu.webp'
             alt='gg care'
+            width={500}
+            height={500}
           />
           <div
             className='absolute inset-0 bg-gray-400 mix-blend-multiply dark:bg-gray-600'
@@ -65,10 +67,7 @@ const Hero = () => {
             >
               <div className='relative flex-1 px-6 pb-8 pt-16 md:px-8'>
                 <div className='absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-gg-400 p-5 shadow-lg transition-all duration-150 dark:bg-gray-600 group-hover:dark:bg-gg-400'>
-                  <link.icon
-                    className='h-6 w-6 text-white'
-                    aria-hidden='true'
-                  />
+                  <link.icon className='h-6 w-6 text-white' aria-hidden='true' />
                 </div>
                 <h3 className='font-heading text-xl font-medium text-gray-800 dark:text-gray-200'>
                   {link.name}

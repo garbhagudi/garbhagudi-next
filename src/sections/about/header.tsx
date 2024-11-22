@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const Header = () => {
@@ -23,23 +24,23 @@ const Header = () => {
                   <span className='block xl:inline'>About GarbhaGudi</span>
                 </h1>
                 <p className='text-brandDark z-10 mt-3 overflow-visible font-content text-base text-gray-800 dark:text-gray-200 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0'>
-                  GarbhaGudi is a chain of new generation infertility treatment
-                  hospitals equipped with state-of-the-art infrastructure and
-                  cutting-edge technology to address this ever-increasing
-                  problem of infertility. It was founded by a team of committed
-                  entrepreneurs and healthcare specialists, led by Dr. Asha S
-                  Vijay, who is a renowned gynecologist and fertility
-                  specialist.
+                  GarbhaGudi is a chain of new generation infertility treatment hospitals equipped
+                  with state-of-the-art infrastructure and cutting-edge technology to address this
+                  ever-increasing problem of infertility. It was founded by a team of committed
+                  entrepreneurs and healthcare specialists, led by Dr. Asha S Vijay, who is a
+                  renowned gynecologist and fertility specialist.
                 </p>
               </div>
             </main>
           </div>
         </div>
         <div className='lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
-          <img
+          <Image
             className='h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full'
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/q_auto:eco/v1643461022/Banner/About_us_xg1b1l.webp'
             alt='GarbhaGudi IVF Centre'
+            width={500}
+            height={500}
           />
         </div>
       </div>
@@ -50,9 +51,8 @@ const Header = () => {
               Discover the Garbhagudi Way
             </div>
             <div className='mt-3 font-content text-base font-semibold text-gray-800 dark:text-gray-200 md:text-lg'>
-              Discover our values and how we operate as an organization. Gain
-              insight into our guiding principles, from Couple's Delight to
-              Holistic Approach.
+              Discover our values and how we operate as an organization. Gain insight into our
+              guiding principles, from Couple's Delight to Holistic Approach.
             </div>
           </div>
           <div className='mx-auto mb-4 md:mb-0'>

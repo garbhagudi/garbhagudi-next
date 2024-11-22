@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Dialog,
-  DialogPanel,
-  DialogTitle,
-  Transition,
-  TransitionChild,
-} from '@headlessui/react';
+import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import Link from 'next/link';
@@ -16,10 +10,7 @@ interface PriceSlashProps {
   slashedPrice: number;
 }
 
-const PriceSlash: React.FC<PriceSlashProps> = ({
-  originalPrice,
-  slashedPrice,
-}) => {
+const PriceSlash: React.FC<PriceSlashProps> = ({ originalPrice, slashedPrice }) => {
   const calculateDiscountPercentage = () => {
     const discount = ((originalPrice - slashedPrice) / originalPrice) * 100;
     return Math.round(discount);
@@ -41,9 +32,7 @@ const PriceSlash: React.FC<PriceSlashProps> = ({
       </div>
       <div className='mt-5 flex items-center font-lexend text-3xl text-gg-500 dark:text-gg-400'>
         Now at &nbsp;
-        <span className='font-heading font-bold'>
-          ₹{formatNumberWithCommas(slashedPrice)}
-        </span>
+        <span className='font-heading font-bold'>₹{formatNumberWithCommas(slashedPrice)}</span>
         <div className='ml-2 text-sm text-green-600 dark:text-green-500'>
           ({calculateDiscountPercentage()}% off)
         </div>
@@ -63,8 +52,7 @@ const PriceSlash: React.FC<PriceSlashProps> = ({
           <li>ET / FET Procedure </li>
         </ul>
         <div className='mt-8 text-xs'>
-          * Included particulars are applicable for 1 cycle only. Other terms
-          and conditions apply
+          * Included particulars are applicable for 1 cycle only. Other terms and conditions apply
         </div>
       </div>
     </div>
@@ -90,19 +78,16 @@ const Home = () => {
             </div>
 
             <div className='font-lexend text-lg text-gray-800 dark:text-gray-200'>
-              Our intention is to serve maximum number of couples who are
-              missing out on experiencing the joy of parenthood. We know that
-              many couples cannot afford IVF. Keeping this in mind, GarbhaGudi
-              IVF Centre in association with GarbhaGnan Foundation, has
-              initiated this program called{' '}
+              Our intention is to serve maximum number of couples who are missing out on
+              experiencing the joy of parenthood. We know that many couples cannot afford IVF.
+              Keeping this in mind, GarbhaGudi IVF Centre in association with GarbhaGnan Foundation,
+              has initiated this program called{' '}
               <span className='font-bold underline'>PARIPOORNA-2024. </span>
               <PriceSlash originalPrice={260000} slashedPrice={160000} />
-              This December, celebrate the season of parenthood, with
-              Paripoorna. GarbhaGudi IVF Centre is offering a flat{' '}
-              <span className='font-bold underline'>₹1,00,000/-</span> off on
-              your IVF cycle cost. Visit the GarbhaGudi branch nearest to you to
-              avail the offer and take the first steps in your journey towards
-              completeness.
+              This December, celebrate the season of parenthood, with Paripoorna. GarbhaGudi IVF
+              Centre is offering a flat <span className='font-bold underline'>₹1,00,000/-</span> off
+              on your IVF cycle cost. Visit the GarbhaGudi branch nearest to you to avail the offer
+              and take the first steps in your journey towards completeness.
               <div className='mt-10 flex flex-col items-start justify-between space-y-3 md:items-center lg:flex-row lg:space-y-0'>
                 <div className='rounded-xl bg-gg-500 px-3 py-2 font-lexend text-white dark:bg-gg-600'>
                   <WatchVideo />
@@ -138,7 +123,7 @@ const Home = () => {
 export default Home;
 
 const WatchVideo = () => {
-  let [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
     setIsOpen(false);

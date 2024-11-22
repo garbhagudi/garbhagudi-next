@@ -22,7 +22,7 @@ export default function SearchComponent() {
           item.title
             .toLowerCase()
             .replace(/\s+/g, '')
-            .includes(query.toLowerCase().replace(/\s+/g, '')),
+            .includes(query.toLowerCase().replace(/\s+/g, ''))
         );
 
   return (
@@ -36,10 +36,7 @@ export default function SearchComponent() {
               placeholder='Search'
             />
             <ComboboxButton className='absolute inset-y-0 right-0 flex items-center pr-4'>
-              <HiOutlineSearch
-                className='h-5 w-5 text-gray-400'
-                aria-hidden='true'
-              />
+              <HiOutlineSearch className='h-5 w-5 text-gray-400' aria-hidden='true' />
             </ComboboxButton>
           </div>
           <Transition
@@ -70,9 +67,7 @@ export default function SearchComponent() {
                     {({ selected, active }) => (
                       <>
                         <span
-                          className={`block truncate ${
-                            selected ? 'font-medium' : 'font-normal'
-                          }`}
+                          className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}
                         >
                           <Link href={`/blogs/${item.slug}`}>{item.title}</Link>
                         </span>

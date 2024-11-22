@@ -8,28 +8,17 @@ import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import dynamic from 'next/dynamic';
 
-const MapSection = dynamic(
-  () => import('sections/location/mapSection'),
-);
-const Cta = dynamic(
-  () => import('sections/gg-care/cta'),
-);
-const Faq = dynamic(
-  () => import('sections/location/faq'),
-);
-const VirtualTour = dynamic(
-  () => import('sections/location/virtualTour'),
-);
-const QuickLinks = dynamic(
-  () => import('sections/location/quickLinks'),
-);
+const MapSection = dynamic(() => import('sections/location/mapSection'));
+const Cta = dynamic(() => import('sections/gg-care/cta'));
+const Faq = dynamic(() => import('sections/location/faq'));
+const VirtualTour = dynamic(() => import('sections/location/virtualTour'));
+const QuickLinks = dynamic(() => import('sections/location/quickLinks'));
 
 const Branch = ({ branch }) => {
   const router = useRouter();
   if (router.isFallback) {
     return <Loading />;
   }
-  const title = `${branch.title} | GarbhaGudi IVF Centre`;
   return (
     <div>
       <Head>
@@ -58,7 +47,7 @@ const Branch = ({ branch }) => {
         <meta name='twitter:image' content={branch?.branchPicture.url} />
       </Head>
       <Banner branchTitle={branch.title} />
-      <TreatmentOptions branch={branch?.title} image={branch?.nabh?.url || ''}/>
+      <TreatmentOptions branch={branch?.title} image={branch?.nabh?.url || ''} />
       <MapSection
         maplink={branch?.mapLink}
         address={branch?.address}

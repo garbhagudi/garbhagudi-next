@@ -1,11 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react';
 import { HiCheck, HiMinus, HiChevronDown } from 'react-icons/hi';
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from '@headlessui/react';
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import Link from 'next/link';
 
 const tiers = [
@@ -101,8 +97,8 @@ const Packages = () => {
           >
             cost of IVF
           </Link>{' '}
-          packages at GarbhaGudi. No matter the financial status, we've got a
-          package that works for you.
+          packages at GarbhaGudi. No matter the financial status, we've got a package that works for
+          you.
         </p>
       </div>
       <div className='mx-auto max-w-7xl py-16 sm:px-6 sm:pb-24 lg:px-8'>
@@ -159,19 +155,12 @@ const Packages = () => {
                           </thead>
                           <tbody className='divide-y divide-gray-300'>
                             {section.features.map((feature) => (
-                              <tr
-                                key={feature.id}
-                                className='border-gray-00 border-t'
-                              >
-                                <th
-                                  className='px-4 py-5 text-left text-sm font-normal'
-                                  scope='row'
-                                >
+                              <tr key={feature.id} className='border-gray-00 border-t'>
+                                <th className='px-4 py-5 text-left text-sm font-normal' scope='row'>
                                   {feature.name}
                                 </th>
                                 <td className='py-5 pr-4'>
-                                  {typeof feature.tiers[tier.name] ===
-                                  'string' ? (
+                                  {typeof feature.tiers[tier.name] === 'string' ? (
                                     <span className='block text-right text-sm'>
                                       {feature.tiers[tier.name]}
                                     </span>
@@ -190,9 +179,7 @@ const Packages = () => {
                                       )}
 
                                       <span className='sr-only'>
-                                        {feature.tiers[tier.name] === true
-                                          ? 'Yes'
-                                          : 'No'}
+                                        {feature.tiers[tier.name] === true ? 'Yes' : 'No'}
                                       </span>
                                     </>
                                   )}
@@ -275,18 +262,13 @@ const Packages = () => {
                   </tr>
                   {section.features.map((feature) => (
                     <tr key={feature.id}>
-                      <th
-                        className='px-6 py-5 text-left text-sm font-semibold'
-                        scope='row'
-                      >
+                      <th className='px-6 py-5 text-left text-sm font-semibold' scope='row'>
                         {feature.name}
                       </th>
                       {tiers.map((tier) => (
                         <td key={tier.name} className='px-6 py-5 text-center'>
                           {typeof feature.tiers[tier.name] === 'string' ? (
-                            <span className='block text-sm'>
-                              {feature.tiers[tier.name]}
-                            </span>
+                            <span className='block text-sm'>{feature.tiers[tier.name]}</span>
                           ) : (
                             <>
                               {feature.tiers[tier.name] === true ? (
@@ -295,17 +277,12 @@ const Packages = () => {
                                   aria-hidden='true'
                                 />
                               ) : (
-                                <HiMinus
-                                  className='mx-auto h-5 text-gray-400'
-                                  aria-hidden='true'
-                                />
+                                <HiMinus className='mx-auto h-5 text-gray-400' aria-hidden='true' />
                               )}
 
                               <span className='sr-only'>
-                                {feature.tiers[tier.name] === true
-                                  ? 'Included'
-                                  : 'Not included'}{' '}
-                                in {tier.name}
+                                {feature.tiers[tier.name] === true ? 'Included' : 'Not included'} in{' '}
+                                {tier.name}
                               </span>
                             </>
                           )}
@@ -336,9 +313,8 @@ const Packages = () => {
           </table>
         </div>
         <div className='lg:text mt-4 text-center text-xs font-semibold'>
-          *Any additional procedures and tests recommended by the doctor may or
-          may not be included. Please contact the financial advisor at the
-          centre for more information.
+          *Any additional procedures and tests recommended by the doctor may or may not be included.
+          Please contact the financial advisor at the centre for more information.
         </div>
       </div>
     </div>

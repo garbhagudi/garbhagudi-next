@@ -37,9 +37,7 @@ const Faq = ({ branch, doctors }) => {
                           </div>
                           <div className='space-y-4'>
                             <div className='space-y-1 text-lg font-medium leading-6'>
-                              <h3 className='text-brandDark font-content'>
-                                {item?.name}
-                              </h3>
+                              <h3 className='text-brandDark font-content'>{item?.name}</h3>
                               <p className='font-content text-xs text-brandPink'>
                                 {item?.designation}
                               </p>
@@ -57,26 +55,19 @@ const Faq = ({ branch, doctors }) => {
                 How to contact GarbhaGudi IVF Centre in {branch}?
               </h3>
               <div className='md:col-span-8 md:pl-0'>
-                To contact the fertility specialists at our {branch} branch,
-                please visit{' '}
-                <Link
-                  href={'/gg-care'}
-                  className='text-gg-500 dark:text-gg-400'
-                >
+                To contact the fertility specialists at our {branch} branch, please visit{' '}
+                <Link href={'/gg-care'} className='text-gg-500 dark:text-gg-400'>
                   GG Care (Support)
                 </Link>{' '}
-                page. You can find all the information related to {branch}{' '}
-                branch and how to contact there. Alternatively, you can use the
-                chat feature that the bottom right-hand corner to ask us your
-                queries.
+                page. You can find all the information related to {branch} branch and how to contact
+                there. Alternatively, you can use the chat feature that the bottom right-hand corner
+                to ask us your queries.
                 <div className='mt-4'>
                   {contactData.locations.map(
                     (items) =>
                       items.name === branch && (
                         <div key={items.id}>
-                          <div className='font-semibold'>
-                            {items.name} branch
-                          </div>
+                          <div className='font-semibold'>{items.name} branch</div>
                           <div>
                             <Link
                               href={`tel:${items.phone}`}
@@ -86,7 +77,7 @@ const Faq = ({ branch, doctors }) => {
                             </Link>
                           </div>
                         </div>
-                      ),
+                      )
                   )}
                 </div>
                 <div className='mt-4 grid grid-cols-1 gap-4 md:grid-cols-2'>
@@ -119,13 +110,11 @@ const Faq = ({ branch, doctors }) => {
                 What are our success rates for IVF treatments in {branch}?
               </h3>
               <div className='md:col-span-8 md:pl-0'>
-                The success rate of of an IVF Treatment depends on numerous
-                factors. At our {branch} branch the average success rate ranges
-                from 65 - 73%. <br /> <br />
-                It's important to note that IVF success rates can also vary
-                between fertility clinics, so it's important to do your research
-                and choose a reputable clinic with a good track record.
-                Additionally, some clinics may have higher success rates for
+                The success rate of of an IVF Treatment depends on numerous factors. At our {branch}{' '}
+                branch the average success rate ranges from 65 - 73%. <br /> <br />
+                It's important to note that IVF success rates can also vary between fertility
+                clinics, so it's important to do your research and choose a reputable clinic with a
+                good track record. Additionally, some clinics may have higher success rates for
                 certain types of patients or certain IVF procedures.
               </div>
             </div>
@@ -135,14 +124,12 @@ const Faq = ({ branch, doctors }) => {
                 What is the total cost of IVF in <strong>{branch}</strong>?
               </h3>
               <div className='md:col-span-8 md:pl-0'>
-                The total cost of IVF in <strong>{branch}</strong> can vary
-                depending on the individual patient's needs. On average, the
-                cost of a single IVF cycle in <strong>{branch}</strong> can
-                range from INR 1,50,000 to INR 3,00,000. However, some
-                additional services such as genetic testing or use of donor
-                eggs/sperm may cost additional sum. It's important to speak with
-                a specialist at the clinic to understand the total cost and any
-                additional fees that may apply.
+                The total cost of IVF in <strong>{branch}</strong> can vary depending on the
+                individual patient's needs. On average, the cost of a single IVF cycle in{' '}
+                <strong>{branch}</strong> can range from INR 1,50,000 to INR 3,00,000. However, some
+                additional services such as genetic testing or use of donor eggs/sperm may cost
+                additional sum. It's important to speak with a specialist at the clinic to
+                understand the total cost and any additional fees that may apply.
               </div>
             </div>
           </div>

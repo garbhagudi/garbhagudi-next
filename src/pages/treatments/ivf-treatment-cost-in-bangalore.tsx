@@ -3,7 +3,6 @@ import Banner from 'sections/misc/ivf-cost/hero';
 import Image from 'next/image';
 import Packages from 'sections/misc/ivf-cost/packages';
 import Faq from 'sections/misc/ivf-cost/faq';
-// import IvfProcess from 'sections/misc/ivf-cost/ivfProcess';
 import Head from 'next/head';
 
 const IvfCost = () => {
@@ -55,7 +54,6 @@ const IvfCost = () => {
       />
       <Banner />
       <Packages />
-      {/* <IvfProcess /> */}
       <Faq />
     </div>
   );

@@ -67,9 +67,8 @@ const IndexPage = () => {
               Ovulation and Pregnancy Due Date Calculator
             </h1>
             <p className='mt-3 px-2 font-lexend text-sm text-gray-800 dark:text-gray-200 sm:px-0'>
-              Menstrual periods are different from woman to woman and month to
-              month. Use this calculator to see when you may be ovulating to
-              help find your most fertile days.
+              Menstrual periods are different from woman to woman and month to month. Use this
+              calculator to see when you may be ovulating to help find your most fertile days.
             </p>
           </div>
         </div>
@@ -146,24 +145,15 @@ const IndexPage = () => {
               </div>
             </div>
             <div className='mx-auto mt-3 w-96 rounded-2xl border p-3 text-center text-base shadow-2xl'>
-              <p>
-                If conceived with-in the fertile window, estimated pregnancy due
-                date :{' '}
-              </p>
+              <p>If conceived with-in the fertile window, estimated pregnancy due date : </p>
               <div className='font-bold'>
                 {cycleLength !== 28 && (
-                  <Moment
-                    format='DD MMMM YYYY'
-                    add={{ days: cycleLength - 28 + 280 }}
-                  >
+                  <Moment format='DD MMMM YYYY' add={{ days: cycleLength - 28 + 280 }}>
                     {date}
                   </Moment>
                 )}
                 {cycleLength === 28 && (
-                  <Moment
-                    format='DD MMMM YYYY'
-                    add={{ days: cycleLength - cycleLength + 280 }}
-                  >
+                  <Moment format='DD MMMM YYYY' add={{ days: cycleLength - cycleLength + 280 }}>
                     {date}
                   </Moment>
                 )}
@@ -180,9 +170,8 @@ const IndexPage = () => {
           </div>
         </div>
         <div className='mb-3 mt-5 px-3 text-center font-lexend text-xs text-gray-800 dark:text-gray-200 sm:px-0'>
-          Only your physician can accurately determine your due date or the date
-          of your conception based on his/her knowledge of your complete medical
-          condition.
+          Only your physician can accurately determine your due date or the date of your conception
+          based on his/her knowledge of your complete medical condition.
         </div>
       </div>
     </>

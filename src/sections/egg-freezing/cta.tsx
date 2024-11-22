@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
 import BookAnAppointment from './bookAnAppointment';
 
 const CTA: React.FC = () => {
@@ -17,12 +16,9 @@ const CTA: React.FC = () => {
     >
       <div className='absolute h-full w-full bg-gray-800 opacity-30 dark:opacity-60'></div>
       <div className='z-10 max-w-lg rounded-lg bg-white bg-opacity-75 p-8 shadow-md dark:bg-gray-800'>
-        <h2 className='mb-2 font-heading text-2xl font-bold'>
-          Get Started Today!
-        </h2>
+        <h2 className='mb-2 font-heading text-2xl font-bold'>Get Started Today!</h2>
         <p className='mb-4 font-content font-medium text-gray-800 dark:text-gray-200'>
-          Contact us now to start your journey with us and experience the joy of
-          parenthood.
+          Contact us now to start your journey with us and experience the joy of parenthood.
         </p>
         <button
           onClick={() => setIsOpen(true)}

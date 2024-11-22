@@ -1,7 +1,6 @@
 export const terms = [
   {
-    title:
-      'Transmission of genetic problems from parents to children through IVF',
+    title: 'Transmission of genetic problems from parents to children through IVF',
     id: 'ckx8nxuoo0ex70c13e7awb7av',
     slug: 'transmission-of-genetic-problems-from-parents-to-children-through-ivf',
   },
@@ -426,8 +425,7 @@ export const terms = [
     slug: 'does-hyperthyroidism-cause-infertility-in-women',
   },
   {
-    title:
-      'Premature Ovarian Failure or Primary Ovarian Insufficiency (POF OR POI)',
+    title: 'Premature Ovarian Failure or Primary Ovarian Insufficiency (POF OR POI)',
     id: 'ckxso1fww16ow0f6355hbw14c',
     slug: 'premature-ovarian-failure-or-primary-ovarian-insufficiency-pof-or-poi',
   },
@@ -452,8 +450,7 @@ export const terms = [
     slug: 'sperm-bank-and-legal-aspects-all-you-need-to-know',
   },
   {
-    title:
-      'Are you suffering from Infertility? Pelvic Adhesions could be the Culprit!',
+    title: 'Are you suffering from Infertility? Pelvic Adhesions could be the Culprit!',
     id: 'ckxstt5jc19zp0f63xlm3dc4f',
     slug: 'are-you-suffering-from-infertility-pelvic-adhesions-could-be-the-culprit',
   },
@@ -523,8 +520,7 @@ export const terms = [
     slug: 'what-are-the-treatments-for-blocked-fallopian-tubes',
   },
   {
-    title:
-      'How does egg freezing work? Know about the benefits of egg freezing!',
+    title: 'How does egg freezing work? Know about the benefits of egg freezing!',
     id: 'ckxu4g0kw1uvr0b216k01p6rj',
     slug: 'how-does-egg-freezing-work-know-about-the-benefits-of-egg-freezing',
   },
@@ -664,8 +660,7 @@ export const terms = [
     slug: 'pregnancy-and-mental-health',
   },
   {
-    title:
-      "Dr Asha S Vijay Explains Things to Consider When You're Planning for a Baby",
+    title: "Dr Asha S Vijay Explains Things to Consider When You're Planning for a Baby",
     id: 'cl096zb423qtx0dpou95yllg7',
     slug: 'dr-asha-s-vijay-explains-things-to-consider-when-youre-planning-for-a-baby',
   },
@@ -940,8 +935,7 @@ export const terms = [
     slug: 'infertility-and-diabetes',
   },
   {
-    title:
-      'Ovarian Cysts and Pregnancy: Could A Cyst Stop Me from Having a Baby?',
+    title: 'Ovarian Cysts and Pregnancy: Could A Cyst Stop Me from Having a Baby?',
     id: 'cld08wllg08x00bpdxr4x4i0k',
     slug: 'ovarian-cysts-and-pregnancy-could-a-cyst-stop-me-from-having-a-baby',
   },
