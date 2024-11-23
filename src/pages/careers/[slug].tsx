@@ -136,7 +136,6 @@ const Career = ({ career }) => {
                     src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1657979955/Banner/Argoya_Silver_Award_Web_Bnr-min_bx7xeo.webp'
                     alt='arogya world banner'
                     className='rounded-xl'
-                    fill
                   />
                 </div>
               </Link>
@@ -148,7 +147,8 @@ const Career = ({ career }) => {
                     src={career.image.url}
                     alt={career.position}
                     className='h-44 w-44 rounded-full'
-                    fill
+                    width={176}
+                    height={176}
                   />
                 </div>
                 <div className='flex flex-col items-center justify-center text-center'>

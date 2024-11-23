@@ -23,6 +23,8 @@ function MyApp({ Component, pageProps }) {
     '/lp/ivf-enquiry-form-call',
     '/ivf/yoga',
     '/lp/dh/enquiry',
+    '/lp/itwmedia/enquiry',
+    '/lp/newsfirstdigital/enquiry',
   ];
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);

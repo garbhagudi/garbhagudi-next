@@ -70,7 +70,8 @@ const IndexPage = ({ careers }) => {
                 src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1657979955/Banner/Argoya_Silver_Award_Web_Bnr-min_bx7xeo.webp'
                 alt='arogya world banner'
                 className='rounded-xl'
-                fill
+                width={1524}
+                height={764}
               />
             </div>
           </Link>
@@ -106,7 +107,8 @@ const IndexPage = ({ careers }) => {
                         src={items?.image?.url}
                         alt={items?.position}
                         className='h-24 w-24 rounded-full object-cover'
-                        fill
+                        width={100}
+                        height={100}
                       />
                       <h5 className='mb-2 font-content text-xl font-bold tracking-tight text-gray-800 dark:text-gray-200'>
                         {items?.position}
