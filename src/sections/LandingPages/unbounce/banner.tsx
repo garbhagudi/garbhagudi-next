@@ -21,7 +21,7 @@ const Banner = () => {
           <div className='mx-auto flex max-w-xl items-center justify-center'>
             <div className='mx-auto flex flex-col items-center justify-center text-center'>
               <h4 className='font-lexend text-3xl font-bold text-gg-500 lg:text-5xl'>
-                Bengaluru's Most Trusted Fertility Center
+                Bengaluru's Most Trusted Fertility Centre
               </h4>
               <p className='pt-4 font-lexend text-lg text-gray-900'>
                 GarbhaGudi IVF Centre has been awarded as the Best IVF & Fertility Centre in
