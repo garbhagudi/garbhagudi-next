@@ -8,33 +8,37 @@ import { useRouter } from 'next/router';
 import Share from 'components/share';
 import Loading from 'components/Loading';
 import Image from 'next/image';
+import { throttledFetch } from 'lib/throttle';
 
 export const getStaticProps = async ({ params }) => {
-  const { data } = await apolloClient.query({
-    query: gql`
-      query ($slug: String!) {
-        treatment(where: { slug: $slug }) {
-          id
-          title
-          metaTitle
-          altTitle
-          metaDescription
-          slug
-          image {
-            url
-          }
-          imageAlt
-          content {
-            raw
-            text
+  const apolloQuery = async ({ slug }) => {
+    return apolloClient.query({
+      query: gql`
+        query ($slug: String!) {
+          treatment(where: { slug: $slug }) {
+            id
+            title
+            metaTitle
+            altTitle
+            metaDescription
+            slug
+            image {
+              url
+            }
+            imageAlt
+            content {
+              raw
+              text
+            }
           }
         }
-      }
-    `,
-    variables: {
-      slug: params.slug,
-    },
-  });
+      `,
+      variables: {
+        slug,
+      },
+    });
+  };
+  const { data } = await throttledFetch(apolloQuery, { slug: params.slug });
   return {
     props: {
       treatment: data.treatment,
@@ -44,16 +48,19 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-  const { data } = await apolloClient.query({
-    query: gql`
-      query {
-        treatments {
-          title
-          slug
+  const apolloQuery = async () => {
+    return apolloClient.query({
+      query: gql`
+        query {
+          treatments {
+            title
+            slug
+          }
         }
-      }
-    `,
-  });
+      `,
+    });
+  };
+  const { data } = await throttledFetch(apolloQuery);
   return {
     paths: data.treatments.map(({ slug }) => ({ params: { slug } })),
     fallback: true,
