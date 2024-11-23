@@ -12,43 +12,46 @@ import { gql } from '@apollo/client';
 import Image from 'next/image';
 import Link from 'next/link';
 import BlogPopUp from 'components/blogPopup';
+import { throttledFetch } from 'lib/throttle';
 
 export const getStaticProps = async ({ params }) => {
-  const { data } = await apolloClient.query({
-    query: gql`
-      query ($slug: String!) {
-        blog(where: { slug: $slug }) {
-          id
-          title
-          metaTitle
-          metaDescription
-          metaKeywords
-          slug
-          image {
-            url
-          }
-          doctor {
+  const apolloQuery = async ({ slug }) => {
+    return apolloClient.query({
+      query: gql`
+        query ($slug: String!) {
+          blog(where: { slug: $slug }) {
             id
+            title
+            metaTitle
+            metaDescription
+            metaKeywords
+            slug
             image {
               url
             }
-            name
-            imageAlt
-            slug
+            doctor {
+              id
+              image {
+                url
+              }
+              name
+              imageAlt
+              slug
+            }
+            content {
+              raw
+              text
+            }
+            publishedOn
           }
-          content {
-            raw
-            text
-          }
-          publishedOn
         }
-      }
-    `,
-    variables: {
-      slug: params.slug,
-    },
-  });
-
+      `,
+      variables: {
+        slug,
+      },
+    });
+  };
+  const { data } = await throttledFetch(apolloQuery, { slug: params.slug });
   return {
     props: {
       blog: data.blog,
@@ -58,17 +61,19 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export async function getStaticPaths() {
-  const { data } = await apolloClient.query({
-    query: gql`
-      {
-        blogs {
-          slug
-          title
+  const apolloQuery = async () => {
+    return apolloClient.query({
+      query: gql`
+        {
+          blogs {
+            slug
+            title
+          }
         }
-      }
-    `,
-  });
-
+      `,
+    });
+  };
+  const { data } = await throttledFetch(apolloQuery);
   return {
     paths: data.blogs.map(({ slug }) => ({ params: { slug } })),
     fallback: true,

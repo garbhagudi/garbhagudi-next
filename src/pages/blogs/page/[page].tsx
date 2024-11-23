@@ -10,6 +10,7 @@ import Loading from 'components/Loading';
 import SearchComponent from 'components/search/searchComponent';
 import Pagination from 'components/pagination';
 import GGLogo from 'assets/gg-emblem.svg';
+import { throttledFetch } from 'lib/throttle';
 
 const limit = 6;
 
@@ -193,43 +194,50 @@ function BlogPage({
 export default BlogPage;
 
 export async function getStaticProps({ params }) {
-  const { data } = await apolloClient.query({
-    query: gql`
-      query ($limit: Int!, $offset: Int!) {
-        blogsConnection(orderBy: publishedOn_DESC, first: $limit, skip: $offset) {
-          blogs: edges {
-            node {
-              id
-              title
-              publishedOn
-              slug
-              image {
-                url
-              }
-              doctor {
-                slug
-                name
+  const apolloQuery = async ({ limit, offset }) => {
+    return apolloClient.query({
+      query: gql`
+        query ($limit: Int!, $offset: Int!) {
+          blogsConnection(orderBy: publishedOn_DESC, first: $limit, skip: $offset) {
+            blogs: edges {
+              node {
                 id
+                title
+                publishedOn
+                slug
                 image {
                   url
                 }
+                doctor {
+                  slug
+                  name
+                  id
+                  image {
+                    url
+                  }
+                }
               }
             }
-          }
-          pageInfo {
-            hasNextPage
-            hasPreviousPage
-          }
-          aggregate {
-            count
+            pageInfo {
+              hasNextPage
+              hasPreviousPage
+            }
+            aggregate {
+              count
+            }
           }
         }
-      }
-    `,
-    variables: {
-      limit,
-      offset: Number((params.page - 1) * limit),
-    },
+      `,
+      variables: {
+        limit,
+        offset,
+      },
+    });
+  };
+
+  const { data } = await throttledFetch(apolloQuery, {
+    limit,
+    offset: Number((params.page - 1) * limit),
   });
 
   return {
@@ -244,17 +252,22 @@ export async function getStaticProps({ params }) {
 }
 
 export const getStaticPaths = async () => {
-  const { data } = await apolloClient.query({
-    query: gql`
-      query {
-        blogsConnection {
-          aggregate {
-            count
+  const apolloQuery = async () => {
+    return apolloClient.query({
+      query: gql`
+        query {
+          blogsConnection {
+            aggregate {
+              count
+            }
           }
         }
-      }
-    `,
-  });
+      `,
+    });
+  };
+
+  const { data } = await throttledFetch(apolloQuery);
+
   function* numberOfPages({ total, limit }) {
     let page = 1;
     let offset = 0;
