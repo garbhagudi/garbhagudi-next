@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import Header from 'sections/LandingPages/dh/header';
-import Offer from 'sections/LandingPages/dh/offer_new';
-import KeyBenefits from 'sections/LandingPages/dh/keybenefits';
+import Header from 'sections/LandingPages/itwmedia/header';
+import Offer from 'sections/LandingPages/itwmedia/offer_new';
+import KeyBenefits from 'sections/LandingPages/itwmedia/keybenefits';
 import Features from 'sections/LandingPages/ivf/features';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 
-const EndForm = dynamic(() => import('sections/LandingPages/dh/endform_new'));
+const EndForm = dynamic(() => import('sections/LandingPages/itwmedia/endform_new'));
 const WhyGarbhaGudi = dynamic(() => import('sections/LandingPages/ivf/whygarbhagudi'));
 const Testimonial = dynamic(() => import('sections/home/testimonial'));
 const Plans = dynamic(() => import('sections/LandingPages/ivf/plans'));
