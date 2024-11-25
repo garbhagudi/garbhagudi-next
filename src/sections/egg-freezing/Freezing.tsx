@@ -118,14 +118,6 @@ export default function Freezing() {
                   {ele.title}
                 </div>
                 <div>{ele.content}</div>
-                {/* <div className='w-11/12 py-2 text-center text-base font-normal md:w-full md:py-1 md:text-start md:text-lg'>
-                  {ele.content.map((el, index) => (
-                    <div key={index} className='py-2 md:py-1'>
-                      <span className='font-bold opacity-80'>{el.title}</span>
-                      <span className='font-normal text-[#6C6C6C] opacity-80'> {el.content}</span>
-                    </div>
-                  ))}
-                </div> */}
                 {renderData.length !== index + 1 && (
                   <div className='hidden w-10/12 border border-[#D9576C4D] md:visible'></div>
                 )}

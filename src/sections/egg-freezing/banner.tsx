@@ -34,22 +34,6 @@ export default function Banner() {
               </h3>
 
               <div className='mt-3 flex flex-wrap items-center gap-4 font-figtree text-base font-semibold md:mt-5 lg:mt-8'>
-                {/* <Link
-                    href='https://api.whatsapp.com/send/?phone=919480948005&text=Hi.'
-                    className='block w-full rounded-[10px] border-2 border-white bg-[#49C958] px-4 py-2 font-content text-white hover:bg-green-400 focus:outline-none focus:ring active:bg-green-300 sm:w-auto'
-                  >
-                    <span className='flex items-center justify-center gap-2 font-figtree text-lg'>
-                      <BsWhatsapp size={22} className='text-white' /> Drop us a
-                      "Hi" here
-                    </span>
-                  </Link>
-
-                  <div
-                    onClick={() => setIsOpen(true)}
-                    className='block w-full cursor-pointer scroll-smooth rounded-[10px] bg-white px-4 py-2 font-content text-lg text-brandPink shadow hover:opacity-80 focus:outline-none focus:ring active:text-rose-500 dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
-                  >
-                    Book an Appointment
-                  </div> */}
                 <Link
                   href='/treatments/ivf-treatment-egg-freezing/egg-freezing-quiz'
                   className='block scroll-smooth rounded-[10px] border-2 bg-[#1D1D1D] px-4 py-1 text-center font-content text-base text-white shadow hover:opacity-90 focus:outline-none focus:ring dark:text-white sm:w-auto md:py-2 md:text-lg'

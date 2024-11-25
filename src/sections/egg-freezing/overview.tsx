@@ -76,10 +76,6 @@ export default function Overview() {
               key={index}
               className='flex flex-col items-center justify-center bg-[#F9F9F9] px-5 py-16 lg:h-56 lg:w-96'
             >
-              {/* <div className=' text-2xl md:text-4xl font-extrabold text-[#D9576C]'>
-                {ele.value}
-              </div>
-              <div className='text-base md:text-lg font-bold text-black'>{ele.title}</div> */}
               <div className='text-center text-[14px] font-medium text-[#1D1D1D] md:text-[18px] lg:py-10'>
                 {ele.content}
               </div>
