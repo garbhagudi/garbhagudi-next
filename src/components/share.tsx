@@ -43,10 +43,7 @@ const Share: React.FC<Props> = ({ pinmedia }) => {
       <TelegramShareButton url={`https://garbhagudi.com${router.asPath}`}>
         <TelegramIcon size={44} />
       </TelegramShareButton>
-      <PinterestShareButton
-        url={`https://garbhagudi.com${router.asPath}`}
-        media={pinmedia}
-      >
+      <PinterestShareButton url={`https://garbhagudi.com${router.asPath}`} media={pinmedia}>
         <PinterestIcon size={44} />
       </PinterestShareButton>
       <RedditShareButton url={`https://garbhagudi.com${router.asPath}`}>

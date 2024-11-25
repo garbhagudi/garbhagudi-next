@@ -10,8 +10,37 @@ import Loading from 'components/Loading';
 import SearchComponent from 'components/search/searchComponent';
 import Pagination from 'components/pagination';
 import GGLogo from 'assets/gg-emblem.svg';
+import { throttledFetch } from 'lib/throttle';
 
 const limit = 6;
+
+interface BlogProps {
+  currentPageNumber: number;
+  hasNextPage: boolean;
+  hasPreviousPage: boolean;
+  blogs: {
+    node: {
+      id: string;
+      title: string;
+      publishedOn: string;
+      slug: string;
+      image: {
+        url: string;
+      };
+      doctor: {
+        slug: string;
+        name: string;
+        id: string;
+        image: {
+          url: string;
+        };
+      };
+    };
+  }[];
+  aggregate: {
+    count: number;
+  };
+}
 
 function BlogPage({
   currentPageNumber,
@@ -19,7 +48,7 @@ function BlogPage({
   hasPreviousPage,
   blogs,
   aggregate,
-}) {
+}: BlogProps) {
   const router = useRouter();
   const title = `Blogs | Page ${currentPageNumber} | GarbhaGudi IVF Centre`;
 
@@ -89,17 +118,19 @@ function BlogPage({
             </div>
             <SearchComponent />
             <div className='mx-auto grid max-w-xl gap-8 py-12 lg:max-w-none lg:grid-cols-3'>
-              {blogs?.map((item: any) => (
+              {blogs?.map((item) => (
                 <div
                   key={item?.node?.id}
                   className='flex flex-col overflow-hidden rounded-lg shadow-2xl transition duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-lg'
                 >
                   <Link href={`/blogs/${item.node.slug}`} passHref>
                     <div className='flex-shrink-0'>
-                      <img
+                      <Image
                         className='h-38 w-full cursor-pointer rounded-t-lg object-contain'
                         src={item?.node?.image?.url}
                         alt={item?.node?.title}
+                        width={500}
+                        height={500}
                       />
                     </div>
                   </Link>
@@ -113,14 +144,9 @@ function BlogPage({
                     </div>
                     <div className='mt-6 flex items-center'>
                       <div className='flex-shrink-0'>
-                        <Link
-                          href={`/doctors/${item?.node?.doctor?.slug}`}
-                          passHref
-                        >
+                        <Link href={`/doctors/${item?.node?.doctor?.slug}`} passHref>
                           <div className=''>
-                            <span className='sr-only'>
-                              By: GarbhaGudi IVF Centre
-                            </span>
+                            <span className='sr-only'>By: GarbhaGudi IVF Centre</span>
                             <Image
                               className='h-12 w-12 scale-150 rounded-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert md:h-16 md:w-16'
                               src={GGLogo}
@@ -134,9 +160,7 @@ function BlogPage({
                       <div>
                         <div className='text-base font-medium text-gray-800 dark:text-gray-200'>
                           <Link href={'/'}>
-                            <div className='font-lexend'>
-                              Author : GarbhaGudi IVF Centre
-                            </div>
+                            <div className='font-lexend'>Author : GarbhaGudi IVF Centre</div>
                           </Link>
                         </div>
                         <div className='flex space-x-1 font-lexend text-sm text-gray-700 dark:text-gray-200'>
@@ -170,47 +194,50 @@ function BlogPage({
 export default BlogPage;
 
 export async function getStaticProps({ params }) {
-  const { data } = await apolloClient.query({
-    query: gql`
-      query ($limit: Int!, $offset: Int!) {
-        blogsConnection(
-          orderBy: publishedOn_DESC
-          first: $limit
-          skip: $offset
-        ) {
-          blogs: edges {
-            node {
-              id
-              title
-              publishedOn
-              slug
-              image {
-                url
-              }
-              doctor {
-                slug
-                name
+  const apolloQuery = async ({ limit, offset }) => {
+    return apolloClient.query({
+      query: gql`
+        query ($limit: Int!, $offset: Int!) {
+          blogsConnection(orderBy: publishedOn_DESC, first: $limit, skip: $offset) {
+            blogs: edges {
+              node {
                 id
+                title
+                publishedOn
+                slug
                 image {
                   url
                 }
+                doctor {
+                  slug
+                  name
+                  id
+                  image {
+                    url
+                  }
+                }
               }
             }
-          }
-          pageInfo {
-            hasNextPage
-            hasPreviousPage
-          }
-          aggregate {
-            count
+            pageInfo {
+              hasNextPage
+              hasPreviousPage
+            }
+            aggregate {
+              count
+            }
           }
         }
-      }
-    `,
-    variables: {
-      limit,
-      offset: Number((params.page - 1) * limit),
-    },
+      `,
+      variables: {
+        limit,
+        offset,
+      },
+    });
+  };
+
+  const { data } = await throttledFetch(apolloQuery, {
+    limit,
+    offset: Number((params.page - 1) * limit),
   });
 
   return {
@@ -225,17 +252,22 @@ export async function getStaticProps({ params }) {
 }
 
 export const getStaticPaths = async () => {
-  const { data } = await apolloClient.query({
-    query: gql`
-      query {
-        blogsConnection {
-          aggregate {
-            count
+  const apolloQuery = async () => {
+    return apolloClient.query({
+      query: gql`
+        query {
+          blogsConnection {
+            aggregate {
+              count
+            }
           }
         }
-      }
-    `,
-  });
+      `,
+    });
+  };
+
+  const { data } = await throttledFetch(apolloQuery);
+
   function* numberOfPages({ total, limit }) {
     let page = 1;
     let offset = 0;

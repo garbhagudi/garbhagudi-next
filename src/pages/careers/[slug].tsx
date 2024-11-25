@@ -84,10 +84,7 @@ const Career = ({ career }) => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content={`${career?.position}| GarbhaGudi IVF Centre`}
-        />
+        <meta property='og:title' content={`${career?.position}| GarbhaGudi IVF Centre`} />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -104,10 +101,7 @@ const Career = ({ career }) => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content={`${career.position}| GarbhaGudi IVF Centre`}
-        />
+        <meta name='twitter:title' content={`${career.position}| GarbhaGudi IVF Centre`} />
         <meta
           name='twitter:description'
           content='We’re all on a mission to transform the way infertility is treated. If you feel that you need an organization where you can do your best work, call us now!'
@@ -149,10 +143,12 @@ const Career = ({ career }) => {
             <div className='mt-10 flex flex-col sm:flex-row'>
               <div className='text-center sm:w-1/3 sm:py-8 sm:pr-8'>
                 <div className='inline-flex h-44 w-44 animate-shine items-center justify-center rounded-full bg-gradient-to-br from-brandPurple via-white to-brandPink4 bg-[length:400%] shadow-2xl drop-shadow-2xl lg:h-48 lg:w-48'>
-                  <img
+                  <Image
                     src={career.image.url}
                     alt={career.position}
                     className='h-44 w-44 rounded-full'
+                    width={176}
+                    height={176}
                   />
                 </div>
                 <div className='flex flex-col items-center justify-center text-center'>
@@ -163,12 +159,8 @@ const Career = ({ career }) => {
                   <p className='font-qs text-base font-semibold'>
                     Qualification: {career.qualification}
                   </p>
-                  <p className='font-qs text-base font-semibold'>
-                    Experience: {career.experience}
-                  </p>
-                  <p className='font-qs text-base font-semibold'>
-                    Location: {career.location}
-                  </p>
+                  <p className='font-qs text-base font-semibold'>Experience: {career.experience}</p>
+                  <p className='font-qs text-base font-semibold'>Location: {career.location}</p>
                   <div className='glow mt-4 px-4 py-2 font-content font-semibold text-white'>
                     <span></span>
                     <span></span>
@@ -183,9 +175,7 @@ const Career = ({ career }) => {
               <div className='mt-4 border-t border-gray-200 pt-4 sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left'>
                 <div className='mb-4 font-content text-xl'>Description</div>
                 <div className='font-qs text-base'>{career.description}</div>
-                <div className='mt-8 font-content text-xl'>
-                  Job Responsibilities
-                </div>
+                <div className='mt-8 font-content text-xl'>Job Responsibilities</div>
                 <div className='text-md text-brandDark mb-4 font-qs leading-relaxed'>
                   <RichText content={career.jobDescription.raw.children} />
                 </div>

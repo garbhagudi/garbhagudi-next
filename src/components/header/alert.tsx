@@ -13,18 +13,15 @@ const Alert = () => {
           <div className='flex flex-wrap items-center justify-between'>
             <div className='flex w-0 flex-1 items-center'>
               <span className='flex rounded-lg bg-gg-500 p-2 dark:bg-gray-500'>
-                <HiSpeakerphone
-                  className='h-4 w-4 text-white md:h-6 md:w-6'
-                  aria-hidden='true'
-                />
+                <HiSpeakerphone className='h-4 w-4 text-white md:h-6 md:w-6' aria-hidden='true' />
               </span>
               <p className='ml-3 truncate font-lexend text-sm font-medium text-gray-800 dark:text-gray-200'>
                 <span className='text-xs md:hidden'>
                   PARIPOORNA: An affordable way to complete your family
                 </span>
                 <span className='hidden md:inline'>
-                  PARIPOORNA: It's the season of JOY of being COMPLETE 👶💖 Get
-                  ₹ 1,00,000/- Discount on IVF Treatment
+                  PARIPOORNA: It's the season of JOY of being COMPLETE 👶💖 Get ₹ 1,00,000/-
+                  Discount on IVF Treatment
                 </span>
               </p>
             </div>
@@ -43,10 +40,7 @@ const Alert = () => {
                 onClick={handleClick}
               >
                 <span className='sr-only'>Dismiss</span>
-                <HiX
-                  className='h-6 w-6 text-gray-800 dark:text-gray-200'
-                  aria-hidden='true'
-                />
+                <HiX className='h-6 w-6 text-gray-800 dark:text-gray-200' aria-hidden='true' />
               </button>
             </div>
           </div>

@@ -20,11 +20,11 @@ const Offer = () => {
       {/* Form Section */}
       <div className='flex w-full flex-col items-center justify-center p-4 md:w-1/2'>
         <h2 className='text-center font-lexend text-3xl font-bold text-gg-500 lg:text-5xl'>
-          Bengaluru's Most Trusted Fertility Center
+          Bengaluru's Most Trusted Fertility Centre
         </h2>
         <p className='text-l py-2 text-center font-lexend text-gray-700'>
-          GarbhaGudi IVF Centre has been awarded as the Best IVF & Fertility
-          Centre in Bangalore by multiple organizations.
+          GarbhaGudi IVF Centre has been awarded as the Best IVF & Fertility Centre in Bangalore by
+          multiple organizations.
         </p>
         <div className='rounded-lg bg-[#005E7E]'>
           <h2 className='my-3 overflow-hidden rounded-lg text-center font-lexend text-xl font-bold text-white'>

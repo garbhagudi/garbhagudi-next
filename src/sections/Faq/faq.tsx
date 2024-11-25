@@ -1,11 +1,7 @@
-import { Tab } from '@headlessui/react';
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 import { maleInfertility, femaleInfertility, ivfProcedures } from './faqData';
 import AccordionLayout from './FaqLayout';
 import React from 'react';
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
 
 const Faq = () => {
   const [activeIndex1, setActiveIndex1] = React.useState(1);
@@ -17,12 +13,12 @@ const Faq = () => {
         Frequently Asked Questions
       </h1>
       <div className='font-contents mt-8 text-center text-lg text-gray-800 dark:text-gray-200'>
-        Here are some of the most frequently asked questions about infertility
-        and its treatment options.
+        Here are some of the most frequently asked questions about infertility and its treatment
+        options.
       </div>
       <div className='w-full max-w-7xl px-2 py-16 sm:px-0'>
-        <Tab.Group vertical>
-          <Tab.List
+        <TabGroup vertical>
+          <TabList
             className={
               'flex flex-wrap rounded-xl bg-gg-500 p-1 dark:bg-gg-400 md:flex-nowrap md:space-x-1'
             }
@@ -42,9 +38,9 @@ const Faq = () => {
                 Treatments
               </div>
             </Tab>
-          </Tab.List>
-          <Tab.Panels>
-            <Tab.Panel>
+          </TabList>
+          <TabPanels>
+            <TabPanel>
               <div className='mx-auto mt-10 flex max-w-6xl flex-col justify-center'>
                 {maleInfertility.map((items) => (
                   <AccordionLayout
@@ -58,8 +54,8 @@ const Faq = () => {
                   </AccordionLayout>
                 ))}
               </div>
-            </Tab.Panel>
-            <Tab.Panel>
+            </TabPanel>
+            <TabPanel>
               <div className='mx-auto mt-10 flex max-w-6xl flex-col justify-center'>
                 {femaleInfertility.map((items) => (
                   <AccordionLayout
@@ -73,8 +69,8 @@ const Faq = () => {
                   </AccordionLayout>
                 ))}
               </div>
-            </Tab.Panel>
-            <Tab.Panel>
+            </TabPanel>
+            <TabPanel>
               <div className='mx-auto mt-10 flex max-w-6xl flex-col justify-center'>
                 {ivfProcedures.map((items) => (
                   <AccordionLayout
@@ -88,9 +84,9 @@ const Faq = () => {
                   </AccordionLayout>
                 ))}
               </div>
-            </Tab.Panel>
-          </Tab.Panels>
-        </Tab.Group>
+            </TabPanel>
+          </TabPanels>
+        </TabGroup>
       </div>
     </div>
   );

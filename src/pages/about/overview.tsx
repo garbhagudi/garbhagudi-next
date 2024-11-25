@@ -5,6 +5,7 @@ import apolloClient from 'lib/apollo-graphcms';
 import Link from 'next/link';
 import Head from 'next/head';
 import { gql } from '@apollo/client';
+import Image from 'next/image';
 
 const Overview = ({ directors }) => {
   return (
@@ -65,10 +66,12 @@ const Overview = ({ directors }) => {
                     <Link href={`/about/executive-team/${item.slug}`} passHref>
                       <div className='space-y-4'>
                         <div className='aspect-square'>
-                          <img
+                          <Image
                             className='object-fit h-96 w-96 rounded-3xl shadow-2xl'
                             src={item.image.url}
                             alt={item.name}
+                            width={500}
+                            height={500}
                           />
                         </div>
                         <div className='space-y-2 text-lg font-medium leading-6'>

@@ -5,7 +5,7 @@ const Form = () => {
     <>
       <iframe
         src='/contact6.html'
-        className='w-screen max-w-sm h-screen max-h-[350px]'
+        className='h-screen max-h-[350px] w-screen max-w-sm'
         loading='lazy'
       ></iframe>
     </>

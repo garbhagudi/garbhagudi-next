@@ -7,15 +7,12 @@ const YACta = () => {
       <div className='mx-auto max-w-5xl py-14'>
         <div className='mx-auto flex flex-col items-center justify-between md:flex-row'>
           <div className='font-content text-2xl text-gray-800 dark:text-gray-200 lg:text-3xl'>
-            Take the first step towards happiness <br /> with our IVF Packages
-            starting from as low as{' '}
+            Take the first step towards happiness <br /> with our IVF Packages starting from as low
+            as{' '}
             <span className='inline-block font-bold text-gg-500 dark:text-gg-400 md:block'>
               {' '}
               ₹ 90,000/-
             </span>
-            {/* <div className="text-sm mt-2">
-              Hurry Up! Offer Valid only till March
-            </div> */}
           </div>
           <MyModal
             title={'Book a Free Consultation'}

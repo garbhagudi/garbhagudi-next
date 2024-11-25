@@ -4,6 +4,7 @@ import { gql } from '@apollo/client';
 import Link from 'next/link';
 import Head from 'next/head';
 import { HiChevronRight } from 'react-icons/hi';
+import Image from 'next/image';
 
 export const getStaticProps = async () => {
   const { data } = await apolloClient.query({
@@ -46,10 +47,7 @@ const IndexPage = ({ medias }) => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content='Publications | GarbhaGudi IVF Centre'
-        />
+        <meta property='og:title' content='Publications | GarbhaGudi IVF Centre' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -66,10 +64,7 @@ const IndexPage = ({ medias }) => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content='Publications | GarbhaGudi IVF Centre'
-        />
+        <meta name='twitter:title' content='Publications | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
           content='News articles and announcements from GarbhaGudi IVF Centre. Get the latest information in the world of IVF here'
@@ -91,10 +86,12 @@ const IndexPage = ({ medias }) => {
                 className='mx-auto rounded-xl p-2 shadow-lg transition duration-500 ease-in-out hover:-translate-x-1 hover:-translate-y-1 hover:shadow-2xl'
               >
                 <div>
-                  <img
+                  <Image
                     src={items?.thumbnail?.url}
                     alt={items?.title}
                     className='mx-auto aspect-video w-full rounded-lg'
+                    width={500}
+                    height={300}
                   />
                 </div>
                 <div className='px-2'>

@@ -227,10 +227,7 @@ const Ivf = () => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content='Best IVF Treatment In Bangalore | Garbhagudi '
-        />
+        <meta property='og:title' content='Best IVF Treatment In Bangalore | Garbhagudi ' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -238,27 +235,18 @@ const Ivf = () => {
           content='IVF Treatment in Bangalore:Experience advanced IVF treatment in Bangalore, tailored to help you achieve your dream of parenthood. Contact us for expert care and support.'
         />
         <meta property='og:type' content='website' />
-        <meta
-          property='og:image'
-          content='https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm'
-        />
+        <meta property='og:image' content='https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm' />
 
         {/* Twitter*/}
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content='In-vitro Fertilization - IVF | GarbhaGudi'
-        />
+        <meta name='twitter:title' content='In-vitro Fertilization - IVF | GarbhaGudi' />
         <meta
           name='twitter:description'
           content='What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).'
         />
-        <meta
-          name='twitter:image'
-          content='https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm'
-        />
+        <meta name='twitter:image' content='https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm' />
       </Head>
       <div>
         <Banner />

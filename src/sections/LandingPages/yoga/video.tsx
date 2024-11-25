@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
@@ -76,8 +76,7 @@ const Video = ({ testimonials }: testimonialProps) => {
             </Carousel>
           </div>
           <div className='mx-auto max-w-6xl py-1 pt-4 text-center font-content text-sm underline lg:text-right'>
-            Swipe for more reviews{' '}
-            <MdOutlineSwipeLeft className='inline-block' />
+            Swipe for more reviews <MdOutlineSwipeLeft className='inline-block' />
           </div>
         </div>
       </div>

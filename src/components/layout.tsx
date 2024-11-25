@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Lexend,
-  Nunito,
-  B612,
-  Benne,
-  Nunito_Sans,
-  Figtree,
-} from 'next/font/google';
+import { Lexend, Nunito, B612, Benne, Nunito_Sans, Figtree } from 'next/font/google';
 
 const lexend = Lexend({
   subsets: ['latin'],
@@ -45,11 +38,7 @@ const figtree = Figtree({
   subsets: ['latin'],
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <main

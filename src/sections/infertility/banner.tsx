@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react';
 
 const Banner = () => {
@@ -14,11 +13,10 @@ const Banner = () => {
                 </h1>
               </div>
               <div className='mt-4 px-3 text-center font-content text-base font-medium text-gray-200 md:max-w-xl md:text-left'>
-                "GarbhaGudi IVF Centre offers cutting-edge infertility treatment
-                in Bangalore, providing personalized solutions to enhance your
-                chances of parenthood. Our renowned team of fertility experts
-                and state-of-the-art facilities make us a leading choice for
-                comprehensive and effective fertility care in Bangalore."
+                "GarbhaGudi IVF Centre offers cutting-edge infertility treatment in Bangalore,
+                providing personalized solutions to enhance your chances of parenthood. Our renowned
+                team of fertility experts and state-of-the-art facilities make us a leading choice
+                for comprehensive and effective fertility care in Bangalore."
               </div>
             </div>
           </div>

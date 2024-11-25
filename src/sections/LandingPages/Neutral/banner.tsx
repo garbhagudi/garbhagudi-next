@@ -26,7 +26,8 @@ const Banner = () => {
                 <div className='flex flex-col items-start rounded-lg bg-transparent px-2.5 py-2 text-base font-bold text-white'>
                   <div>
                     <span className='font-lexend font-semibold'>
-                      Offer of the Month* : Rs.1,00,000 Discount on IVF Treatment. Valid upto 31st December 2024
+                      Offer of the Month* : Rs.1,00,000 Discount on IVF Treatment. Valid upto 31st
+                      December 2024
                     </span>
                   </div>
                   <span className='w-full text-right font-lexend text-xs'>
@@ -39,11 +40,10 @@ const Banner = () => {
                   Welcome to the Best IVF Centre In Bangalore
                 </h1>
                 <p className='mt-6 text-xl'>
-                  Get start on your journey towards parenthood with upto Rs. 1,00,000 /- off on IVF Treatment.
+                  Get start on your journey towards parenthood with upto Rs. 1,00,000 /- off on IVF
+                  Treatment.
                 </p>
-                <p className='mt-2 text-base'>
-                  EMI Facility Available at 0% Interest.
-                </p>
+                <p className='mt-2 text-base'>EMI Facility Available at 0% Interest.</p>
               </div>
               <div className='mt-6'>
                 <h3 className='mb-6 font-content text-2xl font-medium'>
@@ -54,61 +54,35 @@ const Banner = () => {
                 </h3>
                 <div className='grid cursor-pointer grid-cols-1 gap-3 text-base font-semibold text-gray-700 md:grid-cols-2'>
                   <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
-                    <span className='font-bold text-brandPink dark:text-gg-400'>
-                      10000+
-                    </span>{' '}
-                    Happy Families
+                    <span className='font-bold text-brandPink dark:text-gg-400'>10000+</span> Happy
+                    Families
                   </div>
                   <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
-                    <span className='font-bold text-brandPink dark:text-gg-400'>
-                      12+
-                    </span>{' '}
-                    Years of Experience
+                    <span className='font-bold text-brandPink dark:text-gg-400'>12+</span> Years of
+                    Experience
                   </div>
                   <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
-                    <span className='font-bold text-brandPink dark:text-gg-400'>
-                      65-73%
-                    </span>{' '}
-                    IVF Success Rate
+                    <span className='font-bold text-brandPink dark:text-gg-400'>65-73%</span> IVF
+                    Success Rate
                   </div>
                   <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
-                    <span className='font-bold text-brandPink dark:text-gg-400'>
-                      7
-                    </span>{' '}
-                    Centres Across Bangalore
+                    <span className='font-bold text-brandPink dark:text-gg-400'>7</span> Centres
+                    Across Bangalore
                   </div>
                 </div>
               </div>
               <div className='mt-6'>
                 <div className='inline-flex items-center divide-x divide-gray-300'>
                   <div className='flex flex-shrink-0 pr-5'>
-                    <HiStar
-                      className='h-5 w-5 text-yellow-400'
-                      aria-hidden='true'
-                    />
-                    <HiStar
-                      className='h-5 w-5 text-yellow-400'
-                      aria-hidden='true'
-                    />
-                    <HiStar
-                      className='h-5 w-5 text-yellow-400'
-                      aria-hidden='true'
-                    />
-                    <HiStar
-                      className='h-5 w-5 text-yellow-400'
-                      aria-hidden='true'
-                    />
-                    <HiStar
-                      className='h-5 w-5 text-gray-500'
-                      aria-hidden='true'
-                    />
+                    <HiStar className='h-5 w-5 text-yellow-400' aria-hidden='true' />
+                    <HiStar className='h-5 w-5 text-yellow-400' aria-hidden='true' />
+                    <HiStar className='h-5 w-5 text-yellow-400' aria-hidden='true' />
+                    <HiStar className='h-5 w-5 text-yellow-400' aria-hidden='true' />
+                    <HiStar className='h-5 w-5 text-gray-500' aria-hidden='true' />
                   </div>
                   <div className='min-w-0 flex-1 py-1 pl-5 text-center text-sm font-semibold text-gray-800 dark:text-gray-200 sm:py-3 md:text-left'>
                     <span className=''>Rated 4.8 stars on</span>
-                    <span className='text-gg-500 dark:text-gg-400'>
-                      {' '}
-                      Google Reviews
-                    </span>
+                    <span className='text-gg-500 dark:text-gg-400'> Google Reviews</span>
                     <span className=''> across all our branches</span>
                   </div>
                 </div>
@@ -156,11 +130,7 @@ const Banner = () => {
                     />
                   </pattern>
                 </defs>
-                <rect
-                  width={404}
-                  height={392}
-                  fill='url(#837c3e70-6c3a-44e6-8854-cc48c737b659)'
-                />
+                <rect width={404} height={392} fill='url(#837c3e70-6c3a-44e6-8854-cc48c737b659)' />
               </svg>
             </div>
             <div className='relative mt-24 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-[28rem] lg:max-w-none lg:pl-12'>

@@ -52,18 +52,14 @@ const Stat = () => {
             Our Ever-Growing Success
           </p>
           <p className='mt-5 font-content text-lg text-gray-800 dark:text-gray-200'>
-            GarbhaGudi is a place where dreams come alive, hopes never fade, and
-            possibilities never end. As one of the finest{' '}
-            <Link
-              href='/'
-              className='text-gg-500 hover:underline dark:text-gg-400'
-            >
+            GarbhaGudi is a place where dreams come alive, hopes never fade, and possibilities never
+            end. As one of the finest{' '}
+            <Link href='/' className='text-gg-500 hover:underline dark:text-gg-400'>
               IVF Centre in Bangalore
             </Link>
-            , we ceaselessly work to help you cherish the golden moment of
-            holding your little bundles of joy. Along with our quality of
-            treatment and care, some of the other contributing factors for
-            achieving high success rates are:
+            , we ceaselessly work to help you cherish the golden moment of holding your little
+            bundles of joy. Along with our quality of treatment and care, some of the other
+            contributing factors for achieving high success rates are:
           </p>
           <div className='mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2'>
             {metrics.map((item) => (

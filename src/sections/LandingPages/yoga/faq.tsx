@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import AccordionLayout from 'sections/Faq/FaqLayout';
-import banner from 'assets/FAQImage.jpg'
+import banner from 'assets/FAQImage.jpg';
 
 const Faq = () => {
   const [activeIndex1, setActiveIndex1] = React.useState(1);
@@ -57,7 +57,7 @@ const yogaFAQs = [
     id: 3,
     question: 'What is the success rate of yoga?',
     answer:
-      "88% said that they had observed physical benefits, and 86.2% said they saw a positive impact on their mental health. 82.6% of participants commented that yoga had helped with their stress levels. 87.1% said practicing yoga made them feel stronger, and 91.6% said their flexibility had improved.",
+      '88% said that they had observed physical benefits, and 86.2% said they saw a positive impact on their mental health. 82.6% of participants commented that yoga had helped with their stress levels. 87.1% said practicing yoga made them feel stronger, and 91.6% said their flexibility had improved.',
   },
   {
     id: 4,
@@ -75,12 +75,12 @@ const yogaFAQs = [
     id: 6,
     question: 'What is the maximum time to do yoga?',
     answer:
-      "If yoga is your only workout, aim for at least 20-30 minutes of yoga, 6 days per week. If necessary, you can start with 3 days per week for your first month. As your fitness level increases, you can increase that to 40-70 minutes per day.",
+      'If yoga is your only workout, aim for at least 20-30 minutes of yoga, 6 days per week. If necessary, you can start with 3 days per week for your first month. As your fitness level increases, you can increase that to 40-70 minutes per day.',
   },
   {
     id: 7,
     question: 'Is yoga better in the morning or evening?',
     answer:
-      "As discussed earlier, both morning and evening yoga have their unique benefits. Morning Yoga can help energize you for the day ahead, while evening yoga can help you relax and unwind. The best time for yoga ultimately depends on your personal preference and lifestyle.",
+      'As discussed earlier, both morning and evening yoga have their unique benefits. Morning Yoga can help energize you for the day ahead, while evening yoga can help you relax and unwind. The best time for yoga ultimately depends on your personal preference and lifestyle.',
   },
 ];

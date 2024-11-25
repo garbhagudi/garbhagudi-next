@@ -4,7 +4,7 @@ import Image from 'next/image';
 const WhyGarbhaGudi = () => {
   return (
     <>
-   <div className='mx-auto max-w-7xl'>
+      <div className='mx-auto max-w-7xl'>
         <div className='px-2 lg:px-4'>
           <h4 className='pb-8 pt-4 text-center font-lexend text-3xl font-bold text-gg-500 lg:py-8 lg:text-4xl'>
             Exceptional Success Rates from Personalized Treatment
@@ -24,9 +24,9 @@ const WhyGarbhaGudi = () => {
                 Individualized Treatment Plans
               </h5>
               <p className='text-center font-light'>
-                We specialize in personalized IVF treatment, tailoring plans for
-                each patient's unique needs. Our experienced team uses
-                cutting-edge techniques, resulting in enhanced success rates.
+                We specialize in personalized IVF treatment, tailoring plans for each patient's
+                unique needs. Our experienced team uses cutting-edge techniques, resulting in
+                enhanced success rates.
               </p>
             </div>
             <div className='space-y-3 py-3 lg:py-8'>
@@ -34,9 +34,9 @@ const WhyGarbhaGudi = () => {
                 Reproductive Medicine Proficiency
               </h5>
               <p className='text-center font-light'>
-                Our success in personalized treatment is driven by a specialized
-                team staying updated on advancements. We apply tailored
-                cutting-edge techniques for optimal outcomes.
+                Our success in personalized treatment is driven by a specialized team staying
+                updated on advancements. We apply tailored cutting-edge techniques for optimal
+                outcomes.
               </p>
             </div>
             <div className='space-y-3 py-3 lg:py-8'>
@@ -44,10 +44,9 @@ const WhyGarbhaGudi = () => {
                 Holistic Patient Support
               </h5>
               <p className='text-center font-light'>
-                Holistic care is our priority, addressing both physical and
-                emotional well-being. Our support services, including
-                counseling, contribute to a nurturing environment for overall
-                treatment success.
+                Holistic care is our priority, addressing both physical and emotional well-being.
+                Our support services, including counseling, contribute to a nurturing environment
+                for overall treatment success.
               </p>
             </div>
           </div>

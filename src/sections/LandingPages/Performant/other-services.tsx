@@ -11,8 +11,7 @@ const OtherServices = () => {
         </div>
         <div className='mt-10 text-center font-lexend'>
           GarbhaGudi IVF Centre has been awarded as the{' '}
-          <h1>Best IVF & Fertility centre in Bangalore</h1> by multiple
-          organisations.
+          <h1>Best IVF & Fertility centre in Bangalore</h1> by multiple organisations.
         </div>
         <div className='mx-auto max-w-4xl pb-12 font-content'>
           <div className='mx-auto max-w-3xl py-6 text-center font-bold md:py-10'>

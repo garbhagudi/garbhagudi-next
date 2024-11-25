@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Banner = () => {
   return (
@@ -21,12 +22,11 @@ const Banner = () => {
             >
               IUI treatment in Bangalore.
             </Link>{' '}
-            Nestled in the heart of the city, our state-of-the-art fertility
-            clinic offers hope and a ray of sunshine for couples who are looking
-            to start a family. Our team of expert fertility specialists and
-            cutting-edge technology will guide you on your journey towards
-            parenthood, every step of the way. Embrace the joy of holding your
-            bundle of love in your arms, with{' '}
+            Nestled in the heart of the city, our state-of-the-art fertility clinic offers hope and
+            a ray of sunshine for couples who are looking to start a family. Our team of expert
+            fertility specialists and cutting-edge technology will guide you on your journey towards
+            parenthood, every step of the way. Embrace the joy of holding your bundle of love in
+            your arms, with{' '}
             <Link
               href={'/treatments/intra-uterine-insemination-iui'}
               className='text-brandPink hover:underline'
@@ -39,10 +39,12 @@ const Banner = () => {
           </button>
         </div>
         <div className='lg:py-10'>
-          <img
+          <Image
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722501966/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0_1_i7oozx.jpg'
             alt='IUI treatment in Bangalore'
             className='rounded-xl'
+            width={500}
+            height={500}
           />
         </div>
       </div>

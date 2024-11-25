@@ -1,48 +1,47 @@
 import React, { Fragment, useState } from 'react';
-import Image from 'next/image';
 import { SlArrowRight } from 'react-icons/sl';
 import Link from 'next/link';
 import BookAnAppointment from './bookAnAppointment';
 
 export default function Expects() {
-  const renderDate = [
-    {
-      image:
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/j328gmwzbhjalc9zuqeh.png',
-      name: 'Dr. Shreya Thaparkar',
-      designation: ' MBBS, MD(Gynaecology)',
-    },
-    {
-      image:
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/e3my0oczhjvsddbeq0rz.png',
-      name: 'Dr. Arjun Mehra',
-      designation: 'MBBS, MD (Medicine)',
-    },
-    {
-      image:
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/njqms3mdm883azztpwbu.png',
-      name: 'Dr. Mahika Singh',
-      designation: 'MBBS, MD (Gynaecology)',
-    },
-    {
-      image:
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/qlbrvtdvwidbihx4e6nx.png',
-      name: 'Dr. Avigyan Kapoor',
-      designation: ' MBBS, MD(Gynaecology)',
-    },
-    {
-      image:
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/zlwt6aymkp4by8taozmp.png',
-      name: 'Dr. Vishal Kamra',
-      designation: 'MBBS, MD (Medicine)',
-    },
-    {
-      image:
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/a8oypa5u7p8uihmrfyg4.png',
-      name: 'Dr. Vishal Kamra',
-      designation: 'MBBS, MD (Medicine)',
-    },
-  ];
+  // const renderDate = [
+  //   {
+  //     image:
+  //       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/j328gmwzbhjalc9zuqeh.png',
+  //     name: 'Dr. Shreya Thaparkar',
+  //     designation: ' MBBS, MD(Gynaecology)',
+  //   },
+  //   {
+  //     image:
+  //       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/e3my0oczhjvsddbeq0rz.png',
+  //     name: 'Dr. Arjun Mehra',
+  //     designation: 'MBBS, MD (Medicine)',
+  //   },
+  //   {
+  //     image:
+  //       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/njqms3mdm883azztpwbu.png',
+  //     name: 'Dr. Mahika Singh',
+  //     designation: 'MBBS, MD (Gynaecology)',
+  //   },
+  //   {
+  //     image:
+  //       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/qlbrvtdvwidbihx4e6nx.png',
+  //     name: 'Dr. Avigyan Kapoor',
+  //     designation: ' MBBS, MD(Gynaecology)',
+  //   },
+  //   {
+  //     image:
+  //       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/zlwt6aymkp4by8taozmp.png',
+  //     name: 'Dr. Vishal Kamra',
+  //     designation: 'MBBS, MD (Medicine)',
+  //   },
+  //   {
+  //     image:
+  //       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/a8oypa5u7p8uihmrfyg4.png',
+  //     name: 'Dr. Vishal Kamra',
+  //     designation: 'MBBS, MD (Medicine)',
+  //   },
+  // ];
 
   const staticData = [
     // {
@@ -104,10 +103,9 @@ export default function Expects() {
             Meet our Fertility Experts
           </h1>
           <p className='mb-8 max-w-3xl text-center text-lg text-gray-600'>
-            Our fertility experts are highly experienced professionals dedicated
-            to helping you through every step of your journey. Whether you’re
-            looking for advice or treatment, we are here to provide the support
-            and care you deserve.
+            Our fertility experts are highly experienced professionals dedicated to helping you
+            through every step of your journey. Whether you’re looking for advice or treatment, we
+            are here to provide the support and care you deserve.
           </p>
 
           <Link href={'https://www.garbhagudi-ivf.com/'}>
@@ -126,21 +124,11 @@ export default function Expects() {
         <div className='mx-auto mt-5 grid w-10/12 grid-cols-1 items-center justify-center gap-5 md:grid-cols-3'>
           {renderDate.map((ele, index) => {
             return (
-              <div
-                key={index}
-                className='my-5 flex flex-col items-center justify-center'
-              >
-                <Image
-                  src={ele.image}
-                  width={320}
-                  height={160}
-                  alt={`Image ${index + 1}`}
-                />
+              <div key={index} className='my-5 flex flex-col items-center justify-center'>
+                <Image src={ele.image} width={320} height={160} alt={`Image ${index + 1}`} />
                 <div className='flex flex-col items-center justify-center font-nunito-Sans font-semibold'>
-                  <span className='pb-1 pt-2 md:text-xl text-lg'>{ele.name}</span>
-                  <span className='text-base md:text-lg text-[#6C6C6C]'>
-                    {ele.designation}
-                  </span>
+                  <span className='pb-1 pt-2 text-lg md:text-xl'>{ele.name}</span>
+                  <span className='text-base text-[#6C6C6C] md:text-lg'>{ele.designation}</span>
                 </div>
               </div>
             );
@@ -165,9 +153,7 @@ export default function Expects() {
                 <div className='pb-2 font-figtree text-xl font-bold text-black md:text-lg'>
                   {ele.title}
                 </div>
-                <div className='pb-3 text-base tracking-tight text-[#6A6A6A]'>
-                  {ele.content}
-                </div>
+                <div className='pb-3 text-base tracking-tight text-[#6A6A6A]'>{ele.content}</div>
                 <div>{ele.btn}</div>
               </div>
             );

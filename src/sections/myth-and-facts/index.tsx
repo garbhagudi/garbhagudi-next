@@ -9,8 +9,8 @@ const IndexPage = () => {
             Mythbusters
           </h1>
           <p className='text-brandDark mt-4'>
-            Here are some of the most common myths related to health and
-            fertility and the associated facts.
+            Here are some of the most common myths related to health and fertility and the
+            associated facts.
           </p>
         </div>
         <div className='mt-20'>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
+import Image from 'next/image';
 
 interface Article {
   articles: {
@@ -27,10 +28,7 @@ const IndexPage = ({ articles }: Article) => {
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Fertility Consultants</title>
-        <meta
-          name='title'
-          content='Fertility Consultants | GarbhaGudi IVF Centre'
-        />
+        <meta name='title' content='Fertility Consultants | GarbhaGudi IVF Centre' />
         <meta
           name='description'
           content="Meet GarbhaGudi's team of experienced fertility consultants. Our specialists provide expert guidance, tailored treatment plans, and compassionate care to help you achieve your dream of parenthood."
@@ -38,10 +36,7 @@ const IndexPage = ({ articles }: Article) => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content='Fertility Consultants | GarbhaGudi IVF Centre'
-        />
+        <meta property='og:title' content='Fertility Consultants | GarbhaGudi IVF Centre' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -58,10 +53,7 @@ const IndexPage = ({ articles }: Article) => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content='Fertility Consultants | GarbhaGudi IVF Centre'
-        />
+        <meta name='twitter:title' content='Fertility Consultants | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
           content="Meet GarbhaGudi's team of experienced fertility consultants. Our specialists provide expert guidance, tailored treatment plans, and compassionate care to help you achieve your dream of parenthood."
@@ -75,9 +67,8 @@ const IndexPage = ({ articles }: Article) => {
         Fertility Consultants
       </h1>
       <p className='mx-auto max-w-7xl px-1 pt-6 text-center font-content font-semibold'>
-        GarbhaGudi is where dreams come alive, hopes never fade and
-        possibilities never end. We work to help you cherish the golden moment
-        of holding your bundle of joy
+        GarbhaGudi is where dreams come alive, hopes never fade and possibilities never end. We work
+        to help you cherish the golden moment of holding your bundle of joy
       </p>
       <div className='mx-auto flex max-w-7xl py-6 sm:py-12'>
         <div className='mx-auto grid grid-cols-1 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
@@ -92,20 +83,19 @@ const IndexPage = ({ articles }: Article) => {
                 >
                   <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-600 dark:hover:bg-gray-600 md:w-96'>
                     <div className='w-1/3'>
-                      <img
+                      <Image
                         className='h-24 w-24 rounded-lg object-cover transition-all duration-300 group-hover:grayscale-0 dark:grayscale'
                         src={item?.icon?.url || item?.image?.url}
                         alt={item.title}
+                        fill
                       />
                     </div>
                     <div className='flex w-2/3 flex-col justify-center text-center text-gray-800 dark:text-gray-200'>
-                      <p className='font-lexend text-xl font-medium'>
-                        {item.title}
-                      </p>
+                      <p className='font-lexend text-xl font-medium'>{item.title}</p>
                     </div>
                   </div>
                 </Link>
-              ),
+              )
           )}
         </div>
       </div>

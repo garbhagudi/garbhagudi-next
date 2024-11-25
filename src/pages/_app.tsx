@@ -15,8 +15,6 @@ const Nav = dynamic(() => import('components/header/header'));
 const Salesiq = dynamic(() => import('components/SalesIQ'));
 const Loading = dynamic(() => import('components/Loading'));
 
-
-
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const noRenderPaths = [
@@ -25,6 +23,8 @@ function MyApp({ Component, pageProps }) {
     '/lp/ivf-enquiry-form-call',
     '/ivf/yoga',
     '/lp/dh/enquiry',
+    '/lp/itwmedia/enquiry',
+    '/lp/newsfirstdigital/enquiry',
   ];
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
@@ -55,11 +55,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <RootLayout>
       <Head>
-        <link
-          rel='alternative'
-          href={`https://www.garbhagudi.com${path}`}
-          hrefLang='en-us'
-        />
+        <link rel='alternative' href={`https://www.garbhagudi.com${path}`} hrefLang='en-us' />
         <link rel='canonical' href={`https://www.garbhagudi.com${path}`} />
         <meta
           name='viewport'
@@ -75,9 +71,7 @@ function MyApp({ Component, pageProps }) {
         {loading ? (
           <Loading />
         ) : (
-          <div
-            className={`min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800 `}
-          >
+          <div className={`min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800`}>
             {shouldDisplay && <Nav />}
             <Component {...pageProps} />
             <Footer />

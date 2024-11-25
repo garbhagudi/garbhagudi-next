@@ -11,12 +11,8 @@ import Header from 'sections/LandingPages/unbounce/header';
 import FloatWhatsApp from 'components/FloatWhatsapp';
 
 // Dynamic imports
-const Services = dynamic(
-  () => import('sections/LandingPages/unbounce/services'),
-);
-const WhyGarbhaGudi = dynamic(
-  () => import('sections/LandingPages/unbounce/whyGarbhaGudi'),
-);
+const Services = dynamic(() => import('sections/LandingPages/unbounce/services'));
+const WhyGarbhaGudi = dynamic(() => import('sections/LandingPages/unbounce/whyGarbhaGudi'));
 const Doctors = dynamic(() => import('sections/LandingPages/unbounce/doctors'));
 const Testimonial = dynamic(() => import('sections/home/testimonial'));
 const Faq = dynamic(() => import('sections/home/faq'));
@@ -29,9 +25,7 @@ const Landing = ({ doctors }) => {
         {/* Primary Tags */}
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>
-          GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India
-        </title>
+        <title>GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India</title>
         <meta
           name='title'
           content='GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India'

@@ -4,6 +4,7 @@ import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
+import Image from 'next/image';
 
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
@@ -66,10 +67,7 @@ const Vas = ({ valueAddedService }) => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content={`${valueAddedService.title} | GarbhaGudi IVF Centre`}
-        />
+        <meta property='og:title' content={`${valueAddedService.title} | GarbhaGudi IVF Centre`} />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -83,10 +81,7 @@ const Vas = ({ valueAddedService }) => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content={`${valueAddedService.title} | GarbhaGudi IVF Centre`}
-        />
+        <meta name='twitter:title' content={`${valueAddedService.title} | GarbhaGudi IVF Centre`} />
         <meta
           name='twitter:description'
           content='GarbhaGudi has been reaching out to couples facing infertility and in the process growing steadily. But as it’s said, growth doesn’t happen in isolation. With this intention, we aim to forge strong partnerships with like-minded associates and in turn bring benefits to both patients who will get the best of treatment options at affordable costs and to partners who wish to grow their business through the strong branding of GarbhaGudi.'
@@ -105,10 +100,7 @@ const Vas = ({ valueAddedService }) => {
       />
       <div className='relative overflow-hidden bg-white py-16 dark:bg-gray-800'>
         <div className='hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full'>
-          <div
-            className='relative mx-auto h-full max-w-prose text-lg'
-            aria-hidden='true'
-          >
+          <div className='relative mx-auto h-full max-w-prose text-lg' aria-hidden='true'>
             <svg
               className='absolute left-full top-12 translate-x-32 transform'
               width={404}
@@ -135,11 +127,7 @@ const Vas = ({ valueAddedService }) => {
                   />
                 </pattern>
               </defs>
-              <rect
-                width={404}
-                height={384}
-                fill='url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)'
-              />
+              <rect width={404} height={384} fill='url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)' />
             </svg>
             <svg
               className='absolute right-full top-1/2 -translate-x-32 -translate-y-1/2 transform'
@@ -167,11 +155,7 @@ const Vas = ({ valueAddedService }) => {
                   />
                 </pattern>
               </defs>
-              <rect
-                width={404}
-                height={384}
-                fill='url(#f210dbf6-a58d-4871-961e-36d5016a0f49)'
-              />
+              <rect width={404} height={384} fill='url(#f210dbf6-a58d-4871-961e-36d5016a0f49)' />
             </svg>
             <svg
               className='absolute bottom-12 left-full translate-x-32 transform'
@@ -199,11 +183,7 @@ const Vas = ({ valueAddedService }) => {
                   />
                 </pattern>
               </defs>
-              <rect
-                width={404}
-                height={384}
-                fill='url(#d3eb07ae-5182-43e6-857d-35c643af9034)'
-              />
+              <rect width={404} height={384} fill='url(#d3eb07ae-5182-43e6-857d-35c643af9034)' />
             </svg>
           </div>
         </div>
@@ -215,7 +195,7 @@ const Vas = ({ valueAddedService }) => {
               </span>
             </h1>
             <figure>
-              <img
+              <Image
                 className='mb-5 mt-10 w-full rounded-lg'
                 src={valueAddedService.image.url}
                 alt={valueAddedService.title}

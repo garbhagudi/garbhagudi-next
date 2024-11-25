@@ -58,36 +58,25 @@ const features = [
 
 const Features = () => {
   return (
-    <div
-      className='sm:py-18 relative bg-white py-8 dark:bg-gray-800'
-      id='features'
-    >
+    <div className='sm:py-18 relative bg-white py-8 dark:bg-gray-800' id='features'>
       <div className='mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8'>
         <h2 className='mt-2 font-heading text-3xl font-extrabold tracking-tight text-gray-800 dark:text-gray-200 sm:text-4xl'>
           Our Versatile Approach
         </h2>
         <p className='text-md mx-auto mt-5 max-w-prose font-content text-gray-800 dark:text-gray-200'>
-          At GarbhaGudi, we understand that fertility treatments can be mentally
-          and physically stressful. We are always committed to providing a world
-          of options and bringing a new ray of hope to many who are trying to
-          conceive. So, you can expect:
+          At GarbhaGudi, we understand that fertility treatments can be mentally and physically
+          stressful. We are always committed to providing a world of options and bringing a new ray
+          of hope to many who are trying to conceive. So, you can expect:
         </p>
         <div className='mt-8'>
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
             {features.map((feature) => (
-              <Link
-                href={feature.link}
-                key={feature.id}
-                passHref
-                className='group'
-              >
+              <Link href={feature.link} key={feature.id} passHref className='group'>
                 <div className='group mx-auto max-w-sm pt-3'>
                   <div className='shadow-3xl overflow-hidden rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-2xl'>
                     <div className='grid grid-cols-6'>
                       <div className='col-span-1 flex h-full items-center justify-center bg-gg-500 dark:bg-gray-600 dark:group-hover:bg-gg-500'>
-                        <div className='text-4xl font-bold text-white'>
-                          {feature.icon}
-                        </div>
+                        <div className='text-4xl font-bold text-white'>{feature.icon}</div>
                       </div>
                       <div className='col-span-5 flex flex-col rounded-br-lg rounded-tr-lg border-2 border-gg-500 px-2 dark:border-gray-600 dark:group-hover:border-gg-500'>
                         <h3 className='mt-3 font-heading text-base font-semibold tracking-tight text-gray-800 dark:text-gray-200'>

@@ -21,21 +21,16 @@ const WhyGG = () => {
               <div className='w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12'>
                 <div className='px-6 py-12 md:px-12'>
                   <h2 className='mb-4 text-left font-heading text-2xl font-bold text-gray-800 dark:text-gray-200 lg:text-center'>
-                    Why GarbhaGudi should be the your next destination to
-                    complete your family?
+                    Why GarbhaGudi should be the your next destination to complete your family?
                   </h2>
                   <p className='mb-6 font-content text-gray-800 dark:text-gray-200'>
                     GarbhaGudi is a leading{' '}
-                    <Link
-                      href={'/'}
-                      className='text-gg-500 hover:underline dark:text-gg-400'
-                    >
+                    <Link href={'/'} className='text-gg-500 hover:underline dark:text-gg-400'>
                       IVF Clinic and Hospital in Bangalore
                     </Link>{' '}
-                    with over 13 years of experience in providing comprehensive
-                    fertility solutions. It has a renowned team of specialists,
-                    state-of-the-art infrastructure, transparent pricing, and
-                    consistently high success rates (75%) in assisted
+                    with over 13 years of experience in providing comprehensive fertility solutions.
+                    It has a renowned team of specialists, state-of-the-art infrastructure,
+                    transparent pricing, and consistently high success rates (75%) in assisted
                     reproductive techniques. GarbhaGudi's holistic approach to{' '}
                     <Link
                       href={'/treatments/infertility'}
@@ -43,13 +38,10 @@ const WhyGG = () => {
                     >
                       fertility treatment
                     </Link>{' '}
-                    addresses physical, emotional, and psychological aspects and
-                    includes nutrition counseling and stress management. Choose
-                    GarbhaGudi for personalized and compassionate care at the{' '}
-                    <Link
-                      href={'/'}
-                      className='text-gg-500 hover:underline dark:text-gg-400'
-                    >
+                    addresses physical, emotional, and psychological aspects and includes nutrition
+                    counseling and stress management. Choose GarbhaGudi for personalized and
+                    compassionate care at the{' '}
+                    <Link href={'/'} className='text-gg-500 hover:underline dark:text-gg-400'>
                       Best IVF Clinic and Hospital in Bangalore
                     </Link>{' '}
                     .

@@ -48,9 +48,7 @@ export default function LanguageSelect() {
                     {({ selected }) => (
                       <>
                         <span
-                          className={`block truncate ${
-                            selected ? 'font-medium' : 'font-normal'
-                          }`}
+                          className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}
                         >
                           {languages.name}
                         </span>

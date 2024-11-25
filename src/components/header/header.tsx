@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { HiOutlineMenuAlt3, HiX } from 'react-icons/hi';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   About,
   WhyGarbhaGudi,
@@ -66,10 +67,12 @@ const Nav = () => {
               <Logo />
             </Link>
             <Link href='/' className='flex items-center xl:hidden'>
-              <img
+              <Image
                 className='h-full w-16 dark:fill-white dark:brightness-0 dark:grayscale dark:invert'
                 src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1659164257/logos/GG_Vertical_Logo_nrcl5h.svg'
                 alt='logo'
+                width={50}
+                height={50}
               />
             </Link>
             <div className='flex items-center lg:order-2'>
@@ -81,8 +84,7 @@ const Nav = () => {
                   rel='noreferrer'
                   className='duration-2 cursor-pointer rounded-lg bg-gg-500 px-3 py-2 font-lexend text-xs text-gray-200 transition-all ease-in hover:bg-brandPink3 dark:bg-gg-500 dark:hover:bg-gg-600 sm:text-sm'
                 >
-                  Book{' '}
-                  <span className='hidden sm:inline-block'>Appointment</span>{' '}
+                  Book <span className='hidden sm:inline-block'>Appointment</span>{' '}
                   <span className='inline-block sm:hidden'>Now</span>
                 </Link>
               </div>

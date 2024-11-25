@@ -20,13 +20,10 @@ const Services = () => {
                 height={80}
                 className='pb-8'
               />
-              <h5 className='text-xl font-semibold text-gg-500'>
-                IVF Treatment
-              </h5>
+              <h5 className='text-xl font-semibold text-gg-500'>IVF Treatment</h5>
               <p className='font-light'>
-                Unlock the doors of parenthood with GarbhaGudi's advanced IVF
-                treatment In Bangloreand give your dreams of starting a family a
-                new lease of life.
+                Unlock the doors of parenthood with GarbhaGudi's advanced IVF treatment In
+                Bangloreand give your dreams of starting a family a new lease of life.
               </p>
             </div>
             <div className='flex flex-col items-center justify-start space-y-3 text-center font-lexend'>
@@ -42,9 +39,9 @@ const Services = () => {
               />
               <h5 className='text-xl font-semibold text-gg-500'>ICSI</h5>
               <p className='font-light'>
-                Take the first step towards parenthood with GarbhaGudi's
-                state-of-the-art ICSI treatment In Banglore, which offers a high
-                success rate for couples struggling with infertility.
+                Take the first step towards parenthood with GarbhaGudi's state-of-the-art ICSI
+                treatment In Banglore, which offers a high success rate for couples struggling with
+                infertility.
               </p>
             </div>
             <div className='flex flex-col items-center justify-start space-y-3 text-center font-lexend'>
@@ -60,9 +57,8 @@ const Services = () => {
               />
               <h5 className='text-xl font-semibold text-gg-500'>IUI</h5>
               <p className='font-light'>
-                Experience the joy of parenthood with GarbhaGudi's IUI treatment
-                In Banglore, designed to increase your chances of pregnancy in a
-                natural way.
+                Experience the joy of parenthood with GarbhaGudi's IUI treatment In Banglore,
+                designed to increase your chances of pregnancy in a natural way.
               </p>
             </div>
             <div className='flex flex-col items-center justify-start space-y-3 text-center font-lexend'>
@@ -76,12 +72,10 @@ const Services = () => {
                 className='pb-8'
                 fetchPriority='low'
               />
-              <h5 className='text-xl font-semibold text-gg-500'>
-                Infertility Treatment
-              </h5>
+              <h5 className='text-xl font-semibold text-gg-500'>Infertility Treatment</h5>
               <p className='font-light'>
-                Garbhagudi IVF Centre - Your Path to Parenthood Begins Here.
-                Discover Advanced Infertility Treatments in Bangalore Today!
+                Garbhagudi IVF Centre - Your Path to Parenthood Begins Here. Discover Advanced
+                Infertility Treatments in Bangalore Today!
               </p>
             </div>
           </div>

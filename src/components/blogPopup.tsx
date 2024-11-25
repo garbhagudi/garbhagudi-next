@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Form from 'sections/LandingPages/Performant/form';
 
 export default function BlogPopUp() {
-  let [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   function open() {
     setIsOpen(true);
@@ -31,12 +31,7 @@ export default function BlogPopUp() {
         PopUp
       </Button>
 
-      <Dialog
-        open={isOpen}
-        as='div'
-        className='relative z-10 focus:outline-none'
-        onClose={close}
-      >
+      <Dialog open={isOpen} as='div' className='relative z-10 focus:outline-none' onClose={close}>
         <div className='fixed inset-0 z-10 w-screen overflow-y-auto'>
           <div className='flex min-h-full items-center justify-center'>
             <DialogPanel

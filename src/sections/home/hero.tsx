@@ -16,8 +16,7 @@ const Hero = () => {
                 </span>
               </div>
               <div className='text-md text-right font-content font-bold text-gray-800 dark:text-gray-200'>
-                ...with the{' '}
-                <h1 className='inline-block'>Best IVF Centre in Bangalore</h1>
+                ...with the <h1 className='inline-block'>Best IVF Centre in Bangalore</h1>
               </div>
               <p className='mt-3 font-content text-base text-gray-800 dark:text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-base'>
                 GarbhaGudi is a chain of new generation{' '}
@@ -27,10 +26,9 @@ const Hero = () => {
                 >
                   infertility treatment hospitals
                 </Link>{' '}
-                equipped with state-of-the-art infrastructure and cutting-edge
-                technology to address this ever-increasing infertility problem.
-                It was founded by a team of committed entrepreneurs and
-                healthcare specialists, led by{' '}
+                equipped with state-of-the-art infrastructure and cutting-edge technology to address
+                this ever-increasing infertility problem. It was founded by a team of committed
+                entrepreneurs and healthcare specialists, led by{' '}
                 <Link
                   href={'/fertility-experts/dr-asha-s-vijay'}
                   className='text-gg-500 hover:underline dark:text-gg-400'

@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const IndexPage = () => {
   return (
@@ -19,10 +20,7 @@ const IndexPage = () => {
 
           {/* Open Graph / Facebook */}
 
-          <meta
-            property='og:title'
-            content='Resources | GarbhaGudi IVF Centre'
-          />
+          <meta property='og:title' content='Resources | GarbhaGudi IVF Centre' />
           <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
           <meta property='og:url' content='https://garbhagudi.com' />
           <meta
@@ -39,10 +37,7 @@ const IndexPage = () => {
 
           <meta name='twitter:card' content='summary_large_image' />
           <meta name='twitter:site' content='@garbhagudiivf' />
-          <meta
-            name='twitter:title'
-            content='Resources | GarbhaGudi IVF Centre'
-          />
+          <meta name='twitter:title' content='Resources | GarbhaGudi IVF Centre' />
           <meta
             name='twitter:description'
             content='Here are some of the most frequently asked questions about infertility and its treatment options.'
@@ -57,21 +52,20 @@ const IndexPage = () => {
             Resources
           </h1>
           <p className='pb-10 pt-4 text-center font-content text-gray-800 dark:text-gray-200 lg:pb-16'>
-            Learn more about causes, diagnosis and treatment options of
-            infertility
+            Learn more about causes, diagnosis and treatment options of infertility
           </p>
           <div className='mx-auto grid max-w-2xl grid-cols-2 gap-4'>
             {data.map((items) => (
               <Link key={items.id} href={items.link}>
                 <div className='flex flex-col items-center justify-center rounded-xl py-3'>
-                  <img
+                  <Image
                     src={items.icon}
                     alt={items.title}
                     className='h-20 w-20 transition-all duration-300 dark:grayscale dark:hover:grayscale-0'
+                    width={80}
+                    height={80}
                   />
-                  <div className='pt-3 text-center font-content'>
-                    {items.title}
-                  </div>
+                  <div className='pt-3 text-center font-content'>{items.title}</div>
                 </div>
               </Link>
             ))}

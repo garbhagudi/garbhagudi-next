@@ -1,14 +1,9 @@
-import {
-  Dialog,
-  DialogPanel,
-  Transition,
-  TransitionChild,
-} from '@headlessui/react';
+import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import Form from './form';
 
 export default function MyModal({ title, clnm }) {
-  let [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
     setIsOpen(false);

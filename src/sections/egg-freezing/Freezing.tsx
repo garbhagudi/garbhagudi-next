@@ -80,8 +80,8 @@ export default function Freezing() {
         Why Choose Egg Freezing?
       </div>
       <div className='mx-auto mb-10 w-8/12 text-center text-lg font-normal text-[#1D1D1D] opacity-70 md:mb-20 md:w-9/12 md:text-xl'>
-        Egg freezing involves a few carefully planned steps, all overseen by
-        experienced fertility experts to ensure safety and comfort.
+        Egg freezing involves a few carefully planned steps, all overseen by experienced fertility
+        experts to ensure safety and comfort.
       </div>
       <div className='mx-auto flex w-11/12 flex-col items-center justify-between gap-10 lg:flex-row lg:items-start'>
         <div className='relative h-60 w-1/2 md:h-96 lg:h-0'>
@@ -122,10 +122,7 @@ export default function Freezing() {
                   {ele.content.map((el, index) => (
                     <div key={index} className='py-2 md:py-1'>
                       <span className='font-bold opacity-80'>{el.title}</span>
-                      <span className='font-normal text-[#6C6C6C] opacity-80'>
-                        {' '}
-                        {el.content}
-                      </span>
+                      <span className='font-normal text-[#6C6C6C] opacity-80'> {el.content}</span>
                     </div>
                   ))}
                 </div> */}

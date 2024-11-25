@@ -3,7 +3,7 @@ import Image from 'next/image';
 import offerBanner from 'assets/landing-page/Offer-Logo.png';
 
 const PopupImage = () => {
-  const phoneNumber = "+919071234006"; // Replace with your desired phone number
+  const phoneNumber = '+919071234006'; // Replace with your desired phone number
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
@@ -29,28 +29,28 @@ const PopupImage = () => {
   if (!showPopup) return null;
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="rounded-lg p-6 relative">
+    <div className='fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-50'>
+      <div className='relative rounded-lg p-6'>
         <button
-          className="absolute top-2 right-2 text-gray-500 hover:text-black focus:outline-none"
+          className='absolute right-2 top-2 text-gray-500 hover:text-black focus:outline-none'
           onClick={handleClose}
         >
-          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white">
+          <svg className='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='white'>
             <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M6 18L18 6M6 6l12 12"
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth='2'
+              d='M6 18L18 6M6 6l12 12'
             />
           </svg>
         </button>
-        <div className="flex items-center justify-center">
+        <div className='flex items-center justify-center'>
           <Image
             src={offerBanner} // Update with the actual path to your image
-            alt="Call Now"
+            alt='Call Now'
             width={500} // Adjust width as needed
             height={500} // Adjust height as needed
-            className="rounded-lg"
+            className='rounded-lg'
             onClick={handleClick}
           />
         </div>

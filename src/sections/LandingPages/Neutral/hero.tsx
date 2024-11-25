@@ -20,8 +20,8 @@ function HeroHome() {
               across the world
             </h2>
             <p className='font-content text-xl text-gray-800 dark:text-gray-200'>
-              GarbhaGudi has been featured in various outlets for its high
-              success rates and holistic approach towards infertility treatment.
+              GarbhaGudi has been featured in various outlets for its high success rates and
+              holistic approach towards infertility treatment.
             </p>
           </div>
 

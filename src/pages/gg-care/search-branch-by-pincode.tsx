@@ -1,26 +1,17 @@
 import React, { useState } from 'react';
 import { FaSpinner } from 'react-icons/fa';
 import Head from 'next/head';
+import Image from 'next/image';
 
 // List of available zipcodes
-const availableZipcodes = [
-  '560050',
-  '560043',
-  '560004',
-  '560100',
-  '560037',
-  '560094',
-  '560072',
-];
-
-interface Props {}
+const availableZipcodes = ['560050', '560043', '560004', '560100', '560037', '560094', '560072'];
 
 interface Coordinates {
   latitude: number;
   longitude: number;
 }
 
-const NearestZipcodeFinder: React.FC<Props> = () => {
+const NearestZipcodeFinder: React.FC = () => {
   const [inputZipcode, setInputZipcode] = useState('');
   const [nearestZipcode, setNearestZipcode] = useState('');
   const [loading, setLoading] = useState(false);
@@ -64,12 +55,10 @@ const NearestZipcodeFinder: React.FC<Props> = () => {
     return nearestZipcode;
   };
 
-  const getCoordinates = async (
-    zipcode: string,
-  ): Promise<Coordinates | null> => {
+  const getCoordinates = async (zipcode: string): Promise<Coordinates | null> => {
     try {
       const response = await fetch(
-        `https://nominatim.openstreetmap.org/search?format=json&q=${zipcode}`,
+        `https://nominatim.openstreetmap.org/search?format=json&q=${zipcode}`
       );
       const data = await response.json();
 
@@ -95,10 +84,7 @@ const NearestZipcodeFinder: React.FC<Props> = () => {
     const dLon = deg2rad(lon2 - lon1);
     const a =
       Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.cos(deg2rad(lat1)) *
-        Math.cos(deg2rad(lat2)) *
-        Math.sin(dLon / 2) *
-        Math.sin(dLon / 2);
+      Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     const distance = R * c;
 
@@ -116,10 +102,7 @@ const NearestZipcodeFinder: React.FC<Props> = () => {
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Search branch by pincode | GarbhaGudi IVF Centre</title>
-        <meta
-          name='title'
-          content='Search branch by pincode | GarbhaGudi IVF Centre'
-        />
+        <meta name='title' content='Search branch by pincode | GarbhaGudi IVF Centre' />
         <meta
           name='description'
           content='To book an appointment for your Fertility and IVF treatment in GarbhaGudi, you can contact on 9108910832 or you can also Email us on dreams@garbhagudi.com.'
@@ -127,10 +110,7 @@ const NearestZipcodeFinder: React.FC<Props> = () => {
 
         {/* Open Graph / Facebook */}
 
-        <meta
-          property='og:title'
-          content='Search branch by pincode | GarbhaGudi IVF Centre'
-        />
+        <meta property='og:title' content='Search branch by pincode | GarbhaGudi IVF Centre' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
@@ -147,10 +127,7 @@ const NearestZipcodeFinder: React.FC<Props> = () => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content='Search branch by pincode | GarbhaGudi IVF Centre'
-        />
+        <meta name='twitter:title' content='Search branch by pincode | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
           content="Reach out with your questions, concerns and challenges. Or just to say hi. We're always standing by and eager to help."
@@ -196,10 +173,12 @@ const NearestZipcodeFinder: React.FC<Props> = () => {
                   className='flex max-w-5xl flex-col rounded-lg bg-gray-200 bg-opacity-70 p-3 shadow-xl backdrop-blur-2xl dark:bg-gray-700 dark:bg-opacity-90 md:flex-row'
                 >
                   <div className='w-full px-3 md:w-6/12 md:px-0'>
-                    <img
+                    <Image
                       src={items.image}
                       alt={items.name}
                       className='rounded-lg'
+                      width={1024}
+                      height={1024}
                     />
                   </div>
                   <div className='ml-5 flex flex-col items-center justify-center space-y-3 md:items-start'>
@@ -226,7 +205,7 @@ const NearestZipcodeFinder: React.FC<Props> = () => {
                     </div>
                   </div>
                 </div>
-              ),
+              )
           )}
         </div>
       </div>
@@ -245,8 +224,8 @@ const locations = [
     address: (
       <div>
         <p>
-          Subhasri Complex, 210/A, Kumaraswamy Temple Rd, 2nd Block, Phase 1,
-          Banashankari Stage I, Banashankari,
+          Subhasri Complex, 210/A, Kumaraswamy Temple Rd, 2nd Block, Phase 1, Banashankari Stage I,
+          Banashankari,
         </p>
         <p className='mb-5 mt-1'>Bengaluru, Karnataka 560050</p>
       </div>
@@ -262,8 +241,8 @@ const locations = [
     address: (
       <div>
         <p>
-          Park Landing, 5AC-709, Outer Ring Rd, Balachandra Layout, HRBR Layout
-          2nd Block, Chelekare, Extension,
+          Park Landing, 5AC-709, Outer Ring Rd, Balachandra Layout, HRBR Layout 2nd Block,
+          Chelekare, Extension,
         </p>
         <p className='mb-5 mt-1'>Bengaluru, Karnataka 560043</p>
       </div>
@@ -279,8 +258,7 @@ const locations = [
     address: (
       <div>
         <p>
-          #26, Pattalamma Temple Road, Behind South End Circle Metro Station,
-          Basavanagudi, <br />
+          #26, Pattalamma Temple Road, Behind South End Circle Metro Station, Basavanagudi, <br />
           Jayanagar
         </p>
         <p className='mb-5 mt-1'>Bengaluru, Karnataka 560004</p>
@@ -297,8 +275,8 @@ const locations = [
     address: (
       <div>
         <p>
-          Ganesh Towers, 3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra Bank,
-          Konappana Agrahara, Electronic City,
+          Ganesh Towers, 3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra Bank, Konappana Agrahara,
+          Electronic City,
         </p>
         <p className='mb-5 mt-1'>Bengaluru, Karnataka 560100</p>
       </div>
@@ -314,8 +292,8 @@ const locations = [
     address: (
       <div>
         <p>
-          4TH floor, Chirag Towers, Born Babies Building, 24 & 64, Service Rd,
-          next to कलामंदिर, <br />
+          4TH floor, Chirag Towers, Born Babies Building, 24 & 64, Service Rd, next to कलामंदिर,{' '}
+          <br />
           Marathahalli,
         </p>
         <p className='mb-5 mt-1'>Bengaluru, Karnataka 560037</p>
@@ -332,8 +310,8 @@ const locations = [
     address: (
       <div>
         <p>
-          #3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage,
-          Ashwath Nagar, Devasandra Layout, Sadashivnagar
+          #3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage, Ashwath Nagar,
+          Devasandra Layout, Sadashivnagar
         </p>
         <p className='mb-5 mt-1'>Bengaluru, Karnataka 560094</p>
       </div>
@@ -348,10 +326,7 @@ const locations = [
     zipCode: '560072',
     address: (
       <div>
-        <p>
-          1st Floor, 80ft Main Road, NGCF Layout, 2nd Stage, BDA Road,
-          Naagarabhaavi,
-        </p>
+        <p>1st Floor, 80ft Main Road, NGCF Layout, 2nd Stage, BDA Road, Naagarabhaavi,</p>
         <p className='mb-5 mt-1'>Bengaluru, Karnataka 560072</p>
       </div>
     ),

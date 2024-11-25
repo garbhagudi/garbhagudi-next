@@ -7,8 +7,7 @@ export default function Overview() {
     {
       icon: image1,
       title: 'Science of Preservation',
-      content:
-        'Egg Freezing Technology has improved drastically in the past decade',
+      content: 'Egg Freezing Technology has improved drastically in the past decade',
     },
     {
       icon: image2,
@@ -52,16 +51,8 @@ export default function Overview() {
               >
                 <div className='flex flex-col items-center justify-center'>
                   <div className='flex h-16 w-16 items-center justify-center rounded-[50%] bg-[#FFE9EC]'>
-                    <Image
-                      src={ele.icon}
-                      alt={`image ${index + 1}`}
-                      width={32}
-                      height={32}
-                    />
+                    <Image src={ele.icon} alt={`image ${index + 1}`} width={32} height={32} />
                   </div>
-                  {/* <div className='py-2 font-figtree text-2xl font-semibold'>
-                    {ele.title}
-                  </div> */}
                   <div
                     className={`w-full py-5 font-nunito-Sans text-lg font-normal opacity-70 ${renderData.length == index + 1 && 'pr-6'}`}
                   >
@@ -78,9 +69,7 @@ export default function Overview() {
         </div>
       </div>
       <div className='flex flex-col items-center justify-center py-10'>
-        <div className='py-10 text-3xl font-extrabold text-[#1D1D1D]'>
-          Statistics
-        </div>
+        <div className='py-10 text-3xl font-extrabold text-[#1D1D1D]'>Statistics</div>
         <div className='flex flex-col items-center justify-center gap-6 px-5 lg:flex-row lg:gap-20 lg:px-0'>
           {statistic.map((ele, index) => (
             <div

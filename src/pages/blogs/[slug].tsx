@@ -12,43 +12,46 @@ import { gql } from '@apollo/client';
 import Image from 'next/image';
 import Link from 'next/link';
 import BlogPopUp from 'components/blogPopup';
+import { throttledFetch } from 'lib/throttle';
 
 export const getStaticProps = async ({ params }) => {
-  const { data } = await apolloClient.query({
-    query: gql`
-      query ($slug: String!) {
-        blog(where: { slug: $slug }) {
-          id
-          title
-          metaTitle
-          metaDescription
-          metaKeywords
-          slug
-          image {
-            url
-          }
-          doctor {
+  const apolloQuery = async ({ slug }) => {
+    return apolloClient.query({
+      query: gql`
+        query ($slug: String!) {
+          blog(where: { slug: $slug }) {
             id
+            title
+            metaTitle
+            metaDescription
+            metaKeywords
+            slug
             image {
               url
             }
-            name
-            imageAlt
-            slug
+            doctor {
+              id
+              image {
+                url
+              }
+              name
+              imageAlt
+              slug
+            }
+            content {
+              raw
+              text
+            }
+            publishedOn
           }
-          content {
-            raw
-            text
-          }
-          publishedOn
         }
-      }
-    `,
-    variables: {
-      slug: params.slug,
-    },
-  });
-
+      `,
+      variables: {
+        slug,
+      },
+    });
+  };
+  const { data } = await throttledFetch(apolloQuery, { slug: params.slug });
   return {
     props: {
       blog: data.blog,
@@ -58,17 +61,19 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export async function getStaticPaths() {
-  const { data } = await apolloClient.query({
-    query: gql`
-      {
-        blogs {
-          slug
-          title
+  const apolloQuery = async () => {
+    return apolloClient.query({
+      query: gql`
+        {
+          blogs {
+            slug
+            title
+          }
         }
-      }
-    `,
-  });
-
+      `,
+    });
+  };
+  const { data } = await throttledFetch(apolloQuery);
   return {
     paths: data.blogs.map(({ slug }) => ({ params: { slug } })),
     fallback: true,
@@ -77,9 +82,7 @@ export async function getStaticPaths() {
 
 const Blog = ({ blog }) => {
   const title = `${blog?.metaTitle || blog?.title}`;
-  const description = `${
-    blog?.metaDescription || blog?.content?.text.slice(0, 160)
-  }`;
+  const description = `${blog?.metaDescription || blog?.content?.text.slice(0, 160)}`;
   const keywords = `${blog?.metaKeywords || blog?.title}`;
   const router = useRouter();
 
@@ -199,19 +202,13 @@ const Blog = ({ blog }) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta property='og:description' content={description} />
         <meta property='og:type' content='article' />
-        <meta
-          property='og:article:published_time'
-          content={blog?.publishedOn}
-        />
+        <meta property='og:article:published_time' content={blog?.publishedOn} />
         <meta property='og:article:author' content={blog?.doctor?.name} />
         <meta property='og:image' content={blog?.image.url} />
         {/* Twitter*/}
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta
-          name='twitter:title'
-          content={`${title} | GarbhaGudi IVF Centre`}
-        />
+        <meta name='twitter:title' content={`${title} | GarbhaGudi IVF Centre`} />
         <meta name='twitter:description' content={description} />
         <meta name='twitter:image' content={blog?.image?.url} />
       </Head>
@@ -228,10 +225,7 @@ const Blog = ({ blog }) => {
       {blog?.slug ? (
         <div className='relative overflow-hidden bg-white py-16 dark:bg-gray-800'>
           <div className='hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full'>
-            <div
-              className='relative mx-auto h-full max-w-prose text-lg'
-              aria-hidden='true'
-            >
+            <div className='relative mx-auto h-full max-w-prose text-lg' aria-hidden='true'>
               <svg
                 className='absolute left-full top-12 translate-x-32 transform'
                 width={404}
@@ -258,11 +252,7 @@ const Blog = ({ blog }) => {
                     />
                   </pattern>
                 </defs>
-                <rect
-                  width={404}
-                  height={384}
-                  fill='url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)'
-                />
+                <rect width={404} height={384} fill='url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)' />
               </svg>
               <svg
                 className='absolute right-full top-1/2 -translate-x-32 -translate-y-1/2 transform'
@@ -290,11 +280,7 @@ const Blog = ({ blog }) => {
                     />
                   </pattern>
                 </defs>
-                <rect
-                  width={404}
-                  height={384}
-                  fill='url(#f210dbf6-a58d-4871-961e-36d5016a0f49)'
-                />
+                <rect width={404} height={384} fill='url(#f210dbf6-a58d-4871-961e-36d5016a0f49)' />
               </svg>
               <svg
                 className='absolute bottom-12 left-full translate-x-32 transform'
@@ -322,11 +308,7 @@ const Blog = ({ blog }) => {
                     />
                   </pattern>
                 </defs>
-                <rect
-                  width={404}
-                  height={384}
-                  fill='url(#d3eb07ae-5182-43e6-857d-35c643af9034)'
-                />
+                <rect width={404} height={384} fill='url(#d3eb07ae-5182-43e6-857d-35c643af9034)' />
               </svg>
             </div>
           </div>
@@ -349,10 +331,12 @@ const Blog = ({ blog }) => {
                   <div>{blog?.doctor?.name}</div>
                 </div>
               </Link>
-              <img
+              <Image
                 className='my-8 w-full rounded-lg'
                 src={blog?.image?.url}
                 alt={blog?.title}
+                width={500}
+                height={500}
               />
               <div className='text-gray-800 dark:text-gray-200'>
                 <RichText content={blog?.content?.raw.children} />
