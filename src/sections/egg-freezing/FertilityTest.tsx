@@ -72,7 +72,7 @@ export default function FertilityTest() {
           </ul>
           <div className='mt-7 w-2/3 md:w-1/3 lg:mt-10'>
             <span
-              className='flex cursor-pointer items-center justify-center scroll-smooth rounded bg-[#D9576C] px-4 py-2 font-content font-semibold text-white shadow hover:text-gg-400 focus:outline-none focus:ring dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
+              className='flex cursor-pointer items-center justify-center scroll-smooth rounded bg-[#D9576C] px-4 py-2 font-content font-semibold text-white shadow hover:opacity-90 focus:outline-none focus:ring dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
               onClick={openModal}
             >
               Explore Packages
