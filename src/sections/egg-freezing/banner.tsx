@@ -21,39 +21,22 @@ export default function Banner() {
             className='object-cover object-right md:object-[100%_right]'
           />
 
-          <div className='absolute inset-0 bg-gradient-to-r dark:from-gray-800/90 dark:to-gray-800/30 sm:bg-transparent'></div>
-          <div className='relative mx-auto max-w-screen-xl px-4 py-28 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8'>
-            <div className='mt-24 max-w-lg sm:text-left md:max-w-2xl lg:mt-0'>
+          <div className='absolute top-[-60px] mx-auto max-w-screen-xl px-4 py-28 sm:px-6 md:top-0 lg:flex lg:h-screen lg:items-center lg:px-8'>
+            <div className='max-w-lg md:max-w-3xl md:pl-8 lg:mt-0 lg:pl-14'>
               <h1 className='flex flex-col text-white'>
-                <span className='py-2 font-nunito-Sans text-3xl font-extrabold dark:text-gray-200 md:text-5xl'>
+                <span className='w-3/4 py-2 font-nunito-Sans text-xl font-extrabold dark:text-gray-200 md:w-1/2 md:text-3xl lg:w-full lg:text-6xl'>
                   Preserve Your Fertility, Empower Your Choices!
                 </span>
               </h1>
-              <h3 className='mt-3 max-w-lg font-nunito-Sans text-white dark:text-gray-200 sm:text-xl sm:leading-relaxed'>
+              <h3 className='w-3/4 font-nunito-Sans text-[12px] text-white dark:text-gray-200 md:mt-0 md:w-3/5 md:text-lg lg:w-full lg:py-2 lg:text-2xl'>
                 Egg freezing allows you to plan for the future on your terms. Discover the science,
                 support, and possibilities behind preserving your fertility with expert care.
               </h3>
 
-              <div className='mt-8 flex flex-wrap items-center gap-4 font-figtree text-base font-semibold'>
-                {/* <Link
-                    href='https://api.whatsapp.com/send/?phone=919480948005&text=Hi.'
-                    className='block w-full rounded-[10px] border-2 border-white bg-[#49C958] px-4 py-2 font-content text-white hover:bg-green-400 focus:outline-none focus:ring active:bg-green-300 sm:w-auto'
-                  >
-                    <span className='flex items-center justify-center gap-2 font-figtree text-lg'>
-                      <BsWhatsapp size={22} className='text-white' /> Drop us a
-                      "Hi" here
-                    </span>
-                  </Link>
-
-                  <div
-                    onClick={() => setIsOpen(true)}
-                    className='block w-full cursor-pointer scroll-smooth rounded-[10px] bg-white px-4 py-2 font-content text-lg text-brandPink shadow hover:opacity-80 focus:outline-none focus:ring active:text-rose-500 dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
-                  >
-                    Book an Appointment
-                  </div> */}
+              <div className='mt-3 flex flex-wrap items-center gap-4 font-figtree text-base font-semibold md:mt-5 lg:mt-8'>
                 <Link
                   href='/treatments/ivf-treatment-egg-freezing/egg-freezing-quiz'
-                  className='block scroll-smooth rounded-[10px] border-2 bg-[#1D1D1D] px-4 py-2 text-center font-content text-lg text-white shadow hover:opacity-90 focus:outline-none focus:ring dark:text-white sm:w-auto'
+                  className='block scroll-smooth rounded-[10px] border-2 bg-[#1D1D1D] px-4 py-1 text-center font-content text-base text-white shadow hover:opacity-90 focus:outline-none focus:ring dark:text-white sm:w-auto md:py-2 md:text-lg'
                 >
                   Take a Quiz
                 </Link>
