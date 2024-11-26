@@ -12,10 +12,11 @@ const WhyGarbhaGudi = dynamic(() => import('sections/LandingPages/ivf/whygarbhag
 const Testimonial = dynamic(() => import('sections/home/testimonial'));
 const Plans = dynamic(() => import('sections/LandingPages/ivf/plans'));
 const Doctors = dynamic(() => import('sections/LandingPages/ivf/Doctors'));
+const Branches = dynamic(() => import('sections/LandingPages/Neutral/branches'));
 
 const Faq = dynamic(() => import('sections/home/faq'));
 
-export default function LandingPage({ doctors }) {
+export default function LandingPage({ doctors, branches }) {
   return (
     <div>
       <Head>
@@ -72,6 +73,7 @@ export default function LandingPage({ doctors }) {
       <WhyGarbhaGudi />
       <Plans />
       <Doctors doctors={doctors} />
+      <Branches branches={branches} />
       <Testimonial />
       <Faq />
       <EndForm />
@@ -97,12 +99,21 @@ export const getStaticProps = async () => {
             raw
           }
         }
+        branches {
+          id
+          title
+          slug
+          branchPicture {
+            url
+          }
+        }
       }
     `,
   });
   return {
     props: {
       doctors: data.doctors,
+      branches: data.branches,
       fallback: true,
     },
   };
