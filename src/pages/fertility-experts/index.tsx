@@ -119,7 +119,7 @@ const IndexPage = ({ branches }: Branches) => {
                 <TabPanel key={items.id}>
                   <div className='body-font relative mx-auto mt-10 max-w-7xl text-gray-800 dark:text-gray-200'>
                     <div className='inset-0 flex flex-wrap lg:flex-nowrap lg:py-6'>
-                      <div className='relative flex h-[44rem] w-full items-end justify-start overflow-hidden rounded-lg bg-gray-800 p-2 md:ml-auto lg:w-1/2 lg:p-10'>
+                      <div className='relative order-2 flex h-[44rem] w-full items-end justify-start overflow-hidden rounded-lg bg-gray-800 p-2 md:ml-auto lg:h-auto lg:w-1/2 lg:p-10'>
                         <iframe
                           width='100%'
                           height='100%'
@@ -168,7 +168,7 @@ const IndexPage = ({ branches }: Branches) => {
                           </div>
                         </div>
                       </div>
-                      <div className='flex w-full flex-col md:ml-auto md:mt-0 md:w-full md:py-4 lg:w-1/2'>
+                      <div className='order-1 flex w-full flex-col md:ml-auto md:mt-0 md:w-full md:py-4 lg:w-1/2'>
                         <p className='mt-7 px-2 text-center font-heading text-xl font-bold lg:mt-0'>
                           Fertility specialists at our {items.title} branch
                         </p>

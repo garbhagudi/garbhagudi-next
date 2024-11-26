@@ -53,7 +53,7 @@ export default function Expects() {
             are here to provide the support and care you deserve.
           </p>
 
-          <Link href={'https://www.garbhagudi-ivf.com/'}>
+          <Link href={'/fertility-experts'}>
             <button className='flex items-center gap-2 rounded-lg bg-[#D9576C] px-6 py-3 text-white shadow-lg transition duration-300 hover:opacity-90'>
               <span>Meet Our Fertility Experts</span>
 
