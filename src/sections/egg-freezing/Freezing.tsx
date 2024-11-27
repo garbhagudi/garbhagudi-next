@@ -83,30 +83,6 @@ export default function Freezing() {
         experts to ensure safety and comfort.
       </div>
       <div className='mx-auto flex w-11/12 flex-col items-center justify-between gap-10 lg:flex-row lg:items-start'>
-        {/* <div className='relative h-60 w-1/2 md:h-96 lg:h-0'> */}
-        {/* <Image
-            src={
-              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/or3urzy42lxwtwcedur1.png'
-            }
-            width={350}
-            height={300}
-            alt='Image 2'
-            loading='lazy'
-            className='absolute left-0 top-0'
-          /> */}
-
-        {/* Second Image (middle layer) */}
-        {/* <Image
-            src={
-              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/hydkajxdwnzhc6g1o1ya.png'
-            }
-            width={350}
-            height={300}
-            alt='Image 2'
-            loading='lazy'
-            className='absolute left-3 top-3'
-          /> */}
-        {/* </div> */}
 
         <div className='mx-auto w-4/5'>
           {data.map((ele, index) => {
