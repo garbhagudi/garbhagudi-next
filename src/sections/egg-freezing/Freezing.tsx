@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 export default function Freezing() {
   const renderData = [
@@ -85,7 +84,7 @@ export default function Freezing() {
       </div>
       <div className='mx-auto flex w-11/12 flex-col items-center justify-between gap-10 lg:flex-row lg:items-start'>
         {/* <div className='relative h-60 w-1/2 md:h-96 lg:h-0'> */}
-          {/* <Image
+        {/* <Image
             src={
               'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/or3urzy42lxwtwcedur1.png'
             }
@@ -96,8 +95,8 @@ export default function Freezing() {
             className='absolute left-0 top-0'
           /> */}
 
-          {/* Second Image (middle layer) */}
-          {/* <Image
+        {/* Second Image (middle layer) */}
+        {/* <Image
             src={
               'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567195/eggFreezing/hydkajxdwnzhc6g1o1ya.png'
             }
@@ -109,7 +108,7 @@ export default function Freezing() {
           /> */}
         {/* </div> */}
 
-        <div className='w-4/5 mx-auto'>
+        <div className='mx-auto w-4/5'>
           {data.map((ele, index) => {
             return (
               <div key={index} className='py-2 font-nunito-Sans'>
