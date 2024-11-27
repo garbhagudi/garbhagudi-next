@@ -8,11 +8,6 @@ const Faq = () => {
       <div className='lg:pt:16 mx-auto w-11/12 pt-5 text-center font-heading text-2xl font-bold text-black dark:text-white lg:text-4xl'>
         Frequently Asked Questions (FAQs)
       </div>
-      <div className='mx-auto w-9/12 py-5 text-center font-nunito-Sans text-lg font-normal text-[#1D1D1D] dark:text-white md:text-xl'>
-        Hearing from real clients who took the step toward fertility preservation can be powerful.
-        We share anonymized testimonials and video snippets highlighting the reasons and positive
-        outcomes our clients have experienced through egg freezing.
-      </div>
       <div className='px-3 pb-5 lg:pb-16'>
         <div className='mx-auto mt-3 flex max-w-6xl flex-col justify-center md:mt-10'>
           {data.map((items) => (
