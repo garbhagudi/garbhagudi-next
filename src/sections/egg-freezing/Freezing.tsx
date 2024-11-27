@@ -83,7 +83,6 @@ export default function Freezing() {
         experts to ensure safety and comfort.
       </div>
       <div className='mx-auto flex w-11/12 flex-col items-center justify-between gap-10 lg:flex-row lg:items-start'>
-
         <div className='mx-auto w-4/5'>
           {data.map((ele, index) => {
             return (
