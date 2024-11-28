@@ -1,7 +1,6 @@
 import React from 'react';
 import Form from './form';
 import Image from 'next/image';
-import FooterForm from 'assets/landing-page/footer-form.webp';
 
 const EndForm = () => {
   return (
