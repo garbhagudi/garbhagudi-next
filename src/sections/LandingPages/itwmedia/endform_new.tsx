@@ -23,7 +23,9 @@ const EndForm = () => {
           </div>
           <div>
             <Image
-              src={FooterForm}
+              src={
+                'https://res.cloudinary.com/garbhagudiivf/image/upload/v1732811706/paripoorna/ITW_Works_Offer_-_Revised-min_jo4gs2.png'
+              }
               alt='EndForm Image'
               width={500}
               height={500}
