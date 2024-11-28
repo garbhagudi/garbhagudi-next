@@ -1,7 +1,6 @@
 import React from 'react';
 import Form from './form';
 import Image from 'next/image';
-import FooterForm from 'assets/landing-page/footer-form.webp';
 
 const EndForm = () => {
   return (
@@ -23,7 +22,9 @@ const EndForm = () => {
           </div>
           <div>
             <Image
-              src={FooterForm}
+              src={
+                'https://res.cloudinary.com/garbhagudiivf/image/upload/v1732811706/paripoorna/ITW_Works_Offer_-_Revised-min_jo4gs2.png'
+              }
               alt='EndForm Image'
               width={500}
               height={500}

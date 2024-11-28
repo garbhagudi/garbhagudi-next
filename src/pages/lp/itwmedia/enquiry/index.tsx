@@ -13,6 +13,9 @@ const Testimonial = dynamic(() => import('sections/home/testimonial'));
 const Plans = dynamic(() => import('sections/LandingPages/ivf/plans'));
 const Doctors = dynamic(() => import('sections/LandingPages/ivf/Doctors'));
 const Branches = dynamic(() => import('sections/LandingPages/Neutral/branches'));
+const TermsaAndConditions = dynamic(
+  () => import('sections/LandingPages/itwmedia/termsAndConditions')
+);
 
 const Faq = dynamic(() => import('sections/home/faq'));
 
@@ -76,6 +79,7 @@ export default function LandingPage({ doctors, branches }) {
       <Branches branches={branches} />
       <Testimonial />
       <Faq />
+      <TermsaAndConditions />
       <EndForm />
     </div>
   );
