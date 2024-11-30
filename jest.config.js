@@ -21,7 +21,6 @@ const customJestConfig = {
     '/.vscode/',
     '/.github/',
     '/.husky/',
-    '/.vscode/',
     '/.git/',
   ],
   coverageThreshold: {
@@ -34,4 +33,4 @@ const customJestConfig = {
   },
 };
 
-module.exports = customJestConfig(createJestConfig);
+module.exports = createJestConfig(customJestConfig);
