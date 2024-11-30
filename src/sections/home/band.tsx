@@ -21,7 +21,7 @@ const Band = () => {
             href={'tel:+919480948005'}
             className='block text-gg-500 hover:underline dark:text-gg-400 md:inline-flex'
           >
-            +91 94809 48005
+            +91 9108 9108 32
           </Link>
         </div>
       </div>
