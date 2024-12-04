@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Creatives from 'assets/Creatives-02.jpg';
 
 export default function PlannedSteps() {
   return (
@@ -10,7 +9,7 @@ export default function PlannedSteps() {
       </div>
       <Image
         src={
-        "https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Creatives-02_pryj4u.webp"
+          'https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Creatives-02_pryj4u.webp'
         }
         alt={'Guided'}
         width={100}

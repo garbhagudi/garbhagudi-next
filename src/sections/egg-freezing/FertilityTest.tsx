@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import BookAnAppointment from './bookAnAppointment';
-import Creatives from 'assets/Creatives-01.jpg';
 
 export default function FertilityTest() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +49,7 @@ export default function FertilityTest() {
       <div className='flex flex-col justify-center gap-5 px-5 md:px-10 lg:flex-row lg:gap-0'>
         <Image
           src={
-            "https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Creatives-01_dnioaj.webp"
+            'https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Creatives-01_dnioaj.webp'
           }
           alt={''}
           width={100}

@@ -17,21 +17,21 @@ export default function Banner() {
       id: '1',
       title: 'Egg Freezing info Web Banner--01',
       image: {
-        url: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--01_easb3r.webp",
+        url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--01_easb3r.webp',
       },
     },
     {
       id: '2',
       title: 'Egg Freezing info Web Banner--02',
       image: {
-        url: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--02_legcno.webp",
+        url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--02_legcno.webp',
       },
     },
     {
       id: '3',
       title: 'Egg Freezing info Web Banner--03',
       image: {
-        url: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--03_g0czqu.webp",
+        url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--03_g0czqu.webp',
       },
     },
   ];
