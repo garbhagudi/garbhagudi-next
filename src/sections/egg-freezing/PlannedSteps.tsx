@@ -10,8 +10,7 @@ export default function PlannedSteps() {
       </div>
       <Image
         src={
-          // 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1732187209/eggFreezing/ijuhv5e8w39qnmydxj56.png'
-          Creatives.src
+        "https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Creatives-02_pryj4u.webp"
         }
         alt={'Guided'}
         width={100}

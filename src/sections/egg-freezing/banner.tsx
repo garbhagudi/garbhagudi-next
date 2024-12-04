@@ -4,9 +4,6 @@ import Image from 'next/image';
 import BookAnAppointment from './bookAnAppointment';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import Carousel from 'nuka-carousel';
-import BannerOne from 'assets/fertility-egg-freezing-slide/Egg Freezing info Web Banner--01.jpg';
-import BannerTwo from 'assets/fertility-egg-freezing-slide/Egg Freezing info Web Banner--02.jpg';
-import BannerThree from 'assets/fertility-egg-freezing-slide/Egg Freezing info Web Banner--03.jpg';
 
 export default function Banner() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,21 +17,21 @@ export default function Banner() {
       id: '1',
       title: 'Egg Freezing info Web Banner--01',
       image: {
-        url: BannerOne.src,
+        url: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--01_easb3r.webp",
       },
     },
     {
       id: '2',
       title: 'Egg Freezing info Web Banner--02',
       image: {
-        url: BannerTwo.src,
+        url: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--02_legcno.webp",
       },
     },
     {
       id: '3',
       title: 'Egg Freezing info Web Banner--03',
       image: {
-        url: BannerThree.src,
+        url: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--03_g0czqu.webp",
       },
     },
   ];
