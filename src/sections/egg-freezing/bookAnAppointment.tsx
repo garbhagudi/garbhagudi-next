@@ -28,7 +28,7 @@ const BookAnAppointment = () => {
 
       <div className='text-center'>
         <a href='tel:+919843287594' className='font-semibold text-[#DD6F6F]'>
-          Call at +91 6383697088
+          Call at +91 9108 9108 32
         </a>
       </div>
     </div>
