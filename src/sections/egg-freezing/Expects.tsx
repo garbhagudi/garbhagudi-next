@@ -38,7 +38,7 @@ export default function Expects() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = () => {
-    setIsOpen(true);
+    setIsOpen(false);
   };
   return (
     <Fragment>
