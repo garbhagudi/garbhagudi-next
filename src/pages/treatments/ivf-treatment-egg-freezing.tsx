@@ -1,5 +1,4 @@
 import React from 'react';
-import Content from 'sections/egg-freezing/content';
 import CTA from 'sections/egg-freezing/cta';
 import Expects from 'sections/egg-freezing/Expects';
 import Faq from 'sections/egg-freezing/faq';
@@ -13,7 +12,6 @@ export default function fertility() {
   return (
     <div>
       <Banner />
-      <Content />
       <Overview />
       <FertilityTest />
       <PlannedSteps />
