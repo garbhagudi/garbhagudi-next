@@ -13,7 +13,6 @@ export default function fertility() {
   return (
     <div>
       <Banner />
-      <Content />
       <Overview />
       <FertilityTest />
       <PlannedSteps />
