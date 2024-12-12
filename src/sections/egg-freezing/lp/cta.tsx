@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BookAnAppointment from './bookAnAppointment';
+import Form from './form';
 
 const CTA: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +32,7 @@ const CTA: React.FC = () => {
           className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'
           onClick={handleClose}
         >
-          <BookAnAppointment />
+          <Form />
         </div>
       )}
     </div>

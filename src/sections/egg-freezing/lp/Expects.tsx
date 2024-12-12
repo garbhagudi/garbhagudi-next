@@ -1,7 +1,7 @@
 import { SlArrowRight } from 'react-icons/sl';
 import Link from 'next/link';
-import BookAnAppointment from './bookAnAppointment';
 import { Fragment, useState } from 'react';
+import Form from './form';
 
 export default function Expects() {
   const staticData = [
@@ -93,7 +93,7 @@ export default function Expects() {
           className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'
           onClick={handleClose}
         >
-          <BookAnAppointment />
+          <Form />
         </div>
       )}
     </Fragment>
