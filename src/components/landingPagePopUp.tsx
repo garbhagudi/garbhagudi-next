@@ -16,9 +16,8 @@ export default function LandingPagePopUp() {
   useEffect(() => {
     const timer = setTimeout(() => {
       open();
-    }, 20000); // 20000 milliseconds = 20 seconds
+    }, 20000);
 
-    // Cleanup function to clear the timeout if the component unmounts before the timeout finishes
     return () => clearTimeout(timer);
   }, []);
 
@@ -36,7 +35,7 @@ export default function LandingPagePopUp() {
           <div className='flex min-h-full items-center justify-center'>
             <DialogPanel
               transition
-              className='data-[closed]:transform-[scale(95%)] max-w-md rounded-xl bg-white/5 p-3 backdrop-blur-3xl duration-300 ease-out data-[closed]:opacity-0'
+              className='data-[closed]:transform-[scale(95%)] max-w-md rounded-xl bg-white px-4 py-1 pb-4 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] transition-shadow duration-300 ease-out hover:shadow-[0_0_25px_10px_rgba(0,0,0,0.5)] data-[closed]:opacity-0'
             >
               <div className='px-1'>
                 <Form />

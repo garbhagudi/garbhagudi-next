@@ -1,6 +1,5 @@
 import React from 'react';
 import { Lexend, Nunito, B612, Benne, Nunito_Sans, Figtree } from 'next/font/google';
-import FloatPhone from './FloatPhone';
 
 const lexend = Lexend({
   subsets: ['latin'],
@@ -28,7 +27,6 @@ const benne = Benne({
   weight: ['400'],
 });
 
-// Use next/font to load the fonts
 const nunitoSans = Nunito_Sans({
   weight: ['400', '500', '600', '800'],
   subsets: ['latin'],
@@ -46,7 +44,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         className={`${lexend.variable} ${nunito.variable} ${b612.variable} ${benne.variable} ${nunitoSans.className} ${figtree.className}`}
       >
         {children}
-        <FloatPhone />
       </main>
     </>
   );
