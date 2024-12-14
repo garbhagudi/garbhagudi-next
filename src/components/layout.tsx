@@ -27,7 +27,6 @@ const benne = Benne({
   weight: ['400'],
 });
 
-// Use next/font to load the fonts
 const nunitoSans = Nunito_Sans({
   weight: ['400', '500', '600', '800'],
   subsets: ['latin'],

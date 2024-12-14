@@ -8,6 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
+import FloatPhone from 'components/FloatPhone';
 
 // Dynamically import components
 const Footer = dynamic(() => import('components/footer/footer'));
@@ -87,6 +88,7 @@ function MyApp({ Component, pageProps }) {
         )}
       </ThemeProvider>
       <SpeedInsights />
+      <FloatPhone />
     </RootLayout>
   );
 }

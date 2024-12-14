@@ -19,8 +19,8 @@ const HomeComponent = ({ testimonialPassthrough, blogsPassthrough }) => {
       <Band />
       <Hero />
       <Band2 />
-      <Overview />
       <TreatmentOptions />
+      <Overview />
       <Video testimonials={testimonialPassthrough} />
       <Features />
       <Stats />
