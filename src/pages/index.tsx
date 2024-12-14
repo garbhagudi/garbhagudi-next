@@ -5,6 +5,7 @@ import HomeComponent from 'sections/home';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import BannerComponent from 'sections/home/bannerComponent';
+import LandingPagePopUp from 'components/landingPagePopUp';
 const Faq = dynamic(() => import('sections/home/faq'));
 const DoctorList = dynamic(() => import('sections/home/doctorList'));
 
@@ -166,6 +167,7 @@ const Home = ({ data, testimonials }) => {
       <HomeComponent testimonialPassthrough={testimonials} blogsPassthrough={data.blogs} />
       <DoctorList doctors={data.doctors} />
       <Faq />
+      <LandingPagePopUp />
     </div>
   );
 };

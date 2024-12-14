@@ -9,7 +9,7 @@ const Hero = () => {
         <div className='lg:grid lg:grid-cols-12 lg:gap-8'>
           <div className='px-4 sm:px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left'>
             <div>
-              <div className='mt-4 font-heading text-4xl font-extrabold tracking-tight text-gray-800 dark:text-gray-200 sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl'>
+              <div className='mt-4 font-heading text-4xl font-extrabold tracking-tight text-gray-800 dark:text-gray-200 max-sm:text-3xl sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl'>
                 <span className='md:block'>Experience the Joy</span>{' '}
                 <span className='text-gg-500 dark:text-gg-400 md:mt-2 md:block'>
                   of Being Complete...
