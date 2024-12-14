@@ -33,7 +33,7 @@
     "react-icons": "^5.4.0",
     "react-lite-youtube-embed": "^2.4.0",
     "react-moment": "^1.1.3",
-    "react-responsive-masonry": "^2.2.1"
+    "react-responsive-masonry": "^2.6.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.1",
