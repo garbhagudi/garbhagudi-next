@@ -42,7 +42,7 @@ export default function Expects() {
   };
   return (
     <Fragment>
-      <div className='py-5'>
+      <div className='my-5 mb-16'>
         <section className='flex flex-col items-center justify-center'>
           <h1 className='mb-6 text-center text-4xl font-bold text-gray-800'>
             Meet our Fertility Experts

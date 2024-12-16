@@ -26,15 +26,10 @@ function MyApp({ Component, pageProps }) {
     '/lp/dh/enquiry',
     '/lp/itwmedia/enquiry',
     '/lp/newsfirstdigital/enquiry',
+    '/lp/egg-freezing',
   ];
 
-  const optionalRenderPaths = ['/lp/dh/egg-freezing'];
-
-  const allNoRenderPaths = [...noRenderPaths, ...optionalRenderPaths];
-
-  const shouldDisplay = !allNoRenderPaths.includes(router.pathname);
-
-  const isOptionalRender = optionalRenderPaths.includes(router.pathname);
+  const shouldDisplay = !noRenderPaths.includes(router.pathname);
 
   const [loading, setLoading] = useState(false);
 
@@ -83,7 +78,7 @@ function MyApp({ Component, pageProps }) {
           <div className={`min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800`}>
             {shouldDisplay && <Nav />}
             <Component {...pageProps} />
-            {!isOptionalRender && <Footer />}
+            <Footer />
           </div>
         )}
         {shouldDisplay && (

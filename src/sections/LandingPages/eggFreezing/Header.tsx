@@ -1,6 +1,6 @@
 import Logo from 'components/assets/logo';
 import React, { useState } from 'react';
-import Form from 'sections/egg-freezing/lp/form';
+import Form from 'sections/LandingPages/eggFreezing/form';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

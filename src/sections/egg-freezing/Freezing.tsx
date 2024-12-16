@@ -74,7 +74,7 @@ export default function Freezing() {
     },
   ];
   return (
-    <div className='font-nunito-Sans lg:pb-16'>
+    <div className='font-nunito-Sans lg:pb-6'>
       <div className='flex items-center justify-center py-3 text-2xl font-extrabold md:py-6 md:text-4xl'>
         Why Choose Egg Freezing?
       </div>
@@ -87,11 +87,11 @@ export default function Freezing() {
           {data.map((ele, index) => {
             return (
               <div key={index} className='py-2 font-nunito-Sans'>
-                <div className='text-center text-lg font-bold leading-8 md:text-start md:text-xl'>
-                  {`${index + 1}). `}
+                <div className='text-center text-lg font-bold leading-8 text-gray-800 md:text-start md:text-xl'>
+                  {`${index + 1}. `}
                   {ele.title}
                 </div>
-                <div>{ele.content}</div>
+                <div className='font-normal text-[#1D1D1D] opacity-70'>{ele.content}</div>
                 {renderData.length !== index + 1 && (
                   <div className='hidden w-10/12 border border-[#D9576C4D] md:visible'></div>
                 )}

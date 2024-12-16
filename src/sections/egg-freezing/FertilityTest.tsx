@@ -54,7 +54,7 @@ export default function FertilityTest() {
           alt={''}
           width={100}
           height={100}
-          className='h-[400px] w-full rounded-md'
+          className='h-full w-full rounded-md md:h-[24em]'
         />
         <div className='px-5 lg:pl-5'>
           <p className='text-2xl font-semibold'>Understanding AMH – Anti Mullerian Hormone</p>

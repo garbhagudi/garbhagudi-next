@@ -3,10 +3,10 @@ import React from 'react';
 import Faq from 'sections/egg-freezing/faq';
 import FertilityTest from 'sections/egg-freezing/FertilityTest';
 import Freezing from 'sections/egg-freezing/Freezing';
-import Banner from 'sections/egg-freezing/lp/banner';
-import CTA from 'sections/egg-freezing/lp/cta';
-import Expects from 'sections/egg-freezing/lp/Expects';
-import Header from 'sections/egg-freezing/lp/Header';
+import Banner from 'sections/LandingPages/eggFreezing/banner';
+import CTA from 'sections/LandingPages/eggFreezing/cta';
+import Expects from 'sections/LandingPages/eggFreezing/Expects';
+import Header from 'sections/LandingPages/eggFreezing/Header';
 import Overview from 'sections/egg-freezing/overview';
 import PlannedSteps from 'sections/egg-freezing/PlannedSteps';
 
