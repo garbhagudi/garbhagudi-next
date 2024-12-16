@@ -11,8 +11,8 @@ import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
 import Link from 'next/link';
-import BlogPopUp from 'components/blogPopup';
 import { throttledFetch } from 'lib/throttle';
+import LandingPagePopUp from 'components/landingPagePopUp';
 
 export const getStaticProps = async ({ params }) => {
   const apolloQuery = async ({ slug }) => {
@@ -351,7 +351,7 @@ const Blog = ({ blog }) => {
       ) : (
         <Error statusCode={404} />
       )}
-      <BlogPopUp />
+      <LandingPagePopUp />
     </div>
   );
 };

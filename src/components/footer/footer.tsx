@@ -12,31 +12,30 @@ import {
 import { RiTwitterXFill } from 'react-icons/ri';
 
 const navigation = {
-  about: [
-    { name: 'Vision & Mission', href: '/about/vision-and-mission' },
-    { name: 'Directors', href: '/about/overview' },
-    {
-      name: 'Awards',
-      href: '/about/awards-and-accolades',
-    },
-    { name: 'Dr Asha S Vijay', href: 'https://drashasvijay.com' },
+  treatments: [
+    { name: 'Hysteroscopy', href: '/treatments/hysteroscopy-treatment-in-bangalore' },
+    { name: 'ICSI Treatment', href: '/treatments/icsi-treatment-in-bangalore' },
+    { name: 'IUI Treatment', href: '/treatments/iui-treatment-in-bangalore' },
+    { name: 'IVF Treatment', href: '/treatments/ivf-treatment-in-bangalore' },
+    { name: 'Laparoscopy', href: '/treatments/laparoscopy-treatment-in-bangalore' },
+    { name: 'Embryo Donation', href: '/treatments/embryo-donation' },
+    { name: 'Egg Donation', href: '/treatments/egg-donation' },
+    { name: 'FET', href: '/treatments/frozen-embryo-transfer' },
   ],
-  quickLinks: [
-    { name: 'IVF Treatment', href: '/treatments/in-vitro-fertilization-ivf' },
-    {
-      name: 'IUI Treatment',
-      href: '/treatments/intra-uterine-insemination-iui',
-    },
-    {
-      name: 'Treatment Pricing',
-      href: '/treatments/ivf-treatment-cost-in-bangalore',
-    },
+  locations: [
+    { name: 'Hanumanthanagar', href: '/locations/hanumanthanagar' },
+    { name: 'Electronic city', href: '/locations/electronic-city' },
+    { name: 'Kalyan Nagar', href: '/locations/kalyan-nagar' },
+    { name: 'Marthahalli', href: '/locations/marathahalli' },
+    { name: 'Nagarbhavi', href: '/locations/nagarabhavi' },
+    { name: 'New BEL road', href: '/locations/new-bel-road' },
+    { name: 'Jayanagar', href: '/locations/jayanagar' },
   ],
-  support: [
-    { name: 'GG CARE', href: '/gg-care' },
-    { name: 'Diagnosis', href: '/resources/diagnosis' },
-    { name: 'Treatment', href: '/resources/treatments' },
-    { name: 'Career', href: '/careers' },
+  resources: [
+    { name: 'Fertility Experts', href: '/fertility-experts' },
+    { name: 'Fertility center', href: '/fertility-center' },
+    { name: 'Blogs', href: '/blogs/page/1' },
+    { name: 'FAQ', href: '/resources/faq' },
   ],
   company: [
     { name: 'GarbhaGudi', href: '/about/overview' },
@@ -44,10 +43,14 @@ const navigation = {
     { name: 'GarbhaGnan', href: 'https://garbhagnan.org' },
     { name: 'Pharmacy', href: '#' },
   ],
+  contact: [
+    { name: 'Paripoorna 2024', href: '/features/paripoorna-2024' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'GG care', href: '/gg-care' },
+  ],
   legal: [
     { name: 'Privacy', href: '/legal/privacy-policy' },
     { name: 'Terms', href: '/legal/terms-and-conditions' },
-    { name: 'Refund Policy', href: '/legal/refund-policy' },
   ],
 };
 
@@ -62,15 +65,15 @@ export default function Footer() {
         Footer
       </h2>
       <div className='mx-auto max-w-7xl border-t px-4 pb-12 dark:border-gray-600 sm:px-6 lg:px-8 lg:py-8'>
-        <div className='xl:grid xl:grid-cols-3 xl:gap-8'>
+        <div className='xl:grid xl:grid-cols-2 xl:gap-8'>
           <div className='mt-12 grid grid-cols-1 gap-8 text-center antialiased xl:col-span-full xl:mt-0 xl:grid-cols-1'>
-            <div className='grid grid-cols-3 gap-5 md:grid-cols-5'>
+            <div className='grid grid-cols-3 gap-5 md:grid-cols-6'>
               <div className=''>
                 <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
-                  About
+                  Treatments
                 </h3>
                 <ul className='mt-4 space-y-1'>
-                  {navigation.about.map((item) => (
+                  {navigation.treatments.map((item) => (
                     <li key={item.name}>
                       <Link href={item.href} passHref>
                         <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
@@ -83,10 +86,26 @@ export default function Footer() {
               </div>
               <div className=''>
                 <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
-                  Support
+                  Locations
                 </h3>
                 <ul className='mt-4 space-y-1'>
-                  {navigation.support.map((item) => (
+                  {navigation.locations.map((item) => (
+                    <li key={item.name}>
+                      <Link passHref href={item.href}>
+                        <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
+                          {item.name}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className=''>
+                <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
+                  Resources
+                </h3>
+                <ul className='mt-4 space-y-1'>
+                  {navigation.resources.map((item) => (
                     <li key={item.name}>
                       <Link passHref href={item.href}>
                         <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
@@ -115,10 +134,10 @@ export default function Footer() {
               </div>
               <div className=''>
                 <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
-                  Quicklinks
+                  Contact
                 </h3>
                 <ul className='mt-4 space-y-1'>
-                  {navigation.quickLinks.map((item) => (
+                  {navigation.contact.map((item) => (
                     <li key={item.name}>
                       <Link href={item.href} passHref>
                         <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
