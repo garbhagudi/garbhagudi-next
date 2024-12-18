@@ -13,8 +13,8 @@ const MediaKit = () => {
   return (
     <div className='bg-white dark:bg-gray-800'>
       <div className='mx-auto mt-6 max-w-7xl px-4 py-8 md:px-6 lg:px-8 lg:py-10'>
-        <div className='flex flex-col md:flex-row md:justify-between'>
-          <TabGroup>
+        <div className='flex flex-row md:justify-between'>
+          <TabGroup className={'flex w-full flex-col gap-10 md:flex-row'}>
             <TabList
               className={
                 'flex flex-row flex-wrap items-start justify-start gap-x-6 text-left font-lexend text-base md:flex-col md:space-y-6'
