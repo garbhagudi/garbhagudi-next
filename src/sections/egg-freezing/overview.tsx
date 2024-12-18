@@ -37,9 +37,9 @@ export default function Overview() {
   ];
 
   return (
-    <div className='pb-5 md:pt-14'>
+    <div className='pb-5 md:pt-4'>
       <div className='flex flex-col'>
-        <div className='my-5 pb-5 text-center text-2xl font-extrabold leading-8 text-[#1D1D1D] dark:text-white md:my-10 md:mr-10 md:text-4xl'>
+        <div className='my-6 pb-5 text-center text-2xl font-extrabold leading-8 text-gray-800 dark:text-white md:my-10 md:text-4xl'>
           Did You Know?
         </div>
         <div className='flex flex-col items-start gap-2 px-14 text-center md:flex-row md:gap-28'>
@@ -54,7 +54,7 @@ export default function Overview() {
                     <Image src={ele.icon} alt={`image ${index + 1}`} width={32} height={32} />
                   </div>
                   <div
-                    className={`w-full py-5 font-nunito-Sans text-lg font-normal opacity-70 ${renderData.length == index + 1 && 'pr-6'}`}
+                    className={`w-full py-5 font-nunito-Sans text-sm font-normal opacity-70 md:text-lg ${renderData.length == index + 1 && 'pr-6'}`}
                   >
                     {ele.content}
                   </div>
@@ -68,15 +68,17 @@ export default function Overview() {
           })}
         </div>
       </div>
-      <div className='flex flex-col items-center justify-center py-10'>
-        <div className='py-10 text-3xl font-extrabold text-[#1D1D1D]'>Statistics</div>
+      <div className='flex flex-col items-center justify-center py-2'>
+        <div className='my-5 pb-5 text-center text-2xl font-extrabold leading-8 text-gray-800 dark:text-white md:my-10 md:text-4xl'>
+          Statistics
+        </div>
         <div className='flex flex-col items-center justify-center gap-6 px-5 lg:flex-row lg:gap-20 lg:px-0'>
           {statistic.map((ele, index) => (
             <div
               key={index}
               className='flex flex-col items-center justify-center bg-[#F9F9F9] px-5 py-16 lg:h-56 lg:w-96'
             >
-              <div className='text-center text-[14px] font-medium text-[#1D1D1D] md:text-[18px] lg:py-10'>
+              <div className='text-center text-[14px] font-normal opacity-70 md:text-[18px] lg:py-10'>
                 {ele.content}
               </div>
             </div>

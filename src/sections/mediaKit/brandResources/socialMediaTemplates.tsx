@@ -1,24 +1,27 @@
 import Image from 'next/image';
 import React from 'react';
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 const SocialMediaTemplates = () => {
   return (
     <div>
       <h2 className='font-heading text-2xl font-bold'>Social Media Posts - Templates</h2>
       <div className='py-10'>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
-          <Masonry gutter='8px'>
-            {data.map((items) => (
-              <div key={items.id}>
-                <Image src={items.image} alt={items.desccription} height={500} width={500} />
-                <p className='bg-gg-500 py-0.5 text-center font-lexend text-sm text-white'>
-                  {items.desccription}
-                </p>
-              </div>
-            ))}
-          </Masonry>
-        </ResponsiveMasonry>
+        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+          {data.map((item) => (
+            <div key={item.id} className='flex flex-col items-center'>
+              <Image
+                src={item.image}
+                alt={item.desccription}
+                height={500}
+                width={500}
+                className='object-cover'
+              />
+              <p className='mt-2 bg-gg-500 py-0.5 text-center font-lexend text-sm text-white'>
+                {item.desccription}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
