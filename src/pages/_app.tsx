@@ -26,8 +26,11 @@ function MyApp({ Component, pageProps }) {
     '/lp/dh/enquiry',
     '/lp/itwmedia/enquiry',
     '/lp/newsfirstdigital/enquiry',
+    '/lp/egg-freezing',
   ];
+
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
+
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
