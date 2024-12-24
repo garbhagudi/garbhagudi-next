@@ -9,6 +9,7 @@ import Expects from 'sections/LandingPages/eggFreezing/Expects';
 import Header from 'sections/LandingPages/eggFreezing/Header';
 import Overview from 'sections/egg-freezing/overview';
 import PlannedSteps from 'sections/egg-freezing/PlannedSteps';
+import CreativeVideo from 'sections/egg-freezing/creativeVideo';
 
 export default function eggFreezing() {
   return (
@@ -66,6 +67,7 @@ export default function eggFreezing() {
       <FertilityTest />
       <PlannedSteps />
       <Freezing />
+      <CreativeVideo />
       <Expects />
       <Faq />
       <CTA />
