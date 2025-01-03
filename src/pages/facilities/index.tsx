@@ -97,7 +97,8 @@ const IndexPage = ({ articles }: Article) => {
                         className='h-24 w-24 rounded-lg object-cover transition-all duration-300 group-hover:grayscale-0 dark:grayscale'
                         src={item?.icon?.url || item?.image?.url}
                         alt={item.title}
-                        fill
+                        width={100}
+                        height={100}
                       />
                     </div>
                     <div className='flex w-2/3 flex-col justify-center text-center text-gray-800 dark:text-gray-200'>
