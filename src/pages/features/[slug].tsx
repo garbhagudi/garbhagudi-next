@@ -197,7 +197,8 @@ const Vas = ({ valueAddedService }) => {
                   className='mb-5 mt-10 w-full rounded-lg'
                   src={valueAddedService?.image.url}
                   alt={valueAddedService?.title}
-                  fill
+                  width={1200}
+                  height={600}
                 />
               </figure>
               <div className='text-gray-800 dark:text-gray-200'>
