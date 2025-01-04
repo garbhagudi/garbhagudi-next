@@ -3,22 +3,31 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import Carousel from 'nuka-carousel';
+import { Tab, TabGroup, TabList, TabPanels, TabPanel } from '@headlessui/react';
 
 interface doctorListProps {
-  doctors: [
-    {
-      id: string;
-      name: string;
-      slug: string;
-      qualification: string;
-      designation: string;
-      image: {
-        url: string;
-      };
-      imageAlt: string;
-    },
-  ];
+  doctors: {
+    id: string;
+    name: string;
+    slug: string;
+    qualification: string;
+    designation: string;
+    category: string;
+    image: {
+      url: string;
+    };
+    imageAlt: string;
+  }[];
 }
+
+const CATEGORY_TITLES: Record<string, string> = {
+  fertilitySpecialist: 'Fertility Specialists',
+  embryologist: 'Embryologists',
+  andrologist: 'Andrologists',
+  yogaSpecialist: 'Yoga Specialists',
+  medicalSuperintendent: 'Medical Superintendents',
+  consultants: 'Consultants',
+};
 
 const DoctorList = (doctorList: doctorListProps) => {
   const defaultControlsConfig = {
@@ -26,6 +35,18 @@ const DoctorList = (doctorList: doctorListProps) => {
       display: 'none',
     },
   };
+  const groupedDoctors = doctorList.doctors.reduce(
+    (acc, doctor) => {
+      const categoryKey = doctor.category || 'Others';
+      if (!acc[categoryKey]) {
+        acc[categoryKey] = [];
+      }
+      acc[categoryKey].push(doctor);
+      return acc;
+    },
+    {} as Record<string, typeof doctorList.doctors>
+  );
+  const categories = Object.keys(groupedDoctors);
   return (
     <div>
       <div
@@ -44,39 +65,67 @@ const DoctorList = (doctorList: doctorListProps) => {
                 most challenging fertility cases.
               </p>
             </div>
-            <div className='mx-auto hidden grid-cols-2 space-y-0 sm:gap-8 sm:space-y-0 lg:grid lg:grid-cols-5'>
-              {doctorList?.doctors.map((item) => {
-                return (
-                  <div key={item?.id} className='transition-all duration-300 hover:scale-115'>
-                    <Link href={`/fertility-experts/${item?.slug}`} passHref>
-                      <div className='space-y-4'>
-                        <div className='relative mx-auto h-44 w-44'>
-                          <div className='bg-[length: 400%] absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 dark:bg-gray-400'></div>
-                          <Image
-                            className='shadow-champaigne rounded-full bg-transparent drop-shadow-2xl'
-                            src={item?.image?.url}
-                            alt={item?.imageAlt || item?.name}
-                            width={400}
-                            height={400}
-                            loading='lazy'
-                          />
-                        </div>
-                        <div className='space-y-0.5'>
-                          <h3 className='font-heading text-lg font-bold text-gray-800 dark:text-gray-200'>
-                            {item?.name}
-                          </h3>
-                          <p className='font-content text-xs text-purple-900 dark:text-purple-200'>
-                            {item?.qualification}
-                          </p>
-                          <div className='pb-2 font-content text-sm text-gg-500 shadow-black drop-shadow-2xl dark:text-gg-300'>
-                            {item?.designation}
+            {/* Tabs for Categories */}
+            <div className='hidden lg:block'>
+              <TabGroup>
+                <TabList className='mt-12 flex space-x-2 rounded-xl bg-gg-400 p-2'>
+                  {categories.map((category) => (
+                    <Tab
+                      key={category}
+                      className={({ selected }) =>
+                        `w-full rounded-lg py-2.5 text-base font-medium leading-5 focus:outline-none ${
+                          selected
+                            ? 'bg-brandPurpleDark text-white shadow'
+                            : 'text-white hover:bg-gg-500/[0.9]'
+                        }`
+                      }
+                    >
+                      {CATEGORY_TITLES[category] || category}
+                    </Tab>
+                  ))}
+                </TabList>
+                <TabPanels className='mt-8'>
+                  {categories.map((category) => (
+                    <TabPanel key={category}>
+                      <div className='grid grid-cols-2 gap-8 lg:grid-cols-4'>
+                        {groupedDoctors[category].map((doctor) => (
+                          <div
+                            key={doctor.id}
+                            className='transition-all duration-300 hover:scale-105'
+                          >
+                            <Link href={`/fertility-experts/${doctor.slug}`} passHref>
+                              <div className='space-y-4'>
+                                <div className='relative mx-auto h-44 w-44'>
+                                  <div className='absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 bg-[length:400%] dark:bg-gray-400'></div>
+                                  <Image
+                                    className='shadow-champaigne rounded-full bg-transparent drop-shadow-2xl'
+                                    src={doctor.image.url}
+                                    alt={doctor.imageAlt || doctor.name}
+                                    width={400}
+                                    height={400}
+                                    loading='lazy'
+                                  />
+                                </div>
+                                <div className='space-y-0.5'>
+                                  <h3 className='font-heading text-lg font-bold text-gray-800 dark:text-gray-200'>
+                                    {doctor.name}
+                                  </h3>
+                                  <p className='text-sm text-purple-900 dark:text-purple-200'>
+                                    {doctor.qualification}
+                                  </p>
+                                  <p className='text-sm text-gg-500 dark:text-gg-300'>
+                                    {doctor.designation}
+                                  </p>
+                                </div>
+                              </div>
+                            </Link>
                           </div>
-                        </div>
+                        ))}
                       </div>
-                    </Link>
-                  </div>
-                );
-              })}
+                    </TabPanel>
+                  ))}
+                </TabPanels>
+              </TabGroup>
             </div>
             <div className='relative mx-auto flex flex-row items-center justify-center lg:hidden'>
               <Carousel
@@ -130,6 +179,9 @@ const DoctorList = (doctorList: doctorListProps) => {
                                 {item?.designation}
                               </p>
                             </div>
+                          </div>
+                          <div className='mx-auto w-fit rounded-lg bg-gg-500 px-8 py-2 text-center font-bold text-white'>
+                            {CATEGORY_TITLES[item?.category] || item.category}
                           </div>
                         </div>
                       </div>
