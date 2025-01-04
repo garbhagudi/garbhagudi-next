@@ -85,7 +85,6 @@ const DoctorList = (doctorList: doctorListProps) => {
                     </Tab>
                   ))}
                 </TabList>
-
                 <TabPanels className='mt-8'>
                   {categories.map((category) => (
                     <TabPanel key={category}>
