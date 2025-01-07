@@ -15,7 +15,7 @@ const Services = () => {
                 src={
                   'https://app.unbounce.com/publish/assets/bf3feac7-9d19-41a4-93f2-ac88b11e19f6/7628c4f6-8ebe-4b92-b7f3-fe879a772d53-ivf-jwjqwf.webp'
                 }
-                alt='Services Image'
+                alt='IVF Treatment - Services Image'
                 width={80}
                 height={80}
                 className='pb-8'
@@ -31,7 +31,7 @@ const Services = () => {
                 src={
                   'https://app.unbounce.com/publish/assets/cfdca4fe-f715-4364-8e4a-83ffb731c4d3/b9ad6b9e-3fdc-447c-8040-748fa072bcce-fertilization-o5hpkk.webp'
                 }
-                alt='Services Image'
+                alt='ICSI - Services Image'
                 width={80}
                 height={80}
                 className='pb-8'
@@ -49,7 +49,7 @@ const Services = () => {
                 src={
                   'https://app.unbounce.com/publish/assets/cac56cbc-2a2a-4b09-95c5-ecb631a458b1/d798396c-8e94-4b62-89f2-7b791c70bd13-in-vitro-mujzkz.webp'
                 }
-                alt='Services Image'
+                alt='IUI - Services Image'
                 width={80}
                 height={80}
                 className='pb-8'
@@ -66,7 +66,7 @@ const Services = () => {
                 src={
                   'https://app.unbounce.com/publish/assets/9e2a326c-a0e7-4bac-9724-0180faa01953/fce786a0-93e5-4e85-b332-7aaaf48345e8-research-j8mdnk.webp'
                 }
-                alt='Services Image'
+                alt='Infertility Treatment - Services Image'
                 width={80}
                 height={80}
                 className='pb-8'

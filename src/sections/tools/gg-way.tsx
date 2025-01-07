@@ -29,7 +29,7 @@ const GarbhaGudiWay = () => {
                 <Image
                   className='h-full w-full rounded-xl object-cover shadow-xl shadow-black/50'
                   src={items.bgImage}
-                  alt='Image'
+                  alt={items.title}
                   width={640}
                   height={640}
                 />

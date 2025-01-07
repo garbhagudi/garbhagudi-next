@@ -62,7 +62,7 @@ const CareerOrBaby = () => {
             <Image
               className='h-64 w-full rounded-2xl object-cover shadow-lg sm:h-[360px]'
               src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.jpg'
-              alt=''
+              alt='Career or Baby ?'
               width={500}
               height={500}
             />
@@ -132,7 +132,7 @@ const CareerOrBaby = () => {
           <div className='max-w-xl'>
             <Image
               src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/Female_fertility-min_yvazig.jpg'
-              alt='Male Infertility'
+              alt='Female Infertility'
               className='rounded-3xl'
               width={500}
               height={500}
@@ -240,7 +240,7 @@ const CareerOrBaby = () => {
           <div className='max-w-xl'>
             <Image
               src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215523/blogs/Egg_Freezing-min_zyhjfb.jpg'
-              alt='Male Infertility'
+              alt='Sperm Freezing'
               className='rounded-3xl'
               width={500}
               height={500}
@@ -256,7 +256,7 @@ const CareerOrBaby = () => {
           <div className='max-w-xl'>
             <Image
               src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/Sperm_Freezing-min_atfspg.jpg'
-              alt='Male Infertility'
+              alt='Egg Freezing'
               className='rounded-3xl'
               width={500}
               height={500}
