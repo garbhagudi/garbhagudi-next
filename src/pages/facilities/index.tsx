@@ -85,12 +85,7 @@ const IndexPage = ({ articles }: Article) => {
           {articles.map(
             (item) =>
               item.articleType === 'facilities' && (
-                <Link
-                  href={`fertility-center/${item.slug}`}
-                  passHref
-                  key={item.id}
-                  className='group'
-                >
+                <Link href={`facilities/${item.slug}`} passHref key={item.id} className='group'>
                   <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-600 dark:hover:bg-gray-600 md:w-96'>
                     <div className='w-1/3'>
                       <Image
