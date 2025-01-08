@@ -42,7 +42,7 @@ const ParagraphSection = () => {
           width={350}
           className='mb-5 mt-10 rounded-lg'
           src={banner}
-          alt='Section Image'
+          alt='Holistic approach to fertility - Section Image'
         />
       </div>
     </div>

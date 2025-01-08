@@ -41,7 +41,7 @@ export default function Journies() {
                     }
                     width={200}
                     height={150}
-                    alt={`Image `}
+                    alt={ele.name}
                     loading='lazy'
                   />
                 </div>

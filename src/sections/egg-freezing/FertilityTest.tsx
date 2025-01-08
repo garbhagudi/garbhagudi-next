@@ -51,7 +51,7 @@ export default function FertilityTest() {
           src={
             'https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Creatives-01_dnioaj.webp'
           }
-          alt={''}
+          alt={'Fertility Test'}
           width={100}
           height={100}
           className='h-full w-full rounded-md md:h-[24em]'

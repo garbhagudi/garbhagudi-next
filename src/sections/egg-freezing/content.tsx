@@ -20,7 +20,7 @@ export default function Content() {
             src={
               'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/ld50vuhzlttzu1pzikx8.png'
             }
-            alt='Image 1'
+            alt='eggFreezing image 1'
             width={100}
             height={100}
             loading='lazy'
@@ -32,7 +32,7 @@ export default function Content() {
             src={
               'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567197/eggFreezing/da3109fxnfronek7kcxo.png'
             }
-            alt='Image 2'
+            alt='eggFreezing image 2'
             width={100}
             height={100}
             loading='lazy'
@@ -44,7 +44,7 @@ export default function Content() {
             src={
               'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567197/eggFreezing/scmqnfg4rnjfnfmjtibw.png'
             }
-            alt='Image 3'
+            alt='eggFreezing image 3'
             width={100}
             height={100}
             loading='lazy'
