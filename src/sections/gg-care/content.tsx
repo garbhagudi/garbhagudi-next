@@ -27,17 +27,19 @@ const Contact = () => {
                         <MdAlternateEmail className='inline-flex' /> {items.email}
                       </div>
                     </Link>
-                    <div className='mt-1'>
-                      <div className='sr-only'>Phone number</div>
-                      <Link
-                        href={`tel:${items.phone}`}
-                        className='text-gg-500 hover:underline dark:text-gg-400'
-                      >
-                        <div>
-                          <MdPhone className='inline-block h-5 w-5' /> {items.phone}
-                        </div>
-                      </Link>
-                    </div>
+                    {items.phone && (
+                      <div className='mt-1'>
+                        <div className='sr-only'>Phone number</div>
+                        <Link
+                          href={`tel:${items.phone}`}
+                          className='text-gg-500 hover:underline dark:text-gg-400'
+                        >
+                          <div>
+                            <MdPhone className='inline-block h-5 w-5' /> {items.phone}
+                          </div>
+                        </Link>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
@@ -120,13 +122,11 @@ export const contactData = {
       id: 3,
       name: 'Human Resources',
       email: 'hr@garbhagudi.com',
-      phone: '+91 96060 02999',
     },
     {
       id: 4,
       name: 'Partnership',
       email: 'jayaram@garbhagudi.com',
-      phone: '+91 96060 02999',
     },
   ],
   locations: [
