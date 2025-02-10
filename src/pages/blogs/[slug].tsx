@@ -10,7 +10,6 @@ import Loading from 'components/Loading';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
-import Link from 'next/link';
 import { throttledFetch } from 'lib/throttle';
 import LandingPagePopUp from 'components/landingPagePopUp';
 
