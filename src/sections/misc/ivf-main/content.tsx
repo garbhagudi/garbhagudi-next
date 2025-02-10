@@ -48,6 +48,8 @@ const Content = () => {
                     className='relative w-full bg-white/10 dark:brightness-75 dark:invert'
                     alt='Process of IVF Treatment in Bangalore'
                     loading='lazy'
+                    width={100}
+                    height={100}
                   />
                 </div>
               </div>

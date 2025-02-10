@@ -645,11 +645,6 @@ export const terms = [
     slug: 'getting-pregnant-with-pcos',
   },
   {
-    title: 'Know About Gestational Surrogacy!',
-    id: 'cl096lgmh3sgi0cphwfwr3swb',
-    slug: 'know-about-gestational-surrogacy',
-  },
-  {
     title: 'Nurturing Your New-born',
     id: 'cl096o8vt3qnt0dposj1gmno2',
     slug: 'nurturing-your-new-born',
@@ -783,11 +778,6 @@ export const terms = [
     title: 'Ways to Cope with Menopause Symptoms',
     id: 'cl2op4xgp3iwx0do2yoea6ht7',
     slug: 'ways-to-cope-with-menopause-symptoms',
-  },
-  {
-    title: 'All about the latest ART & Surrogacy Bill!',
-    id: 'cl2sscr393nk90do82zafjb4m',
-    slug: 'all-about-the-latest-art-and-surrogacy-bill',
   },
   {
     title: 'All You Need to Know About The UPT',

@@ -169,12 +169,6 @@ const data = [
             of IVF in order to become pregnant. Each additional cycle can add to the overall cost of
             treatment.
           </li>
-          <li>
-            <strong>Gestational surrogacy:</strong> If you are unable to carry a pregnancy to term,
-            you may choose to use a gestational surrogate. This can add to the cost of the
-            treatment, as you will need to pay the surrogate's fees as well as any additional
-            medical expenses.
-          </li>
         </ul>
         It is important to discuss the potential{' '}
         <Link
