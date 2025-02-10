@@ -95,7 +95,6 @@ export const healthKeywords = [
   'Egg freezing',
   'Sperm donation',
   'Egg donation',
-  'Surrogacy',
   'LGBTQ+ family',
   'Genetic screening',
   'Embryo grading',
