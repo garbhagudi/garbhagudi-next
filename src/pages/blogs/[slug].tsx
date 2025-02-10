@@ -319,18 +319,6 @@ const Blog = ({ blog }) => {
                   {blog?.title}
                 </span>
               </h1>
-              <Link href={`/fertility-experts/${blog?.doctor?.slug}`}>
-                <div className='mt-4 flex items-center justify-center space-x-4 text-center font-lexend text-base font-semibold uppercase tracking-wide text-gg-500 dark:text-gray-200'>
-                  <Image
-                    src={blog?.doctor?.image?.url}
-                    alt={blog?.doctor?.imageAlt || blog?.doctor?.name}
-                    width={40}
-                    height={40}
-                    className='h-12 w-12 rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 md:h-16 md:w-16'
-                  />
-                  <div>{blog?.doctor?.name}</div>
-                </div>
-              </Link>
               <Image
                 className='my-8 w-full rounded-lg'
                 src={blog?.image?.url}
