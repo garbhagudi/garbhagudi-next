@@ -5,23 +5,23 @@ import Link from 'next/link';
 const metrics = [
   {
     id: 1,
-    stat: '10000+',
+    stat: '10500+',
     emphasis: 'Happy Families',
   },
   {
     id: 2,
-    stat: '150+',
+    stat: '220+',
     emphasis: 'Free Fertility Awareness Camps',
   },
   {
     id: 3,
-    stat: '65-73%',
-    emphasis: 'IVF Success Rate',
+    stat: '7',
+    emphasis: 'Infertility Centres Across Bangalore',
   },
   {
     id: 4,
-    stat: '7',
-    emphasis: 'Infertility Centres Across Bangalore',
+    stat: '',
+    emphasis: 'Excellent IVF Success Rate',
   },
 ];
 
@@ -61,7 +61,7 @@ const Stat = () => {
             bundles of joy. Along with our quality of treatment and care, some of the other
             contributing factors for achieving high success rates are:
           </p>
-          <div className='mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2'>
+          <div className='mt-12 flex flex-col gap-x-6 gap-y-8'>
             {metrics.map((item) => (
               <p key={item.id}>
                 <span className='block font-heading text-2xl font-bold text-gray-800 dark:text-gray-200'>
