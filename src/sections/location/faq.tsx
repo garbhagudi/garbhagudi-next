@@ -110,8 +110,7 @@ const Faq = ({ branch, doctors }) => {
                 What are our success rates for IVF treatments in {branch}?
               </h3>
               <div className='md:col-span-8 md:pl-0'>
-                The success rate of of an IVF Treatment depends on numerous factors. At our {branch}{' '}
-                branch the average success rate ranges from 65 - 73%. <br /> <br />
+                The success rate of of an IVF Treatment depends on numerous factors.<br /> <br />
                 It's important to note that IVF success rates can also vary between fertility
                 clinics, so it's important to do your research and choose a reputable clinic with a
                 good track record. Additionally, some clinics may have higher success rates for

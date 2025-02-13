@@ -68,7 +68,7 @@ const Overview = () => {
                       systems, efficient processes, visionary leaders and technological forays. Most
                       importantly, with a fantastic team of doctors, embryologists and staff. <br />
                       <br /> The centre has been instrumental in creating happy endings in more than
-                      10000 + couples’ lives by ensuring they have their biological child. With our
+                      10500 + couples’ lives by ensuring they have their biological child. With our
                       strong team of experts and cutting-edge medical technologies, GarbhaGudi has
                       achieved high success rates in the field of infertility. We remain dedicated
                       to our vision and leave no stone unturned to ensure that the couple can take

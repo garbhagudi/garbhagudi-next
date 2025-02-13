@@ -52,8 +52,7 @@ const Introduction = () => {
           Unmatched Success Rates
         </h3>
         <p className='font-lexend text-gray-800 dark:text-gray-200'>
-          GarbhaGudi boasts one of the highest success rates in the industry, ranging from 65% to
-          73% in IVF treatments. Our transparency in pricing, affordable treatment options, and
+          GarbhaGudi boasts one of the highest success rates in the industry. Our transparency in pricing, affordable treatment options, and
           financing choices, including 0% interest plans, ensure that financial constraints never
           stand in the way of realizing your dream of parenthood.
         </p>
