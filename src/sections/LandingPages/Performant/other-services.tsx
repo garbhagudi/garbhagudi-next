@@ -45,9 +45,7 @@ const OtherServices = () => {
                 GarbhaGudi Average*
               </h4>
               <div className='h-5 w-full rounded-full bg-brandPurple'>
-                <div className='flex h-5 w-[75%] items-center justify-center rounded-l-full bg-brandPurpleDark text-center text-sm font-extrabold leading-none text-white'>
-                  65-73%
-                </div>
+                <div className='flex h-5 w-[75%] items-center justify-center rounded-l-full bg-brandPurpleDark text-center text-sm font-extrabold leading-none text-white'></div>
               </div>
             </div>
           </div>

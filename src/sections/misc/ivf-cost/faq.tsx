@@ -20,9 +20,6 @@ const faqs = [
         35 have a higher likelihood of success. The success rate of this most widely used assisted
         reproductive technology (ART) is often assessed in terms of live births per embryo transfer.
         The live birth rate is the number of live births per embryo transfer.
-        <br />
-        <br />
-        At GarbhaGudi, the average success rate of IVF is around 65-73%
       </div>
     ),
   },
@@ -41,7 +38,6 @@ const faqs = [
     answer:
       'Millions of infants have been born with this technique across the world to far, and the research shows that there is no statistically significant increase in the incidence of abnormalities.',
   },
-  //
 ];
 
 const Faq = () => {

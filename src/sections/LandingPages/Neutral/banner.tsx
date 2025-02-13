@@ -62,7 +62,7 @@ const Banner = () => {
                     Experience
                   </div>
                   <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
-                    <span className='font-bold text-brandPink dark:text-gg-400'>65-73%</span> IVF
+                    <span className='font-bold text-brandPink dark:text-gg-400'></span>Excellent IVF
                     Success Rate
                   </div>
                   <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
