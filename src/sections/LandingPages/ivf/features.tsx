@@ -20,7 +20,7 @@ const Features = () => {
               <div className='mr-5 flex flex-col items-center'>
                 <FaPercent className='text-5xl text-brandPurpleDark dark:text-gg-500' />
                 <p className='text-l font-semibold'>
-                  Industry-Leading 75% IVF Success Rates: We take pride in our exceptional success
+                  Industry-Leading IVF Success Rates: We take pride in our exceptional success
                   rates, standing out as the best in the industry. Our commitment to excellence
                   ensures a higher likelihood of successful outcomes for our patients.
                 </p>
