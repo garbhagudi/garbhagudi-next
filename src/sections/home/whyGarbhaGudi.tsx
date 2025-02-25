@@ -30,7 +30,7 @@ const WhyGG = () => {
                     </Link>{' '}
                     with over 13 years of experience in providing comprehensive fertility solutions.
                     It has a renowned team of specialists, state-of-the-art infrastructure,
-                    transparent pricing, and consistently high success rates (75%) in assisted
+                    transparent pricing, and consistently high success rates in assisted
                     reproductive techniques. GarbhaGudi's holistic approach to{' '}
                     <Link
                       href={'/treatments/infertility'}
