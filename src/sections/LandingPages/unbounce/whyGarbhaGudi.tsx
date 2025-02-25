@@ -16,7 +16,7 @@ const WhyGarbhaGudi = () => {
               <div className='flex flex-col items-center justify-start space-y-8'>
                 <FaPercent className='text-5xl text-brandPurpleDark dark:text-gg-500' />
                 <p className='leading-relaxed'>
-                  Industry-Leading 75% IVF Success Rates: We take pride in our exceptional success
+                  Industry-Leading IVF Success Rates: We take pride in our exceptional success
                   rates, standing out as the best in the industry. Our commitment to excellence
                   ensures a higher likelihood of successful outcomes for our patients.
                 </p>
