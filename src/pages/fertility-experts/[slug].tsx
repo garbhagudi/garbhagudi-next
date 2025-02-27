@@ -9,6 +9,7 @@ import { useRouter } from 'next/router';
 import Share from 'components/share';
 import { SiGooglemaps } from 'react-icons/si';
 import Image from 'next/image';
+import VideoTestimonials from 'sections/fertility-experts/videoTestimonials';
 
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
@@ -43,6 +44,7 @@ export const getStaticProps = async ({ params }) => {
           newBelRoadPhysical
           nagarbhaviOnline
           nagarbhaviPhysical
+          videoTestimonials
         }
       }
     `,
@@ -659,6 +661,11 @@ const Doctor = ({ doctor }) => {
                       </div>
                     </div>
                   </div>
+                  {doctor?.videoTestimonials?.length > 0 && (
+                    <div className='my-5'>
+                      <VideoTestimonials testimonials={doctor?.videoTestimonials} />
+                    </div>
+                  )}
                   <Share pinmedia={doctor?.image?.url} />
                 </div>
               </div>
