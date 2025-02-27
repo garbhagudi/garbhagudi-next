@@ -18,8 +18,6 @@ const navigation = {
     { name: 'IUI Treatment', href: '/treatments/iui-treatment-in-bangalore' },
     { name: 'IVF Treatment', href: '/treatments/ivf-treatment-in-bangalore' },
     { name: 'Laparoscopy', href: '/treatments/laparoscopy-treatment-in-bangalore' },
-    { name: 'Embryo Donation', href: '/treatments/embryo-donation' },
-    { name: 'Egg Donation', href: '/treatments/egg-donation' },
     { name: 'FET', href: '/treatments/frozen-embryo-transfer' },
   ],
   locations: [
