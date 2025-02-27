@@ -45,6 +45,16 @@ export const getStaticProps = async ({ params }) => {
           nagarbhaviOnline
           nagarbhaviPhysical
           videoTestimonials
+          keyFeaturesOfTreatment
+          approachToIvfTreatment
+          experienceExpertise {
+            raw
+            text
+          }
+          educationCredentials {
+            raw
+            text
+          }
         }
       }
     `,
@@ -654,12 +664,47 @@ const Doctor = ({ doctor }) => {
                   )}
                 </div>
                 <div className='mt-10 border-t border-gray-300 py-10'>
-                  <div className='flex justify-center'>
+                  <div className='flex flex-col items-center justify-center gap-y-2'>
                     <div className='w-full px-4 lg:w-9/12'>
+                      <h1 className='text-2xl font-bold'>{`About ${doctor?.name}`}</h1>
                       <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
                         <RichText content={doctor?.bio?.raw?.children} />
                       </div>
                     </div>
+                    {doctor?.educationCredentials && (
+                      <div className='w-full px-4 lg:w-9/12'>
+                        <h1 className='text-2xl font-bold'>Education & Credentials</h1>
+                        <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
+                          <RichText content={doctor?.educationCredentials?.raw?.children} />
+                        </div>
+                      </div>
+                    )}
+                    {doctor?.experienceExpertise && (
+                      <div className='w-full px-4 lg:w-9/12'>
+                        <h1 className='text-2xl font-bold'>Experience & Expertise</h1>
+                        <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
+                          <RichText content={doctor?.experienceExpertise?.raw?.children} />
+                        </div>
+                      </div>
+                    )}
+
+                    {doctor?.approachToIvfTreatment && (
+                      <div className='w-full px-4 lg:w-9/12'>
+                        <h1 className='text-2xl font-bold'>Approach to IVF Treatment</h1>
+                        <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
+                          {doctor?.approachToIvfTreatment}
+                        </div>
+                      </div>
+                    )}
+
+                    {doctor?.keyFeaturesOfTreatment && (
+                      <div className='w-full px-4 lg:w-9/12'>
+                        <h1 className='text-2xl font-bold'>Key Features of Treatment</h1>
+                        <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
+                          {doctor?.keyFeaturesOfTreatment}
+                        </div>
+                      </div>
+                    )}
                   </div>
                   {doctor?.videoTestimonials?.length > 0 && (
                     <div className='my-5'>
