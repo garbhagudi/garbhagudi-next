@@ -196,7 +196,8 @@ export const contactData = {
       address: (
         <div>
           <p>
-            4TH floor, Chirag Towers, Born Babies Building, 24 & 64, Service Rd, next to कलामंदिर,{' '}
+            2nd Floor, Balaji Plaza, 95/1, Abdul Kalam Layout, opp. ISRO Main Gate, above Karnataka
+            Bank, Aswath Nagar,
             <br />
             Marathahalli,
           </p>
