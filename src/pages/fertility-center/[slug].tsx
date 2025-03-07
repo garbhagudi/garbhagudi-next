@@ -8,6 +8,7 @@ import Share from 'components/share';
 import Loading from 'components/Loading';
 import Image from 'next/image';
 import type { RichTextContent } from '@graphcms/rich-text-types';
+import FAQs from 'components/FAQs';
 
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
@@ -26,6 +27,14 @@ export const getStaticProps = async ({ params }) => {
           content {
             raw
             text
+          }
+          faq {
+            id
+            question
+            answer {
+              raw
+              text
+            }
           }
         }
       }
@@ -75,6 +84,13 @@ interface BlogProps {
       };
     };
     imageAlt: string;
+    faq: [
+      {
+        id: string;
+        question: string;
+        answer: string;
+      },
+    ];
   };
 }
 
@@ -86,6 +102,7 @@ const Blog = ({ article }: BlogProps) => {
   }
 
   const title = `${article?.title} | GarbhaGudi`;
+
   return (
     <div>
       <Head>
@@ -226,6 +243,7 @@ const Blog = ({ article }: BlogProps) => {
           </div>
         </div>
       </div>
+      <FAQs data={article?.faq} activeIndex={article?.faq[0]?.id} />
     </div>
   );
 };
