@@ -66,7 +66,16 @@ export const getStaticPaths = async () => {
     fallback: true,
   };
 };
-
+interface FaqProps {
+  id: string;
+  question: string;
+  answer: {
+    raw: {
+      children: RichTextContent;
+    };
+    text: string;
+  };
+}
 interface BlogProps {
   article: {
     title: string;
@@ -83,27 +92,22 @@ interface BlogProps {
       };
     };
     imageAlt: string;
-    faq: [
-      {
-        id: string;
-        question: string;
-        answer: string;
-      },
-    ];
+    faq: [FaqProps];
   };
 }
 
 const Blog = ({ article }: BlogProps) => {
-  const router = useRouter();
-
-  if (router.isFallback) {
-    return <Loading />;
-  }
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loading />;
+  }
+
   const title = `${article?.title} | GarbhaGudi`;
 
   return (

@@ -1,11 +1,20 @@
 import { RichText } from '@graphcms/rich-text-react-renderer';
+import { RichTextContent } from '@graphcms/rich-text-types';
 import React, { useState } from 'react';
 import AccordionLayout from 'sections/Faq/FaqLayout';
 
-const FAQs = ({ data, activeIndex }: any) => {
-  const [activeIndex1, setActiveIndex1] = useState(activeIndex);
-  console.log(activeIndex1);
-
+interface FaqProps {
+  id: string;
+  question: string;
+  answer: {
+    raw: {
+      children: RichTextContent;
+    };
+    text: string;
+  };
+}
+const FAQs = ({ data, activeIndex }: { data: [FaqProps]; activeIndex: string }) => {
+  const [activeIndex1, setActiveIndex1] = useState<string | number | null>(activeIndex);
   return (
     data?.length > 0 && (
       <div className='bg-fuchsia-50 dark:bg-gray-800'>
@@ -14,7 +23,7 @@ const FAQs = ({ data, activeIndex }: any) => {
         </h2>
         <div className='px-3 pb-10 lg:pb-16'>
           <div className='mx-auto mt-10 flex max-w-6xl flex-col justify-center'>
-            {data?.map((items: any) => (
+            {data?.map((items: FaqProps) => (
               <AccordionLayout
                 title={items?.question}
                 key={items?.id}

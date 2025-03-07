@@ -68,6 +68,17 @@ export const getStaticPaths = async () => {
   };
 };
 
+interface FaqProps {
+  id: string;
+  question: string;
+  answer: {
+    raw: {
+      children: RichTextContent;
+    };
+    text: string;
+  };
+}
+
 interface BlogProps {
   article: {
     title: string;
@@ -84,13 +95,7 @@ interface BlogProps {
       };
     };
     imageAlt: string;
-    faq: [
-      {
-        id: string;
-        question: string;
-        answer: string;
-      },
-    ];
+    faq: [FaqProps];
   };
 }
 

@@ -5,9 +5,9 @@ import { Transition } from '@headlessui/react';
 interface AccordionLayoutProps {
   title: string;
   children: React.ReactNode;
-  index: number;
-  activeIndex: number | null;
-  setActiveIndex: (index: number | null) => void;
+  index: number | string;
+  activeIndex: string | number | null;
+  setActiveIndex: (index: number | string) => void;
 }
 const AccordionLayout = ({
   title,
@@ -16,7 +16,7 @@ const AccordionLayout = ({
   activeIndex,
   setActiveIndex,
 }: AccordionLayoutProps) => {
-  const handleSetIndex = (index: number) => {
+  const handleSetIndex = (index: number | string) => {
     if (activeIndex === index) {
       setActiveIndex(null);
     } else {
