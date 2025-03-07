@@ -3,7 +3,7 @@ import Link from 'next/link';
 import AccordionLayout from 'sections/Faq/FaqLayout';
 
 const Faq = () => {
-  const [activeIndex1, setActiveIndex1] = React.useState(1);
+  const [activeIndex1, setActiveIndex1] = React.useState<string | number>(1);
   return (
     <div>
       <div className='mt-6 bg-fuchsia-50 dark:bg-gray-700'>

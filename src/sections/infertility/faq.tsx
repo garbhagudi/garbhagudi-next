@@ -2,7 +2,7 @@ import React from 'react';
 import AccordionLayout from 'sections/Faq/FaqLayout';
 
 const Faq = () => {
-  const [activeIndex1, setActiveIndex1] = React.useState(1);
+  const [activeIndex1, setActiveIndex1] = React.useState<string | number>(1);
   return (
     <div className='bg-fuchsia-50 dark:bg-gray-700'>
       <h2 className='lg:pt:16 pt-10 text-center font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 lg:text-4xl'>

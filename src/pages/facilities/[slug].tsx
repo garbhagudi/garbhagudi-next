@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
@@ -8,7 +8,7 @@ import Share from 'components/share';
 import Loading from 'components/Loading';
 import Image from 'next/image';
 import type { RichTextContent } from '@graphcms/rich-text-types';
-
+import FAQs from 'components/FAQs';
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
     query: gql`
@@ -26,6 +26,14 @@ export const getStaticProps = async ({ params }) => {
           content {
             raw
             text
+          }
+          faq {
+            id
+            question
+            answer {
+              raw
+              text
+            }
           }
         }
       }
@@ -58,7 +66,16 @@ export const getStaticPaths = async () => {
     fallback: true,
   };
 };
-
+interface FaqProps {
+  id: string;
+  question: string;
+  answer: {
+    raw: {
+      children: RichTextContent;
+    };
+    text: string;
+  };
+}
 interface BlogProps {
   article: {
     title: string;
@@ -75,10 +92,16 @@ interface BlogProps {
       };
     };
     imageAlt: string;
+    faq: [FaqProps];
   };
 }
 
 const Blog = ({ article }: BlogProps) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   const router = useRouter();
 
   if (router.isFallback) {
@@ -86,6 +109,7 @@ const Blog = ({ article }: BlogProps) => {
   }
 
   const title = `${article?.title} | GarbhaGudi`;
+
   return (
     <div>
       <Head>
@@ -220,12 +244,13 @@ const Blog = ({ article }: BlogProps) => {
               />
             </figure>
             <div className='text-gray-800 dark:text-gray-200'>
-              <RichText content={article?.content?.raw?.children} />
+              {isMounted && <RichText content={article?.content?.raw?.children} />}
             </div>
             <Share pinmedia={article?.image?.url} />
           </div>
         </div>
       </div>
+      <FAQs data={article?.faq} activeIndex={article?.faq[0]?.id} />
     </div>
   );
 };

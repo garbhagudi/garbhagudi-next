@@ -3,7 +3,7 @@ import AccordionLayout from 'sections/Faq/FaqLayout';
 import Link from 'next/link';
 
 const Faq = () => {
-  const [activeIndex1, setActiveIndex1] = useState(1);
+  const [activeIndex1, setActiveIndex1] = useState<string | number>(1);
   return (
     <div className='scroll-m-16 px-3' id='faq'>
       <h2 className='pt-12 text-center font-heading text-2xl font-semibold text-gray-800 dark:text-gray-200 lg:text-3xl'>
