@@ -66,7 +66,7 @@ const MapSection = ({ maplink, address, description, doctors, title }: MapSectio
                 </div>
                 <p className='font-qs text-sm leading-relaxed text-gray-800 dark:text-gray-200'>
                   <Link href='https://wa.me/918884183338?text=Hi.' target='_blank' rel='noreferrer'>
-                    +91 888 418 3338
+                    +91 8884 1833 38
                   </Link>
                 </p>
               </div>

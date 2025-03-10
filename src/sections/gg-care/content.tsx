@@ -110,7 +110,7 @@ export const contactData = {
       id: 1,
       name: 'Appointments & Queries',
       email: 'dreams@garbhagudi.com',
-      phone: '+91 94809 48005',
+      phone: '+91 9480 9480 05',
     },
     {
       id: 2,
@@ -142,7 +142,7 @@ export const contactData = {
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560050</p>
         </div>
       ),
-      phone: '+91 98869 15556',
+      phone: '+91 9886 9155 56',
       directionLink: 'https://g.page/GG1-HN?share',
     },
     {
@@ -157,7 +157,7 @@ export const contactData = {
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560043</p>
         </div>
       ),
-      phone: '+91 88614 33339',
+      phone: '+91 8861 4333 39',
       directionLink: 'https://g.page/GarbhaGudi-IVF-Bangalore?share',
     },
     {
@@ -172,7 +172,7 @@ export const contactData = {
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560004</p>
         </div>
       ),
-      phone: '+91 99724 63355',
+      phone: '+91 9972 4633 55',
       directionLink: 'https://g.page/ggivf?share',
     },
     {
@@ -187,7 +187,7 @@ export const contactData = {
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560100</p>
         </div>
       ),
-      phone: '+91 88618 11116',
+      phone: '+91 8861 8111 16',
       directionLink: 'https://g.page/GG4-EC?share',
     },
     {
@@ -204,7 +204,7 @@ export const contactData = {
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560037</p>
         </div>
       ),
-      phone: '+91 81051 81515',
+      phone: '+91 8105 1815 15',
       directionLink: 'https://goo.gl/maps/kxhfM5SCZuq6EDnE9',
     },
     {

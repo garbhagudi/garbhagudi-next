@@ -162,7 +162,7 @@ const IndexPage = ({ branches }: Branches) => {
                                 target='_blank'
                                 rel='noreferrer'
                               >
-                                +91 888 418 3338
+                                +91 8884 1833 38
                               </Link>
                             </div>
                           </div>
