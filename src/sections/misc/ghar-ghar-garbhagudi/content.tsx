@@ -79,7 +79,7 @@ export const ContentTwo = () => {
                 href='https://wa.me/+919108910832'
                 className='font-semibold hover:text-brandPink hover:underline'
               >
-                +919108910832
+                +91 9108 9108 32
               </a>
               , and you may receive special rewards for selected posts.
             </li>
