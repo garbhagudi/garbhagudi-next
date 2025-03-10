@@ -30,6 +30,11 @@ export const getStaticProps = async ({ params }) => {
       slug: params.slug,
     },
   });
+  if (data?.error) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       diagnosis: data.diagnosis,
