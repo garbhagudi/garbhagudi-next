@@ -53,18 +53,6 @@ export const TreatmentHeader = {
     },
     {
       id: '9',
-      name: 'Embryo Donation',
-      icon: 'https://media.graphassets.com/hMO5cEHeSK2oF72ZWAs9',
-      link: '/treatments/embryo-donation',
-    },
-    {
-      id: '10',
-      name: 'Egg Donation',
-      icon: 'https://media.graphassets.com/LLcPNLXqTVenv25alNry',
-      link: '/treatments/egg-donation',
-    },
-    {
-      id: '11',
       name: 'Egg Freezing',
       icon: 'https://media.graphassets.com/supeMyA2Q3KcYwbmmvv9',
       link: '/treatments/ivf-treatment-egg-freezing',
