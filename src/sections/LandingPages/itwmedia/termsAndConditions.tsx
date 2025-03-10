@@ -24,7 +24,7 @@ const TermsAndCondition = () => {
         <li>
           In case of any issues or questions related to the offer, users may contact us at{' '}
           <a href='tel:+919108910832' className='text-gg-500 underline'>
-            +91 9108-9108-32
+            +91 9108 9108 32
           </a>
           .
         </li>

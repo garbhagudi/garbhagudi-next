@@ -12,7 +12,7 @@ const Header = () => {
             href='tel:+919071234006'
             className='rounded-md bg-gg-500 px-3 py-2 font-lexend text-sm font-semibold text-white transition duration-300 ease-in-out hover:bg-gg-600'
           >
-            +919480948076
+            +91 9480 9480 76
           </Link>
         </div>
       </div>
