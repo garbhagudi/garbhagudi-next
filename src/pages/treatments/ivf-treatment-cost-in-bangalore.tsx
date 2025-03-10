@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from 'sections/misc/ivf-cost/hero';
 import Image from 'next/image';
 import Packages from 'sections/misc/ivf-cost/packages';
 import Faq from 'sections/misc/ivf-cost/faq';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const IvfCost = () => {
   const title = `Low IVF Cost in Bangalore`;
+  const router = useRouter();
+  const redirectToPage = () => {
+    const targetUrl = '/treatments/ivf-treatment-in-bangalore';
+    router.push(targetUrl);
+  };
+  useEffect(() => {
+    redirectToPage();
+  }, []);
   return (
     <div>
       <Head>
