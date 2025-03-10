@@ -671,17 +671,17 @@ const Doctor = ({ doctor }) => {
                         <RichText content={doctor?.bio?.raw?.children} />
                       </div>
                     </div>
-                    {doctor?.educationCredentials && (
+                    {doctor?.educationCredentials?.text && (
                       <div className='w-full px-4 lg:w-9/12'>
-                        <h1 className='text-2xl font-bold'>Education & Credentials</h1>
+                        <h2 className='text-2xl font-bold'>Education & Credentials</h2>
                         <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
                           <RichText content={doctor?.educationCredentials?.raw?.children} />
                         </div>
                       </div>
                     )}
-                    {doctor?.experienceExpertise && (
+                    {doctor?.experienceExpertise?.text && (
                       <div className='w-full px-4 lg:w-9/12'>
-                        <h1 className='text-2xl font-bold'>Experience & Expertise</h1>
+                        <h2 className='text-2xl font-bold'>Experience & Expertise</h2>
                         <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
                           <RichText content={doctor?.experienceExpertise?.raw?.children} />
                         </div>
@@ -690,7 +690,7 @@ const Doctor = ({ doctor }) => {
 
                     {doctor?.approachToIvfTreatment && (
                       <div className='w-full px-4 lg:w-9/12'>
-                        <h1 className='text-2xl font-bold'>Approach to IVF Treatment</h1>
+                        <h2 className='text-2xl font-bold'>Approach to IVF Treatment</h2>
                         <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
                           {doctor?.approachToIvfTreatment}
                         </div>
@@ -699,7 +699,7 @@ const Doctor = ({ doctor }) => {
 
                     {doctor?.keyFeaturesOfTreatment && (
                       <div className='w-full px-4 lg:w-9/12'>
-                        <h1 className='text-2xl font-bold'>Key Features of Treatment</h1>
+                        <h2 className='text-2xl font-bold'>Key Features of Treatment</h2>
                         <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
                           {doctor?.keyFeaturesOfTreatment}
                         </div>
