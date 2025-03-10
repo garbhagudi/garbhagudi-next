@@ -4,7 +4,7 @@ import AccordionLayout from 'sections/Faq/FaqLayout';
 import banner from 'assets/FAQImage.jpg';
 
 const Faq = () => {
-  const [activeIndex1, setActiveIndex1] = React.useState(1);
+  const [activeIndex1, setActiveIndex1] = React.useState<string | number>(1);
   return (
     <div className='mx-auto max-w-7xl px-4' id='faq'>
       <div className='xl:max-w-3xl'>
