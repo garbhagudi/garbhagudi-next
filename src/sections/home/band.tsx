@@ -18,7 +18,7 @@ const Band = () => {
         <div className='mx-auto rounded-xl bg-gray-300 px-4 py-2 font-content text-lg font-semibold dark:bg-gray-700 lg:w-96'>
           For Appointments Call:{' '}
           <Link
-            href={'tel:+919480948005'}
+            href={'tel:+919108910832'}
             className='block text-gg-500 hover:underline dark:text-gg-400 md:inline-flex'
           >
             +91 9108 9108 32
