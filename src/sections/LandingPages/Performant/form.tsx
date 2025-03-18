@@ -1,13 +1,11 @@
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import Image from 'next/image';
 const Form = () => {
   const router = useRouter();
   const {
     register,
     handleSubmit,
-    setValue,
     reset,
     formState: { errors },
   } = useForm({
@@ -22,16 +20,8 @@ const Form = () => {
   });
   const [load, setLoad] = useState(false);
 
-  useEffect(() => {
-    if (router.query) {
-      const { utm_campaign }: any = router.query;
-      setValue('UTM_Campaign', utm_campaign || '');
-    }
-  }, [router.query, setValue]);
-
   const onSubmit = async (data) => {
     setLoad(true);
-
     try {
       const response = await fetch('https://crm.zoho.com/crm/WebToLeadForm', {
         method: 'POST',
@@ -43,7 +33,9 @@ const Form = () => {
         throw new Error('Network response was not ok');
       }
       setLoad(false);
-      responseData?.data[0]?.code === 'SUCCESS' && router.push('/thank-you.html');
+      if (responseData?.data[0]?.code === 'SUCCESS') {
+        router.push('/thank-you.html');
+      }
     } catch (err) {
       setLoad(false);
       console.log(err);
