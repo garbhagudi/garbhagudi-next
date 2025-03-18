@@ -6,15 +6,15 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
+      rel="dns-prefetch"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="dns-prefetch"
     />
     <link
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
@@ -45,16 +45,13 @@
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"
-      rel="stylesheet"
+      rel="dns-prefetch"
     />
-
     <title>Thank You!</title>
     <!-- Google Tag Manager -->
-    <script>
+    <script defer>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -74,297 +71,86 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5T77DVZ"
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5462HX7"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
+      
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header>
+
+    <header  class="w-full shadow-md bg-gray-100 dark-mode:text-gray-200 dark-mode:bg-gray-800 border-b pb-4 md:pb-2"
+    style="font-family: Nunito">
       <!-- component -->
-      <script
-        src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-        defer
-      ></script>
-      <div
-        class="w-full text-gray-700 bg-gray-100 dark-mode:text-gray-200 dark-mode:bg-gray-800 border-b"
-        style="font-family: Nunito"
-      >
         <div
-          x-data="{ open: false }"
-          class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
+          class="flex flex-col items-center max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
         >
           <div class="p-4 flex flex-row items-center justify-between">
+            <!-- logo and home page link -->
             <a
-              href="https://garbhagudi.com"
+              href="https://www.garbhagudi.com/"
               class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
               ><img
-                src="https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg"
+                src="https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/GG_Logo_lwfiec.svg"
                 alt="logo"
-                width="300px"
-            /></a>
-            <button
-              class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
-              @click="open = !open"
-            >
-              <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                <path
-                  x-show="!open"
-                  fill-rule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                  clip-rule="evenodd"
-                ></path>
-                <path
-                  x-show="open"
-                  fill-rule="evenodd"
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </button>
+                width="210px"
+            /></a>     
           </div>
-          <nav
-            :class="{'flex': open, 'hidden': !open}"
-            class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row"
-          >
-            <a
-              class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-400 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-              href="https://garbhagudi.com"
-              target="_blank"
-              >Home</a
-            >
-            <a
-              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-400 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-              href="https://garbhagudi.com/about/overview"
-              target="_blank"
-              >About Us</a
-            >
-            <a
-              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-400 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-              href="https://garbhagudi.com/gg-care"
-              target="_blank"
-              >GG CARE</a
-            >
-            <a
-              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-400 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-              href="https://garbhagudi.com/careers"
-              target="_blank"
-              >Careers</a
-            >
-            <div
-              @click.away="open = false"
-              class="relative"
-              x-data="{ open: false }"
-            >
-              <button
-                @click="open = !open"
-                class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-400 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-              >
-                <span>Privacy Policy</span>
-                <svg
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  :class="{'rotate-180': open, 'rotate-0': !open}"
-                  class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </button>
-              <div
-                x-show="open"
-                x-transition:enter="transition ease-out duration-100"
-                x-transition:enter-start="transform opacity-0 scale-95"
-                x-transition:enter-end="transform opacity-100 scale-100"
-                x-transition:leave="transition ease-in duration-75"
-                x-transition:leave-start="transform opacity-100 scale-100"
-                x-transition:leave-end="transform opacity-0 scale-95"
-                class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48"
-              >
-                <div
-                  class="px-2 py-2 bg-gray-100 rounded-md shadow dark-mode:bg-gray-800"
-                >
-                  <a
-                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-400 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                    href="https://garbhagudi.com/legal/privacy-policy"
-                    target="_blank"
-                    >Privacy Policy</a
-                  >
-                  <a
-                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-400 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                    href="https://garbhagudi.com/legal/refund-policy"
-                    target="_blank"
-                    >Refund Policy</a
-                  >
-                  <a
-                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-400 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                    href="https://garbhagudi.com/legal/terms-and-conditions"
-                    target="_blank"
-                    >Terms and Condition</a
-                  >
-                </div>
-              </div>
+          <!-- contact us -->
+          <a href="tel:+919108910832" class="flex items-center gap-2 pr-2 shadow-md rounded-md" style="background-color: rgb(209, 213, 219); width: fit-content;">
+            <div class="rounded-md w-10 h-10 flex items-center justify-center text-white" style="background-color: rgb(234, 75, 106);">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1.2em" width="1.2em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
             </div>
-          </nav>
+            <h1 class="text-lg font-semibold" style="color: rgb(234, 75, 106);">+91 9108 9108 32</h1>
+           </a>
         </div>
-      </div>
     </header>
-    <main
-      class="flex-auto flex items-center justify-center text-center text-gray-400 py-16 px-4 sm:px-6 lg:px-8"
-    >
-      <div>
-        <h1
-          class="text-3xl sm:text-4.5xl text-gray-800 font-extrabold mb-4"
-          style="font-family: b612"
-        >
-          Thank you!
-        </h1>
-        <p
-          class="mb-8 max-w-lg mx-auto text-gray-600"
-          style="font-family: Nunito"
-        >
-          Our representative will get in touch with you soon!
-          <strong class="font-semibold text-gray-800"
-            >Feel free to browse our website a little more
-          </strong>
-          to get more information
-        </p>
-        <a
-          href="https://garbhagudi.com"
-          class="inline-flex justify-center w-full max-w-[8rem] bg-gray-700 text-gray-200 rounded-md text-sm font-semibold py-3 px-4 hover:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
-          style="font-family: Nunito"
-          >Home</a
-        >
+
+    <main class="flex-grow" style="background-color: rgb(253, 244, 255);">
+      <div
+        class="flex flex-col gap-5 md:flex-row items-center justify-center text-center h-full w-full"
+      >
+        <div class="w-full md:w-2/6 order-2 md:order-1">
+          <h1 class="text-4xl text-gray-900 font-bold mb-4">
+            <span class="border-b-2 pb-0.5" style="border-color: rgb(32, 141, 174);">
+              Thank 
+            </span>you
+          </h1>
+          <p class="text-gray-700">
+            We have forward your request to the concerned team and an agent will contact you shortly.
+          </p>
+          <p class="text-gray-700">
+            Meanwhile, you can go through our website and learn more about our services and features.
+          </p>
+        </div>
+       <img src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1742214671/GGIRHR/Images/Couple-01_iiwu8i.png" alt="GarbhaGudi Logo" class="order-1 md:order-2 h-72 md:h-96">
       </div>
     </main>
-    <footer
-      class="relative z-10 flex-none pb-6 flex items-start justify-center text-gray-400 px-4 sm:px-6 lg:px-8"
-    >
-      <div class="mt-8 text-center" style="font-family: Nunito">
-        &copy; GarbhaGudi IVF Centre -
-        <script>
-          document.write(/\d{4}/.exec(Date())[0]);
-        </script>
+
+    <footer class="bg-gray-800 py-6">
+      <div class="container mx-auto text-center text-white">
+        &copy; 2025 GarbhaGudi IVF Centre. All rights reserved.
       </div>
     </footer>
-    <script
-      src="https://cdn.usefathom.com/script.js"
-      site="SOXJJCZQ"
-      defer
-    ></script>
-    <!-- Facebook Pixel Code -->
+    <!-- Zoho SalesIQ Integration -->
     <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-
-      fbq("init", "2326481447668134");
-      fbq("set", "agent", "tmgoogletagmanager", "2326481447668134");
-      fbq("track", "PageView");
-    </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=2326481447668134&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-NT5T77DVZ"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <script type="text/javascript" id="VisitorTracking">
       var $zoho = $zoho || {};
       $zoho.salesiq = $zoho.salesiq || {
-        widgetcode:
-          "35074a07bf996fd88e4ad7bf8493642fb081008ce54deb21426241464ccb8de2d075f5a1390755f53a6849185aa83b0e",
+        widgetcode: "93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0",
         values: {},
         ready: function () {},
       };
       var d = document;
-      s = d.createElement("script");
+      var s = d.createElement("script");
       s.type = "text/javascript";
-      s.id = "zsiqscript";
+      s.id = "zsiqchat";
       s.defer = true;
-      s.src = "https://salesiq.zoho.com/widget";
-      t = d.getElementsByTagName("script")[0];
+      s.src = "https://salesiq.zohopublic.com/widget";
+      var t = d.getElementsByTagName("script")[0];
       t.parentNode.insertBefore(s, t);
-      function trackVisitor() {
-        try {
-          if ($zoho) {
-            var LDTuvidObj =
-              document.forms["WebToLeads3505252000085291164"]["LDTuvid"];
-            if (LDTuvidObj) {
-              LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid();
-            }
-            var firstnameObj =
-              document.forms["WebToLeads3505252000085291164"]["First Name"];
-            if (firstnameObj) {
-              name = firstnameObj.value + " " + name;
-            }
-            $zoho.salesiq.visitor.name(name);
-            var emailObj =
-              document.forms["WebToLeads3505252000085291164"]["Email"];
-            if (emailObj) {
-              email = emailObj.value;
-              $zoho.salesiq.visitor.email(email);
-            }
-          }
-        } catch (e) {}
-      }
+      d.innerHTML += '<div id="zsiqchat"></div>';
     </script>
-    <img
-      height="1"
-      width="1"
-      style="display: none"
-      alt=""
-      src="https://px.ads.linkedin.com/collect/?pid=2711450&conversionId=7808026&fmt=gif"
-    />
-    <div
-      class="fixed w-8 h-8 md:w-14 md:h-14 text-black hover:text-white bottom-20 right-6 md:bottom-20 md:right-3.5 px-2 py-3 bg-pink-500 rounded-full flex items-center justify-center opacity-40 hover:opacity-100 transition-opacity duration-500 ease-linear"
-    >
-      <a href="tel:+919108910832"
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
-          />
-        </svg>
-      </a>
-    </div>
+    <!-- End Zoho SalesIQ Integration -->
   </body>
 </html>
