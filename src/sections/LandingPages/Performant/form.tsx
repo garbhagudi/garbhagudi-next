@@ -23,8 +23,11 @@ const Form = () => {
   const onSubmit = async (data) => {
     setLoad(true);
     try {
-      const response = await fetch('https://crm.zoho.com/crm/WebToLeadForm', {
+      const response = await fetch('/api/createLeads', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({ data }),
       });
 
