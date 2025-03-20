@@ -3,7 +3,7 @@ import Image from 'next/image';
 import offerBanner from 'assets/landing-page/Offer-Logo.png';
 
 const PopupImage = () => {
-  const phoneNumber = '+91 9071 2340 06'; // Replace with your desired phone number
+  const phoneNumber = '+91 9108 9108 32'; // Replace with your desired phone number
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
