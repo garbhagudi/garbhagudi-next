@@ -3,7 +3,7 @@ import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import { memo, useState } from 'react';
+import { useState } from 'react';
 import dynamic from 'next/dynamic';
 const Banner = dynamic(() => import('sections/LandingPages/Neutral/banner'), { ssr: true });
 const Video = dynamic(() => import('sections/home/video'), {
@@ -183,7 +183,7 @@ interface ImageComponentProps {
   imageAlt: string;
 }
 
-const ImageComponent = memo(({ name, image, designation, imageAlt }: ImageComponentProps) => {
+const ImageComponent = ({ name, image, designation, imageAlt }: ImageComponentProps) => {
   return (
     <div className='flex flex-col items-center justify-center md:h-[21rem]'>
       <div className='relative h-44 w-44'>
@@ -203,7 +203,7 @@ const ImageComponent = memo(({ name, image, designation, imageAlt }: ImageCompon
       </div>
     </div>
   );
-});
+};
 
 export const getStaticProps = async () => {
   const { data } = await apolloClient.query({
