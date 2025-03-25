@@ -1,5 +1,6 @@
-import MyModal from 'components/modal';
+import dynamic from 'next/dynamic';
 import { BsWhatsapp } from 'react-icons/bs';
+const MyModal = dynamic(() => import('components/modal'));
 const Cta = () => {
   return (
     <div className='bg-gray-50 dark:bg-gray-700'>

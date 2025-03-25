@@ -1,7 +1,6 @@
-import MyModal from 'components/modal';
-import React from 'react';
+import dynamic from 'next/dynamic';
 import { HiChevronRight } from 'react-icons/hi';
-
+const MyModal = dynamic(() => import('components/modal'));
 const Stage = () => {
   return (
     <div>

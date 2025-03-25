@@ -11,10 +11,11 @@ const Banner = () => {
             <div className='relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12'>
               <Image
                 className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudi/image/upload/v1730993605/garbhagudi-ivf/Paripoorna/IVF_Compressed_kmekqi.webp'
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742808594/paripoorna/IVF_Compressed_kmekqi_bewqzl.webp'
                 alt='happy couple with a baby'
-                width={1024}
-                height={1024}
+                width={590}
+                height={460}
+                priority
               />
             </div>
           </div>
@@ -136,7 +137,7 @@ const Banner = () => {
             <div className='relative mt-24 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-[28rem] lg:max-w-none lg:pl-12'>
               <Image
                 className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudi/image/upload/v1730993605/garbhagudi-ivf/Paripoorna/IVF_Compressed_kmekqi.webp'
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742808594/paripoorna/IVF_Compressed_kmekqi_bewqzl.webp'
                 alt='happy couple with a baby'
                 width={500}
                 height={500}

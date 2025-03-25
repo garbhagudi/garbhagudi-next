@@ -40,7 +40,7 @@ const IndexPage = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.webp'
         />
 
         {/* Twitter*/}
@@ -57,7 +57,7 @@ const IndexPage = () => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.webp'
         />
       </Head>
       <Hero />
@@ -66,7 +66,7 @@ const IndexPage = () => {
       <Contact />
       <FindBranch />
       <div className='mb-5'>
-        <Share pinmedia='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.jpg' />
+        <Share pinmedia='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.webp' />
       </div>
       <Cta />
     </div>

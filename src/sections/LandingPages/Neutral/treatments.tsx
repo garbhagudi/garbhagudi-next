@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 import { TreatmentHeader } from 'components/header/headerData';
