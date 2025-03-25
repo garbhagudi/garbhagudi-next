@@ -18,7 +18,7 @@ export default function Content() {
         <div className='relative my-5 h-[180px] lg:my-16 lg:h-[350px]'>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/ld50vuhzlttzu1pzikx8.png'
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567196/eggFreezing/ld50vuhzlttzu1pzikx8.webp'
             }
             alt='eggFreezing image 1'
             width={100}
@@ -30,7 +30,7 @@ export default function Content() {
           {/* Second Image (middle layer) */}
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567197/eggFreezing/da3109fxnfronek7kcxo.png'
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567197/eggFreezing/da3109fxnfronek7kcxo.webp'
             }
             alt='eggFreezing image 2'
             width={100}
@@ -42,7 +42,7 @@ export default function Content() {
           {/* Third Image (top layer) */}
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567197/eggFreezing/scmqnfg4rnjfnfmjtibw.png'
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567197/eggFreezing/scmqnfg4rnjfnfmjtibw.webp'
             }
             alt='eggFreezing image 3'
             width={100}

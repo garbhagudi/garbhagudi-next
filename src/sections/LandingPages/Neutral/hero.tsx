@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 function HeroHome() {
@@ -34,6 +33,7 @@ function HeroHome() {
                   className='w-full transition-all duration-200 hover:scale-150 dark:brightness-200 dark:contrast-125 dark:grayscale'
                   width={200}
                   height={200}
+                  loading='lazy'
                 />
               </div>
             ))}

@@ -345,7 +345,7 @@ export default function FertilityForm() {
         <div className='flex min-h-screen items-center justify-center bg-[#FCFAF7]'>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568598/eggFreezing/z3jyuyfnzutxoup7yx27.png'
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568598/eggFreezing/z3jyuyfnzutxoup7yx27.webp'
             }
             alt='timer_icon'
             width={100}

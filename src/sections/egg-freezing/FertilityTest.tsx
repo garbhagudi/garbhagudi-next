@@ -18,7 +18,7 @@ export default function FertilityTest() {
       taxes: '(Incl. of all taxes)',
       buttonText: 'Buy Now',
       image:
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568282/eggFreezing/koaxrqjuxyaiqkcnj4is.png',
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568282/eggFreezing/koaxrqjuxyaiqkcnj4is.webp',
     },
     {
       title: 'Essential Reproductive Health Check (Male)',
@@ -28,7 +28,7 @@ export default function FertilityTest() {
       taxes: '(Incl. of all taxes)',
       buttonText: 'Buy Now',
       image:
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568282/eggFreezing/xmqgi7cqorspafwmbcfd.png',
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568282/eggFreezing/xmqgi7cqorspafwmbcfd.webp',
     },
     {
       title: 'Oocyte Freezing Package',
@@ -38,7 +38,7 @@ export default function FertilityTest() {
       taxes: '(Incl. of all taxes)',
       buttonText: 'Contact Us',
       image:
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568282/eggFreezing/cyaj5on2avd7yxfzs3tb.png',
+        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568282/eggFreezing/cyaj5on2avd7yxfzs3tb.webp',
     },
   ];
   return (

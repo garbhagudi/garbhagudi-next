@@ -1,6 +1,6 @@
-import React from 'react';
-import MyModal from 'components/modal';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
+const MyModal = dynamic(() => import('components/modal'));
 
 const AshaSection = () => {
   return (

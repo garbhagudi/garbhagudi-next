@@ -37,7 +37,7 @@ export default function Journies() {
                 <div>
                   <Image
                     src={
-                      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567194/eggFreezing/xvwtrr5loef21sk4yprc.png'
+                      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731567194/eggFreezing/xvwtrr5loef21sk4yprc.webp'
                     }
                     width={200}
                     height={150}

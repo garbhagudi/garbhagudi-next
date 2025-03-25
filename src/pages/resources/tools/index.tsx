@@ -30,7 +30,7 @@ const IndexPage = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.webp'
         />
 
         {/* Twitter*/}
@@ -44,7 +44,7 @@ const IndexPage = () => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.webp'
         />
       </Head>
       <h1 className='mx-auto max-w-7xl pt-12 text-center font-heading text-4xl font-semibold'>

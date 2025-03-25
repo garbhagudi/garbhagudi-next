@@ -11,7 +11,7 @@ const IvfProcess = () => {
       media: {
         type: 'IMAGE',
         source: {
-          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670403673/Misc/Tablets_ovavsk.png',
+          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670403673/Misc/Tablets_ovavsk.webp',
         },
       },
     },
@@ -23,7 +23,7 @@ const IvfProcess = () => {
       media: {
         type: 'IMAGE',
         source: {
-          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670403672/Misc/Egg-retrival_uj0bjt.png',
+          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670403672/Misc/Egg-retrival_uj0bjt.webp',
         },
       },
     },
@@ -35,7 +35,7 @@ const IvfProcess = () => {
       media: {
         type: 'IMAGE',
         source: {
-          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670403672/Misc/SA_ui5a9k.png',
+          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670403672/Misc/SA_ui5a9k.webp',
         },
       },
     },
@@ -47,7 +47,7 @@ const IvfProcess = () => {
       media: {
         type: 'IMAGE',
         source: {
-          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670403672/Misc/Inject_i47tte.png',
+          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670403672/Misc/Inject_i47tte.webp',
         },
       },
     },
@@ -59,7 +59,7 @@ const IvfProcess = () => {
       media: {
         type: 'IMAGE',
         source: {
-          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670403672/Misc/Eggs_o1leeg.png',
+          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670403672/Misc/Eggs_o1leeg.webp',
         },
       },
     },
@@ -71,7 +71,7 @@ const IvfProcess = () => {
       media: {
         type: 'IMAGE',
         source: {
-          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670403672/Misc/Egg-Transfer_qcmxos.png',
+          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670403672/Misc/Egg-Transfer_qcmxos.webp',
         },
       },
     },
@@ -83,7 +83,7 @@ const IvfProcess = () => {
       media: {
         type: 'IMAGE',
         source: {
-          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670403672/Misc/Preg-Test_mhdbyg.png',
+          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670403672/Misc/Preg-Test_mhdbyg.webp',
         },
       },
     },

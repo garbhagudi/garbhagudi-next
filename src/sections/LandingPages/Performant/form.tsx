@@ -6,7 +6,6 @@ const Form = () => {
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -124,7 +123,7 @@ const Form = () => {
             className='flex items-center justify-center gap-2 rounded-md bg-gg-500 px-6 py-2 text-base font-bold text-white hover:bg-brandPink3 dark:bg-gg-500 dark:hover:bg-gg-600'
             disabled={load}
           >
-            Submit
+            Get a call back
             {load && (
               <svg
                 width={22}
@@ -150,16 +149,6 @@ const Form = () => {
                 </g>
               </svg>
             )}
-          </button>
-
-          <button
-            type='button'
-            onClick={() => {
-              reset();
-            }}
-            className='rounded-md bg-gg-500 px-6 py-2 text-base font-bold text-white hover:bg-brandPink3 dark:bg-gg-500 dark:hover:bg-gg-600'
-          >
-            Reset
           </button>
         </div>
       </form>
