@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Tab, TabGroup, TabList, TabPanels, TabPanel } from '@headlessui/react';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -12,19 +12,19 @@ const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playli
 
 export async function getServerSideProps() {
   const recommendedData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=7&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const tvAppearanceData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=7&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const garbhasandeshaData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=7&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const testimonialData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=7&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const recommended = await recommendedData.json();
@@ -47,7 +47,6 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
   const [url2, setUrl2] = useState(garbhasandesha?.items[0].snippet.resourceId.videoId);
   const [url3, setUrl3] = useState(tvAppearance?.items[0].snippet.resourceId.videoId);
   const [url4, setUrl4] = useState(testimonials?.items[0].snippet.resourceId.videoId);
-
   const renderRecommended = (image: string, url: string, label: string, by: string) => {
     return (
       <div className='flex items-center justify-start border-b pb-4 font-sans md:border-none md:pb-0'>
@@ -57,6 +56,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
           className='col-span-1 max-w-[200px] rounded-lg sm:w-32 md:max-w-[230px] xl:w-48'
           width={200}
           height={200}
+          loading='lazy'
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
@@ -87,6 +87,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
           className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'
           width={200}
           height={200}
+          loading='lazy'
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
@@ -117,6 +118,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
           className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'
           width={200}
           height={200}
+          loading='lazy'
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
@@ -147,6 +149,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
           className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'
           width={200}
           height={200}
+          loading='lazy'
         />
         <div className='flex items-center justify-center'>
           <div className='flex flex-col items-start'>
@@ -241,6 +244,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
                       id={url}
                       title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
                       poster='maxresdefault'
+                      webp={true}
                     />
                   </div>
                   <div className='flex flex-col items-start justify-start md:flex-row md:justify-between'>
@@ -313,6 +317,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
                       id={url2}
                       title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
                       poster='maxresdefault'
+                      webp={true}
                     />
                   </div>
                   <div className='flex flex-col items-start justify-start md:flex-row md:justify-between'>
@@ -385,6 +390,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
                       id={url3}
                       title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
                       poster='maxresdefault'
+                      webp={true}
                     />
                   </div>
                   <div className='flex flex-col items-start justify-start md:flex-row md:justify-between'>
@@ -457,6 +463,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
                       id={url4}
                       title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
                       poster='maxresdefault'
+                      webp={true}
                     />
                   </div>
                   <div className='flex flex-col items-start justify-start md:flex-row md:justify-between'>
