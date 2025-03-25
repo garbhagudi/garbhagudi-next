@@ -218,14 +218,27 @@ const Blog = ({ blog }) => {
                   {blog?.title}
                 </span>
               </h1>
-              <Image
-                className='my-8 w-full rounded-lg'
-                src={blog?.image?.url}
-                alt={blog?.title}
-                width={500}
-                height={500}
-                priority={true}
-              />
+              <div className='hidden h-[512px] md:block'>
+                <Image
+                  className='my-8 h-full w-full rounded-lg'
+                  src={blog?.image?.url}
+                  alt={blog?.title}
+                  width={500}
+                  height={500}
+                  priority={true}
+                />
+              </div>
+              <div className='h-[220px] md:hidden'>
+                <Image
+                  className='my-8 h-full w-full rounded-lg'
+                  src={blog?.image?.url}
+                  alt={blog?.title}
+                  width={320}
+                  height={220}
+                  priority={true}
+                />
+              </div>
+
               <div className='text-gray-800 dark:text-gray-200'>
                 <RichText content={blog?.content?.raw.children} />
               </div>
