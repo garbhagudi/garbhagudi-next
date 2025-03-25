@@ -1,9 +1,9 @@
-import React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import MyModal from './modal';
 import Image from 'next/image';
 import { RichText } from '@graphcms/rich-text-react-renderer';
-
+import dynamic from 'next/dynamic';
+import { Fragment, useState } from 'react';
+const MyModal = dynamic(() => import('./modal'));
 const DoctorLayout = ({
   name,
   index,
@@ -13,7 +13,7 @@ const DoctorLayout = ({
   setActiveIndex,
   bio,
 }) => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   function closeModal() {
     setIsOpen(false);
   }
@@ -38,7 +38,7 @@ const DoctorLayout = ({
         <Transition appear show={isOpen} as={`div`}>
           <Dialog as='div' className='relative z-10' onClose={closeModal}>
             <Transition.Child
-              as={React.Fragment}
+              as={Fragment}
               enter='ease-out duration-300'
               enterFrom='opacity-0'
               enterTo='opacity-100'
@@ -52,7 +52,7 @@ const DoctorLayout = ({
             <div className='fixed inset-0 flex items-start justify-center overflow-y-auto'>
               <div className='mt-24 p-4 text-center'>
                 <Transition.Child
-                  as={React.Fragment}
+                  as={Fragment}
                   enter='ease-out duration-300'
                   enterFrom='opacity-0 scale-95'
                   enterTo='opacity-100 scale-100'

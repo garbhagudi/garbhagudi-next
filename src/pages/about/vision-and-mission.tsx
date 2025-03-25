@@ -29,7 +29,7 @@ const VisionMission = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
         />
 
         {/* Twitter*/}
@@ -43,7 +43,7 @@ const VisionMission = () => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
         />
       </Head>
       <BreadCrumbs
@@ -70,7 +70,7 @@ const VisionMission = () => {
                 <Image
                   alt='content'
                   className='mb-2 h-full w-full object-cover object-center'
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643278927/About/1201x501_Vision_c6ds1h.jpg'
+                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643278927/About/1201x501_Vision_c6ds1h.webp'
                   width={500}
                   height={500}
                 />
@@ -93,7 +93,7 @@ const VisionMission = () => {
                 <Image
                   alt='content'
                   className='mb-2 h-full w-full object-cover object-center'
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643278945/About/1201x501_Mission_wcctgt.jpg'
+                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643278945/About/1201x501_Mission_wcctgt.webp'
                   width={500}
                   height={500}
                 />

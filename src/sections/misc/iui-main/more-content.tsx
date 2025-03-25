@@ -38,7 +38,7 @@ const ContentXtra = () => {
         </div>
         <div className='px-3'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722504481/IUI-Process_01_lo7z7w_1_ggwdwi.png'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722504481/IUI-Process_01_lo7z7w_1_ggwdwi.webp'
             alt='IUI treatment Process'
             className='rounded-lg'
             width={500}

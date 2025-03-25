@@ -34,7 +34,7 @@ const CareerOrBaby = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.jpg'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.webp'
         />
 
         {/* Twitter*/}
@@ -50,7 +50,7 @@ const CareerOrBaby = () => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.jpg'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.webp'
         />
       </Head>
       <div className='mx-auto px-4 pt-16 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-8'>
@@ -61,7 +61,7 @@ const CareerOrBaby = () => {
           <div>
             <Image
               className='h-64 w-full rounded-2xl object-cover shadow-lg sm:h-[360px]'
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.jpg'
+              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.webp'
               alt='Career or Baby ?'
               width={500}
               height={500}
@@ -115,7 +115,7 @@ const CareerOrBaby = () => {
           </div>
           <div className='max-w-xl'>
             <Image
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/Male_infertility-min_xt4ouj.jpg'
+              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/Male_infertility-min_xt4ouj.webp'
               alt='Male Infertility'
               className='rounded-3xl'
               width={500}
@@ -131,7 +131,7 @@ const CareerOrBaby = () => {
         <div className='grid lg:grid-cols-2'>
           <div className='max-w-xl'>
             <Image
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/Female_fertility-min_yvazig.jpg'
+              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/Female_fertility-min_yvazig.webp'
               alt='Female Infertility'
               className='rounded-3xl'
               width={500}
@@ -203,7 +203,7 @@ const CareerOrBaby = () => {
           <div className='relative w-full'>
             <Image
               className='h-56 w-full rounded-3xl object-cover shadow-lg transition-shadow duration-300 hover:shadow-xl sm:h-64 md:h-80 lg:h-96'
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/ART_The_Real_Boon_-min_lqxqex.jpg'
+              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/ART_The_Real_Boon_-min_lqxqex.webp'
               alt='ART - The Real Boon!'
               width={500}
               height={500}
@@ -239,7 +239,7 @@ const CareerOrBaby = () => {
           </div>
           <div className='max-w-xl'>
             <Image
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215523/blogs/Egg_Freezing-min_zyhjfb.jpg'
+              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215523/blogs/Egg_Freezing-min_zyhjfb.webp'
               alt='Sperm Freezing'
               className='rounded-3xl'
               width={500}
@@ -255,7 +255,7 @@ const CareerOrBaby = () => {
         <div className='grid lg:grid-cols-2'>
           <div className='max-w-xl'>
             <Image
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/Sperm_Freezing-min_atfspg.jpg'
+              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/Sperm_Freezing-min_atfspg.webp'
               alt='Egg Freezing'
               className='rounded-3xl'
               width={500}
@@ -292,7 +292,7 @@ const CareerOrBaby = () => {
         </p>
         <Share
           pinmedia={
-            'https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.jpg'
+            'https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.webp'
           }
         />
         <BlogFooter />

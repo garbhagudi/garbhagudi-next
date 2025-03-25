@@ -1,27 +1,52 @@
-import React from 'react';
-import Video from 'sections/home/video';
-import About from 'sections/LandingPages/Neutral/about';
-import AshaSection from 'sections/LandingPages/Neutral/AshaSection';
-import FeaturesBlocks from 'sections/LandingPages/Neutral/awards';
-import Banner from 'sections/LandingPages/Neutral/banner';
-import Branch from 'sections/LandingPages/Neutral/branches';
-import DoctorLayout from 'components/doctorsLayout';
-import Carousel from 'nuka-carousel';
-import HeroHome from 'sections/LandingPages/Neutral/hero';
-import Stage from 'sections/LandingPages/Neutral/stage';
-import Treatments from 'sections/LandingPages/Neutral/treatments';
-import FloatWhatsApp from 'components/FloatWhatsapp';
-import Cta from 'sections/gg-care/cta';
 import Head from 'next/head';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import { memo, useState } from 'react';
+import dynamic from 'next/dynamic';
+const Banner = dynamic(() => import('sections/LandingPages/Neutral/banner'), { ssr: true });
+const Video = dynamic(() => import('sections/home/video'), {
+  ssr: false,
+});
+const About = dynamic(() => import('sections/LandingPages/Neutral/about'), {
+  ssr: false,
+});
+const AshaSection = dynamic(() => import('sections/LandingPages/Neutral/AshaSection'), {
+  ssr: false,
+});
+const FeaturesBlocks = dynamic(() => import('sections/LandingPages/Neutral/awards'), {
+  ssr: false,
+});
 
+const Branch = dynamic(() => import('sections/LandingPages/Neutral/branches'), {
+  ssr: false,
+});
+const DoctorLayout = dynamic(() => import('components/doctorsLayout'), {
+  ssr: false,
+});
+const Carousel = dynamic(() => import('nuka-carousel'), {
+  ssr: false,
+});
+const HeroHome = dynamic(() => import('sections/LandingPages/Neutral/hero'), {
+  ssr: false,
+});
+const Stage = dynamic(() => import('sections/LandingPages/Neutral/stage'), {
+  ssr: false,
+});
+const Treatments = dynamic(() => import('sections/LandingPages/Neutral/treatments'), {
+  ssr: false,
+});
+const FloatWhatsApp = dynamic(() => import('components/FloatWhatsapp'), {
+  ssr: true,
+});
+const Cta = dynamic(() => import('sections/gg-care/cta'), {
+  ssr: false,
+});
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
 const IndexPage = ({ doctors, testimonials, branches }) => {
-  const [activeIndex, setActiveIndex] = React.useState(1);
+  const [activeIndex, setActiveIndex] = useState(1);
   const defaultControlsConfig = {
     pagingDotsStyle: {
       display: 'none',
@@ -52,7 +77,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
         />
 
         {/* Twitter*/}
@@ -66,7 +91,12 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+        />
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742808594/paripoorna/IVF_Compressed_kmekqi_bewqzl.webp'
+          as='image'
         />
       </Head>
       <div>
@@ -153,7 +183,7 @@ interface ImageComponentProps {
   imageAlt: string;
 }
 
-const ImageComponent = ({ name, image, designation, imageAlt }: ImageComponentProps) => {
+const ImageComponent = memo(({ name, image, designation, imageAlt }: ImageComponentProps) => {
   return (
     <div className='flex flex-col items-center justify-center md:h-[21rem]'>
       <div className='relative h-44 w-44'>
@@ -173,7 +203,7 @@ const ImageComponent = ({ name, image, designation, imageAlt }: ImageComponentPr
       </div>
     </div>
   );
-};
+});
 
 export const getStaticProps = async () => {
   const { data } = await apolloClient.query({
@@ -183,8 +213,6 @@ export const getStaticProps = async () => {
           id
           name
           designation
-          qualification
-          location
           image {
             url
           }

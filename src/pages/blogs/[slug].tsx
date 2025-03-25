@@ -1,17 +1,17 @@
-import React from 'react';
 import { RichText } from '@graphcms/rich-text-react-renderer';
-import BlogFooter from 'components/blogFooter';
-import Error from 'next/error';
-import Head from 'next/head';
-import BreadCrumbs from 'components/breadcrumbs';
 import { useRouter } from 'next/router';
-import Share from 'components/share';
-import Loading from 'components/Loading';
-import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
+import Head from 'next/head';
+import apolloClient from 'lib/apollo-graphcms';
 import { throttledFetch } from 'lib/throttle';
-import LandingPagePopUp from 'components/landingPagePopUp';
+import dynamic from 'next/dynamic';
+const Error = dynamic(() => import('next/error'));
+const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
+const Share = dynamic(() => import('components/share'), { ssr: false });
+const Loading = dynamic(() => import('components/Loading'), { ssr: true });
+const BreadCrumbs = dynamic(() => import('components/breadcrumbs'), { ssr: true });
+const LandingPagePopUp = dynamic(() => import('components/landingPagePopUp'), { ssr: false });
 
 export const getStaticProps = async ({ params }) => {
   const apolloQuery = async ({ slug }) => {
@@ -19,7 +19,6 @@ export const getStaticProps = async ({ params }) => {
       query: gql`
         query ($slug: String!) {
           blog(where: { slug: $slug }) {
-            id
             title
             metaTitle
             metaDescription
@@ -29,13 +28,7 @@ export const getStaticProps = async ({ params }) => {
               url
             }
             doctor {
-              id
-              image {
-                url
-              }
               name
-              imageAlt
-              slug
             }
             content {
               raw
@@ -66,7 +59,6 @@ export async function getStaticPaths() {
         {
           blogs {
             slug
-            title
           }
         }
       `,
@@ -85,89 +77,15 @@ const Blog = ({ blog }) => {
   const keywords = `${blog?.metaKeywords || blog?.title}`;
   const router = useRouter();
 
-  function addBreadcrumbJsonLd() {
-    return {
-      __html: `{
-        "@context": "https://schema.org/",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://garbhagudi.com"
-          }
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "blogs",
-            "item": "https://garbhagudi.com/blogs"
-          }
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "${blog?.title}",
-            "item": "https://garbhagudi.com/blogs/${blog?.slug}"
-          }
-        ]
-      }`,
-    };
-  }
-  function addOrgJsonLd() {
-    return {
-      __html: `{
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "GarbhaGudi IVF Centre Pvt Ltd",
-        "url": "https://garbhagudi.com",
-        "logo": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg"
-      }`,
-    };
-  }
-  function addBlogJsonLd() {
-    return {
-      __html: `
-      {
-        "@context": "https://schema.org/",
-        "@type": "Article",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://garbhagudi.com/blogs/${blog?.slug}"
-        },
-        "headline": "${blog?.metaTitle || blog?.title}",
-        "description": "${blog?.content?.text.slice(0, 160)}",
-        "image": {
-          "@type": "ImageObject",
-          "url": "${blog?.image?.url}",
-          "width": "1200",
-          "height": "630"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "${blog?.doctor?.name}"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "GarbhaGudi IVF Centre",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
-            "width": "256",
-            "height": "54"
-          }
-        },
-        "datePublished": "${blog?.publishedOn}"
-      }
-      `,
-    };
-  }
-
   if (router.isFallback) {
     return <Loading />;
   }
   return (
     <div>
       <Head>
+        {/* Preload the main image */}
+        <link rel='preload' href={blog?.image?.url} as='image' />
+        <link rel='dns-prefetch' href='https://media.graphassets.com' />
         {/* Primary Tags */}
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
@@ -176,24 +94,6 @@ const Blog = ({ blog }) => {
         <meta name='keywords' content={keywords} />
 
         {/* Ld+JSON Data */}
-
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBlogJsonLd()}
-          key='org-jsonld'
-        />
-
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addOrgJsonLd()}
-          key='org-jsonld'
-        />
-
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbJsonLd()}
-          key='breadcrumb-jsonld'
-        />
 
         {/* Open Graph / Facebook */}
         <meta property='og:title' content={title} />
@@ -324,6 +224,7 @@ const Blog = ({ blog }) => {
                 alt={blog?.title}
                 width={500}
                 height={500}
+                priority={true}
               />
               <div className='text-gray-800 dark:text-gray-200'>
                 <RichText content={blog?.content?.raw.children} />

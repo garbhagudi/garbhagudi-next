@@ -8,14 +8,13 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
-import FloatPhone from 'components/FloatPhone';
 
 // Dynamically import components
 const Footer = dynamic(() => import('components/footer/footer'));
 const Nav = dynamic(() => import('components/header/header'));
-const Salesiq = dynamic(() => import('components/SalesIQ'));
+const Salesiq = dynamic(() => import('components/SalesIQ'), { ssr: false });
 const Loading = dynamic(() => import('components/Loading'));
-
+const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false });
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const noRenderPaths = [

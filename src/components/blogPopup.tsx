@@ -1,4 +1,5 @@
 import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Form from 'sections/LandingPages/Performant/form';
 
@@ -36,24 +37,29 @@ export default function BlogPopUp() {
           <div className='flex min-h-full items-center justify-center'>
             <DialogPanel
               transition
-              className='data-[closed]:transform-[scale(95%)] w-full max-w-md rounded-xl bg-white/5 p-3 backdrop-blur-3xl duration-300 ease-out data-[closed]:opacity-0'
+              className='data-[closed]:transform-[scale(95%)] w-full max-w-md rounded-xl bg-gray-800 backdrop-blur-3xl duration-300 ease-out data-[closed]:opacity-0'
             >
+              <Image
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722509021/Banner/Google_Form_Header-min_tjenif_1_1_k8jrow.webp'
+                alt='formBanner'
+                className='h-32 w-full rounded-t-md'
+                width={380}
+                height={220}
+              />
               <DialogTitle
                 as='h3'
                 className='font-centent pb-3 text-center text-2xl font-extrabold'
               >
                 Contact Us
               </DialogTitle>
-              <div className='overflow-hidden rounded-lg'>
+              <div className='px-0'>
+                <div className='flex justify-center'>
+                  <div className='mx-5 mt-5 w-fit self-center rounded-md bg-white px-2 py-1 text-center text-[13px] font-semibold text-brandPink shadow-sm'>
+                    ₹1,00,000 off on IVF Treatment
+                    <span> | Free Fertility Screening</span>
+                  </div>
+                </div>
                 <Form />
-              </div>
-              <div className='mx-auto mt-4 flex justify-center'>
-                <Button
-                  className='inline-flex items-center gap-2 rounded-md bg-gray-700 px-3 py-1.5 font-content text-base font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-600 data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white'
-                  onClick={close}
-                >
-                  Close
-                </Button>
               </div>
             </DialogPanel>
           </div>
