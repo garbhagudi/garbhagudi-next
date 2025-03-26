@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import WhyGarbhagudi from 'assets/landing-page/why-garbhagudi.webp';
 import { FaPercent, FaUserDoctor, FaMap, FaCircleCheck } from 'react-icons/fa6';
 
 const Features = () => {
@@ -40,7 +39,9 @@ const Features = () => {
               <Image
                 height={350}
                 width={350}
-                src={WhyGarbhagudi}
+                src={
+                  'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742986482/landing-page/why-garbhagudi_pa4rxa.webp'
+                }
                 alt='Water Purifier'
                 className='max-w-full rounded-lg'
               />

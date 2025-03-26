@@ -1,4 +1,3 @@
-import React from 'react';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Link from 'next/link';
@@ -46,7 +45,7 @@ const Awards = ({ award }: Award) => {
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link rel='dns-prefetch' href='https://media.graphassets.com' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Awards &amp; Accolades GarbhaGudi IVF Centre</title>
         <meta name='title' content={`Awards & Accolades GarbhaGudi IVF Centre`} />
@@ -116,8 +115,9 @@ const Awards = ({ award }: Award) => {
                       className='h-38 w-full cursor-pointer rounded-t-lg object-contain'
                       src={item?.image?.url}
                       alt={item?.title}
-                      width={500}
-                      height={500}
+                      width={360}
+                      height={180}
+                      priority
                     />
                   </div>
                 </Link>

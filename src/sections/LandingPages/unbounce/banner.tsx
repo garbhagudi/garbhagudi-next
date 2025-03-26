@@ -1,7 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
 import Form from './form';
-import offerBanner from 'assets/landing-page/Offer-Logo.png';
 
 const Banner = () => {
   return (
@@ -10,7 +8,9 @@ const Banner = () => {
         <div className='grid pt-8 lg:grid-cols-2 lg:pt-16'>
           <div className='flex items-end justify-center pb-6 lg:pb-0'>
             <Image
-              src={offerBanner}
+              src={
+                'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742986481/landing-page/Offer-Logo_r3rnce.webp'
+              }
               alt='Banner Image'
               width={400}
               height={400}

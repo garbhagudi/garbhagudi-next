@@ -1,17 +1,16 @@
-import React from 'react';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
-import BlogFooter from 'components/blogFooter';
-import Error from 'next/error';
+import type { RichTextContent } from '@graphcms/rich-text-types';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
-import Share from 'components/share';
+import dynamic from 'next/dynamic';
+const Share = dynamic(() => import('components/share'), { ssr: false });
+const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
+const Error = dynamic(() => import('next/error'), { ssr: false });
 import apolloClient from 'lib/apollo-graphcms';
-import { gql } from '@apollo/client';
-import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
-import Image from 'next/image';
-import type { RichTextContent } from '@graphcms/rich-text-types';
-
 interface AwardProps {
   award: {
     id: string;
@@ -90,6 +89,9 @@ const AwardPage = ({ award }: AwardProps) => {
     <div>
       <Head>
         {/* Primary Tags */}
+        {/* Preload the main image */}
+        <link rel='preload' href={award?.image?.url} as='image' />
+        <link rel='dns-prefetch' href='https://media.graphassets.com' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={title} />
@@ -224,7 +226,8 @@ const AwardPage = ({ award }: AwardProps) => {
                   src={award?.image?.url}
                   alt={award?.title}
                   width={500}
-                  height={500}
+                  height={320}
+                  priority
                 />
               </figure>
               <div className='text-gray-800 dark:text-gray-200'>

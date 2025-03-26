@@ -3,7 +3,6 @@ import dynamic from 'next/dynamic';
 import ParagraphSection from 'sections/misc/international-ivf-day/ParagraphSection';
 import CallToAction from 'sections/misc/international-ivf-day/CallToAction';
 import Image from 'next/image';
-import banner from 'assets/Landing-Page-Banners.jpg';
 
 const Yoga = dynamic(() => import('sections/misc/international-ivf-day/Yoga'));
 const BranchEvent = dynamic(() => import('sections/misc/international-ivf-day/BranchEvent'));
@@ -32,8 +31,11 @@ const Page = () => {
               height={100}
               width={100}
               className='mb-5 mt-10 w-full rounded-lg'
-              src={banner}
+              src={
+                'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742985537/Yoga/Landing-Page-Banners_gd388z.webp'
+              }
               alt='Section Image'
+              priority
             />
             <div className='my-8'>
               <ParagraphSection />
