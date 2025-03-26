@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import React from 'react';
+
 import { FaPercent, FaUserDoctor, FaMap, FaCircleCheck } from 'react-icons/fa6';
-import WhyGarbhagudi from 'assets/landing-page/why-garbhagudi.webp';
 
 const WhyGarbhaGudi = () => {
   return (
@@ -48,7 +47,9 @@ const WhyGarbhaGudi = () => {
           </div>
           <div className='mx-auto'>
             <Image
-              src={WhyGarbhagudi}
+              src={
+                'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742986482/landing-page/why-garbhagudi_pa4rxa.webp'
+              }
               alt='Why GarbhaGudi Image'
               width={500}
               height={500}

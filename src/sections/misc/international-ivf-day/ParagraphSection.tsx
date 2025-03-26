@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import banner from 'assets/21-Days-Yoga-Challenge-Logo.png';
 
 const ParagraphSection = () => {
   return (
@@ -41,7 +40,9 @@ const ParagraphSection = () => {
           height={350}
           width={350}
           className='mb-5 mt-10 rounded-lg'
-          src={banner}
+          src={
+            'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984797/Yoga/21-Days-Yoga-Challenge-Logo_fup9qy.webp'
+          }
           alt='Holistic approach to fertility - Section Image'
         />
       </div>

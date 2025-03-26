@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -11,15 +11,15 @@ const Gallery = () => {
   };
 
   const images = [
-    '/assets/ggg/1.webp',
-    '/assets/ggg/3.webp',
-    '/assets/ggg/6.webp',
-    '/assets/ggg/8.webp',
-    '/assets/ggg/9.webp',
-    '/assets/ggg/10.webp',
-    '/assets/ggg/13.webp',
-    '/assets/ggg/15.webp',
-    '/assets/ggg/17.webp',
+    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973573/Events/1_shz9cp.webp',
+    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973573/Events/3_zu4h7b.webp',
+    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973573/Events/6_m6u9hz.webp',
+    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973574/Events/8_fj2i1t.webp',
+    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973573/Events/9_n7zlqe.webp',
+    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973573/Events/10_ovuzma.webp',
+    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973575/Events/13_olf4js.webp',
+    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973573/Events/15_amskll.webp',
+    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973573/Events/17_kfbprg.webp',
   ];
   return (
     <div>
@@ -48,6 +48,7 @@ const ImageGallery: React.FC<{
             className='h-56 w-full cursor-pointer rounded-md object-cover object-center'
             width={500}
             height={500}
+            loading='lazy'
           />
         </div>
       ))}
@@ -73,6 +74,7 @@ const LightBox: React.FC<{ imageUrl: string; onClose: () => void }> = ({ imageUr
               className='h-auto w-full md:scale-125'
               width={500}
               height={500}
+              loading='lazy'
             />
           </div>
         </div>

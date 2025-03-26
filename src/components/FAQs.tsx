@@ -1,6 +1,6 @@
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import { RichTextContent } from '@graphcms/rich-text-types';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import AccordionLayout from 'sections/Faq/FaqLayout';
 
 interface FaqProps {

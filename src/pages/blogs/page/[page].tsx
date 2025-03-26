@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { gql } from '@apollo/client';
@@ -11,6 +10,7 @@ import SearchComponent from 'components/search/searchComponent';
 import Pagination from 'components/pagination';
 import GGLogo from 'assets/gg-emblem.svg';
 import { throttledFetch } from 'lib/throttle';
+import { Fragment } from 'react';
 
 const limit = 6;
 
@@ -57,7 +57,7 @@ function BlogPage({
   }
 
   return (
-    <React.Fragment>
+    <Fragment>
       <div>
         <Head>
           {/* Primary Tags */}
@@ -187,7 +187,7 @@ function BlogPage({
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </Fragment>
   );
 }
 

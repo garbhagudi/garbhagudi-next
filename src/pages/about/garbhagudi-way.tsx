@@ -1,4 +1,3 @@
-import React from 'react';
 import GarbhaGudiWay from 'sections/tools/gg-way';
 import Head from 'next/head';
 
