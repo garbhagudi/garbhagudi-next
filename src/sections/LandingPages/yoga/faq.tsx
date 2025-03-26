@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import AccordionLayout from 'sections/Faq/FaqLayout';
-import banner from 'assets/FAQImage.jpg';
 
 const Faq = () => {
   const [activeIndex1, setActiveIndex1] = React.useState<string | number>(1);
@@ -12,7 +11,9 @@ const Faq = () => {
           Frequently asked questions
         </h2>
         <Image
-          src={banner}
+          src={
+            'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742985534/Yoga/FAQImage_scqa61.webp'
+          }
           alt='faq'
           width={500}
           height={500}

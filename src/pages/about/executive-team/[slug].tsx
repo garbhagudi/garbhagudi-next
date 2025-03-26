@@ -1,12 +1,12 @@
-import React from 'react';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
-import Share from 'components/share';
+import dynamic from 'next/dynamic';
+const Share = dynamic(() => import('components/share'), { ssr: false });
+const Loading = dynamic(() => import('components/Loading'), { ssr: false });
 import { useRouter } from 'next/router';
-import Loading from 'components/Loading';
 import Image from 'next/image';
 
 export const getStaticProps = async ({ params }) => {

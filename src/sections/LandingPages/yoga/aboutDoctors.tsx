@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
-import Suraksha from 'assets/Suraksha.webp';
-import aswinimohan from 'assets/aswinimohan.png';
+import { useState } from 'react';
 import Image from 'next/image';
-import Sridevi from 'assets/sridevi.png';
 
 const Doctor = () => {
   const truncate = (str, length) => {
@@ -32,6 +29,7 @@ const Doctor = () => {
                 src={doctor.image}
                 alt={doctor.name}
                 className='h-72 w-72 rounded-lg object-cover'
+                loading='lazy'
               />
               <div className='font-lexend text-lg'>{doctor.name}</div>
               <div className='font-content text-base text-gray-500'>
@@ -56,21 +54,24 @@ const doctors = [
   {
     id: 1,
     name: 'Ms. Suraksha B (Yoga Therapist)',
-    image: Suraksha,
+    image:
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984824/Yoga/Suraksha_mrkjqi.webp',
     content:
       'Ms. Suraksha B, a dedicated Yoga Trainer with a profound passion for promoting holistic well-being and inner harmony. Suraksha holds a Master of Science degree in Yogic Science from Mangalore University. Suraksha has been a coach and manager in prestigious events like the All India Inter-University Yoga Competition representing the Department of Human Consciousness & Yogic Science.',
   },
   {
     id: 2,
     name: 'Ashwini Mohan L (MS-Ayurveda)',
-    image: aswinimohan,
+    image:
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984781/Yoga/aswinimohan_oygpwr.webp',
     content:
       'Dr Aswini Mohan L has more than 12 years of clinical experience in Ayurveda, Gynaecology, and Obstetrics and has an MS in Prasuti Tantra Streeroga from Govt. Ayurveda College, Thiruvananthapuram. Her special focus is on Infertility. She is also an expert in Ayurvedic Pre-conception Care, Ante Natal Care, and Post Natal Care and has treated many patients with Endometriosis, PCOS, Uterine fibroids, etc.',
   },
   {
     id: 3,
     name: 'Dr. Sridevi (Nutritionist)',
-    image: Sridevi,
+    image:
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984782/Yoga/sridevi_reg8o7.webp',
     content:
       'Dedicated and innovative Ayurvedic professional with a Doctor of Medicine in Ayurveda (MD(Ayu)) and a Bachelor of Ayurveda Medicine and Surgery (BAMS). Has extensive experience in Ayurvedic consulting, research, and teaching. Skilled in nutrition expertise, product development, database management, and regulatory compliance. Passionate about integrating traditional knowledge with modern science for holistic wellness solutions.',
   },

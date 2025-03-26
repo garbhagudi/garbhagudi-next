@@ -1,4 +1,3 @@
-import React from 'react';
 import { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import Hero from 'sections/LandingPages/yoga/hero';

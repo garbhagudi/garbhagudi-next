@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { HiOutlineMenuAlt3, HiX } from 'react-icons/hi';
 import Link from 'next/link';

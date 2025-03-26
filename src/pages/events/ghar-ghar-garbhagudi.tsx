@@ -1,10 +1,20 @@
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import React from 'react';
-import { ContentOne, ContentTwo } from 'sections/misc/ghar-ghar-garbhagudi/content';
-import CTA from 'sections/misc/ghar-ghar-garbhagudi/cta';
-import EventInfo from 'sections/misc/ghar-ghar-garbhagudi/eventInfo';
-import Gallery from 'sections/misc/ghar-ghar-garbhagudi/gallery';
-import Hero from 'sections/misc/ghar-ghar-garbhagudi/hero';
+const Hero = dynamic(() => import('sections/misc/ghar-ghar-garbhagudi/hero'), { ssr: true });
+const Gallery = dynamic(() => import('sections/misc/ghar-ghar-garbhagudi/gallery'), { ssr: false });
+const EventInfo = dynamic(() => import('sections/misc/ghar-ghar-garbhagudi/eventInfo'), {
+  ssr: false,
+});
+const CTA = dynamic(() => import('sections/misc/ghar-ghar-garbhagudi/cta'), { ssr: false });
+const ContentOne = dynamic(
+  () => import('sections/misc/ghar-ghar-garbhagudi/content').then((mod) => mod.ContentOne),
+  { ssr: false }
+);
+
+const ContentTwo = dynamic(
+  () => import('sections/misc/ghar-ghar-garbhagudi/content').then((mod) => mod.ContentTwo),
+  { ssr: false }
+);
 
 const IndexPage = () => {
   return (

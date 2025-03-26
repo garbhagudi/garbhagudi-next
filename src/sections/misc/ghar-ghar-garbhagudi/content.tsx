@@ -12,6 +12,7 @@ export const ContentOne = () => {
             className='h-auto w-full rounded-lg bg-brandPink p-3'
             width={500}
             height={500}
+            loading='lazy'
           />
         </div>
         <div className='mt-6 flex flex-col items-start justify-center text-gray-800 dark:text-gray-200 md:ml-6 md:mt-0 md:w-1/2'>
@@ -76,10 +77,10 @@ export const ContentTwo = () => {
               them on social media using hashtags #GharGharGarbhagudi and #GarbhagudiIVFCentre.
               Additionally, send your content to us via WhatsApp at{' '}
               <a
-                href='https://wa.me/+919108910832'
+                href='https://wa.me/+918884183338'
                 className='font-semibold hover:text-brandPink hover:underline'
               >
-                +91 9108 9108 32
+                +91 8884 1833 38
               </a>
               , and you may receive special rewards for selected posts.
             </li>

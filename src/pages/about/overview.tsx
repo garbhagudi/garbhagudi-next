@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from 'sections/about/header';
 import CoreVision from 'sections/about/coreVision';
 import apolloClient from 'lib/apollo-graphcms';

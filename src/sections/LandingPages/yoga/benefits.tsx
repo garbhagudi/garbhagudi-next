@@ -1,8 +1,3 @@
-import React from 'react';
-import banner_1 from 'assets/Benefits-You-Will-Gain_Img01.png';
-import banner_2 from 'assets/Benefits-You-Will-Gain_Img02.png';
-import banner_3 from 'assets/Benefits-You-Will-Gain_Img03.png';
-import banner_4 from 'assets/Benefits-You-Will-Gain_Img04.png';
 import Image from 'next/image';
 
 const Benefits = () => {
@@ -21,6 +16,7 @@ const Benefits = () => {
                 src={benefit.image}
                 alt={benefit.title}
                 className='max-w-xl rounded-lg object-cover'
+                loading='lazy'
               />
               <div className='font-lexend text-lg'>{benefit.title}</div>
             </div>
@@ -37,21 +33,25 @@ const benefits = [
   {
     id: 1,
     title: 'Experience higher energy levels',
-    image: banner_1,
+    image:
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984693/Yoga/Benefits-You-Will-Gain_Img01_oyo60c.webp',
   },
   {
     id: 2,
     title: 'Understand your thoughts & emotions',
-    image: banner_2,
+    image:
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984694/Yoga/Benefits-You-Will-Gain_Img02_pjyfbp.webp',
   },
   {
     id: 3,
     title: 'Feel more stable',
-    image: banner_3,
+    image:
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984694/Yoga/Benefits-You-Will-Gain_Img03_pda7p0.webp',
   },
   {
     id: 4,
     title: 'Have better relationships',
-    image: banner_4,
+    image:
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984694/Yoga/Benefits-You-Will-Gain_Img04_jctiut.webp',
   },
 ];
