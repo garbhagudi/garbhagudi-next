@@ -42,7 +42,22 @@ export const getStaticProps = async ({ params }) => {
       },
     });
   };
+  const slug = params.slug;
+  //check slug is string
+  if (typeof slug !== 'string') {
+    // Return a 404 if no blogs are found
+    return {
+      notFound: true,
+    };
+  }
   const { data } = await throttledFetch(apolloQuery, { slug: params.slug });
+
+  if (!data?.blog) {
+    // Return a 404 if no blogs are found
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       blog: data.blog,

@@ -1,4 +1,3 @@
-import React from 'react';
 import Banner from 'sections/location/banner';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
@@ -11,7 +10,11 @@ const Locations = ({ branches }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1672381537/Misc/happy-pregnant-woman-late-pregnancy-stage-sitting-grass-lawn-min_11zon_xkeac0.webp'
+          as='image'
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Locations | GarbhaGudi IVF Centre</title>
         <meta name='title' content='Locations | GarbhaGudi IVF Centre' />
@@ -69,6 +72,7 @@ const Locations = ({ branches }) => {
                     width={480}
                     height={100}
                     className='overflow-hidden transition-all duration-500 hover:scale-125'
+                    loading='lazy'
                   />
                 </div>
                 <div className='flex w-full items-center justify-evenly border-t-2 border-brandPink px-3 py-3'>

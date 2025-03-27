@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 const OurCentres = () => {
@@ -104,7 +103,7 @@ const Data = [
     id: 1,
     branch: 'Hanumantha Nagar',
     map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15553.886019164418!2d77.556468!3d12.9416527!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x61c537027ad19840!2sGarbhaGudi%20IVF%20Centre%2C%20Hanumanthanagar.!5e0!3m2!1sen!2sin!4v1641896590112!5m2!1sen!2sin',
-    phone: '+91 9108 9108 32',
+    phone: '+91 9886 9155 56',
     address: (
       <span>
         Subhasri Complex, 210/A, Kumaraswamy Temple Rd, 2nd Block, Phase 1,Banashankari Stage I,
@@ -117,7 +116,7 @@ const Data = [
     id: 2,
     branch: 'Kalyan Nagar',
     map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7774.402186224549!2d77.64597804814905!3d13.022862590006048!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfb184afa11ae1fdd!2sGarbhaGudi%20IVF%20Centre%2C%20Kalyan%20Nagar.!5e0!3m2!1sen!2sin!4v1641899203760!5m2!1sen!2sin',
-    phone: '+91 9108 9108 32',
+    phone: '+91 8861 4333 39',
     address: (
       <span>
         Park Landing, 5AC-709, Outer Ring Rd, Balachandra Layout, HRBR Layout 2nd Block, Chelekare,
@@ -130,7 +129,7 @@ const Data = [
     id: 3,
     branch: 'Electronic City',
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124455.97184736053!2d77.5509549079939!3d12.891696289434682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6c972baa2581%3A0x38dd3f8049f5f606!2sGarbhaGudi%20IVF%20Centre%2C%20Electronic%20City.!5e0!3m2!1sen!2sin!4v1641809188374!5m2!1sen!2sin',
-    phone: '+91 9108 9108 32',
+    phone: '+91 8861 8111 16',
     address: (
       <span>
         Ganesh Towers,3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra Bank, Konappana Agrahara,
@@ -143,7 +142,7 @@ const Data = [
     id: 4,
     branch: 'Jayanagar',
     map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15554.13494747385!2d77.5796657!3d12.9376617!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1f870d0e467c8c8a!2sGarbhaGudi%20IVF%20Centre%2C%20South%20End%20Circle.!5e0!3m2!1sen!2sin!4v1641897947020!5m2!1sen!2sin',
-    phone: '+91 9108 9108 32',
+    phone: '+91 9972 4633 55',
     address: (
       <span>
         South End Circle, #26, Pattalamma Temple Road, Basavanagudi, Jayanagar Bengaluru, Karnataka
@@ -156,7 +155,7 @@ const Data = [
     id: 5,
     branch: 'Marathahalli',
     map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15552.74401242251!2d77.7016368!3d12.9599467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe3b45ee50de8eedf!2sGarbhaGudi%20IVF%20Centre%2C%20Marathahalli.!5e0!3m2!1sen!2sin!4v1641899595868!5m2!1sen!2sin',
-    phone: '+91 9108 9108 32',
+    phone: '+91 8105 1815 15',
     address: (
       <span>
         4TH floor, Chirag Towers, Born Babies Building, 24 & 64, Service Rd, next to कलामंदिर,
@@ -169,7 +168,7 @@ const Data = [
     id: 6,
     branch: 'New BEL Road',
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62206.24078266471!2d77.54224755616912!3d12.978883707796326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1787016c1729%3A0xc0292defa84a9230!2sGarbhaGudi%20IVF%20Centre%2C%20New%20BEL%20Road!5e0!3m2!1sen!2suk!4v1679131051329!5m2!1sen!2suk',
-    phone: '+91 9108 9108 32',
+    phone: '+91 9108 9108 25',
     address: (
       <span>
         No. 3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage, Ashwath Nagar,

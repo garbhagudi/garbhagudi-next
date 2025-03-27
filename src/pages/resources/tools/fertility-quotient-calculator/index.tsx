@@ -1,6 +1,23 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import Head from 'next/head';
-import { Poor, Low, Average, Good, Best } from 'sections/tools/fqc/results';
+import dynamic from 'next/dynamic';
+
+// Dynamically import components with SSR disabled
+const Poor = dynamic(() => import('sections/tools/fqc/results').then((mod) => mod.Poor), {
+  ssr: false,
+});
+const Low = dynamic(() => import('sections/tools/fqc/results').then((mod) => mod.Low), {
+  ssr: false,
+});
+const Average = dynamic(() => import('sections/tools/fqc/results').then((mod) => mod.Average), {
+  ssr: false,
+});
+const Good = dynamic(() => import('sections/tools/fqc/results').then((mod) => mod.Good), {
+  ssr: false,
+});
+const Best = dynamic(() => import('sections/tools/fqc/results').then((mod) => mod.Best), {
+  ssr: false,
+});
 
 // Define types for input mapping and results
 interface FertilityMappings {

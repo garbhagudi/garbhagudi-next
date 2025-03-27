@@ -1,4 +1,3 @@
-import React from 'react';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Link from 'next/link';
@@ -114,6 +113,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                                   alt={item?.title}
                                   width={100}
                                   height={100}
+                                  loading='lazy'
                                 />
                               </div>
                               <div className='flex w-2/3 flex-col justify-center text-left'>
@@ -137,6 +137,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                             alt='IVF Icon'
                             width={100}
                             height={100}
+                            loading='lazy'
                           />
                         </div>
                         <div className='flex w-2/3 flex-col justify-center text-left'>
@@ -157,6 +158,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                             alt='IUI Icon'
                             width={100}
                             height={100}
+                            loading='lazy'
                           />
                         </div>
                         <div className='flex w-2/3 flex-col justify-center text-left'>
@@ -184,6 +186,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                                   alt={item?.title}
                                   width={100}
                                   height={100}
+                                  loading='lazy'
                                 />
                               </div>
                               <div className='flex w-2/3 flex-col justify-center text-left'>
@@ -212,6 +215,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                                   alt={item?.title}
                                   width={100}
                                   height={100}
+                                  loading='lazy'
                                 />
                               </div>
                               <div className='flex w-2/3 flex-col justify-center text-left'>

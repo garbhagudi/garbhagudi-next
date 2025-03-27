@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -64,6 +63,7 @@ const IndexPage = () => {
                     className='h-20 w-20 transition-all duration-300 dark:grayscale dark:hover:grayscale-0'
                     width={80}
                     height={80}
+                    priority={true}
                   />
                   <div className='pt-3 text-center font-content'>{items.title}</div>
                 </div>

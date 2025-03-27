@@ -15,7 +15,7 @@ const Banner = () => {
                 alt='happy couple with a baby'
                 width={590}
                 height={460}
-                priority
+                priority={true}
               />
             </div>
           </div>
@@ -141,6 +141,7 @@ const Banner = () => {
                 alt='happy couple with a baby'
                 width={500}
                 height={500}
+                priority={true}
               />
             </div>
           </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Image from 'next/image';

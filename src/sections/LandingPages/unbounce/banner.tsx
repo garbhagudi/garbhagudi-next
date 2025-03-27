@@ -15,7 +15,7 @@ const Banner = () => {
               width={400}
               height={400}
               className='h-auto w-auto lg:max-h-[30rem]'
-              priority
+              priority={true}
             />
           </div>
           <div className='mx-auto flex max-w-xl items-center justify-center'>

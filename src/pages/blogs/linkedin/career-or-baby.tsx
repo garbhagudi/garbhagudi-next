@@ -1,8 +1,8 @@
-import BlogFooter from 'components/blogFooter';
-import Share from 'components/share';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Image from 'next/image';
-import React from 'react';
+const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
+const Share = dynamic(() => import('components/share'), { ssr: false });
 
 const CareerOrBaby = () => {
   return (
@@ -65,6 +65,7 @@ const CareerOrBaby = () => {
               alt='Career or Baby ?'
               width={500}
               height={500}
+              priority={true}
             />
           </div>
           <div className='lg:pr-10'>
@@ -120,6 +121,7 @@ const CareerOrBaby = () => {
               className='rounded-3xl'
               width={500}
               height={500}
+              loading='lazy'
             />
           </div>
         </div>
@@ -136,6 +138,7 @@ const CareerOrBaby = () => {
               className='rounded-3xl'
               width={500}
               height={500}
+              loading='lazy'
             />
           </div>
           <div className='flex flex-col justify-center md:pr-8 lg:max-w-lg xl:pr-0'>
@@ -207,6 +210,7 @@ const CareerOrBaby = () => {
               alt='ART - The Real Boon!'
               width={500}
               height={500}
+              loading='lazy'
             />
           </div>
         </div>
@@ -244,6 +248,7 @@ const CareerOrBaby = () => {
               className='rounded-3xl'
               width={500}
               height={500}
+              loading='lazy'
             />
           </div>
         </div>
@@ -260,6 +265,7 @@ const CareerOrBaby = () => {
               className='rounded-3xl'
               width={500}
               height={500}
+              loading='lazy'
             />
           </div>
           <div className='flex flex-col justify-center md:pr-8 lg:max-w-lg xl:pr-0'>

@@ -1,26 +1,49 @@
-import React from 'react';
-import AshaSection from 'sections/LandingPages/Neutral/AshaSection';
-import Banner from 'sections/infertility/banner';
-import {
-  InfertilityTreatmentOptions,
-  WhatIsInfertilityTreatment,
-  InfertilityTreatmentProcess,
-  WhyGarbhaGudi,
-  WhenDiagnose,
-  Causes,
-} from 'sections/infertility/content';
-import CTA from 'sections/infertility/cta';
+import { useState } from 'react';
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
-import Carousel from 'nuka-carousel';
-import DoctorLayout from 'components/doctorsLayout';
-import Faq from 'sections/infertility/faq';
-import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+
+const Carousel = dynamic(() => import('nuka-carousel'), {
+  ssr: false,
+});
+
+// Dynamically import components with SSR disabled
+const AshaSection = dynamic(() => import('sections/LandingPages/Neutral/AshaSection'), {
+  ssr: false,
+});
+const Banner = dynamic(() => import('sections/infertility/banner'), { ssr: true });
+const InfertilityTreatmentOptions = dynamic(
+  () => import('sections/infertility/content').then((mod) => mod.InfertilityTreatmentOptions),
+  { ssr: false }
+);
+const WhatIsInfertilityTreatment = dynamic(
+  () => import('sections/infertility/content').then((mod) => mod.WhatIsInfertilityTreatment),
+  { ssr: true }
+);
+const InfertilityTreatmentProcess = dynamic(
+  () => import('sections/infertility/content').then((mod) => mod.InfertilityTreatmentProcess),
+  { ssr: false }
+);
+const WhyGarbhaGudi = dynamic(
+  () => import('sections/infertility/content').then((mod) => mod.WhyGarbhaGudi),
+  { ssr: false }
+);
+const WhenDiagnose = dynamic(
+  () => import('sections/infertility/content').then((mod) => mod.WhenDiagnose),
+  { ssr: false }
+);
+const Causes = dynamic(() => import('sections/infertility/content').then((mod) => mod.Causes), {
+  ssr: false,
+});
+const CTA = dynamic(() => import('sections/infertility/cta'), { ssr: false });
+const Faq = dynamic(() => import('sections/infertility/faq'), { ssr: false });
+const DoctorLayout = dynamic(() => import('components/doctorsLayout'), { ssr: false });
 
 const InfertilityPage = ({ doctors }) => {
-  const [activeIndex, setActiveIndex] = React.useState(1);
+  const [activeIndex, setActiveIndex] = useState(1);
   const defaultControlsConfig = {
     pagingDotsStyle: {
       display: 'none',
@@ -30,7 +53,11 @@ const InfertilityPage = ({ doctors }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1691229236/Misc/pregnant-woman-min_wvchfc.webp'
+          as='image'
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Best Infertility Treatment In Bangalore</title>
         <meta

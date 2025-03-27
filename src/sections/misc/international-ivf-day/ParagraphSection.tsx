@@ -44,6 +44,7 @@ const ParagraphSection = () => {
             'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984797/Yoga/21-Days-Yoga-Challenge-Logo_fup9qy.webp'
           }
           alt='Holistic approach to fertility - Section Image'
+          loading='lazy'
         />
       </div>
     </div>

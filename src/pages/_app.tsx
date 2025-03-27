@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import 'styles/globals.css';
 import 'styles/calendar.css';
 import dynamic from 'next/dynamic';
@@ -10,10 +10,10 @@ import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
 
 // Dynamically import components
-const Footer = dynamic(() => import('components/footer/footer'));
-const Nav = dynamic(() => import('components/header/header'));
+const Footer = dynamic(() => import('components/footer/footer'), { ssr: false });
+const Nav = dynamic(() => import('components/header/header'), { ssr: true });
 const Salesiq = dynamic(() => import('components/SalesIQ'), { ssr: false });
-const Loading = dynamic(() => import('components/Loading'));
+const Loading = dynamic(() => import('components/Loading'), { ssr: true });
 const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false });
 function MyApp({ Component, pageProps }) {
   const router = useRouter();

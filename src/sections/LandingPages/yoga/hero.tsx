@@ -1,4 +1,3 @@
-import React from 'react';
 import CountdownTimer from 'components/timer';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -34,6 +33,7 @@ const Hero = () => {
                   id={'WUekV9px8Mc'}
                   title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
                   poster='maxresdefault'
+                  webp={true}
                 />
               </div>
             </div>

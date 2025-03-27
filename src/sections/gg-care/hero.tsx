@@ -17,7 +17,7 @@ const supportLinks = [
       'Reach out to us with your questions, concerns, or challenges. We’ll be happy to help you at any time, and we’re always trying to make things easier for you!',
     icon: HiPhone,
     ctaAction: 'Call Now',
-    ctaLink: 'tel:+91 9108 9108 32',
+    ctaLink: 'tel:+919108910832',
   },
   {
     name: 'Book an Appointment',
@@ -42,6 +42,7 @@ const Hero = () => {
             alt='gg care'
             width={500}
             height={500}
+            priority={true}
           />
           <div
             className='absolute inset-0 bg-gray-400 mix-blend-multiply dark:bg-gray-600'

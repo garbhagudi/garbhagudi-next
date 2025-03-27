@@ -1,14 +1,14 @@
-import React from 'react';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import { useRouter } from 'next/router';
-import Share from 'components/share';
 import Loading from 'components/Loading';
 import Image from 'next/image';
 import { throttledFetch } from 'lib/throttle';
+import dynamic from 'next/dynamic';
+const Share = dynamic(() => import('components/share'), { ssr: false });
 
 export const getStaticProps = async ({ params }) => {
   const apolloQuery = async ({ slug }) => {
@@ -39,6 +39,11 @@ export const getStaticProps = async ({ params }) => {
     });
   };
   const { data } = await throttledFetch(apolloQuery, { slug: params.slug });
+  if (data?.error || !data?.treatment) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       treatment: data.treatment,
@@ -210,11 +215,12 @@ const Treatment = ({ treatment }) => {
       `,
     };
   }
+
   return (
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link rel='preload' href={treatment?.image?.url} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{`${treatment?.metaTitle || treatment?.title}`}</title>
         <meta name='title' content={`${treatment?.metaTitle || treatment?.title}`} />
@@ -222,35 +228,31 @@ const Treatment = ({ treatment }) => {
           name='description'
           content={treatment?.metaDescription || treatment?.content?.text.slice(0, 160)}
         />
-
         {/* Ld+JSON Data */}
-
         <script
+          id='review-jsonld'
           type='application/ld+json'
           dangerouslySetInnerHTML={addReviewJsonLd()}
-          key='review-jsonld'
         />
 
         <script
+          id='product-jsonld'
           type='application/ld+json'
           dangerouslySetInnerHTML={addProductJsonLd()}
-          key='product-jsonld'
         />
 
         <script
+          id='breadcrumbs-jsonld'
           type='application/ld+json'
           dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-          key='breadcrumbs-jsonld'
         />
-
         {treatment?.slug === 'laparoscopy-treatment-in-bangalore' && (
           <script
             type='application/ld+json'
             dangerouslySetInnerHTML={faqJsonLd()}
-            key='faq-jsonld'
+            id='faq-jsonld'
           />
         )}
-
         {/* Open Graph / Facebook */}
 
         <meta property='og:title' content={`${treatment?.title} | GarbhaGudi IVF Centre`} />
@@ -379,8 +381,9 @@ const Treatment = ({ treatment }) => {
                 className='mb-5 mt-10 w-full rounded-lg'
                 src={treatment?.image?.url}
                 alt={treatment?.imageAlt || treatment?.title}
-                width={1310}
-                height={873}
+                width={800}
+                height={500}
+                priority={true}
               />
             </figure>
             <div className='text-gray-800 dark:text-gray-200'>

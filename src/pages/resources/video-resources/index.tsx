@@ -12,19 +12,19 @@ const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playli
 
 export async function getServerSideProps() {
   const recommendedData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=7&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyETkI9qBtY9BSEGsTxrQYcw&maxResults=5&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const tvAppearanceData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=7&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyHGeOsWF-O_mVh5MBz8HPPR&maxResults=5&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const garbhasandeshaData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=7&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyGc__8VHjlvgmO6sVXIoxFt&maxResults=5&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const testimonialData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=7&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=5&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const recommended = await recommendedData.json();

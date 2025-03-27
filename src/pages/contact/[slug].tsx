@@ -1,4 +1,3 @@
-import React from 'react';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
@@ -26,7 +25,11 @@ export const getStaticProps = async ({ params }) => {
       slug: params.slug,
     },
   });
-
+  if (!data || !data.valueAddedService) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       valueAddedService: data.valueAddedService,
@@ -56,7 +59,7 @@ const Vas = ({ valueAddedService }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link rel='preload' href={valueAddedService?.image?.url} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{valueAddedService.title} | GarbhaGudi</title>
         <meta name='title' content=' | GarbhaGudi IVF Centre' />
@@ -75,18 +78,21 @@ const Vas = ({ valueAddedService }) => {
           content='GarbhaGudi has been reaching out to couples facing infertility and in the process growing steadily. But as it’s said, growth doesn’t happen in isolation. With this intention, we aim to forge strong partnerships with like-minded associates and in turn bring benefits to both patients who will get the best of treatment options at affordable costs and to partners who wish to grow their business through the strong branding of GarbhaGudi.'
         />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content={valueAddedService.image.url} />
+        <meta property='og:image' content={valueAddedService?.image?.url} />
 
         {/* Twitter*/}
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta name='twitter:title' content={`${valueAddedService.title} | GarbhaGudi IVF Centre`} />
+        <meta
+          name='twitter:title'
+          content={`${valueAddedService?.title} | GarbhaGudi IVF Centre`}
+        />
         <meta
           name='twitter:description'
           content='GarbhaGudi has been reaching out to couples facing infertility and in the process growing steadily. But as it’s said, growth doesn’t happen in isolation. With this intention, we aim to forge strong partnerships with like-minded associates and in turn bring benefits to both patients who will get the best of treatment options at affordable costs and to partners who wish to grow their business through the strong branding of GarbhaGudi.'
         />
-        <meta name='twitter:image' content={valueAddedService.image.url} />
+        <meta name='twitter:image' content={valueAddedService?.image?.url} />
       </Head>
       <BreadCrumbs
         link1='/gg-care'
@@ -191,20 +197,19 @@ const Vas = ({ valueAddedService }) => {
           <div className='mx-auto max-w-7xl'>
             <h1>
               <span className='mt-4 block text-center font-heading text-2xl font-bold leading-8 tracking-tight text-gray-800 dark:text-gray-200 sm:text-4xl'>
-                {valueAddedService.title}
+                {valueAddedService?.title}
               </span>
             </h1>
-            <figure>
-              <Image
-                className='mb-5 mt-10 w-full rounded-lg'
-                src={valueAddedService.image.url}
-                alt={valueAddedService.title}
-                width={1310}
-                height={873}
-              />
-            </figure>
+            <Image
+              className='mb-5 mt-10 w-full rounded-lg'
+              src={valueAddedService?.image?.url}
+              alt={valueAddedService?.title}
+              width={1310}
+              height={500}
+              priority={true}
+            />
             <div className='text-gray-800 dark:text-gray-200'>
-              <RichText content={valueAddedService.content.raw.children} />
+              <RichText content={valueAddedService?.content?.raw?.children} />
             </div>
             <div></div>
           </div>

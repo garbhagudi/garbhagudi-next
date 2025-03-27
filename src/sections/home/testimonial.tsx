@@ -1,4 +1,3 @@
-import React from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { FcGoogle } from 'react-icons/fc';
 import { MdOutlineSwipeLeft, MdOutlineRateReview } from 'react-icons/md';

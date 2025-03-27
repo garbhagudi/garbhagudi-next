@@ -1,13 +1,13 @@
-import React from 'react';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import Content from 'sections/misc/ivf-main/content';
-import Banner from 'sections/misc/ivf-main/banner';
-import WhenIvf from 'sections/misc/ivf-main/when-ivf';
-import Faq from 'sections/misc/ivf-main/faq';
-import LiveBirth from 'sections/misc/ivf-main/live-birth';
-import Risks from 'sections/misc/ivf-main/risks';
-import Video from 'sections/misc/ivf-main/video';
-import Related from 'sections/misc/ivf-main/related';
+const Content = dynamic(() => import('sections/misc/ivf-main/content'), { ssr: false });
+const Banner = dynamic(() => import('sections/misc/ivf-main/banner'), { ssr: true });
+const WhenIvf = dynamic(() => import('sections/misc/ivf-main/when-ivf'), { ssr: false });
+const Faq = dynamic(() => import('sections/misc/ivf-main/faq'), { ssr: false });
+const LiveBirth = dynamic(() => import('sections/misc/ivf-main/live-birth'), { ssr: false });
+const Risks = dynamic(() => import('sections/misc/ivf-main/risks'), { ssr: false });
+const Video = dynamic(() => import('sections/misc/ivf-main/video'), { ssr: false });
+const Related = dynamic(() => import('sections/misc/ivf-main/related'), { ssr: false });
 
 const Ivf = () => {
   function addReviewJsonLd() {
@@ -186,6 +186,11 @@ const Ivf = () => {
   return (
     <div>
       <Head>
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1672381537/Misc/happy-pregnant-woman-late-pregnancy-stage-sitting-grass-lawn-min_11zon_xkeac0.webp'
+          as='image'
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Best IVF Treatment In Bangalore</title>
         <meta name='title' content='Best IVF Treatment In Bangalore' />
@@ -197,34 +202,32 @@ const Ivf = () => {
         {/* Ld+JSON Data */}
         <script
           type='application/ld+json'
-          dangerouslySetInnerHTML={addReviewJsonLd()}
-          key='review-jsonld'
-        />
-
-        <script
-          type='application/ld+json'
           dangerouslySetInnerHTML={addProductJsonLd()}
-          key='product-jsonld'
+          id='product-jsonld'
         />
 
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-          key='breadcrumbs-jsonld'
+          id='breadcrumbs-jsonld'
         />
 
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={addHowToJsonLd()}
-          key='howto-jsonld'
+          id='howto-jsonld'
         />
 
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={addFaqJsonLd()}
-          key='howto-jsonld'
+          id='howto-jsonld'
         />
-
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addReviewJsonLd()}
+          id='review-jsonld'
+        />
         {/* Open Graph / Facebook */}
 
         <meta property='og:title' content='Best IVF Treatment In Bangalore | Garbhagudi ' />

@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -34,17 +33,21 @@ const Banner = () => {
               IUI treatment in Bangalore.
             </Link>{' '}
           </div>
-          <button className='mt-5 rounded-lg bg-gg-500 px-3 py-2 font-content text-lg font-semibold text-white hover:bg-gg-400 dark:bg-gray-500 dark:hover:bg-gg-500'>
+          <Link
+            href='/contact/enquiry'
+            className='mt-5 rounded-lg bg-gg-500 px-3 py-2 font-content text-lg font-semibold text-white hover:bg-gg-400 dark:bg-gray-500 dark:hover:bg-gg-500'
+          >
             Consult Now
-          </button>
+          </Link>
         </div>
         <div className='lg:py-10'>
           <Image
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722501966/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0_1_i7oozx.webp'
             alt='IUI treatment in Bangalore'
             className='rounded-xl'
-            width={500}
-            height={500}
+            width={320}
+            height={320}
+            priority={true}
           />
         </div>
       </div>

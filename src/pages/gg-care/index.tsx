@@ -1,19 +1,23 @@
-import React from 'react';
-import Hero from 'sections/gg-care/hero';
-import Contact from 'sections/gg-care/content';
-import Stats from 'sections/gg-care/stats';
-import Cta from 'sections/gg-care/cta';
-import Video from 'sections/gg-care/workflow';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import Share from 'components/share';
-import FindBranch from 'sections/gg-care/find-branch';
+import Hero from 'sections/gg-care/hero';
+const Contact = dynamic(() => import('sections/gg-care/content'), { ssr: false });
+const Stats = dynamic(() => import('sections/gg-care/stats'), { ssr: false });
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
+const Video = dynamic(() => import('sections/gg-care/workflow'), { ssr: false });
+const FindBranch = dynamic(() => import('sections/gg-care/find-branch'), { ssr: false });
+const Share = dynamic(() => import('components/share'), { ssr: false });
 
 const IndexPage = () => {
   return (
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1644049097/Banner/GG_Care_Web_Banner-6_iyxanu.webp'
+          as='image'
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>GG CARE - Committed to Couple Delight</title>
         <meta

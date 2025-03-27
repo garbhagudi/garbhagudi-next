@@ -1,5 +1,3 @@
-import React from 'react';
-
 const TermsConditions = () => {
   return (
     <div className='lg:px-00 px-3'>

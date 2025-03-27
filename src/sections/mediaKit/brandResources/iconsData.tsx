@@ -8,7 +8,6 @@ import GgirhrH from 'assets/ggirhr-full-horizontal.svg';
 import GgirhrV from 'assets/ggirhr-full-vertical.svg';
 import GarbhaGnan from 'assets/garbhagnan-standalone.svg';
 import BrandElement from 'assets/brand-element.svg';
-
 export const data = [
   {
     id: 1,

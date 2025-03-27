@@ -1,17 +1,9 @@
 import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
 import Image from 'next/image';
-import BookAnAppointment from './bookAnAppointment';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import Carousel from 'nuka-carousel';
 
 export default function Banner() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleClose = () => {
-    setIsOpen(false);
-  };
-
   const banners = [
     {
       id: '1',
@@ -43,7 +35,7 @@ export default function Banner() {
   };
 
   return (
-    <Fragment>
+    <>
       <div>
         <section className='relative overflow-hidden bg-cover bg-right bg-no-repeat sm:bg-center'>
           <Carousel
@@ -98,14 +90,6 @@ export default function Banner() {
           </div>
         </section>
       </div>
-      {isOpen && (
-        <div
-          className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'
-          onClick={handleClose}
-        >
-          <BookAnAppointment />
-        </div>
-      )}
-    </Fragment>
+    </>
   );
 }

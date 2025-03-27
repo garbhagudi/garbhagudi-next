@@ -56,7 +56,11 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742808594/paripoorna/IVF_Compressed_kmekqi_bewqzl.webp'
+          as='image'
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Bangalore's Best IVF Centres | GarbhaGudi IVF Centre</title>
         <meta name='title' content="Bangalore's Best IVF Centres | GarbhaGudi IVF Centre" />
@@ -234,7 +238,7 @@ export const getStaticProps = async () => {
   });
 
   const testimonialsData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=8&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
   const testimonials = await testimonialsData.json();

@@ -1,10 +1,8 @@
-import React from 'react';
-
 const GuidelineList = ({ category, guidelines }) => (
   <div className='space-y-4 pb-4 font-lexend'>
     <h2 className='font-bold'>{category}</h2>
     <ul className='ml-5 list-disc space-y-2'>
-      {guidelines.map((guideline) => (
+      {guidelines.map((guideline: { id: number; point: string }) => (
         <li key={guideline.id}>{guideline.point}</li>
       ))}
     </ul>

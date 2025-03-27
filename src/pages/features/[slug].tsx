@@ -1,4 +1,3 @@
-import React from 'react';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
@@ -28,12 +27,16 @@ export const getStaticProps = async ({ params }) => {
       slug: params.slug,
     },
   });
-
+  if (data?.error || !data?.valueAddedService) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       valueAddedService: data.valueAddedService,
     },
-    revalidate: 90,
+    revalidate: 180,
   };
 };
 
@@ -62,7 +65,7 @@ const Vas = ({ valueAddedService }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link rel='preload' href={valueAddedService?.image?.url} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={title} />
@@ -192,15 +195,14 @@ const Vas = ({ valueAddedService }) => {
                   {valueAddedService?.title}
                 </span>
               </h1>
-              <figure>
-                <Image
-                  className='mb-5 mt-10 w-full rounded-lg'
-                  src={valueAddedService?.image.url}
-                  alt={valueAddedService?.title}
-                  width={1200}
-                  height={600}
-                />
-              </figure>
+              <Image
+                className='mb-5 mt-10 w-full rounded-lg'
+                src={valueAddedService?.image.url}
+                alt={valueAddedService?.title}
+                width={1200}
+                height={500}
+                priority={true}
+              />
               <div className='text-gray-800 dark:text-gray-200'>
                 <RichText content={valueAddedService?.content.raw.children} />
               </div>

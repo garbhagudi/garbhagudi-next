@@ -34,6 +34,11 @@ const FourOhFour = () => {
   return (
     <div>
       <Head>
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg'
+          as='image'
+        />
         <title>Four Oh! Four Error</title>
         <meta
           name='description'
@@ -49,6 +54,7 @@ const FourOhFour = () => {
               alt='Workflow'
               width={200}
               height={200}
+              priority={true}
             />
           </div>
           <div className='mx-auto max-w-xl py-16 sm:py-24'>
@@ -82,6 +88,7 @@ const FourOhFour = () => {
                           aria-hidden='true'
                           width={40}
                           height={40}
+                          loading='lazy'
                         />
                       </span>
                     </div>

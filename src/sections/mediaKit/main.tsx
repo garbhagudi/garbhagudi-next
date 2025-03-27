@@ -1,14 +1,27 @@
-import React from 'react';
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
-import Overview from 'sections/mediaKit/brandResources/overview';
-import Introduction from 'sections/mediaKit/brandResources/introduction';
-import LogosIconsColours from 'sections/mediaKit/brandResources/logos-icons-colours';
-import Typography from 'sections/mediaKit/brandResources/badging';
-import Partners from 'sections/mediaKit/brandResources/partners-and-advertisers';
-import KeyPersonnel from 'sections/mediaKit/brandResources/keyPersonnel';
-import SocialPostsGuide from './brandResources/socialImageGuide';
-import SocialMediaTemplates from './brandResources/socialMediaTemplates';
-
+import dynamic from 'next/dynamic';
+const Overview = dynamic(() => import('sections/mediaKit/brandResources/overview'), { ssr: true });
+const Introduction = dynamic(() => import('sections/mediaKit/brandResources/introduction'), {
+  ssr: false,
+});
+const LogosIconsColours = dynamic(
+  () => import('sections/mediaKit/brandResources/logos-icons-colours'),
+  { ssr: false }
+);
+const Typography = dynamic(() => import('sections/mediaKit/brandResources/badging'), {
+  ssr: false,
+});
+const Partners = dynamic(
+  () => import('sections/mediaKit/brandResources/partners-and-advertisers'),
+  { ssr: false }
+);
+const KeyPersonnel = dynamic(() => import('sections/mediaKit/brandResources/keyPersonnel'), {
+  ssr: false,
+});
+const SocialPostsGuide = dynamic(() => import('./brandResources/socialImageGuide'), { ssr: false });
+const SocialMediaTemplates = dynamic(() => import('./brandResources/socialMediaTemplates'), {
+  ssr: false,
+});
 const MediaKit = () => {
   return (
     <div className='bg-white dark:bg-gray-800'>
