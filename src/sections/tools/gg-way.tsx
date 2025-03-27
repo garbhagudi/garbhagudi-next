@@ -1,5 +1,12 @@
 import Image from 'next/image';
+import { memo } from 'react';
 
+interface GgWayItem {
+  id: number;
+  title: string;
+  way: JSX.Element;
+  bgImage: string;
+}
 const GarbhaGudiWay = () => {
   return (
     <div>
@@ -16,36 +23,47 @@ const GarbhaGudiWay = () => {
         </p>
       </div>
       <div className='flex flex-wrap items-center justify-center gap-5 bg-purple-50 px-3 py-10 sm:px-0'>
-        {ggway.map((items) => (
-          <div className='group aspect-square w-full max-w-sm [perspective:1000px]' key={items.id}>
-            <div className='relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
-              <div className='relative inset-0 h-full w-full'>
-                <div className='absolute h-full w-full rounded-lg bg-black/70'>
-                  <div className='flex h-full items-center justify-center px-2 text-center font-lexend text-2xl font-bold text-white transition-all duration-500 group-hover:text-transparent md:text-3xl'>
-                    {items.title}
-                  </div>
-                </div>
-                <Image
-                  className='h-full w-full rounded-xl object-cover shadow-xl shadow-black/50'
-                  src={items.bgImage}
-                  alt={items.title}
-                  width={640}
-                  height={640}
-                />
-              </div>
-              <div className='bg-brandDark/70 absolute inset-0 h-full w-full rounded-xl px-3 py-1 text-center text-white [backface-visibility:hidden] [transform:rotateY(180deg)] md:px-12'>
-                <div className='flex min-h-full flex-col items-center justify-center font-lexend text-lg md:text-xl'>
-                  {items.way}
-                </div>
-              </div>
-            </div>
-          </div>
+        {ggway.map((curr: GgWayItem) => (
+          <GarbhaGudiCard key={curr.id} item={curr} />
         ))}
       </div>
     </div>
   );
 };
 
+interface GarbhaGudiCardProps {
+  item: GgWayItem;
+}
+const GarbhaGudiCard = memo(({ item }: GarbhaGudiCardProps) => {
+  return (
+    <div className='group aspect-square w-full max-w-sm [perspective:1000px]'>
+      <div className='relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
+        <div className='relative inset-0 h-full w-full'>
+          <div className='absolute h-full w-full rounded-lg bg-black/70'>
+            <div className='flex h-full items-center justify-center px-2 text-center font-lexend text-2xl font-bold text-white transition-all duration-500 group-hover:text-transparent md:text-3xl'>
+              {item.title}
+            </div>
+          </div>
+          <Image
+            className='h-full w-full rounded-xl object-cover shadow-xl shadow-black/50'
+            src={item.bgImage}
+            alt={item.title}
+            width={640}
+            height={640}
+            priority // Prioritize loading for important images
+          />
+        </div>
+        <div className='bg-brandDark/70 absolute inset-0 h-full w-full rounded-xl px-3 py-1 text-center text-white [backface-visibility:hidden] [transform:rotateY(180deg)] md:px-12'>
+          <div className='flex min-h-full flex-col items-center justify-center font-lexend text-lg md:text-xl'>
+            {item.way}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+});
+// Adding a displayName
+GarbhaGudiCard.displayName = 'GarbhaGudiCard';
 export default GarbhaGudiWay;
 
 const ggway = [

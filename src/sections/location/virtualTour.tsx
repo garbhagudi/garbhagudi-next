@@ -1,5 +1,3 @@
-import React from 'react';
-
 const VirtualTour = ({ link1, link2, link3 }) => {
   return (
     <div className='mx-auto max-w-7xl'>

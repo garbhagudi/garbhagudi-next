@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 
 const SocialMediaTemplates = () => {
   return (
@@ -15,6 +14,7 @@ const SocialMediaTemplates = () => {
                 height={500}
                 width={500}
                 className='object-cover'
+                loading='lazy'
               />
               <p className='mt-2 bg-gg-500 py-0.5 text-center font-lexend text-sm text-white'>
                 {item.desccription}

@@ -3,16 +3,24 @@ import dynamic from 'next/dynamic';
 import Hero from 'sections/LandingPages/yoga/hero';
 import Header from 'sections/LandingPages/yoga/header';
 import Head from 'next/head';
-const EventDetails = dynamic(() => import('sections/LandingPages/yoga/eventDetails'));
-const Curriculum = dynamic(() => import('sections/LandingPages/yoga/curriculum'));
-const AboutDoctors = dynamic(() => import('sections/LandingPages/yoga/aboutDoctors'));
-const Testimonial = dynamic(() => import('sections/LandingPages/yoga/testimonial'));
-const Faq = dynamic(() => import('sections/LandingPages/yoga/faq'));
-const Register = dynamic(() => import('sections/LandingPages/yoga/register'));
-const MobileFooter = dynamic(() => import('sections/LandingPages/yoga/mobileFooter'));
-const Benefits = dynamic(() => import('sections/LandingPages/yoga/benefits'));
-const WhoIsThisFor = dynamic(() => import('sections/LandingPages/yoga/whoIsThisFor'));
-const Floating = dynamic(() => import('sections/LandingPages/yoga/floatingWindow'));
+const EventDetails = dynamic(() => import('sections/LandingPages/yoga/eventDetails'), {
+  ssr: false,
+});
+const Curriculum = dynamic(() => import('sections/LandingPages/yoga/curriculum'), { ssr: false });
+const AboutDoctors = dynamic(() => import('sections/LandingPages/yoga/aboutDoctors'), {
+  ssr: false,
+});
+const Testimonial = dynamic(() => import('sections/LandingPages/yoga/testimonial'), { ssr: false });
+const Faq = dynamic(() => import('sections/LandingPages/yoga/faq'), { ssr: false });
+const Register = dynamic(() => import('sections/LandingPages/yoga/register'), { ssr: false });
+const MobileFooter = dynamic(() => import('sections/LandingPages/yoga/mobileFooter'), {
+  ssr: false,
+});
+const Benefits = dynamic(() => import('sections/LandingPages/yoga/benefits'), { ssr: false });
+const WhoIsThisFor = dynamic(() => import('sections/LandingPages/yoga/whoIsThisFor'), {
+  ssr: false,
+});
+const Floating = dynamic(() => import('sections/LandingPages/yoga/floatingWindow'), { ssr: false });
 
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 

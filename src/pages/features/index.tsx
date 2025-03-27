@@ -1,8 +1,6 @@
-import React from 'react';
 import Features2 from 'sections/home/features2';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
-
 const IndexPage = () => {
   return (
     <div>

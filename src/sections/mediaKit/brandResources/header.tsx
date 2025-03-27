@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Header = () => {
   return (
     <div className='bg-white dark:bg-gray-800'>

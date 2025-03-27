@@ -1,18 +1,21 @@
-import React from 'react';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
-import Cta from 'sections/gg-care/cta';
-import FAQ from 'sections/paripoorna/faq';
-import Home from 'sections/paripoorna/home';
-import Steps from 'sections/paripoorna/steps';
-import TermsConditions from 'sections/paripoorna/tandc';
 import Head from 'next/head';
-
+import dynamic from 'next/dynamic';
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
+const FAQ = dynamic(() => import('sections/paripoorna/faq'), { ssr: false });
+const Home = dynamic(() => import('sections/paripoorna/home'), { ssr: true });
+const Steps = dynamic(() => import('sections/paripoorna/steps'), { ssr: false });
+const TermsConditions = dynamic(() => import('sections/paripoorna/tandc'), { ssr: false });
 const Paripoorna = () => {
   return (
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1669643962/Banner/Bunting_kgdona.webp'
+          as='image'
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Paripoorna | Get flat ₹1,00,000 off on IVF Treatments</title>
         <meta name='title' content='Paripoorna | Get a flat ₹1,00,000 off on IVF Treatments' />

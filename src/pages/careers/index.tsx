@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { gql } from '@apollo/client';
 import Head from 'next/head';
@@ -6,12 +5,30 @@ import BreadCrumbs from 'components/breadcrumbs';
 import apolloClient from 'lib/apollo-graphcms';
 import Image from 'next/image';
 
+interface CareerProps {
+  position: string;
+  slug: string;
+  location: string;
+  id: string;
+  experience: string;
+  qualification: string;
+  image: {
+    url: string;
+  };
+}
 const IndexPage = ({ careers }) => {
   return (
     <div>
       <Head>
+        {/* Preload main image */}
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Careers_vpudat.webp'
+          as='image'
+        />
+        {/* Preconnect to external resources */}
+        <link rel='dns-prefetch' href='https://res.cloudinary.com' />
         {/* Primary Tags */}
-
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Careers | GarbhaGudi</title>
         <meta name='title' content='Careers | GarbhaGudi IVF Centre' />
@@ -72,6 +89,7 @@ const IndexPage = ({ careers }) => {
                 className='rounded-xl'
                 width={1524}
                 height={764}
+                priority
               />
             </div>
           </Link>
@@ -98,8 +116,8 @@ const IndexPage = ({ careers }) => {
         </div>
         <div className='container mx-auto mb-2 flex w-full items-center justify-center'>
           <div className='mt-6 grid grid-cols-1 gap-6 px-3 pb-6 md:grid-cols-2 lg:grid-cols-3'>
-            {careers.map((items) => (
-              <Link href={`careers/${items?.slug}`} passHref key={items.id} className='group'>
+            {careers?.map((items: CareerProps) => (
+              <Link href={`careers/${items?.slug}`} passHref key={items?.id} className='group'>
                 <div className='mx-auto rounded-lg border bg-gradient-to-br from-pink-50 to-purple-50 shadow-md duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:bg-gradient-to-br hover:from-pink-100 hover:via-brandPurple2 hover:to-brandPurple hover:shadow-2xl hover:transition-all dark:border-gray-600 dark:from-gray-800 dark:to-slate-800 dark:hover:from-gray-700 dark:hover:to-transparent'>
                   <div className='flex flex-col justify-between p-4 leading-normal'>
                     <div className='flex items-center space-x-2'>
@@ -109,6 +127,7 @@ const IndexPage = ({ careers }) => {
                         className='h-24 w-24 rounded-full object-cover'
                         width={100}
                         height={100}
+                        loading='lazy'
                       />
                       <h5 className='mb-2 font-content text-xl font-bold tracking-tight text-gray-800 dark:text-gray-200'>
                         {items?.position}
@@ -148,7 +167,6 @@ export const getStaticProps = async () => {
         careers(orderBy: publishedAt_DESC) {
           position
           slug
-          isActive
           location
           id
           experience

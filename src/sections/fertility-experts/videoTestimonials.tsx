@@ -3,7 +3,6 @@ import Carousel from 'nuka-carousel';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { MdOutlineSwipeLeft } from 'react-icons/md';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
-
 interface testimonialProps {
   testimonials: [item: string];
 }
@@ -56,6 +55,7 @@ const VideoTestimonials = ({ testimonials }: testimonialProps) => {
                     id={item?.split('/')?.at(-1)?.split('?')[0]}
                     title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
                     poster='maxresdefault'
+                    webp={true}
                   />
                 </div>
               );

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 import { RxOpenInNewWindow } from 'react-icons/rx';
 
 const Typography = () => {

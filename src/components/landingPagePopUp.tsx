@@ -43,7 +43,7 @@ export default function LandingPagePopUp() {
           <div className='flex min-h-full items-center justify-center px-3 pt-8'>
             <DialogPanel
               transition
-              className='data-[closed]:transform-[scale(95%)] max-w-md rounded-xl bg-gg-500 pb-4 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] transition-shadow duration-300 ease-out hover:shadow-[0_0_25px_10px_rgba(0,0,0,0.5)] data-[closed]:opacity-0'
+              className='data-[closed]:transform-[scale(95%)] max-w-md rounded-xl bg-gray-800 pb-4 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] transition-shadow duration-300 ease-out hover:shadow-[0_0_25px_10px_rgba(0,0,0,0.5)] data-[closed]:opacity-0'
             >
               <div className='relative h-32 w-full'>
                 <Image
@@ -61,7 +61,7 @@ export default function LandingPagePopUp() {
               </div>
               <div className='px-0'>
                 <div className='flex justify-center'>
-                  <div className='mx-5 mt-5 w-fit self-center rounded-md bg-white px-4 py-1 text-center text-[13px] font-semibold text-brandPink shadow-sm'>
+                  <div className='mx-5 mt-5 w-fit self-center rounded-md bg-brandPink px-4 py-1 text-center text-[13px] font-semibold text-white shadow-sm'>
                     ₹1,00,000 off on IVF Treatment &
                     <br />
                     Free Fertility Screening

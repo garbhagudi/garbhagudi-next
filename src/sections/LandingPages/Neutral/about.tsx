@@ -15,6 +15,7 @@ const About = () => {
               width={500}
               height={500}
               className='h-56 w-56 animate-shine rounded-xl bg-gradient-to-br from-brandPurple via-white to-brandPink4 bg-[length:400%] p-3 shadow-2xl drop-shadow-2xl'
+              loading='lazy'
             />
           </div>
           <div className='col-span-3 mt-6 flex flex-col items-center justify-center px-3 font-content text-gray-800 dark:text-gray-200 md:mt-0'>

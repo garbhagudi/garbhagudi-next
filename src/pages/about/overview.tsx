@@ -1,11 +1,11 @@
-import Header from 'sections/about/header';
-import CoreVision from 'sections/about/coreVision';
 import apolloClient from 'lib/apollo-graphcms';
 import Link from 'next/link';
 import Head from 'next/head';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
-
+import dynamic from 'next/dynamic';
+const Header = dynamic(() => import('sections/about/header'), { ssr: true });
+const CoreVision = dynamic(() => import('sections/about/coreVision'), { ssr: false });
 const Overview = ({ directors }) => {
   return (
     <div>
@@ -71,6 +71,7 @@ const Overview = ({ directors }) => {
                             alt={item.name}
                             width={500}
                             height={500}
+                            loading='lazy'
                           />
                         </div>
                         <div className='space-y-2 text-lg font-medium leading-6'>

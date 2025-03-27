@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
@@ -79,6 +78,7 @@ const IndexPage = ({ causes }) => {
                     alt={item.title}
                     width={100}
                     height={100}
+                    priority={true}
                   />
                 </div>
                 <div className='flex w-2/3 flex-col justify-center text-center text-gray-800 dark:text-gray-200'>

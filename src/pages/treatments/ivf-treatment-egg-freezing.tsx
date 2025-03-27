@@ -1,4 +1,3 @@
-import React from 'react';
 import CTA from 'sections/egg-freezing/cta';
 import Expects from 'sections/egg-freezing/Expects';
 import Faq from 'sections/egg-freezing/faq';

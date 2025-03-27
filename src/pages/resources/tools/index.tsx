@@ -1,9 +1,8 @@
-import React from 'react';
 import Link from 'next/link';
-import BlogFooter from 'components/blogFooter';
 import Head from 'next/head';
 import Image from 'next/image';
-
+import dynamic from 'next/dynamic';
+const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
 const IndexPage = () => {
   return (
     <div>
@@ -63,6 +62,7 @@ const IndexPage = () => {
                     alt={item.name}
                     width={100}
                     height={100}
+                    priority={true}
                   />
                 </div>
                 <div className='flex w-2/3 flex-col justify-center text-center'>
@@ -103,7 +103,7 @@ const IndexPage = () => {
             </Link>
           </li>
           <li>
-            <Link href='https://consult.bestdocapp.com/home/GARBHAGUDI'>
+            <Link href='/contact/enquiry'>
               <div className='underline-offset-2 hover:underline'>Book an Appointment</div>
             </Link>
           </li>

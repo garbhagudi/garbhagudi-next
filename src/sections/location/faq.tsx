@@ -1,4 +1,3 @@
-import React from 'react';
 import { contactData } from 'sections/gg-care/content';
 import Link from 'next/link';
 import Image from 'next/image';

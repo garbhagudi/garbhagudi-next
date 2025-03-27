@@ -120,7 +120,7 @@ const Form = () => {
         <div className='mb-6 mt-6 flex items-center justify-center space-x-4'>
           <button
             type='submit'
-            className='flex items-center justify-center gap-2 rounded-md bg-white px-6 py-2 text-base font-bold text-gg-500'
+            className='flex items-center justify-center gap-2 rounded-md bg-gg-500 px-6 py-2 text-base font-bold text-white'
             disabled={load}
           >
             Get a call back

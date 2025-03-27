@@ -6,11 +6,12 @@ import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
-import SearchComponent from 'components/search/searchComponent';
-import Pagination from 'components/pagination';
 import GGLogo from 'assets/gg-emblem.svg';
 import { throttledFetch } from 'lib/throttle';
 import { Fragment } from 'react';
+import dynamic from 'next/dynamic';
+const SearchComponent = dynamic(() => import('components/search/searchComponent'), { ssr: true });
+const Pagination = dynamic(() => import('components/pagination'), { ssr: false });
 
 const limit = 6;
 
@@ -61,7 +62,7 @@ function BlogPage({
       <div>
         <Head>
           {/* Primary Tags */}
-
+          <link rel='dns-prefetch' href='https://media.graphassets.com' />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <title>{title}</title>
           <meta name='title' content={title} />
@@ -234,12 +235,23 @@ export async function getStaticProps({ params }) {
       },
     });
   };
-
+  const page = params.page;
+  if (isNaN(page)) {
+    // Return a 404 if no blogs are found
+    return {
+      notFound: true,
+    };
+  }
   const { data } = await throttledFetch(apolloQuery, {
     limit,
     offset: Number((params.page - 1) * limit),
   });
-
+  if (!data || data.blogsConnection.blogs.length === 0) {
+    // Return a 404 if no blogs are found
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       currentPageNumber: Number(params.page),
