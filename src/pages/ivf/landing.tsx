@@ -1,8 +1,4 @@
-import React from 'react';
 import dynamic from 'next/dynamic';
-import Award from 'sections/LandingPages/unbounce/award';
-import Banner from 'sections/LandingPages/unbounce/banner';
-import CTA from 'sections/LandingPages/unbounce/cta';
 import Offer from 'sections/LandingPages/unbounce/offer';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
@@ -11,19 +7,44 @@ import Header from 'sections/LandingPages/unbounce/header';
 import FloatWhatsApp from 'components/FloatWhatsapp';
 
 // Dynamic imports
-const Services = dynamic(() => import('sections/LandingPages/unbounce/services'));
-const WhyGarbhaGudi = dynamic(() => import('sections/LandingPages/unbounce/whyGarbhaGudi'));
-const Doctors = dynamic(() => import('sections/LandingPages/unbounce/doctors'));
-const Testimonial = dynamic(() => import('sections/home/testimonial'));
-const Faq = dynamic(() => import('sections/home/faq'));
-const EndForm = dynamic(() => import('sections/LandingPages/unbounce/endform'));
+const Banner = dynamic(() => import('sections/LandingPages/unbounce/banner'), {
+  ssr: true,
+});
+const Award = dynamic(() => import('sections/LandingPages/unbounce/award'), {
+  ssr: false,
+});
+const CTA = dynamic(() => import('sections/LandingPages/unbounce/cta'), {
+  ssr: false,
+});
+const Services = dynamic(() => import('sections/LandingPages/unbounce/services'), {
+  ssr: false,
+});
+const WhyGarbhaGudi = dynamic(() => import('sections/LandingPages/unbounce/whyGarbhaGudi'), {
+  ssr: false,
+});
+const Doctors = dynamic(() => import('sections/LandingPages/unbounce/doctors'), {
+  ssr: false,
+});
+const Testimonial = dynamic(() => import('sections/home/testimonial'), {
+  ssr: false,
+});
+const Faq = dynamic(() => import('sections/home/faq'), {
+  ssr: false,
+});
+const EndForm = dynamic(() => import('sections/LandingPages/unbounce/endform'), {
+  ssr: false,
+});
 
 const Landing = ({ doctors }) => {
   return (
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742986481/landing-page/Offer-Logo_r3rnce.webp'
+          as='image'
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India</title>
         <meta

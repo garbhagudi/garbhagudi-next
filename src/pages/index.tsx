@@ -1,13 +1,12 @@
-import React from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import HomeComponent from 'sections/home';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import BannerComponent from 'sections/home/bannerComponent';
-import LandingPagePopUp from 'components/landingPagePopUp';
-const Faq = dynamic(() => import('sections/home/faq'));
-const DoctorList = dynamic(() => import('sections/home/doctorList'));
+const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
+const DoctorList = dynamic(() => import('sections/home/doctorList'), { ssr: false });
+const LandingPagePopUp = dynamic(() => import('components/landingPagePopUp'), { ssr: false });
 
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 

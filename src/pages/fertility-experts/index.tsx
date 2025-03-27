@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 import apolloClient from 'lib/apollo-graphcms';
@@ -38,7 +37,8 @@ const IndexPage = ({ branches }: Branches) => {
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link rel='preconnect' href='https://res.cloudinary.com' />
+        <link rel='preconnect' href='https://maps.googleapis.com' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Best IVF Specialist in Bangalore</title>
         <meta name='title' content='Best IVF Specialist in Bangalore' />
@@ -184,6 +184,7 @@ const IndexPage = ({ branches }: Branches) => {
                                       alt={doctor?.name}
                                       width={500}
                                       height={500}
+                                      loading='lazy'
                                     />
                                     <div className='space-y-0.5 text-base font-medium leading-6'>
                                       <h3 className='text-brandDark font-heading font-bold'>

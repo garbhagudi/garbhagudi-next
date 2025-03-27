@@ -1,12 +1,12 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 import { maleInfertility, femaleInfertility, ivfProcedures } from './faqData';
 import AccordionLayout from './FaqLayout';
-import React from 'react';
+import { useState } from 'react';
 
 const Faq = () => {
-  const [activeIndex1, setActiveIndex1] = React.useState<string | number>(1);
-  const [activeIndex2, setActiveIndex2] = React.useState<string | number>(1);
-  const [activeIndex3, setActiveIndex3] = React.useState<string | number>(1);
+  const [activeIndex1, setActiveIndex1] = useState<string | number>(1);
+  const [activeIndex2, setActiveIndex2] = useState<string | number>(1);
+  const [activeIndex3, setActiveIndex3] = useState<string | number>(1);
   return (
     <div className='mx-auto max-w-7xl'>
       <h1 className='pt-12 text-center font-heading text-4xl font-semibold text-gray-800 dark:text-gray-200'>

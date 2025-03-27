@@ -1,4 +1,3 @@
-import React from 'react';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
@@ -6,11 +5,13 @@ import Link from 'next/link';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import { useRouter } from 'next/router';
-import Share from 'components/share';
 import { SiGooglemaps } from 'react-icons/si';
 import Image from 'next/image';
-import VideoTestimonials from 'sections/fertility-experts/videoTestimonials';
-
+import dynamic from 'next/dynamic';
+const Share = dynamic(() => import('components/share'), { ssr: false });
+const VideoTestimonials = dynamic(() => import('sections/fertility-experts/videoTestimonials'), {
+  ssr: false,
+});
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
     query: gql`
@@ -62,7 +63,11 @@ export const getStaticProps = async ({ params }) => {
       slug: params.slug,
     },
   });
-
+  if (data?.error || !data.doctor) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       doctor: data.doctor,
@@ -121,7 +126,7 @@ const Doctor = ({ doctor }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link rel='preload' href={doctor?.image?.url} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={title} />
@@ -209,8 +214,7 @@ const Doctor = ({ doctor }) => {
                         alt={doctor.name}
                         src={doctor.image.url}
                         className='-m-16 -ml-20 -mt-44 mb-4 h-auto max-w-xs rounded-full border-none bg-gray-300/30 align-middle shadow-xl dark:bg-gray-600 lg:-ml-16'
-                        priority
-                        quality={10}
+                        priority={true}
                       />
                     </div>
                   </div>

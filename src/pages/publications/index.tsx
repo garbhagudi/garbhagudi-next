@@ -1,4 +1,3 @@
-import React from 'react';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Link from 'next/link';
@@ -80,7 +79,7 @@ const IndexPage = ({ medias }) => {
         </h1>
         <div className='grid grid-cols-1 gap-5 py-10 md:grid-cols-2 lg:grid-cols-3 lg:py-24'>
           {medias &&
-            medias.map((items) => (
+            medias?.map((items) => (
               <div
                 key={items?.id}
                 className='mx-auto rounded-xl p-2 shadow-lg transition duration-500 ease-in-out hover:-translate-x-1 hover:-translate-y-1 hover:shadow-2xl'
@@ -92,10 +91,11 @@ const IndexPage = ({ medias }) => {
                     className='mx-auto aspect-video w-full rounded-lg'
                     width={500}
                     height={300}
+                    loading='lazy'
                   />
                 </div>
-                <div className='px-2'>
-                  <div className='mt-4 py-2 text-center font-heading text-xl font-bold md:text-left'>
+                <div className='mt-4 px-2'>
+                  <div className='line-clamp-2 py-2 text-center font-heading text-xl font-bold md:text-left'>
                     {items?.title}
                   </div>
                   <div className='mt-2 text-left font-content md:text-left'>
@@ -103,7 +103,7 @@ const IndexPage = ({ medias }) => {
                   </div>
                 </div>
                 <div className='mt-4'>
-                  <Link href={`${items?.articleLink}`}>
+                  <Link href={`${items?.articleLink}`} target='_blank'>
                     <div className='flex items-center justify-center rounded-lg border bg-brandPink4 px-3 py-2 text-center font-content text-lg font-extrabold text-white transition duration-500 ease-in-out hover:bg-brandPink'>
                       Read More{' '}
                       <HiChevronRight className='inline-flex items-center justify-center' />

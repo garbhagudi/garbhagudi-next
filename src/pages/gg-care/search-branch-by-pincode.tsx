@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaSpinner } from 'react-icons/fa';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -179,6 +179,7 @@ const NearestZipcodeFinder: React.FC = () => {
                       className='rounded-lg'
                       width={1024}
                       height={1024}
+                      loading='lazy'
                     />
                   </div>
                   <div className='ml-5 flex flex-col items-center justify-center space-y-3 md:items-start'>

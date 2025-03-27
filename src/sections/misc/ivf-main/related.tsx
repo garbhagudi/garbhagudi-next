@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 const Related = () => {
@@ -45,21 +44,21 @@ const keywords = [
   {
     id: 4,
     word: 'IVF Cost In Bangalore',
-    link: '/treatments/ivf-treatment-cost-in-bangalore',
+    link: '/treatments/ivf-treatment-in-bangalore',
   },
   {
     id: 5,
     word: 'IVF Treatment Cost In Bangalore',
-    link: '/treatments/ivf-treatment-cost-in-bangalore',
+    link: '/treatments/ivf-treatment-in-bangalore',
   },
   {
     id: 6,
     word: 'IVF Treatment In Bangalore',
-    link: '/treatments/in-vitro-fertilization-ivf',
+    link: '/treatments/ivf-treatment-in-bangalore',
   },
   {
     id: 7,
     word: 'Best IVF Treatment In Bangalore',
-    link: '/treatments/in-vitro-fertilization-ivf',
+    link: '/treatments/ivf-treatment-in-bangalore',
   },
 ];

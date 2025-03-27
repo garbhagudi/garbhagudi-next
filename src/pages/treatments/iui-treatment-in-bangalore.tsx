@@ -1,14 +1,16 @@
 import Head from 'next/head';
-import React from 'react';
-import CallToAction from 'sections/misc/iui-main/CallToAction';
-import Advantages from 'sections/misc/iui-main/adv-disadv';
-import Banner from 'sections/misc/iui-main/banner';
-import Content from 'sections/misc/iui-main/content';
-import Cost from 'sections/misc/iui-main/cost';
-import Faq from 'sections/misc/iui-main/faq';
-import ContentXtra from 'sections/misc/iui-main/more-content';
-import OurCentres from 'sections/misc/iui-main/our-centres';
-import Risks from 'sections/misc/iui-main/risks';
+import dynamic from 'next/dynamic';
+
+// Dynamically import the components without SSR
+const CallToAction = dynamic(() => import('sections/misc/iui-main/CallToAction'), { ssr: false });
+const Advantages = dynamic(() => import('sections/misc/iui-main/adv-disadv'), { ssr: false });
+const Banner = dynamic(() => import('sections/misc/iui-main/banner'), { ssr: true });
+const Content = dynamic(() => import('sections/misc/iui-main/content'), { ssr: false });
+const Cost = dynamic(() => import('sections/misc/iui-main/cost'), { ssr: false });
+const Faq = dynamic(() => import('sections/misc/iui-main/faq'), { ssr: false });
+const ContentXtra = dynamic(() => import('sections/misc/iui-main/more-content'), { ssr: false });
+const OurCentres = dynamic(() => import('sections/misc/iui-main/our-centres'), { ssr: false });
+const Risks = dynamic(() => import('sections/misc/iui-main/risks'), { ssr: false });
 
 const Iui = () => {
   function addReviewJsonLd() {
@@ -157,6 +159,11 @@ const Iui = () => {
   return (
     <div>
       <Head>
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722501966/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0_1_i7oozx.webp'
+          as='image'
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>IUI Treatment in Bangalore: Trusted Fertility Solutions</title>
         <meta name='title' content='IUI Treatment in Bangalore: Trusted Fertility Solutions ' />

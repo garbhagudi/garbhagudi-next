@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Partners = () => {
   return (
     <div className='bg-white p-8 font-lexend text-gray-800 dark:bg-gray-800 dark:text-gray-200'>

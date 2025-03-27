@@ -1,4 +1,3 @@
-import React from 'react';
 import Timer from '../../../assets/fertility-quiz/Vector (1).png';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -15,6 +14,7 @@ export default function Fertility() {
           height={100}
           alt='background_image'
           className='absolute bottom-0 left-0 top-0 h-screen w-screen object-fill'
+          priority={true}
         />
         <div className='underline-from-font text-decoration-skip-none text-left font-nunito-Sans text-2xl font-bold leading-[54px] md:text-6xl md:leading-[78px] lg:text-7xl'>
           Welcome to Your Fertility Quiz! Let’s Get Started
@@ -36,6 +36,7 @@ export default function Fertility() {
             className='h-5 w-5 md:h-6 md:w-6'
             width={20}
             height={20}
+            priority={true}
           />
           <div className='text-underline-position-from-font text-decoration-skip-ink-none text-left font-sans text-[12px] font-semibold leading-[18px] text-[#ea4b6a] md:text-[14px] md:leading-[21.82px]'>
             Takes less than 6 minutes

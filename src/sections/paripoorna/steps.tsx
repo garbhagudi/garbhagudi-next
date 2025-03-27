@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 const Steps = () => {
@@ -81,6 +80,7 @@ const Steps = () => {
             height={1024}
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1700052783/paripoorna/mother-with-daughter-lie-bed-dog-looking-them-min_uecuvg.webp'
             alt='couple with baby picture'
+            loading='lazy'
           />
         </div>
       </div>

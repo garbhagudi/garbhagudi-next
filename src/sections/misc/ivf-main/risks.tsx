@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Risks = () => {
   return (
     <div className='mx-auto mt-16 max-w-7xl text-gray-800 dark:text-gray-200'>

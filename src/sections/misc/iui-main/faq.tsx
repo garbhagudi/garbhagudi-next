@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import AccordionLayout from 'sections/Faq/FaqLayout';
 import Link from 'next/link';
 

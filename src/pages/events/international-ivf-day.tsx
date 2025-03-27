@@ -1,11 +1,18 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import ParagraphSection from 'sections/misc/international-ivf-day/ParagraphSection';
-import CallToAction from 'sections/misc/international-ivf-day/CallToAction';
 import Image from 'next/image';
 
-const Yoga = dynamic(() => import('sections/misc/international-ivf-day/Yoga'));
-const BranchEvent = dynamic(() => import('sections/misc/international-ivf-day/BranchEvent'));
+const CallToAction = dynamic(() => import('sections/misc/international-ivf-day/CallToAction'), {
+  ssr: false,
+});
+const ParagraphSection = dynamic(
+  () => import('sections/misc/international-ivf-day/ParagraphSection'),
+  { ssr: false }
+);
+const Yoga = dynamic(() => import('sections/misc/international-ivf-day/Yoga'), { ssr: false });
+const BranchEvent = dynamic(() => import('sections/misc/international-ivf-day/BranchEvent'), {
+  ssr: false,
+});
 
 const Page = () => {
   const title = `Celebrate International IVF Day with Garbhagudi | GarbhaGudi IVF Centre`;
@@ -13,6 +20,12 @@ const Page = () => {
   return (
     <div>
       <Head>
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742985537/Yoga/Landing-Page-Banners_gd388z.webp'
+          as='image'
+        />
+        <link rel='dns-prefetch' href='https://res.cloudinary.com/' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={title} />

@@ -1,10 +1,9 @@
-import React from 'react';
 import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react';
 import { Fragment, useState } from 'react';
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import Link from 'next/link';
 import Image from 'next/image';
-
+import dynamic from 'next/dynamic';
+const LiteYouTubeEmbed = dynamic(() => import('react-lite-youtube-embed'), { ssr: false });
 interface PriceSlashProps {
   originalPrice: number;
   slashedPrice: number;
@@ -93,7 +92,7 @@ const Home = () => {
                   <WatchVideo />
                 </div>
                 <div className='rounded-xl bg-purple-700 px-3 py-2 font-lexend text-white dark:bg-purple-800'>
-                  <Link href='/contact.html'>
+                  <Link href='/contact/enquiry'>
                     <div>Book an Appointment</div>
                   </Link>
                 </div>
@@ -112,6 +111,7 @@ const Home = () => {
               width={500}
               height={500}
               className='mx-auto aspect-square scale-90 lg:scale-105'
+              priority={true}
             />
           </div>
         </div>
@@ -180,6 +180,7 @@ const WatchVideo = () => {
                         id={'NyQyAcUrrOY'}
                         title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
                         poster='maxresdefault'
+                        webp={true}
                       />
                     </div>
                   </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -18,6 +17,7 @@ const TreatmentOptions = ({ branch, image }: TreatmentOptionsProps) => {
             width={100}
             height={100}
             className='w-20 rounded-lg bg-white dark:bg-gray-200/70'
+            loading='lazy'
           />
           <div className='font-lexend text-xl font-bold'>NABH Certified*</div>
         </div>
@@ -38,6 +38,7 @@ const TreatmentOptions = ({ branch, image }: TreatmentOptionsProps) => {
                 width={100}
                 height={100}
                 className='w-20 transition-all duration-300 group-hover:grayscale-0 dark:grayscale'
+                loading='lazy'
               />
             </div>
             <div className='flex flex-col items-center justify-center py-2'>

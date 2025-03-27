@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import BookAnAppointment from 'sections/egg-freezing/bookAnAppointment';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 const genderOptions = ['male', 'female'];
@@ -82,7 +81,6 @@ export default function FertilityForm() {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const inchesRegex = /^(?:[0-9]|1[0-1])$/;
 
-  const [isOpen, setIsOpen] = useState(false);
   const [BMIval, setBMIVal] = useState('');
   const [error, setError] = useState(false);
   const [submit, setSubmit] = useState({ range: 0, isSubmited: false });
@@ -141,10 +139,6 @@ export default function FertilityForm() {
       setBMIVal('');
     }
   }, [formData]);
-
-  const handleClose = () => {
-    setIsOpen(false);
-  };
 
   interface FormChangeEvent extends React.ChangeEvent<HTMLInputElement> {
     target: HTMLInputElement & { name: keyof typeof formData; value: string };
@@ -351,6 +345,7 @@ export default function FertilityForm() {
             width={100}
             height={100}
             className='absolute left-0 top-0 h-screen w-screen object-fill'
+            loading='lazy'
           />
           <div className='absolute z-20 text-center font-nunito-Sans'>
             <div className='text-2xl font-bold text-[#1D1D1D] md:text-4xl'>
@@ -766,15 +761,6 @@ export default function FertilityForm() {
               </button>
             </div>
           </div>
-        </div>
-      )}
-
-      {isOpen && (
-        <div
-          className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'
-          onClick={handleClose}
-        >
-          <BookAnAppointment />
         </div>
       )}
 

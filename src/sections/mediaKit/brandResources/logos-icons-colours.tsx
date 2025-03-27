@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 import { data } from 'sections/mediaKit/brandResources/iconsData';
 
@@ -16,10 +15,11 @@ const LogosIconsColours = () => {
                 <Image
                   src={assets.img}
                   alt='GarbhaGudi Full Color Logo'
-                  width={500}
-                  height={500}
+                  width={320}
+                  height={240}
                   className='flex items-center justify-center rounded-md'
-                ></Image>
+                  loading='lazy'
+                />
               </div>
               <div className='mt-3 grid grid-cols-3 gap-3'>
                 {assets.colors.map((items) => (

@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Share from 'components/share';
 import Loading from 'components/Loading';
 import Image from 'next/image';
 import type { RichTextContent } from '@graphcms/rich-text-types';
-import FAQs from 'components/FAQs';
+import dynamic from 'next/dynamic';
+const FAQs = dynamic(() => import('components/FAQs'), { ssr: false });
+const Share = dynamic(() => import('components/share'), { ssr: false });
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
     query: gql`
@@ -42,7 +43,7 @@ export const getStaticProps = async ({ params }) => {
       slug: params.slug,
     },
   });
-  if (data?.error) {
+  if (data?.error || !data.article) {
     return {
       notFound: true,
     };
@@ -119,7 +120,7 @@ const Blog = ({ article }: BlogProps) => {
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link rel='preload' href={article?.image?.url} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={`${article?.metaTitle}`} />
@@ -239,15 +240,14 @@ const Blog = ({ article }: BlogProps) => {
                 {article?.title}
               </span>
             </h1>
-            <figure>
-              <Image
-                className='mb-5 mt-10 w-full rounded-lg'
-                src={article?.image.url}
-                alt={article?.imageAlt}
-                width={1310}
-                height={873}
-              />
-            </figure>
+            <Image
+              className='mb-5 mt-10 w-full rounded-lg'
+              src={article?.image?.url}
+              alt={article?.imageAlt}
+              width={1310}
+              height={873}
+              priority={true}
+            />
             <div className='text-gray-800 dark:text-gray-200'>
               {isMounted && <RichText content={article?.content?.raw?.children} />}
             </div>

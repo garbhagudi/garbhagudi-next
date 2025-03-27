@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
@@ -26,7 +25,7 @@ const IndexPage = ({ articles }: Article) => {
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link rel='dns-prefetch' href='https://media.graphassets.com' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Facilities | GarbhaGudi IVF Centre</title>
         <meta name='title' content='Facilities | GarbhaGudi IVF Centre' />
@@ -82,27 +81,24 @@ const IndexPage = ({ articles }: Article) => {
       </p>
       <div className='mx-auto flex max-w-7xl py-6 sm:py-12'>
         <div className='mx-auto grid grid-cols-1 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-          {articles.map(
-            (item) =>
-              item.articleType === 'facilities' && (
-                <Link href={`facilities/${item.slug}`} passHref key={item.id} className='group'>
-                  <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-600 dark:hover:bg-gray-600 md:w-96'>
-                    <div className='w-1/3'>
-                      <Image
-                        className='h-24 w-24 rounded-lg object-cover transition-all duration-300 group-hover:grayscale-0 dark:grayscale'
-                        src={item?.icon?.url || item?.image?.url}
-                        alt={item.title}
-                        width={100}
-                        height={100}
-                      />
-                    </div>
-                    <div className='flex w-2/3 flex-col justify-center text-center text-gray-800 dark:text-gray-200'>
-                      <p className='font-lexend text-xl font-medium'>{item.title}</p>
-                    </div>
-                  </div>
-                </Link>
-              )
-          )}
+          {articles?.map((item) => (
+            <Link href={`facilities/${item?.slug}`} passHref key={item.id} className='group'>
+              <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-600 dark:hover:bg-gray-600 md:w-96'>
+                <div className='w-1/3'>
+                  <Image
+                    className='h-24 w-24 rounded-lg object-cover transition-all duration-300 group-hover:grayscale-0 dark:grayscale'
+                    src={item?.icon?.url || item?.image?.url}
+                    alt={item?.title}
+                    width={100}
+                    height={100}
+                  />
+                </div>
+                <div className='flex w-2/3 flex-col justify-center text-center text-gray-800 dark:text-gray-200'>
+                  <p className='font-lexend text-xl font-medium'>{item?.title}</p>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </div>
@@ -115,8 +111,7 @@ export const getStaticProps = async () => {
   const { data } = await apolloClient.query({
     query: gql`
       query {
-        articles {
-          articleType
+        articles(where: { articleType: facilities }) {
           icon {
             url
           }

@@ -1,4 +1,3 @@
-import React from 'react';
 import MediaKit from 'sections/mediaKit/main';
 
 const IndexPage = () => {

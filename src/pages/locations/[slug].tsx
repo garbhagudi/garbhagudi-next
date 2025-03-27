@@ -1,4 +1,3 @@
-import React from 'react';
 import Banner from 'sections/location/banner';
 import TreatmentOptions from 'sections/location/treatments';
 import apolloClient from 'lib/apollo-graphcms';
@@ -8,11 +7,11 @@ import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import dynamic from 'next/dynamic';
 
-const MapSection = dynamic(() => import('sections/location/mapSection'));
-const Cta = dynamic(() => import('sections/gg-care/cta'));
-const Faq = dynamic(() => import('sections/location/faq'));
-const VirtualTour = dynamic(() => import('sections/location/virtualTour'));
-const QuickLinks = dynamic(() => import('sections/location/quickLinks'));
+const MapSection = dynamic(() => import('sections/location/mapSection'), { ssr: false });
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
+const Faq = dynamic(() => import('sections/location/faq'), { ssr: false });
+const VirtualTour = dynamic(() => import('sections/location/virtualTour'), { ssr: false });
+const QuickLinks = dynamic(() => import('sections/location/quickLinks'), { ssr: false });
 
 const Branch = ({ branch }) => {
   const router = useRouter();
@@ -23,7 +22,11 @@ const Branch = ({ branch }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1672381537/Misc/happy-pregnant-woman-late-pregnancy-stage-sitting-grass-lawn-min_11zon_xkeac0.webp'
+          as='image'
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{branch?.metaTitle}</title>
         <meta name='title' content={branch?.metaTitle} />

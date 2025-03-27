@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -11,8 +10,9 @@ const WhenIvf = () => {
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722506430/Misc/avn-min_jo63l5_1_q4uv3u.webp'
             alt='When is IVF Treatment Recommended?'
             className='relative w-full dark:bg-white/10 dark:brightness-75 dark:invert'
-            width={500}
-            height={500}
+            width={320}
+            height={320}
+            loading='lazy'
           />
         </div>
         <div className='text-gray-800 dark:text-gray-200'>

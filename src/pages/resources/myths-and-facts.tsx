@@ -1,4 +1,3 @@
-import React from 'react';
 import MythsFacts from 'sections/myth-and-facts';
 import Head from 'next/head';
 

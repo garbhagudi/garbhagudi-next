@@ -41,6 +41,7 @@ const Header = () => {
             alt='GarbhaGudi IVF Centre'
             width={500}
             height={500}
+            priority
           />
         </div>
       </div>

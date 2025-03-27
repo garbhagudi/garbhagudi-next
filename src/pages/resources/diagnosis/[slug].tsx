@@ -1,14 +1,13 @@
-import React from 'react';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import { useRouter } from 'next/router';
-import Share from 'components/share';
 import Loading from 'components/Loading';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
-
+import dynamic from 'next/dynamic';
+const Share = dynamic(() => import('components/share'), { ssr: false });
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
     query: gql`
@@ -30,7 +29,7 @@ export const getStaticProps = async ({ params }) => {
       slug: params.slug,
     },
   });
-  if (data?.error) {
+  if (data?.error || !data.diagnosis) {
     return {
       notFound: true,
     };
@@ -73,7 +72,7 @@ const Diagnosis = ({ diagnosis }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link rel='preload' href={diagnosis?.image.url} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={`${diagnosis?.title} | GarbhaGudi IVF Centre`} />
@@ -207,8 +206,9 @@ const Diagnosis = ({ diagnosis }) => {
                 className='mb-5 mt-10 w-full rounded-lg'
                 src={diagnosis?.image?.url}
                 alt={diagnosis?.title}
-                width={1310}
-                height={873}
+                width={800}
+                height={500}
+                priority={true}
               />
             </figure>
             <div className='text-gray-800 dark:text-gray-200'>
