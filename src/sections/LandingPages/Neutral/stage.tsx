@@ -1,7 +1,8 @@
-import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { HiChevronRight } from 'react-icons/hi';
-const MyModal = dynamic(() => import('components/modal'));
 const Stage = () => {
+  const path = usePathname();
   return (
     <div>
       <div className='mx-auto max-w-7xl'>
@@ -17,12 +18,12 @@ const Stage = () => {
               <div className='mx-auto mt-3 flex h-6 w-6 items-center justify-center rounded-full bg-gg-400 font-content text-xs font-bold text-white dark:bg-gray-800'>
                 {items.id}
               </div>
-              <MyModal
-                title={items.title}
-                clnm={
-                  'flex items-center justify-center py-2 text-sm font-content text-brandPurpleDark dark:text-gray-200 font-semibold mt-2'
-                }
-              />
+              <Link
+                href={`/contact/enquiry?pageVisit=${path}`}
+                className='mt-2 flex items-center justify-center py-2 font-content text-sm font-semibold text-brandPurpleDark dark:text-gray-200'
+              >
+                {items.title}
+              </Link>
               <div className='flex items-center justify-center text-brandPurpleDark dark:text-gray-200'>
                 <HiChevronRight />
               </div>

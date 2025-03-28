@@ -6,15 +6,14 @@ import KeyBenefits from 'sections/LandingPages/ivf/keybenefits';
 import Features from 'sections/LandingPages/ivf/features';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
-
-const EndForm = dynamic(() => import('sections/LandingPages/ivf/endform_new'));
-
-const WhyGarbhaGudi = dynamic(() => import('sections/LandingPages/ivf/whygarbhagudi'));
-const Testimonial = dynamic(() => import('sections/home/testimonial'));
-const Plans = dynamic(() => import('sections/LandingPages/ivf/plans'));
-const Doctors = dynamic(() => import('sections/LandingPages/ivf/Doctors'));
-
-const Faq = dynamic(() => import('sections/home/faq'));
+const EndForm = dynamic(() => import('sections/LandingPages/ivf/endform_new'), { ssr: false });
+const WhyGarbhaGudi = dynamic(() => import('sections/LandingPages/ivf/whygarbhagudi'), {
+  ssr: false,
+});
+const Testimonial = dynamic(() => import('sections/home/testimonial'), { ssr: false });
+const Plans = dynamic(() => import('sections/LandingPages/ivf/plans'), { ssr: false });
+const Doctors = dynamic(() => import('sections/LandingPages/ivf/Doctors'), { ssr: false });
+const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
 
 export default function LandingPage({ doctors }) {
   return (

@@ -1,11 +1,11 @@
-import React from 'react';
 import Carousel from 'nuka-carousel';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import Image from 'next/image';
 import DoctorLayout from 'components/doctorsLayout';
+import { useState } from 'react';
 
 const Doctors = ({ doctors }) => {
-  const [activeIndex, setActiveIndex] = React.useState(1);
+  const [activeIndex, setActiveIndex] = useState(1);
   const defaultControlsConfig = {
     pagingDotsStyle: {
       display: 'none',
@@ -61,7 +61,7 @@ const Doctors = ({ doctors }) => {
                 name={items.name}
                 bio={items.bio.raw.children}
                 setActiveIndex={setActiveIndex}
-              ></DoctorLayout>
+              />
             ))}
           </Carousel>
         </div>

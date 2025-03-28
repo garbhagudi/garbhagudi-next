@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const CallToAction = () => {
+  const path = usePathname();
   return (
     <div className='mx-auto mt-10 max-w-7xl rounded-lg bg-gray-100 dark:bg-gray-700'>
       <div className='mx-auto flex max-w-7xl flex-col items-center px-4 py-12 text-center sm:px-6 lg:flex-row lg:justify-between lg:px-8 lg:py-16 lg:text-left'>
@@ -15,7 +17,7 @@ const CallToAction = () => {
         <div className='mt-8 flex lg:mt-0 lg:flex-shrink-0'>
           <div className='inline-flex rounded-md shadow'>
             <Link
-              href={'/gg-care'}
+              href={`/contact/enquiry?pageVisit=${path}`}
               className='rounded-lg bg-gg-500 px-4 py-3 font-content text-xl font-semibold text-white hover:bg-gg-400 dark:bg-gray-500 dark:hover:bg-gg-500'
             >
               Book an Appointment

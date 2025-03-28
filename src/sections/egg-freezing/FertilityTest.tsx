@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import BookAnAppointment from './bookAnAppointment';
 
@@ -108,6 +108,7 @@ export default function FertilityTest() {
                   height={100}
                   alt={pkg.title}
                   className='h-52 w-9/12 rounded-md object-cover lg:h-28 lg:w-28'
+                  loading='lazy'
                 />
                 <div className='flex-1 px-2'>
                   <h3 className='text-lg font-semibold text-gray-900'>{pkg.title}</h3>

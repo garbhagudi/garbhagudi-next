@@ -1,9 +1,9 @@
 import { Dialog, Transition } from '@headlessui/react';
 import Image from 'next/image';
 import { RichText } from '@graphcms/rich-text-react-renderer';
-import dynamic from 'next/dynamic';
 import { Fragment, useState } from 'react';
-const MyModal = dynamic(() => import('./modal'));
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 const DoctorLayout = ({
   name,
   index,
@@ -14,6 +14,7 @@ const DoctorLayout = ({
   bio,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const path = usePathname();
   function closeModal() {
     setIsOpen(false);
   }
@@ -84,16 +85,18 @@ const DoctorLayout = ({
                       <RichText content={bio} />
                     </div>
 
-                    <div className='mt-4 space-y-4 text-center'>
-                      <MyModal
-                        title={'Book an Appointment'}
-                        clnm={
-                          'font-medium text-white font-lexend uppercase px-3 py-2 bg-brandPink dark:bg-gray-500 dark:hover:bg-gg-400 rounded-md'
-                        }
-                      />
+                    <div className='mt-4 flex flex-col items-center space-y-4 text-center'>
+                      <Link href={`/contact/enquiry?pageVisit=${path}`}>
+                        <button
+                          type='button'
+                          className='rounded-md bg-brandPink px-3 py-2 font-lexend font-medium uppercase text-white dark:bg-gray-500 dark:hover:bg-gg-400'
+                        >
+                          Consult Dr. Asha S Vijay
+                        </button>
+                      </Link>
                       <button
                         type='button'
-                        className='inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 font-lexend text-sm font-medium text-gray-900 hover:bg-gray-600 hover:text-white dark:hover:bg-gg-400'
+                        className='inline-flex w-fit justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 font-lexend text-sm font-medium text-gray-900 hover:bg-gray-600 hover:text-white dark:hover:bg-gg-400'
                         onClick={closeModal}
                       >
                         Close

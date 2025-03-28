@@ -9,7 +9,8 @@ const supportLinks = [
       'Chat online with our team now from anywhere. We provide you with a seamless and hassle-free online chat experience from the comfort of your home. Get the proper assistance now!',
     icon: HiChatAlt,
     ctaAction: 'Chat Now',
-    ctaLink: '/contact/enquiry?utm_source=ggcare&utm_medium=chat&utm_campaign=ggcare_chat',
+    ctaLink:
+      '/contact/enquiry?utm_source=ggcare&utm_medium=chat&utm_campaign=ggcare_chat&pageVisit=/gg-care',
   },
   {
     name: 'Call Support',
@@ -26,7 +27,7 @@ const supportLinks = [
     icon: HiCalendar,
     ctaAction: 'Book an Appointment',
     ctaLink:
-      'https://medicsprime.in/OnlineAppointment/OnlineAppointment.jsp?enx=%7B%22e%22%3A%22Pv1yAd9b5VMo2DOud8JSJFkU7CzPOXXBQlPNffirhwA6fe2HHci3dR%2BT1cnBNmqH3kNc2wKJoqqIdPgk0Ie7iA%3D%3D%22%2C%22s%22%3A%22f5ec95cc090eb4a5273afdb7946feb74%22%2C%22i%22%3A%22d919f6d46ee942475fcf1bd0928d6b47%22%7D',
+      '/contact/enquiry?utm_source=ggcare&utm_medium=chat&utm_campaign=ggcare_chat&pageVisit=/gg-care',
   },
 ];
 

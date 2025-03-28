@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 import { FaPercent, FaUserDoctor, FaMap, FaCircleCheck } from 'react-icons/fa6';
 
@@ -44,6 +43,7 @@ const Features = () => {
                 }
                 alt='Water Purifier'
                 className='max-w-full rounded-lg'
+                loading='lazy'
               />
             </div>
 

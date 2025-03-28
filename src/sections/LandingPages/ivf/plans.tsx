@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 const Plans = () => {
@@ -19,6 +18,7 @@ const Plans = () => {
                 width={80}
                 height={80}
                 className='pb-8'
+                loading='lazy'
               />
               <h5 className='text-xl font-semibold text-gg-500'>IVF Treatment</h5>
               <p className='font-light'>
@@ -36,6 +36,7 @@ const Plans = () => {
                 height={80}
                 className='pb-8'
                 fetchPriority='low'
+                loading='lazy'
               />
               <h5 className='text-xl font-semibold text-gg-500'>ICSI</h5>
               <p className='font-light'>
@@ -54,6 +55,7 @@ const Plans = () => {
                 height={80}
                 className='pb-8'
                 fetchPriority='low'
+                loading='lazy'
               />
               <h5 className='text-xl font-semibold text-gg-500'>IUI</h5>
               <p className='font-light'>
@@ -71,6 +73,7 @@ const Plans = () => {
                 height={80}
                 className='pb-8'
                 fetchPriority='low'
+                loading='lazy'
               />
               <h5 className='text-xl font-semibold text-gg-500'>Infertility Treatment</h5>
               <p className='font-light'>

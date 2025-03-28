@@ -1,5 +1,5 @@
 import Logo from 'components/assets/logo';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Form from 'sections/LandingPages/eggFreezing/form';
 
 const Header = () => {

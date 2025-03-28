@@ -1,7 +1,8 @@
-import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const CTA: React.FC = () => {
+  const path = usePathname();
   return (
     <div
       className='relative flex h-screen max-h-64 items-center justify-center bg-cover bg-center shadow-xl'
@@ -16,7 +17,7 @@ const CTA: React.FC = () => {
           Contact us now to start your journey with us and experience the joy of parenthood.
         </p>
         <button className='rounded-lg bg-gg-500 px-4 py-2 font-semibold text-white hover:bg-gg-400 focus:outline-none dark:bg-gray-600 dark:hover:bg-gg-400'>
-          <Link href='/gg-care'>Book an Appointment</Link>
+          <Link href={`/contact/enquiry?pageVisit=${path}`}>Book an Appointment</Link>
         </button>
       </div>
     </div>

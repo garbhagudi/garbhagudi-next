@@ -1,37 +1,28 @@
 import Head from 'next/head';
 import { useEffect } from 'react';
-import dynamic from 'next/dynamic';
-import Header from 'sections/LandingPages/ivf/header';
-import Offer from 'sections/LandingPages/ivf/offer_new';
-import KeyBenefits from 'sections/LandingPages/ivf/keybenefits';
-import Features from 'sections/LandingPages/ivf/features';
+import { useRouter } from 'next/router';
 
-import apolloClient from 'lib/apollo-graphcms';
-import { gql } from '@apollo/client';
+export default function LandingPage_call() {
+  const router = useRouter();
 
-const EndForm = dynamic(() => import('sections/LandingPages/ivf/endform'));
-const WhyGarbhaGudi = dynamic(() => import('sections/LandingPages/ivf/whygarbhagudi'));
-const Testimonial = dynamic(() => import('sections/home/testimonial'));
-const Plans = dynamic(() => import('sections/LandingPages/ivf/plans'));
-const Doctors = dynamic(() => import('sections/LandingPages/ivf/Doctors'));
-
-const Faq = dynamic(() => import('sections/home/faq'));
-
-export default function LandingPage_call({ doctors }) {
   useEffect(() => {
-    const redirectToPhoneDialer = () => {
-      window.location.href = 'tel:+919071234006'; // Replace with your phone number
-    };
+    const currentPath = router.pathname;
+    const targetPath = '/lp/ivf-enquiry-form';
 
-    document.addEventListener('click', redirectToPhoneDialer);
+    if (currentPath !== targetPath) {
+      router.push(targetPath);
+    }
+  }, [router]);
 
-    return () => {
-      document.removeEventListener('click', redirectToPhoneDialer);
-    };
-  }, []);
   return (
     <div>
       <Head>
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1725183349/Ads%20and%20offers/Web_Banner-min_rgm3ts.webp'
+          as='image'
+        />
+
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India</title>
         <meta
@@ -44,7 +35,6 @@ export default function LandingPage_call({ doctors }) {
         />
 
         {/* Open Graph / Facebook */}
-
         <meta
           property='og:title'
           content='GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India'
@@ -62,7 +52,6 @@ export default function LandingPage_call({ doctors }) {
         />
 
         {/* Twitter*/}
-
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta
@@ -78,46 +67,7 @@ export default function LandingPage_call({ doctors }) {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
         />
       </Head>
-
-      <Header />
-      <Offer />
-      <KeyBenefits />
-      <Features />
-      <WhyGarbhaGudi />
-      <Plans />
-      <Doctors doctors={doctors} />
-      <Testimonial />
-      <Faq />
-      <EndForm />
+      <h1>Redirect....</h1>
     </div>
   );
 }
-
-export const getStaticProps = async () => {
-  const { data } = await apolloClient.query({
-    query: gql`
-      {
-        doctors(orderBy: order_ASC, first: 8) {
-          id
-          name
-          designation
-          qualification
-          location
-          image {
-            url
-          }
-          imageAlt
-          bio {
-            raw
-          }
-        }
-      }
-    `,
-  });
-  return {
-    props: {
-      doctors: data.doctors,
-      fallback: true,
-    },
-  };
-};

@@ -9,7 +9,11 @@ const CareerOrBaby = () => {
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.webp'
+          as='image'
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Career or Baby? | GarbhaGudi IVF Centre</title>
         <meta name='title' content={`Career or Baby? | GarbhaGudi IVF Centre`} />
