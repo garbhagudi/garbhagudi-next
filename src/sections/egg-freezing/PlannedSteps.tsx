@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 export default function PlannedSteps() {
@@ -15,6 +14,7 @@ export default function PlannedSteps() {
         width={100}
         height={100}
         className='mx-auto h-full w-full rounded-lg lg:w-10/12'
+        loading='lazy'
       />
       <style>{`.custom-list-item {
   position: relative;

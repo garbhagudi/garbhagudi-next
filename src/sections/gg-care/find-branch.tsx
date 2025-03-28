@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { FaSearchLocation } from 'react-icons/fa';
 

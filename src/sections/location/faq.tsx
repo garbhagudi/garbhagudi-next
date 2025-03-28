@@ -124,10 +124,9 @@ const Faq = ({ branch, doctors }) => {
               <div className='md:col-span-8 md:pl-0'>
                 The total cost of IVF in <strong>{branch}</strong> can vary depending on the
                 individual patient's needs. On average, the cost of a single IVF cycle in{' '}
-                <strong>{branch}</strong> can range from INR 1,50,000 to INR 3,00,000. However, some
-                additional services such as genetic testing or use of donor eggs/sperm may cost
-                additional sum. It's important to speak with a specialist at the clinic to
-                understand the total cost and any additional fees that may apply.
+                <strong>{branch}</strong> starts from INR 1,60,000. It's important to speak with a
+                specialist at the clinic to understand the total cost and any additional fees that
+                may apply.
               </div>
             </div>
           </div>

@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const BlogFooter = () => {
+  const path = usePathname();
+
   return (
     <div className='relative bg-transparent py-16'>
       <div className='absolute inset-x-0 top-0 hidden h-1/2 lg:block' aria-hidden='true' />
@@ -103,10 +106,8 @@ const BlogFooter = () => {
                 sexual problems
               </p>
               <Link
-                className='text-brandDark hover:bg-brandDark block w-full rounded-md bg-white px-5 py-3 text-center font-content text-base font-semibold hover:text-gray-100 dark:bg-gray-600 sm:inline-block sm:w-auto'
-                href='https://salesiq.zoho.com/signaturesupport.ls?widgetcode=93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
-                target={'_blank'}
-                rel='noreferrer'
+                className='text-brandDark hover:bg-brandDark block w-full rounded-md bg-white px-5 py-3 text-center font-content text-base font-semibold hover:text-black sm:inline-block sm:w-auto'
+                href={`/contact/enquiry?pageVisit=${path}`}
               >
                 Contact Us
               </Link>

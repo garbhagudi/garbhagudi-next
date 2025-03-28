@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 const WhyGarbhaGudi = () => {
@@ -14,9 +13,10 @@ const WhyGarbhaGudi = () => {
               'https://app.unbounce.com/publish/assets/8d8c21e9-63f6-477c-a9dd-43a22874f63c/f4e35d03-5c9e-4fdd-a2b3-c155acc599df-2022-web-banner-3-kuhr4g.webp'
             }
             alt='Award Image'
-            width={1920}
-            height={500}
-            className='rounded-lg'
+            width={800}
+            height={320}
+            className='w-full rounded-lg'
+            loading='lazy'
           />
           <div className='mt-6 grid grid-cols-1 space-x-3 font-lexend lg:grid-cols-3'>
             <div className='space-y-3 py-3 lg:py-8'>

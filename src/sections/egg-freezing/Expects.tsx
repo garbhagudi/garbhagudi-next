@@ -1,9 +1,9 @@
 import { SlArrowRight } from 'react-icons/sl';
 import Link from 'next/link';
-import BookAnAppointment from './bookAnAppointment';
-import { Fragment, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Expects() {
+  const path = usePathname();
   const staticData = [
     {
       title: 'Call Us/Book an Appointment',
@@ -11,12 +11,12 @@ export default function Expects() {
         'Speak directly with one of our experts for an in-depth consultation, guiding you through every option.',
 
       btn: (
-        <div
-          onClick={() => setIsOpen(true)}
+        <Link
+          href={`/contact/enquiry?pageVisit=${path}`}
           className='block w-full scroll-smooth rounded-[10px] bg-[#D9576C] px-4 py-2 font-content text-lg text-white shadow hover:opacity-80 focus:outline-none focus:ring active:text-rose-500 dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
         >
           Call Us
-        </div>
+        </Link>
       ),
     },
     {
@@ -35,13 +35,8 @@ export default function Expects() {
     },
   ];
 
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleClose = () => {
-    setIsOpen(false);
-  };
   return (
-    <Fragment>
+    <>
       <div className='py-5'>
         <section className='flex flex-col items-center justify-center'>
           <h1 className='mb-6 text-center text-4xl font-bold text-gray-800'>
@@ -87,15 +82,6 @@ export default function Expects() {
           })}
         </div>
       </div>
-
-      {isOpen && (
-        <div
-          className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'
-          onClick={handleClose}
-        >
-          <BookAnAppointment />
-        </div>
-      )}
-    </Fragment>
+    </>
   );
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
@@ -28,6 +27,7 @@ const Video = () => {
                 id='3l4gWsVlhE4'
                 title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
                 poster='maxresdefault'
+                webp={true}
               />
             </div>
           </div>

@@ -1,24 +1,29 @@
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 const Form = () => {
   const router = useRouter();
+  const targetURL = router.query?.targetURL || '/';
+
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm({
     defaultValues: {
       Last_Name: '',
       Phone: '',
       Email: '',
-      Lead_Source: 'Online',
+      Lead_Source: `Online`,
       Lead_Sub_Source: 'Garbhagudi_Organic',
       UTM_Campaign: '',
     },
   });
   const [load, setLoad] = useState(false);
-
+  useEffect(() => {
+    setValue('Lead_Source', `Online: ${targetURL}`);
+  }, [targetURL, setValue]);
   const onSubmit = async (data) => {
     setLoad(true);
     try {

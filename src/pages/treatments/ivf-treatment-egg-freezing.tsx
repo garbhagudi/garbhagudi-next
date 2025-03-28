@@ -1,4 +1,4 @@
-import CTA from 'sections/egg-freezing/cta';
+import CTA from 'sections/infertility/cta';
 import Expects from 'sections/egg-freezing/Expects';
 import Faq from 'sections/egg-freezing/faq';
 import FertilityTest from 'sections/egg-freezing/FertilityTest';

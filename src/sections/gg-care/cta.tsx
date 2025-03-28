@@ -1,7 +1,8 @@
-import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { BsWhatsapp } from 'react-icons/bs';
-const MyModal = dynamic(() => import('components/modal'));
 const Cta = () => {
+  const path = usePathname();
   return (
     <div className='bg-gray-50 dark:bg-gray-700'>
       <div className='mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:px-8 lg:py-16'>
@@ -12,14 +13,17 @@ const Cta = () => {
           </span>
         </h2>
         <div className='mt-8 flex lg:mt-0 lg:flex-shrink-0'>
-          <div className='inline-flex rounded-md shadow'>
-            <MyModal
-              title={'Contact Us'}
-              clnm={
-                'inline-flex items-center justify-center px-5 py-3 border border-transparent font-content text-base font-medium rounded-md text-gg-500 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-pink-50 dark:hover:bg-gray-600'
-              }
-            />
-          </div>
+          <Link
+            href={`/contact/enquiry?pageVisit=${path}`}
+            className='inline-flex rounded-md shadow'
+          >
+            <button
+              type='button'
+              className='inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 font-content text-base font-medium text-gg-500 hover:bg-pink-50 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-600'
+            >
+              Contact Us
+            </button>
+          </Link>
           <div className='ml-3 inline-flex rounded-md shadow'>
             <a
               href='https://wa.me/918884183338?text=Hi.'

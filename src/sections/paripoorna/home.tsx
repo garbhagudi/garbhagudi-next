@@ -87,18 +87,13 @@ const Home = () => {
               Centre is offering a flat <span className='font-bold underline'>₹1,00,000/-</span> off
               on your IVF cycle cost. Visit the GarbhaGudi branch nearest to you to avail the offer
               and take the first steps in your journey towards completeness.
-              <div className='mt-10 flex flex-col items-start justify-between space-y-3 md:items-center lg:flex-row lg:space-y-0'>
+              <div className='mt-10 flex flex-col items-start space-x-5 space-y-3 md:items-center lg:flex-row lg:space-y-0'>
                 <div className='rounded-xl bg-gg-500 px-3 py-2 font-lexend text-white dark:bg-gg-600'>
                   <WatchVideo />
                 </div>
                 <div className='rounded-xl bg-purple-700 px-3 py-2 font-lexend text-white dark:bg-purple-800'>
-                  <Link href='/contact/enquiry'>
+                  <Link href='/contact/enquiry?pageVisit=/features/paripoorna-2024'>
                     <div>Book an Appointment</div>
-                  </Link>
-                </div>
-                <div className='rounded-xl bg-yellow-500 px-3 py-2 font-lexend text-white dark:bg-yellow-600'>
-                  <Link href='/features/paripoorna-2024.tsx/#how-to'>
-                    <div>Know More</div>
                   </Link>
                 </div>
               </div>

@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const Banner = () => {
+  const path = usePathname();
   return (
     <div>
       <div className='mx-auto grid max-w-7xl grid-cols-1 gap-3 px-3 pt-10 lg:grid-cols-2'>
@@ -34,7 +36,7 @@ const Banner = () => {
             </Link>{' '}
           </div>
           <Link
-            href='/contact/enquiry'
+            href={`/contact/enquiry?pageVisit=${path}`}
             className='mt-5 rounded-lg bg-gg-500 px-3 py-2 font-content text-lg font-semibold text-white hover:bg-gg-400 dark:bg-gray-500 dark:hover:bg-gg-500'
           >
             Consult Now
