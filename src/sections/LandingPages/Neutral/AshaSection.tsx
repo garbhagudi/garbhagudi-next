@@ -1,8 +1,9 @@
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
-const MyModal = dynamic(() => import('components/modal'));
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const AshaSection = () => {
+  const path = usePathname();
   return (
     <section className='bg-gray-50 pb-10 pt-16 dark:bg-gray-700'>
       <h3 className='pb-16 text-center font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 lg:text-4xl'>
@@ -48,12 +49,14 @@ const AshaSection = () => {
                     been instrumental in creating happy endings in the lives of more than 10500+
                     couples, by ensuring they have a child of their own.
                   </p>
-                  <MyModal
-                    title={'Consult Dr. Asha S Vijay'}
-                    clnm={
-                      'font-medium text-white font-lexend uppercase px-3 py-2 bg-brandPink dark:bg-gray-500 dark:hover:bg-gg-400 rounded-md'
-                    }
-                  />
+                  <Link href={`/contact/enquiry?pageVisit=${path}`}>
+                    <button
+                      type='button'
+                      className='rounded-md bg-brandPink px-3 py-2 font-lexend font-medium uppercase text-white dark:bg-gray-500 dark:hover:bg-gg-400'
+                    >
+                      Consult Dr. Asha S Vijay
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

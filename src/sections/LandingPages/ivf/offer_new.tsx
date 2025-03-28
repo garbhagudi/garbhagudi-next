@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 import Form from './form';
 
@@ -13,7 +12,7 @@ const Offer = () => {
           width={400}
           height={400}
           className='mx-auto h-full w-full'
-          priority
+          priority={true}
         />
       </div>
 

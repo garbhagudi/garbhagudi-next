@@ -1,20 +1,25 @@
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import React from 'react';
-import Faq from 'sections/egg-freezing/faq';
-import FertilityTest from 'sections/egg-freezing/FertilityTest';
-import Freezing from 'sections/egg-freezing/Freezing';
 import Banner from 'sections/LandingPages/eggFreezing/banner';
-import CTA from 'sections/LandingPages/eggFreezing/cta';
-import Expects from 'sections/LandingPages/eggFreezing/Expects';
 import Header from 'sections/LandingPages/eggFreezing/Header';
-import Overview from 'sections/egg-freezing/overview';
-import PlannedSteps from 'sections/egg-freezing/PlannedSteps';
-import CreativeVideo from 'sections/egg-freezing/creativeVideo';
+const Faq = dynamic(() => import('sections/egg-freezing/faq'), { ssr: false });
+const FertilityTest = dynamic(() => import('sections/egg-freezing/FertilityTest'), { ssr: false });
+const Freezing = dynamic(() => import('sections/egg-freezing/Freezing'), { ssr: false });
+const CTA = dynamic(() => import('sections/LandingPages/eggFreezing/cta'), { ssr: false });
+const Expects = dynamic(() => import('sections/LandingPages/eggFreezing/Expects'), { ssr: false });
+const Overview = dynamic(() => import('sections/egg-freezing/overview'), { ssr: false });
+const PlannedSteps = dynamic(() => import('sections/egg-freezing/PlannedSteps'), { ssr: false });
+const CreativeVideo = dynamic(() => import('sections/egg-freezing/creativeVideo'), { ssr: false });
 
 export default function eggFreezing() {
   return (
     <div>
       <Head>
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--03_g0czqu.webp'
+          as='image'
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India</title>
         <meta

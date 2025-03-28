@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 export default function Banner() {
@@ -12,7 +11,7 @@ export default function Banner() {
         width={1920}
         height={180}
         className='h-full w-full object-cover'
-        priority
+        priority={true}
       />
     </div>
   );

@@ -2,27 +2,35 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Header from 'sections/LandingPages/itwmedia/header';
 import Offer from 'sections/LandingPages/itwmedia/offer_new';
-import KeyBenefits from 'sections/LandingPages/itwmedia/keybenefits';
-import Features from 'sections/LandingPages/ivf/features';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
-
-const EndForm = dynamic(() => import('sections/LandingPages/itwmedia/endform_new'));
-const WhyGarbhaGudi = dynamic(() => import('sections/LandingPages/ivf/whygarbhagudi'));
-const Testimonial = dynamic(() => import('sections/home/testimonial'));
-const Plans = dynamic(() => import('sections/LandingPages/ivf/plans'));
-const Doctors = dynamic(() => import('sections/LandingPages/ivf/Doctors'));
-const Branches = dynamic(() => import('sections/LandingPages/Neutral/branches'));
+const Features = dynamic(() => import('sections/LandingPages/ivf/features'), { ssr: false });
+const KeyBenefits = dynamic(() => import('sections/LandingPages/itwmedia/keybenefits'), {
+  ssr: false,
+});
+const EndForm = dynamic(() => import('sections/LandingPages/itwmedia/endform_new'), { ssr: false });
+const WhyGarbhaGudi = dynamic(() => import('sections/LandingPages/ivf/whygarbhagudi'), {
+  ssr: false,
+});
+const Testimonial = dynamic(() => import('sections/home/testimonial'), { ssr: false });
+const Plans = dynamic(() => import('sections/LandingPages/ivf/plans'), { ssr: false });
+const Doctors = dynamic(() => import('sections/LandingPages/ivf/Doctors'), { ssr: false });
+const Branches = dynamic(() => import('sections/LandingPages/Neutral/branches'), { ssr: false });
 const TermsaAndConditions = dynamic(
-  () => import('sections/LandingPages/itwmedia/termsAndConditions')
+  () => import('sections/LandingPages/itwmedia/termsAndConditions'),
+  { ssr: false }
 );
-
-const Faq = dynamic(() => import('sections/home/faq'));
+const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
 
 export default function LandingPage({ doctors, branches }) {
   return (
     <div>
       <Head>
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1732969307/paripoorna/IVF_WebP_Compression_p0cbco.webp'
+          as='image'
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India</title>
         <meta

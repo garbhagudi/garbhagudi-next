@@ -160,7 +160,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
                     name={items.name}
                     bio={items.bio.raw.children}
                     setActiveIndex={setActiveIndex}
-                  ></DoctorLayout>
+                  />
                 ))}
               </Carousel>
             </div>

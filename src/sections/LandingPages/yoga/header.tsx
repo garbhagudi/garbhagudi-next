@@ -1,4 +1,3 @@
-import React from 'react';
 import Logo from 'components/assets/logo';
 import Link from 'next/link';
 
@@ -7,9 +6,9 @@ const Header = () => {
     <>
       <div className='mx-auto max-w-7xl px-4'>
         <div className='flex items-center justify-between py-4'>
-          <div>
+          <Link href={'/'}>
             <Logo />
-          </div>
+          </Link>
           <div className='hidden items-start justify-around space-x-3 font-lexend lg:flex'>
             <ul className='hidden items-center space-x-4 lg:flex'>
               {menuitems.map((item, index) => (

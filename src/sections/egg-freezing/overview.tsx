@@ -51,7 +51,7 @@ export default function Overview() {
               >
                 <div className='flex flex-col items-center justify-center'>
                   <div className='flex h-16 w-16 items-center justify-center rounded-[50%] bg-[#FFE9EC]'>
-                    <Image src={ele.icon} alt={ele.title} width={32} height={32} />
+                    <Image src={ele.icon} alt={ele.title} width={32} height={32} loading='lazy' />
                   </div>
                   <div
                     className={`w-full py-5 font-nunito-Sans text-sm font-normal opacity-70 md:text-lg ${renderData.length == index + 1 && 'pr-6'}`}

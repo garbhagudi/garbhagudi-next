@@ -103,7 +103,7 @@ const IndexPage = () => {
             </Link>
           </li>
           <li>
-            <Link href='/contact/enquiry'>
+            <Link href='/contact/enquiry?pageVisit=/resources/tools'>
               <div className='underline-offset-2 hover:underline'>Book an Appointment</div>
             </Link>
           </li>

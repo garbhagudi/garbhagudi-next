@@ -1,8 +1,10 @@
 import { HiStar } from 'react-icons/hi';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const Banner = () => {
+  const path = usePathname();
   return (
     <div className='bg-white pb-8 dark:bg-gray-800 sm:pb-12 lg:pb-12'>
       <div className='overflow-hidden pt-8 font-content sm:pt-12 lg:relative lg:py-36'>
@@ -92,7 +94,7 @@ const Banner = () => {
                   <span></span>
                   <span></span>
                   <span></span>
-                  <Link href={'tel:+919108910832'} className='font-bold'>
+                  <Link href={`/contact/enquiry?pageVisit=${path}`} className='font-bold'>
                     Book an Appointment
                   </Link>
                 </div>
