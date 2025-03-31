@@ -5,7 +5,8 @@ import Error from 'next/error';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import Image from 'next/image';
-
+import dynamic from 'next/dynamic';
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
     query: gql`
@@ -212,6 +213,7 @@ const Vas = ({ valueAddedService }) => {
           )}
         </div>
       </div>
+      <Cta />
     </div>
   );
 };

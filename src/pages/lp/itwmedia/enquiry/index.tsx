@@ -21,6 +21,7 @@ const TermsaAndConditions = dynamic(
   { ssr: false }
 );
 const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 
 export default function LandingPage({ doctors, branches }) {
   return (
@@ -89,6 +90,7 @@ export default function LandingPage({ doctors, branches }) {
       <Faq />
       <TermsaAndConditions />
       <EndForm />
+      <Cta />
     </div>
   );
 }

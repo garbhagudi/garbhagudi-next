@@ -4,6 +4,8 @@ import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import apolloClient from 'lib/apollo-graphcms';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 
 interface CareerProps {
   position: string;
@@ -154,6 +156,7 @@ const IndexPage = ({ careers }) => {
           </div>
         </div>
       </div>
+      <Cta />
     </div>
   );
 };

@@ -2,7 +2,8 @@ import { useState } from 'react';
 import Calendar from 'react-calendar';
 import Moment from 'react-moment';
 import Head from 'next/head';
-
+import dynamic from 'next/dynamic';
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const IndexPage = () => {
   const [value, onChange] = useState(new Date());
   const [cycle, cycleValue] = useState('28');
@@ -174,6 +175,7 @@ const IndexPage = () => {
           based on his/her knowledge of your complete medical condition.
         </div>
       </div>
+      <Cta />
     </>
   );
 };

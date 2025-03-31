@@ -15,7 +15,7 @@ const Testimonial = dynamic(() => import('sections/home/testimonial'), { ssr: fa
 const Plans = dynamic(() => import('sections/LandingPages/ivf/plans'), { ssr: false });
 const Doctors = dynamic(() => import('sections/LandingPages/ivf/Doctors'), { ssr: false });
 const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
-
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 export default function LandingPage({ doctors }) {
   return (
     <div>
@@ -76,6 +76,7 @@ export default function LandingPage({ doctors }) {
       <Testimonial />
       <Faq />
       <EndForm />
+      <Cta />
     </div>
   );
 }

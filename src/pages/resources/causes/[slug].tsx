@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 
 export const getStaticProps = async ({ params }) => {
@@ -218,6 +219,7 @@ const Blog = ({ cause }) => {
           </div>
         </div>
       </div>
+      <Cta />
     </div>
   );
 };

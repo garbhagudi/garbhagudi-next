@@ -7,6 +7,7 @@ import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
@@ -220,6 +221,7 @@ const Diagnosis = ({ diagnosis }) => {
           </div>
         </div>
       </div>
+      <Cta />
     </div>
   );
 };
