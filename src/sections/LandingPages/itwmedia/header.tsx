@@ -7,7 +7,9 @@ const Header = () => {
     <div>
       <div className='mx-auto max-w-7xl px-3'>
         <div className='flex items-center justify-between py-3'>
-          <Logo />
+          <Link href={'/'}>
+            <Logo />
+          </Link>
           <Link
             href='tel:+919108910832'
             className='rounded-md bg-gg-500 px-3 py-2 font-lexend text-sm font-semibold text-white transition duration-300 ease-in-out hover:bg-gg-600'

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import Header from 'sections/LandingPages/itwmedia/header';
+import Header from 'sections/LandingPages/unbounce/header';
 import Offer from 'sections/LandingPages/itwmedia/offer_new';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
@@ -8,7 +8,7 @@ const Features = dynamic(() => import('sections/LandingPages/ivf/features'), { s
 const KeyBenefits = dynamic(() => import('sections/LandingPages/itwmedia/keybenefits'), {
   ssr: false,
 });
-const EndForm = dynamic(() => import('sections/LandingPages/itwmedia/endform_new'), { ssr: false });
+const EndForm = dynamic(() => import('sections/LandingPages/unbounce/endform'), { ssr: false });
 const WhyGarbhaGudi = dynamic(() => import('sections/LandingPages/ivf/whygarbhagudi'), {
   ssr: false,
 });

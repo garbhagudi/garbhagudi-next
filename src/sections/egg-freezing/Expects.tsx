@@ -1,9 +1,26 @@
 import { SlArrowRight } from 'react-icons/sl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
+const Form = dynamic(() => import('sections/LandingPages/eggFreezing/form'), { ssr: false });
 
 export default function Expects() {
+  const [isOpen, setIsOpen] = useState(false);
   const path = usePathname();
+  const router = useRouter();
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+  const handleCallBtn = () => {
+    if (path.includes('treatments')) {
+      router.push(`
+        /contact/enquiry?pageVisit=${path}`);
+    } else {
+      setIsOpen(true);
+    }
+  };
   const staticData = [
     {
       title: 'Call Us/Book an Appointment',
@@ -11,12 +28,12 @@ export default function Expects() {
         'Speak directly with one of our experts for an in-depth consultation, guiding you through every option.',
 
       btn: (
-        <Link
-          href={`/contact/enquiry?pageVisit=${path}`}
+        <div
+          onClick={handleCallBtn}
           className='block w-full scroll-smooth rounded-[10px] bg-[#D9576C] px-4 py-2 font-content text-lg text-white shadow hover:opacity-80 focus:outline-none focus:ring active:text-rose-500 dark:bg-gg-500 dark:text-white dark:hover:bg-gg-400 sm:w-auto'
         >
           Call Us
-        </Link>
+        </div>
       ),
     },
     {
@@ -81,6 +98,14 @@ export default function Expects() {
             );
           })}
         </div>
+        {isOpen && (
+          <div
+            className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'
+            onClick={handleClose}
+          >
+            <Form />
+          </div>
+        )}
       </div>
     </>
   );

@@ -1,19 +1,20 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import Header from 'sections/LandingPages/newsfirstdigital/header';
+import Header from 'sections/LandingPages/unbounce/header';
 import Offer from 'sections/LandingPages/newsfirstdigital/offer_new';
 import KeyBenefits from 'sections/LandingPages/newsfirstdigital/keybenefits';
 import Features from 'sections/LandingPages/ivf/features';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 
-const EndForm = dynamic(() => import('sections/LandingPages/newsfirstdigital/endform_new'));
-const WhyGarbhaGudi = dynamic(() => import('sections/LandingPages/ivf/whygarbhagudi'));
-const Testimonial = dynamic(() => import('sections/home/testimonial'));
-const Plans = dynamic(() => import('sections/LandingPages/ivf/plans'));
-const Doctors = dynamic(() => import('sections/LandingPages/ivf/Doctors'));
-
-const Faq = dynamic(() => import('sections/home/faq'));
+const EndForm = dynamic(() => import('sections/LandingPages/unbounce/endform'), { ssr: false });
+const WhyGarbhaGudi = dynamic(() => import('sections/LandingPages/ivf/whygarbhagudi'), {
+  ssr: false,
+});
+const Testimonial = dynamic(() => import('sections/home/testimonial'), { ssr: false });
+const Plans = dynamic(() => import('sections/LandingPages/ivf/plans'), { ssr: false });
+const Doctors = dynamic(() => import('sections/LandingPages/ivf/Doctors'), { ssr: false });
+const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
 
 export default function LandingPage({ doctors }) {
   return (
