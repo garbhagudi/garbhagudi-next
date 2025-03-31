@@ -18,6 +18,7 @@ const Good = dynamic(() => import('sections/tools/fqc/results').then((mod) => mo
 const Best = dynamic(() => import('sections/tools/fqc/results').then((mod) => mod.Best), {
   ssr: false,
 });
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 
 // Define types for input mapping and results
 interface FertilityMappings {
@@ -291,6 +292,7 @@ const IndexPage: React.FC = () => {
           </p>
         </div>
       </div>
+      <Cta />
     </div>
   );
 };

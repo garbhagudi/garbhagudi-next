@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
-
+import dynamic from 'next/dynamic';
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Terms = () => {
   return (
     <div>
@@ -236,6 +237,7 @@ const Terms = () => {
           </div>
         </div>
       </div>
+      <Cta />
     </div>
   );
 };

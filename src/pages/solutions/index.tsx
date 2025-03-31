@@ -3,7 +3,8 @@ import Head from 'next/head';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
-
+import dynamic from 'next/dynamic';
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 interface Article {
   articles: {
     articleType: string;
@@ -92,6 +93,7 @@ const IndexPage = ({ articles }: Article) => {
           ))}
         </div>
       </div>
+      <Cta />
     </div>
   );
 };
