@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Form = () => {
   const [iframeSrc, setIframeSrc] = useState('/contact11.html');

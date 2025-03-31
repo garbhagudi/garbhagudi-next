@@ -1,8 +1,25 @@
-import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+const Form = dynamic(() => import('sections/LandingPages/eggFreezing/form'), { ssr: false });
 
 const CTA: React.FC = () => {
   const path = usePathname();
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+  const handleBookAppointmentBtn = () => {
+    if (path.includes('/lp/egg-freezing')) {
+      setIsOpen(true);
+    } else {
+      router.push(`
+        /contact/enquiry?pageVisit=${path}`);
+    }
+  };
   return (
     <div
       className='relative flex h-screen max-h-64 items-center justify-center bg-cover bg-center shadow-xl'
@@ -16,10 +33,21 @@ const CTA: React.FC = () => {
         <p className='mb-4 font-content font-medium text-gray-800 dark:text-gray-200'>
           Contact us now to start your journey with us and experience the joy of parenthood.
         </p>
-        <button className='rounded-lg bg-gg-500 px-4 py-2 font-semibold text-white hover:bg-gg-400 focus:outline-none dark:bg-gray-600 dark:hover:bg-gg-400'>
-          <Link href={`/contact/enquiry?pageVisit=${path}`}>Book an Appointment</Link>
+        <button
+          onClick={handleBookAppointmentBtn}
+          className='rounded-lg bg-gg-500 px-4 py-2 font-semibold text-white hover:bg-gg-400 focus:outline-none dark:bg-gray-600 dark:hover:bg-gg-400'
+        >
+          Book an Appointment
         </button>
       </div>
+      {isOpen && (
+        <div
+          className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'
+          onClick={handleClose}
+        >
+          <Form />
+        </div>
+      )}
     </div>
   );
 };
