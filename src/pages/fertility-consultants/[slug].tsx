@@ -7,6 +7,7 @@ import Loading from 'components/Loading';
 import Image from 'next/image';
 import type { RichTextContent } from '@graphcms/rich-text-types';
 import dynamic from 'next/dynamic';
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 const FAQs = dynamic(() => import('components/FAQs'), { ssr: false });
 export const getStaticProps = async ({ params }) => {
@@ -251,6 +252,7 @@ const Blog = ({ article }: BlogProps) => {
         </div>
       </div>
       <FAQs data={article?.faq} activeIndex={article?.faq[0]?.id} />
+      <Cta />
     </div>
   );
 };

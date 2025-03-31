@@ -10,6 +10,7 @@ import GGLogo from 'assets/gg-emblem.svg';
 import { throttledFetch } from 'lib/throttle';
 import { Fragment } from 'react';
 import dynamic from 'next/dynamic';
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: true });
 const SearchComponent = dynamic(() => import('components/search/searchComponent'), { ssr: true });
 const Pagination = dynamic(() => import('components/pagination'), { ssr: false });
 
@@ -187,6 +188,7 @@ function BlogPage({
             />
           </div>
         </div>
+        <Cta />
       </div>
     </Fragment>
   );

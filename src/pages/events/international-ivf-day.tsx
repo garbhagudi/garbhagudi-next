@@ -2,6 +2,9 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
+const Cta = dynamic(() => import('sections/gg-care/cta'), {
+  ssr: false,
+});
 const CallToAction = dynamic(() => import('sections/misc/international-ivf-day/CallToAction'), {
   ssr: false,
 });
@@ -59,6 +62,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <Cta />
     </div>
   );
 };

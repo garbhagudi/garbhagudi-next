@@ -1,7 +1,8 @@
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Header from 'sections/mediaKit/brandResources/header';
 import BRComponent from 'sections/mediaKit/main';
-
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const IndexPage = () => {
   return (
     <div className='min-h-screen'>
@@ -10,6 +11,7 @@ const IndexPage = () => {
       </Head>
       <Header />
       <BRComponent />
+      <Cta />
     </div>
   );
 };

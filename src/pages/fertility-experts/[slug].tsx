@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import { SiGooglemaps } from 'react-icons/si';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 const VideoTestimonials = dynamic(() => import('sections/fertility-experts/videoTestimonials'), {
   ssr: false,
@@ -724,6 +725,7 @@ const Doctor = ({ doctor }) => {
           </div>
         </section>
       </main>
+      <Cta />
     </div>
   );
 };

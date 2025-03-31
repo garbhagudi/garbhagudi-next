@@ -1,5 +1,7 @@
 import MythsFacts from 'sections/myth-and-facts';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 
 const MythsAndFacts = () => {
   return (
@@ -45,6 +47,7 @@ const MythsAndFacts = () => {
         />
       </Head>
       <MythsFacts />
+      <Cta />
     </div>
   );
 };
