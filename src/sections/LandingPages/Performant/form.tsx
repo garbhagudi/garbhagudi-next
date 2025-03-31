@@ -1,9 +1,12 @@
+import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 const Form = () => {
   const router = useRouter();
-  const targetURL = router.query?.targetURL || '/';
+  const path = usePathname();
+  const pageVisit = router.query?.pageVisit || path;
+  console.log(pageVisit);
 
   const {
     register,
@@ -18,12 +21,13 @@ const Form = () => {
       Lead_Source: `Online`,
       Lead_Sub_Source: 'Garbhagudi_Organic',
       UTM_Campaign: '',
+      Page_Visited: pageVisit,
     },
   });
   const [load, setLoad] = useState(false);
   useEffect(() => {
-    setValue('Lead_Source', `Online: ${targetURL}`);
-  }, [targetURL, setValue]);
+    setValue('Page_Visited', pageVisit);
+  }, [pageVisit]);
   const onSubmit = async (data) => {
     setLoad(true);
     try {

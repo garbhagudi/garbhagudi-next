@@ -1,6 +1,5 @@
-import React from 'react';
 import Image from 'next/image';
-import Form from './form';
+import Form from '../Performant/form';
 
 const Offer = () => {
   return (
