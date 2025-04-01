@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Content = dynamic(() => import('sections/misc/ivf-main/content'), { ssr: false });
 const Banner = dynamic(() => import('sections/misc/ivf-main/banner'), { ssr: true });
 const WhenIvf = dynamic(() => import('sections/misc/ivf-main/when-ivf'), { ssr: false });
@@ -260,6 +261,7 @@ const Ivf = () => {
         <Risks />
         <Video />
         <Related />
+        <Cta />
       </div>
     </div>
   );

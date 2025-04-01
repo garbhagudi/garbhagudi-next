@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 const Cost = () => {
   return (
     <div
@@ -11,19 +9,11 @@ const Cost = () => {
           IUI Treatment Cost in Bangalore
         </h2>
         <div className='mx-auto max-w-5xl font-content text-xl'>
-          <Link
-            href={'https://www.garbhagudi.com/treatments/intra-uterine-insemination-iui'}
-            className='text-brandPink hover:underline'
-          >
-            IUI Treatment cost in Bangalore
-          </Link>{' '}
-          is between
-          <strong> INR 15,000 and INR 50,000 </strong>
-          per cycle, depending on the location of the clinic, the experience of the specialist, and
-          additional costs associated with the procedure such as medications and laboratory fees.
-          It's always best to check with the clinic or your insurance provider to understand the
-          full cost of the treatment. Some clinics also offer financing options to help make IUI
-          Cost in Bangalore more affordable.
+          Depending on the location of the clinic, the experience of the specialist, and additional
+          costs associated with the procedure such as medications and laboratory fees. It's always
+          best to check with the clinic or your insurance provider to understand the full cost of
+          the treatment. Some clinics also offer financing options to help make IUI Cost in
+          Bangalore more affordable.
         </div>
       </div>
     </div>

@@ -48,10 +48,4 @@ const data = [
     Answer:
       'Frozen eggs can typically be stored for up to 10-15 years, but quality may decrease slightly over time.',
   },
-  {
-    id: 4,
-    Question: 'What is the cost of egg freezing?',
-    Answer:
-      'Egg freezing costs range from $6,000 to $15,000 per cycle, plus around $500–$1,000 annually for storage.',
-  },
 ];
