@@ -15,6 +15,7 @@ import {
 import LanguageSelect from 'components/languageSelect';
 import Logo from 'components/assets/logo';
 import ThemeToggle from 'styles/theme-toggle';
+import { usePathname } from 'next/navigation';
 
 const menu = [
   {
@@ -56,6 +57,7 @@ const menu = [
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const path = usePathname();
   return (
     <div
       className={`sticky top-0 z-50 bg-white bg-opacity-70 bg-auto bg-no-repeat shadow-xl backdrop-blur-2xl dark:border-b dark:border-gray-600 dark:bg-gray-800 dark:bg-opacity-70 lg:bg-cover`}
@@ -79,7 +81,7 @@ const Nav = () => {
               <div className='flex items-center space-x-3'>
                 <ThemeToggle />
                 <Link
-                  href='/contact/enquiry'
+                  href={`/contact/enquiry?pageVisit=${path}`}
                   target={'_blank'}
                   rel='noreferrer'
                   className='duration-2 cursor-pointer rounded-lg bg-gg-500 px-3 py-2 font-lexend text-xs text-gray-200 transition-all ease-in hover:bg-brandPink3 dark:bg-gg-500 dark:hover:bg-gg-600 sm:text-sm'

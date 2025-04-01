@@ -104,23 +104,4 @@ const Data = [
       </div>
     ),
   },
-  {
-    id: 7,
-    q: 'What is the cost of IUI in Bangalore?',
-    a: (
-      <div>
-        <Link
-          href={'/treatments/intra-uterine-insemination-iui'}
-          className='text-brandPink hover:underline'
-        >
-          IUI treatment in India
-        </Link>{' '}
-        can cost between INR 15,000 and INR 50,000 per cycle, depending on the location of the
-        clinic, the experience of the specialist, and additional costs associated with the procedure
-        such as medications and laboratory fees. It's always best to check with the clinic or your
-        insurance provider to understand the full cost of the treatment. Some clinics also offer
-        financing options to help make the treatment more affordable.
-      </div>
-    ),
-  },
 ];

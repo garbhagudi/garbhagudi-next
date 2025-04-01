@@ -2,6 +2,7 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
 // Dynamically import the components without SSR
+const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const CallToAction = dynamic(() => import('sections/misc/iui-main/CallToAction'), { ssr: false });
 const Advantages = dynamic(() => import('sections/misc/iui-main/adv-disadv'), { ssr: false });
 const Banner = dynamic(() => import('sections/misc/iui-main/banner'), { ssr: true });
@@ -238,6 +239,7 @@ const Iui = () => {
       <Faq />
       <Risks />
       <Advantages />
+      <Cta />
     </div>
   );
 };
