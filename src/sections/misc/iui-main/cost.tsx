@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 const Cost = () => {
   return (
     <div
