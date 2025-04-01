@@ -19,7 +19,7 @@ const Cta = () => {
           >
             <button
               type='button'
-              className='inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 font-content text-base font-medium text-gg-500 hover:bg-pink-50 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-600'
+              className='inline-flex items-center justify-center rounded-md border border-transparent bg-gg-500 px-5 py-3 font-content text-base font-medium text-gray-200 hover:bg-brandPink3 dark:bg-gg-500 dark:hover:bg-gg-600'
             >
               Contact Us
             </button>
@@ -29,7 +29,7 @@ const Cta = () => {
               href='https://wa.me/918884183338?text=Hi.'
               target='_blank'
               rel='noreferrer'
-              className='inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 font-content text-base font-medium text-gg-500 hover:bg-pink-50 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-600'
+              className='inline-flex items-center justify-center rounded-md border border-transparent bg-gg-500 px-5 py-3 font-content text-base font-medium text-gray-200 hover:bg-brandPink3 dark:bg-gg-500 dark:hover:bg-gg-600'
             >
               <BsWhatsapp /> <span className='ml-2'>WhatsApp</span>
             </a>

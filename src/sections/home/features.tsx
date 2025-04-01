@@ -8,7 +8,7 @@ import { ImLab } from 'react-icons/im';
 const features = [
   {
     id: 1,
-    name: 'High Success Rate',
+    name: 'Excellent Success Rate',
     icon: <CiPercent />,
     content: 'GarbhaGudi has one of the highest IVF treatments success rates in the industry.',
     link: '/features/success-rates-of-ivf',
