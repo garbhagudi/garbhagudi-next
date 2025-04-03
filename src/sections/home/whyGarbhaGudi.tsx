@@ -28,12 +28,12 @@ const WhyGG = () => {
                     <Link href={'/'} className='text-gg-500 hover:underline dark:text-gg-400'>
                       IVF Clinic and Hospital in Bangalore
                     </Link>{' '}
-                    with over 13 years of experience in providing comprehensive fertility solutions.
+                    with over 14 years of experience in providing comprehensive fertility solutions.
                     It has a renowned team of specialists, state-of-the-art infrastructure,
                     transparent pricing, and consistently high success rates in assisted
                     reproductive techniques. GarbhaGudi's holistic approach to{' '}
                     <Link
-                      href={'/treatments/infertility'}
+                      href={'/treatments/infertility-treatment-in-bangalore'}
                       className='text-gg-500 hover:underline dark:text-gg-400'
                     >
                       fertility treatment
