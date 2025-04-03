@@ -8,6 +8,8 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
+import { messaging } from '../lib/firebase';
+import { getToken, onMessage } from 'firebase/messaging';
 
 // Dynamically import components
 const Footer = dynamic(() => import('components/footer/footer'), { ssr: false });
@@ -15,6 +17,7 @@ const Nav = dynamic(() => import('components/header/header'), { ssr: true });
 const Salesiq = dynamic(() => import('components/SalesIQ'), { ssr: false });
 const Loading = dynamic(() => import('components/Loading'), { ssr: true });
 const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false });
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const noRenderPaths = [
@@ -37,21 +40,53 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   useEffect(() => {
-    const start = () => {
-      setLoading(true);
-    };
-    const end = () => {
-      setLoading(false);
-    };
+    const start = () => setLoading(true);
+    const end = () => setLoading(false);
+
     router.events.on('routeChangeStart', start);
     router.events.on('routeChangeComplete', end);
     router.events.on('routeChangeError', end);
+
     return () => {
       router.events.off('routeChangeStart', start);
       router.events.off('routeChangeComplete', end);
       router.events.off('routeChangeError', end);
     };
   }, [router.events]);
+
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/firebase-messaging-sw.js')
+        .then((registration) => console.log('Service Worker Registered:', registration))
+        .catch((err) => console.log('Service Worker Registration Failed:', err));
+    }
+
+    // Request permission for notifications
+    Notification.requestPermission().then((permission) => {
+      if (permission === 'granted') {
+        getToken(messaging, {
+          vapidKey:
+            'BNGV3g77lvG1L6ntiFsusKoCv2UyLMEUDBpusQ0JyVHuVQKyX6g-ZPR99P4J7RnYP03nM1WGkUdGH_eeOdPZrIE',
+        })
+          .then((currentToken) => {
+            if (currentToken) {
+              console.log('Notification Token:', currentToken);
+              // Send token to backend for storage
+            } else {
+              console.log('No registration token available.');
+            }
+          })
+          .catch((err) => console.log('Error retrieving token:', err));
+      }
+    });
+
+    // Handle foreground messages
+    onMessage(messaging, (payload) => {
+      console.log('Foreground Message:', payload);
+      alert(`New Notification: ${payload.notification.title}`);
+    });
+  }, []);
 
   const path = router.asPath.endsWith('/index') ? '' : router.asPath;
 
