@@ -4,7 +4,7 @@ Allow: /
 Disallow: /?*
 
 # Host
-Host: undefined
+Host: https://www.garbhagudi.com
 
 # Sitemaps
-Sitemap: undefined/sitemap.xml
+Sitemap: https://www.garbhagudi.com/sitemap.xml
