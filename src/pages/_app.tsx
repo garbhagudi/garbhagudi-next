@@ -54,19 +54,22 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     window.OneSignal = window.OneSignal || [];
-    OneSignal.push(function () {
-      OneSignal.init({
+
+    window.OneSignal.push(() => {
+      (window.OneSignal as OneSignalAPI).init({
         appId: 'a9b548df-4dff-46c0-979e-f63f1398258e',
         notifyButton: {
           enable: true,
           position: 'bottom-left',
         },
-
         allowLocalhostAsSecureOrigin: true,
       });
     });
+
     return () => {
-      window.OneSignal = undefined;
+      if (typeof window !== 'undefined') {
+        window.OneSignal = undefined;
+      }
     };
   }, []);
 
