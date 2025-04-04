@@ -8,8 +8,6 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
-import { messaging } from '../lib/firebase';
-import { getToken, onMessage } from 'firebase/messaging';
 
 // Dynamically import components
 const Footer = dynamic(() => import('components/footer/footer'), { ssr: false });
@@ -55,37 +53,21 @@ function MyApp({ Component, pageProps }) {
   }, [router.events]);
 
   useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('/firebase-messaging-sw.js')
-        .then((registration) => console.log('Service Worker Registered:', registration))
-        .catch((err) => console.log('Service Worker Registration Failed:', err));
-    }
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: 'a9b548df-4dff-46c0-979e-f63f1398258e',
+        notifyButton: {
+          enable: true,
+          position: 'bottom-left',
+        },
 
-    // Request permission for notifications
-    Notification.requestPermission().then((permission) => {
-      if (permission === 'granted') {
-        getToken(messaging, {
-          vapidKey:
-            'BNGV3g77lvG1L6ntiFsusKoCv2UyLMEUDBpusQ0JyVHuVQKyX6g-ZPR99P4J7RnYP03nM1WGkUdGH_eeOdPZrIE',
-        })
-          .then((currentToken) => {
-            if (currentToken) {
-              console.log('Notification Token:', currentToken);
-              // Send token to backend for storage
-            } else {
-              console.log('No registration token available.');
-            }
-          })
-          .catch((err) => console.log('Error retrieving token:', err));
-      }
+        allowLocalhostAsSecureOrigin: true,
+      });
     });
-
-    // Handle foreground messages
-    onMessage(messaging, (payload) => {
-      console.log('Foreground Message:', payload);
-      alert(`New Notification: ${payload.notification.title}`);
-    });
+    return () => {
+      window.OneSignal = undefined;
+    };
   }, []);
 
   const path = router.asPath.endsWith('/index') ? '' : router.asPath;
@@ -104,6 +86,7 @@ function MyApp({ Component, pageProps }) {
           name='robots'
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
+        <script src='https://cdn.onesignal.com/sdks/OneSignalSDK.js' async></script>
       </Head>
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
