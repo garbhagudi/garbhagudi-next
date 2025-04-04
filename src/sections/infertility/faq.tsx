@@ -76,7 +76,7 @@ const data = [
     id: 8,
     Question: 'How much does fertility treatment cost in Bangalore?',
     Answer:
-      "Fertility treatment costs in Bangalore, as well as anywhere else, can vary widely depending on the specific treatment, the clinic or hospital, and the individual circumstances of the patient. The cost for fertility treatments such as in vitro fertilization (IVF) can range from ₹90,000 to several lakhs of rupees. The mentioned starting cost of ₹90,000 at GarbhaGudi is a basic estimate and may not cover all aspects of the treatment. It's essential to consult with a fertility specialist and the chosen clinic to get a more accurate cost estimate based on your situation.",
+      "Fertility treatment costs in Bangalore, as well as anywhere else, can vary widely depending on the specific treatment, the clinic or hospital, and the individual circumstances of the patient. It's essential to consult with a fertility specialist and the chosen clinic to get a more accurate cost estimate based on your situation.",
   },
   {
     id: 9,

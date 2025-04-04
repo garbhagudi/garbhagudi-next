@@ -8,6 +8,7 @@ import Loading from 'components/Loading';
 import Image from 'next/image';
 import { throttledFetch } from 'lib/throttle';
 import dynamic from 'next/dynamic';
+const FAQs = dynamic(() => import('components/FAQs'), { ssr: false });
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 
@@ -30,6 +31,14 @@ export const getStaticProps = async ({ params }) => {
             content {
               raw
               text
+            }
+            faq {
+              id
+              question
+              answer {
+                raw
+                text
+              }
             }
           }
         }
@@ -396,6 +405,7 @@ const Treatment = ({ treatment }) => {
           </div>
         </div>
       </div>
+      <FAQs data={treatment?.faq} activeIndex={treatment?.faq[0]?.id} />
       <Cta />
     </div>
   );

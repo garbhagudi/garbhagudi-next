@@ -18,7 +18,7 @@ const Banner = () => {
           <div className='pt-5 font-content text-base'>
             Experience the miracle of life with{' '}
             <Link
-              href={'/treatments/intra-uterine-insemination-iui'}
+              href={'/treatments/iui-treatment-in-bangalore'}
               className='text-brandPink hover:underline'
             >
               IUI treatment in Bangalore.
@@ -29,7 +29,7 @@ const Banner = () => {
             parenthood, every step of the way. Embrace the joy of holding your bundle of love in
             your arms, with{' '}
             <Link
-              href={'/treatments/intra-uterine-insemination-iui'}
+              href={'/treatments/iui-treatment-in-bangalore'}
               className='text-brandPink hover:underline'
             >
               IUI treatment in Bangalore.

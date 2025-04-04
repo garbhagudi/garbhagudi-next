@@ -19,7 +19,8 @@ const Banner = () => {
               </span>
             </h1>
             <h3 className='mt-4 max-w-lg font-content text-gray-800 dark:text-gray-200 sm:text-xl sm:leading-relaxed'>
-              Thousands of babies and millions of memories began with a visit to GarbhaGudi
+              GarbhaGudi has helped thousands of families begin their journeys, creating millions of
+              cherished memories.
             </h3>
             <h3 className='mt-4 max-w-lg font-content text-gray-800 dark:text-gray-200 sm:text-xl sm:leading-relaxed'>
               Making families smile since 2011

@@ -108,13 +108,6 @@ const data = [
     Question: 'What is Success rate and Risk percentage involved in IVF treatment?',
     Answer: (
       <p className='md:col-span-7 md:pl-0'>
-        The success rate of in vitro fertilization (IVF) can vary widely depending on several
-        factors, including the patient's age, the cause of infertility, and the quality of the
-        embryos. In general, the overall success rate of IVF is about 35% for women under the age of
-        35, declining to about 10-20% for women over the age of 40. However, it is important to note
-        that these are just estimates, and the actual success rate can vary widely from one patient
-        to another. <br />
-        <br />
         As for the risks involved in IVF treatment, they are generally minimal and most patients do
         not experience any serious complications. Some common side effects of IVF may include
         bloating, cramping, breast tenderness, and mood changes. More serious risks, such as
