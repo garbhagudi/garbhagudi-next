@@ -15,6 +15,7 @@ const Nav = dynamic(() => import('components/header/header'), { ssr: true });
 const Salesiq = dynamic(() => import('components/SalesIQ'), { ssr: false });
 const Loading = dynamic(() => import('components/Loading'), { ssr: true });
 const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false });
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const noRenderPaths = [
@@ -37,21 +38,37 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   useEffect(() => {
-    const start = () => {
-      setLoading(true);
-    };
-    const end = () => {
-      setLoading(false);
-    };
+    const start = () => setLoading(true);
+    const end = () => setLoading(false);
+
     router.events.on('routeChangeStart', start);
     router.events.on('routeChangeComplete', end);
     router.events.on('routeChangeError', end);
+
     return () => {
       router.events.off('routeChangeStart', start);
       router.events.off('routeChangeComplete', end);
       router.events.off('routeChangeError', end);
     };
   }, [router.events]);
+
+  useEffect(() => {
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: 'a9b548df-4dff-46c0-979e-f63f1398258e',
+        notifyButton: {
+          enable: true,
+          position: 'bottom-left',
+        },
+
+        allowLocalhostAsSecureOrigin: true,
+      });
+    });
+    return () => {
+      window.OneSignal = undefined;
+    };
+  }, []);
 
   const path = router.asPath.endsWith('/index') ? '' : router.asPath;
 
@@ -69,6 +86,7 @@ function MyApp({ Component, pageProps }) {
           name='robots'
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
+        <script src='https://cdn.onesignal.com/sdks/OneSignalSDK.js' async></script>
       </Head>
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
