@@ -72,7 +72,7 @@ const Data = [
       <div>
         An{' '}
         <Link
-          href={'/treatments/intra-uterine-insemination-iui'}
+          href={'/treatments/iui-treatment-in-bangalore'}
           className='text-brandPink hover:underline'
         >
           IUI treatment
