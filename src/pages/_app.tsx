@@ -58,6 +58,7 @@ function MyApp({ Component, pageProps }) {
     window.OneSignal.push(() => {
       (window.OneSignal as OneSignalAPI).init({
         appId: 'a9b548df-4dff-46c0-979e-f63f1398258e',
+        safari_web_id: 'web.onesignal.auto.6514249a-4cb8-451b-a889-88f5913c9a7f',
         notifyButton: {
           enable: true,
           position: 'bottom-left',
@@ -89,7 +90,7 @@ function MyApp({ Component, pageProps }) {
           name='robots'
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
-        <script src='https://cdn.onesignal.com/sdks/OneSignalSDK.js' async></script>
+        <script src='https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js' defer></script>
       </Head>
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
