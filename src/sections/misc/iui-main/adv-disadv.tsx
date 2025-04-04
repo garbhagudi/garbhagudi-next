@@ -32,10 +32,6 @@ const Advantages = () => {
               <strong>Timing flexibility:</strong> IUI can be timed to coincide with ovulation,
               which increases the chances of fertilization.
             </li>
-            <li>
-              <strong>Option for single or same-sex couples:</strong> IUI can be done with sperm
-              from a sperm donor, making it an option for single or same-sex couples.
-            </li>
           </ul>
         </div>
         <div className='px-3'>

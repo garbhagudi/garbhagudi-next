@@ -1,7 +1,6 @@
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
-import type { RichTextContent } from '@graphcms/rich-text-types';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import { useRouter } from 'next/router';
@@ -9,7 +8,7 @@ import Loading from 'components/Loading';
 import Image from 'next/image';
 import { throttledFetch } from 'lib/throttle';
 import dynamic from 'next/dynamic';
-import FAQs from 'components/FAQs';
+const FAQs = dynamic(() => import('components/FAQs'), { ssr: false });
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 
@@ -82,17 +81,6 @@ export const getStaticPaths = async () => {
     fallback: true,
   };
 };
-
-interface FaqProps {
-  id: string;
-  question: string;
-  answer: {
-    raw: {
-      children: RichTextContent;
-    };
-    text: string;
-  };
-}
 
 const Treatment = ({ treatment }) => {
   const router = useRouter();
