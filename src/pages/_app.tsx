@@ -54,8 +54,6 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     const initOneSignal = () => {
       if (!window.OneSignal) return;
-      console.log(process.env.NEXT_PUBLIC_ONESIGNAL_APP_ID);
-
       window.OneSignal.push(function () {
         (window.OneSignal as OneSignalAPI).init({
           appId: process.env.NEXT_PUBLIC_ONESIGNAL_APP_ID,
