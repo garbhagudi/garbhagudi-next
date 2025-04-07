@@ -25,7 +25,7 @@ const Form = () => {
   });
   const [load, setLoad] = useState(false);
   useEffect(() => {
-    setValue('Page_Visited', pageVisit);
+    setValue('Page_Visited', `${window.location?.origin}${pageVisit}`);
   }, [pageVisit, setValue]);
   const onSubmit = async (data) => {
     setLoad(true);

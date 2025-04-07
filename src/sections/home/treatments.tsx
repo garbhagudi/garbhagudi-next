@@ -81,7 +81,7 @@ const Data = [
       <div>
         Take the first step towards parenthood with GarbhaGudi's state-of-the-art{' '}
         <Link
-          href={'/treatments/intracytoplasmic-sperm-injection-icsi'}
+          href={'/treatments/icsi-treatment-in-bangalore'}
           className='text-gg-500 hover:underline dark:text-gg-400'
         >
           ICSI treatment In Banglore

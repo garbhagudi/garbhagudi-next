@@ -4,6 +4,7 @@ import 'styles/calendar.css';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Script from 'next/script';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 import TagManager from 'react-gtm-module';
@@ -31,7 +32,6 @@ function MyApp({ Component, pageProps }) {
   ];
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
-
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -41,7 +41,6 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     const start = () => setLoading(true);
     const end = () => setLoading(false);
-
     router.events.on('routeChangeStart', start);
     router.events.on('routeChangeComplete', end);
     router.events.on('routeChangeError', end);
@@ -96,7 +95,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <RootLayout>
       <Head>
-        <link rel='alternative' href={`https://www.garbhagudi.com${path}`} hrefLang='en-us' />
+        <link rel='alternate' href={`https://www.garbhagudi.com${path}`} hrefLang='en-us' />
         <link rel='canonical' href={`https://www.garbhagudi.com${path}`} />
         <meta
           name='viewport'
@@ -112,11 +111,32 @@ function MyApp({ Component, pageProps }) {
         src='https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js'
         strategy='beforeInteractive'
       />
+
+      {/* GTM Script in Head */}
+      <Script id='gtm-head' strategy='afterInteractive'>
+        {`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-5T77DVZ');
+        `}
+      </Script>
+
+      {/* GTM noscript fallback */}
+      <noscript>
+        <iframe
+          src='https://www.googletagmanager.com/ns.html?id=GTM-5T77DVZ'
+          height='0'
+          width='0'
+          style={{ display: 'none', visibility: 'hidden' }}
+        ></iframe>
+      </noscript>
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />
         ) : (
-          <div className={`min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800`}>
+          <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
             {shouldDisplay && <Nav />}
             <Component {...pageProps} />
             <Footer />
@@ -124,10 +144,8 @@ function MyApp({ Component, pageProps }) {
         )}
         {shouldDisplay && (
           <Salesiq
-            widgetCode={
-              '93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
-            }
-            domain={'https://salesiq.zoho.com/widget'}
+            widgetCode='93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
+            domain='https://salesiq.zoho.com/widget'
           />
         )}
       </ThemeProvider>

@@ -15,7 +15,10 @@ const Content = () => {
             relatively simple and low-invasive procedure, often used in cases of infertility caused
             by issues with ovulation, sperm count, or cervical mucus. It may be used alone or in
             combination with other{' '}
-            <Link href={'/treatments/infertility'} className='text-brandPink hover:underline'>
+            <Link
+              href={'/treatments/iui-treatment-in-bangalore'}
+              className='text-brandPink hover:underline'
+            >
               fertility treatments
             </Link>
             , such as ovulation induction medications. The success rate of IUI varies depending on

@@ -21,7 +21,7 @@ const Hero = () => {
               <p className='mt-3 font-content text-base text-gray-800 dark:text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-base'>
                 GarbhaGudi is a chain of new generation{' '}
                 <Link
-                  href={'/treatments/infertility'}
+                  href={'/treatments/infertility-treatment-in-bangalore'}
                   className='text-gg-500 hover:underline dark:text-gg-400'
                 >
                   infertility treatment hospitals
