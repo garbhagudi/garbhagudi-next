@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { JSX, useEffect, useState } from 'react';
 import Image from 'next/image';
 
 const genderOptions = ['male', 'female'];
@@ -164,7 +164,6 @@ export default function FertilityForm() {
           htmlContent: htmlBodyContent,
         }),
       });
-      console.log(res);
     } catch (error) {
       console.error('Error:', error);
     }

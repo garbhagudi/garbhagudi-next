@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { memo } from 'react';
+import { memo, JSX } from 'react';
 
 interface GgWayItem {
   id: number;
