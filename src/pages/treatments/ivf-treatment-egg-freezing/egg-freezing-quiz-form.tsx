@@ -151,7 +151,7 @@ export default function FertilityForm() {
 
   const sendMailsToUserApi = async (mail: string, htmlBodyContent: string) => {
     try {
-      const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+      await fetch('https://api.brevo.com/v3/smtp/email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
