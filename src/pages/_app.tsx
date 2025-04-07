@@ -8,6 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
+import Script from 'next/script';
 
 // Dynamically import components
 const Footer = dynamic(() => import('components/footer/footer'), { ssr: false });
@@ -53,23 +54,39 @@ function MyApp({ Component, pageProps }) {
   }, [router.events]);
 
   useEffect(() => {
-    window.OneSignal = window.OneSignal || [];
+    const initOneSignal = () => {
+      if (!window.OneSignal) return;
+      console.log(process.env.NEXT_PUBLIC_ONESIGNAL_APP_ID);
 
-    window.OneSignal.push(() => {
-      (window.OneSignal as OneSignalAPI).init({
-        appId: 'a9b548df-4dff-46c0-979e-f63f1398258e',
-        safari_web_id: 'web.onesignal.auto.6514249a-4cb8-451b-a889-88f5913c9a7f',
-        notifyButton: {
-          enable: true,
-          position: 'bottom-left',
-        },
-        allowLocalhostAsSecureOrigin: true,
+      window.OneSignal.push(function () {
+        (window.OneSignal as OneSignalAPI).init({
+          appId: process.env.NEXT_PUBLIC_ONESIGNAL_APP_ID,
+          safari_web_id: process.env.NEXT_PUBLIC_ONESIGNAL_SAFARI_ID,
+          notifyButton: {
+            enable: true,
+            position: 'bottom-left',
+          },
+          allowLocalhostAsSecureOrigin: true,
+        });
       });
-    });
+    };
+
+    if (typeof window !== 'undefined') {
+      if (window.OneSignal) {
+        initOneSignal();
+      } else {
+        const interval = setInterval(() => {
+          if (window.OneSignal) {
+            clearInterval(interval);
+            initOneSignal();
+          }
+        }, 300);
+      }
+    }
 
     return () => {
       if (typeof window !== 'undefined') {
-        window.OneSignal = undefined;
+        delete window.OneSignal;
       }
     };
   }, []);
@@ -90,8 +107,11 @@ function MyApp({ Component, pageProps }) {
           name='robots'
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
-        <script src='https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js' defer></script>
       </Head>
+      <Script
+        src='https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js'
+        strategy='beforeInteractive'
+      />
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />
