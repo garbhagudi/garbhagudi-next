@@ -120,7 +120,6 @@ const Home = ({ data, testimonials }) => {
           dangerouslySetInnerHTML={addBreadcrumbJsonLd()}
           key='breadcrumb-jsonld'
         />
-
         {/* Open Graph / Facebook */}
 
         <meta
