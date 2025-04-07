@@ -9,6 +9,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
+import Script from 'next/script';
 
 // Dynamically import components
 const Footer = dynamic(() => import('components/footer/footer'), { ssr: false });
@@ -43,12 +44,51 @@ function MyApp({ Component, pageProps }) {
     router.events.on('routeChangeStart', start);
     router.events.on('routeChangeComplete', end);
     router.events.on('routeChangeError', end);
+
     return () => {
       router.events.off('routeChangeStart', start);
       router.events.off('routeChangeComplete', end);
       router.events.off('routeChangeError', end);
     };
   }, [router.events]);
+
+  useEffect(() => {
+    const initOneSignal = () => {
+      if (!window.OneSignal) return;
+      console.log(process.env.NEXT_PUBLIC_ONESIGNAL_APP_ID);
+
+      window.OneSignal.push(function () {
+        (window.OneSignal as OneSignalAPI).init({
+          appId: process.env.NEXT_PUBLIC_ONESIGNAL_APP_ID,
+          safari_web_id: process.env.NEXT_PUBLIC_ONESIGNAL_SAFARI_ID,
+          notifyButton: {
+            enable: true,
+            position: 'bottom-left',
+          },
+          allowLocalhostAsSecureOrigin: true,
+        });
+      });
+    };
+
+    if (typeof window !== 'undefined') {
+      if (window.OneSignal) {
+        initOneSignal();
+      } else {
+        const interval = setInterval(() => {
+          if (window.OneSignal) {
+            clearInterval(interval);
+            initOneSignal();
+          }
+        }, 300);
+      }
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        delete window.OneSignal;
+      }
+    };
+  }, []);
 
   const path = router.asPath.endsWith('/index') ? '' : router.asPath;
 
@@ -67,6 +107,10 @@ function MyApp({ Component, pageProps }) {
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
       </Head>
+      <Script
+        src='https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js'
+        strategy='beforeInteractive'
+      />
 
       {/* GTM Script in Head */}
       <Script id='gtm-head' strategy='afterInteractive'>
@@ -88,7 +132,6 @@ function MyApp({ Component, pageProps }) {
           style={{ display: 'none', visibility: 'hidden' }}
         ></iframe>
       </noscript>
-
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />
