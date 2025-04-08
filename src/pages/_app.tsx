@@ -32,6 +32,14 @@ function MyApp({ Component, pageProps }) {
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const userAgent = typeof window !== 'undefined' ? navigator.userAgent : '';
+    setIsMobile(/Mobi|Android/i.test(userAgent));
+  }, []);
+
+  const showSalesIQ = !(router.pathname === '/contact/enquiry' && isMobile);
 
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-5T77DVZ' });
@@ -139,7 +147,7 @@ function MyApp({ Component, pageProps }) {
             <Footer />
           </div>
         )}
-        {shouldDisplay && (
+        {shouldDisplay && showSalesIQ && (
           <Salesiq
             widgetCode='93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
             domain='https://salesiq.zoho.com/widget'
