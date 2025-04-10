@@ -59,41 +59,42 @@ function MyApp({ Component, pageProps }) {
     };
   }, [router.events]);
 
-  useEffect(() => {
-    const initOneSignal = () => {
-      if (!window.OneSignal) return;
-      window.OneSignal.push(function () {
-        (window.OneSignal as OneSignalAPI).init({
-          appId: process.env.NEXT_PUBLIC_ONESIGNAL_APP_ID,
-          safari_web_id: process.env.NEXT_PUBLIC_ONESIGNAL_SAFARI_ID,
-          notifyButton: {
-            enable: true,
-            position: 'bottom-left',
-          },
-          allowLocalhostAsSecureOrigin: true,
-        });
-      });
-    };
+  //one signal code
+  // useEffect(() => {
+  //   const initOneSignal = () => {
+  //     if (!window.OneSignal) return;
+  //     window.OneSignal.push(function () {
+  //       (window.OneSignal as OneSignalAPI).init({
+  //         appId: process.env.NEXT_PUBLIC_ONESIGNAL_APP_ID,
+  //         safari_web_id: process.env.NEXT_PUBLIC_ONESIGNAL_SAFARI_ID,
+  //         notifyButton: {
+  //           enable: true,
+  //           position: 'bottom-left',
+  //         },
+  //         allowLocalhostAsSecureOrigin: true,
+  //       });
+  //     });
+  //   };
 
-    if (typeof window !== 'undefined') {
-      if (window.OneSignal) {
-        initOneSignal();
-      } else {
-        const interval = setInterval(() => {
-          if (window.OneSignal) {
-            clearInterval(interval);
-            initOneSignal();
-          }
-        }, 300);
-      }
-    }
+  //   if (typeof window !== 'undefined') {
+  //     if (window.OneSignal) {
+  //       initOneSignal();
+  //     } else {
+  //       const interval = setInterval(() => {
+  //         if (window.OneSignal) {
+  //           clearInterval(interval);
+  //           initOneSignal();
+  //         }
+  //       }, 300);
+  //     }
+  //   }
 
-    return () => {
-      if (typeof window !== 'undefined') {
-        delete window.OneSignal;
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (typeof window !== 'undefined') {
+  //       delete window.OneSignal;
+  //     }
+  //   };
+  // }, []);
 
   const path = router.asPath.endsWith('/index') ? '' : router.asPath;
 
@@ -112,10 +113,10 @@ function MyApp({ Component, pageProps }) {
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
       </Head>
-      <Script
+      {/* <Script
         src='https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js'
         strategy='beforeInteractive'
-      />
+      /> */}
 
       {/* GTM Script in Head */}
       <Script id='gtm-head' strategy='afterInteractive'>
