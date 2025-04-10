@@ -10,6 +10,7 @@ import {
   BsFillEnvelopeAtFill,
 } from 'react-icons/bs';
 import { RiTwitterXFill } from 'react-icons/ri';
+import Form from 'sections/LandingPages/Performant/form';
 
 const navigation = {
   treatments: [
@@ -62,7 +63,7 @@ export default function Footer() {
       <h2 id='footerHeading' className='sr-only'>
         Footer
       </h2>
-      <div className='mx-auto max-w-7xl border-t px-4 pb-12 dark:border-gray-600 sm:px-6 lg:px-8 lg:py-8'>
+      <div className='mx-auto flex max-w-7xl flex-col justify-between border-t px-1 pb-12 dark:border-gray-600 sm:px-6 lg:flex-row lg:py-8'>
         <div className='xl:grid xl:grid-cols-2 xl:gap-8'>
           <div className='mt-12 grid grid-cols-1 gap-8 text-center antialiased xl:col-span-full xl:mt-0 xl:grid-cols-1'>
             <div className='grid grid-cols-3 gap-5 md:grid-cols-6'>
@@ -164,6 +165,9 @@ export default function Footer() {
               </div>
             </div>
           </div>
+        </div>
+        <div className='mt-5 w-fit self-center rounded-md bg-gray-800 md:mt-0'>
+          <Form />
         </div>
       </div>
       <div className='mx-auto max-w-7xl border-t border-gray-200 dark:border-gray-600'>
