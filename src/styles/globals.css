@@ -257,3 +257,11 @@ body {
 .dna:nth-child(16) {
   animation-delay: -2.3s;
 }
+
+@media screen and (max-width: 420px) {
+  .zsiq_flt_rel{
+    position: absolute;
+    bottom: 70px;
+  }
+  
+}
