@@ -149,6 +149,156 @@ const nextConfig = {
         destination: '/treatments/hysteroscopy-treatment-in-bangalore',
         permanent: true,
       },
+      {
+        source: '/features/paripoorna-2024.tsx',
+        destination: '/features/paripoorna-2024',
+        permanent: true,
+      },
+      {
+        source: '/resources/diagnosi',
+        destination: '/resources/diagnosis',
+        permanent: true,
+      },
+      {
+        source: '/features/Best%20in%20Class%20Facilities',
+        destination: '/facilities',
+        permanent: true,
+      },
+      {
+        source: '/resources/diagno',
+        destination: '/resources/diagnosis',
+        permanent: true,
+      },
+      {
+        source: '/contact/IVF%20from%20Home',
+        destination: '/blogs/how-does-ivf-from-home-work',
+        permanent: true,
+      },
+      {
+        source: '/contact/Partnership',
+        destination: '/contact/partnership',
+        permanent: true,
+      },
+      {
+        source: '/contact/Best%20in%20Class%20Facilities',
+        destination: '/features/best-in-class-facilities',
+        permanent: true,
+      },
+      {
+        source: '/features/IVF%20from%20Home',
+        destination: '/blogs/how-does-ivf-from-home-work',
+        permanent: true,
+      },
+      {
+        source: '/features/Partnership',
+        destination: '/contact/partnership',
+        permanent: true,
+      },
+      {
+        source: '/contact/Affordable%20Treatments',
+        destination: '/features/affordable-treatments',
+        permanent: true,
+      },
+      {
+        source: '/contact/GarbhaGriha',
+        destination: '/features/garbhagriha',
+        permanent: true,
+      },
+      {
+        source: '/contact/Success%20Rates%20of%20IVF',
+        destination: '/features/success-rates-of-ivf',
+        permanent: true,
+      },
+      {
+        source: '/contact/Holistic%20Approach',
+        destination: '/features/holistic-approach',
+        permanent: true,
+      },
+      {
+        source: '/features/GarbhaGriha',
+        destination: '/features/garbhagriha',
+        permanent: true,
+      },
+      {
+        source: '/contact/World%20Class%20Fertility%20Care',
+        destination: '/features/world-class-fertility-care',
+        permanent: true,
+      },
+      {
+        source: '/contact/Financing%20Options',
+        destination: '/features/financing-options',
+        permanent: true,
+      },
+      {
+        source: '/contact/Treatment%20Protocols',
+        destination: '/features/treatment-protocols',
+        permanent: true,
+      },
+      {
+        source: '/blogs/[slug]',
+        destination: '/blogs/',
+        permanent: true,
+      },
+      {
+        source: '/fertility-experts/[slug]',
+        destination: '/fertility-experts',
+        permanent: true,
+      },
+      {
+        source: '/fertility-experts/undefined',
+        destination: '/fertility-experts',
+        permanent: true,
+      },
+      {
+        source: '/mothers-day',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/contact/enquiry1',
+        destination: '/gg-care',
+        permanent: true,
+      },
+      {
+        source: '/about-overview',
+        destination: '/about/overview',
+        permanent: true,
+      },
+      {
+        source: '/best-fertility-hospital-in-bangalore',
+        destination: '/treatments/ivf-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/best-ivf-center-in-bangalore',
+        destination: '/treatments/ivf-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/best-ivf-fertility-hospital-in-india',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/blog',
+        destination: '/blogs/page/1',
+        permanent: true,
+      },
+      {
+        source: '/blogs',
+        destination: '/blogs/page/1',
+        permanent: true,
+      },
+      {
+        source: '/blogs/the-psychology-of-egg-donation-insights-from-donors-and-recipients',
+        destination: '/treatments/ivf-treatment-egg-freezing',
+        permanent: true,
+      },
+      {
+        source: '/dr-asha-s-vijay-profile',
+        destination: '/fertility-experts/dr-asha-s-vijay',
+        permanent: true,
+      },
     ];
   },
 };
