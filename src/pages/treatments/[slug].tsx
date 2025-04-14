@@ -23,6 +23,7 @@ export const getStaticProps = async ({ params }) => {
             metaTitle
             altTitle
             metaDescription
+            metaKeywords
             slug
             image {
               url
@@ -133,7 +134,7 @@ const Treatment = ({ treatment }) => {
             "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
             "name": "GarbhaGudi IVF Centre",
             "telephone": "+91 9108 9108 32",
-            "priceRange": "90000 - 280000",
+            "priceRange": "160000 - 400000",
             "ratingValue": "4.8",
             "bestRating": "5",
             "worstRating": "1",
@@ -238,6 +239,7 @@ const Treatment = ({ treatment }) => {
           name='description'
           content={treatment?.metaDescription || treatment?.content?.text.slice(0, 160)}
         />
+        <meta name='keywords' content={treatment?.metaKeywords} />
         {/* Ld+JSON Data */}
         <script
           id='review-jsonld'
