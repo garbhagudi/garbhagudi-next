@@ -85,7 +85,7 @@ const Ivf = () => {
           "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
           "name": "GarbhaGudi IVF Centre",
           "telephone": "+91 9108 9108 32",
-          "priceRange": "90000 - 280000",
+          "priceRange": "160000 - 400000",
             "ratingValue": "4.8",
             "bestRating": "5",
             "worstRating": "1",
