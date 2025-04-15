@@ -175,11 +175,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/contact/Partnership',
-        destination: '/contact/partnership',
-        permanent: true,
-      },
-      {
         source: '/contact/Best%20in%20Class%20Facilities',
         destination: '/features/best-in-class-facilities',
         permanent: true,
@@ -190,20 +185,11 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/features/Partnership',
-        destination: '/contact/partnership',
-        permanent: true,
-      },
-      {
         source: '/contact/Affordable%20Treatments',
         destination: '/features/affordable-treatments',
         permanent: true,
       },
-      {
-        source: '/contact/GarbhaGriha',
-        destination: '/features/garbhagriha',
-        permanent: true,
-      },
+
       {
         source: '/contact/Success%20Rates%20of%20IVF',
         destination: '/features/success-rates-of-ivf',
@@ -212,11 +198,6 @@ const nextConfig = {
       {
         source: '/contact/Holistic%20Approach',
         destination: '/features/holistic-approach',
-        permanent: true,
-      },
-      {
-        source: '/features/GarbhaGriha',
-        destination: '/features/garbhagriha',
         permanent: true,
       },
       {

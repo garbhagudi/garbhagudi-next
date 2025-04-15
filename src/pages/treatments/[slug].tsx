@@ -285,7 +285,7 @@ const Treatment = ({ treatment }) => {
       <BreadCrumbs
         link1='/treatments'
         text1='Treatments'
-        link2={'#'}
+        link2={treatment?.slug}
         text2={treatment?.title}
         link3={''}
         text3=''

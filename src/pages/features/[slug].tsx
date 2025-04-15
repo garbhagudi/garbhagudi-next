@@ -14,6 +14,7 @@ export const getStaticProps = async ({ params }) => {
         valueAddedService(where: { slug: $slug }) {
           id
           title
+          slug
           image {
             url
           }
@@ -68,7 +69,11 @@ const Vas = ({ valueAddedService }) => {
         {/* Primary Tags */}
         <link rel='preload' href={valueAddedService?.image?.url} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>{title}</title>
+        <title>
+          {valueAddedService?.title
+            ? `${valueAddedService.title} | GarbhaGudi`
+            : 'GarbhaGudi IVF Centre'}
+        </title>
         <meta name='title' content={title} />
         <meta name='description' content={desc} />
 
@@ -92,7 +97,7 @@ const Vas = ({ valueAddedService }) => {
       <BreadCrumbs
         link1='/features'
         text1='Features'
-        link2={valueAddedService.title}
+        link2={valueAddedService?.slug}
         text2={valueAddedService.title}
         link3={''}
         text3={''}

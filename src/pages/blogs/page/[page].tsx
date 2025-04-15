@@ -67,8 +67,13 @@ function BlogPage({
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <title>{title}</title>
           <meta name='title' content={title} />
+          <meta property='og:title' content={title} />
           <meta
             name='description'
+            content='Stay up to date with the advancements in the field of Infertility treatment, get pregnancy tips and more with our blogs written by our doctors'
+          />
+          <meta
+            property='og:description'
             content='Stay up to date with the advancements in the field of Infertility treatment, get pregnancy tips and more with our blogs written by our doctors'
           />
 
