@@ -1,10 +1,35 @@
 import Timer from '../../../assets/fertility-quiz/Vector (1).png';
 import Link from 'next/link';
 import Image from 'next/image';
+import Head from 'next/head';
 
 export default function Fertility() {
   return (
     <div className='bg-[#FCFAF7]'>
+      <Head>
+        {/* Primary Tags */}
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <title>Egg Freezing Quiz | Check Your Eligibility | GarbhaGudi IVF</title>
+        <meta
+          name='title'
+          content={'Egg Freezing Quiz | Check Your Eligibility | GarbhaGudi IVF'}
+        />
+
+        <meta
+          property='og:title'
+          content='Egg Freezing Quiz | Check Your Eligibility | GarbhaGudi IVF'
+        />
+        <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
+        <meta property='og:url' content='https://garbhagudi.com' />
+        <meta property='og:type' content='article' />
+        {/* Twitter*/}
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@garbhagudiivf' />
+        <meta
+          name='twitter:title'
+          content={'Egg Freezing Quiz | Check Your Eligibility | GarbhaGudi IVF'}
+        />
+      </Head>
       <div className='mt-32 flex h-[45rem] w-screen flex-col items-start gap-4 pl-5 md:mt-0 md:h-screen md:w-[70%] md:justify-center md:pl-20'>
         <Image
           src={
