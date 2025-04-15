@@ -21,6 +21,8 @@ export const getStaticProps = async ({ params }) => {
             title
             metaTitle
             metaDescription
+            ogTitle
+            ogDescription
             metaKeywords
             slug
             image {
@@ -112,10 +114,10 @@ const Blog = ({ blog }) => {
         {/* Ld+JSON Data */}
 
         {/* Open Graph / Facebook */}
-        <meta property='og:title' content={title} />
+        <meta property='og:title' content={blog?.ogTitle || title} />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
-        <meta property='og:description' content={description} />
+        <meta property='og:description' content={blog?.ogDescription || description} />
         <meta property='og:type' content='article' />
         <meta property='og:article:published_time' content={blog?.publishedOn} />
         <meta property='og:article:author' content={blog?.doctor?.name} />
@@ -130,7 +132,7 @@ const Blog = ({ blog }) => {
       <BreadCrumbs
         link1='/blogs/page/1'
         text1='Blogs'
-        text2={blog.title}
+        text2={blog?.title}
         link2='#'
         link3={''}
         text3={''}
@@ -243,7 +245,7 @@ const Blog = ({ blog }) => {
                 priority={true}
               />
               <div className='text-gray-800 dark:text-gray-200'>
-                <RichText content={blog?.content?.raw.children} />
+                <RichText content={blog?.content?.raw?.children} />
               </div>
               <div>
                 <Share pinmedia={blog?.image?.url} />

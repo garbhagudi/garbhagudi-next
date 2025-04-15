@@ -23,11 +23,8 @@ export default function fertility() {
         <link rel='dns-prefetch' href='https://media.graphassets.com' />
         {/* Primary Tags */}
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>Egg Freezing at GarbhaGudi IVF | Preserve Your Fertility for the Future</title>
-        <meta
-          name='title'
-          content={'Egg Freezing at GarbhaGudi IVF | Preserve Your Fertility for the Future'}
-        />
+        <title>IVF Treatment & Egg Freezing in Bangalore | GarbhaGudi</title>
+        <meta name='title' content={'IVF Treatment & Egg Freezing in Bangalore | GarbhaGudi'} />
         <meta
           name='description'
           content='Secure your future fertility at GarbhaGudi IVF. Preserve your eggs at the right time and plan motherhood on your terms. Book a free fertility screening today!
@@ -43,7 +40,7 @@ export default function fertility() {
         {/* Open Graph / Facebook */}
         <meta
           property='og:title'
-          content='Egg Freezing at GarbhaGudi IVF | Preserve Your Fertility for the Future'
+          content='IVF Treatment & Egg Freezing in Bangalore | GarbhaGudi'
         />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
@@ -58,7 +55,7 @@ export default function fertility() {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta
           name='twitter:title'
-          content={'Egg Freezing at GarbhaGudi IVF | Preserve Your Fertility for the Future'}
+          content={'IVF Treatment & Egg Freezing in Bangalore | GarbhaGudi'}
         />
         <meta
           name='twitter:description'

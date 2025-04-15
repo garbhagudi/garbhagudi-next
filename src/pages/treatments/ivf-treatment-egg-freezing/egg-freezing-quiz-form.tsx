@@ -1,5 +1,6 @@
 import { JSX, useEffect, useState } from 'react';
 import Image from 'next/image';
+import Head from 'next/head';
 
 const genderOptions = ['male', 'female'];
 const statusOptions = ['single', 'married', 'committed'];
@@ -333,437 +334,466 @@ export default function FertilityForm() {
   };
 
   return (
-    <div>
-      {submit.isSubmited ? (
-        <div className='flex min-h-screen items-center justify-center bg-[#FCFAF7]'>
-          <Image
-            src={
-              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568598/eggFreezing/z3jyuyfnzutxoup7yx27.webp'
-            }
-            alt='timer_icon'
-            width={100}
-            height={100}
-            className='absolute left-0 top-0 h-screen w-screen object-fill'
-            loading='lazy'
-          />
-          <div className='absolute z-20 text-center font-nunito-Sans'>
-            <div className='text-2xl font-bold text-[#1D1D1D] md:text-4xl'>
-              You just came closer to your goal!
-            </div>
-            <p className='mt-4 text-base font-semibold text-[#1D1D1D] opacity-90 md:text-lg'>
-              Thanks for taking the quiz and the result of quiz is <strong>{submit.range}</strong>.
-            </p>
-            <p className='mx-auto mt-4 w-10/12 text-center text-base text-[#6C6C6C] md:w-3/4 md:text-lg'>
-              {submit.range <= 20 ? (
-                <span className='flex flex-col gap-2'>
-                  <span className='mx-auto w-11/12'>
-                    Great news! Your fertility health looks stable 🌱 But why leave it to chance?
-                    Take the next step to understand your fertility better—an AMH test offers a
-                    clear picture. Secure peace of mind with one simple test!
+    <>
+      <Head>
+        {/* Primary Tags */}
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <title>Egg Freezing Quiz | Know Your Options | GarbhaGudi IVF</title>
+        <meta name='title' content={'Egg Freezing Quiz | Know Your Options | GarbhaGudi IVF'} />
+
+        <meta
+          property='og:title'
+          content='Egg Freezing Quiz | Know Your Options | GarbhaGudi IVF'
+        />
+        <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
+        <meta property='og:url' content='https://garbhagudi.com' />
+        <meta property='og:type' content='article' />
+        {/* Twitter*/}
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@garbhagudiivf' />
+        <meta
+          name='twitter:title'
+          content={'Egg Freezing Quiz | Know Your Options | GarbhaGudi IVF'}
+        />
+      </Head>
+      <div>
+        {submit.isSubmited ? (
+          <div className='flex min-h-screen items-center justify-center bg-[#FCFAF7]'>
+            <Image
+              src={
+                'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568598/eggFreezing/z3jyuyfnzutxoup7yx27.webp'
+              }
+              alt='timer_icon'
+              width={100}
+              height={100}
+              className='absolute left-0 top-0 h-screen w-screen object-fill'
+              loading='lazy'
+            />
+            <div className='absolute z-20 text-center font-nunito-Sans'>
+              <div className='text-2xl font-bold text-[#1D1D1D] md:text-4xl'>
+                You just came closer to your goal!
+              </div>
+              <p className='mt-4 text-base font-semibold text-[#1D1D1D] opacity-90 md:text-lg'>
+                Thanks for taking the quiz and the result of quiz is <strong>{submit.range}</strong>
+                .
+              </p>
+              <p className='mx-auto mt-4 w-10/12 text-center text-base text-[#6C6C6C] md:w-3/4 md:text-lg'>
+                {submit.range <= 20 ? (
+                  <span className='flex flex-col gap-2'>
+                    <span className='mx-auto w-11/12'>
+                      Great news! Your fertility health looks stable 🌱 But why leave it to chance?
+                      Take the next step to understand your fertility better—an AMH test offers a
+                      clear picture. Secure peace of mind with one simple test!
+                    </span>
+                    <span>
+                      <span className='font-bold'>Low Risk:</span> Fertility health appears stable.
+                      Routine check-ups recommended, but no immediate concerns.
+                    </span>
                   </span>
-                  <span>
-                    <span className='font-bold'>Low Risk:</span> Fertility health appears stable.
-                    Routine check-ups recommended, but no immediate concerns.
+                ) : submit.range >= 41 ? (
+                  <span className='flex flex-col gap-2'>
+                    <span className='mx-auto w-11/12'>
+                      Your future family goals are worth planning for! 🌟 With a few key factors
+                      affecting your fertility, egg freezing might be a valuable option. An AMH test
+                      and a chat with a fertility expert can give you clarity and control over your
+                      next steps. Embrace the future on your terms!
+                    </span>
+                    <span>
+                      <span className='font-bold'>High Risk:</span> Significant factors indicate
+                      that egg freezing may be beneficial for future planning. Consulting with a
+                      fertility expert could provide additional insights.
+                    </span>
                   </span>
-                </span>
-              ) : submit.range >= 41 ? (
-                <span className='flex flex-col gap-2'>
-                  <span className='mx-auto w-11/12'>
-                    Your future family goals are worth planning for! 🌟 With a few key factors
-                    affecting your fertility, egg freezing might be a valuable option. An AMH test
-                    and a chat with a fertility expert can give you clarity and control over your
-                    next steps. Embrace the future on your terms!
+                ) : (
+                  <span className='flex flex-col gap-2'>
+                    <span className='mx-auto w-11/12'>
+                      You're on the right track, but a little insight can go a long way! 🌸 Certain
+                      factors suggest exploring fertility preservation or small lifestyle tweaks. An
+                      AMH test can help you understand your fertility health better—empower your
+                      future with knowledge!
+                    </span>
+                    <span>
+                      <span className='font-bold'>Moderate Risk:</span> Certain factors suggest
+                      considering fertility preservation or lifestyle adjustments.
+                    </span>
                   </span>
-                  <span>
-                    <span className='font-bold'>High Risk:</span> Significant factors indicate that
-                    egg freezing may be beneficial for future planning. Consulting with a fertility
-                    expert could provide additional insights.
-                  </span>
-                </span>
-              ) : (
-                <span className='flex flex-col gap-2'>
-                  <span className='mx-auto w-11/12'>
-                    You're on the right track, but a little insight can go a long way! 🌸 Certain
-                    factors suggest exploring fertility preservation or small lifestyle tweaks. An
-                    AMH test can help you understand your fertility health better—empower your
-                    future with knowledge!
-                  </span>
-                  <span>
-                    <span className='font-bold'>Moderate Risk:</span> Certain factors suggest
-                    considering fertility preservation or lifestyle adjustments.
-                  </span>
-                </span>
-              )}
-            </p>
-          </div>
-        </div>
-      ) : (
-        <div className='flex min-h-screen w-full flex-col items-center justify-center rounded-md bg-[#FCFAF7] p-6 md:p-10'>
-          <div className='mx-auto font-nunito-Sans lg:w-3/5'>
-            <div className='my-4 flex flex-col items-center text-center md:my-8'>
-              <h1 className='text-2xl font-bold text-[#1D1D1D] md:text-4xl'>
-                Tell us more about yourself
-              </h1>
-              <p className='mt-2 w-10/12 text-center text-lg text-[#6C6C6C]'>
-                You now know what we do & We thank you for trusting us. Tell us more about you and
-                be friends!
+                )}
               </p>
             </div>
-            <div className='flex flex-col justify-center gap-5'>
-              <div className='py-2 text-center text-xl font-bold md:py-5 md:text-2xl'>
-                Basic Information
+          </div>
+        ) : (
+          <div className='flex min-h-screen w-full flex-col items-center justify-center rounded-md bg-[#FCFAF7] p-6 md:p-10'>
+            <div className='mx-auto font-nunito-Sans lg:w-3/5'>
+              <div className='my-4 flex flex-col items-center text-center md:my-8'>
+                <h1 className='text-2xl font-bold text-[#1D1D1D] md:text-4xl'>
+                  Tell us more about yourself
+                </h1>
+                <p className='mt-2 w-10/12 text-center text-lg text-[#6C6C6C]'>
+                  You now know what we do & We thank you for trusting us. Tell us more about you and
+                  be friends!
+                </p>
               </div>
-              <div className='mx-5 grid grid-cols-1 items-center justify-evenly gap-3 md:mx-14 md:grid-cols-2 md:gap-6'>
-                <div className='text-lg'>1. What is your name?</div>
-                <div className='flex flex-col gap-1'>
-                  <FormInput
-                    id='1'
-                    type='text'
-                    name='name'
-                    value={formData.name}
-                    onChange={handleFormChange}
-                    className={`rounded-md border ${error && !formData.name ? 'border-red-600' : 'border-gray-300'} p-2 focus:outline-none focus:ring-2 focus:ring-rose-400`}
-                  />
-                  {error && !formData.name && (
-                    <div className='text-rose-700'>This field is required</div>
-                  )}
+              <div className='flex flex-col justify-center gap-5'>
+                <div className='py-2 text-center text-xl font-bold md:py-5 md:text-2xl'>
+                  Basic Information
                 </div>
-
-                <div className='text-lg'>2. What is your Email?</div>
-                <div className='flex flex-col gap-1'>
-                  <FormInput
-                    id='1'
-                    type='email'
-                    name='email'
-                    value={formData.email}
-                    onChange={handleFormChange}
-                    className={`rounded-md border ${error && !emailRegex.test(formData.email) ? 'border-red-600' : 'border-gray-300'} p-2 focus:outline-none focus:ring-2 focus:ring-rose-400`}
-                  />
-                  {error && !emailRegex.test(formData.email) && (
-                    <div className='text-rose-700'>Please enter a valid email address</div>
-                  )}
-                </div>
-
-                <div className='text-lg'>3. What is your Mobile Number?</div>
-                <div className='flex flex-col'>
-                  <FormInput
-                    id='1'
-                    type='number'
-                    name='number'
-                    value={formData.number}
-                    onChange={handleFormChange}
-                    className={`rounded-md border ${
-                      error && formData.number.length !== 10 ? 'border-red-600' : 'border-gray-300'
-                    } p-2 focus:outline-none focus:ring-2 focus:ring-rose-400`}
-                  />
-                  {error && formData.number.length !== 10 && (
-                    <div className='text-rose-700'>Please enter a valid 10 digit mobile number</div>
-                  )}
-                </div>
-
-                <div className='text-lg'>4. Are you male or female?</div>
-                <div className='flex'>
-                  {genderOptions.map((ele, index) => (
-                    <RadioButton
-                      key={index}
-                      id={`gender${index}`}
-                      name={'gender'}
-                      label={ele}
-                      value={ele}
-                      selectedChecked={formData.gender === ele ? true : false}
+                <div className='mx-5 grid grid-cols-1 items-center justify-evenly gap-3 md:mx-14 md:grid-cols-2 md:gap-6'>
+                  <div className='text-lg'>1. What is your name?</div>
+                  <div className='flex flex-col gap-1'>
+                    <FormInput
+                      id='1'
+                      type='text'
+                      name='name'
+                      value={formData.name}
                       onChange={handleFormChange}
-                      className='custom-radio'
+                      className={`rounded-md border ${error && !formData.name ? 'border-red-600' : 'border-gray-300'} p-2 focus:outline-none focus:ring-2 focus:ring-rose-400`}
                     />
-                  ))}
-                </div>
+                    {error && !formData.name && (
+                      <div className='text-rose-700'>This field is required</div>
+                    )}
+                  </div>
 
-                <div className='text-lg'>5. What is your age?</div>
-                <div className='flex flex-col'>
-                  <FormInput
-                    id='1'
-                    type='number'
-                    name='age'
-                    value={formData.age}
-                    onChange={handleFormChange}
-                    className='rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-rose-400'
-                  />
-                </div>
+                  <div className='text-lg'>2. What is your Email?</div>
+                  <div className='flex flex-col gap-1'>
+                    <FormInput
+                      id='1'
+                      type='email'
+                      name='email'
+                      value={formData.email}
+                      onChange={handleFormChange}
+                      className={`rounded-md border ${error && !emailRegex.test(formData.email) ? 'border-red-600' : 'border-gray-300'} p-2 focus:outline-none focus:ring-2 focus:ring-rose-400`}
+                    />
+                    {error && !emailRegex.test(formData.email) && (
+                      <div className='text-rose-700'>Please enter a valid email address</div>
+                    )}
+                  </div>
 
-                <div className='text-lg'>6. Please enter your weight.</div>
-                <div className='flex flex-col'>
-                  <FormInput
-                    id='1'
-                    type='number'
-                    name='weight'
-                    placeholder={'Enter in KG'}
-                    value={formData.weight}
-                    onChange={handleFormChange}
-                    className='rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-rose-400'
-                  />
-                </div>
-
-                <div className='text-lg'>7. Please enter your height.</div>
-                <div className='flex flex-col'>
-                  <div className='flex flex-row gap-3'>
+                  <div className='text-lg'>3. What is your Mobile Number?</div>
+                  <div className='flex flex-col'>
                     <FormInput
                       id='1'
                       type='number'
-                      name='feet'
-                      placeholder={'Enter in Feet'}
-                      value={formData.feet}
+                      name='number'
+                      value={formData.number}
                       onChange={handleFormChange}
-                      className='w-1/2 rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-rose-400'
-                    />
-                    <FormInput
-                      id='2'
-                      type='number'
-                      name='inches'
-                      placeholder={'Enter in Inches'}
-                      value={formData.inches}
-                      onChange={handleFormChange}
-                      className={`w-1/2 rounded-md border ${
-                        error && formData.inches && !inchesRegex.test(formData.inches.toString())
+                      className={`rounded-md border ${
+                        error && formData.number.length !== 10
                           ? 'border-red-600'
                           : 'border-gray-300'
                       } p-2 focus:outline-none focus:ring-2 focus:ring-rose-400`}
                     />
+                    {error && formData.number.length !== 10 && (
+                      <div className='text-rose-700'>
+                        Please enter a valid 10 digit mobile number
+                      </div>
+                    )}
                   </div>
-                  {error && formData.inches && !inchesRegex.test(formData.inches.toString()) && (
-                    <div>Please enter a value between 0 to 11</div>
-                  )}
-                </div>
-              </div>
-            </div>
 
-            {BMIval && (
-              <div className='pb-3 pt-10 md:pb-10'>
-                <div className='mx-3 py-3 text-center text-xl font-bold md:mx-0 md:py-5 md:text-2xl'>
-                  BMI Calculation
-                </div>
-                <div className='grid grid-cols-1 items-center gap-6'>
-                  <div className='text-center text-lg'>
-                    Based on your height and weight, your Body Mass Index (BMI) is {BMIval}
+                  <div className='text-lg'>4. Are you male or female?</div>
+                  <div className='flex'>
+                    {genderOptions.map((ele, index) => (
+                      <RadioButton
+                        key={index}
+                        id={`gender${index}`}
+                        name={'gender'}
+                        label={ele}
+                        value={ele}
+                        selectedChecked={formData.gender === ele ? true : false}
+                        onChange={handleFormChange}
+                        className='custom-radio'
+                      />
+                    ))}
+                  </div>
+
+                  <div className='text-lg'>5. What is your age?</div>
+                  <div className='flex flex-col'>
+                    <FormInput
+                      id='1'
+                      type='number'
+                      name='age'
+                      value={formData.age}
+                      onChange={handleFormChange}
+                      className='rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-rose-400'
+                    />
+                  </div>
+
+                  <div className='text-lg'>6. Please enter your weight.</div>
+                  <div className='flex flex-col'>
+                    <FormInput
+                      id='1'
+                      type='number'
+                      name='weight'
+                      placeholder={'Enter in KG'}
+                      value={formData.weight}
+                      onChange={handleFormChange}
+                      className='rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-rose-400'
+                    />
+                  </div>
+
+                  <div className='text-lg'>7. Please enter your height.</div>
+                  <div className='flex flex-col'>
+                    <div className='flex flex-row gap-3'>
+                      <FormInput
+                        id='1'
+                        type='number'
+                        name='feet'
+                        placeholder={'Enter in Feet'}
+                        value={formData.feet}
+                        onChange={handleFormChange}
+                        className='w-1/2 rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-rose-400'
+                      />
+                      <FormInput
+                        id='2'
+                        type='number'
+                        name='inches'
+                        placeholder={'Enter in Inches'}
+                        value={formData.inches}
+                        onChange={handleFormChange}
+                        className={`w-1/2 rounded-md border ${
+                          error && formData.inches && !inchesRegex.test(formData.inches.toString())
+                            ? 'border-red-600'
+                            : 'border-gray-300'
+                        } p-2 focus:outline-none focus:ring-2 focus:ring-rose-400`}
+                      />
+                    </div>
+                    {error && formData.inches && !inchesRegex.test(formData.inches.toString()) && (
+                      <div>Please enter a value between 0 to 11</div>
+                    )}
                   </div>
                 </div>
               </div>
-            )}
 
-            <div className='py-7'>
-              <div className='py-3 text-center text-xl font-bold md:py-5 md:text-2xl'>
-                Marital & Family Status
-              </div>
-              <div className='mx-5 grid grid-cols-1 items-center justify-evenly gap-3 md:mx-10 md:grid-cols-2 md:gap-6'>
-                <div className='text-lg'>1. Are you currently?</div>
-                <div className='flex space-x-4'>
-                  {statusOptions.map((ele, index) => (
-                    <RadioButton
-                      key={index}
-                      id={`status${index}`}
-                      name={'status'}
-                      label={ele}
-                      value={ele}
-                      selectedChecked={formData.status === ele ? true : false}
-                      onChange={handleFormChange}
-                      className='custom-radio'
-                    />
-                  ))}
+              {BMIval && (
+                <div className='pb-3 pt-10 md:pb-10'>
+                  <div className='mx-3 py-3 text-center text-xl font-bold md:mx-0 md:py-5 md:text-2xl'>
+                    BMI Calculation
+                  </div>
+                  <div className='grid grid-cols-1 items-center gap-6'>
+                    <div className='text-center text-lg'>
+                      Based on your height and weight, your Body Mass Index (BMI) is {BMIval}
+                    </div>
+                  </div>
                 </div>
+              )}
 
-                <div className='text-lg'>2. If married, do you currently have children?</div>
-                <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele, index) => (
-                    <RadioButton
-                      key={index}
-                      id={`children${index}`}
-                      name={'children'}
-                      label={ele}
-                      value={ele}
-                      selectedChecked={formData.children === ele ? true : false}
-                      onChange={handleFormChange}
-                      className='custom-radio'
-                    />
-                  ))}
+              <div className='py-7'>
+                <div className='py-3 text-center text-xl font-bold md:py-5 md:text-2xl'>
+                  Marital & Family Status
                 </div>
-                <div className='text-lg'>3. Are you actively planning for pregnancy?</div>
-                <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele, index) => (
-                    <RadioButton
-                      key={index}
-                      id={`pregnancy${index}`}
-                      name={'pregnancy'}
-                      label={ele}
-                      value={ele}
-                      selectedChecked={formData.pregnancy === ele ? true : false}
-                      onChange={handleFormChange}
-                      className='custom-radio'
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
+                <div className='mx-5 grid grid-cols-1 items-center justify-evenly gap-3 md:mx-10 md:grid-cols-2 md:gap-6'>
+                  <div className='text-lg'>1. Are you currently?</div>
+                  <div className='flex space-x-4'>
+                    {statusOptions.map((ele, index) => (
+                      <RadioButton
+                        key={index}
+                        id={`status${index}`}
+                        name={'status'}
+                        label={ele}
+                        value={ele}
+                        selectedChecked={formData.status === ele ? true : false}
+                        onChange={handleFormChange}
+                        className='custom-radio'
+                      />
+                    ))}
+                  </div>
 
-            <div className='pb-7'>
-              <div className='py-3 text-center text-xl font-bold md:py-7 md:text-2xl'>
-                Medical History
-              </div>
-              <div className='mx-5 grid grid-cols-1 items-center justify-evenly gap-3 md:mx-10 md:grid-cols-2 md:gap-6'>
-                <div className='text-lg'>1. Do you have a history of thyroid-related issues?</div>
-                <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele, index) => (
-                    <RadioButton
-                      key={index}
-                      id={`thyroid${index}`}
-                      name={'thyroid'}
-                      label={ele}
-                      value={ele}
-                      selectedChecked={formData.thyroid === ele ? true : false}
-                      onChange={handleFormChange}
-                      className='custom-radio'
-                    />
-                  ))}
-                </div>
-
-                <div className='text-lg'>
-                  2. Are you diagnosed with diabetes or high blood sugar?
-                </div>
-                <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele, index) => (
-                    <RadioButton
-                      key={index}
-                      id={`diabetes${index}`}
-                      name={'diabetes'}
-                      label={ele}
-                      value={ele}
-                      selectedChecked={formData.diabetes === ele ? true : false}
-                      onChange={handleFormChange}
-                      className='custom-radio'
-                    />
-                  ))}
-                </div>
-                <div className='text-lg'>3. Do you have a history of high blood pressure (BP)?</div>
-                <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele, index) => (
-                    <RadioButton
-                      id={`blood${index}`}
-                      key={index}
-                      name={'blood'}
-                      label={ele}
-                      value={ele}
-                      selectedChecked={formData.blood === ele ? true : false}
-                      onChange={handleFormChange}
-                      className='custom-radio'
-                    />
-                  ))}
-                </div>
-
-                <div className='text-lg'>
-                  4. Have you experienced any pregnancy terminations or abortions?
-                </div>
-                <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele, index) => (
-                    <RadioButton
-                      id={`abortions${index}`}
-                      key={index}
-                      name={'abortions'}
-                      label={ele}
-                      value={ele}
-                      selectedChecked={formData.abortions === ele ? true : false}
-                      onChange={handleFormChange}
-                      className='custom-radio'
-                    />
-                  ))}
+                  <div className='text-lg'>2. If married, do you currently have children?</div>
+                  <div className='flex space-x-4'>
+                    {yesOrNoOptions.map((ele, index) => (
+                      <RadioButton
+                        key={index}
+                        id={`children${index}`}
+                        name={'children'}
+                        label={ele}
+                        value={ele}
+                        selectedChecked={formData.children === ele ? true : false}
+                        onChange={handleFormChange}
+                        className='custom-radio'
+                      />
+                    ))}
+                  </div>
+                  <div className='text-lg'>3. Are you actively planning for pregnancy?</div>
+                  <div className='flex space-x-4'>
+                    {yesOrNoOptions.map((ele, index) => (
+                      <RadioButton
+                        key={index}
+                        id={`pregnancy${index}`}
+                        name={'pregnancy'}
+                        label={ele}
+                        value={ele}
+                        selectedChecked={formData.pregnancy === ele ? true : false}
+                        onChange={handleFormChange}
+                        className='custom-radio'
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className='pb-7'>
-              <div className='py-3 text-center text-xl font-bold md:py-7 md:text-2xl'>
-                Lifestyle Factors
+              <div className='pb-7'>
+                <div className='py-3 text-center text-xl font-bold md:py-7 md:text-2xl'>
+                  Medical History
+                </div>
+                <div className='mx-5 grid grid-cols-1 items-center justify-evenly gap-3 md:mx-10 md:grid-cols-2 md:gap-6'>
+                  <div className='text-lg'>1. Do you have a history of thyroid-related issues?</div>
+                  <div className='flex space-x-4'>
+                    {yesOrNoOptions.map((ele, index) => (
+                      <RadioButton
+                        key={index}
+                        id={`thyroid${index}`}
+                        name={'thyroid'}
+                        label={ele}
+                        value={ele}
+                        selectedChecked={formData.thyroid === ele ? true : false}
+                        onChange={handleFormChange}
+                        className='custom-radio'
+                      />
+                    ))}
+                  </div>
+
+                  <div className='text-lg'>
+                    2. Are you diagnosed with diabetes or high blood sugar?
+                  </div>
+                  <div className='flex space-x-4'>
+                    {yesOrNoOptions.map((ele, index) => (
+                      <RadioButton
+                        key={index}
+                        id={`diabetes${index}`}
+                        name={'diabetes'}
+                        label={ele}
+                        value={ele}
+                        selectedChecked={formData.diabetes === ele ? true : false}
+                        onChange={handleFormChange}
+                        className='custom-radio'
+                      />
+                    ))}
+                  </div>
+                  <div className='text-lg'>
+                    3. Do you have a history of high blood pressure (BP)?
+                  </div>
+                  <div className='flex space-x-4'>
+                    {yesOrNoOptions.map((ele, index) => (
+                      <RadioButton
+                        id={`blood${index}`}
+                        key={index}
+                        name={'blood'}
+                        label={ele}
+                        value={ele}
+                        selectedChecked={formData.blood === ele ? true : false}
+                        onChange={handleFormChange}
+                        className='custom-radio'
+                      />
+                    ))}
+                  </div>
+
+                  <div className='text-lg'>
+                    4. Have you experienced any pregnancy terminations or abortions?
+                  </div>
+                  <div className='flex space-x-4'>
+                    {yesOrNoOptions.map((ele, index) => (
+                      <RadioButton
+                        id={`abortions${index}`}
+                        key={index}
+                        name={'abortions'}
+                        label={ele}
+                        value={ele}
+                        selectedChecked={formData.abortions === ele ? true : false}
+                        onChange={handleFormChange}
+                        className='custom-radio'
+                      />
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div className='mx-5 grid grid-cols-1 items-center justify-evenly gap-3 md:mx-10 md:grid-cols-2 md:gap-6'>
-                <div className='text-lg'>1. Do you smoke?</div>
-                <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele, index) => (
-                    <RadioButton
-                      id={`smoke${index}`}
-                      key={index}
-                      name={'smoke'}
-                      label={ele}
-                      value={ele}
-                      selectedChecked={formData.smoke === ele ? true : false}
-                      onChange={handleFormChange}
-                      className='custom-radio'
-                    />
-                  ))}
-                </div>
 
-                <div className='text-lg'>2. Do you consume alcohol regularly?</div>
-                <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele, index) => (
-                    <RadioButton
-                      key={index}
-                      id={`alcohol${index}`}
-                      name={'alcohol'}
-                      label={ele}
-                      value={ele}
-                      selectedChecked={formData.alcohol === ele ? true : false}
-                      onChange={handleFormChange}
-                      className='custom-radio'
-                    />
-                  ))}
+              <div className='pb-7'>
+                <div className='py-3 text-center text-xl font-bold md:py-7 md:text-2xl'>
+                  Lifestyle Factors
                 </div>
-                <div className='text-lg'>
-                  3 Do you experience frequent insomnia or have trouble sleeping?
-                </div>
-                <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele, index) => (
-                    <RadioButton
-                      key={index}
-                      id={`sleeping${index}`}
-                      name={'sleeping'}
-                      label={ele}
-                      value={ele}
-                      selectedChecked={formData.sleeping === ele ? true : false}
-                      onChange={handleFormChange}
-                      className='custom-radio'
-                    />
-                  ))}
-                </div>
+                <div className='mx-5 grid grid-cols-1 items-center justify-evenly gap-3 md:mx-10 md:grid-cols-2 md:gap-6'>
+                  <div className='text-lg'>1. Do you smoke?</div>
+                  <div className='flex space-x-4'>
+                    {yesOrNoOptions.map((ele, index) => (
+                      <RadioButton
+                        id={`smoke${index}`}
+                        key={index}
+                        name={'smoke'}
+                        label={ele}
+                        value={ele}
+                        selectedChecked={formData.smoke === ele ? true : false}
+                        onChange={handleFormChange}
+                        className='custom-radio'
+                      />
+                    ))}
+                  </div>
 
-                <div className='text-lg'>
-                  4. Have you used recreational drugs such as marijuana/weed?
-                </div>
-                <div className='flex space-x-4'>
-                  {yesOrNoOptions.map((ele, index) => (
-                    <RadioButton
-                      key={index}
-                      id={`drugs${index}`}
-                      name={'drugs'}
-                      label={ele}
-                      value={ele}
-                      selectedChecked={formData.drugs === ele ? true : false}
-                      onChange={handleFormChange}
-                      className='custom-radio'
-                    />
-                  ))}
+                  <div className='text-lg'>2. Do you consume alcohol regularly?</div>
+                  <div className='flex space-x-4'>
+                    {yesOrNoOptions.map((ele, index) => (
+                      <RadioButton
+                        key={index}
+                        id={`alcohol${index}`}
+                        name={'alcohol'}
+                        label={ele}
+                        value={ele}
+                        selectedChecked={formData.alcohol === ele ? true : false}
+                        onChange={handleFormChange}
+                        className='custom-radio'
+                      />
+                    ))}
+                  </div>
+                  <div className='text-lg'>
+                    3 Do you experience frequent insomnia or have trouble sleeping?
+                  </div>
+                  <div className='flex space-x-4'>
+                    {yesOrNoOptions.map((ele, index) => (
+                      <RadioButton
+                        key={index}
+                        id={`sleeping${index}`}
+                        name={'sleeping'}
+                        label={ele}
+                        value={ele}
+                        selectedChecked={formData.sleeping === ele ? true : false}
+                        onChange={handleFormChange}
+                        className='custom-radio'
+                      />
+                    ))}
+                  </div>
+
+                  <div className='text-lg'>
+                    4. Have you used recreational drugs such as marijuana/weed?
+                  </div>
+                  <div className='flex space-x-4'>
+                    {yesOrNoOptions.map((ele, index) => (
+                      <RadioButton
+                        key={index}
+                        id={`drugs${index}`}
+                        name={'drugs'}
+                        label={ele}
+                        value={ele}
+                        selectedChecked={formData.drugs === ele ? true : false}
+                        onChange={handleFormChange}
+                        className='custom-radio'
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className='my-6 flex justify-center'>
-              <button
-                className='rounded-lg bg-[#ea4b6a] px-10 py-2 font-bold text-white hover:bg-[#ee6f88] focus:outline-none'
-                title='Submit quiz'
-                onClick={handleSubmit}
-              >
-                Submit quiz
-              </button>
+              <div className='my-6 flex justify-center'>
+                <button
+                  className='rounded-lg bg-[#ea4b6a] px-10 py-2 font-bold text-white hover:bg-[#ee6f88] focus:outline-none'
+                  title='Submit quiz'
+                  onClick={handleSubmit}
+                >
+                  Submit quiz
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <style>{`
+        <style>{`
     /* Custom radio button style */
 input[type="radio"].custom-radio {
   -webkit-appearance: none;
@@ -819,6 +849,7 @@ input[type="number"] {
 
 
 `}</style>
-    </div>
+      </div>
+    </>
   );
 }
