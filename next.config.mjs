@@ -1569,6 +1569,11 @@ const nextConfig = {
         destination: '/blogs/fertility-tests-for-women',
         permanent: true,
       },
+      {
+        source: '/blogs/what-is-the-cost-of-ivf-treatment-in-india',
+        destination: '/treatments/ivf-treatment-cost-in-bangalore',
+        permanent: true,
+      },
     ];
   },
 };
