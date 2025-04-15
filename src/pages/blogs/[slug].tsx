@@ -92,7 +92,7 @@ const Blog = ({ blog }) => {
   const description = `${blog?.metaDescription || blog?.content?.text.slice(0, 160)}`;
   const keywords = `${blog?.metaKeywords || blog?.title}`;
   const router = useRouter();
-
+  const clonedContent = structuredClone(blog?.content?.raw);
   if (router.isFallback) {
     return <Loading />;
   }
@@ -133,7 +133,7 @@ const Blog = ({ blog }) => {
         link1='/blogs/page/1'
         text1='Blogs'
         text2={blog?.title}
-        link2='#'
+        link2={blog?.slug}
         link3={''}
         text3={''}
         link4={''}
@@ -245,7 +245,7 @@ const Blog = ({ blog }) => {
                 priority={true}
               />
               <div className='text-gray-800 dark:text-gray-200'>
-                <RichText content={blog?.content?.raw?.children} />
+                <RichText content={clonedContent?.children} />
               </div>
               <div>
                 <Share pinmedia={blog?.image?.url} />
