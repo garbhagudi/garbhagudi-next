@@ -15,6 +15,9 @@ const Nav = dynamic(() => import('components/header/header'), { ssr: true });
 const Salesiq = dynamic(() => import('components/SalesIQ'), { ssr: false });
 const Loading = dynamic(() => import('components/Loading'), { ssr: true });
 const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false });
+const FloatRequestCallBack = dynamic(() => import('components/FloatRequestCallBack'), {
+  ssr: false,
+});
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -137,6 +140,7 @@ function MyApp({ Component, pageProps }) {
         )}
       </ThemeProvider>
       <SpeedInsights />
+      <FloatRequestCallBack />
       <FloatPhone />
     </RootLayout>
   );
