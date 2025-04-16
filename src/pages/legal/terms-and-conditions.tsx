@@ -13,7 +13,7 @@ const Terms = () => {
         <meta name='title' content='Terms and Conditions | GarbhaGudi IVF Centre' />
         <meta
           name='description'
-          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
+          content="Read GarbhaGudi's Terms & Conditions to understand our policies. Stay informed about your rights & responsibilities. Click here to learn more!"
         />
 
         {/* Open Graph / Facebook */}
@@ -23,7 +23,7 @@ const Terms = () => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
+          content="Read GarbhaGudi's Terms & Conditions to understand our policies. Stay informed about your rights & responsibilities. Click here to learn more!"
         />
         <meta property='og:type' content='website' />
         <meta
@@ -38,7 +38,7 @@ const Terms = () => {
         <meta name='twitter:title' content='Terms and Conditions | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
-          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
+          content="Read GarbhaGudi's Terms & Conditions to understand our policies. Stay informed about your rights & responsibilities. Click here to learn more!"
         />
         <meta
           name='twitter:image'
