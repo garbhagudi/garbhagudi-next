@@ -1262,7 +1262,7 @@ const nextConfig = {
       },
       {
         source: '/embed',
-        destination: '',
+        destination: '/',
         permanent: true,
       },
       {
