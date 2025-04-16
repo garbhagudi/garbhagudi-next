@@ -66,7 +66,7 @@ const InfertilityPage = ({ doctors }) => {
         />
         <meta
           name='description'
-          content='Your Journey to Parenthood Begins Here. Explore our comprehensive infertility treatment options in Bangalore, designed to fulfill your dreams of starting a family. Contact us '
+          content='Explore top-notch infertility treatment in Bangalore at GarbhaGudi IVF Centre. Expert care, advanced procedures & high success rates. Book a consultation!'
         />
 
         {/* Open Graph / Facebook */}
@@ -79,7 +79,7 @@ const InfertilityPage = ({ doctors }) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='Your Journey to Parenthood Begins Here. Explore our comprehensive infertility treatment options in Bangalore, designed to fulfill your dreams of starting a family. Contact us '
+          content='Explore top-notch infertility treatment in Bangalore at GarbhaGudi IVF Centre. Expert care, advanced procedures & high success rates. Book a consultation!'
         />
         <meta property='og:type' content='website' />
         <meta

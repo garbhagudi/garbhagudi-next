@@ -13,7 +13,7 @@ const Refund = () => {
         <meta name='title' content='Cancellation &amp; Refund Policy | GarbhaGudi IVF Centre' />
         <meta
           name='description'
-          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
+          content="Learn about GarbhaGudi IVF Centre's refund policy for treatments & services. Clear, transparent guidelines to ensure your peace of mind. Read now!"
         />
 
         {/* Open Graph / Facebook */}
@@ -23,7 +23,7 @@ const Refund = () => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
+          content="Learn about GarbhaGudi IVF Centre's refund policy for treatments & services. Clear, transparent guidelines to ensure your peace of mind. Read now!"
         />
         <meta property='og:type' content='website' />
         <meta
@@ -41,7 +41,7 @@ const Refund = () => {
         />
         <meta
           name='twitter:description'
-          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
+          content="Learn about GarbhaGudi IVF Centre's refund policy for treatments & services. Clear, transparent guidelines to ensure your peace of mind. Read now!"
         />
         <meta
           name='twitter:image'

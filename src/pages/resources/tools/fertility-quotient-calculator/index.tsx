@@ -152,7 +152,7 @@ const IndexPage: React.FC = () => {
         <meta name='title' content='Fertility Quotient Calculator | GarbhaGudi IVF Centre' />
         <meta
           name='description'
-          content='Fertility quotient is an indicator of an individual’s capability to reproduce. The subjective topic of fertility reserve is being converted to an objective score. It is ascore against 100, given against inputs provided by the user. The score is then converted to an indicative value to help the person understand the status of his/her fertility levels.'
+          content='Calculate your fertility potential with our Fertility Quotient Calculator! Assess your reproductive health & get personalized insights. Take the test now!'
         />
         {/* Open Graph / Facebook */}
         <meta
@@ -163,7 +163,7 @@ const IndexPage: React.FC = () => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='Fertility quotient is an indicator of an individual’s capability to reproduce. The subjective topic of fertility reserve is being converted to an objective score. It is ascore against 100, given against inputs provided by the user. The score is then converted to an indicative value to help the person understand the status of his/her fertility levels.'
+          content='Calculate your fertility potential with our Fertility Quotient Calculator! Assess your reproductive health & get personalized insights. Take the test now!'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -179,7 +179,7 @@ const IndexPage: React.FC = () => {
         />
         <meta
           name='twitter:description'
-          content='Fertility quotient is an indicator of an individual’s capability to reproduce. The subjective topic of fertility reserve is being converted to an objective score. It is ascore against 100, given against inputs provided by the user. The score is then converted to an indicative value to help the person understand the status of his/her fertility levels.'
+          content='Calculate your fertility potential with our Fertility Quotient Calculator! Assess your reproductive health & get personalized insights. Take the test now!'
         />
         <meta
           name='twitter:image'

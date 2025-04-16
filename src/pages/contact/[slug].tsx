@@ -13,6 +13,7 @@ export const getStaticProps = async ({ params }) => {
           id
           title
           slug
+          metaDescription
           image {
             url
           }
@@ -68,10 +69,7 @@ const Vas = ({ valueAddedService }) => {
             : 'GarbhaGudi IVF Centre'}
         </title>
         <meta name='title' content=' | GarbhaGudi IVF Centre' />
-        <meta
-          name='description'
-          content='GarbhaGudi has been reaching out to couples facing infertility and in the process growing steadily. But as it’s said, growth doesn’t happen in isolation. With this intention, we aim to forge strong partnerships with like-minded associates and in turn bring benefits to both patients who will get the best of treatment options at affordable costs and to partners who wish to grow their business through the strong branding of GarbhaGudi.'
-        />
+        <meta name='description' content={valueAddedService?.metaDescription || ''} />
 
         {/* Open Graph / Facebook */}
 
