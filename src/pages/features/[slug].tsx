@@ -15,6 +15,7 @@ export const getStaticProps = async ({ params }) => {
           id
           title
           slug
+          metaDescription
           image {
             url
           }
@@ -75,7 +76,7 @@ const Vas = ({ valueAddedService }) => {
             : 'GarbhaGudi IVF Centre'}
         </title>
         <meta name='title' content={title} />
-        <meta name='description' content={desc} />
+        <meta name='description' content={valueAddedService?.metaDescription || ''} />
 
         {/* Open Graph / Facebook */}
 

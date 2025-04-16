@@ -170,7 +170,7 @@ const Iui = () => {
         <meta name='title' content='IUI Treatment in Bangalore: Trusted Fertility Solutions ' />
         <meta
           name='description'
-          content='Your Path to Parenthood with Expert Guidance. Experience the best IUI treatment in Bangalore, tailored to maximize your chances of conceiving. Contact us for personalized care'
+          content='Explore the best IUI treatment in Bangalore at GarbhaGudi IVF Centre. High success rates, affordable costs & expert care. Book a consultation today!'
         />
 
         {/* Ld+JSON Data */}

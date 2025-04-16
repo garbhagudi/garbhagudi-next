@@ -197,7 +197,7 @@ const Ivf = () => {
         <meta name='title' content='Best IVF Treatment In Bangalore' />
         <meta
           name='description'
-          content='IVF Treatment in Bangalore:Experience advanced IVF treatment in Bangalore, tailored to help you achieve your dream of parenthood. Contact us for expert care and support.'
+          content='Explore the best IVF treatment in Bangalore at GarbhaGudi IVF Centre. High success rates, expert care & affordable costs. Book a consultation today!'
         />
 
         {/* Ld+JSON Data */}
