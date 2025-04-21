@@ -181,7 +181,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
         <meta name='title' content='Tools and Calculator | GarbhaGudi IVF Centre' />
         <meta
           name='description'
-          content='Informational Videos from our various social platforms consolidated for your viewing...'
+          content='Explore our Video Resources for expert insights on fertility & IVF. Learn from top specialists at GarbhaGudi. Watch videos now for valuable tips!'
         />
 
         {/* Open Graph / Facebook */}
@@ -191,7 +191,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='Informational Videos from our various social platforms consolidated for your viewing...'
+          content='Explore our Video Resources for expert insights on fertility & IVF. Learn from top specialists at GarbhaGudi. Watch videos now for valuable tips!'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -206,7 +206,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
         <meta name='twitter:title' content='Video Resources | GarbhaGudi' />
         <meta
           name='twitter:description'
-          content='Informational Videos from our various social platforms consolidated for your viewing...'
+          content='Explore our Video Resources for expert insights on fertility & IVF. Learn from top specialists at GarbhaGudi. Watch videos now for valuable tips!'
         />
         <meta
           name='twitter:image'

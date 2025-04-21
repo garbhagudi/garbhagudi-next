@@ -152,7 +152,7 @@ const IndexPage: React.FC = () => {
         <meta name='title' content='Fertility Quotient Calculator | GarbhaGudi IVF Centre' />
         <meta
           name='description'
-          content='Calculate your fertility potential with our Fertility Quotient Calculator! Assess your reproductive health & get personalized insights. Take the test now!'
+          content='Use our Ovulation and Pregnancy Due Date Calculator to track your fertile window & estimate your due date. Plan your pregnancy journey with ease!'
         />
         {/* Open Graph / Facebook */}
         <meta
@@ -163,7 +163,7 @@ const IndexPage: React.FC = () => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='Calculate your fertility potential with our Fertility Quotient Calculator! Assess your reproductive health & get personalized insights. Take the test now!'
+          content='Use our Ovulation and Pregnancy Due Date Calculator to track your fertile window & estimate your due date. Plan your pregnancy journey with ease!'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -179,7 +179,7 @@ const IndexPage: React.FC = () => {
         />
         <meta
           name='twitter:description'
-          content='Calculate your fertility potential with our Fertility Quotient Calculator! Assess your reproductive health & get personalized insights. Take the test now!'
+          content='Use our Ovulation and Pregnancy Due Date Calculator to track your fertile window & estimate your due date. Plan your pregnancy journey with ease!'
         />
         <meta
           name='twitter:image'

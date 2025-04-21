@@ -30,7 +30,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta name='title' content='Fertility Consultants | GarbhaGudi IVF Centre' />
         <meta
           name='description'
-          content="Meet GarbhaGudi's team of experienced fertility consultants. Our specialists provide expert guidance, tailored treatment plans, and compassionate care to help you achieve your dream of parenthood."
+          content='Get expert guidance from top fertility-consultants at GarbhaGudi IVF. Personalized care for your parenthood journey. Book a consultation today! .'
         />
 
         {/* Open Graph / Facebook */}
@@ -40,7 +40,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content="Meet GarbhaGudi's team of experienced fertility consultants. Our specialists provide expert guidance, tailored treatment plans, and compassionate care to help you achieve your dream of parenthood."
+          content='Get expert guidance from top fertility-consultants at GarbhaGudi IVF. Personalized care for your parenthood journey. Book a consultation today! .'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -55,7 +55,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta name='twitter:title' content='Fertility Consultants | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
-          content="Meet GarbhaGudi's team of experienced fertility consultants. Our specialists provide expert guidance, tailored treatment plans, and compassionate care to help you achieve your dream of parenthood."
+          content='Get expert guidance from top fertility-consultants at GarbhaGudi IVF. Personalized care for your parenthood journey. Book a consultation today! .'
         />
         <meta
           name='twitter:image'

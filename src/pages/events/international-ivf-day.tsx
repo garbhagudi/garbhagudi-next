@@ -19,7 +19,7 @@ const BranchEvent = dynamic(() => import('sections/misc/international-ivf-day/Br
 
 const Page = () => {
   const title = `Celebrate International IVF Day with Garbhagudi | GarbhaGudi IVF Centre`;
-  const desc = `Discover the confluence of science and Indic wisdom to enhance fertility.`;
+  const desc = `Celebrate International IVF Day with GarbhaGudi! Explore our special events & advancements in IVF. Join us to empower fertility journeys. Visit now!`;
   return (
     <div>
       <Head>

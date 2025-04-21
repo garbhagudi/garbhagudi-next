@@ -8,6 +8,11 @@ const IndexPage = () => {
     <div className='min-h-screen'>
       <Head>
         <title>Brand Resources | GarbhaGudi IVF Centre</title>
+        <meta
+          name='description'
+          content=' Explore our Brand Resources for logos, guidelines, and more. Elevate your brand with GarbhaGudi’s trusted assets. Download now and stay consistent!
+'
+        />
       </Head>
       <Header />
       <BRComponent />

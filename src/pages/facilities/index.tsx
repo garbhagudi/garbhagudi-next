@@ -31,7 +31,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta name='title' content='Facilities | GarbhaGudi IVF Centre' />
         <meta
           name='description'
-          content='Experience advanced fertility care at GarbhaGudi IVF Centre. Our cutting-edge IVF facilities offer comprehensive treatments, expert staff, and personalized care to help you start your family. Schedule a consultation today.'
+          content='Explore top-notch facilities designed for comfort & convenience. From modern amenities to exceptional services, we’ve got you covered! Visit us today!'
         />
         {/* Open Graph / Facebook */}
 
@@ -40,7 +40,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='Experience advanced fertility care at GarbhaGudi IVF Centre. Our cutting-edge IVF facilities offer comprehensive treatments, expert staff, and personalized care to help you start your family. Schedule a consultation today.'
+          content='Explore top-notch facilities designed for comfort & convenience. From modern amenities to exceptional services, we’ve got you covered! Visit us today!'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -55,7 +55,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta name='twitter:title' content='Facilities | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
-          content='Experience advanced fertility care at GarbhaGudi IVF Centre. Our cutting-edge IVF facilities offer comprehensive treatments, expert staff, and personalized care to help you start your family. Schedule a consultation today.'
+          content='Explore top-notch facilities designed for comfort & convenience. From modern amenities to exceptional services, we’ve got you covered! Visit us today!'
         />
         <meta
           name='twitter:image'

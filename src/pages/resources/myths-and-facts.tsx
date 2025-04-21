@@ -14,7 +14,7 @@ const MythsAndFacts = () => {
         <meta name='title' content='Myths and Facts | GarbhaGudi IVF Centre' />
         <meta
           name='description'
-          content='Here are some of the most common myths related to health and fertility and the associated facts.'
+          content='Discover the myths and facts about fertility treatments at GarbhaGudi. Get expert insights and make informed decisions. Visit now to learn more!'
         />
 
         {/* Open Graph / Facebook */}
@@ -24,7 +24,7 @@ const MythsAndFacts = () => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='Here are some of the most common myths related to health and fertility and the associated facts.'
+          content='Discover the myths and facts about fertility treatments at GarbhaGudi. Get expert insights and make informed decisions. Visit now to learn more!'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -39,7 +39,7 @@ const MythsAndFacts = () => {
         <meta name='twitter:title' content='Myths and Facts | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
-          content='Here are some of the most common myths related to health and fertility and the associated facts.'
+          content='Discover the myths and facts about fertility treatments at GarbhaGudi. Get expert insights and make informed decisions. Visit now to learn more!'
         />
         <meta
           name='twitter:image'
