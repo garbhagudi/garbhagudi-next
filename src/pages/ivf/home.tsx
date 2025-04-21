@@ -66,7 +66,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
         <meta name='title' content="Bangalore's Best IVF Centres | GarbhaGudi IVF Centre" />
         <meta
           name='description'
-          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
+          content="Considering IVF? Consult GarbhaGudi's fertility experts today! Book your appointment now for personalized care and high success rates. Call us!"
         />
 
         {/* Open Graph / Facebook */}
@@ -76,7 +76,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
+          content="Considering IVF? Consult GarbhaGudi's fertility experts today! Book your appointment now for personalized care and high success rates. Call us!"
         />
         <meta property='og:type' content='website' />
         <meta
@@ -91,7 +91,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
         <meta name='twitter:title' content="Bangalore's Best IVF Centres | GarbhaGudi IVF Centre" />
         <meta
           name='twitter:description'
-          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
+          content="Considering IVF? Consult GarbhaGudi's fertility experts today! Book your appointment now for personalized care and high success rates. Call us!"
         />
         <meta
           name='twitter:image'

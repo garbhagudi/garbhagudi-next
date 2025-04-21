@@ -27,7 +27,7 @@ export default function LandingPage({ doctors }) {
         />
         <meta
           name='description'
-          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
+          content='Start your parenthood journey with Garbhagudi IVF. Fill out our enquiry form for expert guidance, advanced treatment & compassionate care. Book now!'
         />
 
         {/* Open Graph / Facebook */}
@@ -40,7 +40,7 @@ export default function LandingPage({ doctors }) {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
+          content='Start your parenthood journey with Garbhagudi IVF. Fill out our enquiry form for expert guidance, advanced treatment & compassionate care. Book now!'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -58,7 +58,7 @@ export default function LandingPage({ doctors }) {
         />
         <meta
           name='twitter:description'
-          content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art infrastructure and cutting-edge technology to address this ever-increasing infertility problem.'
+          content='Start your parenthood journey with Garbhagudi IVF. Fill out our enquiry form for expert guidance, advanced treatment & compassionate care. Book now!'
         />
         <meta
           name='twitter:image'

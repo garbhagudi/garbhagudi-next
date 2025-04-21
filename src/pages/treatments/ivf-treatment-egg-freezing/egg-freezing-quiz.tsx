@@ -14,10 +14,20 @@ export default function Fertility() {
           name='title'
           content={'Egg Freezing Quiz | Check Your Eligibility | GarbhaGudi IVF'}
         />
+        <meta
+          name='description'
+          content='Take our Egg Freezing Quiz to explore your options for IVF treatment! Assess your fertility knowledge & make informed decisions. Start quiz now!
+'
+        />
 
         <meta
           property='og:title'
           content='Egg Freezing Quiz | Check Your Eligibility | GarbhaGudi IVF'
+        />
+        <meta
+          name='og:description'
+          content='Take our Egg Freezing Quiz to explore your options for IVF treatment! Assess your fertility knowledge & make informed decisions. Start quiz now!
+'
         />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
@@ -28,6 +38,11 @@ export default function Fertility() {
         <meta
           name='twitter:title'
           content={'Egg Freezing Quiz | Check Your Eligibility | GarbhaGudi IVF'}
+        />
+        <meta
+          name='twitter:description'
+          content='Take our Egg Freezing Quiz to explore your options for IVF treatment! Assess your fertility knowledge & make informed decisions. Start quiz now!
+'
         />
       </Head>
       <div className='mt-32 flex h-[45rem] w-screen flex-col items-start gap-4 pl-5 md:mt-0 md:h-screen md:w-[70%] md:justify-center md:pl-20'>
