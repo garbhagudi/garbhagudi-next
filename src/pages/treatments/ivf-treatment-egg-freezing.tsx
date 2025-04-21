@@ -27,7 +27,7 @@ export default function fertility() {
         <meta name='title' content={'IVF Treatment & Egg Freezing in Bangalore | GarbhaGudi'} />
         <meta
           name='description'
-          content='Secure your future fertility at GarbhaGudi IVF. Preserve your eggs at the right time and plan motherhood on your terms. Book a free fertility screening today!
+          content='Explore advanced IVF treatment & egg freezing at GarbhaGudi IVF. Boost your fertility journey with expert care. Book a consultation today! 
 '
         />
         <meta
@@ -46,7 +46,7 @@ export default function fertility() {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='Secure your future fertility at GarbhaGudi IVF. Preserve your eggs at the right time and plan motherhood on your terms. Book a free fertility screening today!
+          content='Explore advanced IVF treatment & egg freezing at GarbhaGudi IVF. Boost your fertility journey with expert care. Book a consultation today! 
 '
         />
         <meta property='og:type' content='article' />
@@ -59,7 +59,7 @@ export default function fertility() {
         />
         <meta
           name='twitter:description'
-          content='Secure your future fertility at GarbhaGudi IVF. Preserve your eggs at the right time and plan motherhood on your terms. Book a free fertility screening today!
+          content='Explore advanced IVF treatment & egg freezing at GarbhaGudi IVF. Boost your fertility journey with expert care. Book a consultation today! 
 '
         />
         <meta

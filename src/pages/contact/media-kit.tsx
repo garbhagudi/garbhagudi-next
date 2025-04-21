@@ -11,7 +11,7 @@ const IndexPage = () => {
         <meta name='title' content={'Media Kit | Garbhagudi IVF Centre'} />
         <meta
           name='description'
-          content='A comprehensive resource designed to provide journalists, influencers, and stakeholders with detailed insights into our institutions mission, achievements, and offerings.
+          content='Explore our Media Kit for brand assets, press info, and collaboration opportunities. Download now to partner with GarbhaGudi IVF Centre!
 '
         />
         {/* Open Graph / Facebook */}
@@ -20,7 +20,7 @@ const IndexPage = () => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='A comprehensive resource designed to provide journalists, influencers, and stakeholders with detailed insights into our institutions mission, achievements, and offerings. 
+          content='Explore our Media Kit for brand assets, press info, and collaboration opportunities. Download now to partner with GarbhaGudi IVF Centre! 
 '
         />
         <meta property='og:type' content='article' />
@@ -30,7 +30,7 @@ const IndexPage = () => {
         <meta name='twitter:title' content={'Media Kit | Garbhagudi IVF Centre'} />
         <meta
           name='twitter:description'
-          content='A comprehensive resource designed to provide journalists, influencers, and stakeholders with detailed insights into our institutions mission, achievements, and offerings.
+          content='Explore our Media Kit for brand assets, press info, and collaboration opportunities. Download now to partner with GarbhaGudi IVF Centre!
 '
         />
       </Head>

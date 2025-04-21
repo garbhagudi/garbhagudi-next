@@ -340,10 +340,19 @@ export default function FertilityForm() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Egg Freezing Quiz | Know Your Options | GarbhaGudi IVF</title>
         <meta name='title' content={'Egg Freezing Quiz | Know Your Options | GarbhaGudi IVF'} />
-
+        <meta
+          name='description'
+          content='Take our Egg Freezing Quiz to assess your fertility options! Learn about IVF treatment and egg preservation. Take the first step toward parenthood!
+'
+        />
         <meta
           property='og:title'
           content='Egg Freezing Quiz | Know Your Options | GarbhaGudi IVF'
+        />
+        <meta
+          name='og:description'
+          content='Take our Egg Freezing Quiz to assess your fertility options! Learn about IVF treatment and egg preservation. Take the first step toward parenthood!
+'
         />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
@@ -354,6 +363,11 @@ export default function FertilityForm() {
         <meta
           name='twitter:title'
           content={'Egg Freezing Quiz | Know Your Options | GarbhaGudi IVF'}
+        />
+        <meta
+          name='twitter:description'
+          content='Take our Egg Freezing Quiz to assess your fertility options! Learn about IVF treatment and egg preservation. Take the first step toward parenthood!
+'
         />
       </Head>
       <div>

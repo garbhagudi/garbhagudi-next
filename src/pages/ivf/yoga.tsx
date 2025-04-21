@@ -32,7 +32,10 @@ const Yoga: NextPage = () => {
     <>
       <Head>
         <title>Yoga</title>
-        <meta name='description' content='Yoga' />
+        <meta
+          name='description'
+          content='Join the 21 Day Yoga Challenge by Garbhagudi to boost fertility and wellness naturally. Start your transformation today—visit now to learn more!'
+        />
       </Head>
       <Header />
       <Hero />

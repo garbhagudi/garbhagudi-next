@@ -69,7 +69,7 @@ const Data = [
     id: 1,
     treatent: 'IVF Treatment',
     desc: "Unlock the doors of parenthood with GarbhaGudi's advanced IVF treatment options and give your dreams of starting a family a new lease of life.",
-    link: '/treatments/in-vitro-fertilization-ivf',
+    link: '/treatments/ivf-treatment-in-bangalore',
     image:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1674890412/Misc/ivf%20icons/ivf_jwjqwf.webp',
   },
@@ -77,7 +77,7 @@ const Data = [
     id: 2,
     treatent: 'ICSI',
     desc: "Experience the joy of parenthood with GarbhaGudi's IUI treatment, designed to increase your chances of pregnancy in a natural way.",
-    link: '/treatments/intracytoplasmic-sperm-injection-icsi',
+    link: '/treatments/icsi-treatment-in-bangalore',
     image:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1674890412/Misc/ivf%20icons/fertilization_o5hpkk.webp',
   },
@@ -85,7 +85,7 @@ const Data = [
     id: 3,
     treatent: 'IUI',
     desc: "Take the first step towards parenthood with GarbhaGudi's state-of-the-art ICSI treatment, which offers a high success rate for couples struggling with infertility.",
-    link: '/treatments/intra-uterine-insemination-iui',
+    link: '/treatments/iui-treatment-in-bangalore',
     image:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1674890412/Misc/ivf%20icons/in-vitro_mujzkz.webp',
   },
@@ -101,7 +101,7 @@ const Data = [
     id: 5,
     treatent: 'Blastocyst Culture',
     desc: 'Maximize your chances with blastocyst culture treatment, which allows embryos to grow for a longer period before transfer, increasing the chances of implantation.',
-    link: '/treatments/in-vitro-fertilization-ivf',
+    link: '/treatments/ivf-treatment-in-bangalore',
     image:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1674890412/Misc/ivf%20icons/sperm_utf0oe.webp',
   },

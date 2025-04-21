@@ -30,7 +30,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta name='title' content='Fertility Centre | GarbhaGudi IVF Centre' />
         <meta
           name='description'
-          content='GarbhaGudi Fertility Centre offers advanced reproductive care, personalized treatment plans, and cutting-edge technology. From fertility diagnostics to assisted reproduction, start your family journey with us.'
+          content='Discover advanced fertility care at GarbhaGudi Fertility Center. Expert doctors, modern treatments & compassionate support. Book your appointment today!'
         />
 
         {/* Open Graph / Facebook */}
@@ -40,7 +40,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='GarbhaGudi Fertility Centre offers advanced reproductive care, personalized treatment plans, and cutting-edge technology. From fertility diagnostics to assisted reproduction, start your family journey with us.'
+          content='Discover advanced fertility care at GarbhaGudi Fertility Center. Expert doctors, modern treatments & compassionate support. Book your appointment today!'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -55,7 +55,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta name='twitter:title' content='Fertility Centre | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
-          content='GarbhaGudi Fertility Centre offers advanced reproductive care, personalized treatment plans, and cutting-edge technology. From fertility diagnostics to assisted reproduction, start your family journey with us.'
+          content='Discover advanced fertility care at GarbhaGudi Fertility Center. Expert doctors, modern treatments & compassionate support. Book your appointment today!'
         />
         <meta
           name='twitter:image'

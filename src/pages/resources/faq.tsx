@@ -12,7 +12,7 @@ const faq = () => {
         <meta name='title' content='Frequently Asked Questions | GarbhaGudi IVF Centre' />
         <meta
           name='description'
-          content='Here are some of the most frequently asked questions about infertility and its treatment options.'
+          content='Explore Frequently Asked Questions about fertility treatments at GarbhaGudi. Get expert answers & clear your doubts today! Visit now to learn more.'
         />
 
         {/* Open Graph / Facebook */}
@@ -22,7 +22,7 @@ const faq = () => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='Here are some of the most frequently asked questions about infertility and its treatment options.'
+          content='Explore Frequently Asked Questions about fertility treatments at GarbhaGudi. Get expert answers & clear your doubts today! Visit now to learn more.'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -37,7 +37,7 @@ const faq = () => {
         <meta name='twitter:title' content='Frequently Asked Questions | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
-          content='Here are some of the most frequently asked questions about infertility and its treatment options.'
+          content='Explore Frequently Asked Questions about fertility treatments at GarbhaGudi. Get expert answers & clear your doubts today! Visit now to learn more.'
         />
         <meta
           name='twitter:image'

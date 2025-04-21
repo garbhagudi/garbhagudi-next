@@ -14,7 +14,7 @@ const IndexPage = () => {
           <meta name='title' content='Resources | GarbhaGudi IVF Centre' />
           <meta
             name='description'
-            content='Here are some of the most frequently asked questions about infertility and its treatment options.'
+            content='Explore top Resources on fertility, IVF, and parenting at GarbhaGudi. Get expert advice, guides, and support. Visit now for valuable insights!'
           />
 
           {/* Open Graph / Facebook */}
@@ -24,7 +24,7 @@ const IndexPage = () => {
           <meta property='og:url' content='https://garbhagudi.com' />
           <meta
             property='og:description'
-            content='Here are some of the most frequently asked questions about infertility and its treatment options.'
+            content='Explore top Resources on fertility, IVF, and parenting at GarbhaGudi. Get expert advice, guides, and support. Visit now for valuable insights!'
           />
           <meta property='og:type' content='website' />
           <meta
@@ -39,7 +39,7 @@ const IndexPage = () => {
           <meta name='twitter:title' content='Resources | GarbhaGudi IVF Centre' />
           <meta
             name='twitter:description'
-            content='Here are some of the most frequently asked questions about infertility and its treatment options.'
+            content='Explore top Resources on fertility, IVF, and parenting at GarbhaGudi. Get expert advice, guides, and support. Visit now for valuable insights!'
           />
           <meta
             name='twitter:image'

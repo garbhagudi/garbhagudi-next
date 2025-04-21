@@ -31,7 +31,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta name='title' content='Solutions | GarbhaGudi IVF Centre' />
         <meta
           name='description'
-          content="Discover GarbhaGudi's range of advanced fertility solutions. From IVF and ICSI to genetic screening and fertility preservation, we offer cutting-edge treatments tailored to your unique needs."
+          content='Explore advanced fertility solutions at GarbhaGudi IVF. Personalized treatments, high success rates & compassionate care. Book a consultation today!'
         />
 
         {/* Open Graph / Facebook */}
@@ -41,7 +41,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content="Discover GarbhaGudi's range of advanced fertility solutions. From IVF and ICSI to genetic screening and fertility preservation, we offer cutting-edge treatments tailored to your unique needs."
+          content='Explore advanced fertility solutions at GarbhaGudi IVF. Personalized treatments, high success rates & compassionate care. Book a consultation today!'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -56,7 +56,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta name='twitter:title' content='Solutions | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
-          content="Discover GarbhaGudi's range of advanced fertility solutions. From IVF and ICSI to genetic screening and fertility preservation, we offer cutting-edge treatments tailored to your unique needs."
+          content='Explore advanced fertility solutions at GarbhaGudi IVF. Personalized treatments, high success rates & compassionate care. Book a consultation today!'
         />
         <meta
           name='twitter:image'
