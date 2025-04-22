@@ -27,7 +27,7 @@ const IndexPage = ({ articles }: Article) => {
         {/* Primary Tags */}
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>Solutions</title>
+        <title>IVF Solutions: Personalized Care for Your Fertility Journey</title>
         <meta name='title' content='Solutions | GarbhaGudi IVF Centre' />
         <meta
           name='description'
