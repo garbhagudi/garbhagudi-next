@@ -46,7 +46,7 @@ const Banner = () => {
           <Image
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722501966/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0_1_i7oozx.webp'
             alt='IUI treatment in Bangalore'
-            className='rounded-xl'
+            className='w-full rounded-xl'
             width={320}
             height={320}
             priority={true}
