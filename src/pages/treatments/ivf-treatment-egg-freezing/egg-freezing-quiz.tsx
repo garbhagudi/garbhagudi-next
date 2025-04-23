@@ -22,12 +22,11 @@ export default function Fertility() {
 
         <meta
           property='og:title'
-          content='Egg Freezing Quiz | Check Your Eligibility | GarbhaGudi IVF'
+          content='Egg Freezing Quiz | Are You Ready to Preserve Your Fertility?'
         />
         <meta
           name='og:description'
-          content='Take our Egg Freezing Quiz to explore your options for IVF treatment! Assess your fertility knowledge & make informed decisions. Start quiz now!
-'
+          content="Take this quick egg freezing quiz to find out if you're the right candidate. Get personalized insights and take charge of your fertility with GarbhaGudi."
         />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />

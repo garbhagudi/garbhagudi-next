@@ -345,14 +345,10 @@ export default function FertilityForm() {
           content='Take our Egg Freezing Quiz to assess your fertility options! Learn about IVF treatment and egg preservation. Take the first step toward parenthood!
 '
         />
-        <meta
-          property='og:title'
-          content='Egg Freezing Quiz | Know Your Options | GarbhaGudi IVF'
-        />
+        <meta property='og:title' content="Egg Freezing Quiz – Find Out If It's Right for You" />
         <meta
           name='og:description'
-          content='Take our Egg Freezing Quiz to assess your fertility options! Learn about IVF treatment and egg preservation. Take the first step toward parenthood!
-'
+          content='Take this quick quiz to see if egg freezing is the right option for your fertility goals. Get personalized insights in minutes!'
         />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />

@@ -32,7 +32,12 @@ const Page = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={title} />
+        <meta name='og:title' content='Celebrate International IVF Day with GarbhaGudi' />
         <meta name='description' content={desc} />
+        <meta
+          name='og:description'
+          content='Join GarbhaGudi IVF Centre in celebrating International IVF Day with a 21-day yoga challenge designed to enhance reproductive health and support your fertility journey.'
+        />
       </Head>
       <div className='relative overflow-hidden bg-white py-16 dark:bg-gray-800'>
         <div className='relative px-4 sm:px-6 lg:px-8'>
