@@ -246,7 +246,15 @@ const Blog = ({ article }: BlogProps) => {
               priority={true}
             />
             <div className='text-gray-800 dark:text-gray-200'>
-              <RichText content={article?.content?.raw?.children} />
+              <RichText
+                content={article?.content?.raw?.children}
+                renderers={{
+                  ul: ({ children }) => <ul className='list-disc pl-6'>{children}</ul>,
+                  ol: ({ children }) => <ol className='list-decimal pl-6'>{children}</ol>,
+                  li: ({ children }) => <li>{children}</li>,
+                  // you can also add p, h2, etc., if needed
+                }}
+              />
             </div>
             <Share pinmedia={article?.image?.url} />
           </div>
