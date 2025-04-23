@@ -246,7 +246,21 @@ const Blog = ({ article }: BlogProps) => {
               priority={true}
             />
             <div className='text-gray-800 dark:text-gray-200'>
-              <RichText content={article?.content?.raw?.children} />
+              <RichText
+                content={article?.content?.raw?.children}
+                renderers={{
+                  ul: ({ children }) => <ul className='list-disc pl-6'>{children}</ul>,
+                  ol: ({ children }) => <ol className='list-decimal pl-6'>{children}</ol>,
+                  li: ({ children }) => <li>{children}</li>,
+                  p: ({ children }) => <p className='mb-2'>{children}</p>,
+                  bold: ({ children }) => <strong>{children}</strong>,
+                  a: ({ children, href }) => (
+                    <a href={href} className='text-blue-600 underline'>
+                      {children}
+                    </a>
+                  ),
+                }}
+              />
             </div>
             <Share pinmedia={article?.image?.url} />
           </div>
