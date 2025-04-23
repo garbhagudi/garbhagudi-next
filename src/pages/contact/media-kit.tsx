@@ -9,10 +9,15 @@ const IndexPage = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Media Kit | Garbhagudi IVF Centre</title>
         <meta name='title' content={'Media Kit | Garbhagudi IVF Centre'} />
+        <meta name='og:title' content='Media Kit | Garbhagudi IVF Centre' />
         <meta
           name='description'
           content='Explore our Media Kit for brand assets, press info, and collaboration opportunities. Download now to partner with GarbhaGudi IVF Centre!
 '
+        />
+        <meta
+          name='og:description'
+          content='Explore our Media Kit for brand assets, press info, and collaboration opportunities. Download now to partner with GarbhaGudi IVF Centre!'
         />
         {/* Open Graph / Facebook */}
         <meta property='og:title' content='Media Kit | Garbhagudi IVF Centre' />

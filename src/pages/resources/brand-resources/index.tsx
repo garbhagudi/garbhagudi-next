@@ -8,10 +8,16 @@ const IndexPage = () => {
     <div className='min-h-screen'>
       <Head>
         <title>Brand Resources | GarbhaGudi IVF Centre</title>
+        <meta name='title' content='Brand Resources | GarbhaGudi IVF Centre' />
+        <meta name='og:title' content='Brand Resources | GarbhaGudi IVF Centre' />
         <meta
           name='description'
           content=' Explore our Brand Resources for logos, guidelines, and more. Elevate your brand with GarbhaGudi’s trusted assets. Download now and stay consistent!
 '
+        />
+        <meta
+          name='og:description'
+          content='Explore our Brand Resources for logos, guidelines, and more. Elevate your brand with GarbhaGudi’s trusted assets. Download now and stay consistent!'
         />
       </Head>
       <Header />

@@ -25,10 +25,15 @@ export default function fertility() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>IVF Treatment & Egg Freezing in Bangalore | GarbhaGudi</title>
         <meta name='title' content={'IVF Treatment & Egg Freezing in Bangalore | GarbhaGudi'} />
+        <meta name='og:title' content='IVF Treatment & Egg Freezing | Expert Fertility Care' />
         <meta
           name='description'
           content='Explore advanced IVF treatment & egg freezing at GarbhaGudi IVF. Boost your fertility journey with expert care. Book a consultation today! 
 '
+        />
+        <meta
+          name='og:description'
+          content='Explore advanced IVF treatment and egg freezing options to preserve fertility and increase your chances of conception. Trusted by thousands of hopeful parents.'
         />
         <meta
           name='keywords'

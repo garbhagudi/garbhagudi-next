@@ -36,6 +36,12 @@ const Yoga: NextPage = () => {
           name='description'
           content='Join the 21 Day Yoga Challenge by Garbhagudi to boost fertility and wellness naturally. Start your transformation today—visit now to learn more!'
         />
+        <meta name='title' content='Yoga for IVF Success: Boost Fertility with Garbhagudi' />
+        <meta name='og:title' content='Yoga for IVF Success: Boost Fertility with Garbhagudi' />
+        <meta
+          name='og:description'
+          content='Join the 21 Day Yoga Challenge by Garbhagudi to boost fertility and wellness naturally. Start your transformation today—visit now to learn more!'
+        />
       </Head>
       <Header />
       <Hero />
