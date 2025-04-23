@@ -1760,6 +1760,16 @@ const nextConfig = {
         destination: '/about/awards-and-accolades',
         permanent: true,
       },
+      {
+        source: '/treatments/egg-donation',
+        destination: '/treatments',
+        permanent: true,
+      },
+      {
+        source: '/fertility-experts/undefined',
+        destination: '/fertility-experts',
+        permanent: true,
+      },
     ];
   },
 };

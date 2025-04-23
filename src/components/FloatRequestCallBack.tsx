@@ -19,7 +19,7 @@ const FloatRequestCallBack = () => {
         className='fixed -left-16 top-2/3 rotate-90 cursor-pointer rounded-md bg-gg-500 p-1.5 px-5 text-white shadow-md'
         onClick={open}
       >
-        <h1 className='text-base font-bold'>Request Call Back</h1>
+        <p className='text-base font-bold'>Request Call Back</p>
       </div>
       <Dialog open={isOpen} as='div' className='relative z-10 focus:outline-none' onClose={close}>
         {/* Faded background */}
