@@ -19,13 +19,8 @@ const Branch = ({ branch }) => {
   }
   function addDocJsonLd() {
     if (!branch?.docJsonLd) return { __html: '' };
-    let jsonLD;
-    try {
-      jsonLD =
-        typeof branch.docJsonLd === 'string' ? JSON.parse(branch.docJsonLd) : branch.docJsonLd;
-    } catch (error) {
-      return { __html: '' };
-    }
+    const jsonLD =
+      typeof branch.docJsonLd === 'string' ? JSON.parse(branch.docJsonLd) : branch.docJsonLd;
     return {
       __html: JSON.stringify(jsonLD, null, 2),
     };
