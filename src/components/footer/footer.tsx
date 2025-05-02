@@ -210,7 +210,7 @@ const SocialIcon = [
   },
   {
     name: 'WhatsApp',
-    url: 'https://api.whatsapp.com/send/?phone=918884183338&text=Hi.',
+    url: 'https://api.whatsapp.com/send/?phone=919108910832&text=Hi.',
     icon: <BsWhatsapp className='text-3xl text-green-600 dark:text-green-500' />,
   },
   {
