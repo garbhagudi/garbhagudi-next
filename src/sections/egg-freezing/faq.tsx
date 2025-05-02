@@ -32,20 +32,37 @@ export default Faq;
 const data = [
   {
     id: 1,
-    Question: 'What is the ideal age for egg freezing?',
+    Question: 'What is egg freezing?',
     Answer:
-      'The best age range is generally between 28-35, as egg quality tends to be highest at these ages.',
+      "Egg freezing, or oocyte cryopreservation, is a process where a woman's eggs are extracted, frozen, and stored, essentially preserving her fertility for future use.",
   },
   {
     id: 2,
-    Question: 'Are there risks associated with the egg retrieval process?',
+    Question: 'Who should consider egg freezing?',
     Answer:
-      'Yes, risks include mild side effects like cramping, bloating, and spotting. Rarely, more serious risks like ovarian hyperstimulation syndrome (OHSS), infection, or bleeding may occur.',
+      'Women who wish to delay pregnancy, those facing medical treatments that could affect fertility, or those with other personal reasons for wanting to preserve their eggs at a younger age.',
   },
   {
     id: 3,
-    Question: 'How long can my eggs stay frozen?',
+    Question: 'What is the ideal age to freeze eggs?',
     Answer:
-      'Frozen eggs can typically be stored for up to 10-15 years, but quality may decrease slightly over time.',
+      "The best time to freeze eggs is typically in a woman's late 20s to early 30s. While it's possible to freeze eggs in later years, success rates tend to decrease as age impacts egg quality and quantity.",
+  },
+  {
+    id: 4,
+    Question: 'How does egg freezing work?',
+    Answer:
+      'The process involves ovarian stimulation (hormone injections), egg retrieval, and then freezing the eggs using a rapid freezing technique called vitrification.',
+  },
+  {
+    id: 5,
+    Question: 'Are frozen eggs as good as fresh eggs for IVF?',
+    Answer:
+      'Yes, advanced freezing methods like vitrification have achieved the same IVF success rates with frozen eggs as with fresh eggs.',
+  },
+  {
+    id: 6,
+    Question: 'How long can eggs be stored frozen? ',
+    Answer: 'Frozen eggs can be stored indefinitely without a significant decrease in quality.',
   },
 ];

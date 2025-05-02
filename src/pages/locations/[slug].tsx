@@ -6,7 +6,6 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import dynamic from 'next/dynamic';
-
 const MapSection = dynamic(() => import('sections/location/mapSection'), { ssr: false });
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Faq = dynamic(() => import('sections/location/faq'), { ssr: false });
@@ -18,6 +17,20 @@ const Branch = ({ branch }) => {
   if (router.isFallback) {
     return <Loading />;
   }
+  function addDocJsonLd() {
+    if (!branch?.docJsonLd) return { __html: '' };
+    let jsonLD;
+    try {
+      jsonLD =
+        typeof branch.docJsonLd === 'string' ? JSON.parse(branch.docJsonLd) : branch.docJsonLd;
+    } catch (error) {
+      return { __html: '' };
+    }
+    return {
+      __html: JSON.stringify(jsonLD, null, 2),
+    };
+  }
+
   return (
     <div>
       <Head>
@@ -32,6 +45,12 @@ const Branch = ({ branch }) => {
         <meta name='title' content={branch?.metaTitle} />
         <meta name='description' content={branch?.metaDescription} />
 
+        <script
+          type='application/ld+json'
+          data-next-head=''
+          dangerouslySetInnerHTML={addDocJsonLd()}
+          key='org-jsonld'
+        />
         {/* Open Graph / Facebook */}
 
         <meta property='og:title' content={branch?.metaTitle} />
@@ -89,6 +108,7 @@ export const getStaticProps = async ({ params }) => {
             url
           }
           slug
+          docJsonLd
           metaTitle
           metaDescription
           id
