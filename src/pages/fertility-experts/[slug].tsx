@@ -279,61 +279,61 @@ const Doctor = ({ doctor }) => {
                                   </tr>
                                 </thead>
                                 <tbody className='divide-y divide-pink-100 text-sm dark:divide-gray-500'>
-                                  {doctor.hanumanthaNagarOnline &&
-                                    doctor.hanumanthaNagarPhysical && (
-                                      <tr>
-                                        <td className='whitespace-nowrap p-2'>
-                                          <div className='flex items-center'>
-                                            <div className='flex items-center justify-center font-medium text-gray-800'>
-                                              <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
-                                                <SiGooglemaps className='text-2xl' />
-                                              </div>
-                                              <Link href='/locations/hanumanthanagar' passHref>
-                                                <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
-                                                  Hanumanthanagar
-                                                </span>
-                                              </Link>
+                                  {(doctor.hanumanthaNagarOnline ||
+                                    doctor.hanumanthaNagarPhysical) && (
+                                    <tr>
+                                      <td className='whitespace-nowrap p-2'>
+                                        <div className='flex items-center'>
+                                          <div className='flex items-center justify-center font-medium text-gray-800'>
+                                            <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
+                                              <SiGooglemaps className='text-2xl' />
                                             </div>
+                                            <Link href='/locations/hanumanthanagar' passHref>
+                                              <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
+                                                Hanumanthanagar
+                                              </span>
+                                            </Link>
                                           </div>
-                                        </td>
+                                        </div>
+                                      </td>
 
-                                        <td className='whitespace-nowrap p-2'>
-                                          <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                            {doctor.hanumanthaNagarPhysical && (
-                                              <button>
-                                                <a
-                                                  href={doctor.hanumanthaNagarPhysical}
-                                                  className='font-semibold hover:underline'
-                                                  hrefLang='en-us'
-                                                  target='_blank'
-                                                  rel='noreferrer'
-                                                >
-                                                  Book Now
-                                                </a>
-                                              </button>
-                                            )}
-                                          </div>
-                                        </td>
-                                        <td className='whitespace-nowrap p-2'>
-                                          <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                            {doctor.hanumanthaNagarOnline && (
-                                              <button>
-                                                <a
-                                                  href={doctor.hanumanthaNagarOnline}
-                                                  className='font-semibold hover:underline'
-                                                  target='_blank'
-                                                  hrefLang='en-us'
-                                                  rel='noreferrer'
-                                                >
-                                                  Book Now
-                                                </a>
-                                              </button>
-                                            )}
-                                          </div>
-                                        </td>
-                                      </tr>
-                                    )}
-                                  {doctor.kalyanNagarOnline && doctor.kalyanNagarPhysical && (
+                                      <td className='whitespace-nowrap p-2'>
+                                        <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
+                                          {doctor.hanumanthaNagarPhysical && (
+                                            <button>
+                                              <a
+                                                href={doctor.hanumanthaNagarPhysical}
+                                                className='font-semibold hover:underline'
+                                                hrefLang='en-us'
+                                                target='_blank'
+                                                rel='noreferrer'
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          )}
+                                        </div>
+                                      </td>
+                                      <td className='whitespace-nowrap p-2'>
+                                        <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
+                                          {doctor.hanumanthaNagarOnline && (
+                                            <button>
+                                              <a
+                                                href={doctor.hanumanthaNagarOnline}
+                                                className='font-semibold hover:underline'
+                                                target='_blank'
+                                                hrefLang='en-us'
+                                                rel='noreferrer'
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          )}
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  )}
+                                  {(doctor.kalyanNagarOnline || doctor.kalyanNagarPhysical) && (
                                     <tr>
                                       <td className='whitespace-nowrap p-2'>
                                         <div className='flex items-center'>
@@ -388,7 +388,7 @@ const Doctor = ({ doctor }) => {
                                       </td>
                                     </tr>
                                   )}
-                                  {doctor.jayanagarOnline && doctor.jayanagarPhysical && (
+                                  {(doctor.jayanagarOnline || doctor.jayanagarPhysical) && (
                                     <tr>
                                       <td className='whitespace-nowrap p-2'>
                                         <div className='flex items-center'>
@@ -443,7 +443,8 @@ const Doctor = ({ doctor }) => {
                                       </td>
                                     </tr>
                                   )}
-                                  {doctor.electronicCityOnline && doctor.electronicCityPhysical && (
+                                  {(doctor.electronicCityOnline ||
+                                    doctor.electronicCityPhysical) && (
                                     <tr>
                                       <td className='whitespace-nowrap p-2'>
                                         <div className='flex items-center'>
