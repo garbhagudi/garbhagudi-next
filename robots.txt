@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Disallow: /blogs/page/
+
+# Host
+Host: https://www.garbhagudi.com
+
+# Sitemaps
+Sitemap: https://www.garbhagudi.com/sitemap.xml
