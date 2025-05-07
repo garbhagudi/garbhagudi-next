@@ -58,15 +58,7 @@ const MapSection = ({ maplink, address, description, doctors, title }: MapSectio
                   PHONE
                 </div>
                 <p className='font-qs text-sm leading-relaxed text-gray-800 dark:text-gray-200'>
-                  <Link href='tel:+919108910832'>+91 9108 9108 32</Link>
-                </p>
-                <div className='mt-4 font-qs text-xs font-semibold tracking-widest text-gray-800 dark:text-gray-200'>
-                  WhatsApp
-                </div>
-                <p className='font-qs text-sm leading-relaxed text-gray-800 dark:text-gray-200'>
-                  <Link href='https://wa.me/919108910832?text=Hi.' target='_blank' rel='noreferrer'>
-                    +91 9108 9108 32
-                  </Link>
+                  <Link href='tel:+918880000909'>+91 8880 0009 09</Link>
                 </p>
               </div>
             </div>
