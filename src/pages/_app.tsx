@@ -35,17 +35,17 @@ function MyApp({ Component, pageProps }) {
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     const userAgent = typeof window !== 'undefined' ? navigator.userAgent : '';
     setIsMobile(/Mobi|Android/i.test(userAgent));
   }, []);
 
   const showSalesIQ = !(router.pathname === '/contact/enquiry' && isMobile);
+  const isBlogPage = router.asPath.startsWith('/blogs/');
 
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-5T77DVZ' });
-  }, []);
+  }, [router.asPath]);
 
   useEffect(() => {
     const start = () => setLoading(true);
@@ -60,6 +60,47 @@ function MyApp({ Component, pageProps }) {
       router.events.off('routeChangeError', end);
     };
   }, [router.events]);
+
+  useEffect(() => {
+    if (isBlogPage) {
+      const script = document.createElement('script');
+      script.id = 'engati-bot-script';
+      script.async = true;
+      script.defer = true;
+      script.type = 'text/javascript';
+      script.innerHTML = `
+      (function(e,t,a){
+        var c=e.head||e.getElementsByTagName("head")[0],
+            n=e.createElement("script");
+        n.async=!0;
+        n.defer=!0;
+        n.type="text/javascript";
+        n.src=t+"/static/js/widget.js?config="+JSON.stringify(a);
+        c.appendChild(n);
+      })(document,"https://app.engati.com",{
+        bot_key:"ce000a8e2dc64673",
+        welcome_msg:true,
+        branding_key:"default",
+        server:"https://app.engati.com",
+        e:"p"
+      });
+    `;
+      document.body.appendChild(script);
+    }
+    const handleRouteChange = (url: string) => {
+      window.location.href = router.basePath + url;
+    };
+    router.events.on('routeChangeStart', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+
+      const existingScript = document.getElementById('engati-bot-script');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, [router]);
 
   //one signal code
   // useEffect(() => {
@@ -132,7 +173,7 @@ function MyApp({ Component, pageProps }) {
             <Footer />
           </div>
         )}
-        {shouldDisplay && showSalesIQ && (
+        {shouldDisplay && showSalesIQ && !isBlogPage && (
           <Salesiq
             widgetCode='93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
             domain='https://salesiq.zoho.com/widget'

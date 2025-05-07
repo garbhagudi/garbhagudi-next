@@ -51,8 +51,6 @@ const FloatRequestCallBack = () => {
               <div className='px-0'>
                 <div className='flex justify-center'>
                   <div className='mx-5 mt-5 w-fit self-center rounded-md bg-brandPink px-4 py-1 text-center text-[13px] font-semibold text-white shadow-sm'>
-                    ₹1,00,000 off on IVF Treatment &
-                    <br />
                     Free Consultation
                   </div>
                 </div>
