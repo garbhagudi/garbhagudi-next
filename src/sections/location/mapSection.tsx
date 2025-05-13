@@ -67,7 +67,12 @@ const MapSection = ({ maplink, address, description, doctors, title }: MapSectio
             <h2 className='py-3 font-heading text-xl font-bold lg:text-2xl'>
               GarbhaGudi IVF Centre, {title}
             </h2>
-            <RichText content={description} />
+            <RichText
+              content={description}
+              renderers={{
+                p: ({ children }) => <p className='text-justify'>{children}</p>,
+              }}
+            />
           </div>
         </div>
         <div className='flex w-full flex-col pb-8 md:mt-0'>

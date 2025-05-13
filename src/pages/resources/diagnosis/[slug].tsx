@@ -213,7 +213,12 @@ const Diagnosis = ({ diagnosis }) => {
               />
             </figure>
             <div className='text-gray-800 dark:text-gray-200'>
-              <RichText content={diagnosis?.content?.raw?.children} />
+              <RichText
+                content={diagnosis?.content?.raw?.children}
+                renderers={{
+                  p: ({ children }) => <p className='text-justify'>{children}</p>,
+                }}
+              />
             </div>
             <div>
               <Share pinmedia={diagnosis?.image?.url} />

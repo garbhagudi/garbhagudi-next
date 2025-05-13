@@ -399,7 +399,12 @@ const Treatment = ({ treatment }) => {
               />
             </figure>
             <div className='text-gray-800 dark:text-gray-200'>
-              <RichText content={treatment?.content?.raw?.children} />
+              <RichText
+                content={treatment?.content?.raw?.children}
+                renderers={{
+                  p: ({ children }) => <p className='text-justify'>{children}</p>,
+                }}
+              />
             </div>
             <div>
               <Share pinmedia={treatment?.image?.url} />

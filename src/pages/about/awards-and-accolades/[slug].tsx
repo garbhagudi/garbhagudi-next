@@ -231,7 +231,12 @@ const AwardPage = ({ award }: AwardProps) => {
                 />
               </figure>
               <div className='text-gray-800 dark:text-gray-200'>
-                <RichText content={award?.content?.raw.children} />
+                <RichText
+                  content={award?.content?.raw.children}
+                  renderers={{
+                    p: ({ children }) => <p className='text-justify'>{children}</p>,
+                  }}
+                />
               </div>
               <div>
                 <Share pinmedia={award?.image?.url} />

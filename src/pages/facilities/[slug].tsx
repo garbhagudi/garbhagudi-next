@@ -250,7 +250,14 @@ const Blog = ({ article }: BlogProps) => {
               priority={true}
             />
             <div className='text-gray-800 dark:text-gray-200'>
-              {isMounted && <RichText content={article?.content?.raw?.children} />}
+              {isMounted && (
+                <RichText
+                  content={article?.content?.raw?.children}
+                  renderers={{
+                    p: ({ children }) => <p className='text-justify'>{children}</p>,
+                  }}
+                />
+              )}
             </div>
             <Share pinmedia={article?.image?.url} />
           </div>

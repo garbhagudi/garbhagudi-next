@@ -211,7 +211,12 @@ const Vas = ({ valueAddedService }) => {
                 priority={true}
               />
               <div className='text-gray-800 dark:text-gray-200'>
-                <RichText content={valueAddedService?.content.raw.children} />
+                <RichText
+                  content={valueAddedService?.content.raw.children}
+                  renderers={{
+                    p: ({ children }) => <p className='text-justify'>{children}</p>,
+                  }}
+                />
               </div>
             </div>
           ) : (

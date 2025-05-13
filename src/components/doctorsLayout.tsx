@@ -82,7 +82,12 @@ const DoctorLayout = ({
                       </div>
                     </div>
                     <div className='mt-2 text-gray-800 dark:text-gray-200'>
-                      <RichText content={bio} />
+                      <RichText
+                        content={bio}
+                        renderers={{
+                          p: ({ children }) => <p className='text-justify'>{children}</p>,
+                        }}
+                      />
                     </div>
 
                     <div className='mt-4 flex flex-col items-center space-y-4 text-center'>
