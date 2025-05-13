@@ -676,14 +676,24 @@ const Doctor = ({ doctor }) => {
                     <div className='w-full px-4 lg:w-9/12'>
                       <h1 className='text-2xl font-bold'>{`About ${doctor?.name}`}</h1>
                       <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
-                        <RichText content={doctor?.bio?.raw?.children} />
+                        <RichText
+                          content={doctor?.bio?.raw?.children}
+                          renderers={{
+                            p: ({ children }) => <p className='text-justify'>{children}</p>,
+                          }}
+                        />
                       </div>
                     </div>
                     {doctor?.educationCredentials?.text && (
                       <div className='w-full px-4 lg:w-9/12'>
                         <h2 className='text-2xl font-bold'>Education & Credentials</h2>
                         <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
-                          <RichText content={doctor?.educationCredentials?.raw?.children} />
+                          <RichText
+                            content={doctor?.educationCredentials?.raw?.children}
+                            renderers={{
+                              p: ({ children }) => <p className='text-justify'>{children}</p>,
+                            }}
+                          />
                         </div>
                       </div>
                     )}
@@ -691,7 +701,12 @@ const Doctor = ({ doctor }) => {
                       <div className='w-full px-4 lg:w-9/12'>
                         <h2 className='text-2xl font-bold'>Experience & Expertise</h2>
                         <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
-                          <RichText content={doctor?.experienceExpertise?.raw?.children} />
+                          <RichText
+                            content={doctor?.experienceExpertise?.raw?.children}
+                            renderers={{
+                              p: ({ children }) => <p className='text-justify'>{children}</p>,
+                            }}
+                          />
                         </div>
                       </div>
                     )}
@@ -699,7 +714,7 @@ const Doctor = ({ doctor }) => {
                     {doctor?.approachToIvfTreatment && (
                       <div className='w-full px-4 lg:w-9/12'>
                         <h2 className='text-2xl font-bold'>Approach to IVF Treatment</h2>
-                        <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
+                        <div className='prose mb-4 text-justify text-gray-800 dark:text-gray-200'>
                           {doctor?.approachToIvfTreatment}
                         </div>
                       </div>
@@ -708,7 +723,7 @@ const Doctor = ({ doctor }) => {
                     {doctor?.keyFeaturesOfTreatment && (
                       <div className='w-full px-4 lg:w-9/12'>
                         <h2 className='text-2xl font-bold'>Key Features of Treatment</h2>
-                        <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
+                        <div className='prose mb-4 text-justify text-gray-800 dark:text-gray-200'>
                           {doctor?.keyFeaturesOfTreatment}
                         </div>
                       </div>

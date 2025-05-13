@@ -190,7 +190,12 @@ const Career = ({ career }) => {
                 <div className='font-qs text-base'>{career?.description}</div>
                 <div className='mt-8 font-content text-xl'>Job Responsibilities</div>
                 <div className='text-md text-brandDark mb-4 font-qs leading-relaxed'>
-                  <RichText content={career?.jobDescription?.raw?.children} />
+                  <RichText
+                    content={career?.jobDescription?.raw?.children}
+                    renderers={{
+                      p: ({ children }) => <p className='text-justify'>{children}</p>,
+                    }}
+                  />
                 </div>
               </div>
             </div>

@@ -31,7 +31,12 @@ const FAQs = ({ data, activeIndex }: { data: [FaqProps]; activeIndex: string }) 
                 activeIndex={activeIndex1}
                 setActiveIndex={setActiveIndex1}
               >
-                <RichText content={items?.answer?.raw?.children} />
+                <RichText
+                  content={items?.answer?.raw?.children}
+                  renderers={{
+                    p: ({ children }) => <p className='text-justify'>{children}</p>,
+                  }}
+                />
               </AccordionLayout>
             ))}
           </div>

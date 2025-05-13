@@ -252,7 +252,7 @@ const Blog = ({ article }: BlogProps) => {
                   ul: ({ children }) => <ul className='list-disc pl-6'>{children}</ul>,
                   ol: ({ children }) => <ol className='list-decimal pl-6'>{children}</ol>,
                   li: ({ children }) => <li>{children}</li>,
-                  p: ({ children }) => <p className='mb-2'>{children}</p>,
+                  p: ({ children }) => <p className='mb-2 text-justify'>{children}</p>,
                   bold: ({ children }) => <strong>{children}</strong>,
                   a: ({ children, href }) => (
                     <a href={href} className='text-blue-600 underline'>

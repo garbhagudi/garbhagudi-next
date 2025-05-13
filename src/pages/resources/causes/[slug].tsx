@@ -213,7 +213,12 @@ const Blog = ({ cause }) => {
               />
             </figure>
             <div className='text-gray-800 dark:text-gray-200'>
-              <RichText content={cause?.content?.raw?.children} />
+              <RichText
+                content={cause?.content?.raw?.children}
+                renderers={{
+                  p: ({ children }) => <p className='text-justify'>{children}</p>,
+                }}
+              />
             </div>
             <Share pinmedia={cause?.image?.url} />
           </div>
