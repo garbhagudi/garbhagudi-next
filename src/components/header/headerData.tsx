@@ -256,7 +256,7 @@ export const Location = [
     name: 'Yelahanka',
     href: '/locations/yelahanka',
     icon: <SiGooglemaps />,
-    short: 'YLA',
+    short: 'YH',
   },
   {
     name: 'Find Nearest Location',
