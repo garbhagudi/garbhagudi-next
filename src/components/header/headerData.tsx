@@ -253,6 +253,12 @@ export const Location = [
     short: 'NBV',
   },
   {
+    name: 'Yelahanka',
+    href: '/locations/yelahanka',
+    icon: <SiGooglemaps />,
+    short: 'YLA',
+  },
+  {
     name: 'Find Nearest Location',
     href: '/gg-care/search-branch-by-pincode',
     icon: <FaRoad />,
