@@ -658,6 +658,59 @@ const Doctor = ({ doctor }) => {
                                       )}
                                     </tr>
                                   )}
+                                  {(doctor.yelahankaOnline || doctor.yelahankaPhysical) && (
+                                    <tr>
+                                      <td className='whitespace-nowrap p-2'>
+                                        <div className='flex items-center'>
+                                          <div className='flex items-center justify-center font-medium'>
+                                            <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
+                                              <SiGooglemaps className='text-2xl' />
+                                            </div>
+                                            <Link href='/locations/yelahanka' passHref>
+                                              <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
+                                                Yelahanka
+                                              </span>
+                                            </Link>
+                                          </div>
+                                        </div>
+                                      </td>
+
+                                      {doctor?.yelahankaPhysical && (
+                                        <td className='whitespace-nowrap p-2'>
+                                          <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
+                                            <button>
+                                              <a
+                                                href={doctor?.yelahankaPhysical}
+                                                target='_blank'
+                                                rel='noreferrer'
+                                                hrefLang='en-us'
+                                                className='hover:underline'
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </td>
+                                      )}
+                                      {doctor?.yelahankaOnline && (
+                                        <td className='whitespace-nowrap p-2'>
+                                          <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
+                                            <button>
+                                              <a
+                                                href={doctor?.yelahankaOnline}
+                                                className='hover:underline'
+                                                target='_blank'
+                                                hrefLang='en-us'
+                                                rel='noreferrer'
+                                              >
+                                                Book Now
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </td>
+                                      )}
+                                    </tr>
+                                  )}
                                 </tbody>
                               </table>
                             </div>

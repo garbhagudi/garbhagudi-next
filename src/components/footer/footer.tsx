@@ -29,6 +29,7 @@ const navigation = {
     { name: 'Nagarbhavi', href: '/locations/nagarabhavi' },
     { name: 'New BEL road', href: '/locations/new-bel-road' },
     { name: 'Jayanagar', href: '/locations/jayanagar' },
+    { name: 'Yelahanka', href: '/locations/yelahanka' },
   ],
   resources: [
     { name: 'Fertility Experts', href: '/fertility-experts' },
