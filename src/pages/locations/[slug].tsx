@@ -53,7 +53,7 @@ const Branch = ({ branch }) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta property='og:description' content={branch?.metaDescription} />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content={branch?.branchPicture.url} />
+        <meta property='og:image' content={branch?.branchPicture?.url} />
 
         {/* Twitter*/}
 
@@ -61,7 +61,7 @@ const Branch = ({ branch }) => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={branch?.metaTitle} />
         <meta name='twitter:description' content={branch?.metaDescription} />
-        <meta name='twitter:image' content={branch?.branchPicture.url} />
+        <meta name='twitter:image' content={branch?.branchPicture?.url} />
       </Head>
       <Banner branchTitle={branch.title} />
       <TreatmentOptions branch={branch?.title} image={branch?.nabh?.url || ''} />

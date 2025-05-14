@@ -54,4 +54,9 @@ const Data = [
     title: 'Best IVF Centre in Marathahalli',
     link: '/locations/marathahalli',
   },
+  {
+    id: 6,
+    title: 'Best IVF Centre in Yelahanka',
+    link: '/locations/yelahanka',
+  },
 ];
