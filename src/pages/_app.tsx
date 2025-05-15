@@ -102,7 +102,7 @@ function MyApp({ Component, pageProps }) {
         existingScript.remove();
       }
     };
-  }, [router]);
+  }, []);
 
   //one signal code
   // useEffect(() => {
