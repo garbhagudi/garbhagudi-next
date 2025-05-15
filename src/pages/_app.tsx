@@ -8,6 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
+import FloatWhatsApp from 'components/FloatWhatsapp';
 
 // Dynamically import components
 const Footer = dynamic(() => import('components/footer/footer'), { ssr: false });
@@ -41,7 +42,8 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   const showSalesIQ = !(router.pathname === '/contact/enquiry' && isMobile);
-  const isBlogPage = router.asPath.startsWith('/blogs/');
+  const isBlogAndTreatmentPage =
+    router.asPath.startsWith('/blogs/') || router.asPath.startsWith('/treatments/');
 
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-5T77DVZ' });
@@ -62,7 +64,7 @@ function MyApp({ Component, pageProps }) {
   }, [router.events]);
 
   useEffect(() => {
-    if (isBlogPage) {
+    if (isBlogAndTreatmentPage) {
       const script = document.createElement('script');
       script.id = 'engati-bot-script';
       script.async = true;
@@ -173,7 +175,7 @@ function MyApp({ Component, pageProps }) {
             <Footer />
           </div>
         )}
-        {shouldDisplay && showSalesIQ && !isBlogPage && (
+        {shouldDisplay && showSalesIQ && !isBlogAndTreatmentPage && (
           <Salesiq
             widgetCode='93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
             domain='https://salesiq.zoho.com/widget'
@@ -182,6 +184,7 @@ function MyApp({ Component, pageProps }) {
       </ThemeProvider>
       <SpeedInsights />
       <FloatRequestCallBack />
+      <FloatWhatsApp />
       <FloatPhone />
     </RootLayout>
   );
