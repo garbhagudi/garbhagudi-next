@@ -1,6 +1,8 @@
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
 const SalesIQ = ({ widgetCode, domain, isBlogAndTreatmentPage }) => {
+  const router = useRouter();
   useEffect(() => {
     const elem = document.getElementsByClassName('zsiq_floatmain')?.[0];
     const cont = document.getElementsByClassName('zls-sptwndw ')?.[0];
@@ -33,8 +35,7 @@ const SalesIQ = ({ widgetCode, domain, isBlogAndTreatmentPage }) => {
           t.parentNode.insertBefore(s, t);
         `;
     document.body.appendChild(script);
-  }, [isBlogAndTreatmentPage]);
-  // if (!isBlogAndTreatmentPage) return null;
+  }, [isBlogAndTreatmentPage, router.asPath]);
   return null;
 };
 
