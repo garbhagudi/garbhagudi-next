@@ -346,7 +346,7 @@ const locations = [
   {
     id: '8',
     name: 'Yelahanka',
-    image: 'https://media.graphassets.com/UK6hOwG1Q02lMszniXIE',
+    image: 'https://media.graphassets.com/9pZ6WLkfT3qBNpJGDzD4',
     zipCode: '560064',
     address: (
       <div>
