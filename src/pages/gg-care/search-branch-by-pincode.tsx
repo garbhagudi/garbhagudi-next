@@ -4,7 +4,16 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 // List of available zipcodes
-const availableZipcodes = ['560050', '560043', '560004', '560100', '560037', '560094', '560072'];
+const availableZipcodes = [
+  '560050',
+  '560043',
+  '560004',
+  '560100',
+  '560037',
+  '560094',
+  '560072',
+  '560064',
+];
 
 interface Coordinates {
   latitude: number;
