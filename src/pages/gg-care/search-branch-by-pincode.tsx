@@ -343,4 +343,18 @@ const locations = [
     phone: '+91 9886 9886 65',
     directionLink: 'https://goo.gl/maps/6ZCKzTrmE3UzgFuS7',
   },
+  {
+    id: '8',
+    name: 'Yelahanka',
+    image: 'https://media.graphassets.com/UK6hOwG1Q02lMszniXIE',
+    zipCode: '560064',
+    address: (
+      <div>
+        <p>Pyramid North Square, S-1, 520/432, Bellary Road, Nehru Nagar, Yelahanka Hobli</p>
+        <p className='mb-5 mt-1'>Bengaluru, Karnataka 560064</p>
+      </div>
+    ),
+    phone: '+91 9108 9108 32',
+    directionLink: 'https://maps.app.goo.gl/GSj2ctaQ347UhCS67',
+  },
 ];
