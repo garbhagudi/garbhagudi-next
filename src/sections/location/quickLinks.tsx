@@ -55,7 +55,12 @@ const Data = [
     link: '/locations/marathahalli',
   },
   {
-    id: 6,
+    id: 7,
+    title: 'Best IVF Centre in New BEL Road',
+    link: '/locations/new-bel-road',
+  },
+  {
+    id: 8,
     title: 'Best IVF Centre in Yelahanka',
     link: '/locations/yelahanka',
   },

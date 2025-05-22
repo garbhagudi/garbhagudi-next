@@ -99,6 +99,30 @@ const data = [
               Marathahalli
             </Link>
           </li>
+          <li>
+            <Link
+              href={'/locations/nagarbhavi'}
+              className='hover:underlink text-brandPurpleDark hover:text-brandPink'
+            >
+              Nagarbhavi
+            </Link>
+          </li>
+          <li>
+            <Link
+              href={'/locations/new-bel-road'}
+              className='hover:underlink text-brandPurpleDark hover:text-brandPink'
+            >
+              New BEL road
+            </Link>
+          </li>
+          <li>
+            <Link
+              href={'/locations/yelahanka'}
+              className='hover:underlink text-brandPurpleDark hover:text-brandPink'
+            >
+              Yelahanka
+            </Link>
+          </li>
         </ul>
       </div>
     ),

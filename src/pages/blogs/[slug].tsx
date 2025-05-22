@@ -1,13 +1,13 @@
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import { useRouter } from 'next/router';
 import { gql } from '@apollo/client';
+import Image from 'next/image';
 import Head from 'next/head';
 import apolloClient from 'lib/apollo-graphcms';
 import { throttledFetch } from 'lib/throttle';
 import dynamic from 'next/dynamic';
 import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 import { useState } from 'react';
-import BlogImage from 'components/BlogImage';
 const Error = dynamic(() => import('next/error'));
 const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
@@ -107,17 +107,12 @@ const Blog = ({ blog }) => {
   function close() {
     setIsOpen(false);
   }
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
   return (
     <>
       <div>
         <Head>
           {/* Preload the main image */}
-          <link
-            rel='preload'
-            href={`${blog?.image?.url}?w=${isMobile ? 400 : 800}&auto=format`}
-            as='image'
-          />
+          <link rel='preload' href={blog?.image?.url} as='image' />
           <link rel='dns-prefetch' href='https://media.graphassets.com' />
           {/* Primary Tags */}
           <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -268,13 +263,14 @@ const Blog = ({ blog }) => {
                     Disclaimer
                   </div>
                 </h1>
-                <BlogImage
-                  src={`${blog?.image?.url}?w=${isMobile ? 400 : 800}&auto=format`}
+                <Image
+                  className='my-8 w-full rounded-lg'
+                  src={blog?.image?.url}
                   alt={blog?.title}
-                  width={1200}
-                  height={630}
+                  width={500}
+                  height={500}
+                  priority={true}
                 />
-
                 <div className='text-gray-800 dark:text-gray-200'>
                   <RichText
                     content={clonedContent?.children}
