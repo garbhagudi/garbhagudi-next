@@ -185,4 +185,17 @@ const Data = [
     address: <span>80 Feet Main Rd, 2 Stage, Naagarabhaavi, Bengaluru, Karnataka 560072</span>,
     link: 'https://www.google.com/maps/place/GarbhaGudi+IVF+Centre,+Nagarbhavi,+80+Feet+Main+Rd,+2+Stage,+Naagarabhaavi,+Bengaluru,+Karnataka+560072/@12.961096,77.5109731,19z/data=!4m6!3m5!1s0x3bae3fcd6ee8ee57:0x2b5769e83d027d93!8m2!3d12.961096!4d77.5109735!16s%2Fg%2F11ty4tr17s',
   },
+  {
+    id: 8,
+    branch: 'Yelahanka',
+    map: 'https://maps.app.goo.gl/GSj2ctaQ347UhCS67',
+    phone: '+91 9108 9108 32',
+    address: (
+      <span>
+        Pyramid North Square, S-1, 520/432, Bellary Road, Nehru Nagar, Yelahanka Hobli, Bengaluru,
+        Karnataka 560064
+      </span>
+    ),
+    link: 'https://www.google.com/maps/place/GarbhaGudi+IVF+Centre,+Yelahanka/@13.0972851,77.595591,17z/data=!3m1!4b1!4m15!1m8!3m7!1s0x3bae1967f7537aa5:0x22df6e1d1a01b7f!2sGarbhaGudi+IVF+Centre,+Yelahanka!8m2!3d13.0972799!4d77.5981659!10e1!16s%2Fg%2F11x1pmb_3f!3m5!1s0x3bae1967f7537aa5:0x22df6e1d1a01b7f!8m2!3d13.0972799!4d77.5981659!16s%2Fg%2F11x1pmb_3f?entry=ttu&g_ep=EgoyMDI1MDUxNS4xIKXMDSoASAFQAw%3D%3D',
+  },
 ];
