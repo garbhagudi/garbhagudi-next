@@ -1,7 +1,6 @@
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import { useRouter } from 'next/router';
 import { gql } from '@apollo/client';
-import Image from 'next/image';
 import Head from 'next/head';
 import apolloClient from 'lib/apollo-graphcms';
 import { throttledFetch } from 'lib/throttle';
