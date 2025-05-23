@@ -2,7 +2,7 @@
 
 module.exports = {
   siteUrl: process.env.SITE_URL,
-  generateIndexSitemap: false,
+  generateIndexSitemap: true,
   generateRobotsTxt: false,
   sitemapSize: 5000,
   priority: '0.8',
