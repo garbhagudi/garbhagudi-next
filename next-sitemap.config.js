@@ -5,8 +5,16 @@ module.exports = {
   generateIndexSitemap: true,
   generateRobotsTxt: false,
   sitemapSize: 5000,
-  priority: '0.8',
+  changefreq: 'daily',
+  priority: 0.8,
+  exclude: ['/admin/*', '/api/*'],
   robotsTxtOptions: {
-    policies: [{ userAgent: '*', allow: '/', disallow: '/?*' }],
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/?*'],
+      },
+    ],
   },
 };

@@ -7,7 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "postbuild": "next-sitemap --config next-sitemap.config.js"
+   "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@apollo/client": "^3.12.11",
