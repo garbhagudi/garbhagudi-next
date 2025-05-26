@@ -5,17 +5,17 @@ import Link from 'next/link';
 const metrics = [
   {
     id: 1,
-    stat: '10500+',
+    stat: '11,000+',
     emphasis: 'Happy Families',
   },
   {
     id: 2,
-    stat: '220+',
+    stat: '360+',
     emphasis: 'Free Fertility Awareness Camps',
   },
   {
     id: 3,
-    stat: '7',
+    stat: '8',
     emphasis: 'Infertility Centres Across Bangalore',
   },
   {
