@@ -6,6 +6,7 @@ node_modules
 .pnp.js
 .env
 package-lock.json
+/src/scripts/generate-sitemap.mjs
 
 # testing
 /coverage
