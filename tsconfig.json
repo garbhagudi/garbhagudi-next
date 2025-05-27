@@ -20,6 +20,6 @@
   "paths": {
     "@/*": ["./src/*"]
   },
-  "include": ["types","next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", ".next/types/**/*.ts", "next.config.mjs"],
+  "include": ["types","next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", ".next/types/**/*.ts", "next.config.mjs", "src/scripts/generate-sitemap.mjs"],
   "exclude": ["node_modules"]
 }

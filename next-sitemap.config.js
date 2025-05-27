@@ -2,7 +2,7 @@
 
 module.exports = {
   siteUrl: process.env.SITE_URL,
-  generateIndexSitemap: true,
+  generateIndexSitemap: false,
   generateRobotsTxt: false,
   sitemapSize: 5000,
   changefreq: 'daily',
