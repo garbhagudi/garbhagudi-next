@@ -1,17 +1,15 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import Header from 'sections/LandingPages/unbounce/header';
 
 // Dynamically import the components without SSR
-const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
+const LPACta = dynamic(() => import('components/LPACta'), { ssr: false });
 const CallToAction = dynamic(() => import('sections/misc/iui-main/CallToAction'), { ssr: false });
-const Advantages = dynamic(() => import('sections/misc/iui-main/adv-disadv'), { ssr: false });
 const Banner = dynamic(() => import('sections/misc/iui-main/banner'), { ssr: true });
 const Content = dynamic(() => import('sections/misc/iui-main/content'), { ssr: false });
 const Cost = dynamic(() => import('sections/misc/iui-main/cost'), { ssr: false });
 const Faq = dynamic(() => import('sections/misc/iui-main/faq'), { ssr: false });
 const ContentXtra = dynamic(() => import('sections/misc/iui-main/more-content'), { ssr: false });
-const OurCentres = dynamic(() => import('sections/misc/iui-main/our-centres'), { ssr: false });
-const Risks = dynamic(() => import('sections/misc/iui-main/risks'), { ssr: false });
 
 const Iui = () => {
   function addReviewJsonLd() {
@@ -230,16 +228,14 @@ const Iui = () => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp'
         />
       </Head>
+      <Header />
       <Banner />
       <Content />
       <ContentXtra />
-      <OurCentres />
       <CallToAction />
       <Cost />
       <Faq />
-      <Risks />
-      <Advantages />
-      <Cta />
+      <LPACta />
     </div>
   );
 };
