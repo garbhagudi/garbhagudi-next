@@ -31,7 +31,9 @@ function MyApp({ Component, pageProps }) {
     '/lp/itwmedia/enquiry',
     '/lp/newsfirstdigital/enquiry',
     '/lp/egg-freezing',
+    '/treatments/iui-treatment-in-bangalore',
   ];
+  const iuiTreatmentPage = router.pathname === '/treatments/iui-treatment-in-bangalore';
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
@@ -64,7 +66,7 @@ function MyApp({ Component, pageProps }) {
   }, [router.events]);
 
   useEffect(() => {
-    if (isBlogAndTreatmentPage) {
+    if (isBlogAndTreatmentPage && !iuiTreatmentPage) {
       const script = document.createElement('script');
       script.id = 'engati-bot-script';
       script.async = true;
@@ -127,7 +129,7 @@ function MyApp({ Component, pageProps }) {
           <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
             {shouldDisplay && <Nav />}
             <Component {...pageProps} />
-            <Footer />
+            {!iuiTreatmentPage && <Footer />}
           </div>
         )}
         {shouldDisplay && showSalesIQ && !isBlogAndTreatmentPage && (
@@ -139,7 +141,7 @@ function MyApp({ Component, pageProps }) {
       </ThemeProvider>
       <SpeedInsights />
       <FloatRequestCallBack />
-      <FloatWhatsApp />
+      {!iuiTreatmentPage && <FloatWhatsApp />}
       <FloatPhone />
     </RootLayout>
   );
