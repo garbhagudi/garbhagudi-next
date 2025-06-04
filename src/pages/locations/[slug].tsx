@@ -10,7 +10,6 @@ const MapSection = dynamic(() => import('sections/location/mapSection'), { ssr: 
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Faq = dynamic(() => import('sections/location/faq'), { ssr: false });
 const VirtualTour = dynamic(() => import('sections/location/virtualTour'), { ssr: false });
-const QuickLinks = dynamic(() => import('sections/location/quickLinks'), { ssr: false });
 
 const Branch = ({ branch }) => {
   const router = useRouter();
@@ -73,13 +72,12 @@ const Branch = ({ branch }) => {
         title={branch?.title}
       />
       <Cta />
-      <Faq branch={branch?.title} doctors={branch.doctors} />
+      <Faq branch={branch?.title} />
       <VirtualTour
         link1={branch?.virtualTourLink1}
         link2={branch?.virtualTourLink2}
         link3={branch?.virtualTourLink3}
       />
-      <QuickLinks />
     </div>
   );
 };

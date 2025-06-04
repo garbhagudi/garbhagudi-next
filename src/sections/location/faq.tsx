@@ -1,8 +1,7 @@
 import { contactData } from 'sections/gg-care/content';
 import Link from 'next/link';
-import Image from 'next/image';
 
-const Faq = ({ branch, doctors }) => {
+const Faq = ({ branch }) => {
   return (
     <div>
       <section className='mx-auto max-w-7xl pt-8 font-content'>
@@ -11,44 +10,6 @@ const Faq = ({ branch, doctors }) => {
             Frequently Asked Questions
           </h2>
           <div className='divide-y divide-gray-700 dark:divide-gray-600'>
-            <div className='space-y-2 py-6 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
-              <h3 className='font-semibold md:col-span-4'>
-                Doctors available at GarbhaGudi, {branch}?
-              </h3>
-              <div className='md:col-span-8 md:pl-0'>
-                <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-                  {doctors?.map((item) => (
-                    <div
-                      className='mb-2 flex transform flex-col items-center justify-start text-center transition-all duration-500 ease-in-out hover:scale-105'
-                      key={item?.id}
-                    >
-                      <Link href={`/fertility-experts/${item?.slug}`} passHref>
-                        <div className='space-y-4'>
-                          <div className='relative mx-auto h-32 w-32'>
-                            <div className='bg-[length: 400%] absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
-                            <Image
-                              className='rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
-                              src={item?.image?.url}
-                              alt={item?.name}
-                              width={500}
-                              height={500}
-                            />
-                          </div>
-                          <div className='space-y-4'>
-                            <div className='space-y-1 text-lg font-medium leading-6'>
-                              <h3 className='text-brandDark font-content'>{item?.name}</h3>
-                              <p className='font-content text-xs text-brandPink'>
-                                {item?.designation}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
             <div className='space-y-2 py-6 md:grid md:grid-cols-12 md:gap-8 md:space-y-0'>
               <h3 className='font-semibold md:col-span-4'>
                 How to contact GarbhaGudi IVF Centre in {branch}?
