@@ -1,9 +1,5 @@
-# *
 User-agent: *
-Allow: /
+Disallow:
 
-# Host
-Host: https://www.garbhagudi.com
-
-# Sitemaps
 Sitemap: https://www.garbhagudi.com/sitemap.xml
+
