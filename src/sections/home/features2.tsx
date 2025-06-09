@@ -14,7 +14,7 @@ const features = [
     name: 'World Class Fertility Care',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840286/Icons/Features/World_Class_Fertility_Care_un83f6.svg',
     content:
-      'GarbhaGudi is Proud to have played a key role in bringing more than 8,500+ babies into the world since 2011.',
+      'GarbhaGudi is Proud to have played a key role in bringing more than 11,000+ babies into the world since 2011.',
     link: '/features/world-class-fertility-care',
   },
   {

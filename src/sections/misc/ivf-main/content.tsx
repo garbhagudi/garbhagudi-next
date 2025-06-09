@@ -15,18 +15,18 @@ const Content = () => {
                   GarbhaGudi IVF Centre is a leading fertility clinic in Bangalore that provides a
                   wide range of fertility treatments, including IVF treatment in Bangalore. IVF, or
                   In vitro fertilization, is a popular assisted reproductive technology (ART) that
-                  helps couples who are struggling with infertility
+                  helps couples who are struggling with infertility to conceive.
                   <br />
                   <br />
-                  to conceive. IVF or In Vitro Fertilization is one of the more widely known types
-                  of Assisted Reproductive Techniques (ART). It involves retrieving eggs from the
-                  woman's ovaries and fertilizing them with sperm in a laboratory dish. The
-                  resulting embryos are then transferred back into the woman's uterus in the hope of
-                  achieving a successful pregnancy. GarbhaGudi IVF center offers state-of-the-art
-                  facilities and a team of experienced doctors and embryologists who work together
-                  to provide personalized care and support to couples undergoing IVF in Bangalore.
-                  With the help of IVF, couples struggling with infertility can have a chance to
-                  conceive and start a family.
+                  IVF or In Vitro Fertilization is one of the more widely known types of Assisted
+                  Reproductive Techniques (ART). It involves retrieving eggs from the woman's
+                  ovaries and fertilizing them with sperm in a laboratory dish. The resulting
+                  embryos are then transferred back into the woman's uterus in the hope of achieving
+                  a successful pregnancy. GarbhaGudi IVF center offers state-of-the-art facilities
+                  and a team of experienced doctors and embryologists who work together to provide
+                  personalized care and support to couples undergoing IVF in Bangalore. With the
+                  help of IVF, couples struggling with infertility can have a chance to conceive and
+                  start a family.
                 </p>
                 <p>
                   IVF treatment in Bangalore is a multi-step process that involves several stages,
