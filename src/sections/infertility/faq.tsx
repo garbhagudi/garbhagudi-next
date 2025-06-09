@@ -80,7 +80,7 @@ const data = [
   },
   {
     id: 9,
-    Question: 'How long does it take time to get pregnant after fertility treatment?',
+    Question: 'How long does it take to get pregnant after fertility treatment?',
     Answer:
       "The time it takes to get pregnant after fertility treatment can vary widely depending on the specific treatment, individual factors, and the success of the treatment. Some couples may achieve pregnancy in the first treatment cycle, while others may require multiple cycles. For example, in IVF, it typically takes a few weeks for the entire treatment cycle, from ovarian stimulation to embryo transfer. After the embryo transfer, it can take around 10-14 days to determine if the treatment was successful through a pregnancy test. However, it's important to note that not all fertility treatments result in pregnancy, and some individuals or couples may require more time or adjustments to their treatment plan.",
   },
