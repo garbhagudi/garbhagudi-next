@@ -97,9 +97,7 @@ const Content = () => {
               One full IVF cycle takes about three weeks but sometimes the procedure is split into
               parts, to manage certain challenges in the couples. This may delay the process. IVF
               can be done using the woman’s eggs and the male partner’s sperm or it may involve
-              sperm, eggs or embryos from anonymous donors. Sometimes a gestational carrier (a woman
-              who has an embryo implanted in her uterus) might be used. Such a carrier is called a
-              surrogate mother and the process is called surrogacy.
+              sperm, eggs or embryos from anonymous donors.
               <br />
               <br />
               At GarbhaGudi IVF Centre, we are committed to providing the best IVF treatment in
@@ -119,8 +117,10 @@ const Content = () => {
               IVF Centre can help. Our experienced fertility specialists will work with you every
               step of the way to help you achieve your dream of starting or growing your family.
               GarbhaGudi offers multiple oprions to make IVF treatment cost in Bangalore as
-              affordable as possible Contact us today to schedule a consultation and learn more
-              about how we can help you on your fertility journey.
+              affordable as possible.
+              <br />
+              Contact us today to schedule a consultation and learn more about how we can help you
+              on your fertility journey.
             </div>
           </div>
         </div>

@@ -56,8 +56,8 @@ const data = [
         end. We strive tirelessly to assist you to treasure the golden moment of holding your little
         bundles of joy. <br />
         <br /> You no longer need to go long distances for fertility treatments! GarbhaGudi now has
-        five strategically positioned branches in Bengaluru and wants to expand to additional places
-        in the near future. Our branches are located in
+        eight strategically positioned branches in Bengaluru and wants to expand to additional
+        places in the near future. Our branches are located in
         <ul className='mt-4 space-y-2'>
           <li>
             <Link
