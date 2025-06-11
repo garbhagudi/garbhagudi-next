@@ -5,7 +5,7 @@ const ParagraphSection = () => {
     <div>
       <h2 className='text-xl font-bold'>Holistic approach to fertility</h2>
       <p className='text-gray-800 dark:text-gray-200'>
-        At Garbhagudi, we integrate the tri-fold path of yoga, nutrition, and Ayurveda with advanced
+        At GarbhaGudi, we integrate the tri-fold path of yoga, nutrition, and Ayurveda with advanced
         medical treatments to enhance fertility. This unique approach not only supports your
         physical health but also nurtures your mental and emotional well-being, creating an optimal
         environment for conception.

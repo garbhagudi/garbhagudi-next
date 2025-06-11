@@ -28,7 +28,7 @@ export default function LandingPage({ doctors }) {
         />
         <meta
           name='description'
-          content='Get expert fertility care at Garbhagudi IVF. Personalized treatment, trusted specialists. Fill the form & start your parenthood journey today!'
+          content='Get expert fertility care at GarbhaGudi IVF. Personalized treatment, trusted specialists. Fill the form & start your parenthood journey today!'
         />
 
         {/* Open Graph / Facebook */}
@@ -41,7 +41,7 @@ export default function LandingPage({ doctors }) {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='Get expert fertility care at Garbhagudi IVF. Personalized treatment, trusted specialists. Fill the form & start your parenthood journey today!'
+          content='Get expert fertility care at GarbhaGudi IVF. Personalized treatment, trusted specialists. Fill the form & start your parenthood journey today!'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -59,7 +59,7 @@ export default function LandingPage({ doctors }) {
         />
         <meta
           name='twitter:description'
-          content='Get expert fertility care at Garbhagudi IVF. Personalized treatment, trusted specialists. Fill the form & start your parenthood journey today!'
+          content='Get expert fertility care at GarbhaGudi IVF. Personalized treatment, trusted specialists. Fill the form & start your parenthood journey today!'
         />
         <meta
           name='twitter:image'

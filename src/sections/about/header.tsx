@@ -49,7 +49,7 @@ const Header = () => {
         <div className='mx-auto flex max-w-7xl flex-col items-center py-4 md:flex-row lg:justify-between'>
           <div className='w-full py-10 text-center md:w-3/4 md:text-left'>
             <div className='font-heading text-2xl font-bold tracking-tight text-gg-500 dark:text-gg-400 md:text-3xl'>
-              Discover the Garbhagudi Way
+              Discover the GarbhaGudi Way
             </div>
             <div className='mt-3 font-content text-base font-semibold text-gray-800 dark:text-gray-200 md:text-lg'>
               Discover our values and how we operate as an organization. Gain insight into our

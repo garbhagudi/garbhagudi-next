@@ -77,7 +77,7 @@ const Plans = () => {
               />
               <h5 className='text-xl font-semibold text-gg-500'>Infertility Treatment</h5>
               <p className='font-light'>
-                Garbhagudi IVF Centre - Your Path to Parenthood Begins Here. Discover Advanced
+                GarbhaGudi IVF Centre - Your Path to Parenthood Begins Here. Discover Advanced
                 Infertility Treatments in Bangalore Today!
               </p>
             </div>

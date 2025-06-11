@@ -88,13 +88,13 @@ const data = [
     id: 1,
     name: 'Anjali Shivarkar',
     review:
-      'Garbhagudi is a hope to any couple. They provide the best service. Doctors are very well-experienced and truly amazing in their work. Very well-maintained center. Staffs are well trained and they are very supportive throughout the treatment journey with constant follow-up calls. highly recommended. Keep up the same spirit.',
+      'GarbhaGudi is a hope to any couple. They provide the best service. Doctors are very well-experienced and truly amazing in their work. Very well-maintained center. Staffs are well trained and they are very supportive throughout the treatment journey with constant follow-up calls. highly recommended. Keep up the same spirit.',
   },
   {
     id: 2,
     name: 'Kavitha G',
     review:
-      'I am very happy that I visited garbhagudi hospital, they provided the best treatment.. Doctors are very supportive in my treatment she explained all medical details, she is to friendly and took at most care and responsibility towards my pregnancy, all sister and staff took good responsibility and supported us very well we got positive results from IVF treatment and waiting for a lifetime gift that we received from Garbhagudi team .... We wholeheartedly are very thankful to Dr Asha mam, Dr. Anitha mam and the entire team of GARBHAGUDI 🙏❤️',
+      'I am very happy that I visited garbhagudi hospital, they provided the best treatment.. Doctors are very supportive in my treatment she explained all medical details, she is to friendly and took at most care and responsibility towards my pregnancy, all sister and staff took good responsibility and supported us very well we got positive results from IVF treatment and waiting for a lifetime gift that we received from GarbhaGudi team .... We wholeheartedly are very thankful to Dr Asha mam, Dr. Anitha mam and the entire team of GARBHAGUDI 🙏❤️',
   },
   {
     id: 3,
@@ -118,7 +118,7 @@ const data = [
     id: 6,
     name: 'Sonal Thorat',
     review:
-      'I cannot express how much thankful I am to the entire team of Garbhagudi hospital. We got positive results in the first visit itself. Front desk staff nurses and doctors all are very cooperative. I request to visit this branch once if you are struggling with infertility issues. And one of the best things is the front desk team will follow up with you give reminders for all visits and scans.. overall 10/10 !!!',
+      'I cannot express how much thankful I am to the entire team of GarbhaGudi hospital. We got positive results in the first visit itself. Front desk staff nurses and doctors all are very cooperative. I request to visit this branch once if you are struggling with infertility issues. And one of the best things is the front desk team will follow up with you give reminders for all visits and scans.. overall 10/10 !!!',
   },
   {
     id: 7,
@@ -130,18 +130,18 @@ const data = [
     id: 8,
     name: 'Sameekshya Pattnaik',
     review:
-      'I am very happy to visit Garbha Gudi. I would say that they do miracles here. After trying for more than a year and tired of visiting doctors and clinics, I got to know about this place. The doctors and staff are really good, they understand the mental trauma of a couple and they give real mental support to go through all of these. I got my positive pregnancy with their treatment. They have transparency of what treatment they are giving and why. I am forever grateful to Garbhagudi and the staff. I would suggest all the couples who are trying to conceive must visit here once. Thank you Garbha Gudi for giving me the gift of life.',
+      'I am very happy to visit GarbhaGudi. I would say that they do miracles here. After trying for more than a year and tired of visiting doctors and clinics, I got to know about this place. The doctors and staff are really good, they understand the mental trauma of a couple and they give real mental support to go through all of these. I got my positive pregnancy with their treatment. They have transparency of what treatment they are giving and why. I am forever grateful to GarbhaGudi and the staff. I would suggest all the couples who are trying to conceive must visit here once. Thank you GarbhaGudi for giving me the gift of life.',
   },
   {
     id: 9,
     name: 'Manikandan Hariharan',
     review:
-      "Extremely happy today. My wife is 90 days pregnant. The timely follow-ups with the treatment made by the doctor and her team is highly appreciated, without which the end result might not have been possible. Also, the hospital won't levy unnecessary treatment costs or treatments. Every procedure had its own cause and a good outcome. I strongly recommend this Garbhagudi Marathahalli branch for those who are dealing with infertility issues.",
+      "Extremely happy today. My wife is 90 days pregnant. The timely follow-ups with the treatment made by the doctor and her team is highly appreciated, without which the end result might not have been possible. Also, the hospital won't levy unnecessary treatment costs or treatments. Every procedure had its own cause and a good outcome. I strongly recommend this GarbhaGudi Marathahalli branch for those who are dealing with infertility issues.",
   },
   {
     id: 10,
     name: 'Prathap Kumar',
     review:
-      'I would really recommend Garbhagudi IVF for people who want to have a baby. It was really an amazing experience having babies. Yes, it was hard initially but it brought so much happiness after we had our babies. Thank you very much Garbhagudi IVF and thanks to the team & staff. Brilliant guidance. Amazing team. No words to describe... Thank you so much Team Garbhagudi IVF.',
+      'I would really recommend GarbhaGudi IVF for people who want to have a baby. It was really an amazing experience having babies. Yes, it was hard initially but it brought so much happiness after we had our babies. Thank you very much GarbhaGudi IVF and thanks to the team & staff. Brilliant guidance. Amazing team. No words to describe... Thank you so much Team GarbhaGudi IVF.',
   },
 ];

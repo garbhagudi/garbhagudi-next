@@ -32,7 +32,7 @@ export default function LandingPage({ doctors }) {
         />
         <meta
           name='description'
-          content='Get expert infertility treatment at Garbhagudi IVF. Trusted care, advanced tech & high success rates. Book your consultation now for personalized support!'
+          content='Get expert infertility treatment at GarbhaGudi IVF. Trusted care, advanced tech & high success rates. Book your consultation now for personalized support!'
         />
 
         {/* Open Graph / Facebook */}
@@ -45,7 +45,7 @@ export default function LandingPage({ doctors }) {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='Get expert infertility treatment at Garbhagudi IVF. Trusted care, advanced tech & high success rates. Book your consultation now for personalized support!'
+          content='Get expert infertility treatment at GarbhaGudi IVF. Trusted care, advanced tech & high success rates. Book your consultation now for personalized support!'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -63,7 +63,7 @@ export default function LandingPage({ doctors }) {
         />
         <meta
           name='twitter:description'
-          content='Get expert infertility treatment at Garbhagudi IVF. Trusted care, advanced tech & high success rates. Book your consultation now for personalized support!'
+          content='Get expert infertility treatment at GarbhaGudi IVF. Trusted care, advanced tech & high success rates. Book your consultation now for personalized support!'
         />
         <meta
           name='twitter:image'

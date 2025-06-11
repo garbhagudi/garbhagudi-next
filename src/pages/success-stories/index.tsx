@@ -40,7 +40,7 @@ const IndexPage = () => {
     fetchData();
   }, [currentPageNumber, pageToken]);
   const description =
-    'Garbhagudi IVF is the #1 choice for the best IVF Centre. It is leading chain of infertility treatment & has vision to be the best-in-class for infertility clinics';
+    'GarbhaGudi IVF is the #1 choice for the best IVF Centre. It is leading chain of infertility treatment & has vision to be the best-in-class for infertility clinics';
   return (
     <>
       {successStoriesData ? (
@@ -53,7 +53,7 @@ const IndexPage = () => {
             <meta property='og:title' content='GarbhaGudi IVF Success Stories' />
             <meta name='description' content={description} />
             <meta property='og:description' content={description} />
-            <meta name='keywords' content='Garbhagudi IVF,Sucess stories' />
+            <meta name='keywords' content='GarbhaGudi IVF,Sucess stories' />
 
             {/* Ld+JSON Data */}
 

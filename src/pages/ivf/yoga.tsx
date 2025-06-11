@@ -31,16 +31,16 @@ const Yoga: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Yoga for IVF Success: Boost Fertility with Garbhagudi</title>
+        <title>Yoga for IVF Success: Boost Fertility with GarbhaGudi</title>
         <meta
           name='description'
-          content='Join the 21 Day Yoga Challenge by Garbhagudi to boost fertility and wellness naturally. Start your transformation today—visit now to learn more!'
+          content='Join the 21 Day Yoga Challenge by GarbhaGudi to boost fertility and wellness naturally. Start your transformation today—visit now to learn more!'
         />
-        <meta name='title' content='Yoga for IVF Success: Boost Fertility with Garbhagudi' />
-        <meta name='og:title' content='Yoga for IVF Success: Boost Fertility with Garbhagudi' />
+        <meta name='title' content='Yoga for IVF Success: Boost Fertility with GarbhaGudi' />
+        <meta name='og:title' content='Yoga for IVF Success: Boost Fertility with GarbhaGudi' />
         <meta
           name='og:description'
-          content='Join the 21 Day Yoga Challenge by Garbhagudi to boost fertility and wellness naturally. Start your transformation today—visit now to learn more!'
+          content='Join the 21 Day Yoga Challenge by GarbhaGudi to boost fertility and wellness naturally. Start your transformation today—visit now to learn more!'
         />
       </Head>
       <Header />

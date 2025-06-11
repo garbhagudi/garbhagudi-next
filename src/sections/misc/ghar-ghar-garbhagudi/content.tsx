@@ -20,7 +20,7 @@ export const ContentOne = () => {
           <div className='flex flex-col items-center justify-start space-y-3 font-content text-lg'>
             <p>
               Infertility is not a curse; modern medical treatments can fulfill every woman's dream
-              of motherhood. To make this dream a reality, Garbhagudi IVF Centre offers cutting-edge
+              of motherhood. To make this dream a reality, GarbhaGudi IVF Centre offers cutting-edge
               IVF and IUI services, led by a team of skilled doctors dedicated to bringing happiness
               to families.
             </p>
@@ -61,7 +61,7 @@ export const ContentTwo = () => {
           <ul className='list-outside list-disc space-y-2 text-lg'>
             <li>
               If you're aware of any childless couples in your neighborhood, family, or among your
-              acquaintances who may benefit from the services of Garbhagudi IVF Centre, please let
+              acquaintances who may benefit from the services of GarbhaGudi IVF Centre, please let
               them know about us.
             </li>
             <li>
@@ -74,7 +74,7 @@ export const ContentTwo = () => {
             </li>
             <li>
               We encourage you to capture photos and videos of our campaign activities and share
-              them on social media using hashtags #GharGharGarbhagudi and #GarbhagudiIVFCentre.
+              them on social media using hashtags #GharGharGarbhaGudi and #GarbhaGudiIVFCentre.
               Additionally, send your content to us via WhatsApp at{' '}
               <a
                 href='https://wa.me/919108910832'
@@ -87,7 +87,7 @@ export const ContentTwo = () => {
             <li>
               If you have information about childless couples, their contact numbers, or any
               questions they may have, kindly jot it down on the enclosed card along with this
-              pamphlet. Send the card to Garbhagudi IVF Centre at the following address:{' '}
+              pamphlet. Send the card to GarbhaGudi IVF Centre at the following address:{' '}
               <span className='font-semibold'>
                 41, 2nd Floor, Shubhashree Pride, South End Road, next to Bharathi Nursing Home,
                 Tata Silk Farm, Basavanagudi, Bangalore - 560004.
@@ -96,8 +96,8 @@ export const ContentTwo = () => {
             <li>We appreciate your support in mailing the card to the address mentioned above.</li>
           </ul>
           <div className='mt-2 text-lg'>
-            Thank you for helping us spread the message of hope and parenthood with Garbhagudi IVF
-            Centre's 'Ghar Ghar Garbhagudi' campaign!
+            Thank you for helping us spread the message of hope and parenthood with GarbhaGudi IVF
+            Centre's 'Ghar Ghar GarbhaGudi' campaign!
           </div>
         </div>
         <div className='flex items-center justify-center md:w-1/2'>

@@ -44,7 +44,7 @@ const IndexPage = ({ branches }: Branches) => {
         <meta name='title' content='Best IVF Specialist in Bangalore' />
         <meta
           name='description'
-          content='Garbhagudi Hospital has the best team of highly experienced IVF doctors in Bangalore. Our Ivf specialists provide a High Success Rate. Book an appointment with the best IVF doctors in Bangalore today!'
+          content='GarbhaGudi Hospital has the best team of highly experienced IVF doctors in Bangalore. Our Ivf specialists provide a High Success Rate. Book an appointment with the best IVF doctors in Bangalore today!'
         />
 
         {/* Open Graph / Facebook */}

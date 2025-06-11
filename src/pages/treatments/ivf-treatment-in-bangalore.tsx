@@ -231,7 +231,7 @@ const Ivf = () => {
         />
         {/* Open Graph / Facebook */}
 
-        <meta property='og:title' content='Best IVF Treatment In Bangalore | Garbhagudi ' />
+        <meta property='og:title' content='Best IVF Treatment In Bangalore | GarbhaGudi ' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta

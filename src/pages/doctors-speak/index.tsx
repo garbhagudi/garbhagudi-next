@@ -39,7 +39,7 @@ const IndexPage = () => {
     fetchData();
   }, [currentPageNumber, pageToken]);
   const description =
-    'Doctors at Garbhagudi IVF Centre provide information about male and female fertility concerns, as well as the therapies required for a healthy pregnancy.';
+    'Doctors at GarbhaGudi IVF Centre provide information about male and female fertility concerns, as well as the therapies required for a healthy pregnancy.';
   return (
     <>
       {doctorsSpeakData ? (
@@ -52,7 +52,7 @@ const IndexPage = () => {
             <meta property='og:title' content='Doctors Speak | GarbhaGudi IVF' />
             <meta name='description' content={description} />
             <meta property='og:description' content={description} />
-            <meta name='keywords' content='Garbhagudi IVF,Doctors Speak' />
+            <meta name='keywords' content='GarbhaGudi IVF,Doctors Speak' />
 
             {/* Ld+JSON Data */}
 

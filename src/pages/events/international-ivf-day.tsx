@@ -18,7 +18,7 @@ const BranchEvent = dynamic(() => import('sections/misc/international-ivf-day/Br
 });
 
 const Page = () => {
-  const title = `Celebrate International IVF Day with Garbhagudi - Expert Care`;
+  const title = `Celebrate International IVF Day with GarbhaGudi - Expert Care`;
   const desc = `Celebrate International IVF Day with GarbhaGudi! Explore our special events & advancements in IVF. Join us to empower fertility journeys. Visit now!`;
   return (
     <div>
@@ -43,7 +43,7 @@ const Page = () => {
         <div className='relative px-4 sm:px-6 lg:px-8'>
           <div className='mx-auto max-w-7xl'>
             <h1 className='mt-4 block text-center font-heading text-2xl font-bold leading-8 tracking-tight text-gray-800 dark:text-gray-200 sm:text-4xl'>
-              Celebrate International IVF Day with Garbhagudi
+              Celebrate International IVF Day with GarbhaGudi
             </h1>
             <p className='text-center text-gray-600 dark:text-gray-400'>
               Discover the confluence of science and Indic wisdom to enhance fertility.
