@@ -1,5 +1,5 @@
 import GarbhaGudiFullC from 'assets/gg-full-horizontal.svg';
-import GarbhagudiFullColorV from 'assets/gg-vertical-full.svg';
+import GarbhaGudiFullColorV from 'assets/gg-vertical-full.svg';
 import GarbhaGudiPharmaH from 'assets/pharma-full-horiontal.svg';
 import GarbhaGudiPharmaV from 'assets/pharma-full-vertical.svg';
 import GGCare from 'assets/ggcare-standalone.svg';
@@ -42,7 +42,7 @@ export const data = [
   {
     id: 2,
     title: 'GarbhaGudi Colour Logo (Vertical)',
-    img: GarbhagudiFullColorV,
+    img: GarbhaGudiFullColorV,
     colors: [
       {
         id: 1,

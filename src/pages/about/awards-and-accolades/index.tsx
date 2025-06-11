@@ -51,7 +51,7 @@ const Awards = ({ award }: Award) => {
         <meta name='title' content={`Awards & Accolades GarbhaGudi IVF Centre`} />
         <meta
           name='description'
-          content="Explore Garbhagudi IVF's Awards and Accolades for excellence in fertility care. Celebrating our milestones in patient success. Discover More!"
+          content="Explore GarbhaGudi IVF's Awards and Accolades for excellence in fertility care. Celebrating our milestones in patient success. Discover More!"
         />
 
         {/* Open Graph / Facebook */}
@@ -61,7 +61,7 @@ const Awards = ({ award }: Award) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content="Explore Garbhagudi IVF's Awards and Accolades for excellence in fertility care. Celebrating our milestones in patient success. Discover More!"
+          content="Explore GarbhaGudi IVF's Awards and Accolades for excellence in fertility care. Celebrating our milestones in patient success. Discover More!"
         />
         <meta property='og:type' content='website' />
         <meta
@@ -76,7 +76,7 @@ const Awards = ({ award }: Award) => {
         <meta name='twitter:title' content={`Awards & Accolades GarbhaGudi IVF Centre`} />
         <meta
           name='twitter:description'
-          content="Explore Garbhagudi IVF's Awards and Accolades for excellence in fertility care. Celebrating our milestones in patient success. Discover More!"
+          content="Explore GarbhaGudi IVF's Awards and Accolades for excellence in fertility care. Celebrating our milestones in patient success. Discover More!"
         />
         <meta
           name='twitter:image'

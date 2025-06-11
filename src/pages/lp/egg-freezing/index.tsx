@@ -28,7 +28,7 @@ export default function eggFreezing() {
         />
         <meta
           name='description'
-          content='Explore egg-freezing at Garbhagudi IVF for future fertility options. Expert care, advanced technology & personalized plans. Book a consultation today!'
+          content='Explore egg-freezing at GarbhaGudi IVF for future fertility options. Expert care, advanced technology & personalized plans. Book a consultation today!'
         />
 
         {/* Open Graph / Facebook */}
@@ -41,7 +41,7 @@ export default function eggFreezing() {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='Explore egg-freezing at Garbhagudi IVF for future fertility options. Expert care, advanced technology & personalized plans. Book a consultation today!'
+          content='Explore egg-freezing at GarbhaGudi IVF for future fertility options. Expert care, advanced technology & personalized plans. Book a consultation today!'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -59,7 +59,7 @@ export default function eggFreezing() {
         />
         <meta
           name='twitter:description'
-          content='Explore egg-freezing at Garbhagudi IVF for future fertility options. Expert care, advanced technology & personalized plans. Book a consultation today!'
+          content='Explore egg-freezing at GarbhaGudi IVF for future fertility options. Expert care, advanced technology & personalized plans. Book a consultation today!'
         />
         <meta
           name='twitter:image'

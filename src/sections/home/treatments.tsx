@@ -117,7 +117,7 @@ const Data = [
     treatent: 'Infertility Treatment',
     desc: (
       <div>
-        Garbhagudi IVF Centre - Your Path to Parenthood Begins Here. Discover Advanced{' '}
+        GarbhaGudi IVF Centre - Your Path to Parenthood Begins Here. Discover Advanced{' '}
         <Link
           href={'/treatments/infertility-treatment-in-bangalore'}
           className='text-gg-500 hover:underline dark:text-gg-400'

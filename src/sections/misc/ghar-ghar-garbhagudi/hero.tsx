@@ -13,7 +13,7 @@ const Hero = () => {
             <div className='max-w-3xl space-y-4 rounded-lg bg-gray-950 bg-opacity-20 px-4 py-6 sm:px-6 lg:px-8'>
               <h1 className='font-lexend text-3xl'>
                 Every couple deserves to experience the joy of parenthood and with{' '}
-                <span className='font-bold text-brandPink'>Ghar Ghar Garbhagudi</span> we are making
+                <span className='font-bold text-brandPink'>Ghar Ghar GarbhaGudi</span> we are making
                 it possible for everyone.
               </h1>
               <div className='space-y-3 text-xl'>
@@ -23,7 +23,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <div>
-                  Even today many people believe that infertility is a curse. Garbhagudi IVF Center
+                  Even today many people believe that infertility is a curse. GarbhaGudi IVF Center
                   through the{' '}
                   <span className='font-bold underline'>Ghar Ghar GarbhaGudi initiative</span> has
                   taken a bold step to overcome that and create awareness that every woman can

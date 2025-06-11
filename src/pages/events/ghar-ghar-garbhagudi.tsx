@@ -27,7 +27,7 @@ const IndexPage = () => {
         <meta name='title' content='Ghar Ghar GarbhaGudi | GarbhaGudi IVF Centre' />
         <meta
           name='description'
-          content='Every couple deserves to experience the joy of parenthood and with Ghar Ghar Garbhagudi we are making it possible for everyone.'
+          content='Every couple deserves to experience the joy of parenthood and with Ghar Ghar GarbhaGudi we are making it possible for everyone.'
         />
 
         {/* Open Graph / Facebook */}
@@ -37,7 +37,7 @@ const IndexPage = () => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='Every couple deserves to experience the joy of parenthood and with Ghar Ghar Garbhagudi we are making it possible for everyone.'
+          content='Every couple deserves to experience the joy of parenthood and with Ghar Ghar GarbhaGudi we are making it possible for everyone.'
         />
         <meta property='og:type' content='website' />
         <meta
@@ -52,7 +52,7 @@ const IndexPage = () => {
         <meta name='twitter:title' content='Ghar Ghar GarbhaGudi' />
         <meta
           name='twitter:description'
-          content='Every couple deserves to experience the joy of parenthood and with Ghar Ghar Garbhagudi we are making it possible for everyone.'
+          content='Every couple deserves to experience the joy of parenthood and with Ghar Ghar GarbhaGudi we are making it possible for everyone.'
         />
         <meta
           name='twitter:image'
