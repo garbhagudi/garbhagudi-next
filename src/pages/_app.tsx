@@ -44,8 +44,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   const showSalesIQ = !(router.pathname === '/contact/enquiry' && isMobile);
-  const isBlogAndTreatmentPage =
-    router.asPath.startsWith('/blogs/') || router.asPath.startsWith('/treatments/');
+  const isBlogPage = router.asPath.startsWith('/blogs/');
 
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-5T77DVZ' });
@@ -66,7 +65,7 @@ function MyApp({ Component, pageProps }) {
   }, [router.events]);
 
   useEffect(() => {
-    if (isBlogAndTreatmentPage && !iuiTreatmentPage) {
+    if (isBlogPage && !iuiTreatmentPage) {
       const script = document.createElement('script');
       script.id = 'engati-bot-script';
       script.async = true;
@@ -132,7 +131,7 @@ function MyApp({ Component, pageProps }) {
             {!iuiTreatmentPage && <Footer />}
           </div>
         )}
-        {shouldDisplay && showSalesIQ && !isBlogAndTreatmentPage && (
+        {shouldDisplay && showSalesIQ && !isBlogPage && (
           <Salesiq
             widgetCode='93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
             domain='https://salesiq.zoho.com/widget'

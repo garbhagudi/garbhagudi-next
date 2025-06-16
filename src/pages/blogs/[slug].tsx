@@ -14,6 +14,7 @@ const Share = dynamic(() => import('components/share'), { ssr: false });
 const Loading = dynamic(() => import('components/Loading'), { ssr: true });
 const BreadCrumbs = dynamic(() => import('components/breadcrumbs'), { ssr: true });
 const LandingPagePopUp = dynamic(() => import('components/landingPagePopUp'), { ssr: false });
+
 export const getStaticProps = async ({ params }) => {
   const apolloQuery = async ({ slug }) => {
     return apolloClient.query({
