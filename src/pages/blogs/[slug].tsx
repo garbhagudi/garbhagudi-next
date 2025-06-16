@@ -95,7 +95,6 @@ const Blog = ({ blog }) => {
   const description = `${blog?.metaDescription || blog?.content?.text.slice(0, 160)}`;
   const keywords = `${blog?.metaKeywords || blog?.title}`;
   const router = useRouter();
-  const clonedContent = structuredClone(blog?.content?.raw);
   if (router.isFallback) {
     return <Loading />;
   }
@@ -253,7 +252,7 @@ const Blog = ({ blog }) => {
                 </svg>
               </div>
             </div>
-            <div className='relative px-4 sm:px-6 lg:px-8'>
+            <div className='relative z-10 px-4 sm:px-6 lg:px-8'>
               <div className='mx-auto max-w-7xl'>
                 <h1 className='flex flex-col items-center justify-center gap-2'>
                   <span className='block text-center font-heading text-2xl font-bold leading-8 tracking-tighter text-gray-800 dark:text-gray-200 sm:text-4xl'>
@@ -273,7 +272,7 @@ const Blog = ({ blog }) => {
                 />
                 <div className='text-gray-800 dark:text-gray-200'>
                   <RichText
-                    content={clonedContent?.children}
+                    content={blog?.content?.raw?.children}
                     renderers={{
                       p: ({ children }) => <p className='text-justify'>{children}</p>,
                     }}
