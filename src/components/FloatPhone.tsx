@@ -1,6 +1,7 @@
 import { CloseButton, Dialog, DialogPanel } from '@headlessui/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { HiPhone } from 'react-icons/hi';
 import { IoIosCloseCircleOutline } from 'react-icons/io';
@@ -9,6 +10,7 @@ import Form from 'sections/LandingPages/Performant/form';
 
 const FloatPhone = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const path = usePathname();
   function open() {
     setIsOpen(true);
   }
@@ -33,7 +35,11 @@ const FloatPhone = () => {
           className='flex flex-col items-center gap-y-1 border-l p-2.5'
         >
           <HiPhone className='h-5 w-5' />
-          <div className='text-sm'>+91 9108 9108 32</div>
+          <div className='text-sm' suppressHydrationWarning>
+            {path === '/treatments/iui-treatment-in-bangalore'
+              ? '+91 9480 9480 05'
+              : '+91 9108 9108 32'}
+          </div>
         </Link>
       </div>
 
