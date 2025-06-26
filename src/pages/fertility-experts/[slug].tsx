@@ -46,6 +46,8 @@ export const getStaticProps = async ({ params }) => {
           newBelRoadPhysical
           nagarbhaviOnline
           nagarbhaviPhysical
+          yelahankaOnline
+          yelahankaPhysical
           videoTestimonials
           keyFeaturesOfTreatment
           approachToIvfTreatment
