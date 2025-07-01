@@ -96,7 +96,7 @@ const Treatment = ({ treatment }) => {
         "@type": "Product",
         "name": "${treatment?.title}",
         "image": "${treatment?.image?.url}",
-        "description": "${treatment?.content?.text.slice(0, 160)}",
+        "description": "${treatment?.content?.text.slice(0, 160).replace(/"/g, '\\"')}",
         "brand": {
           "@type": "Brand",
           "name": "GarbhaGudi IVF Centre"
@@ -119,7 +119,7 @@ const Treatment = ({ treatment }) => {
         "@type": "Service",
         "name": "${treatment?.title}",
         "image": "${treatment?.image?.url}",
-        "description": "${treatment?.content?.text.slice(0, 160)}",
+        "description": "${treatment?.content?.text.slice(0, 160).replace(/"/g, '\\"')}",
         "offers": {
         "@type": "AggregateOffer",
         "url": "https://www.garbhagudi.com/treatments/${treatment?.slug}",
@@ -237,27 +237,39 @@ const Treatment = ({ treatment }) => {
         <meta name='title' content={`${treatment?.metaTitle || treatment?.title}`} />
         <meta
           name='description'
-          content={treatment?.metaDescription || treatment?.content?.text.slice(0, 160)}
+          content={
+            treatment?.metaDescription ||
+            treatment?.content?.text.slice(0, 160).replace(/"/g, '\\"').replace(/"/g, '\\"')
+          }
         />
         <meta name='keywords' content={treatment?.metaKeywords} />
         {/* Ld+JSON Data */}
-        <script
-          id='review-jsonld'
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addReviewJsonLd()}
-        />
-
-        <script
-          id='product-jsonld'
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addProductJsonLd()}
-        />
-
-        <script
-          id='breadcrumbs-jsonld'
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-        />
+        {treatment && (
+          <>
+            <script
+              id='review-jsonld'
+              type='application/ld+json'
+              dangerouslySetInnerHTML={addReviewJsonLd()}
+            />
+            <script
+              id='product-jsonld'
+              type='application/ld+json'
+              dangerouslySetInnerHTML={addProductJsonLd()}
+            />
+            <script
+              id='breadcrumbs-jsonld'
+              type='application/ld+json'
+              dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+            />
+            {treatment?.slug === 'laparoscopy-treatment-in-bangalore' && (
+              <script
+                type='application/ld+json'
+                dangerouslySetInnerHTML={faqJsonLd()}
+                id='faq-jsonld'
+              />
+            )}
+          </>
+        )}
         {treatment?.slug === 'laparoscopy-treatment-in-bangalore' && (
           <script
             type='application/ld+json'
@@ -270,7 +282,10 @@ const Treatment = ({ treatment }) => {
         <meta property='og:title' content={`${treatment?.title} | GarbhaGudi IVF Centre`} />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
-        <meta property='og:description' content={treatment?.content?.text.slice(0, 160)} />
+        <meta
+          property='og:description'
+          content={treatment?.content?.text.slice(0, 160).replace(/"/g, '\\"')}
+        />
         <meta property='og:type' content='website' />
         <meta property='og:image' content={treatment?.image?.url} />
 
@@ -279,7 +294,10 @@ const Treatment = ({ treatment }) => {
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={`${treatment?.title} | GarbhaGudi IVF Centre`} />
-        <meta name='twitter:description' content={treatment?.content?.text.slice(0, 160)} />
+        <meta
+          name='twitter:description'
+          content={treatment?.content?.text.slice(0, 160).replace(/"/g, '\\"')}
+        />
         <meta name='twitter:image' content={treatment?.image?.url} />
       </Head>
       <BreadCrumbs
@@ -399,12 +417,14 @@ const Treatment = ({ treatment }) => {
               />
             </figure>
             <div className='text-gray-800 dark:text-gray-200'>
-              <RichText
-                content={treatment?.content?.raw?.children}
-                renderers={{
-                  p: ({ children }) => <p className='text-justify'>{children}</p>,
-                }}
-              />
+              {treatment?.content?.raw?.children && (
+                <RichText
+                  content={treatment.content.raw.children}
+                  renderers={{
+                    p: ({ children }) => <p className='text-justify'>{children}</p>,
+                  }}
+                />
+              )}
             </div>
             <div>
               <Share pinmedia={treatment?.image?.url} />
@@ -412,7 +432,10 @@ const Treatment = ({ treatment }) => {
           </div>
         </div>
       </div>
-      <FAQs data={treatment?.faq} activeIndex={treatment?.faq[0]?.id} />
+      <div style={{ minHeight: '300px' }}>
+        <FAQs data={treatment?.faq} activeIndex={treatment?.faq[0]?.id} />
+      </div>
+
       <Cta />
     </div>
   );
