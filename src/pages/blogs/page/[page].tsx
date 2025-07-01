@@ -242,26 +242,35 @@ export async function getStaticProps({ params }) {
       },
     });
   };
-  const page = params.page;
-  if (isNaN(page)) {
-    // Return a 404 if no blogs are found
+
+  const page = parseInt(params.page, 10);
+
+  if (isNaN(page) || page < 1) {
     return {
-      notFound: true,
+      redirect: {
+        destination: '/blogs/page/1',
+        permanent: true,
+      },
     };
   }
+
   const { data } = await throttledFetch(apolloQuery, {
     limit,
-    offset: Number((params.page - 1) * limit),
+    offset: (page - 1) * limit,
   });
+
   if (!data || data.blogsConnection.blogs.length === 0) {
-    // Return a 404 if no blogs are found
     return {
-      notFound: true,
+      redirect: {
+        destination: '/blogs/page/1',
+        permanent: true,
+      },
     };
   }
+
   return {
     props: {
-      currentPageNumber: Number(params.page),
+      currentPageNumber: page,
       blogs: data.blogsConnection.blogs,
       aggregate: data.blogsConnection.aggregate,
       ...data.blogsConnection.pageInfo,
