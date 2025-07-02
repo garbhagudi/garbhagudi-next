@@ -279,7 +279,7 @@ const Treatment = ({ treatment }) => {
         <meta property='og:title' content={`${treatment?.title} | GarbhaGudi IVF Centre`} />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
-        <meta property='og:description' content={treatment?.content?.text.slice(0, 160)}/>
+        <meta property='og:description' content={treatment?.content?.text.slice(0, 160)} />
         <meta property='og:type' content='website' />
         <meta property='og:image' content={treatment?.image?.url} />
 
