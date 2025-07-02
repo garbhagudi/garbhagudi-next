@@ -96,7 +96,7 @@ const Treatment = ({ treatment }) => {
         "@type": "Product",
         "name": "${treatment?.title}",
         "image": "${treatment?.image?.url}",
-        "description": "${treatment?.content?.text.slice(0, 160).replace(/"/g, '\\"')}",
+        "description": "${treatment?.content?.text.slice(0, 160)}",
         "brand": {
           "@type": "Brand",
           "name": "GarbhaGudi IVF Centre"
@@ -119,7 +119,7 @@ const Treatment = ({ treatment }) => {
         "@type": "Service",
         "name": "${treatment?.title}",
         "image": "${treatment?.image?.url}",
-        "description": "${treatment?.content?.text.slice(0, 160).replace(/"/g, '\\"')}",
+        "description": "${treatment?.content?.text.slice(0, 160)}",
         "offers": {
         "@type": "AggregateOffer",
         "url": "https://www.garbhagudi.com/treatments/${treatment?.slug}",
@@ -239,7 +239,7 @@ const Treatment = ({ treatment }) => {
           name='description'
           content={
             treatment?.metaDescription ||
-            treatment?.content?.text.slice(0, 160).replace(/"/g, '\\"').replace(/"/g, '\\"')
+            treatment?.content?.text.slice(0, 160)
           }
         />
         <meta name='keywords' content={treatment?.metaKeywords} />
@@ -284,7 +284,7 @@ const Treatment = ({ treatment }) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content={treatment?.content?.text.slice(0, 160).replace(/"/g, '\\"')}
+          content={treatment?.content?.text.slice(0, 160)}
         />
         <meta property='og:type' content='website' />
         <meta property='og:image' content={treatment?.image?.url} />
@@ -296,7 +296,7 @@ const Treatment = ({ treatment }) => {
         <meta name='twitter:title' content={`${treatment?.title} | GarbhaGudi IVF Centre`} />
         <meta
           name='twitter:description'
-          content={treatment?.content?.text.slice(0, 160).replace(/"/g, '\\"')}
+          content={treatment?.content?.text.slice(0, 160)}
         />
         <meta name='twitter:image' content={treatment?.image?.url} />
       </Head>
