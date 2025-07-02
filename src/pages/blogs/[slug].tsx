@@ -1,4 +1,3 @@
-import { RichText } from '@graphcms/rich-text-react-renderer';
 import { useRouter } from 'next/router';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
@@ -15,6 +14,12 @@ const Loading = dynamic(() => import('components/Loading'), { ssr: true });
 const BreadCrumbs = dynamic(() => import('components/breadcrumbs'), { ssr: true });
 const LandingPagePopUp = dynamic(() => import('components/landingPagePopUp'), { ssr: false });
 const FAQs = dynamic(() => import('components/FAQs'), { ssr: false });
+const RichText = dynamic(
+  () => import('@graphcms/rich-text-react-renderer').then((mod) => mod.RichText),
+  {
+    ssr: false,
+  }
+);
 
 export const getStaticProps = async ({ params }) => {
   const apolloQuery = async ({ slug }) => {
@@ -64,9 +69,10 @@ export const getStaticProps = async ({ params }) => {
       notFound: true,
     };
   }
+
   const { data } = await throttledFetch(apolloQuery, { slug: params.slug });
 
-  if (!data?.blog) {
+  if (!data || !data?.blog) {
     // Return a 404 if no blogs are found
     return {
       notFound: true,
@@ -105,6 +111,7 @@ const Blog = ({ blog }) => {
   const description = `${blog?.metaDescription || blog?.content?.text.slice(0, 160)}`;
   const keywords = `${blog?.metaKeywords || blog?.title}`;
   const router = useRouter();
+
   if (router.isFallback) {
     return <Loading />;
   }

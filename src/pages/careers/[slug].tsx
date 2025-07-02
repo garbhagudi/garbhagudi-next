@@ -36,7 +36,10 @@ export const getStaticProps = async ({ params }) => {
   });
   if (!data || !data?.career) {
     return {
-      notFound: true,
+      redirect: {
+        destination: '/careers',
+        permanent: true,
+      },
     };
   }
   return {
