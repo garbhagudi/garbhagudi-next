@@ -57,6 +57,8 @@ function BlogPage({
   if (router.isFallback) {
     return <Loading />;
   }
+  const getOptimizedImageUrl = (url: string, width = 500, quality = 80) =>
+    `${url}?format=webp&w=${width}&q=${quality}`;
 
   return (
     <Fragment>
@@ -125,7 +127,7 @@ function BlogPage({
             </div>
             <SearchComponent />
             <div className='mx-auto grid max-w-xl gap-8 py-12 lg:max-w-none lg:grid-cols-3'>
-              {blogs?.map((item) => (
+              {blogs?.map((item, index) => (
                 <div
                   key={item?.node?.id}
                   className='flex flex-col overflow-hidden rounded-lg shadow-2xl transition duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-lg'
@@ -133,11 +135,14 @@ function BlogPage({
                   <Link href={`/blogs/${item.node.slug}`} passHref>
                     <div className='flex-shrink-0'>
                       <Image
-                        className='h-38 w-full cursor-pointer rounded-t-lg object-contain'
-                        src={item?.node?.image?.url}
-                        alt={item?.node?.title}
-                        width={500}
-                        height={500}
+                        src={item.node.image.url || 'https://via.placeholder.com/380x214'}
+                        alt={item.node.title}
+                        width={380}
+                        height={214}
+                        sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 380px'
+                        className='h-auto w-full rounded-t-lg object-cover'
+                        priority={index < 3}
+                        fetchPriority={index < 1 ? "high" : "auto"}
                       />
                     </div>
                   </Link>
