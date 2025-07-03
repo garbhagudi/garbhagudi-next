@@ -57,9 +57,6 @@ function BlogPage({
   if (router.isFallback) {
     return <Loading />;
   }
-  const getOptimizedImageUrl = (url: string, width = 500, quality = 80) =>
-    `${url}?format=webp&w=${width}&q=${quality}`;
-
   return (
     <Fragment>
       <div>
@@ -142,7 +139,7 @@ function BlogPage({
                         sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 380px'
                         className='h-auto w-full rounded-t-lg object-cover'
                         priority={index < 3}
-                        fetchPriority={index < 1 ? "high" : "auto"}
+                        fetchPriority={index < 1 ? 'high' : 'auto'}
                       />
                     </div>
                   </Link>
