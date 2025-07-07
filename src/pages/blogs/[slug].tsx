@@ -128,7 +128,19 @@ const Blog = ({ blog }) => {
       <div>
         <Head>
           {/* Preload the main image */}
-          <link rel='preload' href={blog?.image?.url} as='image' />
+          <link
+            rel='preload'
+            as='image'
+            href={blog?.image?.url}
+            fetchPriority='high'
+            type='image/webp'
+            imageSrcSet={`
+      ${blog?.image?.url}?w=480 480w,
+      ${blog?.image?.url}?w=800 800w,
+      ${blog?.image?.url}?w=1200 1200w
+    `}
+            imageSizes='(max-width: 768px) 100vw, 800px'
+          />
           <link rel='dns-prefetch' href='https://media.graphassets.com' />
           {/* Primary Tags */}
           <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -283,9 +295,10 @@ const Blog = ({ blog }) => {
                   <Image
                     src={blog?.image?.url}
                     alt={blog?.title}
-                    fill
-                    sizes='(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 800px'
-                    className='rounded-lg object-cover'
+                    width={800}
+                    height={450}
+                    sizes='(max-width: 768px) 100vw, 800px'
+                    className='h-auto w-full rounded-lg object-cover'
                     priority
                     fetchPriority='high'
                   />
