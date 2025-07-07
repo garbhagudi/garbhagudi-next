@@ -56,7 +56,7 @@ const nextConfig = {
       },
       {
         source: '/doctors/:slug',
-        destination: '/fertility-experts/:slug', // Matched parameters can be used in the destination
+        destination: '/fertility-experts/:slug', 
         permanent: true,
       },
       {

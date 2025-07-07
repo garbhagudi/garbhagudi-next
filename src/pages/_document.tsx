@@ -4,7 +4,8 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang='en-IN'>
-        <Head>
+        <Head></Head>
+        <body>
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -15,12 +16,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5T77DVZ');</script>
 <!-- End Google Tag Manager -->
-
             `,
             }}
           />
-        </Head>
-        <body>
           <noscript
             dangerouslySetInnerHTML={{
               __html: `
