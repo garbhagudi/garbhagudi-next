@@ -141,7 +141,6 @@ const Blog = ({ blog }) => {
     `}
             imageSizes='(max-width: 768px) 100vw, 800px'
           />
-          <link rel='dns-prefetch' href='https://media.graphassets.com' />
           {/* Primary Tags */}
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <title>{title}</title>

@@ -75,6 +75,8 @@ const Nav = () => {
                 alt='logo'
                 width={50}
                 height={50}
+                priority
+                fetchPriority='high'
               />
             </Link>
             <div className='flex items-center lg:order-2'>

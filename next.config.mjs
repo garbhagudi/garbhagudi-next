@@ -6,16 +6,24 @@ const nextConfig = {
   experimental: {
     workerThreads: false,
     cpus: 1,
+    optimizeCss: true,
   },
   images: {
     dangerouslyAllowSVG: true,
-    unoptimized: true,
+    unoptimized: false,
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
     domains: [
       'res.cloudinary.com',
       'media.graphassets.com',
       'avatars.dicebear.com',
       'app.unbounce.com',
       'https://yogachallenge.in/',
+      'bb.branding-element.com',
+      'app.engati.com',
+      'connect.facebook.net',
+      'www.facebook.com',
+      'branding-resources.s3.ap-south-1.amazonaws.com',
     ],
   },
 
@@ -28,6 +36,45 @@ const nextConfig = {
           {
             key: 'X-Frame-Options',
             value: 'SAMEORIGIN',
+          },
+        ],
+      },
+      {
+        source: '/(.*)', // All routes
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/fonts/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
@@ -44,6 +91,10 @@ const nextConfig = {
         source: '/public/thank-you.html',
         destination: '/src/pages/api/thank-you.tsx',
       },
+      {
+        source: '/index',
+        destination: '/',
+      },
     ];
   },
 
@@ -56,7 +107,7 @@ const nextConfig = {
       },
       {
         source: '/doctors/:slug',
-        destination: '/fertility-experts/:slug', 
+        destination: '/fertility-experts/:slug',
         permanent: true,
       },
       {
