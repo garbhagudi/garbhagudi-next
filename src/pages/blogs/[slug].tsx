@@ -286,7 +286,8 @@ const Blog = ({ blog }) => {
                     fill
                     sizes='(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 800px'
                     className='rounded-lg object-cover'
-                    loading='eager'
+                    priority
+                    fetchPriority='high'
                   />
                 </div>
 
