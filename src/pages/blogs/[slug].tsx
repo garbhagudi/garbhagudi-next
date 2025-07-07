@@ -279,14 +279,17 @@ const Blog = ({ blog }) => {
                     Disclaimer
                   </div>
                 </h1>
-                <Image
-                  className='my-8 w-full rounded-lg'
-                  src={blog?.image?.url}
-                  alt={blog?.title}
-                  width={500}
-                  height={500}
-                  priority={true}
-                />
+                <div className="relative my-8 w-full rounded-lg aspect-video">
+  <Image
+    src={blog?.image?.url}
+    alt={blog?.title}
+    fill
+    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 800px"
+    className="rounded-lg object-cover"
+    loading='eager'
+  />
+</div>
+
                 <div className='text-gray-800 dark:text-gray-200'>
                   <RichText
                     content={blog?.content?.raw?.children}
