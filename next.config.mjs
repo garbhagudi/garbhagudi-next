@@ -10,7 +10,8 @@ const nextConfig = {
   },
   images: {
     dangerouslyAllowSVG: true,
-    unoptimized: true,
+    unoptimized: false,
+    formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
     domains: [
       'res.cloudinary.com',
