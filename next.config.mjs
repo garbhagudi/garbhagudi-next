@@ -21,12 +21,10 @@ const nextConfig = {
       'avatars.dicebear.com',
       'app.unbounce.com',
       'https://yogachallenge.in/',
-      'connect.facebook.net',
-      'www.facebook.com',
     ],
   },
 
- headers: async () => {
+  headers: async () => {
     return [
       {
         source: '/(.*)',
@@ -78,7 +76,7 @@ const nextConfig = {
         ],
       },
       {
-        source: '/vendor/(.*)',
+        source: '/cloudflare-static/:path*',
         headers: [
           {
             key: 'Cache-Control',
@@ -87,25 +85,14 @@ const nextConfig = {
         ],
       },
       {
-  source: '/cloudflare-static/:path*',
-  headers: [
-    {
-      key: 'Cache-Control',
-      value: 'public, max-age=31536000, immutable',
-    },
-  ],
-},
-{
-  source: '/_clarity/(.*)',
-  headers: [
-    {
-      key: 'Cache-Control',
-      value: 'public, max-age=86400, immutable',
-    },
-  ],
-},
-
-      
+        source: '/_clarity/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, immutable',
+          },
+        ],
+      },
     ];
   },
 

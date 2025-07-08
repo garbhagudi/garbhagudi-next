@@ -9,7 +9,6 @@ import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 import { useState } from 'react';
 const Error = dynamic(() => import('next/error'));
 const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
-const Share = dynamic(() => import('components/share'), { ssr: false });
 const Loading = dynamic(() => import('components/Loading'), { ssr: true });
 const BreadCrumbs = dynamic(() => import('components/breadcrumbs'), { ssr: true });
 const LandingPagePopUp = dynamic(() => import('components/landingPagePopUp'), { ssr: false });
@@ -313,7 +312,6 @@ const Blog = ({ blog }) => {
                   />
                 </div>
                 <div>
-                  <Share pinmedia={blog?.image?.url} />
                   {blog?.faq?.length > 0 && (
                     <div className='mt-6'>
                       <FAQs data={blog?.faq} activeIndex={blog?.faq[0]?.id} />
