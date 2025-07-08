@@ -3,13 +3,17 @@
 
 const nextConfig = {
   reactStrictMode: false,
+  swcMinify: true,
   experimental: {
     workerThreads: false,
     cpus: 1,
   },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
   images: {
     dangerouslyAllowSVG: true,
-
+    minimumCacheTTL: 60 * 60 * 24 * 30,
     unoptimized: true,
     domains: [
       'res.cloudinary.com',

@@ -9,6 +9,11 @@
     "export": "next export",
     "generate-sitemap": "node src/scripts/generate-sitemap.mjs"
   },
+  "browserslist": [
+    "defaults and supports es6-module",
+    "not dead",
+    "not IE 11"
+  ],
   "dependencies": {
     "@apollo/client": "^3.12.11",
     "@graphcms/rich-text-react-renderer": "^0.6.1",
