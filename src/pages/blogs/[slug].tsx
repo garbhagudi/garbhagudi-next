@@ -1,3 +1,4 @@
+import { RichText } from '@graphcms/rich-text-react-renderer';
 import { useRouter } from 'next/router';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
@@ -9,16 +10,11 @@ import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 import { useState } from 'react';
 const Error = dynamic(() => import('next/error'));
 const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
+const Share = dynamic(() => import('components/share'), { ssr: false });
 const Loading = dynamic(() => import('components/Loading'), { ssr: true });
 const BreadCrumbs = dynamic(() => import('components/breadcrumbs'), { ssr: true });
 const LandingPagePopUp = dynamic(() => import('components/landingPagePopUp'), { ssr: false });
 const FAQs = dynamic(() => import('components/FAQs'), { ssr: false });
-const RichText = dynamic(
-  () => import('@graphcms/rich-text-react-renderer').then((mod) => mod.RichText),
-  {
-    ssr: false,
-  }
-);
 
 export const getStaticProps = async ({ params }) => {
   const apolloQuery = async ({ slug }) => {
@@ -68,10 +64,9 @@ export const getStaticProps = async ({ params }) => {
       notFound: true,
     };
   }
-
   const { data } = await throttledFetch(apolloQuery, { slug: params.slug });
 
-  if (!data || !data?.blog) {
+  if (!data?.blog) {
     // Return a 404 if no blogs are found
     return {
       notFound: true,
@@ -110,7 +105,6 @@ const Blog = ({ blog }) => {
   const description = `${blog?.metaDescription || blog?.content?.text.slice(0, 160)}`;
   const keywords = `${blog?.metaKeywords || blog?.title}`;
   const router = useRouter();
-
   if (router.isFallback) {
     return <Loading />;
   }
@@ -127,19 +121,7 @@ const Blog = ({ blog }) => {
       <div>
         <Head>
           {/* Preload the main image */}
-          <link
-            rel='preload'
-            as='image'
-            href={blog?.image?.url}
-            fetchPriority='high'
-            type='image/webp'
-            imageSrcSet={`
-      ${blog?.image?.url}?w=480 480w,
-      ${blog?.image?.url}?w=800 800w,
-      ${blog?.image?.url}?w=1200 1200w
-    `}
-            imageSizes='(max-width: 768px) 100vw, 800px'
-          />
+          <link rel='preload' href={blog?.image?.url} as='image' />
           <link rel='dns-prefetch' href='https://media.graphassets.com' />
           {/* Primary Tags */}
           <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -290,19 +272,14 @@ const Blog = ({ blog }) => {
                     Disclaimer
                   </div>
                 </h1>
-                <div className='relative my-8 aspect-video w-full rounded-lg'>
-                  <Image
-                    src={blog?.image?.url}
-                    alt={blog?.title}
-                    width={800}
-                    height={450}
-                    sizes='(max-width: 768px) 100vw, 800px'
-                    className='h-auto w-full rounded-lg object-cover'
-                    priority
-                    fetchPriority='high'
-                  />
-                </div>
-
+                <Image
+                  className='my-8 w-full rounded-lg'
+                  src={blog?.image?.url}
+                  alt={blog?.title}
+                  width={500}
+                  height={500}
+                  priority={true}
+                />
                 <div className='text-gray-800 dark:text-gray-200'>
                   <RichText
                     content={blog?.content?.raw?.children}
@@ -312,6 +289,7 @@ const Blog = ({ blog }) => {
                   />
                 </div>
                 <div>
+                  <Share pinmedia={blog?.image?.url} />
                   {blog?.faq?.length > 0 && (
                     <div className='mt-6'>
                       <FAQs data={blog?.faq} activeIndex={blog?.faq[0]?.id} />

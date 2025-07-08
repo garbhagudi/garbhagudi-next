@@ -3,7 +3,7 @@
 
 const nextConfig = {
   reactStrictMode: false,
-  swcMinify: true,
+  legacyBrowsers: false,
   experimental: {
     workerThreads: false,
     cpus: 1,
@@ -11,6 +11,7 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  transpilePackages: ['some-es6-library', 'zod', 'framer-motion'],
   images: {
     dangerouslyAllowSVG: true,
     minimumCacheTTL: 60 * 60 * 24 * 30,
