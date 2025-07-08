@@ -273,12 +273,14 @@ const Blog = ({ blog }) => {
                   </div>
                 </h1>
                 <Image
-                  className='my-8 w-full rounded-lg'
                   src={blog?.image?.url}
                   alt={blog?.title}
-                  width={500}
-                  height={500}
-                  priority={true}
+                  width={800}
+                  height={450}
+                  sizes='(max-width: 768px) 100vw, 800px'
+                  className='h-auto w-full rounded-lg object-cover'
+                  priority
+                  fetchPriority='high'
                 />
                 <div className='text-gray-800 dark:text-gray-200'>
                   <RichText
