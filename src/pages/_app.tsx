@@ -9,6 +9,7 @@ import ThemeProvider from 'styles/theme-provider';
 import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
 import FloatWhatsApp from 'components/FloatWhatsapp';
+import Script from 'next/script';
 
 // Dynamically import components
 const Footer = dynamic(() => import('components/footer/footer'), { ssr: false });
@@ -120,7 +121,12 @@ function MyApp({ Component, pageProps }) {
           name='robots'
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
+        <link rel='preconnect' href='https://connect.facebook.net' crossOrigin='anonymous' />
+        <link rel='preconnect' href='https://salesiq.zoho.com' crossOrigin='anonymous' />
+        <link rel='preconnect' href='https://media.graphassets.com' />
       </Head>
+      <Script src='/vendor/facebook/fbevents.js' strategy='afterInteractive' />
+
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />

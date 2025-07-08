@@ -9,6 +9,7 @@ const nextConfig = {
   },
   images: {
     dangerouslyAllowSVG: true,
+
     unoptimized: true,
     domains: [
       'res.cloudinary.com',
@@ -16,10 +17,12 @@ const nextConfig = {
       'avatars.dicebear.com',
       'app.unbounce.com',
       'https://yogachallenge.in/',
+      'connect.facebook.net',
+      'www.facebook.com',
     ],
   },
 
-  headers: async () => {
+ headers: async () => {
     return [
       {
         source: '/(.*)',
@@ -31,6 +34,74 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: '/(.*)', // All routes
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/fonts/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/vendor/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+  source: '/cloudflare-static/:path*',
+  headers: [
+    {
+      key: 'Cache-Control',
+      value: 'public, max-age=31536000, immutable',
+    },
+  ],
+},
+{
+  source: '/_clarity/(.*)',
+  headers: [
+    {
+      key: 'Cache-Control',
+      value: 'public, max-age=86400, immutable',
+    },
+  ],
+},
+
+      
     ];
   },
 
