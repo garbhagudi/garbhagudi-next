@@ -3,7 +3,6 @@
 
 const nextConfig = {
   reactStrictMode: false,
-  legacyBrowsers: false,
   experimental: {
     workerThreads: false,
     cpus: 1,
