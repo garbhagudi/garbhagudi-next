@@ -121,9 +121,9 @@ function MyApp({ Component, pageProps }) {
           name='robots'
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
-        <link rel='preconnect' href='https://connect.facebook.net' crossOrigin='anonymous' />
         <link rel='preconnect' href='https://salesiq.zoho.com' crossOrigin='anonymous' />
         <link rel='preconnect' href='https://media.graphassets.com' />
+        <link rel='preload' as='script' href='/vendor/facebook/fbevents.js' />
       </Head>
       <Script src='/vendor/facebook/fbevents.js' strategy='afterInteractive' />
 
