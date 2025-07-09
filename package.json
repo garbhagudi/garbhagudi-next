@@ -10,9 +10,11 @@
     "generate-sitemap": "node src/scripts/generate-sitemap.mjs"
   },
   "browserslist": [
-    ">0.2%",
+    ">0.5%",
+    "last 2 versions",
     "not dead",
-    "not op_mini all"
+    "not IE 11",
+    "supports es6-module"
   ],
   "dependencies": {
     "@apollo/client": "^3.12.11",
