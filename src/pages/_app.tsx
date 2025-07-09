@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
-import TagManager from 'react-gtm-module';
+// import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
 import FloatWhatsApp from 'components/FloatWhatsapp';
 
@@ -46,9 +46,9 @@ function MyApp({ Component, pageProps }) {
   // const showSalesIQ = !(router.pathname === '/contact/enquiry' && isMobile);
   // const isBlogPage = router.asPath.startsWith('/blogs/');
 
-  useEffect(() => {
-    TagManager.initialize({ gtmId: 'GTM-5T77DVZ' });
-  }, [router.asPath]);
+  // useEffect(() => {
+  //   TagManager.initialize({ gtmId: 'GTM-5T77DVZ' });
+  // }, [router.asPath]);
 
   useEffect(() => {
     const start = () => setLoading(true);
