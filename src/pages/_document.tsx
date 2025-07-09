@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-// import Script from 'next/script';
+import Script from 'next/script';
 
 class MyDocument extends Document {
   render() {
@@ -7,7 +7,7 @@ class MyDocument extends Document {
       <Html lang='en-IN'>
         <Head></Head>
         <body>
-          {/* <Script
+          <Script
             id='gtm-script'
             strategy='lazyOnload'
             dangerouslySetInnerHTML={{
@@ -29,7 +29,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
             `,
             }}
-          /> */}
+          />
           <Main />
           <NextScript />
         </body>
