@@ -23,14 +23,17 @@ const Doctor = () => {
         <div className='grid grid-cols-1 gap-5 lg:grid-cols-3 xl:max-w-3xl'>
           {doctors.map((doctor) => (
             <div key={doctor.id} className='flex flex-col items-center'>
-              <Image
-                width={200}
-                height={200}
-                src={doctor.image}
-                alt={doctor.name}
-                className='h-72 w-72 rounded-lg object-cover'
-                loading='lazy'
-              />
+              <div className='relative mx-auto h-44 w-44'>
+                <div className='absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 bg-[length:400%] dark:bg-gray-400'></div>
+                <Image
+                  className='shadow-champaigne rounded-full bg-transparent drop-shadow-2xl'
+                  src={doctor.image}
+                  alt={doctor.name}
+                  width={400}
+                  height={400}
+                  loading='lazy'
+                />
+              </div>
               <div className='font-lexend text-lg'>{doctor.name}</div>
               <div className='font-content text-base text-gray-500'>
                 {expanded[doctor.id] ? doctor.content : truncate(doctor.content, 120)}

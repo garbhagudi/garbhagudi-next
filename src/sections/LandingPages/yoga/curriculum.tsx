@@ -51,7 +51,7 @@ const yogaSchedule = [
   {
     title: 'Day 4',
     Day: 'Mon',
-    Pratice: 'Stress relief and emotional Balance',
+    Practice: 'Stress relief and emotional Balance',
   },
   {
     title: 'Day 5',
