@@ -70,25 +70,27 @@ const Floating: React.FC = () => {
       <div className='max-w-xl'>
         <div className='flex flex-col items-start justify-start'>
           <div className='space-y-1.5'>
-            <div className='font-lexend text-2xl'>21 - Days Yoga Challenge</div>
+            <div className='font-lexend text-2xl'>
+              Swasthya Saptaha — A Journey to Rejuvenation!
+            </div>
             <div className='space-y-1'>
               <div className='flex items-center justify-start space-x-3 pt-6 font-content'>
-                <FaCalendar className='text-2xl text-gg-500' /> <div>25th Jul - 14th Aug</div>
+                <FaCalendar className='text-2xl text-gg-500' /> <div>18th - 24th July</div>
               </div>
               <div className='flex items-center justify-start space-x-3 pt-3 font-content'>
-                <FaClock className='text-2xl text-gg-500' /> <div>7:30 AM to 8:30 AM (IST)</div>
+                <FaClock className='text-2xl text-gg-500' /> <div>7.30 AM to 8.30 AM (IST)</div>
               </div>
               <div className='flex items-center justify-start space-x-3 pt-3 font-content'>
                 <FaIndianRupeeSign className='text-2xl text-gg-500' /> <div>Contribution: Free</div>
               </div>
               <div className='py-6'>
                 <a
-                  href='https://chat.whatsapp.com/DxWPnWHqQqIHo0PEY5RFyV'
+                  href='https://docs.google.com/forms/d/e/1FAIpQLSdWtCUSgT0umZB1b5qq6SC3W_kyAThXXSq83OlTAcP3A54XGw/viewform'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   <button className='rounded-lg bg-gg-500 px-4 py-2 font-lexend text-white hover:bg-gg-600'>
-                    Join the Whatsapp group
+                    Join Us
                   </button>
                 </a>
               </div>
@@ -96,15 +98,20 @@ const Floating: React.FC = () => {
           </div>
           <ul className='space-y-1 font-content'>
             <li className='flex items-center justify-start space-x-3'>
-              <FaCheck className='text-2xl text-gg-500' /> <div>Sleep better and eat healthier</div>
+              <FaCheck className='text-2xl text-gg-500' />{' '}
+              <div>Designed to support fertility, mental peace, and hormonal health</div>
             </li>
             <li className='flex items-center justify-start space-x-3'>
               <FaCheck className='text-2xl text-gg-500' />{' '}
-              <div>Activation of all muscle groups</div>
+              <div>A space to reconnect with yourself and your partner</div>
             </li>
             <li className='flex items-center justify-start space-x-3'>
               <FaCheck className='text-2xl text-gg-500' />{' '}
-              <div>High energy levels and much more</div>
+              <div>Strengthen your emotional resilience and physical vitality</div>
+            </li>
+            <li className='flex items-center justify-start space-x-3'>
+              <FaCheck className='text-2xl text-gg-500' />{' '}
+              <div>Know all about a healthy and balanced diet</div>
             </li>
           </ul>
         </div>
