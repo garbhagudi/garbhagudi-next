@@ -65,7 +65,7 @@ const Floating: React.FC = () => {
   return (
     <div
       id='floating-window'
-      className='fixed right-16 top-36 hidden h-96 w-96 overflow-hidden rounded-lg bg-gg-50 p-4 shadow-lg xl:flex'
+      className='fixed right-16 top-36 hidden w-96 overflow-hidden rounded-lg bg-gg-50 p-4 shadow-lg xl:flex'
     >
       <div className='max-w-xl'>
         <div className='flex flex-col items-start justify-start'>

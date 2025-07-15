@@ -48,10 +48,4 @@ const benefits = [
     image:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984694/Yoga/Benefits-You-Will-Gain_Img03_pda7p0.webp',
   },
-  {
-    id: 4,
-    title: 'Have better relationships',
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984694/Yoga/Benefits-You-Will-Gain_Img04_jctiut.webp',
-  },
 ];

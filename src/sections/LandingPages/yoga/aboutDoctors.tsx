@@ -62,8 +62,7 @@ const doctors = [
   {
     id: 2,
     name: 'Dr. Saathvi D (Yoga Therapist), BNYS',
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984781/Yoga/aswinimohan_oygpwr.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/bc8IPOjUR6aPrAoGjgHU',
     content:
       'Dr. Saathvi D, a skilled Yoga Therapist with a strong academic foundation, holding a Bachelor’s degree in Naturopathic and Yoga Sciences, is dedicated to nurturing wellness through the transformative power of yoga and naturopathy. She is committed to helping individuals achieve optimal health and well-being. Her compassionate approach and tailored therapeutic methods inspire confidence and empowerment, making her an integral part of the wellness community.',
   },
@@ -71,7 +70,7 @@ const doctors = [
     id: 3,
     name: 'Dr. Jala R (Yoga Therapist), BNYS',
     image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984782/Yoga/sridevi_reg8o7.webp',
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1752581983/Yoga/Dr._Jala_q6pmbd.webp',
     content:
       'Dr. Jala R is a dedicated yoga therapist with a strong academic foundation, holding a Bachelor’s degree in Naturopathic and Yogic Sciences and pursuing an MD in Acupuncture. With a deep passion for holistic healing, she blends the ancient wisdom of yoga with the principles of naturopathy to support individuals on their journey to better health. Known for her empathetic nature and personalized therapeutic approach, she empowers people to take charge of their well-being. Her work continues to make a meaningful impact in the field of wellness and preventive health.',
   },
