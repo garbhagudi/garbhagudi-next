@@ -371,11 +371,7 @@ function generateSiteMap(
       .map(({ loc, lastmod, image }) => {
         return `
       <url>
-        <loc>${loc}</loc>
-        <lastmod>${lastmod}</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-        ${
+             ${
           Array.isArray(image)
             ? image
                 .map(
@@ -391,6 +387,9 @@ function generateSiteMap(
     </image:image>`
               : ''
         }
+        <lastmod>${lastmod}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
       </url>`;
       })
       .join('\n')}

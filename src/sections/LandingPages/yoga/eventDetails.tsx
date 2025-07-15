@@ -38,26 +38,56 @@ const EventDetails = () => {
           ))}
         </div>
         <div className='py-8 xl:max-w-3xl'>
-          <div className='my-8 font-lexend text-3xl font-bold lg:text-4xl'>Yoga Challenge</div>
-          <div>
-            Join our exciting 21-Day Yoga Challenge and stand a chance to win amazing vouchers! This
-            challenge is designed to motivate you to stay consistent with your yoga practice and
-            improve your fertility and overall well-being. Here’s how you can win:
+          <div className='my-8 font-lexend text-3xl font-bold lg:text-4xl'>
+            {' '}
+            Swasthya Sapthaha — A Journey to Rejuvenation!
           </div>
-          <div className='mt-5 text-xl font-bold'>Prizes:</div>
+          <div>
+            Swasthya Sapthha is not just a physical practice — it’s a pathway to balance, awareness,
+            and deep inner healing. This week, take a step towards a healthier you, supported by a
+            compassionate community and the wisdom of experts.
+            <br />
+            Join GarbhaGudi IVF Centre for a 7-day holistic health journey that blends the ancient
+            wisdom of yoga, diet, and acupressure with modern insights into emotional and
+            reproductive well-being.
+          </div>
+          <div className='mt-2'>
+            <ol className='list-inside list-decimal space-y-2'>
+              {points.map((item) => (
+                <li key={item.id}> {item.point}</li>
+              ))}
+            </ol>
+          </div>
+          <div className='mt-5 text-xl font-bold'>Exciting Rewards Await!!:</div>
+          <div>
+            We recognize and celebrate your commitment to wellness. At the end of the event, we will
+            honour:
+          </div>
           <div className='mt-2'>
             <ol className='list-inside list-decimal space-y-2'>
               <li>
-                <strong>First Prize :</strong> Rs 5000/- Vouncher.
+                <strong>Best Female Participant</strong>
               </li>
               <li>
-                <strong>Second Prize :</strong> Rs 3000/- Vouncher.
+                <strong>Best Male Participant</strong>
               </li>
               <li>
-                <strong>Third Prize :</strong> Rs 2000/- Vouncher.
+                <strong>Best Couple participant</strong>
               </li>
             </ol>
           </div>
+          <div className='mt-1'>
+            Show up, engage wholeheartedly, and you could win amazing prizes!
+          </div>
+          <div className='mt-5 text-xl font-bold'>General Guidelines for Participants::</div>
+          <div className='mt-2'>
+            <ol className='list-inside list-decimal space-y-2'>
+              {generalGuidelines.map((item) => (
+                <li key={item.id}> {item.point}</li>
+              ))}
+            </ol>
+          </div>
+          <div className='mt-1'>Let us move from stress to strength, together.</div>
           <div className='mt-5 text-xl font-bold'>How to Participate:</div>
           <div className='mt-2'>
             <ol className='list-inside list-decimal space-y-2'>
@@ -85,15 +115,16 @@ const EventDetails = () => {
             <ul className='list-disc space-y-2 pl-5'>
               <li>
                 {' '}
-                <strong> Challenge Dates: </strong> 25th July to 14th August 2024.
+                <strong> Challenge Dates: </strong> 18th July to 24th July 2025.
               </li>
               <li>
                 {' '}
-                <strong> Eligibility: </strong> Open to all registered participants.
+                <strong> Eligibility: </strong> Open to all registered participants except pregnant
+                women and those who have undergone surgical procedures..
               </li>
               <li>
                 {' '}
-                <strong> Winner Announcement: </strong> Winners will be announced on 14th August
+                <strong> Winner Announcement: </strong> Winners will be announced on 25th July 2025
                 during our closing ceremony.
               </li>
             </ul>
@@ -144,7 +175,7 @@ const eventHeader = [
   {
     id: 1,
     title: 'Start Date',
-    description: '2024-07-25',
+    description: '2025-07-18',
     icon: <FaCalendar />,
     misc: '',
   },
@@ -172,17 +203,17 @@ const eventHeader = [
 const whatToExpect = [
   {
     id: 1,
-    title: '45 Minute recorded session every morning',
+    title: 'One hour recorded session every morning',
     image: Banner_4,
     description:
-      'Every session will include 15 minutes of Yoga explained in an applicable way to help you take control of your thoughts & emotions (Pranayama and relaxation). This will be followed by 30 minutes of step-by-step asana practice. The practice will include asanas which can be done comfortably by all including people who are taking some treatments. You will learn the benefits of these asanas in this session.',
+      'Every session will include programme introduction, warm-up exercise, asanas, pranayama, and relaxing techniques explained in an applicable way to help you take control of your thoughts & emotions. This will be followed by 10 minutes of questions and answers to clarify any doubts.',
   },
   {
     id: 2,
-    title: 'Meal Plans & Diet',
+    title: 'Diet and Acupressure',
     image: Banner_2,
     description:
-      'Preferably, Satvic foods are conducive to yoga practice and also have the power to prevent and heal diseases. We will help you make a healthy food addition to your life. This workshop is designed in a way that you absorb the knowledge without getting overwhelmed & can actually implement it in your life. Our nutritionist will give you tips for having a healthy diet for optimum health.',
+      'Preferably, Satvic foods are good for health and also have the power to prevent and heal diseases. We will help you make a healthy food addition to your life. This workshop is designed in a way that you absorb the knowledge without getting overwhelmed & can actually implement it in your life. Our nutritionist will give tips for having a healthy diet and acupressure for common ailments.',
   },
   {
     id: 4,
@@ -192,6 +223,7 @@ const whatToExpect = [
       'If you live outside India or miss a session due to an emergency, no worries! The replay links of each session will be provided.',
   },
 ];
+
 const howToParticipate = [
   {
     id: 1,
@@ -201,12 +233,12 @@ const howToParticipate = [
   {
     id: 2,
     head: 'Attend Daily Yoga Sessions:',
-    para: 'Participate in the daily yoga sessions and follow the challenge routine for 21 consecutive days.',
+    para: 'Participate in the daily yoga sessions and follow the challenge routine for 7consecutive days.',
   },
   {
     id: 3,
     head: 'Track Your Progress:',
-    para: 'Keep a daily log of your practice and share your experiences on social media using our hashtag #21DayYogaChallenge.',
+    para: 'Keep a daily log of your practice and share your experiences on social media using our hashtag #SwasthyaSapthaha.',
   },
   {
     id: 4,
@@ -218,7 +250,7 @@ const criteriaToWin = [
   {
     id: 1,
     head: 'Consistency:',
-    para: 'Attend and complete all 21 sessions of the yoga challenge.',
+    para: 'Attend and complete all sessions of the Swasthya Sapthaha.',
   },
   {
     id: 2,
@@ -234,5 +266,50 @@ const criteriaToWin = [
     id: 4,
     head: 'Creativity:',
     para: 'Share creative and inspiring posts about your journey on social media, tagging us and using the challenge hashtag.',
+  },
+];
+const generalGuidelines = [
+  {
+    id: 1,
+    point: 'Please keep your mobile phones on silent mode during the session.',
+  },
+  {
+    id: 2,
+    point: 'Maintain personal space between couples.',
+  },
+  {
+    id: 3,
+    point: 'Practice within your comfort zone — listen to your body.',
+  },
+  {
+    id: 4,
+    point: 'Follow the expert instructions carefully for safe practice..',
+  },
+];
+const points = [
+  {
+    id: 1,
+    point: 'Let’s explore powerful solutions to life-changing questions.',
+  },
+  {
+    id: 2,
+    point: 'To create Awareness among the people regarding health.',
+  },
+  {
+    id: 3,
+    point: 'Teach them how to lead a healthy lifestyle.',
+  },
+  {
+    id: 4,
+    point:
+      'Educate about how the practice of Yoga, Diet, and Acupressure can help in curing common ailments and maintaining health.',
+  },
+  {
+    id: 5,
+    point: 'Encouraging to adopt a healthy lifestyle.',
+  },
+  {
+    id: 6,
+    point: 'Motivation to start Yoga practices and Healthy Eating.',
   },
 ];

@@ -20,9 +20,6 @@ const MobileFooter = dynamic(() => import('sections/LandingPages/yoga/mobileFoot
   ssr: false,
 });
 const Benefits = dynamic(() => import('sections/LandingPages/yoga/benefits'), { ssr: false });
-const WhoIsThisFor = dynamic(() => import('sections/LandingPages/yoga/whoIsThisFor'), {
-  ssr: false,
-});
 const Floating = dynamic(() => import('sections/LandingPages/yoga/floatingWindow'), { ssr: false });
 
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -52,7 +49,6 @@ const Yoga: NextPage = () => {
       <Testimonial />
       <Faq />
       <Register />
-      <WhoIsThisFor />
       <MobileFooter />
       <Floating />
       <Cta />

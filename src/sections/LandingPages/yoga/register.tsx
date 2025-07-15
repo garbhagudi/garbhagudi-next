@@ -7,12 +7,12 @@ const Register = () => {
         <div className='flex flex-col items-center justify-center bg-gray-200'>
           <div className='m-5'>
             <a
-              href='https://chat.whatsapp.com/DxWPnWHqQqIHo0PEY5RFyV'
+              href='https://docs.google.com/forms/d/e/1FAIpQLSdWtCUSgT0umZB1b5qq6SC3W_kyAThXXSq83OlTAcP3A54XGw/viewform'
               target='_blank'
               rel='noopener noreferrer'
             >
               <button className='w-70 rounded-lg bg-gg-500 px-5 py-3 text-xl text-white hover:bg-gg-600'>
-                Join the Whatsapp group
+                Join Us
               </button>
             </a>
           </div>

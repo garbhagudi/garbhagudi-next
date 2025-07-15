@@ -8,15 +8,17 @@ const Hero = () => {
       <div className='mx-auto max-w-7xl px-4 pb-12 lg:py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
           <div className='flex flex-col items-start justify-center space-y-4 py-10 font-lexend'>
-            <div className='pt-6 text-5xl uppercase leading-snug'>21 - Day Yoga Challenge</div>
-            <p className='text-lg'>Meet online to practise yoga for 21 days</p>
+            <div className='pt-6 text-5xl uppercase leading-snug'>
+              Welcome to Swasthya Sapthaha — A Journey to Rejuvenation!
+            </div>
+            <p className='text-lg'>A Transformative Week of Wellness, Awareness & Inner Balance</p>
             <a
-              href='https://chat.whatsapp.com/DxWPnWHqQqIHo0PEY5RFyV'
+              href='https://docs.google.com/forms/d/e/1FAIpQLSdWtCUSgT0umZB1b5qq6SC3W_kyAThXXSq83OlTAcP3A54XGw/viewform'
               target='_blank'
               rel='noopener noreferrer'
             >
               <button className='w-70 rounded-lg bg-gg-500 px-5 py-3 text-xl text-white hover:bg-gg-600'>
-                Join the Whatsapp group
+                Join Us
               </button>
             </a>
             <p className='text-xs'>200,000+ people have already attended</p>

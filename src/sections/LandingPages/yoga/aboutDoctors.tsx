@@ -53,26 +53,26 @@ export default Doctor;
 const doctors = [
   {
     id: 1,
-    name: 'Ms. Suraksha B (Yoga Therapist)',
+    name: 'Ms. Suraksha B (Senior Yoga Therapist), M.Sc Yogic Science, PGCND',
     image:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984824/Yoga/Suraksha_mrkjqi.webp',
     content:
-      'Ms. Suraksha B, a dedicated Yoga Trainer with a profound passion for promoting holistic well-being and inner harmony. Suraksha holds a Master of Science degree in Yogic Science from Mangalore University. Suraksha has been a coach and manager in prestigious events like the All India Inter-University Yoga Competition representing the Department of Human Consciousness & Yogic Science.',
+      'Ms. Suraksha B, a dedicated Senior Yoga Therapist with a profound passion for promoting holistic well-being and inner harmony. Suraksha holds a Master of Science degree in Yogic Science from Mangalore University and Post Graduate certificate in Clinical Diet and Nutrition, KSOU, Mysuru. She has been a coach and manager in prestigious events like the All-India Inter-University Yoga Competition, representing the Department of Human Consciousness & Yogic Science.',
   },
   {
     id: 2,
-    name: 'Ashwini Mohan L (MS-Ayurveda)',
+    name: 'Dr. Saathvi D (Yoga Therapist), BNYS',
     image:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984781/Yoga/aswinimohan_oygpwr.webp',
     content:
-      'Dr Aswini Mohan L has more than 12 years of clinical experience in Ayurveda, Gynaecology, and Obstetrics and has an MS in Prasuti Tantra Streeroga from Govt. Ayurveda College, Thiruvananthapuram. Her special focus is on Infertility. She is also an expert in Ayurvedic Pre-conception Care, Ante Natal Care, and Post Natal Care and has treated many patients with Endometriosis, PCOS, Uterine fibroids, etc.',
+      'Dr. Saathvi D, a skilled Yoga Therapist with a strong academic foundation, holding a Bachelor’s degree in Naturopathic and Yoga Sciences, is dedicated to nurturing wellness through the transformative power of yoga and naturopathy. She is committed to helping individuals achieve optimal health and well-being. Her compassionate approach and tailored therapeutic methods inspire confidence and empowerment, making her an integral part of the wellness community.',
   },
   {
     id: 3,
-    name: 'Dr. Sridevi (Nutritionist)',
+    name: 'Dr. Jala R (Yoga Therapist), BNYS',
     image:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984782/Yoga/sridevi_reg8o7.webp',
     content:
-      'Dedicated and innovative Ayurvedic professional with a Doctor of Medicine in Ayurveda (MD(Ayu)) and a Bachelor of Ayurveda Medicine and Surgery (BAMS). Has extensive experience in Ayurvedic consulting, research, and teaching. Skilled in nutrition expertise, product development, database management, and regulatory compliance. Passionate about integrating traditional knowledge with modern science for holistic wellness solutions.',
+      'Dr. Jala R is a dedicated yoga therapist with a strong academic foundation, holding a Bachelor’s degree in Naturopathic and Yogic Sciences and pursuing an MD in Acupuncture. With a deep passion for holistic healing, she blends the ancient wisdom of yoga with the principles of naturopathy to support individuals on their journey to better health. Known for her empathetic nature and personalized therapeutic approach, she empowers people to take charge of their well-being. Her work continues to make a meaningful impact in the field of wellness and preventive health.',
   },
 ];
