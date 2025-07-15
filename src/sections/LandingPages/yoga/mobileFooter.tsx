@@ -6,7 +6,7 @@ const MobileFooter = () => {
       <div className='space-y-1.5 bg-gray-300/90 px-4 py-3'>
         <div className='flex items-center justify-between'>
           <div className='text-center font-lexend text-sm uppercase'>
-            Swasthya Saptaha — A Journey to Rejuvenation!
+            Swasthya Sapthaha — A Journey to Rejuvenation!
           </div>
           <a
             href='https://docs.google.com/forms/d/e/1FAIpQLSdWtCUSgT0umZB1b5qq6SC3W_kyAThXXSq83OlTAcP3A54XGw/viewform'

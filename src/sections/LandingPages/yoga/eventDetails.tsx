@@ -40,7 +40,7 @@ const EventDetails = () => {
         <div className='py-8 xl:max-w-3xl'>
           <div className='my-8 font-lexend text-3xl font-bold lg:text-4xl'>
             {' '}
-            Swasthya Saptaha — A Journey to Rejuvenation!
+            Swasthya Sapthaha — A Journey to Rejuvenation!
           </div>
           <div>
             Swasthya Sapthha is not just a physical practice — it’s a pathway to balance, awareness,

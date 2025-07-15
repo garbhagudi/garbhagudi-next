@@ -71,7 +71,7 @@ const Floating: React.FC = () => {
         <div className='flex flex-col items-start justify-start'>
           <div className='space-y-1.5'>
             <div className='font-lexend text-2xl'>
-              Swasthya Saptaha — A Journey to Rejuvenation!
+              Swasthya Sapthaha — A Journey to Rejuvenation!
             </div>
             <div className='space-y-1'>
               <div className='flex items-center justify-start space-x-3 pt-6 font-content'>

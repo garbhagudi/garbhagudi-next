@@ -9,7 +9,7 @@ const Hero = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2'>
           <div className='flex flex-col items-start justify-center space-y-4 py-10 font-lexend'>
             <div className='pt-6 text-5xl uppercase leading-snug'>
-              Welcome to Swasthya Saptaha — A Journey to Rejuvenation!
+              Welcome to Swasthya Sapthaha — A Journey to Rejuvenation!
             </div>
             <p className='text-lg'>A Transformative Week of Wellness, Awareness & Inner Balance</p>
             <a
