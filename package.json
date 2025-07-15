@@ -7,7 +7,8 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "generate-sitemap": "node src/scripts/generate-sitemap.mjs"
+    "generate-sitemap": "node src/scripts/generate-sitemap.mjs",
+    "generate-image-sitemap": "node src/scripts/generate-image-sitemap.mjs"
   },
   "browserslist": [
     ">0.5%",
