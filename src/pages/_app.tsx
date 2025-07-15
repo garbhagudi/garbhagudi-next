@@ -33,7 +33,8 @@ function MyApp({ Component, pageProps }) {
     '/lp/egg-freezing',
     '/treatments/iui-treatment-in-bangalore',
   ];
-  const iuiTreatmentPage = router.pathname === '/treatments/iui-treatment-in-bangalore';
+  const iuiTreatmentPage =
+    router.pathname === '/treatments/iui-treatment-in-bangalore' || router.pathname === '/ivf/yoga';
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);

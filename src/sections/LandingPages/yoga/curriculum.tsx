@@ -9,7 +9,7 @@ const Curriculum = () => {
           <div>
             {yogaSchedule.map((item, index) => {
               return (
-                <div key={index} className='flex w-full gap-x-3 px-4'>
+                <div key={index} className='mb-3 flex w-full gap-x-3 px-4'>
                   <div className='flex w-1/3 flex-col items-center justify-center rounded-lg bg-gray-100 font-lexend'>
                     <div>{item.title}</div> <div>{item.Day}</div>
                   </div>

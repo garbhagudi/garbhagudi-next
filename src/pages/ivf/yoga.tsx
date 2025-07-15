@@ -3,9 +3,6 @@ import dynamic from 'next/dynamic';
 import Hero from 'sections/LandingPages/yoga/hero';
 import Header from 'sections/LandingPages/yoga/header';
 import Head from 'next/head';
-const Cta = dynamic(() => import('sections/gg-care/cta'), {
-  ssr: false,
-});
 const EventDetails = dynamic(() => import('sections/LandingPages/yoga/eventDetails'), {
   ssr: false,
 });
@@ -51,7 +48,6 @@ const Yoga: NextPage = () => {
       <Register />
       <MobileFooter />
       <Floating />
-      <Cta />
     </>
   );
 };
