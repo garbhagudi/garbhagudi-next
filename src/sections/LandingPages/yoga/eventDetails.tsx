@@ -115,7 +115,7 @@ const EventDetails = () => {
             <ul className='list-disc space-y-2 pl-5'>
               <li>
                 {' '}
-                <strong> Challenge Dates: </strong> 18th July to 24th July 2025.
+                <strong> Swasthya Sapthaha Dates : </strong> 18th July to 24th July 2025.
               </li>
               <li>
                 {' '}
@@ -130,8 +130,8 @@ const EventDetails = () => {
             </ul>
           </div>
           <div className='mt-8 text-lg'>
-            Ready to take on the challenge? Sign up now and let’s embark on this journey towards
-            better health and wellness together!
+            Ready to Participate? Sign up now and let’s embark on this journey towards better health
+            and wellness together!
           </div>
         </div>
         <div className='py-8 xl:max-w-3xl'>
@@ -227,22 +227,22 @@ const whatToExpect = [
 const howToParticipate = [
   {
     id: 1,
-    head: 'Register for the Challenge:',
+    head: 'Register now :',
     para: 'Sign up through our website or at the front desk.',
   },
   {
     id: 2,
-    head: 'Attend Daily Yoga Sessions:',
-    para: 'Participate in the daily yoga sessions and follow the challenge routine for 7consecutive days.',
+    head: 'Attend Daily Yoga Sessions : ',
+    para: 'Participate in the daily yoga sessions and follow the routine for 7consecutive days.',
   },
   {
     id: 3,
-    head: 'Track Your Progress:',
+    head: 'Track Your Progress : ',
     para: 'Keep a daily log of your practice and share your experiences on social media using our hashtag #SwasthyaSapthaha.',
   },
   {
     id: 4,
-    head: 'Stay Engaged:',
+    head: 'Stay Engaged : ',
     para: 'Join our online community to share tips, ask questions, and stay motivated.',
   },
 ];
