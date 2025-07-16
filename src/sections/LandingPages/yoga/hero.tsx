@@ -25,7 +25,7 @@ const Hero = () => {
             <div className='h-1 w-full border-b-2 border-gray-400 pt-4 lg:w-[500px]'></div>
             <div className=''>
               <p>Registrations Closing in</p>
-              <CountdownTimer dateTime='2024-07-25T00:00:00' />
+              <CountdownTimer dateTime='2025-07-18T07:30:00' />
             </div>
           </div>
           <div className='flex w-full justify-center'>
