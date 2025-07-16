@@ -203,7 +203,7 @@ const eventHeader = [
 const whatToExpect = [
   {
     id: 1,
-    title: 'One hour recorded session every morning',
+    title: '45 minutes recorded session every morning',
     image: Banner_4,
     description:
       'Every session will include programme introduction, warm-up exercise, asanas, pranayama, and relaxing techniques explained in an applicable way to help you take control of your thoughts & emotions. This will be followed by 10 minutes of questions and answers to clarify any doubts.',
