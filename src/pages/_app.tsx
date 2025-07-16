@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }) {
     '/ivf/landing',
     '/lp/ivf-enquiry-form',
     '/lp/ivf-enquiry-form-call',
-    '/ivf/yoga',
+    '/yoga',
     '/lp/dh/enquiry',
     '/lp/itwmedia/enquiry',
     '/lp/newsfirstdigital/enquiry',
