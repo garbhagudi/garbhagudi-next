@@ -7,10 +7,11 @@ const Hero = () => {
     <div className='z-50 bg-white' id='hero-section'>
       <div className='mx-auto max-w-7xl px-4 pb-12 lg:py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
-          <div className='flex flex-col items-start justify-center space-y-4 py-10 font-lexend'>
-            <div className='pt-6 text-2xl uppercase leading-snug md:text-3xl lg:text-5xl'>
-              Welcome <br />
-              to Swasthya Sapthaha — A Journey to Rejuvenation!
+          <div className='flex flex-col items-start justify-center space-y-4 font-lexend'>
+            <div className='flex flex-col gap-1 leading-snug'>
+              <div className='text-3xl md:text-4xl lg:text-6xl'>Welcome to</div>
+              <div className='text-2xl uppercase md:text-3xl lg:text-5xl'>Swasthya Sapthaha</div>
+              <div className='text-lg md:text-xl lg:text-2xl'>A Journey to Rejuvenation!</div>
             </div>
             <p className='text-lg'>A Transformative Week of Wellness, Awareness & Inner Balance</p>
             <a
