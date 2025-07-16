@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import {
   BsYoutube,
   BsTwitch,
@@ -55,6 +56,8 @@ const navigation = {
 };
 
 export default function Footer() {
+  const router = useRouter();
+  const isYogaPage = router.pathname === '/yoga';
   return (
     <footer
       className='bg-neutral-50 font-content dark:bg-gray-800'
@@ -167,9 +170,11 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className='mt-5 w-fit self-center rounded-md bg-gray-800 md:mt-0'>
-          <Form />
-        </div>
+        {!isYogaPage && (
+          <div className='mt-5 w-fit self-center rounded-md bg-gray-800 md:mt-0'>
+            <Form />
+          </div>
+        )}
       </div>
       <div className='mx-auto max-w-7xl border-t border-gray-200 dark:border-gray-600'>
         <div className='items-ceter mt-8 flex justify-center space-x-2 sm:space-x-3'>

@@ -127,6 +127,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/ivf/yoga',
+        destination: '/yoga',
+        permanent: true,
+      },
+      {
         source: '/about',
         destination: '/about/overview',
         permanent: true,
