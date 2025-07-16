@@ -58,7 +58,7 @@ const EventDetails = () => {
               ))}
             </ol>
           </div>
-          <div className='mt-5 text-xl font-bold'>Exciting Rewards Await!!:</div>
+          <div className='mt-5 text-xl font-bold'>Exciting Rewards Await !!:</div>
           <div>
             We recognize and celebrate your commitment to wellness. At the end of the event, we will
             honour:
@@ -79,7 +79,7 @@ const EventDetails = () => {
           <div className='mt-1'>
             Show up, engage wholeheartedly, and you could win amazing prizes!
           </div>
-          <div className='mt-5 text-xl font-bold'>General Guidelines for Participants::</div>
+          <div className='mt-5 text-xl font-bold'>General Guidelines for Participants :</div>
           <div className='mt-2'>
             <ol className='list-inside list-decimal space-y-2'>
               {generalGuidelines.map((item) => (
@@ -88,7 +88,7 @@ const EventDetails = () => {
             </ol>
           </div>
           <div className='mt-1'>Let us move from stress to strength, together.</div>
-          <div className='mt-5 text-xl font-bold'>How to Participate:</div>
+          <div className='mt-5 text-xl font-bold'>How to Participate :</div>
           <div className='mt-2'>
             <ol className='list-inside list-decimal space-y-2'>
               {howToParticipate.map((item) => (
@@ -99,7 +99,7 @@ const EventDetails = () => {
               ))}
             </ol>
           </div>
-          <div className='mt-5 text-xl font-bold'>Criteria to Win:</div>
+          <div className='mt-5 text-xl font-bold'>Criteria to Win :</div>
           <div className='mt-2'>
             <ol className='list-inside list-decimal space-y-2'>
               {criteriaToWin.map((item) => (
@@ -110,7 +110,7 @@ const EventDetails = () => {
               ))}
             </ol>
           </div>
-          <div className='mt-5 text-xl font-bold'>Additional Information:</div>
+          <div className='mt-5 text-xl font-bold'>Additional Information :</div>
           <div className='mt-2'>
             <ul className='list-disc space-y-2 pl-5'>
               <li>
@@ -135,7 +135,7 @@ const EventDetails = () => {
           </div>
         </div>
         <div className='py-8 xl:max-w-3xl'>
-          <div className='my-6 font-lexend text-3xl font-bold lg:text-4xl'>Whats Included?</div>
+          <div className='my-6 font-lexend text-3xl font-bold lg:text-4xl'>Whats Included ?</div>
           <div className='grid grid-cols-1 gap-3'>
             {whatToExpect.map((item) => (
               <div
