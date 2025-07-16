@@ -25,16 +25,25 @@ const Yoga: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Yoga for IVF Success: Boost Fertility with GarbhaGudi</title>
+        <title>
+          Swasthya Sapthaha - A journey to Rejuvenation | 7 Days Wellness Challenge | GarbhGudi IVF
+          Centre
+        </title>
         <meta
           name='description'
-          content='Join the 21 Day Yoga Challenge by GarbhaGudi to boost fertility and wellness naturally. Start your transformation today—visit now to learn more!'
+          content='Join us for week of Transformative Week of Wellness, Awareness & Inner Balance | Register | Join the WhatsApp Group to get updates'
         />
-        <meta name='title' content='Yoga for IVF Success: Boost Fertility with GarbhaGudi' />
-        <meta name='og:title' content='Yoga for IVF Success: Boost Fertility with GarbhaGudi' />
+        <meta
+          name='title'
+          content='Swasthya Sapthaha - A journey to Rejuvenation | 7 Days Wellness Challenge | GarbhGudi IVF Centre'
+        />
+        <meta
+          name='og:title'
+          content='Swasthya Sapthaha - A journey to Rejuvenation | 7 Days Wellness Challenge | GarbhGudi IVF Centre'
+        />
         <meta
           name='og:description'
-          content='Join the 21 Day Yoga Challenge by GarbhaGudi to boost fertility and wellness naturally. Start your transformation today—visit now to learn more!'
+          content='Join us for week of Transformative Week of Wellness, Awareness & Inner Balance | Register | Join the WhatsApp Group to get updates'
         />
       </Head>
       <Header />

@@ -34,7 +34,15 @@ const Doctor = () => {
                   loading='lazy'
                 />
               </div>
-              <div className='font-lexend text-lg'>{doctor.name}</div>
+              <h3 className='text-center font-heading text-lg font-bold text-gray-800 dark:text-gray-200'>
+                {doctor.name}
+              </h3>
+              <p className='text-center text-sm text-purple-900 dark:text-purple-200'>
+                {doctor.qualification}
+              </p>
+              <p className='text-center text-sm text-gg-500 dark:text-gg-300'>
+                {doctor.designation}
+              </p>
               <div className='font-content text-base text-gray-500'>
                 {expanded[doctor.id] ? doctor.content : truncate(doctor.content, 120)}
                 {doctor.content.length > 120 && (
@@ -56,7 +64,9 @@ export default Doctor;
 const doctors = [
   {
     id: 1,
-    name: 'Ms. Suraksha B (Senior Yoga Therapist), M.Sc Yogic Science, PGCND',
+    name: 'Ms. Suraksha B',
+    qualification: 'M.Sc Yogic Science, PGCND',
+    designation: 'Senior Yoga Therapist',
     image:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984824/Yoga/Suraksha_mrkjqi.webp',
     content:
@@ -64,14 +74,18 @@ const doctors = [
   },
   {
     id: 2,
-    name: 'Dr. Saathvi D (Yoga Therapist), BNYS',
+    name: 'Dr. Saathvi D',
+    qualification: 'BNYS',
+    designation: 'Yoga Therapist',
     image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/bc8IPOjUR6aPrAoGjgHU',
     content:
       'Dr. Saathvi D, a skilled Yoga Therapist with a strong academic foundation, holding a Bachelor’s degree in Naturopathic and Yoga Sciences, is dedicated to nurturing wellness through the transformative power of yoga and naturopathy. She is committed to helping individuals achieve optimal health and well-being. Her compassionate approach and tailored therapeutic methods inspire confidence and empowerment, making her an integral part of the wellness community.',
   },
   {
     id: 3,
-    name: 'Dr. Jala R (Yoga Therapist), BNYS',
+    name: 'Dr. Jala R',
+    qualification: 'BNYS',
+    designation: 'Yoga Therapist',
     image:
       'https://res.cloudinary.com/garbhagudiivf/image/upload/v1752581983/Yoga/Dr._Jala_q6pmbd.webp',
     content:

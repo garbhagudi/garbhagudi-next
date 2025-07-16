@@ -8,7 +8,7 @@ const Hero = () => {
       <div className='mx-auto max-w-7xl px-4 pb-12 lg:py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
           <div className='flex flex-col items-start justify-center space-y-4 py-10 font-lexend'>
-            <div className='pt-6 text-5xl uppercase leading-snug'>
+            <div className='pt-6 text-2xl uppercase leading-snug md:text-3xl lg:text-5xl'>
               Welcome to Swasthya Sapthaha — A Journey to Rejuvenation!
             </div>
             <p className='text-lg'>A Transformative Week of Wellness, Awareness & Inner Balance</p>
@@ -25,7 +25,7 @@ const Hero = () => {
             <div className='h-1 w-full border-b-2 border-gray-400 pt-4 lg:w-[500px]'></div>
             <div className=''>
               <p>Registrations Closing in</p>
-              <CountdownTimer dateTime='2024-07-25T00:00:00' />
+              <CountdownTimer dateTime='2025-07-18T07:30:00' />
             </div>
           </div>
           <div className='flex w-full justify-center'>
