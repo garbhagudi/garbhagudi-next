@@ -34,7 +34,7 @@ const Doctor = () => {
                   loading='lazy'
                 />
               </div>
-              <h3 className='text-center font-heading text-lg font-bold text-gray-800 dark:text-gray-200'>
+              <h3 className='mt-4 text-center font-heading text-lg font-bold text-gray-800 dark:text-gray-200'>
                 {doctor.name}
               </h3>
               <p className='text-center text-sm text-purple-900 dark:text-purple-200'>
@@ -43,7 +43,7 @@ const Doctor = () => {
               <p className='text-center text-sm text-gg-500 dark:text-gg-300'>
                 {doctor.designation}
               </p>
-              <div className='font-content text-base text-gray-500'>
+              <div className='mt-2.5 font-content text-base text-gray-500'>
                 {expanded[doctor.id] ? doctor.content : truncate(doctor.content, 120)}
                 {doctor.content.length > 120 && (
                   <button onClick={() => toggleReadMore(doctor.id)} className='ml-2 text-gg-500'>
