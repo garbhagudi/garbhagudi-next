@@ -11,16 +11,16 @@ const Curriculum = () => {
               return (
                 <div key={index} className='mb-3 flex w-full gap-x-3 px-4'>
                   <div
-                    className={`flex w-1/3 flex-col items-center justify-center rounded-lg ${index < 7 ? 'bg-gray-100' : 'bg-gg-500 text-white'} font-lexend`}
+                    className={`flex w-1/3 flex-col items-center justify-center rounded-lg ${index === 0 || index === 7 ? 'bg-gg-500 text-white' : 'bg-gray-100'} font-lexend`}
                   >
                     <div>{item.title}</div> <div>{item.Day}</div>
                   </div>
                   <div
-                    className={`w-full space-y-2 rounded-lg ${index < 7 ? 'bg-gray-100' : 'bg-gg-500 text-white'} px-4 py-2 font-content`}
+                    className={`w-full space-y-2 rounded-lg ${index === 0 || index === 7 ? 'bg-gg-500 text-white' : 'bg-gray-100'} px-4 py-2 font-content`}
                   >
                     {item.Practice && (
                       <p>
-                        {index < 7 && <strong>Practice:</strong>} {item.Practice}
+                        {(index === 0 || index === 7) && <strong>Practice:</strong>} {item.Practice}
                       </p>
                     )}
                   </div>
@@ -40,7 +40,7 @@ const yogaSchedule = [
   {
     title: 'Day 1',
     Day: 'Fri',
-    Practice: 'Grounding and hormone balancing',
+    Practice: 'Inauguration and Practice,Grounding and hormone balancing',
   },
   {
     title: 'Day 2',

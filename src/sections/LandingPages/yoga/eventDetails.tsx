@@ -44,9 +44,9 @@ const EventDetails = () => {
             and deep inner healing. This week, take a step towards a healthier you, supported by a
             compassionate community and the wisdom of experts.
             <br />
-            Join GarbhaGudi IVF Centre for a 7-day holistic health journey that blends the ancient
-            wisdom of yoga, diet, and acupressure with modern insights into emotional and
-            reproductive well-being.
+            Join GarbhaGudi IVF Centre initiative for a 7-day holistic health journey that blends
+            the ancient wisdom of yoga, diet, and acupressure with modern insights into emotional
+            and reproductive well-being.
           </div>
           <div className='mt-2'>
             <ol className='list-inside list-decimal space-y-2'>
@@ -118,7 +118,7 @@ const EventDetails = () => {
               <li>
                 {' '}
                 <strong> Eligibility: </strong> Open to all registered participants except pregnant
-                women and those who have undergone surgical procedures..
+                women, unwell and those who have undergone surgical or medical procedures.
               </li>
               <li>
                 {' '}
