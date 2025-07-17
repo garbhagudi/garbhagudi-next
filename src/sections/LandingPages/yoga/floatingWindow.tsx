@@ -75,13 +75,13 @@ const Floating: React.FC = () => {
             </div>
             <div className='space-y-1'>
               <div className='flex items-center justify-start space-x-3 pt-6 font-content'>
-                <FaCalendar className='text-2xl text-gg-500' /> <div>18th - 24th July</div>
+                <FaCalendar className='text-2xl text-gg-500' /> <div>18th - 24th July 2025</div>
               </div>
               <div className='flex items-center justify-start space-x-3 pt-3 font-content'>
                 <FaClock className='text-2xl text-gg-500' /> <div>7.30 AM to 8.30 AM (IST)</div>
               </div>
               <div className='flex items-center justify-start space-x-3 pt-3 font-content'>
-                <FaIndianRupeeSign className='text-2xl text-gg-500' /> <div>Contribution: Free</div>
+                <FaIndianRupeeSign className='text-2xl text-gg-500' /> <div>No cost</div>
               </div>
               <div className='py-6'>
                 <a

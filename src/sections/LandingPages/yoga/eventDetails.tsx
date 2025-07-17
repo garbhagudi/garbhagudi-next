@@ -265,7 +265,7 @@ const criteriaToWin = [
   {
     id: 4,
     head: 'Creativity:',
-    para: 'Share creative and inspiring posts about your journey on social media, tagging us and using the challenge hashtag.',
+    para: 'Share creative and inspiring posts about your journey on social media, tagging us and using the challenge hashtag #SwasthyaSapthaha.',
   },
 ];
 const generalGuidelines = [
