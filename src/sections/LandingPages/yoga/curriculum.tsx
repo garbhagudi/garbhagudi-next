@@ -16,7 +16,7 @@ const Curriculum = () => {
                   <div className='w-full space-y-2 rounded-lg bg-gray-100 px-4 py-2 font-content'>
                     {item.Practice && (
                       <p>
-                        <strong>Practice:</strong> {item.Practice}
+                        {index < 7 && <strong>Practice:</strong>} {item.Practice}
                       </p>
                     )}
                   </div>
