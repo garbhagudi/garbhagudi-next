@@ -26,7 +26,7 @@ const Yoga: NextPage = () => {
     <>
       <Head>
         <title>
-          Swasthya Sapthaha - A journey to Rejuvenation | 7 Days Wellness Challenge | GarbhGudi IVF
+          Swasthya Sapthaha | One Week of Wellness, Awareness & Inner Balance | GarbhaGudi IVF
           Centre
         </title>
         <meta
@@ -35,16 +35,24 @@ const Yoga: NextPage = () => {
         />
         <meta
           name='title'
-          content='Swasthya Sapthaha - A journey to Rejuvenation | 7 Days Wellness Challenge | GarbhGudi IVF Centre'
+          content='Swasthya Sapthaha | One Week of Wellness, Awareness & Inner Balance | GarbhaGudi IVF Centre'
         />
         <meta
           name='og:title'
-          content='Swasthya Sapthaha - A journey to Rejuvenation | 7 Days Wellness Challenge | GarbhGudi IVF Centre'
+          content='Swasthya Sapthaha | One Week of Wellness, Awareness & Inner Balance | GarbhaGudi IVF Centre'
         />
         <meta
           name='og:description'
           content='Join us for week of Transformative Week of Wellness, Awareness & Inner Balance | Register | Join the WhatsApp Group to get updates'
         />
+        <meta
+          property='og:image'
+          content='https://i.ytimg.com/vi_webp/WUekV9px8Mc/maxresdefault.webp'
+        />
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='630' />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://www.garbhagudi.com/yoga' />
       </Head>
       <Header />
       <Hero />

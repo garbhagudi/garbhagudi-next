@@ -1,4 +1,3 @@
-import CountdownTimer from 'components/timer';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
@@ -11,7 +10,9 @@ const Hero = () => {
             <div className='flex flex-col gap-1 leading-snug'>
               <div className='text-3xl md:text-4xl lg:text-6xl'>Welcome to</div>
               <div className='text-2xl uppercase md:text-3xl lg:text-5xl'>Swasthya Sapthaha</div>
-              <div className='text-lg md:text-xl lg:text-2xl'>A Journey to Rejuvenation!</div>
+              <div className='text-lg md:text-xl lg:text-2xl'>
+                A GarbhaGudi IVF Centre initiative!
+              </div>
             </div>
             <p className='text-lg'>A Transformative Week of Wellness, Awareness & Inner Balance</p>
             <a
@@ -24,11 +25,6 @@ const Hero = () => {
               </button>
             </a>
             <p className='text-xs'>200,000+ people have already attended</p>
-            <div className='h-1 w-full border-b-2 border-gray-400 pt-4 lg:w-[500px]'></div>
-            <div className=''>
-              <p>Registrations Closing in</p>
-              <CountdownTimer dateTime='2025-07-18T07:30:00' />
-            </div>
           </div>
           <div className='flex w-full justify-center'>
             <div className='w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-3xl'>
