@@ -10,10 +10,14 @@ const Curriculum = () => {
             {yogaSchedule.map((item, index) => {
               return (
                 <div key={index} className='mb-3 flex w-full gap-x-3 px-4'>
-                  <div className='flex w-1/3 flex-col items-center justify-center rounded-lg bg-gray-100 font-lexend'>
+                  <div
+                    className={`flex w-1/3 flex-col items-center justify-center rounded-lg ${index < 7 ? 'bg-gray-100' : 'bg-gg-500 text-white'} font-lexend`}
+                  >
                     <div>{item.title}</div> <div>{item.Day}</div>
                   </div>
-                  <div className='w-full space-y-2 rounded-lg bg-gray-100 px-4 py-2 font-content'>
+                  <div
+                    className={`w-full space-y-2 rounded-lg ${index < 7 ? 'bg-gray-100' : 'bg-gg-500 text-white'} px-4 py-2 font-content`}
+                  >
                     {item.Practice && (
                       <p>
                         {index < 7 && <strong>Practice:</strong>} {item.Practice}

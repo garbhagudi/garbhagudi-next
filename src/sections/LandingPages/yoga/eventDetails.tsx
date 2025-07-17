@@ -112,8 +112,8 @@ const EventDetails = () => {
             <ul className='list-disc space-y-2 pl-5'>
               <li>
                 {' '}
-                <strong> Swasthya Sapthaha Dates : </strong> 18th July to 24th July 2025 and 25th
-                July 2025.
+                <strong> Swasthya Sapthaha Dates : </strong> 18th July to 24th July 2025. Closing
+                ceremony on 25th July 2025.
               </li>
               <li>
                 {' '}
@@ -226,12 +226,12 @@ const howToParticipate = [
   {
     id: 1,
     head: 'Register now :',
-    para: 'Sign up through our website or at the front desk.',
+    para: 'Sign up through this website.',
   },
   {
     id: 2,
     head: 'Attend Daily Yoga Sessions : ',
-    para: 'Participate in the daily yoga sessions and follow the routine for 7consecutive days.',
+    para: 'Participate in the daily sessions and follow the routine for 7consecutive days.',
   },
   {
     id: 3,
