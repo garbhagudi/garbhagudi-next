@@ -38,10 +38,7 @@ const EventDetails = () => {
           ))}
         </div>
         <div className='py-8 xl:max-w-3xl'>
-          <div className='my-8 font-lexend text-3xl font-bold lg:text-4xl'>
-            {' '}
-            Swasthya Sapthaha — A Journey to Rejuvenation!
-          </div>
+          <div className='my-8 font-lexend text-3xl font-bold lg:text-4xl'> Swasthya Sapthaha</div>
           <div>
             Swasthya Sapthha is not just a physical practice — it’s a pathway to balance, awareness,
             and deep inner healing. This week, take a step towards a healthier you, supported by a
@@ -115,7 +112,8 @@ const EventDetails = () => {
             <ul className='list-disc space-y-2 pl-5'>
               <li>
                 {' '}
-                <strong> Swasthya Sapthaha Dates : </strong> 18th July to 24th July 2025.
+                <strong> Swasthya Sapthaha Dates : </strong> 18th July to 24th July 2025 and 25th
+                July 2025.
               </li>
               <li>
                 {' '}
