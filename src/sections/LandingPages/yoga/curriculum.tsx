@@ -20,7 +20,8 @@ const Curriculum = () => {
                   >
                     {item.Practice && (
                       <p>
-                        {(index === 0 || index === 7) && <strong>Practice:</strong>} {item.Practice}
+                        {!(index === 0 || index === 7) && <strong>Practice:</strong>}{' '}
+                        {item.Practice}
                       </p>
                     )}
                   </div>
@@ -40,7 +41,7 @@ const yogaSchedule = [
   {
     title: 'Day 1',
     Day: 'Fri',
-    Practice: 'Inauguration and Practice,Grounding and hormone balancing',
+    Practice: 'Inauguration and Practice: Grounding and hormone balancing',
   },
   {
     title: 'Day 2',
