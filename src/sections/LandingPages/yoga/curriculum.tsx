@@ -68,4 +68,9 @@ const yogaSchedule = [
     Day: 'Thu',
     Practice: 'Chair yoga for professionals',
   },
+  {
+    title: 'Day 8',
+    Day: 'Fri',
+    Practice: 'Closing Ceremony',
+  },
 ];

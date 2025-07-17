@@ -70,9 +70,7 @@ const Floating: React.FC = () => {
       <div className='max-w-xl'>
         <div className='flex flex-col items-start justify-start'>
           <div className='space-y-1.5'>
-            <div className='font-lexend text-2xl'>
-              Swasthya Sapthaha — A Journey to Rejuvenation!
-            </div>
+            <div className='font-lexend text-2xl'>Swasthya Sapthaha</div>
             <div className='space-y-1'>
               <div className='flex items-center justify-start space-x-3 pt-6 font-content'>
                 <FaCalendar className='text-2xl text-gg-500' /> <div>18th - 24th July 2025</div>
