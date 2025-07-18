@@ -90,9 +90,9 @@ const Features2 = () => {
         <div className='mt-12'>
           <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
             {features?.map((feature) => (
-              <Link href={feature.link} key={feature.id} passHref>
-                <div className='mx-auto max-w-sm pt-3'>
-                  <div className='flow-root rounded-lg border bg-gray-100 px-6 pb-8 shadow-lg transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-2xl'>
+              <Link href={feature.link} key={feature.id} passHref className='h-full'>
+                <div className='mx-auto h-full max-w-sm pt-3'>
+                  <div className='flow-root h-full rounded-lg border bg-gray-100 px-6 pb-8 shadow-lg transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-2xl'>
                     <div className='-mt-6'>
                       <div>
                         <span className='inline-flex items-center justify-center rounded-full bg-brandPink p-2 shadow-xl'>

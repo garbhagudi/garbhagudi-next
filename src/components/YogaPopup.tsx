@@ -42,9 +42,16 @@ export default function YogaPopUp() {
           <div className='flex min-h-full items-center justify-center px-3 pt-8'>
             <DialogPanel
               transition
-              className='data-[closed]:transform-[scale(95%)] max-w-md rounded-xl bg-gray-800 pb-4 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] transition-shadow duration-300 ease-out hover:shadow-[0_0_25px_10px_rgba(0,0,0,0.5)] data-[closed]:opacity-0'
+              className='data-[closed]:transform-[scale(95%)] relative max-w-md rounded-xl bg-gray-800 pb-4 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] transition-shadow duration-300 ease-out hover:shadow-[0_0_25px_10px_rgba(0,0,0,0.5)] data-[closed]:opacity-0'
             >
-              <Link href={'/yoga'} className='relative h-96 w-full'>
+              <CloseButton
+                className={
+                  'absolute right-2 top-1 z-50 h-fit w-fit rounded-2xl bg-white text-gg-500'
+                }
+              >
+                <IoIosCloseCircleOutline fontSize={24} />
+              </CloseButton>
+              <Link href={'/yoga'} target='_blank' className='relative h-96 w-full'>
                 <Image
                   src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1752758910/Swastya_Sapthaha_SMP_Eng_s7rqyd.webp'
                   alt='formBanner'
@@ -52,11 +59,6 @@ export default function YogaPopUp() {
                   width={380}
                   height={220}
                 />
-                <CloseButton
-                  className={'absolute right-2 top-1 h-fit w-fit rounded-2xl bg-white text-gg-500'}
-                >
-                  <IoIosCloseCircleOutline fontSize={24} />
-                </CloseButton>
               </Link>
             </DialogPanel>
           </div>

@@ -70,10 +70,10 @@ const Features = () => {
         <div className='mt-8'>
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
             {features.map((feature) => (
-              <Link href={feature.link} key={feature.id} passHref className='group'>
-                <div className='group mx-auto max-w-sm pt-3'>
-                  <div className='shadow-3xl overflow-hidden rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-2xl'>
-                    <div className='grid grid-cols-6'>
+              <Link href={feature.link} key={feature.id} passHref className='group h-full'>
+                <div className='group mx-auto h-full max-w-sm pt-3'>
+                  <div className='shadow-3xl h-full overflow-hidden rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-2xl'>
+                    <div className='grid h-full grid-cols-6'>
                       <div className='col-span-1 flex h-full items-center justify-center bg-gg-500 dark:bg-gray-600 dark:group-hover:bg-gg-500'>
                         <div className='text-4xl font-bold text-white'>{feature.icon}</div>
                       </div>
