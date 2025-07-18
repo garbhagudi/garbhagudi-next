@@ -35,11 +35,11 @@ const StatsPC = () => {
             <div className='col-span-2 row-span-3 flex items-center justify-center rounded-full'>
               <div className='absolute -z-50 h-[700px] w-[700px] rounded-full border border-gg-500 bg-transparent dark:border-gg-400'></div>
               <div className='absolute -z-40 h-[450px] w-[450px] animate-spinSlow rounded-full border-2 border-dashed border-gg-500 bg-transparent dark:border-gg-400'></div>
-              <div className='flex h-96 w-96 items-center justify-center rounded-full shadow-2xl ring-brandPink4 dark:bg-gray-700'>
+              <div className='flex h-96 w-96 items-center justify-center rounded-full p-10 shadow-2xl ring-brandPink4 dark:bg-gray-700'>
                 <Image
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1659164257/logos/GG_Vertical_Logo_nrcl5h.svg'
+                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1752831446/GG_384x384_xhc6u4.webp'
                   alt='garbhagudi logo'
-                  className='h-64 w-64 dark:fill-white dark:brightness-0 dark:grayscale dark:invert'
+                  className='h-full w-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert'
                   width={256}
                   height={256}
                   loading='lazy'
