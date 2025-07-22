@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import Hero from 'sections/LandingPages/yoga/hero';
 import Header from 'sections/LandingPages/yoga/header';
 import Head from 'next/head';
+import RecordedSessions from 'sections/LandingPages/yoga/RecordedSessions';
 const EventDetails = dynamic(() => import('sections/LandingPages/yoga/eventDetails'), {
   ssr: false,
 });
@@ -59,6 +60,7 @@ const Yoga: NextPage = () => {
       <EventDetails />
       <Benefits />
       <Curriculum />
+      <RecordedSessions />
       <AboutDoctors />
       <Testimonial />
       <Faq />
