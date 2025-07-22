@@ -21,7 +21,7 @@ const WhyGG = () => {
               <div className='w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12'>
                 <div className='px-6 py-12 md:px-12'>
                   <h2 className='mb-4 text-left font-heading text-2xl font-bold text-gray-800 dark:text-gray-200 lg:text-center'>
-                    Why GarbhaGudi should be the your next destination to complete your family?
+                    Why GarbhaGudi should be your next destination to complete your family?
                   </h2>
                   <p className='mb-6 font-content text-gray-800 dark:text-gray-200'>
                     GarbhaGudi is a leading{' '}

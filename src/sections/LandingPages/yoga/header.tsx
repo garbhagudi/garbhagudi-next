@@ -39,6 +39,7 @@ export default Header;
 const menuitems = [
   { title: 'Benefits', url: '#benefits' },
   { title: 'Curriculum', url: '#curriculum' },
+  { title: 'Recorded Sessions', url: '#recorded-session' },
   { title: 'Testimonial', url: '#testimonial' },
   { title: 'FAQ', url: '#faq' },
 ];

@@ -12,7 +12,10 @@ const RecordedSessions = () => {
   };
 
   return (
-    <div className='max-w-4xl bg-white pb-20 pt-16 dark:bg-gray-800 sm:px-6 lg:px-8 lg:pb-20 lg:pt-24'>
+    <div
+      id='recorded-session'
+      className='max-w-5xl bg-white px-2.5 pb-12 pt-8 dark:bg-gray-800 sm:px-6 lg:px-8'
+    >
       <div className='relative mx-auto'>
         <div className='border-b pb-4 dark:border-gray-600'>
           <h2 className='text-center font-heading text-3xl font-extrabold tracking-tight text-gray-800 dark:text-gray-200 sm:text-4xl'>
