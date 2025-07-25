@@ -3,7 +3,15 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 const RecordedSessions = () => {
-  const recordedVideos = ['JPHZsbEn24w', 'IvtzfQ4BdS0', 'UKimel6v7hI', 'RisOtg9qvSM'];
+  const recordedVideos = [
+    'JPHZsbEn24w',
+    'IvtzfQ4BdS0',
+    'UKimel6v7hI',
+    'RisOtg9qvSM',
+    'MEBxe_EIrZQ',
+    'SRvOOye0Ea0',
+    'VbTQdtk_ZDo',
+  ];
 
   const [showAll, setShowAll] = useState(false);
 

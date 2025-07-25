@@ -102,7 +102,7 @@ export async function getStaticPaths() {
 
 const Doctor = ({ doctor }) => {
   const router = useRouter();
-  const title = `${doctor?.name} - Fertility Specialist`;
+  const title = `${doctor?.name} - ${doctor?.designation}`;
 
   function addDocJsonLd() {
     return {
