@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import {
   BsYoutube,
   BsTwitch,
-  BsReddit,
   BsInstagram,
   BsLinkedin,
   BsWhatsapp,
@@ -228,11 +227,6 @@ const SocialIcon = [
     name: 'X',
     url: 'https://X.com/garbhagudiivf',
     icon: <RiTwitterXFill className='text-3xl dark:text-white' />,
-  },
-  {
-    name: 'Reddit',
-    url: 'https://www.reddit.com/r/garbhagudi/',
-    icon: <BsReddit className='text-3xl text-orange-600' />,
   },
   {
     name: 'Mail',
