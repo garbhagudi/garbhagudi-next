@@ -1373,11 +1373,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/fertility-center/cost-of-iui-in-bangalore',
-        destination: '/fertility-center/cost-of-iui-in-bangalore',
-        permanent: true,
-      },
-      {
         source: '/fertility-center/ivf-treatment-cost-in-bangalore',
         destination: '/treatments/ivf-treatment-cost-in-bangalore',
         permanent: true,
@@ -1725,11 +1720,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/fertility-center/cost-of-iui-in-bangalore ',
-        destination: '/solutions/cost-of-iui-in-bangalore',
-        permanent: true,
-      },
-      {
         source: '/faq',
         destination: '/resources/faq',
         permanent: true,
@@ -1985,11 +1975,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/blogs/iui-infertility-treatment',
-        destination: '/blogs/iui-infertility-treatment',
-        permanent: true,
-      },
-      {
         source: '/blogs/infertility-in-india-',
         destination: '/blogs/infertility-in-india-statistics-and-challenges',
         permanent: true,
@@ -2036,6 +2021,161 @@ const nextConfig = {
       {
         source: '/awards-and-accolades/best-ivf-clinic-of-the-year-ethealth',
         destination: '/about/awards-and-accolades/best-ivf-clinic-of-the-year-ethealth',
+        permanent: true,
+      },
+      {
+        source: '/causes/obesity-and-fertility',
+        destination: '/blogs/the-impact-of-obesity-on-fertility',
+        permanent: true,
+      },
+      {
+        source: '/executive-team/pushpalatha-ms',
+        destination: '/fertility-experts',
+        permanent: true,
+      },
+      {
+        source: '/diagnosis/ultrasound-scan',
+        destination: '/resources/diagnosis/ultrasound-scan',
+        permanent: true,
+      },
+      {
+        source: '/diagnosis/blood-investigations',
+        destination: '/resources/diagnosis/blood-investigations',
+        permanent: true,
+      },
+      {
+        source: '/causes/hormonal-disorders',
+        destination: '/resources/causes/hormonal-disorders',
+        permanent: true,
+      },
+      {
+        source: '/executive-team/dr-asha-s-vijay',
+        destination: '/fertility-experts',
+        permanent: true,
+      },
+      {
+        source: '/diagnosis/ovarian-reserve-tests-ort',
+        destination: '/resources/diagnosis/ovarian-reserve-tests-ort',
+        permanent: true,
+      },
+      {
+        source: '/diagnosis/pre-implantation-genetic-screening-pgs',
+        destination: '/resources/diagnosis/pre-implantation-genetic-screening-pgs',
+        permanent: true,
+      },
+      {
+        source: '/awards-and-accolades/garbhagudi-certified-healthy-workplace',
+        destination: '/about/awards-and-accolades/garbhagudi-certified-healthy-workplace',
+        permanent: true,
+      },
+      {
+        source: '/causes/polycystic-ovarian-syndrome-pcos',
+        destination: '/resources/causes/polycystic-ovarian-syndrome-pcos',
+        permanent: true,
+      },
+      {
+        source: '/causes/ovulation-disorders',
+        destination: '/resources/causes/ovulation-disorders',
+        permanent: true,
+      },
+      {
+        source: '/causes/surgical-complications',
+        destination: '/resources/causes/surgical-complications',
+        permanent: true,
+      },
+      {
+        source: '/resources/facts',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source:
+          '/awards-and-accolades/garbhagudi-recognised-as-best-ivf-and-fertility-hospital-in-india',
+        destination:
+          '/about/awards-and-accolades/garbhagudi-recognised-as-best-ivf-and-fertility-hospital-in-india',
+        permanent: true,
+      },
+      {
+        source: '/diagnosis/hysterosalpingogram',
+        destination: '/resources/diagnosis/hysterosalpingogram',
+        permanent: true,
+      },
+      {
+        source: '/diagnosis/endometrial-receptivity-array-era',
+        destination: '/resources/diagnosis/endometrial-receptivity-array-era',
+        permanent: true,
+      },
+      {
+        source: '/causes/pelvic-inflamatory-disease',
+        destination: '/resources/causes/pelvic-inflamatory-disease',
+        permanent: true,
+      },
+      {
+        source: '/awards-and-accolades/fastest-growing-ivf-centre-in-bangalore',
+        destination: '/about/awards-and-accolades/fastest-growing-ivf-centre-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/diagnosis/pre-implantation-genetic-diagnosis-pgd',
+        destination: '/resources/diagnosis/pre-implantation-genetic-diagnosis-pgd',
+        permanent: true,
+      },
+      {
+        source: '/treatments/ivf-treatment-in-bangalore/egg-freezing-quiz',
+        destination: '/treatments/ivf-treatment-egg-freezing',
+        permanent: true,
+      },
+      {
+        source: '/treatments/ivf-treatment-in-bangalore/egg-freezing-quiz-form',
+        destination: '/treatments/ivf-treatment-egg-freezing',
+        permanent: true,
+      },
+      {
+        source: '/awards-and-accolades/best-ivf-clinic-of-the-year-ethealth',
+        destination: '/about/awards-and-accolades/best-ivf-clinic-of-the-year-ethealth',
+        permanent: true,
+      },
+      {
+        source: '/executive-team/hari-srinivasan',
+        destination: '/fertility-experts',
+        permanent: true,
+      },
+      {
+        source:
+          '/awards-and-accolades/national-excellency-award-2024-awarded-by-the-world-health-congress',
+        destination:
+          '/about/awards-and-accolades/garbhagudi-ranked-among-top-10-ivf-centres-in-india-times-health-survey',
+        permanent: true,
+      },
+      {
+        source: '/awards-and-accolades/icon-of-the-year-ivf-south-dr-asha-s-vijay',
+        destination: '/about/awards-and-accolades/icon-of-the-year-ivf-south-dr-asha-s-vijay',
+        permanent: true,
+      },
+      {
+        source: '/causes/blocked-fallopian-tubes',
+        destination: '/blogs/blocked-fallopian-tubes-diagnosis-and-treatment-options',
+        permanent: true,
+      },
+      {
+        source:
+          '/awards-and-accolades/garbhagudi-ranked-among-top-10-ivf-centres-in-india-times-health-survey',
+        destination: '/about/awards-and-accolades',
+        permanent: true,
+      },
+      {
+        source: '/diagnosis/semen-analysis',
+        destination: '/resources/diagnosis/semen-analysis',
+        permanent: true,
+      },
+      {
+        source: '/executive-team/vijay-kumar-sheshadri',
+        destination: '/fertility-experts',
+        permanent: true,
+      },
+      {
+        source: '/fertility-experts/dr-ranjitha-k-a',
+        destination: '/fertility-experts',
         permanent: true,
       },
     ];
