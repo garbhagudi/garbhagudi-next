@@ -155,6 +155,22 @@ const Iui = () => {
       }`,
     };
   }
+  function addDocJsonLd() {
+    return {
+      __html: `{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Experience the hope of starting a family with IUI treatment in Bangalore",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "604",
+    "reviewCount": "1200"
+  }
+}
+`,
+    };
+  }
   return (
     <div>
       <Head>
@@ -189,6 +205,7 @@ const Iui = () => {
           dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
           key='breadcrumbs-jsonld'
         />
+        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
 
         <script
           type='application/ld+json'

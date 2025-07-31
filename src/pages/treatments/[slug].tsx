@@ -33,6 +33,7 @@ export const getStaticProps = async ({ params }) => {
               raw
               text
             }
+            docJsonLd
             faq {
               id
               question
@@ -227,6 +228,17 @@ const Treatment = ({ treatment }) => {
     };
   }
 
+  function addDocJsonLd() {
+    if (!treatment?.docJsonLd) return { __html: '' };
+    const jsonLD =
+      typeof treatment.docJsonLd === 'string'
+        ? JSON.parse(treatment.docJsonLd)
+        : treatment.docJsonLd;
+    return {
+      __html: JSON.stringify(jsonLD, null, 2),
+    };
+  }
+
   return (
     <div>
       <Head>
@@ -258,6 +270,9 @@ const Treatment = ({ treatment }) => {
               type='application/ld+json'
               dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
             />
+            {treatment?.docJsonLd && (
+              <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
+            )}
             {treatment?.slug === 'laparoscopy-treatment-in-bangalore' && (
               <script
                 type='application/ld+json'
