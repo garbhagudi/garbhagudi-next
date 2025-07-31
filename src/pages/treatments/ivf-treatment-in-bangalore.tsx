@@ -184,6 +184,22 @@ const Ivf = () => {
       }`,
     };
   }
+  function addDocJsonLd() {
+    return {
+      __html: `{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Helping couples in their Journey towards Parenthood",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "604",
+    "reviewCount": "1200"
+  }
+}
+`,
+    };
+  }
   return (
     <div>
       <Head>
@@ -224,6 +240,7 @@ const Ivf = () => {
           dangerouslySetInnerHTML={addFaqJsonLd()}
           id='howto-jsonld'
         />
+        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={addReviewJsonLd()}
