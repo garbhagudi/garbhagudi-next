@@ -282,13 +282,6 @@ const Treatment = ({ treatment }) => {
             )}
           </>
         )}
-        {treatment?.slug === 'laparoscopy-treatment-in-bangalore' && (
-          <script
-            type='application/ld+json'
-            dangerouslySetInnerHTML={faqJsonLd()}
-            id='faq-jsonld'
-          />
-        )}
         {/* Open Graph / Facebook */}
 
         <meta property='og:title' content={`${treatment?.title} | GarbhaGudi IVF Centre`} />
