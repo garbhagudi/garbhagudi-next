@@ -3,7 +3,7 @@ import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 const Banner = dynamic(() => import('sections/LandingPages/Neutral/banner'), { ssr: true });
 const Video = dynamic(() => import('sections/home/video'), {
@@ -52,6 +52,9 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
       display: 'none',
     },
   };
+  useEffect(() => {
+    window.location.href = 'https://www.garbhagudi-ivf.com/';
+  }, []);
   return (
     <div>
       <Head>
