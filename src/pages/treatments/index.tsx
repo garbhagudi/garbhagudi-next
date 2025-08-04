@@ -62,7 +62,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
         />
       </Head>
       <BreadCrumbs
-        link1='/resources/treatments'
+        link1='/treatments'
         text1='Treatments'
         text2=''
         link2=''
@@ -125,7 +125,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                       }
                     })}
                     <Link
-                      href={`/treatments/in-vitro-fertilization-ivf`}
+                      href={`/treatments/ivf-treatment-in-bangalore`}
                       passHref
                       className='group'
                     >
@@ -146,7 +146,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                       </div>
                     </Link>
                     <Link
-                      href={`/treatments/intra-uterine-insemination-iui`}
+                      href={`/treatments/iui-treatment-in-bangalore`}
                       passHref
                       className='group'
                     >
