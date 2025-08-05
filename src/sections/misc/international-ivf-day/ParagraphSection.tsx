@@ -25,7 +25,7 @@ const ParagraphSection = () => {
         Join us in celebrating International IVF Day by participating in our various events and
         activities. Our event calendar from July 1 to July 25 is packed with opportunities for you
         to learn and engage. Whether you are an existing patient or new to our services, there's
-        something for everyone. We also have special events happening at our branches across 7
+        something for everyone. We also have special events happening at our branches across 8
         locations, ensuring you can be part of the celebration no matter where you are
       </p>
       <h2 className='mt-5 text-xl font-bold'>Join the 21-Day Yoga Challenge</h2>
