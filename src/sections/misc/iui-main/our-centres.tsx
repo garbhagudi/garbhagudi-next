@@ -198,4 +198,16 @@ const Data = [
     ),
     link: 'https://www.google.com/maps/place/GarbhaGudi+IVF+Centre,+Yelahanka/@13.0972851,77.595591,17z/data=!3m1!4b1!4m15!1m8!3m7!1s0x3bae1967f7537aa5:0x22df6e1d1a01b7f!2sGarbhaGudi+IVF+Centre,+Yelahanka!8m2!3d13.0972799!4d77.5981659!10e1!16s%2Fg%2F11x1pmb_3f!3m5!1s0x3bae1967f7537aa5:0x22df6e1d1a01b7f!8m2!3d13.0972799!4d77.5981659!16s%2Fg%2F11x1pmb_3f?entry=ttu&g_ep=EgoyMDI1MDUxNS4xIKXMDSoASAFQAw%3D%3D',
   },
+  {
+    id: 9,
+    branch: 'Davanagere',
+    map: 'https://maps.app.goo.gl/r1HNjzH5TWn76sSUA',
+    phone: '+91 9108 9108 32',
+    address: (
+      <span>
+        2659/1 , First & Second floor, MCC B Block, Dental College Road, Davanagere 577004
+      </span>
+    ),
+    link: 'https://www.google.com/maps/place/GarbhaGudi+IVF+Centre,+Davanagere/@14.4556527,75.914636,17z/data=!3m1!4b1!4m6!3m5!1s0x3bba25cbd139021d:0x187231634226ee7e!8m2!3d14.4556527!4d75.914636!16s%2Fg%2F11md2ytty4?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D',
+  },
 ];

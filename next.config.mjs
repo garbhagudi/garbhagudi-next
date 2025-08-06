@@ -218,7 +218,12 @@ const nextConfig = {
       },
       {
         source: '/features/paripoorna-2024.tsx',
-        destination: '/features/paripoorna-2024',
+        destination: '/features/paripoorna',
+        permanent: true,
+      },
+      {
+        source: '/features/paripoorna-2024',
+        destination: '/features/paripoorna',
         permanent: true,
       },
       {
@@ -539,12 +544,12 @@ const nextConfig = {
       },
       {
         source: '/features/paripoorna-2023',
-        destination: '/features/paripoorna-2024',
+        destination: '/features/paripoorna',
         permanent: true,
       },
       {
         source: '/features/paripoorna-2024.tsx',
-        destination: '/features/paripoorna-2024',
+        destination: '/features/paripoorna',
         permanent: true,
       },
       {
@@ -677,7 +682,7 @@ const nextConfig = {
       },
       {
         source: '/paripoorna',
-        destination: '/features/paripoorna-2024',
+        destination: '/features/paripoorna',
         permanent: true,
       },
       {
@@ -1364,7 +1369,7 @@ const nextConfig = {
       },
       {
         source: '/features/paripoorna-2023',
-        destination: '/features/paripoorna-2024',
+        destination: '/features/paripoorna',
         permanent: true,
       },
       {
