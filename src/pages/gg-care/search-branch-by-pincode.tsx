@@ -357,4 +357,18 @@ const locations = [
     phone: '+91 9108 9108 32',
     directionLink: 'https://maps.app.goo.gl/GSj2ctaQ347UhCS67',
   },
+  {
+    id: '9',
+    name: 'Davanagere',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmdzyur6h2bux07per8j8v5dd',
+    zipCode: '577004',
+    address: (
+      <div>
+        <p>2659/1 , First & Second floor, MCC B Block, Dental College Road,</p>
+        <p className='mb-5 mt-1'>Davanagere 577004</p>
+      </div>
+    ),
+    phone: '+91 9108 9108 32',
+    directionLink: 'https://maps.app.goo.gl/r1HNjzH5TWn76sSUA',
+  },
 ];

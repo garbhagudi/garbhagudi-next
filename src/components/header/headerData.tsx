@@ -259,6 +259,12 @@ export const Location = [
     short: 'YLA',
   },
   {
+    name: 'Davanagere',
+    href: '/locations/davanagere',
+    icon: <SiGooglemaps />,
+    short: 'DV',
+  },
+  {
     name: 'Find Nearest Location',
     href: '/gg-care/search-branch-by-pincode',
     icon: <FaRoad />,
@@ -312,8 +318,8 @@ export const ValueAddedServices = [
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840357/Icons/Features/Best_in_Class_Facilities_fchmjr.svg',
   },
   {
-    name: 'Paripoorna 2024',
-    href: '/features/paripoorna-2024',
+    name: 'Paripoorna',
+    href: '/features/paripoorna',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642841468/Icons/Why%20GarbhaGudi/Paripoorna_nikziu.svg',
   },
   {

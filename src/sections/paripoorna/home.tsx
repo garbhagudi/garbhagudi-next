@@ -64,7 +64,7 @@ const Home = () => {
       <div className='mx-auto max-w-7xl'>
         <div className='py-12 text-center font-heading text-4xl font-bold text-gg-600 lg:py-24 lg:text-5xl'>
           <h1 className='mx-auto max-w-lg rounded-md py-2 dark:bg-gray-200 dark:bg-opacity-80'>
-            Paripoorna 2024
+            Paripoorna
           </h1>
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
@@ -81,7 +81,7 @@ const Home = () => {
               experiencing the joy of parenthood. We know that many couples cannot afford IVF.
               Keeping this in mind, GarbhaGudi IVF Centre in association with GarbhaGnan Foundation,
               has initiated this program called{' '}
-              <span className='font-bold underline'>PARIPOORNA-2024. </span>
+              <span className='font-bold underline'>PARIPOORNA. </span>
               <PriceSlash originalPrice={260000} slashedPrice={160000} />
               This December, celebrate the season of parenthood, with Paripoorna. GarbhaGudi IVF
               Centre is offering a flat <span className='font-bold underline'>₹1,00,000/-</span> off
@@ -92,7 +92,7 @@ const Home = () => {
                   <WatchVideo />
                 </div>
                 <div className='rounded-xl bg-purple-700 px-3 py-2 font-lexend text-white dark:bg-purple-800'>
-                  <Link href='/contact/enquiry?pageVisit=/features/paripoorna-2024'>
+                  <Link href='/contact/enquiry?pageVisit=/features/paripoorna'>
                     <div>Book an Appointment</div>
                   </Link>
                 </div>

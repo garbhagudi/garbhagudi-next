@@ -30,6 +30,7 @@ const navigation = {
     { name: 'New BEL road', href: '/locations/new-bel-road' },
     { name: 'Jayanagar', href: '/locations/jayanagar' },
     { name: 'Yelahanka', href: '/locations/yelahanka' },
+    { name: 'Davanagere', href: '/locations/davanagere' },
   ],
   resources: [
     { name: 'Fertility Experts', href: '/fertility-experts' },
@@ -44,7 +45,7 @@ const navigation = {
     { name: 'Pharmacy', href: '#' },
   ],
   contact: [
-    { name: 'Paripoorna 2024', href: '/features/paripoorna-2024' },
+    { name: 'Paripoorna', href: '/features/paripoorna' },
     { name: 'Careers', href: '/careers' },
     { name: 'GG care', href: '/gg-care' },
   ],

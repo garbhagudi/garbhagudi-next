@@ -246,5 +246,17 @@ export const contactData = {
       phone: '+91 9108 9108 32',
       directionLink: 'https://maps.app.goo.gl/GSj2ctaQ347UhCS67',
     },
+    {
+      id: '9',
+      name: 'Davanagere',
+      address: (
+        <div>
+          <p>2659/1 , First & Second floor, MCC B Block, Dental College Road,</p>
+          <p className='mb-5 mt-1'>Davanagere 577004</p>
+        </div>
+      ),
+      phone: '+91 9108 9108 32',
+      directionLink: 'https://maps.app.goo.gl/r1HNjzH5TWn76sSUA',
+    },
   ],
 };

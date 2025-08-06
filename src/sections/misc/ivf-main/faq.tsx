@@ -123,6 +123,14 @@ const data = [
               Yelahanka
             </Link>
           </li>
+          <li>
+            <Link
+              href={'/locations/davanagere'}
+              className='hover:underlink text-brandPurpleDark hover:text-brandPink'
+            >
+              Davanagere
+            </Link>
+          </li>
         </ul>
       </div>
     ),
