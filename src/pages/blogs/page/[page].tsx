@@ -132,7 +132,7 @@ function BlogPage({
                   <Link href={`/blogs/${item.node.slug}`} passHref>
                     <div className='flex-shrink-0'>
                       <Image
-                        src={item.node.image.url || 'https://via.placeholder.com/380x214'}
+                        src={item?.node?.image?.url || 'https://via.placeholder.com/380x214'}
                         alt={item.node.title}
                         width={380}
                         height={214}
@@ -261,7 +261,7 @@ export async function getStaticProps({ params }) {
     offset: (page - 1) * limit,
   });
 
-  if (!data || data.blogsConnection.blogs.length === 0) {
+  if (!data || data?.blogsConnection?.blogs?.length === 0) {
     return {
       redirect: {
         destination: '/blogs/page/1',
