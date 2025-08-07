@@ -31,7 +31,7 @@ const WhyGarbhaGudi = () => {
               <div className='flex flex-col items-center justify-start space-y-8'>
                 <FaMap className='text-5xl text-brandPurpleDark dark:text-gg-500' />
                 <p className='leading-relaxed'>
-                  7 Convenient IVF Centers Across Bangalore: With a widespread presence, we provide
+                  9 Convenient IVF Centers in Karnataka: With a widespread presence, we provide
                   accessibility and convenience for individuals seeking fertility treatments, making
                   quality care readily available.
                 </p>
