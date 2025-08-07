@@ -19,8 +19,7 @@ const Banner = ({ branchTitle }) => {
                   {branchTitle && <span className='text-brandPink'> in {branchTitle}</span>}
                 </h1>
                 <h3 className='mt-4 font-content font-semibold leading-7 text-gray-800 dark:text-gray-200'>
-                  We are proud to offer infertility treatment at 9 locations across Bangalore.{' '}
-                  <br />
+                  We are proud to offer infertility treatment at 9 locations in Karnataka. <br />
                   Please contact us today to learn more about our services and find the location
                   nearest you.
                 </h3>

@@ -20,6 +20,8 @@ export const getStaticProps = async ({ params }) => {
         doctor(where: { slug: $slug }) {
           id
           name
+          metaTitle
+          location
           bio {
             raw
             text
@@ -104,8 +106,7 @@ export async function getStaticPaths() {
 
 const Doctor = ({ doctor }) => {
   const router = useRouter();
-  const title = `${doctor?.name} - ${doctor?.designation}`;
-
+  const defaultMetaTile = `${doctor?.name} | ${doctor?.designation} | ${doctor?.location} | GarbhaGudi `;
   function addDocJsonLd() {
     return {
       __html: `{
@@ -130,14 +131,15 @@ const Doctor = ({ doctor }) => {
       </div>
     );
   }
+
   return (
     <div>
       <Head>
         {/* Primary Tags */}
         <link rel='preload' href={doctor?.image?.url} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>{title}</title>
-        <meta name='title' content={title} />
+        <title>{doctor?.metaTitle || defaultMetaTile}</title>
+        <meta name='title' content={doctor?.metaTitle || defaultMetaTile} />
         <meta name='description' content={doctor?.bio?.text.slice(0, 160)} />
 
         {/* Ld+JSON Data */}
@@ -150,7 +152,7 @@ const Doctor = ({ doctor }) => {
 
         {/* Open Graph / Facebook */}
 
-        <meta property='og:title' content={title} />
+        <meta property='og:title' content={doctor?.metaTitle || defaultMetaTile} />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta property='og:description' content={doctor?.bio?.text.slice(0, 160)} />
@@ -161,7 +163,7 @@ const Doctor = ({ doctor }) => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta name='twitter:title' content={title} />
+        <meta name='twitter:title' content={doctor?.metaTitle || defaultMetaTile} />
         <meta name='twitter:description' content={doctor?.bio?.text.slice(0, 160)} />
         <meta name='twitter:image' content={doctor?.image.url} />
       </Head>
