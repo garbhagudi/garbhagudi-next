@@ -2183,6 +2183,11 @@ const nextConfig = {
         destination: '/fertility-experts',
         permanent: true,
       },
+      {
+        source: '/blogs/understanding-the-cost-of-laparoscopy-in-bangalore',
+        destination: '/solutions/cost-of-laparoscopy-in-bangalore',
+        permanent: true,
+      },
     ];
   },
 };
