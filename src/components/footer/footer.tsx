@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
   BsYoutube,
-  BsTwitch,
   BsInstagram,
   BsLinkedin,
   BsWhatsapp,
@@ -218,11 +217,6 @@ const SocialIcon = [
     name: 'WhatsApp',
     url: 'https://api.whatsapp.com/send/?phone=919108910832&text=Hi.',
     icon: <BsWhatsapp className='text-3xl text-green-600 dark:text-green-500' />,
-  },
-  {
-    name: 'Twitch',
-    url: 'https://www.twitch.tv/garbhagudi',
-    icon: <BsTwitch className='text-3xl text-purple-600 dark:text-purple-500' />,
   },
   {
     name: 'X',
