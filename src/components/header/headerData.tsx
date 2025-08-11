@@ -262,7 +262,7 @@ export const Location = [
     name: 'Davanagere',
     href: '/locations/davanagere',
     icon: <SiGooglemaps />,
-    short: 'DV',
+    short: 'DG',
   },
   {
     name: 'Find Nearest Location',
