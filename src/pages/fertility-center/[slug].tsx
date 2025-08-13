@@ -245,7 +245,7 @@ const Blog = ({ article }: BlogProps) => {
               height={500}
               priority={true}
             />
-            <div className='text-gray-800 dark:text-gray-200'>
+            <div className='text-justify text-gray-800 dark:text-gray-200'>
               <RichText
                 content={article?.content?.raw?.children}
                 renderers={{
@@ -255,7 +255,7 @@ const Blog = ({ article }: BlogProps) => {
                   p: ({ children }) => <p className='mb-2 text-justify'>{children}</p>,
                   bold: ({ children }) => <strong>{children}</strong>,
                   a: ({ children, href }) => (
-                    <a href={href} className='text-blue-600 underline'>
+                    <a href={href} className='text-gg-500 underline'>
                       {children}
                     </a>
                   ),

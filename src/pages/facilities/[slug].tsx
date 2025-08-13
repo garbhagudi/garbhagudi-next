@@ -249,12 +249,17 @@ const Blog = ({ article }: BlogProps) => {
               height={873}
               priority={true}
             />
-            <div className='text-gray-800 dark:text-gray-200'>
+            <div className='text-justify text-gray-800 dark:text-gray-200'>
               {isMounted && (
                 <RichText
                   content={article?.content?.raw?.children}
                   renderers={{
                     p: ({ children }) => <p className='text-justify'>{children}</p>,
+                    a: ({ children, href }) => (
+                      <a href={href} className='text-gg-500 underline'>
+                        {children}
+                      </a>
+                    ),
                   }}
                 />
               )}

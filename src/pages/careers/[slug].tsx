@@ -192,11 +192,16 @@ const Career = ({ career }) => {
                 <div className='mb-4 font-content text-xl'>Description</div>
                 <div className='font-qs text-base'>{career?.description}</div>
                 <div className='mt-8 font-content text-xl'>Job Responsibilities</div>
-                <div className='text-md text-brandDark mb-4 font-qs leading-relaxed'>
+                <div className='text-md text-brandDark mb-4 text-justify font-qs leading-relaxed'>
                   <RichText
                     content={career?.jobDescription?.raw?.children}
                     renderers={{
                       p: ({ children }) => <p className='text-justify'>{children}</p>,
+                      a: ({ children, href }) => (
+                        <a href={href} className='text-gg-500 underline'>
+                          {children}
+                        </a>
+                      ),
                     }}
                   />
                 </div>

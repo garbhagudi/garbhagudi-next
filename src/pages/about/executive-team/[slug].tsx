@@ -149,11 +149,16 @@ const ExecutiveTeam = ({ director }) => {
                 </div>
               </div>
               <div className='mt-4 border-t border-gray-200 px-5 pt-4 dark:border-gray-600 sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left'>
-                <div className='mb-4 text-lg leading-relaxed text-gray-800 dark:text-gray-200'>
+                <div className='mb-4 text-justify text-lg leading-relaxed text-gray-800 dark:text-gray-200'>
                   <RichText
                     content={director?.bio?.raw.children}
                     renderers={{
                       p: ({ children }) => <p className='text-justify'>{children}</p>,
+                      a: ({ children, href }) => (
+                        <a href={href} className='text-gg-500 underline'>
+                          {children}
+                        </a>
+                      ),
                     }}
                   />
                 </div>

@@ -81,11 +81,16 @@ const DoctorLayout = ({
                         />
                       </div>
                     </div>
-                    <div className='mt-2 text-gray-800 dark:text-gray-200'>
+                    <div className='mt-2 text-justify text-gray-800 dark:text-gray-200'>
                       <RichText
                         content={bio}
                         renderers={{
                           p: ({ children }) => <p className='text-justify'>{children}</p>,
+                          a: ({ children, href }) => (
+                            <a href={href} className='text-gg-500 underline'>
+                              {children}
+                            </a>
+                          ),
                         }}
                       />
                     </div>

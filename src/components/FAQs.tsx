@@ -35,6 +35,7 @@ const FAQs = ({ data, activeIndex }: { data: [FaqProps]; activeIndex: string }) 
                   content={items?.answer?.raw?.children}
                   renderers={{
                     p: ({ children }) => <p className='text-justify'>{children}</p>,
+                    a: ({ children }) => <a className='text-gg-500 underline'>{children}</a>,
                   }}
                 />
               </AccordionLayout>

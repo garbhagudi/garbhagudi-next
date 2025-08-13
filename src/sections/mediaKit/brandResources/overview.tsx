@@ -8,11 +8,15 @@ const Overview = () => {
           Overview
         </h2>
         <p className='font-lexend text-gray-800 dark:text-gray-200'>
-          Welcome to the <Link href='/'>GarbhaGudi IVF Centre</Link> Media Kit, a comprehensive
-          resource designed to provide journalists, influencers, and stakeholders with detailed
-          insights into our institution's mission, achievements, and offerings. This kit serves as a
-          gateway to understanding the pioneering work we do in addressing infertility challenges
-          and our commitment to providing world-class fertility solutions.
+          Welcome to the{' '}
+          <Link href='/' className='text-gg-500 underline'>
+            GarbhaGudi IVF Centre
+          </Link>{' '}
+          Media Kit, a comprehensive resource designed to provide journalists, influencers, and
+          stakeholders with detailed insights into our institution's mission, achievements, and
+          offerings. This kit serves as a gateway to understanding the pioneering work we do in
+          addressing infertility challenges and our commitment to providing world-class fertility
+          solutions.
         </p>
         <h3 className='py-4 font-heading text-2xl font-bold text-gray-800 underline dark:text-gray-200'>
           Purpose

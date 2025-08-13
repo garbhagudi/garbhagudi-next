@@ -81,7 +81,10 @@ const VisionMission = () => {
                 A mission followed by dedication and hard work turns into a vision. Enormous amount
                 of hard work goes into reaching out to more and more people and create an awareness
                 about infertility and{' '}
-                <Link href='/treatments/best-female-infertility-treatment-in-bangalore'>
+                <Link
+                  href='/treatments/best-female-infertility-treatment-in-bangalore'
+                  className='text-gg-500 underline'
+                >
                   treatments for infertility
                 </Link>
                 . With a vision to help nurture the happiest moments of life, our vision is to reach
@@ -105,17 +108,21 @@ const VisionMission = () => {
               </div>
 
               <p className='text-brandDark mt-2 text-left font-content text-lg leading-relaxed'>
-                <Link href='/fertility-experts/dr-asha-s-vijay'>Dr. Asha S. Vijay</Link>, a post
-                graduate in Obstetrics &amp; Gynecology from the prestigious Bangalore Medical
-                College, started her career with Kidwai Institute of Oncology, Bangalore and
+                <Link href='/fertility-experts/dr-asha-s-vijay' className='text-gg-500 underline'>
+                  Dr. Asha S. Vijay
+                </Link>
+                , a post graduate in Obstetrics &amp; Gynecology from the prestigious Bangalore
+                Medical College, started her career with Kidwai Institute of Oncology, Bangalore and
                 subsequently set up her own practice with Sannidhi Multi-Specialty Hospital. In
                 years of her career, she saw the struggle of infertility patients. Her observation
                 of people having{' '}
-                <Link href='/resources/myths-and-facts'>misconceptions about infertility</Link> and
-                infertility treatments, cost, and procedure, motivated her to help and guide people
-                with reproductive disorders, who were clueless about the right approach. It was at
-                that time that she started on a mission and the result of such a mission is what
-                GarbhaGudi exists today.
+                <Link href='/resources/myths-and-facts' className='text-gg-500 underline'>
+                  misconceptions about infertility
+                </Link>{' '}
+                and infertility treatments, cost, and procedure, motivated her to help and guide
+                people with reproductive disorders, who were clueless about the right approach. It
+                was at that time that she started on a mission and the result of such a mission is
+                what GarbhaGudi exists today.
               </p>
             </div>
           </div>
