@@ -790,11 +790,16 @@ const Doctor = ({ doctor }) => {
                   <div className='flex flex-col items-center justify-center gap-y-2'>
                     <div className='w-full px-4 lg:w-9/12'>
                       <h2 className='text-2xl font-bold'>{`About ${doctor?.name}`}</h2>
-                      <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
+                      <div className='prose mb-4 text-justify text-gray-800 dark:text-gray-200'>
                         <RichText
                           content={doctor?.bio?.raw?.children}
                           renderers={{
                             p: ({ children }) => <p className='text-justify'>{children}</p>,
+                            a: ({ children, href }) => (
+                              <a href={href} className='text-gg-500 underline'>
+                                {children}
+                              </a>
+                            ),
                           }}
                         />
                       </div>
@@ -802,11 +807,16 @@ const Doctor = ({ doctor }) => {
                     {doctor?.educationCredentials?.text && (
                       <div className='w-full px-4 lg:w-9/12'>
                         <h2 className='text-2xl font-bold'>Education & Credentials</h2>
-                        <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
+                        <div className='prose mb-4 text-justify text-gray-800 dark:text-gray-200'>
                           <RichText
                             content={doctor?.educationCredentials?.raw?.children}
                             renderers={{
                               p: ({ children }) => <p className='text-justify'>{children}</p>,
+                              a: ({ children, href }) => (
+                                <a href={href} className='text-gg-500 underline'>
+                                  {children}
+                                </a>
+                              ),
                             }}
                           />
                         </div>
@@ -815,11 +825,16 @@ const Doctor = ({ doctor }) => {
                     {doctor?.experienceExpertise?.text && (
                       <div className='w-full px-4 lg:w-9/12'>
                         <h2 className='text-2xl font-bold'>Experience & Expertise</h2>
-                        <div className='prose mb-4 text-gray-800 dark:text-gray-200'>
+                        <div className='prose mb-4 text-justify text-gray-800 dark:text-gray-200'>
                           <RichText
                             content={doctor?.experienceExpertise?.raw?.children}
                             renderers={{
                               p: ({ children }) => <p className='text-justify'>{children}</p>,
+                              a: ({ children, href }) => (
+                                <a href={href} className='text-gg-500 underline'>
+                                  {children}
+                                </a>
+                              ),
                             }}
                           />
                         </div>

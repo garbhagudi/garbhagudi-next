@@ -81,7 +81,7 @@ const MapSection = ({ maplink, address, description, doctors, title }: MapSectio
             </h2>
 
             <div
-              className={`relative w-full transition-all duration-500 ease-in-out ${
+              className={`relative w-full text-justify transition-all duration-500 ease-in-out ${
                 showFullText ? 'max-h-full' : 'max-h-[580px] overflow-hidden'
               }`}
             >
@@ -89,6 +89,11 @@ const MapSection = ({ maplink, address, description, doctors, title }: MapSectio
                 content={description}
                 renderers={{
                   p: ({ children }) => <p className='text-justify'>{children}</p>,
+                  a: ({ children, href }) => (
+                    <a href={href} className='text-gg-500 underline'>
+                      {children}
+                    </a>
+                  ),
                 }}
               />
 

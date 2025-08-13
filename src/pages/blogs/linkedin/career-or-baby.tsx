@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 
@@ -106,15 +107,22 @@ const CareerOrBaby = () => {
             </h2>
             <div className='mb-6 max-w-xl'>
               <p className='font-content text-base text-gray-900'>
-                Although a man’s fertility rate doesn’t drop abruptly as a woman’s, this doesn’t
-                mean that every man remains capable of having a child throughout his lifetime. The
-                quality of sperm becomes poor, and the number of sperms produced, the sperm’s
-                ability to swim (motility), and the sperm’s shape (morphology) are all known to
-                change with increasing age. All these factors drop significantly during their 40s
-                compared to men in their 30s. Aged fathers are closely linked with adverse effects
-                on their children as they are prone to damaged sperm DNAs that may lead to risks of
-                unsuccessful pregnancies because of fertilization with an unhealthy sperm. This also
-                means a high prevalence of genetic defects and disorders such as autism.
+                Although a{' '}
+                <Link
+                  href='/blogs/what-are-the-causes-of-male-fertility'
+                  className='text-gg-500 underline'
+                >
+                  man’s fertility
+                </Link>{' '}
+                rate doesn’t drop abruptly as a woman’s, this doesn’t mean that every man remains
+                capable of having a child throughout his lifetime. The quality of sperm becomes
+                poor, and the number of sperms produced, the sperm’s ability to swim (motility), and
+                the sperm’s shape (morphology) are all known to change with increasing age. All
+                these factors drop significantly during their 40s compared to men in their 30s. Aged
+                fathers are closely linked with adverse effects on their children as they are prone
+                to damaged sperm DNAs that may lead to risks of unsuccessful pregnancies because of
+                fertilization with an unhealthy sperm. This also means a high prevalence of genetic
+                defects and disorders such as autism.
               </p>
             </div>
           </div>
@@ -195,8 +203,15 @@ const CareerOrBaby = () => {
             hormones
           </li>
           <li>
-            Minimally invasive surgeries such as laparoscopy and other procedures to treat
-            conditions such as endometriosis or to open blocked fallopian tubes
+            Minimally invasive surgeries such as{' '}
+            <Link
+              href='/blogs/what-is-the-role-of-laparoscopy-in-infertility'
+              className='text-gg-500 underline'
+            >
+              laparoscopy
+            </Link>{' '}
+            and other procedures to treat conditions such as endometriosis or to open blocked
+            fallopian tubes
           </li>
         </ul>
       </div>
@@ -224,7 +239,18 @@ const CareerOrBaby = () => {
           technique where sperms are placed in the uterus around the time when the ovary releases
           one or more eggs to be fertilized, and ICSI – which involves injecting a live sperm
           directly into the center of a human egg for successful fertilization and implantation to
-          happen. Here comes the real boon – sperm freezing and egg freezing!
+          happen. Here comes the real boon –{' '}
+          <Link
+            href='/blogs/exploring-sperm-freezing-how-it-works-who-can-benefit-and-its-advantages'
+            className='text-gg-500 underline'
+          >
+            sperm freezing
+          </Link>{' '}
+          and{' '}
+          <Link href='/blogs/oocyte-freezing-egg-freezing' className='text-gg-500 underline'>
+            egg freezing
+          </Link>
+          !
         </p>
       </div>
       <div className='mx-auto px-4 pb-6 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-7xl lg:px-8 lg:pb-10'>
@@ -240,8 +266,13 @@ const CareerOrBaby = () => {
                 delaying fatherhood for any reasons or undergoing treatments that jeopardize their
                 ability to have a child. This process ensures sperm motility is never harmed, and
                 the frozen sperm can be thawed and used to fertilize eggs. It can be done using
-                artificial insemination techniques (IUI) or Assisted Reproductive Techniques
-                (IVF/ICSI).
+                <Link
+                  href='/blogs/what-is-iui-intrauterine-insemination'
+                  className='text-gg-500 underline'
+                >
+                  artificial insemination techniques
+                </Link>{' '}
+                (IUI) or Assisted Reproductive Techniques (IVF/ICSI).
               </p>
             </div>
           </div>

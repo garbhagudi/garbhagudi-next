@@ -236,6 +236,11 @@ const AwardPage = ({ award }: AwardProps) => {
                   content={award?.content?.raw.children}
                   renderers={{
                     p: ({ children }) => <p className='text-justify'>{children}</p>,
+                    a: ({ children, href }) => (
+                      <a href={href} className='text-gg-500 underline'>
+                        {children}
+                      </a>
+                    ),
                   }}
                 />
               </div>
