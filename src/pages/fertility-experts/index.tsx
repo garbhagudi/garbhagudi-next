@@ -40,6 +40,7 @@ const IndexPage = ({ branches }: Branches) => {
         <link rel='preconnect' href='https://res.cloudinary.com' />
         <link rel='preconnect' href='https://maps.googleapis.com' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='robots' content='noindex, nofollow' />
         <title>Best IVF Specialist in Bangalore</title>
         <meta name='title' content='Best IVF Specialist in Bangalore' />
         <meta

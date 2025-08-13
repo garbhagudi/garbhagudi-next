@@ -75,6 +75,7 @@ const Blog = ({ cause }) => {
         {/* Primary Tags */}
         <link rel='preload' href={cause?.image.url} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='robots' content='noindex, nofollow' />
         <title>{title}</title>
         <meta name='title' content={`${cause?.title} | GarbhaGudi IVF Centre`} />
         <meta name='description' content={cause?.content?.text.slice(0, 160)} />

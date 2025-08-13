@@ -23,6 +23,7 @@ export default function fertility() {
         <link rel='dns-prefetch' href='https://media.graphassets.com' />
         {/* Primary Tags */}
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='robots' content='noindex, nofollow' />
         <title>IVF Treatment & Egg Freezing in Bangalore | GarbhaGudi</title>
         <meta name='title' content={'IVF Treatment & Egg Freezing in Bangalore | GarbhaGudi'} />
         <meta name='og:title' content='IVF Treatment & Egg Freezing | Expert Fertility Care' />

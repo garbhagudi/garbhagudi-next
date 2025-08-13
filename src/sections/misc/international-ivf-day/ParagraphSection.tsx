@@ -1,14 +1,15 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ParagraphSection = () => {
   return (
     <div>
       <h2 className='text-xl font-bold'>Holistic approach to fertility</h2>
       <p className='text-gray-800 dark:text-gray-200'>
-        At GarbhaGudi, we integrate the tri-fold path of yoga, nutrition, and Ayurveda with advanced
-        medical treatments to enhance fertility. This unique approach not only supports your
-        physical health but also nurtures your mental and emotional well-being, creating an optimal
-        environment for conception.
+        At <Link href='/'>GarbhaGudi IVF Centre</Link>, we integrate the tri-fold path of yoga,
+        nutrition, and Ayurveda with advanced medical treatments to enhance fertility. This unique
+        approach not only supports your physical health but also nurtures your mental and emotional
+        well-being, creating an optimal environment for conception.
       </p>
       <ul className='list-disc space-y-2 pl-5 text-gray-800 dark:text-gray-200'>
         {principles.map((item, index) => (
