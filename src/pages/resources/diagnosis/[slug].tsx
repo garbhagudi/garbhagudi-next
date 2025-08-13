@@ -75,6 +75,7 @@ const Diagnosis = ({ diagnosis }) => {
         {/* Primary Tags */}
         <link rel='preload' href={diagnosis?.image.url} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='robots' content='noindex, nofollow' />
         <title>{title}</title>
         <meta name='title' content={`${diagnosis?.title} | GarbhaGudi IVF Centre`} />
         <meta name='description' content={diagnosis?.content?.text.slice(0, 160)} />

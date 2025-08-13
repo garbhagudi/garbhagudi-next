@@ -2188,6 +2188,31 @@ const nextConfig = {
         destination: '/solutions/cost-of-laparoscopy-in-bangalore',
         permanent: true,
       },
+      {
+        source: '/fertility-center/cost-of-iui-in-bangalore',
+        destination: '/solutions/cost-of-iui-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/best-fertility-treatment-in-bangalore',
+        destination: '/solutions/best-fertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/best-fertility-doctors-in-bangalore',
+        destination: '/solutions/best-fertility-doctors-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/best-fertility-treatment-in-bangalore',
+        destination: '/solutions/best-fertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/male-infertility-treatment-in-bangalore',
+        destination: '/solutions/male-infertility-treatment-in-bangalore',
+        permanent: true,
+      },
     ];
   },
 };

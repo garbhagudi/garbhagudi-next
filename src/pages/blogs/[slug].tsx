@@ -144,6 +144,10 @@ const Blog = ({ blog }) => {
           <link rel='dns-prefetch' href='https://media.graphassets.com' />
           {/* Primary Tags */}
           <meta name='viewport' content='width=device-width, initial-scale=1' />
+          {(blog?.slug === 'blocked-fallopian-tubes-diagnosis-and-treatment-options' ||
+            blog?.slug === 'the-impact-of-obesity-on-fertility') && (
+            <meta name='robots' content='noindex, nofollow' />
+          )}
           <title>{title}</title>
           <meta name='title' content={title} />
           <meta property='og:title' content={title} />
