@@ -266,6 +266,7 @@ const CareerOrBaby = () => {
                 delaying fatherhood for any reasons or undergoing treatments that jeopardize their
                 ability to have a child. This process ensures sperm motility is never harmed, and
                 the frozen sperm can be thawed and used to fertilize eggs. It can be done using
+                &nbsp;
                 <Link
                   href='/blogs/what-is-iui-intrauterine-insemination'
                   className='text-gg-500 underline'

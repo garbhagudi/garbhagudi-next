@@ -295,7 +295,7 @@ const Blog = ({ blog }) => {
                     Disclaimer
                   </div>
                 </h1>
-                <div className='relative my-8 aspect-video w-full rounded-lg'>
+                <div className='relative my-8 w-full rounded-lg'>
                   <Image
                     src={blog?.image?.url}
                     alt={blog?.title}
