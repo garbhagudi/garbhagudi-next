@@ -71,7 +71,7 @@ export default function Footer() {
           <div className='mt-12 grid grid-cols-1 gap-8 text-center antialiased xl:col-span-full xl:mt-0 xl:grid-cols-1'>
             <div className='grid grid-cols-3 gap-5 md:grid-cols-6'>
               <div className=''>
-                <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
+                <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
                   Treatments
                 </h3>
                 <ul className='mt-4 space-y-1'>
@@ -87,7 +87,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className=''>
-                <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
+                <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
                   Locations
                 </h3>
                 <ul className='mt-4 space-y-1'>
@@ -103,7 +103,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className=''>
-                <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
+                <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
                   Resources
                 </h3>
                 <ul className='mt-4 space-y-1'>
@@ -119,7 +119,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className=''>
-                <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
+                <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
                   Companies
                 </h3>
                 <ul className='mt-4 space-y-1'>
@@ -135,7 +135,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className=''>
-                <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
+                <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
                   Contact
                 </h3>
                 <ul className='mt-4 space-y-1'>
@@ -151,7 +151,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className=''>
-                <h3 className='text-sm font-semibold uppercase tracking-wider text-gray-800 dark:text-white'>
+                <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
                   Legal
                 </h3>
                 <ul className='mt-4 space-y-1'>
