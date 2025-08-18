@@ -364,8 +364,8 @@ const locations = [
     zipCode: '577004',
     address: (
       <div>
-        <p>2659/1 , First & Second floor, MCC B Block, Dental College Road,</p>
-        <p className='mb-5 mt-1'>Davanagere 577004</p>
+        <p>Srisada, 1st & 2nd Floor, No. 2659/1, Dental College Road, MCC B Block, MCC,</p>
+        <p className='mb-5 mt-1'>Davanagere, Karnataka 577004</p>
       </div>
     ),
     phone: '+91 9108 9108 32',

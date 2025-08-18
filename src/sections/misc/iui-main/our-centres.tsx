@@ -205,7 +205,8 @@ const Data = [
     phone: '+91 9108 9108 32',
     address: (
       <span>
-        2659/1 , First & Second floor, MCC B Block, Dental College Road, Davanagere 577004
+        Srisada, 1st & 2nd Floor, No. 2659/1, Dental College Road, MCC B Block, MCC, Davanagere,
+        Karnataka 577004
       </span>
     ),
     link: 'https://www.google.com/maps/place/GarbhaGudi+IVF+Centre,+Davanagere/@14.4556527,75.914636,17z/data=!3m1!4b1!4m6!3m5!1s0x3bba25cbd139021d:0x187231634226ee7e!8m2!3d14.4556527!4d75.914636!16s%2Fg%2F11md2ytty4?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D',
