@@ -2213,6 +2213,11 @@ const nextConfig = {
         destination: '/solutions/male-infertility-treatment-in-bangalore',
         permanent: true,
       },
+      {
+        source: '/fertility-consultants/best-fertility-center-in-bangalore',
+        destination: '/fertility-center/best-fertility-center-in-bangalore',
+        permanent: true,
+      },
     ];
   },
 };
