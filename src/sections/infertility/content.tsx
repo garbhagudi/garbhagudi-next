@@ -112,8 +112,8 @@ export const WhyGarbhaGudi = () => {
             >
               ICSI
             </Link>
-            ), Egg Freezing, Surrogacy, and more. We believe in a holistic approach, focusing not
-            just on the medical aspects but also on the emotional well-being of our patients.
+            ), Egg Freezing, and more. We believe in a holistic approach, focusing not just on the
+            medical aspects but also on the emotional well-being of our patients.
           </div>
           <div className='pb-4'>
             With a commitment to excellence, compassionate care, and a high success rate, GarbhaGudi
