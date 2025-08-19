@@ -112,7 +112,7 @@ export const WhyGarbhaGudi = () => {
             >
               ICSI
             </Link>
-            ), Egg Freezing, and more. We believe in a holistic approach, focusing not just on the
+            ), Egg Freezing and more. We believe in a holistic approach, focusing not just on the
             medical aspects but also on the emotional well-being of our patients.
           </div>
           <div className='pb-4'>
