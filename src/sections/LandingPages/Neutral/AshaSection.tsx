@@ -46,7 +46,7 @@ const AshaSection = () => {
                     gynaecology and infertility. She is a well-known name in infertility – both in
                     treating patients and also in infertility education. Many consider her as a
                     medical genius with an overarching vision to eradicate infertility. Dr Asha has
-                    been instrumental in creating happy endings in the lives of more than 11000+
+                    been instrumental in creating happy endings in the lives of more than 15000+
                     couples, by ensuring they have a child of their own.
                   </p>
                   <Link href={`/contact/enquiry?pageVisit=${path}`}>

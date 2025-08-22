@@ -60,7 +60,7 @@ const Features = () => {
               <div className='ml-5 flex flex-col items-center pt-4'>
                 <FaCircleCheck className='text-5xl text-brandPurpleDark dark:text-gg-500' />
                 <p className='text-lg font-semibold'>
-                  Over 10,000 Successful IVF Cases: Demonstrating a proven track record of achieving
+                  Over 15,000 Successful IVF Cases: Demonstrating a proven track record of achieving
                   positive outcomes and fulfilling the dreams of numerous families.
                 </p>
               </div>

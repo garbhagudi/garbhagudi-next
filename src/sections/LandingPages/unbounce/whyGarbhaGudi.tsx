@@ -39,7 +39,7 @@ const WhyGarbhaGudi = () => {
               <div className='flex flex-col items-center justify-start space-y-8'>
                 <FaCircleCheck className='text-5xl text-brandPurpleDark dark:text-gg-500' />
                 <p className='leading-relaxed'>
-                  Over 10,000 Successful IVF Cases: Demonstrating a proven track record of achieving
+                  Over 15,000 Successful IVF Cases: Demonstrating a proven track record of achieving
                   positive outcomes and fulfilling the dreams of numerous families.
                 </p>
               </div>

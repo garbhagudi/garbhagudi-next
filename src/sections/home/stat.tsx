@@ -5,7 +5,7 @@ import Link from 'next/link';
 const metrics = [
   {
     id: 1,
-    stat: '11,000+',
+    stat: '15,000+',
     emphasis: 'Happy Families',
   },
   {
