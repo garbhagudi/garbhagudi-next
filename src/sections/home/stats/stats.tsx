@@ -8,7 +8,7 @@ const StatsPC = () => {
       <p className='bg-brandPink5 py-10 text-center font-heading text-4xl font-bold dark:bg-gray-700'>
         This is why you can trust GarbhaGudi for your infertility treatments
       </p>
-      <div className='mx-auto mt-4 max-w-lg align-middle md:max-w-4xl'>
+      <div className='mx-auto mt-24 max-w-lg align-middle md:max-w-4xl'>
         <div className='text-center'>
           <div className='grid grid-cols-4 grid-rows-4 font-content'>
             <div>
