@@ -143,12 +143,12 @@ export const Contact = [
 
 export const Language = [
   {
-    name: 'English',
-    href: '/',
+    name: 'ಕನ್ನಡ',
+    href: 'https://kannada.garbhagudi.com',
   },
   {
-    name: 'ಕನ್ನಡ ',
-    href: 'https://kannada.garbhagudi.com',
+    name: 'தமிழ்',
+    href: 'https://tamil.garbhagudi.com',
   },
 ];
 
