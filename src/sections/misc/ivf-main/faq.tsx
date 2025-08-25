@@ -131,6 +131,14 @@ const data = [
               Davanagere
             </Link>
           </li>
+          <li>
+            <Link
+              href={'/locations/hosur'}
+              className='hover:underlink text-brandPurpleDark hover:text-brandPink'
+            >
+              Hosur
+            </Link>
+          </li>
         </ul>
       </div>
     ),

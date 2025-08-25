@@ -10,7 +10,7 @@ const metrics = [
   },
   {
     id: 2,
-    stat: '360+',
+    stat: '500+',
     emphasis: 'Free Fertility Awareness Camps',
   },
   {

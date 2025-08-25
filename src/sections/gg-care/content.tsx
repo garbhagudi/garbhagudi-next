@@ -258,5 +258,17 @@ export const contactData = {
       phone: '+91 9108 9108 32',
       directionLink: 'https://maps.app.goo.gl/r1HNjzH5TWn76sSUA',
     },
+    {
+      id: '10',
+      name: 'Hosur',
+      address: (
+        <div>
+          <p>No. 822/3, KM Towers, New, Krishnagiri Bypass Road, Vasanth Nagar,</p>
+          <p className='mb-5 mt-1'>Hosur, Tamil Nadu 635109</p>
+        </div>
+      ),
+      phone: '+91 9108 9108 32',
+      directionLink: 'https://maps.app.goo.gl/r1HNjzH5TWn76sSUA',
+    },
   ],
 };

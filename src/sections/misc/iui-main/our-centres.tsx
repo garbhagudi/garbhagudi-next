@@ -211,4 +211,16 @@ const Data = [
     ),
     link: 'https://www.google.com/maps/place/GarbhaGudi+IVF+Centre,+Davanagere/@14.4556527,75.914636,17z/data=!3m1!4b1!4m6!3m5!1s0x3bba25cbd139021d:0x187231634226ee7e!8m2!3d14.4556527!4d75.914636!16s%2Fg%2F11md2ytty4?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D',
   },
+  {
+    id: 10,
+    branch: 'Hosur',
+    map: 'https://maps.app.goo.gl/r1HNjzH5TWn76sSUA',
+    phone: '+91 9108 9108 32',
+    address: (
+      <span>
+        No. 822/3, KM Towers, New, Krishnagiri Bypass Road, Vasanth Nagar, Hosur, Tamil Nadu 635109
+      </span>
+    ),
+    link: 'https://www.google.com/maps/place/GarbhaGudi+IVF+Centre,+Hosur/@12.7346557,77.8311779,15z/data=!4m15!1m8!3m7!1s0x3bae71ce3a2369f3:0xe0a4f1468d42b9f8!2sGarbhaGudi+IVF+Centre,+Hosur!8m2!3d12.7347979!4d77.8312331!10e5!16s%2Fg%2F11yd8rzlw7!3m5!1s0x3bae71ce3a2369f3:0xe0a4f1468d42b9f8!8m2!3d12.7347979!4d77.8312331!16s%2Fg%2F11yd8rzlw7?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D',
+  },
 ];
