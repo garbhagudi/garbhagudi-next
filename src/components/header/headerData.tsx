@@ -265,6 +265,12 @@ export const Location = [
     short: 'DG',
   },
   {
+    name: 'Hosur',
+    href: '/locations/hosur',
+    icon: <SiGooglemaps />,
+    short: 'HR',
+  },
+  {
     name: 'Find Nearest Location',
     href: '/gg-care/search-branch-by-pincode',
     icon: <FaRoad />,

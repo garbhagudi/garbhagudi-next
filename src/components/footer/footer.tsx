@@ -30,6 +30,7 @@ const navigation = {
     { name: 'Jayanagar', href: '/locations/jayanagar' },
     { name: 'Yelahanka', href: '/locations/yelahanka' },
     { name: 'Davanagere', href: '/locations/davanagere' },
+    { name: 'Hosur', href: '/locations/hosur' },
   ],
   resources: [
     { name: 'Fertility Experts', href: '/fertility-experts' },

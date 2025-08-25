@@ -69,4 +69,9 @@ const Data = [
     title: 'Best IVF Centre in Davanagere',
     link: '/locations/davanagere',
   },
+  {
+    id: 9,
+    title: 'Best IVF Centre in Hosur',
+    link: '/locations/hosur',
+  },
 ];
