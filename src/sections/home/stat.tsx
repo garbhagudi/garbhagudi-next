@@ -64,9 +64,11 @@ const Stat = () => {
           <div className='mt-12 flex flex-col gap-x-6 gap-y-8'>
             {metrics.map((item) => (
               <p key={item.id}>
-                <span className='block font-heading text-2xl font-bold text-gray-800 dark:text-gray-200'>
-                  {item.stat}
-                </span>
+                {item?.stat && (
+                  <span className='block font-heading text-2xl font-bold text-gray-800 dark:text-gray-200'>
+                    {item.stat}
+                  </span>
+                )}
                 <span className='mt-1 block text-base text-gray-800 dark:text-gray-200'>
                   <span className='font-content font-medium text-gray-800 dark:text-gray-200'>
                     {item.emphasis}
