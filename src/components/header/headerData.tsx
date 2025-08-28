@@ -256,7 +256,7 @@ export const Location = [
     name: 'Yelahanka',
     href: '/locations/yelahanka',
     icon: <SiGooglemaps />,
-    short: 'YH',
+    short: 'YLA',
   },
   {
     name: 'Davanagere',
