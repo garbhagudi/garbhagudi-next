@@ -268,7 +268,7 @@ export const Location = [
     name: 'Hosur',
     href: '/locations/hosur',
     icon: <SiGooglemaps />,
-    short: 'HR',
+    short: 'HOS',
   },
   {
     name: 'Find Nearest Location',
