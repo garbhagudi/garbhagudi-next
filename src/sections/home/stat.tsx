@@ -15,8 +15,8 @@ const metrics = [
   },
   {
     id: 3,
-    stat: '9',
-    emphasis: 'Infertility Centres in Karnataka',
+    stat: '10',
+    emphasis: 'Infertility Centres in Karnataka and Tamil Nadu',
   },
   {
     id: 4,
