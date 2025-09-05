@@ -71,7 +71,7 @@ const Locations = ({ branches }) => {
                     alt={items?.title}
                     width={480}
                     height={100}
-                    className='overflow-hidden transition-all duration-500 hover:scale-125'
+                    className='h-80 overflow-hidden transition-all duration-500 hover:scale-125'
                     loading='lazy'
                   />
                 </div>
