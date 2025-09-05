@@ -8,10 +8,13 @@ import {
   Transition,
 } from '@headlessui/react';
 import { HiCheck, HiOutlineSearch } from 'react-icons/hi';
-import { terms } from './searchData';
 import Link from 'next/link';
 
-export default function SearchComponent() {
+export default function SearchComponent({
+  searchTerms: terms,
+}: {
+  searchTerms: { title: string; slug: string }[];
+}) {
   const [selected, setSelected] = useState(terms[0]);
   const [query, setQuery] = useState('');
 

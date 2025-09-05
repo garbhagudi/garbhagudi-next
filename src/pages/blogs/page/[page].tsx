@@ -20,6 +20,10 @@ interface BlogProps {
   currentPageNumber: number;
   hasNextPage: boolean;
   hasPreviousPage: boolean;
+  searchTerms: {
+    title: string;
+    slug: string;
+  }[];
   blogs: {
     node: {
       id: string;
@@ -50,6 +54,7 @@ function BlogPage({
   hasPreviousPage,
   blogs,
   aggregate,
+  searchTerms,
 }: BlogProps) {
   const router = useRouter();
   const title = `Blogs | Page ${currentPageNumber} | GarbhaGudi IVF Centre`;
@@ -122,7 +127,7 @@ function BlogPage({
                 Blogs
               </h1>
             </div>
-            <SearchComponent />
+            <SearchComponent searchTerms={searchTerms} />
             <div className='mx-auto grid max-w-xl gap-8 py-12 lg:max-w-none lg:grid-cols-3'>
               {blogs?.map((item, index) => (
                 <div
@@ -236,6 +241,10 @@ export async function getStaticProps({ params }) {
               count
             }
           }
+          allBlogs: blogs {
+            title
+            slug
+          }
         }
       `,
       variables: {
@@ -275,6 +284,7 @@ export async function getStaticProps({ params }) {
       currentPageNumber: page,
       blogs: data.blogsConnection.blogs,
       aggregate: data.blogsConnection.aggregate,
+      searchTerms: data.allBlogs,
       ...data.blogsConnection.pageInfo,
     },
     revalidate: 180,
