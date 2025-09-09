@@ -21,7 +21,11 @@ export const getStaticProps = async ({ params }) => {
           id
           name
           metaTitle
-          location
+          location {
+            title
+            slug
+          }
+          bookAnAppointment
           bio {
             raw
             text
@@ -34,24 +38,6 @@ export const getStaticProps = async ({ params }) => {
           qualification
           designation
           medicalRegNo
-          hanumanthaNagarOnline
-          hanumanthaNagarPhysical
-          kalyanNagarOnline
-          kalyanNagarPhysical
-          jayanagarOnline
-          jayanagarPhysical
-          electronicCityOnline
-          electronicCityPhysical
-          marathahalliOnline
-          marathahalliPhysical
-          newBelRoadOnline
-          newBelRoadPhysical
-          nagarbhaviOnline
-          nagarbhaviPhysical
-          yelahankaOnline
-          yelahankaPhysical
-          davanagereOnline
-          davanagerePhysical
           videoTestimonials
           keyFeaturesOfTreatment
           approachToIvfTreatment
@@ -106,7 +92,7 @@ export async function getStaticPaths() {
 
 const Doctor = ({ doctor }) => {
   const router = useRouter();
-  const defaultMetaTile = `${doctor?.name} | ${doctor?.designation} | ${doctor?.location} | GarbhaGudi `;
+  const defaultMetaTile = `${doctor?.name} | ${doctor?.designation} | ${doctor?.location[0]?.title} | GarbhaGudi `;
   function addDocJsonLd() {
     return {
       __html: `{
@@ -257,13 +243,7 @@ const Doctor = ({ doctor }) => {
                       </a>
                     </button>
                   </div>
-                  {(doctor?.hanumanthaNagarPhysical ||
-                    doctor?.kalyanNagarPhysical ||
-                    doctor?.jayanagarPhysical ||
-                    doctor?.electronicCityPhysical ||
-                    doctor?.marathahalliPhysical ||
-                    doctor?.newBelRoadPhysical ||
-                    doctor?.nagarbhaviPhysical) && (
+                  {doctor?.location?.length > 0 && (
                     <section className='mt-8 overflow-hidden font-content text-gray-600 antialiased'>
                       <div className='flex h-full flex-col justify-center'>
                         <div className='mx-auto w-full max-w-3xl rounded-2xl border border-pink-200 bg-white shadow-xl dark:border-gray-600 dark:bg-gray-700'>
@@ -289,490 +269,64 @@ const Doctor = ({ doctor }) => {
                                   </tr>
                                 </thead>
                                 <tbody className='divide-y divide-pink-100 text-sm dark:divide-gray-500'>
-                                  {(doctor.hanumanthaNagarOnline ||
-                                    doctor.hanumanthaNagarPhysical) && (
-                                    <tr>
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='flex items-center'>
-                                          <div className='flex items-center justify-center font-medium text-gray-800'>
-                                            <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
-                                              <SiGooglemaps className='text-2xl' />
-                                            </div>
-                                            <Link href='/locations/hanumanthanagar' passHref>
-                                              <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
-                                                Hanumanthanagar
-                                              </span>
-                                            </Link>
-                                          </div>
-                                        </div>
-                                      </td>
-
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                          {doctor.hanumanthaNagarPhysical && (
-                                            <button>
-                                              <a
-                                                href={doctor.hanumanthaNagarPhysical}
-                                                className='font-semibold hover:underline'
-                                                hrefLang='en-us'
-                                                target='_blank'
-                                                rel='noreferrer'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          )}
-                                        </div>
-                                      </td>
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                          {doctor.hanumanthaNagarOnline && (
-                                            <button>
-                                              <a
-                                                href={doctor.hanumanthaNagarOnline}
-                                                className='font-semibold hover:underline'
-                                                target='_blank'
-                                                hrefLang='en-us'
-                                                rel='noreferrer'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          )}
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  )}
-                                  {(doctor.kalyanNagarOnline || doctor.kalyanNagarPhysical) && (
-                                    <tr>
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='flex items-center'>
-                                          <div className='font-medium text-gray-800'>
-                                            <div className='flex items-center justify-center font-medium text-gray-800'>
-                                              <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
-                                                <SiGooglemaps className='text-2xl' />
+                                  {doctor?.location?.map(
+                                    (loc: { title: string; slug: string }, index: number) => {
+                                      return (
+                                        <tr key={index}>
+                                          <td className='whitespace-nowrap p-2'>
+                                            <div className='flex items-center'>
+                                              <div className='flex items-center justify-center font-medium text-gray-800'>
+                                                <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
+                                                  <SiGooglemaps className='text-2xl' />
+                                                </div>
+                                                <Link href={`/locations/${loc?.slug}`} passHref>
+                                                  <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
+                                                    {loc?.title}
+                                                  </span>
+                                                </Link>
                                               </div>
-                                              <Link href='/locations/kalyan-nagar' passHref>
-                                                <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
-                                                  Kalyan Nagar
-                                                </span>
-                                              </Link>
                                             </div>
-                                          </div>
-                                        </div>
-                                      </td>
+                                          </td>
 
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                          {doctor.kalyanNagarPhysical && (
-                                            <button>
-                                              <a
-                                                href={doctor.kalyanNagarPhysical}
-                                                className='font-semibold hover:underline'
-                                                target='_blank'
-                                                hrefLang='en-us'
-                                                rel='noreferrer'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          )}
-                                        </div>
-                                      </td>
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                          {doctor.kalyanNagarOnline && (
-                                            <button>
-                                              <a
-                                                href={doctor.kalyanNagarOnline}
-                                                target='_blank'
-                                                hrefLang='en-us'
-                                                rel='noreferrer'
-                                                className='font-semibold hover:underline'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          )}
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  )}
-                                  {(doctor.jayanagarOnline || doctor.jayanagarPhysical) && (
-                                    <tr>
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='flex items-center'>
-                                          <div className='font-medium text-gray-800'>
-                                            <div className='flex items-center justify-center font-medium text-gray-800'>
-                                              <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
-                                                <SiGooglemaps className='text-2xl' />
-                                              </div>
-                                              <Link href='/locations/jayanagar' passHref>
-                                                <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
-                                                  Jayanagar
-                                                </span>
-                                              </Link>
+                                          <td className='whitespace-nowrap p-2'>
+                                            <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
+                                              <button>
+                                                <a
+                                                  href={
+                                                    doctor?.bookAnAppointment ||
+                                                    `/contact/enquiry?pageVisit=/fertility-experts/${loc?.slug}`
+                                                  }
+                                                  className='font-semibold hover:underline'
+                                                  hrefLang='en-us'
+                                                  target='_blank'
+                                                  rel='noreferrer'
+                                                >
+                                                  Book Now
+                                                </a>
+                                              </button>
                                             </div>
-                                          </div>
-                                        </div>
-                                      </td>
-
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                          {doctor.jayanagarPhysical && (
-                                            <button>
-                                              <a
-                                                href={doctor.jayanagarPhysical}
-                                                className='font-semibold hover:underline'
-                                                target='_blank'
-                                                hrefLang='en-us'
-                                                rel='noreferrer'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          )}
-                                        </div>
-                                      </td>
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                          {doctor.jayanagarOnline && (
-                                            <button>
-                                              <a
-                                                href={doctor.jayanagarOnline}
-                                                className='font-semibold hover:underline'
-                                                target='_blank'
-                                                hrefLang='en-us'
-                                                rel='noreferrer'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          )}
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  )}
-                                  {(doctor.electronicCityOnline ||
-                                    doctor.electronicCityPhysical) && (
-                                    <tr>
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='flex items-center'>
-                                          <div className='font-medium'>
-                                            <div className='flex items-center justify-center font-medium'>
-                                              <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
-                                                <SiGooglemaps className='text-2xl' />
-                                              </div>
-                                              <Link href='/locations/electronic-city' passHref>
-                                                <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
-                                                  Electronic City
-                                                </span>
-                                              </Link>
+                                          </td>
+                                          <td className='whitespace-nowrap p-2'>
+                                            <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
+                                              <button>
+                                                <a
+                                                  href={
+                                                    doctor?.bookAnAppointment ||
+                                                    `/contact/enquiry?pageVisit=/fertility-experts/${loc?.slug}`
+                                                  }
+                                                  className='font-semibold hover:underline'
+                                                  target='_blank'
+                                                  hrefLang='en-us'
+                                                  rel='noreferrer'
+                                                >
+                                                  Book Now
+                                                </a>
+                                              </button>
                                             </div>
-                                          </div>
-                                        </div>
-                                      </td>
-
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                          {doctor.electronicCityPhysical && (
-                                            <button>
-                                              <a
-                                                href={doctor.electronicCityPhysical}
-                                                target='_blank'
-                                                rel='noreferrer'
-                                                hrefLang='en-us'
-                                                className='hover:underline'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          )}
-                                        </div>
-                                      </td>
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                          {doctor.electronicCityOnline && (
-                                            <button>
-                                              <a
-                                                href={doctor.electronicCityOnline}
-                                                className='hover:underline'
-                                                target='_blank'
-                                                hrefLang='en-us'
-                                                rel='noreferrer'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          )}
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  )}
-                                  {(doctor.marathahalliOnline || doctor.marathahalliPhysical) && (
-                                    <tr>
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='flex items-center'>
-                                          <div className='flex items-center justify-center font-medium'>
-                                            <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
-                                              <SiGooglemaps className='text-2xl' />
-                                            </div>
-                                            <Link href='/locations/marathahalli' passHref>
-                                              <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
-                                                Marathahalli
-                                              </span>
-                                            </Link>
-                                          </div>
-                                        </div>
-                                      </td>
-
-                                      {doctor?.marathahalliPhysical && (
-                                        <td className='whitespace-nowrap p-2'>
-                                          <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                            <button>
-                                              <a
-                                                href={doctor.marathahalliPhysical}
-                                                target='_blank'
-                                                rel='noreferrer'
-                                                hrefLang='en-us'
-                                                className='hover:underline'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          </div>
-                                        </td>
-                                      )}
-                                      {doctor?.marathahalliOnline && (
-                                        <td className='whitespace-nowrap p-2'>
-                                          <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                            <button>
-                                              <a
-                                                href={doctor.marathahalliOnline}
-                                                className='hover:underline'
-                                                target='_blank'
-                                                hrefLang='en-us'
-                                                rel='noreferrer'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          </div>
-                                        </td>
-                                      )}
-                                    </tr>
-                                  )}
-                                  {(doctor.newBelRoadOnline || doctor.newBelRoadPhysical) && (
-                                    <tr>
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='flex items-center'>
-                                          <div className='flex items-center justify-center font-medium'>
-                                            <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
-                                              <SiGooglemaps className='text-2xl' />
-                                            </div>
-                                            <Link href='/locations/new-bel-road' passHref>
-                                              <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
-                                                New BEL Road
-                                              </span>
-                                            </Link>
-                                          </div>
-                                        </div>
-                                      </td>
-
-                                      {doctor?.newBelRoadPhysical && (
-                                        <td className='whitespace-nowrap p-2'>
-                                          <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                            <button>
-                                              <a
-                                                href={doctor.newBelRoadPhysical}
-                                                target='_blank'
-                                                rel='noreferrer'
-                                                hrefLang='en-us'
-                                                className='hover:underline'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          </div>
-                                        </td>
-                                      )}
-                                      {doctor?.newBelRoadOnline && (
-                                        <td className='whitespace-nowrap p-2'>
-                                          <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                            <button>
-                                              <a
-                                                href={doctor.newBelRoadOnline}
-                                                className='hover:underline'
-                                                target='_blank'
-                                                hrefLang='en-us'
-                                                rel='noreferrer'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          </div>
-                                        </td>
-                                      )}
-                                    </tr>
-                                  )}
-                                  {(doctor.nagarbhaviOnline || doctor.nagarbhaviPhysical) && (
-                                    <tr>
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='flex items-center'>
-                                          <div className='flex items-center justify-center font-medium'>
-                                            <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
-                                              <SiGooglemaps className='text-2xl' />
-                                            </div>
-                                            <Link href='/locations/nagarabhavi' passHref>
-                                              <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
-                                                Nagarabhavi
-                                              </span>
-                                            </Link>
-                                          </div>
-                                        </div>
-                                      </td>
-
-                                      {doctor?.nagarbhaviPhysical && (
-                                        <td className='whitespace-nowrap p-2'>
-                                          <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                            <button>
-                                              <a
-                                                href={doctor.nagarbhaviPhysical}
-                                                target='_blank'
-                                                rel='noreferrer'
-                                                hrefLang='en-us'
-                                                className='hover:underline'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          </div>
-                                        </td>
-                                      )}
-                                      {doctor?.nagarbhaviOnline && (
-                                        <td className='whitespace-nowrap p-2'>
-                                          <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                            <button>
-                                              <a
-                                                href={doctor.nagarbhaviOnline}
-                                                className='hover:underline'
-                                                target='_blank'
-                                                hrefLang='en-us'
-                                                rel='noreferrer'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          </div>
-                                        </td>
-                                      )}
-                                    </tr>
-                                  )}
-                                  {(doctor.yelahankaOnline || doctor.yelahankaPhysical) && (
-                                    <tr>
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='flex items-center'>
-                                          <div className='flex items-center justify-center font-medium'>
-                                            <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
-                                              <SiGooglemaps className='text-2xl' />
-                                            </div>
-                                            <Link href='/locations/yelahanka' passHref>
-                                              <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
-                                                Yelahanka
-                                              </span>
-                                            </Link>
-                                          </div>
-                                        </div>
-                                      </td>
-
-                                      {doctor?.yelahankaPhysical && (
-                                        <td className='whitespace-nowrap p-2'>
-                                          <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                            <button>
-                                              <a
-                                                href={doctor?.yelahankaPhysical}
-                                                target='_blank'
-                                                rel='noreferrer'
-                                                hrefLang='en-us'
-                                                className='hover:underline'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          </div>
-                                        </td>
-                                      )}
-                                      {doctor?.yelahankaOnline && (
-                                        <td className='whitespace-nowrap p-2'>
-                                          <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                            <button>
-                                              <a
-                                                href={doctor?.yelahankaOnline}
-                                                className='hover:underline'
-                                                target='_blank'
-                                                hrefLang='en-us'
-                                                rel='noreferrer'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          </div>
-                                        </td>
-                                      )}
-                                    </tr>
-                                  )}
-                                  {(doctor.davanagereOnline || doctor.davanagerePhysical) && (
-                                    <tr>
-                                      <td className='whitespace-nowrap p-2'>
-                                        <div className='flex items-center'>
-                                          <div className='flex items-center justify-center font-medium'>
-                                            <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
-                                              <SiGooglemaps className='text-2xl' />
-                                            </div>
-                                            <Link href='/locations/davanagere' passHref>
-                                              <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
-                                                Davanagere
-                                              </span>
-                                            </Link>
-                                          </div>
-                                        </div>
-                                      </td>
-
-                                      {doctor?.davanagerePhysical && (
-                                        <td className='whitespace-nowrap p-2'>
-                                          <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                            <button>
-                                              <a
-                                                href={doctor?.davanagerePhysical}
-                                                target='_blank'
-                                                rel='noreferrer'
-                                                hrefLang='en-us'
-                                                className='hover:underline'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          </div>
-                                        </td>
-                                      )}
-                                      {doctor?.davanagereOnline && (
-                                        <td className='whitespace-nowrap p-2'>
-                                          <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                            <button>
-                                              <a
-                                                href={doctor?.davanagereOnline}
-                                                className='hover:underline'
-                                                target='_blank'
-                                                hrefLang='en-us'
-                                                rel='noreferrer'
-                                              >
-                                                Book Now
-                                              </a>
-                                            </button>
-                                          </div>
-                                        </td>
-                                      )}
-                                    </tr>
+                                          </td>
+                                        </tr>
+                                      );
+                                    }
                                   )}
                                 </tbody>
                               </table>

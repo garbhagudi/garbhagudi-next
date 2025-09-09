@@ -89,7 +89,6 @@ export const getStaticProps = async () => {
           name
           designation
           qualification
-          location
           image {
             url
           }
