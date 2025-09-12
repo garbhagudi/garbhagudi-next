@@ -25,8 +25,8 @@ const CATEGORY_TITLES: Record<string, string> = {
   embryologist: 'Embryologists',
   andrologist: 'Andrologists',
   yogaSpecialist: 'Yoga Specialists',
-  medicalSuperintendent: 'Medical Superintendents',
-  consultants: 'Consultants',
+  medicalSuperintendent: 'Medical Superintendent',
+  consultants: 'Consultant',
 };
 
 const DoctorList = (doctorList: doctorListProps) => {
