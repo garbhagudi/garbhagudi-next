@@ -200,15 +200,15 @@ const Doctor = ({ doctor }) => {
         <section className='relative bg-gray-300 py-16 dark:bg-gray-700'>
           <div className='container mx-auto md:px-4'>
             <div className='relative -mt-64 mb-6 flex w-full min-w-0 flex-col break-words rounded-3xl bg-white shadow-xl dark:bg-gray-800'>
-              <div className='px-2 md:px-6' key={doctor.id}>
+              <div className='px-2 md:px-6' key={doctor?.id}>
                 <div className='flex flex-wrap justify-center'>
                   <div className='flex w-full justify-center px-4 lg:order-2 lg:w-3/12'>
                     <div className='relative'>
                       <Image
                         width={340}
                         height={340}
-                        alt={doctor.name}
-                        src={doctor.image.url}
+                        alt={doctor?.name}
+                        src={doctor?.image?.url}
                         className='-m-16 -ml-20 -mt-44 mb-4 h-auto max-w-xs rounded-full border-none bg-gray-300/30 align-middle shadow-xl dark:bg-gray-600 lg:-ml-16'
                         priority={true}
                       />
@@ -217,12 +217,12 @@ const Doctor = ({ doctor }) => {
                 </div>
                 <div className='mt-12 text-center font-content'>
                   <h1 className='mb-2 text-4xl font-semibold leading-normal text-gray-800 dark:text-gray-200'>
-                    {doctor.name}
+                    {doctor?.name}
                   </h1>
                   <div className='textbrantext-brandPink2 mb-2 mt-0 text-xl font-bold leading-normal'>
-                    {doctor.qualification}
+                    {doctor?.qualification}
                   </div>
-                  <div className='mb-2 text-gray-800 dark:text-gray-200'>{doctor.designation}</div>
+                  <div className='mb-2 text-gray-800 dark:text-gray-200'>{doctor?.designation}</div>
                   {doctor?.medicalRegNo && (
                     <div className='mb-2 text-gray-800 dark:text-gray-200'>
                       Medical Registration Number{' '}
@@ -243,102 +243,118 @@ const Doctor = ({ doctor }) => {
                       </a>
                     </button>
                   </div>
-                  {doctor?.location?.length > 0 && (
-                    <section className='mt-8 overflow-hidden font-content text-gray-600 antialiased'>
-                      <div className='flex h-full flex-col justify-center'>
-                        <div className='mx-auto w-full max-w-3xl rounded-2xl border border-pink-200 bg-white shadow-xl dark:border-gray-600 dark:bg-gray-700'>
-                          <header className='px-5 py-2'>
-                            <h2 className='font-semibold text-gray-800 dark:text-gray-200'>
-                              Book Your Appointment
-                            </h2>
-                          </header>
-                          <div className=''>
-                            <div className='overflow-x-auto'>
-                              <table className='w-full table-auto'>
-                                <thead className='bg-brandPink text-sm font-bold uppercase text-gray-800 dark:text-gray-200'>
-                                  <tr>
-                                    <th className='whitespace-nowrap p-2'>
-                                      <div className='ml-1 text-left font-bold'>Branch</div>
-                                    </th>
-                                    <th className='whitespace-nowrap p-2'>
-                                      <div className='text-left font-bold'>Physical</div>
-                                    </th>
-                                    <th className='whitespace-nowrap p-2'>
-                                      <div className='text-left font-bold'>Online</div>
-                                    </th>
-                                  </tr>
-                                </thead>
-                                <tbody className='divide-y divide-pink-100 text-sm dark:divide-gray-500'>
-                                  {doctor?.location?.map(
-                                    (loc: { title: string; slug: string }, index: number) => {
-                                      return (
-                                        <tr key={index}>
-                                          <td className='whitespace-nowrap p-2'>
-                                            <div className='flex items-center'>
-                                              <div className='flex items-center justify-center font-medium text-gray-800'>
-                                                <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
-                                                  <SiGooglemaps className='text-2xl' />
+                  {doctor?.slug === 'dr-asha-s-vijay' ? (
+                    <div>
+                      <button className='mt-6 rounded-md bg-brandPink px-4 py-2 font-content font-bold text-white hover:bg-brandPink3'>
+                        <a
+                          href={
+                            doctor?.bookAnAppointment ||
+                            `/contact/enquiry?pageVisit=/fertility-experts/${doctor?.slug}`
+                          }
+                          hrefLang='en-us'
+                        >
+                          Book an Appointment
+                        </a>
+                      </button>
+                    </div>
+                  ) : (
+                    doctor?.location?.length > 0 && (
+                      <section className='mt-8 overflow-hidden font-content text-gray-600 antialiased'>
+                        <div className='flex h-full flex-col justify-center'>
+                          <div className='mx-auto w-full max-w-3xl rounded-2xl border border-pink-200 bg-white shadow-xl dark:border-gray-600 dark:bg-gray-700'>
+                            <header className='px-5 py-2'>
+                              <h2 className='font-semibold text-gray-800 dark:text-gray-200'>
+                                Book Your Appointment
+                              </h2>
+                            </header>
+                            <div className=''>
+                              <div className='overflow-x-auto'>
+                                <table className='w-full table-auto'>
+                                  <thead className='bg-brandPink text-sm font-bold uppercase text-gray-800 dark:text-gray-200'>
+                                    <tr>
+                                      <th className='whitespace-nowrap p-2'>
+                                        <div className='ml-1 text-left font-bold'>Branch</div>
+                                      </th>
+                                      <th className='whitespace-nowrap p-2'>
+                                        <div className='text-left font-bold'>Physical</div>
+                                      </th>
+                                      <th className='whitespace-nowrap p-2'>
+                                        <div className='text-left font-bold'>Online</div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody className='divide-y divide-pink-100 text-sm dark:divide-gray-500'>
+                                    {doctor?.location?.map(
+                                      (loc: { title: string; slug: string }, index: number) => {
+                                        return (
+                                          <tr key={index}>
+                                            <td className='whitespace-nowrap p-2'>
+                                              <div className='flex items-center'>
+                                                <div className='flex items-center justify-center font-medium text-gray-800'>
+                                                  <div className='mr-2 flex h-10 w-10 items-center justify-center rounded-lg bg-brandPink text-white sm:mr-3'>
+                                                    <SiGooglemaps className='text-2xl' />
+                                                  </div>
+                                                  <Link href={`/locations/${loc?.slug}`} passHref>
+                                                    <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
+                                                      {loc?.title}
+                                                    </span>
+                                                  </Link>
                                                 </div>
-                                                <Link href={`/locations/${loc?.slug}`} passHref>
-                                                  <span className='cursor-pointer text-gray-800 dark:text-gray-200'>
-                                                    {loc?.title}
-                                                  </span>
-                                                </Link>
                                               </div>
-                                            </div>
-                                          </td>
+                                            </td>
 
-                                          <td className='whitespace-nowrap p-2'>
-                                            <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                              <button>
-                                                <a
-                                                  href={
-                                                    doctor?.bookAnAppointment ||
-                                                    `/contact/enquiry?pageVisit=/fertility-experts/${loc?.slug}`
-                                                  }
-                                                  className='font-semibold hover:underline'
-                                                  hrefLang='en-us'
-                                                  target='_blank'
-                                                  rel='noreferrer'
-                                                >
-                                                  Book Now
-                                                </a>
-                                              </button>
-                                            </div>
-                                          </td>
-                                          <td className='whitespace-nowrap p-2'>
-                                            <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
-                                              <button>
-                                                <a
-                                                  href={
-                                                    doctor?.bookAnAppointment ||
-                                                    `/contact/enquiry?pageVisit=/fertility-experts/${loc?.slug}`
-                                                  }
-                                                  className='font-semibold hover:underline'
-                                                  target='_blank'
-                                                  hrefLang='en-us'
-                                                  rel='noreferrer'
-                                                >
-                                                  Book Now
-                                                </a>
-                                              </button>
-                                            </div>
-                                          </td>
-                                        </tr>
-                                      );
-                                    }
-                                  )}
-                                </tbody>
-                              </table>
+                                            <td className='whitespace-nowrap p-2'>
+                                              <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
+                                                <button>
+                                                  <a
+                                                    href={
+                                                      doctor?.bookAnAppointment ||
+                                                      `/contact/enquiry?pageVisit=/fertility-experts/${doctor?.slug}`
+                                                    }
+                                                    className='font-semibold hover:underline'
+                                                    hrefLang='en-us'
+                                                    target='_blank'
+                                                    rel='noreferrer'
+                                                  >
+                                                    Book Now
+                                                  </a>
+                                                </button>
+                                              </div>
+                                            </td>
+                                            <td className='whitespace-nowrap p-2'>
+                                              <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
+                                                <button>
+                                                  <a
+                                                    href={
+                                                      doctor?.bookAnAppointment ||
+                                                      `/contact/enquiry?pageVisit=/fertility-experts/${doctor?.slug}`
+                                                    }
+                                                    className='font-semibold hover:underline'
+                                                    target='_blank'
+                                                    hrefLang='en-us'
+                                                    rel='noreferrer'
+                                                  >
+                                                    Book Now
+                                                  </a>
+                                                </button>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        );
+                                      }
+                                    )}
+                                  </tbody>
+                                </table>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <p className='mt-5 text-xs text-gray-800 dark:text-gray-200'>
-                        *Appointments are subject to doctor availability. Please, make sure you have
-                        given your registered number if you have already visited GarbhaGudi.
-                      </p>
-                    </section>
+                        <p className='mt-5 text-xs text-gray-800 dark:text-gray-200'>
+                          *Appointments are subject to doctor availability. Please, make sure you
+                          have given your registered number if you have already visited GarbhaGudi.
+                        </p>
+                      </section>
+                    )
                   )}
                 </div>
                 <div className='mt-10 border-t border-gray-300 py-10'>
