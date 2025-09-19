@@ -404,9 +404,12 @@ export function middleware(req: NextRequest) {
 
   let pathname =
     url.pathname.endsWith('/') && url.pathname !== '/' ? url.pathname.slice(0, -1) : url.pathname;
+  console.log(pathname, 'path');
 
   if (redirects[pathname]) {
     url.pathname = redirects[pathname];
+    console.log(url.pathname, url);
+
     return NextResponse.redirect(url, 301);
   }
 
