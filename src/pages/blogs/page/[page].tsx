@@ -209,6 +209,17 @@ function BlogPage({
 export default BlogPage;
 
 export async function getStaticProps({ params }) {
+  const page = parseInt(params.page, 10);
+
+  // invalid page number (not a number or < 1) → redirect to page 1
+  if (isNaN(page) || page < 1) {
+    return {
+      redirect: {
+        destination: '/blogs/page/1',
+        permanent: true,
+      },
+    };
+  }
   const apolloQuery = async ({ limit, offset }) => {
     return apolloClient.query({
       query: gql`
@@ -254,28 +265,18 @@ export async function getStaticProps({ params }) {
     });
   };
 
-  const page = parseInt(params.page, 10);
-
-  if (isNaN(page) || page < 1) {
-    return {
-      redirect: {
-        destination: '/blogs/page/1',
-        permanent: true,
-      },
-    };
-  }
-
   const { data } = await throttledFetch(apolloQuery, {
     limit,
     offset: (page - 1) * limit,
   });
 
-  if (!data || data?.blogsConnection?.blogs?.length === 0) {
+  const totalBlogs = data?.blogsConnection?.aggregate?.count || 0;
+  const totalPages = Math.ceil(totalBlogs / limit);
+
+  // page > total pages → return 404 (instead of redirect)
+  if (page > totalPages) {
     return {
-      redirect: {
-        destination: '/blogs/page/1',
-        permanent: true,
-      },
+      notFound: true,
     };
   }
 
