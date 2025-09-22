@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -138,13 +139,13 @@ const Form = () => {
             <span className='text-justify text-sm text-gray-500'>
               By submitting this form I agree to be contacted by GarbhaGudi IVF Centre using the
               contact details through SMS, WhatsApp and Phone Calls. I also agree to the
-              <a href='/legal/terms-and-conditions' className='pr-1 text-gg-400'>
+              <Link href='/legal/terms-and-conditions' className='pr-1 text-gg-400'>
                 Terms and Conditions
-              </a>
+              </Link>
               and
-              <a href='/legal/privacy-policy' className='text-gg-400'>
+              <Link href='/legal/privacy-policy' className='text-gg-400'>
                 Privacy Policy.
-              </a>
+              </Link>
             </span>
           </label>
         </div>
