@@ -126,7 +126,7 @@ const Form = () => {
             )}
           </div>
         </div>
-        <div className='mx-auto mt-4 px-6'>
+        <div className='mx-auto mt-4 max-w-md px-6'>
           <label className='mt-4 flex justify-center space-x-3'>
             <input
               type='checkbox'
@@ -135,10 +135,16 @@ const Form = () => {
               className='h-6 w-6 cursor-pointer accent-gg-500 checked:border-gg-500 checked:bg-gg-500'
               defaultChecked
             />
-            <span className='text-sm text-gray-500'>
+            <span className='text-justify text-sm text-gray-500'>
               By submitting this form I agree to be contacted by GarbhaGudi IVF Centre using the
-              contact details through SMS, WhatsApp and Phone Calls. I also agree to the Terms and
-              Conditions and Privacy Policy.
+              contact details through SMS, WhatsApp and Phone Calls. I also agree to the
+              <a href='/legal/terms-and-conditions' className='pr-1 text-gg-400'>
+                Terms and Conditions
+              </a>
+              and
+              <a href='/legal/privacy-policy' className='text-gg-400'>
+                Privacy Policy.
+              </a>
             </span>
           </label>
         </div>
