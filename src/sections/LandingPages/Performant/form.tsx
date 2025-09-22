@@ -20,6 +20,7 @@ const Form = () => {
       Lead_Source: `Online`,
       Lead_Sub_Source: 'GarbhaGudi_Organic',
       UTM_Campaign: '',
+      Consent: true,
       Page_Visited: pageVisit,
     },
   });
@@ -124,6 +125,22 @@ const Form = () => {
               <p className='absolute ml-[1.2em] text-sm text-red-500'>{errors.Email?.message}</p>
             )}
           </div>
+        </div>
+        <div className='mx-auto mt-4 px-6'>
+          <label className='mt-4 flex justify-center space-x-3'>
+            <input
+              type='checkbox'
+              id='Consent'
+              {...register('Consent')}
+              className='h-6 w-6 cursor-pointer accent-gg-500 checked:border-gg-500 checked:bg-gg-500'
+              defaultChecked
+            />
+            <span className='text-sm text-gray-500'>
+              By submitting this form I agree to be contacted by GarbhaGudi IVF Centre using the
+              contact details through SMS, WhatsApp and Phone Calls. I also agree to the Terms and
+              Conditions and Privacy Policy.
+            </span>
+          </label>
         </div>
         <div className='mb-6 mt-6 flex items-center justify-center space-x-4'>
           <button
