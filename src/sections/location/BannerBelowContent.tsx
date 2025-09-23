@@ -17,7 +17,7 @@ const BannerBelowContent = ({ branchTitle }) => {
         />
       </div>
       <div className='flex flex-col items-center pt-9'>
-        <div className='mx-auto flex w-full flex-col items-center px-3 text-center text-base text-gray-800 dark:text-gray-200 md:max-w-lg md:text-left'>
+        <div className='mx-auto flex w-full flex-col items-center px-3 text-center text-base text-gray-800 dark:text-gray-200 md:max-w-lg md:text-left lg:max-w-3xl'>
           <span className='font-heading text-3xl font-bold leading-tight lg:text-4xl'>
             Welcome to GarbhaGudi{' '}
           </span>
