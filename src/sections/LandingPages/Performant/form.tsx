@@ -1,4 +1,3 @@
-import { get } from 'http';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
