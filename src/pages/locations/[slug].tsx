@@ -6,6 +6,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import dynamic from 'next/dynamic';
+import BannerBelowContent from 'sections/location/BannerBelowContent';
 const MapSection = dynamic(() => import('sections/location/mapSection'), { ssr: false });
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Faq = dynamic(() => import('sections/location/faq'), { ssr: false });
@@ -62,6 +63,11 @@ const Branch = ({ branch }) => {
         <meta name='twitter:description' content={branch?.metaDescription} />
         <meta name='twitter:image' content={branch?.branchPicture?.url} />
       </Head>
+      {branch?.slug === 'hosur' ? (
+        <BannerBelowContent branchTitle={branch?.title} />
+      ) : (
+        <Banner branchTitle={branch?.title} />
+      )}
       <Banner branchTitle={branch.title} />
       <TreatmentOptions branch={branch?.title} image={branch?.nabh?.url || ''} />
       <MapSection
