@@ -68,7 +68,6 @@ const Branch = ({ branch }) => {
       ) : (
         <Banner branchTitle={branch?.title} />
       )}
-      <Banner branchTitle={branch.title} />
       <TreatmentOptions branch={branch?.title} image={branch?.nabh?.url || ''} />
       <MapSection
         maplink={branch?.mapLink}
