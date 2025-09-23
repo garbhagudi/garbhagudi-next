@@ -27,14 +27,12 @@ const getAccessToken = async () => {
 export default async function handler(req, res) {
   try {
     const token = await getAccessToken();
-    console.log(token, req.body);
 
     if (!token) {
       return res.status(500).json({ error: 'Failed to retrieve access token' });
     }
 
     const requestData = JSON.stringify({ data: [req.body.data] });
-    console.log(requestData);
 
     const response = await fetch(process.env.ZOHO_API_URL, {
       method: 'POST',
@@ -44,14 +42,11 @@ export default async function handler(req, res) {
       },
       body: requestData,
     });
-    console.log(response);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
     const responseData = await response.json();
-    console.log(responseData);
-
     return res.status(200).json(responseData);
   } catch (error) {
     console.error('Error processing request:', error.message);

@@ -1,19 +1,20 @@
+import { get } from 'http';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { set, useForm } from 'react-hook-form';
 const Form = () => {
   const router = useRouter();
   const path = usePathname();
   const pageVisit = router.query?.pageVisit || path;
-  // const utm_campaign = router.query?.utm_campaign || '';
-  console.log(router.query);
+  const utmCampaign = router.query?.utm_campaign || '';
 
   const {
     register,
     handleSubmit,
     setValue,
+    getValues,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -22,7 +23,7 @@ const Form = () => {
       Email: '',
       Lead_Source: `Online`,
       Lead_Sub_Source: 'GarbhaGudi_Organic',
-      UTM_Campaign: '',
+      UTM_Campaign: utmCampaign,
       Consent: 'Yes',
       Page_Visited: pageVisit,
     },
@@ -31,15 +32,14 @@ const Form = () => {
   const [load, setLoad] = useState(false);
   useEffect(() => {
     setValue('Page_Visited', `${window.location?.origin}${pageVisit}`);
+    setValue('Consent', getValues().Consent ? 'Yes' : 'No');
   }, [pageVisit, setValue]);
-  // useEffect(() => {
-  //   setValue('UTM_Campaign', utm_campaign);
-  // }, [utm_campaign, setValue]);
+  useEffect(() => {
+    setValue('UTM_Campaign', utmCampaign);
+  }, [utmCampaign, setValue]);
 
   const onSubmit = async (data) => {
     setLoad(true);
-    console.log(data);
-
     try {
       const response = await fetch('/api/createLeads', {
         method: 'POST',
@@ -48,7 +48,6 @@ const Form = () => {
         },
         body: JSON.stringify({ data }),
       });
-      console.log(response);
 
       const responseData = await response.json();
       if (!response.ok) {
@@ -59,8 +58,6 @@ const Form = () => {
         router.push('/thank-you.html');
       }
     } catch (err) {
-      console.log(err);
-
       setLoad(false);
       console.log(err);
     }
