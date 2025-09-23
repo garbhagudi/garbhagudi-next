@@ -1,3 +1,4 @@
+import { get } from 'http';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
@@ -21,16 +22,19 @@ const Form = () => {
       Lead_Source: `Online`,
       Lead_Sub_Source: 'GarbhaGudi_Organic',
       UTM_Campaign: '',
-      Consent: true,
+      Consent: 'Yes',
       Page_Visited: pageVisit,
     },
   });
+
   const [load, setLoad] = useState(false);
   useEffect(() => {
     setValue('Page_Visited', `${window.location?.origin}${pageVisit}`);
   }, [pageVisit, setValue]);
   const onSubmit = async (data) => {
     setLoad(true);
+    console.log(data);
+
     try {
       const response = await fetch('/api/createLeads', {
         method: 'POST',
@@ -39,6 +43,7 @@ const Form = () => {
         },
         body: JSON.stringify({ data }),
       });
+      console.log(response);
 
       const responseData = await response.json();
       if (!response.ok) {
@@ -49,6 +54,8 @@ const Form = () => {
         router.push('/thank-you.html');
       }
     } catch (err) {
+      console.log(err);
+
       setLoad(false);
       console.log(err);
     }
