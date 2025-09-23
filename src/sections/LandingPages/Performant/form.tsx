@@ -1,4 +1,3 @@
-import { get } from 'http';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
@@ -8,7 +7,7 @@ const Form = () => {
   const router = useRouter();
   const path = usePathname();
   const pageVisit = router.query?.pageVisit || path;
-
+  const utm_campaign = router.query?.utm_campaign || '';
   const {
     register,
     handleSubmit,
@@ -21,7 +20,7 @@ const Form = () => {
       Email: '',
       Lead_Source: `Online`,
       Lead_Sub_Source: 'GarbhaGudi_Organic',
-      UTM_Campaign: '',
+      UTM_Campaign: utm_campaign,
       Consent: 'Yes',
       Page_Visited: pageVisit,
     },
@@ -31,6 +30,10 @@ const Form = () => {
   useEffect(() => {
     setValue('Page_Visited', `${window.location?.origin}${pageVisit}`);
   }, [pageVisit, setValue]);
+  useEffect(() => {
+    setValue('UTM_Campaign', utm_campaign);
+  }, [utm_campaign, setValue]);
+
   const onSubmit = async (data) => {
     setLoad(true);
     console.log(data);
