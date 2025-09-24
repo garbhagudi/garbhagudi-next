@@ -25,7 +25,7 @@ const Branch = ({ branch }) => {
       __html: JSON.stringify(jsonLD, null, 2),
     };
   }
-
+  const isNewBranch = branch?.slug === 'hosur' || branch?.slug === 'davanagere';
   return (
     <div>
       <Head>
@@ -63,7 +63,7 @@ const Branch = ({ branch }) => {
         <meta name='twitter:description' content={branch?.metaDescription} />
         <meta name='twitter:image' content={branch?.branchPicture?.url} />
       </Head>
-      {branch?.slug === 'hosur' ? (
+      {isNewBranch ? (
         <BannerBelowContent branchTitle={branch?.title} />
       ) : (
         <Banner branchTitle={branch?.title} />
