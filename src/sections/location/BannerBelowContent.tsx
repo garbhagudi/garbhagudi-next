@@ -27,8 +27,8 @@ const BannerBelowContent = ({ branchTitle }) => {
             {branchTitle && <span className='text-brandPink'> in {branchTitle}</span>}
           </h1>
           <h3 className='mt-4 font-content text-base font-semibold leading-7 text-gray-800 dark:text-gray-200 md:text-lg'>
-            GarbhaGudi is a new-generation chain of infertility centres, offering advanced fertility
-            treatment and expertise to address the increasing problem of infertility.
+            GarbhaGudi is the best IVF clinic in {branchTitle}, offering advanced fertility
+            treatments to address the increasing problem of infertility.
           </h3>
         </div>
         <div className='text-center lg:px-3 lg:text-left'>
