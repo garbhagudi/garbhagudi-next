@@ -292,6 +292,21 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/blogs',
+        destination: '/blogs/page/1',
+        permanent: true,
+      },
+      {
+        source: '/thank-you-dh.html',
+        destination: '/thank-you.html',
+        permanent: true,
+      },
+      {
         source: '/fertility-experts/[slug]',
         destination: '/fertility-experts',
         permanent: true,
