@@ -2232,6 +2232,441 @@ const nextConfig = {
         destination: '/fertility-center/best-fertility-center-in-bangalore',
         permanent: true,
       },
+      {
+        source: '/solutions/best-fertility-clinic-in-bangalore',
+        destination: '/fertility-center/best-fertility-clinic-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/best-female-fertility-test-in-bangalore',
+        destination: '/solutions/best-female-fertility-test-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/cost-of-laparoscopy-in-bangalore',
+        destination: '/solutions/cost-of-laparoscopy-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/cost-of-infertility-test-in-bangalore',
+        destination: '/solutions/cost-of-infertility-test-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/cost-of-varicocele-surgery-in-bangalore',
+        destination: '/solutions/cost-of-varicocele-surgery-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/semen-analysis-test-in-bangalore',
+        destination: '/solutions/semen-analysis-test-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/semen-analysis-test-in-bangalore',
+        destination: '/solutions/semen-analysis-test-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/semen-analysis-test-in-bangalore',
+        destination: '/solutions/semen-analysis-test-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/best-ivf-clinic-in-bangalore',
+        destination: '/fertility-center/best-ivf-clinic-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/best-ivf-clinic-in-bangalore',
+        destination: '/fertility-center/best-ivf-clinic-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/hysteroscopy-treatment-in-bangalore',
+        destination: '/solutions/hysteroscopy-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/solutions/best-ivf-clinic-in-bangalore',
+        destination: '/fertility-center/best-ivf-clinic-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/cost-of-infertility-test-in-bangalore',
+        destination: '/solutions/cost-of-infertility-test-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/varicocele-treatment-in-bangalore',
+        destination: '/solutions/varicocele-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/cost-of-varicocele-surgery-in-bangalore',
+        destination: '/solutions/cost-of-varicocele-surgery-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/best-male-fertility-doctor-in-bangalore',
+        destination: '/solutions/best-male-fertility-doctor-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/male-clinic-in-bangalore',
+        destination: '/fertility-center/male-clinic-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/frozen-embryo-transfer-in-bangalore',
+        destination: '/solutions/frozen-embryo-transfer-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/best-male-fertility-doctor-in-bangalore',
+        destination: '/solutions/best-male-fertility-doctor-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/egg-freezing-in-bangalore',
+        destination: '/solutions/egg-freezing-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/best-ivf-doctor-in-bangalore',
+        destination: '/solutions/best-ivf-doctor-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/cost-of-iui-in-bangalore',
+        destination: '/solutions/cost-of-iui-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/best-ivf-doctor-in-bangalore',
+        destination: '/solutions/best-ivf-doctor-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/best-ivf-doctor-in-bangalore',
+        destination: '/solutions/best-ivf-doctor-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/best-fertility-doctors-in-bangalore',
+        destination: '/facilities/best-fertility-doctors-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/egg-freezing-in-bangalore',
+        destination: '/solutions/egg-freezing-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/cost-of-male-fertility-test-in-bangalore',
+        destination: '/solutions/cost-of-male-fertility-test-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/cost-of-male-fertility-test-in-bangalore',
+        destination: '/solutions/cost-of-male-fertility-test-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/cost-of-male-fertility-test-in-bangalore',
+        destination: '/solutions/cost-of-male-fertility-test-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/cost-of-icsi-in-bangalore',
+        destination: '/solutions/cost-of-icsi-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/best-female-fertility-test-in-bangalore',
+        destination: '/solutions/best-female-fertility-test-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/cost-of-icsi-in-bangalore',
+        destination: '/solutions/cost-of-icsi-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/cost-of-icsi-in-bangalore',
+        destination: '/solutions/cost-of-icsi-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/solutions/best-infertility-clinic-bangalore',
+        destination: '/fertility-center/best-infertility-clinic-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/solutions/best-fertility-doctors-in-bangalore',
+        destination: '/facilities/best-fertility-doctors-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/oligospermia-in-bangalore',
+        destination: '/solutions/oligospermia-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/hysteroscopy-treatment-in-bangalore',
+        destination: '/solutions/hysteroscopy-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/azoospermia-treatment-in-bangalore',
+        destination: '/solutions/azoospermia-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/azoospermia-treatment-in-bangalore',
+        destination: '/solutions/azoospermia-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/azoospermia-treatment-in-bangalore',
+        destination: '/solutions/azoospermia-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/oligospermia-in-bangalore',
+        destination: '/solutions/oligospermia-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/best-infertility-clinic-bangalore',
+        destination: '/fertility-center/best-infertility-clinic-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/solutions/male-clinic-in-bangalore',
+        destination: '/fertility-center/male-clinic-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/male-clinic-in-bangalore',
+        destination: '/fertility-center/male-clinic-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/best-infertility-treatment-in-bangalore',
+        destination: '/solutions/best-infertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/best-infertility-treatment-in-bangalore',
+        destination: '/solutions/best-infertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/best-infertility-treatment-in-bangalore',
+        destination: '/solutions/best-infertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/best-infertility-clinic-bangalore',
+        destination: '/fertility-center/best-infertility-clinic-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/varicocele-treatment-in-bangalore',
+        destination: '/solutions/varicocele-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/solutions/best-fertility-specialist-in-bangalore',
+        destination: '/facilities/best-fertility-specialist-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/cost-of-laparoscopy-in-bangalore',
+        destination: '/solutions/cost-of-laparoscopy-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/cost-of-laparoscopy-in-bangalore',
+        destination: '/solutions/cost-of-laparoscopy-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/best-iui-center-in-bangalore',
+        destination: '/fertility-center/best-iui-center-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/frozen-egg-transfer-in-bangalore',
+        destination: '/solutions/frozen-egg-transfer-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/best-fertility-clinic-in-bangalore',
+        destination: '/fertility-center/best-fertility-clinic-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/frozen-embryo-transfer-in-bangalore',
+        destination: '/solutions/frozen-embryo-transfer-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/best-female-fertility-test-in-bangalore',
+        destination: '/solutions/best-female-fertility-test-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/hysteroscopy-treatment-in-bangalore',
+        destination: '/solutions/hysteroscopy-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/best-iui-center-in-bangalore',
+        destination: '/fertility-center/best-iui-center-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/solutions/best-fertility-center-in-bangalore',
+        destination: '/fertility-center/best-fertility-center-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/best-andrologist-in-bangalore',
+        destination: '/solutions/best-andrologist-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/cost-of-infertility-test-in-bangalore',
+        destination: '/solutions/cost-of-infertility-test-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/best-fertility-center-in-bangalore',
+        destination: '/fertility-center/best-fertility-center-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/oligospermia-in-bangalore',
+        destination: '/solutions/oligospermia-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/solutions/best-iui-center-in-bangalore',
+        destination: '/fertility-center/best-iui-center-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/best-fertility-clinic-in-bangalore',
+        destination: '/fertility-center/best-fertility-clinic-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/best-andrologist-in-bangalore',
+        destination: '/solutions/best-andrologist-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/best-fertility-specialist-in-bangalore',
+        destination: '/facilities/best-fertility-specialist-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/best-fertility-specialist-in-bangalore',
+        destination: '/facilities/best-fertility-specialist-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/best-fertility-treatment-in-bangalore',
+        destination: '/solutions/best-fertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/best-fertility-treatment-in-bangalore',
+        destination: '/solutions/best-fertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/male-infertility-treatment-in-bangalore',
+        destination: '/solutions/male-infertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/female-fertility-treatment-in-bangalore',
+        destination: '/solutions/female-fertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/female-fertility-treatment-in-bangalore',
+        destination: '/solutions/female-fertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/female-fertility-treatment-in-bangalore',
+        destination: '/solutions/female-fertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/best-infertility-specialist-in-bangalore',
+        destination: '/solutions/best-infertility-specialist-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/best-infertility-specialist-in-bangalore',
+        destination: '/solutions/best-infertility-specialist-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/best-infertility-specialist-in-bangalore',
+        destination: '/solutions/best-infertility-specialist-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/frozen-egg-transfer-in-bangalore',
+        destination: '/solutions/frozen-egg-transfer-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/frozen-egg-transfer-in-bangalore',
+        destination: '/solutions/frozen-egg-transfer-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/male-fertility-treatment-in-bangalore',
+        destination: '/solutions/male-fertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-consultants/egg-freezing-in-bangalore',
+        destination: '/solutions/egg-freezing-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/male-infertility-treatment-in-bangalore',
+        destination: '/solutions/male-infertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/male-infertility-treatment-in-bangalore',
+        destination: '/solutions/male-infertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/best-fertility-treatment-in-bangalore',
+        destination: '/solutions/best-fertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/facilities/male-fertility-treatment-in-bangalore',
+        destination: '/solutions/male-fertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/fertility-center/male-fertility-treatment-in-bangalore',
+        destination: '/solutions/male-fertility-treatment-in-bangalore',
+        permanent: true,
+      },
     ];
   },
 };
