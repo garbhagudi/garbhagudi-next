@@ -73,7 +73,7 @@ const IndexPage = ({ articles }: Article) => {
       <div className='mx-auto flex max-w-7xl py-6 sm:py-12'>
         <div className='mx-auto grid grid-cols-1 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
           {articles?.map((item) => (
-            <Link href={`fertility-center/${item?.slug}`} passHref key={item?.id} className='group'>
+            <Link href={`solutions/${item?.slug}`} passHref key={item?.id} className='group'>
               <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-600 dark:hover:bg-gray-600 md:w-96'>
                 <div className='w-1/3'>
                   <Image
