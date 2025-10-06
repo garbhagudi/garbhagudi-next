@@ -25,6 +25,7 @@ const Form = () => {
       UTM_Campaign: utmCampaign,
       Consent: 'Yes',
       Page_Visited: pageVisit,
+      Campaign: { id: '3505252000387114026' },
     },
   });
 
