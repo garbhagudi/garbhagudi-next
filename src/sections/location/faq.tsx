@@ -5,7 +5,10 @@ const Faq = ({ branch }) => {
   return (
     <div>
       <section className='mx-auto max-w-7xl pt-8 font-content'>
-        <div className='container mx-auto flex flex-col justify-center px-4 py-8 text-gray-800 dark:text-gray-200 md:p-8'>
+        <div
+          className='container mx-auto flex flex-col justify-center px-4 py-8 text-gray-800 dark:text-gray-200 md:p-8'
+          id='faqs'
+        >
           <h2 className='mb-8 text-center font-heading text-3xl font-bold leading-none sm:text-4xl'>
             Frequently Asked Questions
           </h2>

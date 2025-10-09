@@ -51,15 +51,13 @@ const Overview = ({ directors }) => {
       </Head>
       <Header />
       <div className='bg-white dark:bg-gray-800'>
-        <div className='mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-24'>
-          <div className='space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0'>
-            <div className='space-y-5 sm:space-y-4'>
-              <h2 className='font-content text-4xl font-bold tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl md:text-6xl'>
-                Founders and Directors
-              </h2>
-            </div>
+        <div className='mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16'>
+          <div className='flex flex-col items-center space-y-12'>
+            <h2 className='font-content text-4xl font-bold tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl md:text-6xl'>
+              Founders and Directors
+            </h2>
             <div className='lg:col-span-2'>
-              <ul className='space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8'>
+              <ul className='space-y-12 sm:grid sm:grid-cols-3 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8'>
                 {directors.map((item) => (
                   <li key={item.id}>
                     <Link href={`/about/executive-team/${item.slug}`} passHref>

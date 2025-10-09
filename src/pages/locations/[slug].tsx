@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import dynamic from 'next/dynamic';
 import BannerBelowContent from 'sections/location/BannerBelowContent';
+import Navigations from 'sections/location/Navigations';
 const MapSection = dynamic(() => import('sections/location/mapSection'), { ssr: false });
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Faq = dynamic(() => import('sections/location/faq'), { ssr: false });
@@ -68,6 +69,7 @@ const Branch = ({ branch }) => {
       ) : (
         <Banner branchTitle={branch?.title} />
       )}
+      <Navigations />
       <TreatmentOptions branch={branch?.title} image={branch?.nabh?.url || ''} />
       <MapSection
         maplink={branch?.mapLink}
