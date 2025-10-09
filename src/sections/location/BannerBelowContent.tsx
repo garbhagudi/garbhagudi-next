@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Navigations from './Navigations';
 
 const BannerBelowContent = ({ branchTitle }) => {
   const path = usePathname();
@@ -16,6 +17,7 @@ const BannerBelowContent = ({ branchTitle }) => {
           priority
         />
       </div>
+      <Navigations />
       <div className='flex flex-col items-center pt-9'>
         <div className='mx-auto flex w-full flex-col items-center px-3 text-center text-base text-gray-800 dark:text-gray-200 md:max-w-lg md:text-left lg:max-w-3xl'>
           <span className='font-heading text-3xl font-bold leading-tight lg:text-4xl'>

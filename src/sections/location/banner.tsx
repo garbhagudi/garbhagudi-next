@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Navigations from './Navigations';
 
 const Banner = ({ branchTitle }) => {
   const path = usePathname();
@@ -33,6 +34,7 @@ const Banner = ({ branchTitle }) => {
           </div>
         </div>
       </div>
+      <Navigations />
     </div>
   );
 };
