@@ -1237,16 +1237,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/careers/academic-coordinator',
-        destination: '/careers',
-        permanent: true,
-      },
-      {
-        source: '/careers/associate-lead-direct-sales',
-        destination: '/careers',
-        permanent: true,
-      },
-      {
         source: '/careers/electrician',
         destination: '/careers',
         permanent: true,
@@ -2672,3 +2662,4 @@ const nextConfig = {
 };
 
 export default nextConfig;
+
