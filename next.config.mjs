@@ -577,11 +577,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/fertility-experts/dr-deepthi-venkatesh',
-        destination: '/fertility-experts',
-        permanent: true,
-      },
-      {
         source: '/fertility-tests-for-women',
         destination: '/blogs/fertility-tests-for-women',
         permanent: true,
@@ -2662,4 +2657,5 @@ const nextConfig = {
 };
 
 export default nextConfig;
+
 
