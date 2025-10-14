@@ -94,11 +94,11 @@ export async function getStaticPaths() {
 }
 const doctorRegistration = (slug: string) => {
   if (slug === 'dr-radha-puchalapalli') {
-    return 'TNMC';
+    return '(TNMC)';
   } else if (slug === 'dr-jala') {
-    return 'KAUPB';
+    return '(KAUPB)';
   }
-  return 'KMC';
+  return '(KMC)';
 };
 
 const Doctor = ({ doctor }) => {
@@ -237,7 +237,7 @@ const Doctor = ({ doctor }) => {
                   {doctor?.medicalRegNo && (
                     <div className='mb-2 text-gray-800 dark:text-gray-200'>
                       Medical Registration Number {doctorRegistration(doctor?.slug)}
-                      <span className='font-bold underline'>{doctor?.medicalRegNo}</span>
+                      <span className='mx-1 font-bold underline'>{doctor?.medicalRegNo}</span>
                     </div>
                   )}
                   {doctor?.languages && (
