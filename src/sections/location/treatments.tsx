@@ -22,10 +22,7 @@ const TreatmentOptions = ({ branch, image }: TreatmentOptionsProps) => {
           <div className='font-lexend text-xl font-bold'>NABH Certified*</div>
         </div>
       )}
-      <div
-        className='px-2 py-16 text-center font-heading text-xl font-bold lg:py-20 lg:text-2xl'
-        id='treatment-options'
-      >
+      <div className='px-2 py-16 text-center font-heading text-xl font-bold lg:py-20 lg:text-2xl'>
         Infertility Treatment Options at {branch}
       </div>
       <div className='grid grid-cols-2 gap-x-3 gap-y-16 px-2 pb-10 lg:grid-cols-4 lg:gap-16 lg:pb-16'>

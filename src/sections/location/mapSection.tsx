@@ -28,7 +28,7 @@ const MapSection = ({ maplink, address, description, doctors, title }: MapSectio
   return (
     <div className='px-3'>
       <div className='body-font relative mx-auto max-w-7xl text-gray-600'>
-        <div className='inset-0 flex flex-wrap py-6 lg:flex-nowrap' id='map-section'>
+        <div className='inset-0 flex flex-wrap py-6 lg:flex-nowrap'>
           {/* Map Iframe */}
           <div className='relative flex h-[42rem] w-full items-end justify-start overflow-hidden rounded-lg border-2 border-brandPurpleDark bg-gray-300 p-2 md:ml-auto lg:w-1/2 lg:p-10'>
             <iframe
@@ -112,7 +112,7 @@ const MapSection = ({ maplink, address, description, doctors, title }: MapSectio
         </div>
 
         {/* Fertility Specialists */}
-        <div className='flex w-full flex-col pb-8 md:mt-0' id='doctors'>
+        <div className='flex w-full flex-col pb-8 md:mt-0'>
           <h2 className='py-10 text-center font-heading text-2xl font-semibold text-gray-800 dark:text-gray-200 lg:mt-0'>
             Fertility Specialists at {title}
           </h2>

@@ -577,11 +577,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/fertility-experts/dr-deepthi-venkatesh',
-        destination: '/fertility-experts',
-        permanent: true,
-      },
-      {
         source: '/fertility-tests-for-women',
         destination: '/blogs/fertility-tests-for-women',
         permanent: true,
@@ -916,6 +911,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/careers/academic-coordinator',
+        destination: '/careers',
+        permanent: true,
+      },
+      {
         source: '/category/doctors',
         destination: '/fertility-experts',
         permanent: true,
@@ -1229,11 +1229,6 @@ const nextConfig = {
       {
         source: '/blogs/what-made',
         destination: '/blogs/what-made-you-get-out-of-shape',
-        permanent: true,
-      },
-      {
-        source: '/careers/academic-coordinator',
-        destination: '/careers',
         permanent: true,
       },
       {

@@ -1,6 +1,6 @@
 const VirtualTour = ({ link1, link2, link3 }) => {
   return (
-    <div className='mx-auto max-w-7xl' id='virtual-tour'>
+    <div className='mx-auto max-w-7xl'>
       {link1 && (
         <h3 className='mx-auto py-3 text-center font-heading text-2xl font-bold text-gray-800 dark:text-gray-200 md:text-4xl'>
           Virtual Tour
