@@ -92,7 +92,7 @@ export async function getStaticPaths() {
     fallback: true,
   };
 }
-const doctorRegistration = (slug: string) => {
+const doctorRegistration = (slug:string) => {
   if (slug === 'dr-radha-puchalapalli') {
     return 'TNMC';
   } else if (slug === 'dr-jala') {
@@ -458,3 +458,4 @@ const Doctor = ({ doctor }) => {
 };
 
 export default Doctor;
+
