@@ -100,6 +100,7 @@ const doctorRegistration = (slug:string) => {
   }
   return 'KMC';
 };
+
 const Doctor = ({ doctor }) => {
   const router = useRouter();
   const defaultMetaTile = `${doctor?.name} | ${doctor?.designation} | ${doctor?.location[0]?.title} | GarbhaGudi `;
