@@ -142,7 +142,7 @@ function BlogPage({
                         width={380}
                         height={214}
                         sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 380px'
-                        className='h-auto w-full rounded-t-lg object-cover'
+                        className='max-h-52 h-auto w-full rounded-t-lg object-center'
                         priority={index < 3}
                         fetchPriority={index < 1 ? 'high' : 'auto'}
                       />

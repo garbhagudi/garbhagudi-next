@@ -7,6 +7,7 @@ import { throttledFetch } from 'lib/throttle';
 import dynamic from 'next/dynamic';
 import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 import { useState } from 'react';
+import Link from 'next/link';
 const Error = dynamic(() => import('next/error'));
 const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
@@ -54,6 +55,17 @@ export const getStaticProps = async ({ params }) => {
             }
             publishedOn
           }
+          blogs(orderBy: publishedAt_DESC, first: 3) {
+            id
+            slug
+            title
+            image {
+              url
+            }
+            content {
+              text
+            }
+          }
         }
       `,
       variables: {
@@ -81,6 +93,7 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       blog: data.blog,
+      blogs: data.blogs,
     },
     revalidate: 180,
   };
@@ -105,7 +118,7 @@ export async function getStaticPaths() {
   };
 }
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, blogs }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const title = `${blog?.metaTitle || blog?.title}`;
   const description = `${blog?.metaDescription || blog?.content?.text.slice(0, 160)}`;
@@ -307,19 +320,70 @@ const Blog = ({ blog }) => {
                     fetchPriority='high'
                   />
                 </div>
+                <div className='grid gap-10 text-justify md:grid-cols-3'>
+                  <div className='text-justify text-gray-800 md:col-span-2'>
+                    <RichText
+                      content={blog?.content?.raw?.children}
+                      renderers={{
+                        p: ({ children }) => <p className='text-justify'>{children}</p>,
+                        a: ({ children, href }) => (
+                          <a href={href} className='text-gg-500 underline'>
+                            {children}
+                          </a>
+                        ),
+                      }}
+                    />
+                  </div>
 
-                <div className='text-justify text-gray-800 dark:text-gray-200'>
-                  <RichText
-                    content={blog?.content?.raw?.children}
-                    renderers={{
-                      p: ({ children }) => <p className='text-justify'>{children}</p>,
-                      a: ({ children, href }) => (
-                        <a href={href} className='text-gg-500 underline'>
-                          {children}
-                        </a>
-                      ),
-                    }}
-                  />
+                  <aside className='flex flex-col gap-8'>
+                    <section>
+                      <div className='bg-primary rounded-lg py-2 text-center font-bold text-white'>
+                        Recent Posts
+                      </div>
+                      <div className='flex flex-col gap-y-8 py-3'>
+                        {blogs.map((item: any, index: number) => (
+                          <div
+                            key={index}
+                            className='flex flex-col overflow-hidden rounded-lg shadow-2xl transition duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-lg'
+                          >
+                            <Link href={`/blogs/${item.slug}`} passHref>
+                              <div className='flex-shrink-0'>
+                                <Image
+                                  src={item?.image?.url || 'https://via.placeholder.com/380x214'}
+                                  alt={item?.title}
+                                  width={380}
+                                  height={214}
+                                  sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 380px'
+                                  className='h-auto max-h-52 w-full rounded-t-lg object-center'
+                                  priority={index < 3}
+                                  fetchPriority={index < 1 ? 'high' : 'auto'}
+                                />
+                              </div>
+                            </Link>
+                            <div className='flex flex-1 flex-col justify-between bg-gradient-to-bl from-gg-200 via-gg-100 to-gg-50 p-6 dark:from-gray-800 dark:to-gray-700'>
+                              <div className='flex-1'>
+                                <p className='cursor-pointer font-lexend text-base font-normal text-gray-800 dark:text-gray-200'>
+                                  {item?.title}
+                                </p>
+                              </div>
+                              <div className='mt-6 flex items-center'>
+                                <div className='text-base font-medium text-gray-800 dark:text-gray-200'>
+                                  <Link href={'/'}>
+                                    <div className='font-lexend'>
+                                      Author : GarbhaGudi IVF Centre
+                                    </div>
+                                  </Link>
+                                </div>
+                                <div className='flex space-x-1 font-lexend text-sm text-gray-700 dark:text-gray-200'>
+                                  <time>Published: {item?.node?.publishedOn}</time>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+                  </aside>
                 </div>
                 <div>
                   <Share pinmedia={blog?.image?.url} />

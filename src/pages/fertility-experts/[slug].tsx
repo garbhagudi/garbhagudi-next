@@ -92,7 +92,14 @@ export async function getStaticPaths() {
     fallback: true,
   };
 }
-
+const doctorRegistration = (slug: string) => {
+  if (slug === 'dr-radha-puchalapalli') {
+    return 'TNMC';
+  } else if (slug === 'dr-jala') {
+    return 'KAUPB';
+  }
+  return 'KMC';
+};
 const Doctor = ({ doctor }) => {
   const router = useRouter();
   const defaultMetaTile = `${doctor?.name} | ${doctor?.designation} | ${doctor?.location[0]?.title} | GarbhaGudi `;
@@ -228,8 +235,7 @@ const Doctor = ({ doctor }) => {
                   <div className='mb-2 text-gray-800 dark:text-gray-200'>{doctor?.designation}</div>
                   {doctor?.medicalRegNo && (
                     <div className='mb-2 text-gray-800 dark:text-gray-200'>
-                      Medical Registration Number{' '}
-                      {doctor?.slug === 'dr-radha-puchalapalli' ? '(TNMC)' : '(KMC)'} :{' '}
+                      Medical Registration Number {doctorRegistration(doctor?.slug)}
                       <span className='font-bold underline'>{doctor?.medicalRegNo}</span>
                     </div>
                   )}
