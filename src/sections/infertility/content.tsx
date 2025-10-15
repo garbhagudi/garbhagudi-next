@@ -22,10 +22,14 @@ export const WhatIsInfertilityTreatment = () => {
             individual, maximizing the chances of successful conception and a healthy pregnancy.
           </div>
           <div className='pb-4'>
-            At GarbhaGudi IVF Centre, we understand the emotional journey of infertility, and our
-            dedicated team is committed to providing unwavering support throughout the process.
-            Whether it's Intrauterine Insemination (IUI), In Vitro Fertilization (IVF), or other
-            assisted reproductive technologies, we strive to make your parenthood dream a reality.
+            At{' '}
+            <Link href={'/'} className='text-brandPink hover:underline'>
+              GarbhaGudi IVF Centre
+            </Link>
+            , we understand the emotional journey of infertility, and our dedicated team is
+            committed to providing unwavering support throughout the process. Whether it's
+            Intrauterine Insemination (IUI), In Vitro Fertilization (IVF), or other assisted
+            reproductive technologies, we strive to make your parenthood dream a reality.
           </div>
           <div>
             Experience the leading-edge{' '}
@@ -92,8 +96,13 @@ export const WhyGarbhaGudi = () => {
         <div className='font-content'>
           <div className='pb-4'>
             GarbhaGudi IVF Centre stands as the epitome of excellence, making it the{' '}
-            <span className='font-bold'> Best Fertility Hospital in Bangalore</span>. We take pride
-            in offering a comprehensive range of{' '}
+            <Link
+              href={'/fertility-center/best-ivf-clinic-in-bangalore'}
+              className='text-brandPink hover:underline'
+            >
+              Best Fertility Hospital in Bangalore
+            </Link>
+            . We take pride in offering a comprehensive range of{' '}
             <span className='font-bold'> Infertility treatments</span> to cater to diverse needs,
             ensuring that every couple receives personalized care and attention.
           </div>{' '}
@@ -148,8 +157,14 @@ export const WhenDiagnose = () => {
             Our skilled team of specialists conducts a thorough assessment to identify the
             underlying factors contributing to infertility. Through advanced diagnostic tests and
             examinations, we aim to pinpoint any potential issues affecting fertility. Early
-            diagnosis and intervention can significantly increase the success rates of infertility
-            treatment, making GarbhaGudi IVF Centre the preferred{' '}
+            diagnosis and intervention can significantly increase the{' '}
+            <Link
+              href={'/blogs/success-of-fertility-treatments'}
+              className='text-brandPink hover:underline'
+            >
+              success rates of infertility treatment
+            </Link>{' '}
+            , making GarbhaGudi IVF Centre the preferred{' '}
             <span className='font-bold'>Infertility Centre in Bangalore</span> for those aspiring to
             build a family.
           </div>
@@ -182,8 +197,13 @@ export const InfertilityTreatmentOptions = () => {
         <div className='px-0 pt-3 font-content text-gray-800 dark:text-gray-200 lg:w-1/2 lg:px-8 lg:pt-0'>
           <p className=''>
             Discover the joy of parenthood with our cutting-edge and compassionate
-            <span className='font-bold'> Infertility Treatment in Bangalore</span>. At our
-            state-of-the-art facility, we offer personalized{' '}
+            <Link
+              href={'/solutions/best-infertility-treatment-in-bangalore'}
+              className='text-brandPink hover:underline'
+            >
+              Infertility Treatment in Bangalore
+            </Link>
+            . At our state-of-the-art facility, we offer personalized{' '}
             <span className='font-bold'>Fertility Treatment in Bangalore</span> to address various
             infertility challenges that couples may face.
           </p>

@@ -45,24 +45,15 @@ const Banner = () => {
             Where expert fertility care meets state-of-the-art technology.
           </div>
           <div className='pt-5 font-content text-base'>
-            Experience the miracle of life with{' '}
-            <Link
-              href={'/treatments/iui-treatment-in-bangalore'}
-              className='text-brandPink hover:underline'
-            >
-              IUI treatment in Bangalore.
+            Experience the miracle of life with IUI treatment in Bangalore. Nestled in the heart of
+            the city, our state-of-the-art fertility clinic offers hope and a ray of sunshine for
+            couples who are looking to start a family. Our team of{' '}
+            <Link href={'/fertility-experts '} className='text-brandPink hover:underline'>
+              expert fertility specialists
             </Link>{' '}
-            Nestled in the heart of the city, our state-of-the-art fertility clinic offers hope and
-            a ray of sunshine for couples who are looking to start a family. Our team of expert
-            fertility specialists and cutting-edge technology will guide you on your journey towards
-            parenthood, every step of the way. Embrace the joy of holding your bundle of love in
-            your arms, with{' '}
-            <Link
-              href={'/treatments/iui-treatment-in-bangalore'}
-              className='text-brandPink hover:underline'
-            >
-              IUI treatment in Bangalore.
-            </Link>{' '}
+            and cutting-edge technology will guide you on your journey towards parenthood, every
+            step of the way. Embrace the joy of holding your bundle of love in your arms, with IUI
+            treatment in Bangalore.
           </div>
         </div>
         <Link
