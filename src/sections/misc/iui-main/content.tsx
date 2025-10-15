@@ -16,7 +16,7 @@ const Content = () => {
             by issues with ovulation, sperm count, or cervical mucus. It may be used alone or in
             combination with other{' '}
             <Link
-              href={'/treatments/iui-treatment-in-bangalore'}
+              href={'/blogs/how-to-choose-the-best-fertility-treatment-for-your-needs'}
               className='text-brandPink hover:underline'
             >
               fertility treatments
