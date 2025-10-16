@@ -167,16 +167,13 @@ const InfertilityPage = ({ doctors }) => {
             </Carousel>
           </div>
           <div className='mx-auto max-w-5xl pt-6 font-content'>
-            If you're seeking the <span className='font-bold'>best infertility care</span>, look no
-            further than GarbhaGudi IVF Centre in Bangalore. Our team boasts the finest{' '}
-            <span className='font-bold'>infertility specialists</span>, dedicated to providing
-            top-tier treatments and solutions. As the leading{' '}
-            <span className='font-bold'>infertility doctor in Bangalore</span>, we take pride in
-            being the go-to destination for those in search of effective and compassionate care.
-            With a reputation as the{' '}
-            <span className='font-bold'>best fertility doctor in Bangalore</span>, our experts at
-            GarbhaGudi are committed to guiding your journey towards parenthood with expertise and
-            unwavering support.
+            If you're seeking the best infertility care, look no further than GarbhaGudi IVF Centre
+            in Bangalore. Our team boasts the finest infertility specialists, dedicated to providing
+            top-tier treatments and solutions. As the leading infertility doctor in Bangalore, we
+            take pride in being the go-to destination for those in search of effective and
+            compassionate care. With a reputation as the best fertility doctor in Bangalore, our
+            experts at GarbhaGudi are committed to guiding your journey towards parenthood with
+            expertise and unwavering support.
           </div>
         </div>
       </div>
