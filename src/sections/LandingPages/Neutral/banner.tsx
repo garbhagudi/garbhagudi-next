@@ -28,13 +28,24 @@ const Banner = () => {
               <div className='color-pop rounded-lg'>
                 <div className='flex flex-col items-start rounded-lg bg-transparent px-2.5 py-2 text-base font-bold text-white'>
                   <div>
-                    <span className='font-lexend font-semibold'>
-                      Offer of the Month* : Rs.1,00,000 Discount on IVF Treatment. Valid upto 31st
-                      December 2024
-                    </span>
+                    <ul className='font-lexend font-semibold'>
+                      Offer of the month*:
+                      <li className='list-none text-sm font-normal'>
+                        ✅ FREE Consults & Fertility (TVS) Scan
+                      </li>
+                      <li className='list-none text-sm font-normal'>
+                        ✅ 22% Discount on Reproductive Health Check Tests
+                      </li>
+                      <li className='list-none text-sm font-normal'>
+                        ✅ ₹10,000/- OFF on IVF Package
+                      </li>
+                      <li className='list-none text-sm font-normal'>
+                        ✅ ₹25,000/- off on repeat IVF Package
+                      </li>
+                    </ul>
                   </div>
                   <span className='w-full text-right font-lexend text-xs'>
-                    *Valid till Oct 31st 2024
+                    *Valid till Nov 10th, 2025.
                   </span>
                 </div>
               </div>
@@ -43,8 +54,7 @@ const Banner = () => {
                   Welcome to the Best IVF Centre In Bangalore
                 </h1>
                 <p className='mt-6 text-xl'>
-                  Get start on your journey towards parenthood with upto Rs. 1,00,000 /- off on IVF
-                  Treatment.
+                  Get started on your journey towards parenthood with our fertility experts
                 </p>
                 <p className='mt-2 text-base'>EMI Facility Available at 0% Interest.</p>
               </div>
@@ -61,7 +71,7 @@ const Banner = () => {
                     Families
                   </div>
                   <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
-                    <span className='font-bold text-brandPink dark:text-gg-400'>12+</span> Years of
+                    <span className='font-bold text-brandPink dark:text-gg-400'>15+</span> Years of
                     Experience
                   </div>
                   <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
@@ -69,7 +79,7 @@ const Banner = () => {
                     Success Rate
                   </div>
                   <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
-                    <span className='font-bold text-brandPink dark:text-gg-400'>9</span> Centres in
+                    <span className='font-bold text-brandPink dark:text-gg-400'>10</span> Centres in
                     Karnataka
                   </div>
                 </div>
