@@ -18,7 +18,7 @@ export default function LandingPagePopUp() {
   useEffect(() => {
     const timer = setTimeout(() => {
       open();
-    }, 100000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, []);
