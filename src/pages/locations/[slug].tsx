@@ -25,7 +25,7 @@ const Branch = ({ branch }) => {
       __html: JSON.stringify(jsonLD, null, 2),
     };
   }
-  const isNewBranch = branch?.slug === 'hosur' || branch?.slug === 'davanagere';
+  const isNewBranch = branch?.slug === 'hosur';
   return (
     <div>
       <Head>
