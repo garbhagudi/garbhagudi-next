@@ -52,9 +52,9 @@ const Data = [
     title: `Is everyone who registers entitled to receive the benefit?`,
     contents: (
       <div>
-        A couple will be eligible for PARIPOORNA after completing registration, undergoing
-        consultation with a fertility specialist, receiving a diagnosis, and being prescribed a
-        treatment to meet couple unique needs.
+        A couple will be eligible for PARIPOORNA after completing registration, consultation with a
+        fertility specialist, receiving a diagnosis, and being prescribed a treatment to meet
+        couples’ unique needs.
       </div>
     ),
   },
@@ -77,22 +77,22 @@ const Data = [
   },
   {
     id: 7,
-    title: `What is the last date to apply for PARIPOORNA program?`,
+    title: `What is the last date to apply for PARIPOORNA?`,
     contents: <div>PARIPOORNA is available until 31st December 2025.</div>,
   },
   {
     id: 8,
-    title: `I have started my treatment at another facility, am I still eligible to avail the PARIPOORNA at GarbhaGudi IVF Centre?`,
+    title: `I have started my treatment at another facility. Am I still eligible to avail the PARIPOORNA at GarbhaGudi IVF Centre?`,
     contents: (
       <div>
         Yes, you can apply, but we recommend that you do not discontinue the treatment, as it could
-        affect its success rate
+        affect its success rate.
       </div>
     ),
   },
   {
     id: 9,
-    title: `Can I register for PARIPOORNA through online without visiting the centre?   `,
+    title: `Can I register for PARIPOORNA through online without visiting the centre?`,
     contents: (
       <div>
         This offer is valid only for couples who are eligible for a self-cycle based on their

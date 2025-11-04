@@ -39,27 +39,27 @@ const PriceSlash: React.FC<PriceSlashProps> = ({ originalPrice, slashedPrice }) 
       <div className='mt-5 text-sm'>
         What’s included*:
         <ul className='list-inside list-disc'>
-          <li>Expert fertility specialist consults and scans during stimulation</li>
-          <li>Ovarian Stimulation Injections</li>
+          <li>An expert fertility specialist consults and scans during stimulation.</li>
+          <li>Ovarian stimulation injections;</li>
           <li>
             Laboratory investigations (Twice Estradiol Tests, Luteinizing Hormone Tests, and once
-            Progesterone Test)
+            Progesterone Test);
           </li>
-          <li>Egg Retrieval (OPU) with OT consumables</li>
-          <li>Intracytoplasmic Sperm Injection (ICSI) procedure</li>
-          <li>Frozen Embryo Transfer (FET) and Operating Theatre (OT) consumables</li>
-          <li>Blastocyst Culture</li>
-          <li>Embryo Freezing for 3 Months</li>
-          <li>Fresh Embryo Transfer (ET) / Frozen Embryo Transfer (FET)</li>
+          <li>Egg Retrieval (OPU) with OT consumables;</li>
+          <li>Intracytoplasmic Sperm Injection (ICSI) procedure;</li>
+          <li>Frozen Embryo Transfer (FET) and Operation Theatre (OT) consumables;</li>
+          <li>Blastocyst Culture;</li>
+          <li>Embryo Freezing for 3 Months;</li>
+          <li>Fresh Embryo Transfer (ET) / Frozen Embryo Transfer (FET);</li>
           <li>
-            Complementary holistic therapy including counselling, meditation, pranayama, breathing
-            exercises, and yoga asanas; thoughtfully designed to support eligible couples
+            Complementary holistic therapy, including counseling, meditation, pranayama, breathing
+            exercises, and yoga asanas, is thoughtfully designed to support eligible couples.
           </li>
-          <li>No hidden costs</li>
+          <li>No hidden costs.</li>
         </ul>
         <div className='mt-8 text-xs'>
-          * Included particulars are applicable for single self-cycle only. *Terms and conditions
-          apply
+          *Particulars included are applicable to a single self-cycle only. *Terms and conditions
+          apply.
         </div>
       </div>
     </div>

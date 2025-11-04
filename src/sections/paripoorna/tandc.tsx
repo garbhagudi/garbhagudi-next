@@ -6,8 +6,8 @@ const TermsConditions = () => {
       </h3>
       <div className='mx-auto max-w-5xl pb-10 font-lexend text-base text-gray-800 dark:text-gray-200'>
         The GarbhaGnan Foundation is one of the foremost foundations in the country that offers
-        specialised and the latest healthcare for couples, and women. With growing rates of
-        infertility across the globe due to various reasons, The GarbhaGnan Foundation remains
+        specialized and the latest healthcare for couples and women. With growing rates of
+        infertility across the globe due to various reasons, the GarbhaGnan Foundation remains
         steadfast in helping couples experience the joy of parenthood and the bliss of family life.
         <br />
         In its pursuit of rendering service to couples looking for progeny, Garbhagnan Foundation
@@ -33,33 +33,33 @@ export default TermsConditions;
 const items = [
   {
     id: 1,
-    title: 'The couple should be citizens and residents of India',
+    title: 'The couple should be citizens and residents of India.',
   },
   {
     id: 2,
     title:
-      'Paripoorna cannot be combined with any other benefit plans provided at GarbhaGudi IVF Centre',
+      'Paripoorna cannot be combined with any other benefit plans provided at GarbhaGudi IVF Centre.',
   },
   {
     id: 3,
-    title: 'Paripoorna is non-transferrable',
+    title: 'Paripoorna is non-transferrable.',
   },
   {
     id: 4,
-    title: 'No Offer code required to avail the benefit',
+    title: 'No Offer code required to avail the benefit.',
   },
   {
     id: 6,
     title:
-      'The benefit plan ends on the mentioned date and cannot be extended under any circumstances, unless specified by GarbhaGudi Management',
+      'The benefit plan ends on the mentioned date and cannot be extended under any circumstances, unless specified by GarbhaGudi Management.',
   },
   {
     id: 9,
     title:
-      'All the terms and conditions are subject to change without notice, which is at the sole discretion of the GarbhaGudi IVF Centre & GarbhaGnan Foundation',
+      'All the terms and conditions are subject to change without notice, which is at the sole discretion of the GarbhaGudi IVF Centre & GarbhaGnan Foundation.',
   },
   {
     id: 10,
-    title: 'Additional terms and conditions may apply',
+    title: 'Additional terms and conditions may apply.',
   },
 ];
