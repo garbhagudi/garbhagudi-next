@@ -37,21 +37,29 @@ const PriceSlash: React.FC<PriceSlashProps> = ({ originalPrice, slashedPrice }) 
         </div>
       </div>
       <div className='mt-5 text-sm'>
-        Includes*:
+        What’s included*:
         <ul className='list-inside list-disc'>
-          <li>Consultations and scans during stimulation</li>
+          <li>Expert fertility specialist consults and scans during stimulation</li>
           <li>Ovarian Stimulation Injections</li>
-          <li>Limited Lab investigations during stimulation</li>
-          <li>OT Consumables ({'<'} ₹ 5000)</li>
-          <li>Pre & Post Op Medications</li>
-          <li>Egg Retrieval (OPU)</li>
-          <li>ICSI</li>
-          <li>Embryo Blastocyst</li>
-          <li>Embryo Freezing (3 - Months)</li>
-          <li>ET / FET Procedure </li>
+          <li>
+            Laboratory investigations (Twice Estradiol Tests, Luteinizing Hormone Tests, and once
+            Progesterone Test)
+          </li>
+          <li>Egg Retrieval (OPU) with OT consumables</li>
+          <li>Intracytoplasmic Sperm Injection (ICSI) procedure</li>
+          <li>Frozen Embryo Transfer (FET) and Operating Theatre (OT) consumables</li>
+          <li>Blastocyst Culture</li>
+          <li>Embryo Freezing for 3 Months</li>
+          <li>Fresh Embryo Transfer (ET) / Frozen Embryo Transfer (FET)</li>
+          <li>
+            Complementary holistic therapy including counselling, meditation, pranayama, breathing
+            exercises, and yoga asanas; thoughtfully designed to support eligible couples
+          </li>
+          <li>No hidden costs</li>
         </ul>
         <div className='mt-8 text-xs'>
-          * Included particulars are applicable for 1 cycle only. Other terms and conditions apply
+          * Included particulars are applicable for single self-cycle only. *Terms and conditions
+          apply
         </div>
       </div>
     </div>
@@ -70,23 +78,24 @@ const Home = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2'>
           <div className='flex flex-col items-start justify-center px-3'>
             <div className='py-8 font-heading text-2xl font-bold text-gg-500 dark:text-gg-400'>
-              &quot;Get a massive 1,00,000/-* off on your IVF Treatments&quot;
+              &quot;Big Savings, Get Flat ₹1,11,111* OFF on your IVF Treatments&quot;
               <div className='block text-right text-xs text-gray-800 dark:text-gray-200'>
                 *Terms and conditions apply
               </div>
             </div>
 
             <div className='font-lexend text-lg text-gray-800 dark:text-gray-200'>
-              Our intention is to serve maximum number of couples who are missing out on
-              experiencing the joy of parenthood. We know that many couples cannot afford IVF.
-              Keeping this in mind, GarbhaGudi IVF Centre in association with GarbhaGnan Foundation,
-              has initiated this program called{' '}
+              Our intention is to serve the maximum number of couples who are missing out on
+              experiencing the joy of parenthood. We understand that many couples cannot afford IVF.
+              Keeping this in mind, GarbhaGudi IVF Centre, in association with GarbhaGnan
+              Foundation, has initiated this program called{' '}
               <span className='font-bold underline'>PARIPOORNA. </span>
-              <PriceSlash originalPrice={260000} slashedPrice={160000} />
-              This December, celebrate the season of parenthood, with Paripoorna. GarbhaGudi IVF
-              Centre is offering a flat <span className='font-bold underline'>₹1,00,000/-</span> off
-              on your IVF cycle cost. Visit the GarbhaGudi branch nearest to you to avail the offer
-              and take the first steps in your journey towards completeness.
+              <PriceSlash originalPrice={291111} slashedPrice={180000} />
+              This November and December 2025, celebrate the season of parenthood with{' '}
+              <span className='font-bold'>PARIPOORNA. </span> GarbhaGudi IVF Centre is offering a
+              flat <span className='font-bold underline'>₹1,11,111/-</span> off on your IVF cycle
+              cost. Visit the nearest GarbhaGudi IVF Centre to avail the opportunity and take the
+              first step in your journey towards completeness.
               <div className='mt-10 flex flex-col items-start space-x-5 space-y-3 md:items-center lg:flex-row lg:space-y-0'>
                 <div className='rounded-xl bg-gg-500 px-3 py-2 font-lexend text-white dark:bg-gg-600'>
                   <WatchVideo />

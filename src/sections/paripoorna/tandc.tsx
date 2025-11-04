@@ -6,18 +6,12 @@ const TermsConditions = () => {
       </h3>
       <div className='mx-auto max-w-5xl pb-10 font-lexend text-base text-gray-800 dark:text-gray-200'>
         The GarbhaGnan Foundation is one of the foremost foundations in the country that offers
-        specialised and the latest healthcare for women. with growing rates of infertility across
-        the globe due to various reasons, The GarbhaGnan Foundation remains steadfast in helping
-        couples experience the joy of parenthood and the bliss of family life.
-        <br />
-        <br />
-        This year we are extending this offer of Rs. 1,00,000 discount to woman, Egg Freezing
-        facility, who are wanting to wait due to professional career goals or want to postpone
-        extension of family due to various other reasons.
-        <br />
+        specialised and the latest healthcare for couples, and women. With growing rates of
+        infertility across the globe due to various reasons, The GarbhaGnan Foundation remains
+        steadfast in helping couples experience the joy of parenthood and the bliss of family life.
         <br />
         In its pursuit of rendering service to couples looking for progeny, Garbhagnan Foundation
-        has decided to offer <strong> "PARIPOORNA 2024"</strong>, where the discount offered by the
+        has decided to offer <strong> "PARIPOORNA 2025"</strong>, where the discount offered by the
         GarbhaGudi IVF Center is being borne by GarbhaGnan Foundation as a part of its CSR activity.
       </div>
       <ul role='list' className='pb-8'>
@@ -43,11 +37,12 @@ const items = [
   },
   {
     id: 2,
-    title: 'Paripoorna cannot be combined with any other benefit plans provided at GarbhaGudi',
+    title:
+      'Paripoorna cannot be combined with any other benefit plans provided at GarbhaGudi IVF Centre',
   },
   {
     id: 3,
-    title: 'Paripoorna Benefit plan is non-transferrable',
+    title: 'Paripoorna is non-transferrable',
   },
   {
     id: 4,

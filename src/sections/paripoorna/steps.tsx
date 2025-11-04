@@ -17,13 +17,14 @@ const Steps = () => {
                 1
               </span>
               <p className='font-lexend text-base text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
-                Visit your nearest GG branch 📍
+                Visit your nearest GarbhaGudi IVF Centre📍
               </p>
             </div>
             <p className='text-sm text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
               Embark on your fertility journey by stepping into our warm and welcoming GarbhaGudi
-              branch. Our state-of-the-art facilities are designed to provide you with the utmost
-              care and comfort from the moment you walk through our doors.
+              IVF Centre branch. Our state-of-the-art facilities are thoughtfully designed to
+              provide you with the utmost care and comfort from the moment you walk through our
+              doors.
             </p>
           </div>
           <div className='group rounded p-5 hover:bg-purple-50 md:p-2 lg:p-5 lg:transition lg:duration-300'>
@@ -32,13 +33,13 @@ const Steps = () => {
                 2
               </span>
               <p className='font-lexend text-base text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
-                Consult the doctor 🌟
+                Schedule a consultation with a fertility specialist 🩺
               </p>
             </div>
             <p className='text-sm text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
-              Meet our experienced and compassionate fertility experts who are dedicated to
-              understanding your unique needs. Our doctors will guide you through personalized
-              fertility solutions, ensuring you receive the care that suits your individual journey.
+              Meet our experienced and compassionate fertility specialists, committed to
+              understanding your unique needs. Our fertility specialists are available to listen,
+              understand, and support your unique path to parenthood.
             </p>
           </div>
           <div className='group rounded p-5 hover:bg-pink-50 md:p-2 lg:p-5 lg:transition lg:duration-300'>
@@ -47,14 +48,14 @@ const Steps = () => {
                 3
               </span>
               <p className='font-lexend text-base text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
-                Speak to the financial counsellor 💬
+                Speak to the financial counsellor 🤝
               </p>
             </div>
             <p className='text-sm text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
               Navigating the financial aspects of fertility treatment can be stress-free with
-              GarbhaGudi. Our dedicated financial counsellors are here to assist you, offering
-              transparent and tailored solutions to make your path to parenthood as smooth as
-              possible.
+              GarbhaGudi IVF Centre. Our dedicated financial counsellors are here to assist you,
+              offering transparent and personalized solutions to make your journey to parenthood as
+              smooth as possible
             </p>
           </div>
           <div className='group rounded p-5 hover:bg-yellow-50 md:p-2 lg:p-5 lg:transition lg:duration-300'>
@@ -63,13 +64,14 @@ const Steps = () => {
                 4
               </span>
               <p className='font-lexend text-base text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
-                Sit back and relax 🌈
+                Sit back and relax 🤰
               </p>
             </div>
             <p className='text-sm text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
-              Once you've taken the initial steps, it's time to sit back and relax. Trust in
-              GarbhaGudi's expertise to handle the rest. Our team is committed to providing you with
-              unparalleled support, allowing you to focus on the excitement of building your family.
+              Once you've taken the initial step, it's time to sit back and relax. Trust the
+              expertise of the GarbhaGudi IVF Centre team to handle the rest. We're committed to
+              providing you with unparalleled support, allowing you to focus on the excitement of
+              building your family
             </p>
           </div>
         </div>
