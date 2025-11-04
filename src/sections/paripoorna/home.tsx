@@ -78,7 +78,9 @@ const Home = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2'>
           <div className='flex flex-col items-start justify-center px-3'>
             <div className='py-8 font-heading text-2xl font-bold text-gg-500 dark:text-gg-400'>
-              &quot;Big Savings, Get Flat ₹1,11,111* OFF on your IVF Treatments&quot;
+              &quot;Big Savings, Get Flat{' '}
+              <span className='text-purple-900 dark:text-purple-200'>₹1,11,111* OFF</span> on your
+              IVF Treatments&quot;
               <div className='block text-right text-xs text-gray-800 dark:text-gray-200'>
                 *Terms and conditions apply
               </div>
