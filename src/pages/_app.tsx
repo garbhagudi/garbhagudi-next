@@ -143,7 +143,7 @@ function MyApp({ Component, pageProps }) {
         )}
       </ThemeProvider>
       <SpeedInsights />
-      {isParipoornaPage && isMobile && <FloatRequestCallBack />}
+      {!isParipoornaPage && <FloatRequestCallBack />}
       {!iuiTreatmentPage && <FloatWhatsApp />}
       <FloatPhone />
     </RootLayout>
