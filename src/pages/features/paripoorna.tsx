@@ -8,7 +8,7 @@ const Steps = dynamic(() => import('sections/paripoorna/steps'), { ssr: false })
 const TermsConditions = dynamic(() => import('sections/paripoorna/tandc'), { ssr: false });
 const Paripoorna = () => {
   return (
-    <div>
+    <div className='text-justify'>
       <Head>
         {/* Primary Tags */}
         <link
