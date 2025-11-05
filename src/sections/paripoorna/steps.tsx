@@ -6,7 +6,7 @@ const Steps = () => {
       className='mx-auto px-4 pt-12 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-7xl lg:px-8 lg:pt-16'
       id='how-to'
     >
-      <h3 className='mb-12 text-center font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 lg:text-4xl'>
+      <h3 className='mb-12 text-center font-lexend text-3xl font-bold text-gray-800 dark:text-gray-200 lg:text-4xl'>
         How to Avail the PARIPOORNA Benefit
       </h3>
       <div className='flex flex-col items-center justify-center gap-3 lg:flex-row'>

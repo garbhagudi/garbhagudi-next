@@ -1,10 +1,10 @@
 const TermsConditions = () => {
   return (
     <div className='mx-auto px-4 pt-12 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-7xl lg:px-8 lg:pt-16'>
-      <h3 className='pb-12 text-center font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 lg:text-4xl'>
+      <h3 className='pb-12 text-center font-lexend text-3xl font-bold text-gray-800 dark:text-gray-200 lg:text-4xl'>
         Terms and Conditions
       </h3>
-      <div className='pb-8 font-lexend text-base text-gray-800 dark:text-gray-200'>
+      <div className='pb-4 font-lexend text-base text-gray-800 dark:text-gray-200'>
         The GarbhaGnan Foundation is one of the foremost foundations in the country that offers
         specialized and the latest healthcare for couples and women. With growing rates of
         infertility across the globe due to various reasons, the GarbhaGnan Foundation remains

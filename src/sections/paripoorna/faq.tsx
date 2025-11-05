@@ -4,8 +4,8 @@ import AccordionLayout from '../Faq/FaqLayout';
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState<string | number>(1);
   return (
-    <div className='mx-auto px-4 pt-12 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-7xl lg:px-8 lg:pt-16'>
-      <h3 className='text 3xl pb-12 text-center font-heading font-bold text-gray-800 dark:text-gray-200 lg:text-4xl'>
+    <div className='mx-auto px-4 pt-12 font-lexend sm:max-w-xl md:max-w-full md:px-24 lg:max-w-7xl lg:px-8 lg:pt-16'>
+      <h3 className='text 3xl pb-12 text-center font-bold text-gray-800 dark:text-gray-200 lg:text-4xl'>
         Frequently Asked Questions
       </h3>
       {Data.map((items) => (
@@ -32,7 +32,7 @@ const Data = [
     contents: (
       <div>
         To register for the PARIPOORNA, please visit our branches for fertility specialist
-        consultation or contact our GarbhaGudi Care support team on 9108 9108 22. We’ll guide you
+        consultation or contact our GarbhaGudi Care support team on 9108 9108 32. We’ll guide you
         through the steps and help you complete the process smoothly.
       </div>
     ),

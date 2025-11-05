@@ -23,7 +23,7 @@ const PriceSlash: React.FC<PriceSlashProps> = ({ originalPrice, slashedPrice }) 
     <div className='flex flex-col items-start py-8'>
       <div className='flex items-center space-x-4'>
         <div className='font-lexend text-3xl text-gray-600 dark:text-gray-300'>
-          <span className='font-heading font-bold line-through'>
+          <span className='font-lexend font-bold line-through'>
             ₹{formatNumberWithCommas(originalPrice)}
           </span>{' '}
           IVF Package
@@ -31,7 +31,7 @@ const PriceSlash: React.FC<PriceSlashProps> = ({ originalPrice, slashedPrice }) 
       </div>
       <div className='mt-5 flex items-center font-lexend text-3xl text-gg-500 dark:text-gg-400'>
         Now at &nbsp;
-        <span className='font-heading font-bold'>₹{formatNumberWithCommas(slashedPrice)}</span>
+        <span className='font-lexend font-bold'>₹{formatNumberWithCommas(slashedPrice)}</span>
         <div className='ml-2 text-sm text-green-600 dark:text-green-500'>
           ({calculateDiscountPercentage()}% off)
         </div>
@@ -70,20 +70,17 @@ const Home = () => {
   return (
     <div>
       <div className='mx-auto max-w-7xl'>
-        <div className='py-12 text-center font-heading text-4xl font-bold text-gg-600 lg:py-24 lg:text-5xl'>
+        <div className='py-12 text-center font-lexend text-4xl font-bold text-gg-600 lg:py-24 lg:text-5xl'>
           <h1 className='mx-auto max-w-lg rounded-md py-2 dark:bg-gray-200 dark:bg-opacity-80'>
             Paripoorna
           </h1>
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
           <div className='flex flex-col items-start justify-center px-3'>
-            <div className='py-8 font-heading text-2xl font-bold text-gg-500 dark:text-gg-400'>
+            <div className='py-8 font-lexend text-2xl font-bold text-gg-500 dark:text-gg-400'>
               &quot;Big Savings, Get Flat{' '}
               <span className='text-purple-900 dark:text-purple-200'>₹1,11,111* OFF</span> on your
               IVF Treatments&quot;
-              <div className='block text-right text-xs text-gray-800 dark:text-gray-200'>
-                *Terms and conditions apply
-              </div>
             </div>
 
             <div className='font-lexend text-lg text-gray-800 dark:text-gray-200'>
@@ -98,7 +95,7 @@ const Home = () => {
               flat <span className='font-bold underline'>₹1,11,111/-</span> off on your IVF cycle
               cost. Visit the nearest GarbhaGudi IVF Centre to avail the opportunity and take the
               first step in your journey towards completeness.
-              <div className='mt-10 flex flex-col items-start space-x-5 space-y-3 md:items-center lg:flex-row lg:space-y-0'>
+              <div className='mt-10 flex flex-col items-start space-x-0 space-y-3 md:items-center lg:flex-row lg:space-x-5 lg:space-y-0'>
                 <div className='rounded-xl bg-gg-500 px-3 py-2 font-lexend text-white dark:bg-gg-600'>
                   <WatchVideo />
                 </div>
@@ -175,7 +172,7 @@ const WatchVideo = () => {
                 <DialogPanel className='w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
                   <DialogTitle
                     as='h3'
-                    className='text-center font-heading text-2xl font-bold leading-6 text-gray-900'
+                    className='text-center font-lexend text-2xl font-bold leading-6 text-gray-900'
                   >
                     Paripoorna Launch
                   </DialogTitle>
