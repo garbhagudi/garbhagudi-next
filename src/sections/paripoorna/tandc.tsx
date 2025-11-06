@@ -10,6 +10,7 @@ const TermsConditions = () => {
         infertility across the globe due to various reasons, the GarbhaGnan Foundation remains
         steadfast in helping couples experience the joy of parenthood and the bliss of family life.
         <br />
+        <br />
         In its pursuit of rendering service to couples looking for progeny, Garbhagnan Foundation
         has decided to offer <strong> "PARIPOORNA 2025"</strong>, where the discount offered by the
         GarbhaGudi IVF Center is being borne by GarbhaGnan Foundation as a part of its CSR activity.

@@ -96,18 +96,27 @@ const Home = () => {
               cost. Visit the nearest GarbhaGudi IVF Centre to avail the opportunity and take the
               first step in your journey towards completeness.
               <div className='mt-10 flex flex-col items-start space-x-0 space-y-3 md:items-center lg:flex-row lg:space-x-5 lg:space-y-0'>
-                <div className='rounded-xl bg-gg-500 px-3 py-2 font-lexend text-white dark:bg-gg-600'>
-                  <WatchVideo />
-                </div>
-                <div className='rounded-xl bg-purple-700 px-3 py-2 font-lexend text-white dark:bg-purple-800'>
+                <div className='min-w-fit rounded-xl bg-purple-700 px-3 py-2 font-lexend text-white dark:bg-purple-800'>
                   <Link href='/contact/enquiry?pageVisit=/features/paripoorna'>
                     <div>Book an Appointment</div>
+                  </Link>
+                </div>
+                <div className='min-w-fit cursor-pointer rounded-xl border border-gg-500 px-3 py-2 font-lexend text-gg-500 hover:border-gg-600 hover:bg-gg-500 hover:text-white dark:hover:bg-gg-600'>
+                  <Link href='tel:+919108910832' className='flex items-center gap-2'>
+                    <span>Call us: </span>
+                    <span>9108 9108 32</span>
+                  </Link>
+                </div>
+                <div className='min-w-fit cursor-pointer rounded-xl border border-gg-500 px-3 py-2 font-lexend text-gg-500 hover:border-gg-600 hover:bg-gg-500 hover:text-white dark:hover:bg-gg-600'>
+                  <Link href='tel:+918880000909' className='flex items-center gap-2'>
+                    <span>Call us: </span>
+                    <span>8880 0009 09</span>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className='flex items-center justify-center lg:ml-10'>
+          <div className='flex flex-col items-center justify-center gap-5 lg:ml-10'>
             <Image
               src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1731247437/paripoorna/Paripoorna_English_tfrujt.webp'
               alt='pp logo'
@@ -116,6 +125,14 @@ const Home = () => {
               className='mx-auto aspect-square scale-90 lg:scale-105'
               priority={true}
             />
+            <div className='aspect-[9/16] w-full max-w-[315px] overflow-hidden rounded-lg'>
+              <LiteYouTubeEmbed
+                id='v1mtK461E-w'
+                title='YouTube Shorts | Example'
+                poster='maxresdefault'
+                webp={true}
+              />
+            </div>
           </div>
         </div>
       </div>
