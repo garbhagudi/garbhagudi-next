@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import { useEffect } from 'react';
 const LiteYouTubeEmbed = dynamic(() => import('react-lite-youtube-embed'), { ssr: false });
 interface PriceSlashProps {
   originalPrice: number;
