@@ -123,7 +123,7 @@ const Home = () => {
               className='mx-auto aspect-square scale-90 lg:scale-105'
               priority={true}
             />
-            <div className='relative aspect-[9/16] min-h-full w-full max-w-[380px] overflow-hidden rounded-lg'>
+            <div className='relative aspect-[9/16] w-full max-w-[380px] overflow-hidden rounded-lg'>
               <LiteYouTubeEmbed
                 id='v1mtK461E-w'
                 title='YouTube Shorts | Example'
@@ -135,7 +135,7 @@ const Home = () => {
         </div>
       </div>
       <style jsx>{`
-        .yt-embed-container :global(.yt-lite) {
+        .yt-lite {
           --aspect-ratio: 200% !important;
         }
       `}</style>
