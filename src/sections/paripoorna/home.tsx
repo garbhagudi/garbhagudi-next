@@ -105,12 +105,6 @@ const Home = () => {
                     <span>9108 9108 32</span>
                   </Link>
                 </div>
-                <div className='min-w-fit cursor-pointer rounded-xl border border-gg-500 px-3 py-2 font-lexend text-gg-500 hover:border-gg-600 hover:bg-gg-500 hover:text-white dark:hover:bg-gg-600'>
-                  <Link href='tel:+918880000909' className='flex items-center gap-2'>
-                    <span>Call us: </span>
-                    <span>888 000 0909</span>
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
