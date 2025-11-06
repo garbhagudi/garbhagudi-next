@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import { useEffect } from 'react';
 const LiteYouTubeEmbed = dynamic(() => import('react-lite-youtube-embed'), { ssr: false });
 interface PriceSlashProps {
   originalPrice: number;
@@ -65,6 +66,12 @@ const PriceSlash: React.FC<PriceSlashProps> = ({ originalPrice, slashedPrice }) 
 };
 
 const Home = () => {
+  useEffect(() => {
+    const element = document.querySelector('.yt-lite') as HTMLElement;
+    if (element) {
+      element.style.setProperty('--aspect-ratio', '200%');
+    }
+  }, []);
   return (
     <div>
       <div className='mx-auto max-w-7xl'>
@@ -134,11 +141,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <style jsx>{`
-        .yt-lite {
-          --aspect-ratio: 200% !important;
-        }
-      `}</style>
     </div>
   );
 };
