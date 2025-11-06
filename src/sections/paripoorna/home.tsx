@@ -66,12 +66,6 @@ const PriceSlash: React.FC<PriceSlashProps> = ({ originalPrice, slashedPrice }) 
 };
 
 const Home = () => {
-  useEffect(() => {
-    const element = document.querySelector('.yt-lite') as HTMLElement;
-    if (element) {
-      element.style.setProperty('--aspect-ratio', '200%');
-    }
-  }, []);
   return (
     <div>
       <div className='mx-auto max-w-7xl'>
@@ -130,17 +124,25 @@ const Home = () => {
               className='mx-auto aspect-square scale-90 lg:scale-105'
               priority={true}
             />
-            <div className='relative aspect-[9/16] w-full max-w-[380px] overflow-hidden rounded-lg'>
+            <div className='relative aspect-[9/16] w-full max-w-[400px] overflow-hidden rounded-lg'>
               <LiteYouTubeEmbed
                 id='v1mtK461E-w'
                 title='YouTube Shorts | Example'
                 poster='maxresdefault'
                 webp={true}
+                wrapperClass='lty-playbtn yt-lite'
               />
             </div>
           </div>
         </div>
       </div>
+      <style>
+        {`
+          .lty-playbtn {
+            --aspect-ratio: 200% !important;
+          }
+        `}
+      </style>
     </div>
   );
 };
