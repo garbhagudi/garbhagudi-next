@@ -135,8 +135,8 @@ const Home = () => {
         </div>
       </div>
       <style jsx>{`
-        .yt-lite {
-          --aspect-ratio: 200%;
+        .yt-embed-container :global(.yt-lite) {
+          --aspect-ratio: 200% !important;
         }
       `}</style>
     </div>
