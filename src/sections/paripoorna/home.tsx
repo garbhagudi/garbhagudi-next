@@ -34,7 +34,7 @@ const PriceSlash: React.FC<PriceSlashProps> = ({ originalPrice, slashedPrice }) 
           ({calculateDiscountPercentage()}% off)
         </div>
       </div>
-      <div className='mt-5 text-sm'>
+      <div className='mt-5'>
         What’s included*:
         <ul className='list-inside list-disc'>
           <li>An expert fertility specialist consults and scans during stimulation.</li>
@@ -123,7 +123,7 @@ const Home = () => {
               className='mx-auto aspect-square scale-90 lg:scale-105'
               priority={true}
             />
-            <div className='aspect-[9/16] w-full max-w-[315px] overflow-hidden rounded-lg'>
+            <div className='relative aspect-[9/16] min-h-full w-full max-w-[380px] overflow-hidden rounded-lg'>
               <LiteYouTubeEmbed
                 id='v1mtK461E-w'
                 title='YouTube Shorts | Example'
@@ -134,6 +134,11 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .yt-lite {
+          --aspect-ratio: 200%;
+        }
+      `}</style>
     </div>
   );
 };
