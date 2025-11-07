@@ -32,7 +32,7 @@ const Steps = () => {
                 2
               </span>
               <p className='font-lexend text-base text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
-                Schedule a consultation with a fertility specialist 🩺
+                Schedule a consultation with a fertility specialist 👩‍⚕️
               </p>
             </div>
             <p className='text-sm text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
@@ -47,7 +47,7 @@ const Steps = () => {
                 3
               </span>
               <p className='font-lexend text-base text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
-                Speak to the financial counsellor 🤝
+                Speak to the financial counsellor 🧑‍💼
               </p>
             </div>
             <p className='text-sm text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
@@ -63,7 +63,7 @@ const Steps = () => {
                 4
               </span>
               <p className='font-lexend text-base text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
-                Sit back and relax 🤰
+                Sit back and relax 😌
               </p>
             </div>
             <p className='text-sm text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-800'>
