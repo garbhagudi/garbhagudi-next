@@ -9,7 +9,7 @@ const Banner = () => {
     <div className='bg-white pb-8 dark:bg-gray-800 sm:pb-12 lg:pb-12'>
       <div className='overflow-hidden pt-8 font-content sm:pt-12 lg:relative lg:py-16'>
         <div className='block sm:mx-auto sm:hidden sm:max-w-3xl sm:px-6'>
-          <div className='py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
+          <div className='pt-8 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
             <div className='relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12'>
               <Image
                 className='h-[380] w-[380] rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
@@ -19,7 +19,6 @@ const Banner = () => {
                 height={380}
                 priority={true}
               />
-              f
             </div>
           </div>
         </div>
@@ -76,7 +75,7 @@ const Banner = () => {
                     <span className=''> across all our branches</span>
                   </div>
                 </div>
-                <div className='glow mt-6 w-72 px-3 py-2 text-center hover:shadow-sm hover:shadow-brandPink dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gg-500'>
+                <div className='glow my-6 w-72 px-3 py-2 text-center hover:shadow-sm hover:shadow-brandPink dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gg-500'>
                   <span></span>
                   <span></span>
                   <span></span>
@@ -142,7 +141,7 @@ const Banner = () => {
             Get a flat ₹1,11,111/- discount on your IVF treatment with PARIPOORNA at GarbhaGudi IVF
             Centre.
           </div>
-          <span className='w-full text-center font-lexend'>
+          <span className='w-full text-left font-lexend md:text-center'>
             Celebrate the season of parenthood and make your dream of a family come true.
           </span>
         </div>
