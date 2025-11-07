@@ -34,7 +34,7 @@ const PriceSlash: React.FC<PriceSlashProps> = ({ originalPrice, slashedPrice }) 
           ({calculateDiscountPercentage()}% off)
         </div>
       </div>
-      <div className='mt-5'>
+      <div className='mt-5 text-left'>
         What’s included*:
         <ul className='list-inside list-disc'>
           <li>An expert fertility specialist consults and scans during stimulation.</li>
