@@ -7,13 +7,13 @@ const Banner = () => {
   const path = usePathname();
   return (
     <div className='bg-white pb-8 dark:bg-gray-800 sm:pb-12 lg:pb-12'>
-      <div className='overflow-hidden pt-8 font-content sm:pt-12 lg:relative lg:py-36'>
+      <div className='overflow-hidden pt-8 font-content sm:pt-12 lg:relative lg:py-20'>
         <div className='block sm:mx-auto sm:hidden sm:max-w-3xl sm:px-6'>
           <div className='py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
             <div className='relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12'>
               <Image
                 className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742808594/paripoorna/IVF_Compressed_kmekqi_bewqzl.webp'
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497774/paripoorna_Landing_Page_Banner-03_l6g5kq.webp'
                 alt='happy couple with a baby'
                 width={590}
                 height={460}
