@@ -119,7 +119,7 @@ const Home = () => {
             />
             <div className='relative aspect-[9/16] w-full max-w-[400px] overflow-hidden rounded-lg'>
               <LiteYouTubeEmbed
-                id='v1mtK461E-w'
+                id='TH68dBLfq2I'
                 title='YouTube Shorts | Example'
                 poster='maxresdefault'
                 webp={true}
