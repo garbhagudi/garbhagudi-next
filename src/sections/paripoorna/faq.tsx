@@ -28,12 +28,12 @@ export default FAQ;
 const Data = [
   {
     id: 1,
-    title: 'What is the procedure to register for PARIPOORNA offer?',
+    title: 'What is the procedure to register for PARIPOORNA?',
     contents: (
       <div>
         To register for the PARIPOORNA, please visit our branches for fertility specialist
-        consultation or contact our GarbhaGudi Care support team on 9108 9108 32. We’ll guide you
-        through the steps and help you complete the process smoothly.
+        consultation or contact our GarbhaGudi Care support team on <br /> 9108 9108 32. We’ll guide
+        you through the steps and help you complete the process smoothly.
       </div>
     ),
   },
