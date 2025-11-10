@@ -107,7 +107,7 @@ const Home = () => {
                 first step in your journey towards completeness.
                 <div className='mt-10 flex flex-col items-start space-x-0 space-y-3 md:items-center lg:flex-row lg:space-x-5 lg:space-y-0'>
                   <div
-                    className='min-w-fit rounded-xl bg-purple-700 px-3 py-2 font-lexend text-white dark:bg-purple-800'
+                    className='min-w-fit cursor-pointer rounded-xl bg-purple-700 px-3 py-2 font-lexend text-white hover:bg-purple-800 dark:bg-purple-800 dark:hover:bg-purple-700'
                     onClick={open}
                   >
                     <div>Book an Appointment</div>
