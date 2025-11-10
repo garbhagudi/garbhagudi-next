@@ -2,8 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import Form from 'sections/LandingPages/Performant/form';
-import { CloseButton, Dialog, DialogPanel } from '@headlessui/react';
-import { IoIosCloseCircleOutline } from 'react-icons/io';
+import { Dialog, DialogPanel } from '@headlessui/react';
 import { useState } from 'react';
 const LiteYouTubeEmbed = dynamic(() => import('react-lite-youtube-embed'), { ssr: false });
 interface PriceSlashProps {
