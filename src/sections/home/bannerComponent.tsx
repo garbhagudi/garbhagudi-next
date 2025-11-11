@@ -13,6 +13,7 @@ interface bannerProps {
       image: {
         url: string;
       };
+      imageUrl: string;
     },
   ];
 }
@@ -56,7 +57,7 @@ const BannerComponent = (bannerData: bannerProps) => {
           bannerData.banners.map((banner) => (
             <Link href={banner?.url || '#'} target='_blank' rel='noreferrer' key={banner.id}>
               <Image
-                src={banner?.image?.url}
+                src={banner?.imageUrl}
                 alt={banner?.title}
                 width={1920}
                 height={1080}
