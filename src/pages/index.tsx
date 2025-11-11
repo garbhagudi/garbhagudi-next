@@ -197,6 +197,7 @@ export const getStaticProps = async () => {
           image {
             url
           }
+          imageUrl
         }
         blogs(first: 3, orderBy: publishedOn_DESC) {
           id
