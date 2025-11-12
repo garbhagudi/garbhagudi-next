@@ -10,9 +10,7 @@ interface Article {
     icon: {
       url: string;
     };
-    image: {
-      url: string;
-    };
+    logoUrl: string;
     slug: string;
     id: string;
     title: string;
@@ -77,7 +75,10 @@ const IndexPage = ({ articles }: Article) => {
                 <div className='w-1/3'>
                   <Image
                     className='h-24 w-24 rounded-lg object-cover transition-all duration-300 group-hover:grayscale-0 dark:grayscale'
-                    src={item?.icon?.url || item?.image?.url}
+                    src={
+                      item?.logoUrl ||
+                      'https://res.cloudinary.com/decyl0nmm/image/upload/v1762938146/Fertility_Consultant_jwhf1x.svg'
+                    }
                     alt={item?.title}
                     width={100}
                     height={100}
@@ -106,9 +107,7 @@ export const getStaticProps = async () => {
           icon {
             url
           }
-          image {
-            url
-          }
+          logoUrl
           slug
           id
           title

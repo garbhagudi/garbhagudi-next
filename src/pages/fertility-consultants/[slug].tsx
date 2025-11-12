@@ -24,6 +24,7 @@ export const getStaticProps = async ({ params }) => {
           image {
             url
           }
+          imageUrl
           content {
             raw
             text
@@ -93,6 +94,7 @@ interface BlogProps {
     image: {
       url: string;
     };
+    imageUrl: string;
     content: {
       text: string;
       raw: {
@@ -116,7 +118,7 @@ const Blog = ({ article }: BlogProps) => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='preload' href={article?.image.url} as='image' />
+        <link rel='preload' href={article?.imageUrl} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={`${article?.metaTitle}`} />
@@ -130,7 +132,7 @@ const Blog = ({ article }: BlogProps) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta property='og:description' content={article?.metaDescription} />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content={article?.image.url} />
+        <meta property='og:image' content={article?.imageUrl} />
 
         {/* Twitter*/}
 
@@ -138,7 +140,7 @@ const Blog = ({ article }: BlogProps) => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={`${article?.metaTitle} | GarbhaGudi IVF Centre`} />
         <meta name='twitter:description' content={article?.metaDescription} />
-        <meta name='twitter:image' content={article?.image.url} />
+        <meta name='twitter:image' content={article?.imageUrl} />
       </Head>
       <div className='relative overflow-hidden bg-white py-16 dark:bg-gray-800'>
         <div className='hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full'>
@@ -238,7 +240,10 @@ const Blog = ({ article }: BlogProps) => {
             </h1>
             <Image
               className='mb-5 mt-10 w-full rounded-lg'
-              src={article?.image.url}
+              src={
+                article?.imageUrl ||
+                'https://res.cloudinary.com/decyl0nmm/image/upload/v1762938523/Best_IVF_Center_GarbhaGudi-1_shyb2u.webp'
+              }
               alt={article?.imageAlt}
               width={800}
               height={600}

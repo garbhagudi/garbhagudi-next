@@ -16,6 +16,7 @@ export const getStaticProps = async () => {
           image {
             url
           }
+          imageUrl
         }
       }
     `,
@@ -37,6 +38,7 @@ interface Award {
     image: {
       url: string;
     };
+    imageUrl: string;
   }[];
 }
 
@@ -114,7 +116,7 @@ const Awards = ({ award }: Award) => {
                   <div className='flex-shrink-0'>
                     <Image
                       className='h-38 w-full cursor-pointer rounded-t-lg object-contain'
-                      src={item?.image?.url}
+                      src={item?.imageUrl}
                       alt={item?.title}
                       width={360}
                       height={180}

@@ -127,6 +127,7 @@ export const getStaticProps = async ({ params }) => {
             image {
               url
             }
+            imageUrl
           }
         }
       }

@@ -19,6 +19,7 @@ export const getStaticProps = async ({ params }) => {
           image {
             url
           }
+          imageUrl
           content {
             raw
             text
@@ -73,7 +74,7 @@ const Diagnosis = ({ diagnosis }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='preload' href={diagnosis?.image.url} as='image' />
+        <link rel='preload' href={diagnosis?.imageUrl} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='robots' content='noindex, nofollow' />
         <title>{title}</title>
@@ -87,7 +88,7 @@ const Diagnosis = ({ diagnosis }) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta property='og:description' content={diagnosis?.content?.text.slice(0, 160)} />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content={diagnosis?.image.url} />
+        <meta property='og:image' content={diagnosis?.imageUrl} />
 
         {/* Twitter*/}
 
@@ -95,7 +96,7 @@ const Diagnosis = ({ diagnosis }) => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={`${diagnosis?.title} | GarbhaGudi IVF Centre`} />
         <meta name='twitter:description' content={diagnosis?.content?.text.slice(0, 160)} />
-        <meta name='twitter:image' content={diagnosis?.image.url} />
+        <meta name='twitter:image' content={diagnosis?.imageUrl} />
       </Head>
       <BreadCrumbs
         link1='/resources/diagnosis'
@@ -206,7 +207,7 @@ const Diagnosis = ({ diagnosis }) => {
             <figure>
               <Image
                 className='mb-5 mt-10 w-full rounded-lg'
-                src={diagnosis?.image?.url}
+                src={diagnosis?.imageUrl}
                 alt={diagnosis?.title}
                 width={800}
                 height={500}
@@ -227,7 +228,7 @@ const Diagnosis = ({ diagnosis }) => {
               />
             </div>
             <div>
-              <Share pinmedia={diagnosis?.image?.url} />
+              <Share pinmedia={diagnosis?.imageUrl} />
             </div>
           </div>
         </div>
