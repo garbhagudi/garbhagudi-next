@@ -38,6 +38,7 @@ export const getStaticProps = async ({ params }) => {
           image {
             url
           }
+          imageUrl
           qualification
           designation
           medicalRegNo
@@ -154,7 +155,7 @@ const Doctor = ({ doctor }) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta property='og:description' content={doctor?.bio?.text.slice(0, 160)} />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content={doctor?.image.url} />
+        <meta property='og:image' content={doctor?.imageUrl} />
 
         {/* Twitter*/}
 
@@ -162,7 +163,7 @@ const Doctor = ({ doctor }) => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={doctor?.metaTitle || defaultMetaTile} />
         <meta name='twitter:description' content={doctor?.bio?.text.slice(0, 160)} />
-        <meta name='twitter:image' content={doctor?.image.url} />
+        <meta name='twitter:image' content={doctor?.imageUrl} />
       </Head>
       <BreadCrumbs
         text1={'Our Fertility Experts'}
@@ -219,7 +220,7 @@ const Doctor = ({ doctor }) => {
                         width={340}
                         height={340}
                         alt={doctor?.name}
-                        src={doctor?.image?.url}
+                        src={doctor?.imageUrl}
                         className='-m-16 -ml-20 -mt-44 mb-4 h-auto max-w-xs rounded-full border-none bg-gray-300/30 align-middle shadow-xl dark:bg-gray-600 lg:-ml-16'
                         priority={true}
                       />

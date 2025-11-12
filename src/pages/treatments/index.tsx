@@ -14,6 +14,7 @@ interface TreatmentProps {
     icon: {
       url: string;
     };
+    iconUrl: string;
     slug: string;
   }[];
 }
@@ -109,7 +110,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                               <div className='w-1/3'>
                                 <Image
                                   className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
-                                  src={item?.icon?.url}
+                                  src={item?.iconUrl}
                                   alt={item?.title}
                                   width={100}
                                   height={100}
@@ -182,7 +183,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                               <div className='w-1/3'>
                                 <Image
                                   className='h-16 w-16 rounded-full object-cover'
-                                  src={item?.icon?.url}
+                                  src={item?.iconUrl}
                                   alt={item?.title}
                                   width={100}
                                   height={100}
@@ -211,7 +212,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                               <div className='w-1/3'>
                                 <Image
                                   className='h-16 w-16 rounded-full object-cover'
-                                  src={item?.icon?.url}
+                                  src={item?.iconUrl}
                                   alt={item?.title}
                                   width={100}
                                   height={100}
@@ -250,6 +251,7 @@ export const getStaticProps = async () => {
           icon {
             url
           }
+          iconUrl
           slug
         }
       }

@@ -22,6 +22,7 @@ export const getStaticProps = async ({ params }) => {
             image {
               url
             }
+            imageUrl
             bio {
               raw
               text
@@ -126,7 +127,7 @@ const ExecutiveTeam = ({ director }) => {
               <div className='text-center sm:w-1/3 sm:py-8 sm:pr-8'>
                 <div className='inline-flex w-72 items-center justify-center rounded-full md:w-64'>
                   <Image
-                    src={director?.image.url}
+                    src={director?.imageUrl}
                     alt={director?.name}
                     className='rounded-full'
                     width={500}
@@ -165,7 +166,7 @@ const ExecutiveTeam = ({ director }) => {
               </div>
             </div>
           </div>
-          <Share pinmedia={director.image.url} />
+          <Share pinmedia={director.imageUrl} />
         </div>
       </section>
     </div>

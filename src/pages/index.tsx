@@ -185,6 +185,7 @@ export const getStaticProps = async () => {
           image {
             url
           }
+          imageUrl
           imageAlt
           medicalRegNo
           id
@@ -214,6 +215,7 @@ export const getStaticProps = async () => {
             image {
               url
             }
+            imageUrl
           }
         }
       }

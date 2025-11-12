@@ -25,6 +25,7 @@ export const getStaticProps = async ({ params }) => {
           image {
             url
           }
+          imageUrl
           content {
             raw
             text
@@ -93,6 +94,7 @@ interface BlogProps {
     image: {
       url: string;
     };
+    imageUrl: string;
     content: {
       text: string;
       raw: {
@@ -238,7 +240,10 @@ const Blog = ({ article }: BlogProps) => {
             </h1>
             <Image
               className='mb-5 mt-10 w-full rounded-lg'
-              src={article?.image.url}
+              src={
+                article?.imageUrl ||
+                'https://res.cloudinary.com/decyl0nmm/image/upload/v1762938523/Best_IVF_Center_GarbhaGudi-1_shyb2u.webp'
+              }
               alt={article?.imageAlt}
               width={800}
               height={500}

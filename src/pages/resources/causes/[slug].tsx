@@ -20,6 +20,7 @@ export const getStaticProps = async ({ params }) => {
           image {
             url
           }
+          imageUrl
           content {
             raw
             text
@@ -73,7 +74,7 @@ const Blog = ({ cause }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='preload' href={cause?.image.url} as='image' />
+        <link rel='preload' href={cause?.imageUrl} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='robots' content='noindex, nofollow' />
         <title>{title}</title>
@@ -87,7 +88,7 @@ const Blog = ({ cause }) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta property='og:description' content={cause?.content?.text.slice(0, 160)} />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content={cause?.image.url} />
+        <meta property='og:image' content={cause?.imageUrl} />
 
         {/* Twitter*/}
 
@@ -95,7 +96,7 @@ const Blog = ({ cause }) => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={`${cause?.title} | GarbhaGudi IVF Centre`} />
         <meta name='twitter:description' content={cause?.content?.text.slice(0, 160)} />
-        <meta name='twitter:image' content={cause?.image.url} />
+        <meta name='twitter:image' content={cause?.imageUrl} />
       </Head>
       <BreadCrumbs
         link1='/resources/causes'
@@ -206,7 +207,7 @@ const Blog = ({ cause }) => {
             <figure>
               <Image
                 className='mb-5 mt-10 w-full rounded-lg'
-                src={cause?.image.url}
+                src={cause?.imageUrl}
                 alt={cause?.title}
                 width={800}
                 height={500}
@@ -226,7 +227,7 @@ const Blog = ({ cause }) => {
                 }}
               />
             </div>
-            <Share pinmedia={cause?.image?.url} />
+            <Share pinmedia={cause?.imageUrl} />
           </div>
         </div>
       </div>

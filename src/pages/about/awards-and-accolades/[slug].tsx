@@ -17,6 +17,7 @@ interface AwardProps {
     image: {
       url: string;
     };
+    imageUrl: string;
     doctor: {
       name: string;
     };
@@ -40,6 +41,7 @@ export const getStaticProps = async ({ params }) => {
             image {
               url
             }
+            imageUrl
             content {
               raw
               text
@@ -224,7 +226,7 @@ const AwardPage = ({ award }: AwardProps) => {
               <figure>
                 <Image
                   className='mb-5 mt-10 w-full rounded-lg'
-                  src={award?.image?.url}
+                  src={award?.imageUrl}
                   alt={award?.title}
                   width={500}
                   height={320}

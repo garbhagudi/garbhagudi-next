@@ -28,6 +28,7 @@ export const getStaticProps = async ({ params }) => {
             image {
               url
             }
+            imageUrl
             imageAlt
             content {
               raw
@@ -96,7 +97,7 @@ const Treatment = ({ treatment }) => {
         "@context": "https://schema.org/",
         "@type": "Product",
         "name": "${treatment?.title}",
-        "image": "${treatment?.image?.url}",
+        "image": "${treatment?.imageUrl}",
         "description": "${treatment?.content?.text.slice(0, 160)}",
         "brand": {
           "@type": "Brand",
@@ -119,7 +120,7 @@ const Treatment = ({ treatment }) => {
         "@context": "https://schema.org/",
         "@type": "Service",
         "name": "${treatment?.title}",
-        "image": "${treatment?.image?.url}",
+        "image": "${treatment?.imageUrl}",
         "description": "${treatment?.content?.text.slice(0, 160)}",
         "offers": {
         "@type": "AggregateOffer",
@@ -243,7 +244,7 @@ const Treatment = ({ treatment }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='preload' href={treatment?.image?.url} as='image' />
+        <link rel='preload' href={treatment?.imageUrl} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{`${treatment?.metaTitle || treatment?.title}`}</title>
         <meta name='title' content={`${treatment?.metaTitle || treatment?.title}`} />
@@ -289,7 +290,7 @@ const Treatment = ({ treatment }) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta property='og:description' content={treatment?.content?.text.slice(0, 160)} />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content={treatment?.image?.url} />
+        <meta property='og:image' content={treatment?.imageUrl} />
 
         {/* Twitter*/}
 
@@ -297,7 +298,7 @@ const Treatment = ({ treatment }) => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={`${treatment?.title} | GarbhaGudi IVF Centre`} />
         <meta name='twitter:description' content={treatment?.content?.text.slice(0, 160)} />
-        <meta name='twitter:image' content={treatment?.image?.url} />
+        <meta name='twitter:image' content={treatment?.imageUrl} />
       </Head>
       <BreadCrumbs
         link1='/treatments'
@@ -408,7 +409,7 @@ const Treatment = ({ treatment }) => {
             <figure>
               <Image
                 className='mb-5 mt-10 w-full rounded-lg'
-                src={treatment?.image?.url}
+                src={treatment?.imageUrl}
                 alt={treatment?.imageAlt || treatment?.title}
                 width={800}
                 height={500}
@@ -431,7 +432,7 @@ const Treatment = ({ treatment }) => {
               )}
             </div>
             <div>
-              <Share pinmedia={treatment?.image?.url} />
+              <Share pinmedia={treatment?.imageUrl} />
             </div>
           </div>
         </div>
