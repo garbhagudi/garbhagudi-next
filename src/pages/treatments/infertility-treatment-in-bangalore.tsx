@@ -152,13 +152,13 @@ const InfertilityPage = ({ doctors }) => {
                   imageComponent={
                     <ImageComponent
                       name={items.name}
-                      image={items.image.url}
+                      image={items.imageUrl}
                       designation={items.designation}
                       imageAlt={items.imageAlt}
                     />
                   }
                   activeIndex={activeIndex}
-                  docpic={items.image.url}
+                  docpic={items.imageUrl}
                   name={items.name}
                   bio={items.bio.raw.children}
                   setActiveIndex={setActiveIndex}
@@ -219,6 +219,7 @@ export const getStaticProps = async () => {
           image {
             url
           }
+          imageUrl
           imageAlt
           bio {
             raw
