@@ -74,7 +74,7 @@ const IndexPage = ({ diagnoses }) => {
                   <div className='w-1/3'>
                     <Image
                       className='h-24 w-24 rounded-2xl object-cover transition-all duration-300 group-hover:grayscale-0 dark:grayscale'
-                      src={item.icon.url}
+                      src={item.iconUrl}
                       alt={item.title}
                       width={100}
                       height={100}
@@ -106,6 +106,7 @@ export const getStaticProps = async () => {
           icon {
             url
           }
+          iconUrl
           slug
         }
       }
