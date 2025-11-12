@@ -67,7 +67,7 @@ const Locations = ({ branches }) => {
               <div className='mx-auto flex max-w-sm flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-brandPink'>
                 <div className='overflow-hidden'>
                   <Image
-                    src={items?.branchPicture?.url}
+                    src={items?.branchPictureUrl}
                     alt={items?.title}
                     width={480}
                     height={100}
@@ -97,6 +97,7 @@ export const getStaticProps = async () => {
           branchPicture {
             url
           }
+          branchPictureUrl
           title
           slug
           id
