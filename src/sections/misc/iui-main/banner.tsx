@@ -8,7 +8,7 @@ const Banner = () => {
       <div className='relative grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
         <div className='relative col-span-2'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1744978945/April_Month_Landing_Page_Latest-02_zle4xm.webp'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp'
             width={720}
             height={360}
             alt='Start IVF from as low as 90K'
@@ -17,7 +17,7 @@ const Banner = () => {
             className='hidden h-full w-full md:block'
           />
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1745217384/April_Month_Landing_Page_Latest--02_sa0uzt.webp'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762504289/paripoorna_Landing_Page_Banner-01_wxgq38.webp'
             width={420}
             height={360}
             alt='Start IVF from as low as 90K'
