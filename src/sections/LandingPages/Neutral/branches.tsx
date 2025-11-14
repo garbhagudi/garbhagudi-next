@@ -22,7 +22,7 @@ const Branch = ({ branches }) => {
                   width={480}
                   height={100}
                   loading='lazy'
-                  className='overflow-hidden transition-all duration-500 hover:scale-125'
+                  className='max-h-64 overflow-hidden object-cover object-center transition-all duration-500 hover:scale-125'
                 />
               </div>
               <div className='flex w-full items-center justify-evenly border-t-2 border-gg-500 px-3 py-3 dark:border-gray-600'>
