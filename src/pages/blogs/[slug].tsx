@@ -310,38 +310,40 @@ const Blog = ({ blog }) => {
                   <div onClick={open} className='cursor-pointer font-semibold text-gray-600'>
                     Disclaimer
                   </div>
-                  <div className='flex items-center justify-center'>
-                    <div className='flex-shrink-0'>
-                      <Link href={`/blogs/page/1?author=${blog?.author?.slug}`} passHref>
-                        <div className='mr-3 h-12 w-12 md:mr-5 md:h-16 md:w-16'>
-                          <span className='sr-only'>By: GarbhaGudi IVF Centre</span>
-                          <Image
-                            className='h-full w-full scale-150 rounded-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert'
-                            src={blog?.author?.image?.url}
-                            alt={blog?.author?.imageAlt}
-                            width={50}
-                            height={50}
-                          />
-                        </div>
-                      </Link>
-                    </div>
-                    <div>
-                      <div className='text-base font-medium text-gray-800 dark:text-gray-200'>
-                        {blog?.author?.authorName ? (
-                          <div className='font-lexend'>
-                            Reviewed By : {blog?.author?.authorName}
+                  {blog?.author && (
+                    <div className='flex items-center justify-center'>
+                      <div className='flex-shrink-0'>
+                        <Link href={`/blogs/page/1?author=${blog?.author?.slug}`} passHref>
+                          <div className='mr-3 h-12 w-12 md:mr-5 md:h-16 md:w-16'>
+                            <span className='sr-only'>By: GarbhaGudi IVF Centre</span>
+                            <Image
+                              className='h-full w-full scale-150 rounded-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert'
+                              src={blog?.author?.image?.url}
+                              alt={blog?.author?.imageAlt}
+                              width={50}
+                              height={50}
+                            />
                           </div>
-                        ) : (
-                          <Link href={`/fertility-experts/${blog?.author?.slug}`} passHref>
-                            <div className='font-lexend'>Reviewed By : {blog?.author?.name}</div>
-                          </Link>
-                        )}
+                        </Link>
                       </div>
-                      <div className='flex space-x-1 font-lexend text-sm text-gray-700 dark:text-gray-200'>
-                        <time>Published: {blog?.publishedOn}</time>
+                      <div>
+                        <div className='text-base font-medium text-gray-800 dark:text-gray-200'>
+                          {blog?.author?.authorName ? (
+                            <div className='font-lexend'>
+                              Reviewed By : {blog?.author?.authorName}
+                            </div>
+                          ) : (
+                            <Link href={`/fertility-experts/${blog?.author?.slug}`} passHref>
+                              <div className='font-lexend'>Reviewed By : {blog?.author?.name}</div>
+                            </Link>
+                          )}
+                        </div>
+                        <div className='flex space-x-1 font-lexend text-sm text-gray-700 dark:text-gray-200'>
+                          <time>Published: {blog?.publishedOn}</time>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                 </div>
                 <div className='relative my-8 w-full rounded-lg'>
                   <Image
