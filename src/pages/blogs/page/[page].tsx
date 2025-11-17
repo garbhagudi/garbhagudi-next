@@ -223,79 +223,69 @@ export async function getStaticProps({ params, query }) {
     };
   }
 
-  // Build WHERE object safely
+  // correct union filter for author
   const where = authorSlug
     ? {
-        author: {
-          slug: authorSlug,
-        },
+        OR: [
+          { author: { Author: { slug: authorSlug } } },
+          { author: { Doctor: { slug: authorSlug } } },
+        ],
       }
-    : null; // Hygraph accepts null → means no filter
+    : null;
 
-  const apolloQuery = async ({ limit, offset, where }) => {
-    return apolloClient.query({
-      query: gql`
-        query ($limit: Int!, $offset: Int!, $where: BlogWhereInput) {
-          blogsConnection(orderBy: publishedOn_DESC, first: $limit, skip: $offset, where: $where) {
-            blogs: edges {
-              node {
-                id
-                title
-                publishedOn
+  const QUERY = gql`
+    query ($limit: Int!, $offset: Int!, $where: BlogWhereInput) {
+      blogsConnection(orderBy: publishedOn_DESC, first: $limit, skip: $offset, where: $where) {
+        blogs: edges {
+          node {
+            id
+            title
+            publishedOn
+            slug
+            image {
+              url
+            }
+            author {
+              ... on Author {
+                authorName
                 slug
                 image {
                   url
                 }
-                author {
-                  ... on Author {
-                    image {
-                      url
-                    }
-                    imageAlt
-                    authorName
-                    slug
-                  }
-                  ... on Doctor {
-                    name
-                    image {
-                      url
-                    }
-                    slug
-                    imageAlt
-                  }
+              }
+              ... on Doctor {
+                name
+                slug
+                image {
+                  url
                 }
               }
             }
-            pageInfo {
-              hasNextPage
-              hasPreviousPage
-            }
-            aggregate {
-              count
-            }
-          }
-
-          allBlogs: blogs {
-            title
-            slug
           }
         }
-      `,
-      variables: {
-        limit,
-        offset,
-        where, // passes either null OR { author: { slug } }
-      },
-    });
-  };
+        pageInfo {
+          hasNextPage
+          hasPreviousPage
+        }
+        aggregate {
+          count
+        }
+      }
+      allBlogs: blogs {
+        title
+        slug
+      }
+    }
+  `;
 
-  const { data } = await throttledFetch(apolloQuery, {
-    limit,
-    offset: (page - 1) * limit,
-    where,
-  });
+  const { data } = await throttledFetch(async () =>
+    apolloClient.query({
+      query: QUERY,
+      variables: { limit, offset: (page - 1) * limit, where },
+    })
+  );
 
-  const totalBlogs = data?.blogsConnection?.aggregate?.count || 0;
+  const totalBlogs = data.blogsConnection.aggregate.count;
   const totalPages = Math.ceil(totalBlogs / limit);
 
   if (page > totalPages && totalBlogs > 0) {
