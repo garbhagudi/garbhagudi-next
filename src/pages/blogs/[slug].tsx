@@ -313,10 +313,10 @@ const Blog = ({ blog }) => {
                   <div className='flex items-center justify-center'>
                     <div className='flex-shrink-0'>
                       <Link href={`/blogs/page/1?author=${blog?.author?.slug}`} passHref>
-                        <div className=''>
+                        <div className='mr-3 h-12 w-12 md:mr-5 md:h-16 md:w-16'>
                           <span className='sr-only'>By: GarbhaGudi IVF Centre</span>
                           <Image
-                            className='h-12 w-12 scale-150 rounded-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert md:h-16 md:w-16'
+                            className='h-full w-full scale-150 rounded-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert'
                             src={blog?.author?.image?.url}
                             alt={blog?.author?.imageAlt}
                             width={50}

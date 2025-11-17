@@ -11,15 +11,18 @@ interface postsProps {
       };
     },
   ];
+  slug?: string;
 }
 
-const BlogsSnip = ({ posts }: postsProps) => {
+const BlogsSnip = ({ posts, slug }: postsProps) => {
   return (
-    <div className='bg-white pb-20 pt-16 dark:bg-gray-800 sm:px-6 lg:px-8 lg:pb-20 lg:pt-24'>
+    <div
+      className={`bg-white pb-20 ${slug ? 'pt-10' : 'pt-16 lg:pt-24'} dark:bg-gray-800 sm:px-6 lg:px-8 lg:pb-20`}
+    >
       <div className='relative mx-auto max-w-lg lg:max-w-7xl'>
         <div className='border-b pb-4 dark:border-gray-600'>
           <h2 className='text-center font-heading text-3xl font-extrabold tracking-tight text-gray-800 dark:text-gray-200 sm:text-4xl'>
-            Recent Blogs
+            {slug ? 'Reviewed Blogs' : 'Recent Blogs'}
           </h2>
         </div>
         <div className='mt-6 flex flex-col items-center justify-center pb-6 md:flex-row md:flex-wrap'>
@@ -48,7 +51,7 @@ const BlogsSnip = ({ posts }: postsProps) => {
           ))}
         </div>
         <div className='mx-auto mb-6 mt-6 flex w-32 items-center justify-center rounded-lg border-2 border-gg-500 bg-transparent px-3 py-2 text-center font-content font-bold text-gg-500 duration-300 hover:-translate-y-1 hover:bg-gg-500 hover:text-white hover:shadow-2xl hover:shadow-gg-500 hover:transition-all dark:border-gg-400 dark:text-gg-400 dark:hover:bg-gg-400 dark:hover:text-gray-800'>
-          <Link href='/blogs/page/1'>Read More</Link>
+          <Link href={`/blogs/page/1?author=${slug}`}>Read More</Link>
         </div>
       </div>
     </div>

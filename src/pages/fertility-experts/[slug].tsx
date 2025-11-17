@@ -452,7 +452,7 @@ const Doctor = ({ doctor }) => {
                     )}
                   </div>
                   {doctor?.blogs && doctor?.blogs?.length > 0 && (
-                    <BlogsSnip posts={doctor?.blogs} />
+                    <BlogsSnip posts={doctor?.blogs} slug={doctor?.slug} />
                   )}
                   {doctor?.videoTestimonials?.length > 0 && (
                     <div className='my-5'>
