@@ -7,6 +7,7 @@ import { throttledFetch } from 'lib/throttle';
 import dynamic from 'next/dynamic';
 import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 import { useState } from 'react';
+import Link from 'next/link';
 const Error = dynamic(() => import('next/error'));
 const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
@@ -37,8 +38,23 @@ export const getStaticProps = async ({ params }) => {
             image {
               url
             }
-            doctor {
-              name
+            author {
+              ... on Author {
+                authorName
+                slug
+                image {
+                  url
+                }
+                imageAlt
+              }
+              ... on Doctor {
+                name
+                slug
+                image {
+                  url
+                }
+                imageAlt
+              }
             }
             content {
               raw
@@ -287,14 +303,46 @@ const Blog = ({ blog }) => {
             </div>
             <div className='relative z-10 px-4 sm:px-6 lg:px-8'>
               <div className='mx-auto max-w-7xl'>
-                <h1 className='flex flex-col items-center justify-center gap-2'>
-                  <span className='block text-center font-heading text-2xl font-bold leading-8 tracking-tighter text-gray-800 dark:text-gray-200 sm:text-4xl'>
+                <div className='flex flex-col items-center justify-center gap-2'>
+                  <h1 className='block text-center font-heading text-2xl font-bold leading-8 tracking-tighter text-gray-800 dark:text-gray-200 sm:text-4xl'>
                     {blog?.title}
-                  </span>
+                  </h1>
                   <div onClick={open} className='cursor-pointer font-semibold text-gray-600'>
                     Disclaimer
                   </div>
-                </h1>
+                  <div className='flex items-center justify-center'>
+                    <div className='flex-shrink-0'>
+                      <Link href={`/blogs/page/1`} passHref>
+                        <div className=''>
+                          <span className='sr-only'>By: GarbhaGudi IVF Centre</span>
+                          <Image
+                            className='h-12 w-12 scale-150 rounded-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert md:h-16 md:w-16'
+                            src={blog?.author?.image?.url}
+                            alt={blog?.author?.imageAlt}
+                            width={50}
+                            height={50}
+                          />
+                        </div>
+                      </Link>
+                    </div>
+                    <div>
+                      <div className='text-base font-medium text-gray-800 dark:text-gray-200'>
+                        {blog?.author?.authorName ? (
+                          <div className='font-lexend'>
+                            Reviewed By : {blog?.author?.authorName}
+                          </div>
+                        ) : (
+                          <Link href={`/fertility-experts/${blog?.author?.slug}`} passHref>
+                            <div className='font-lexend'>Reviewed By : {blog?.author?.name}</div>
+                          </Link>
+                        )}
+                      </div>
+                      <div className='flex space-x-1 font-lexend text-sm text-gray-700 dark:text-gray-200'>
+                        <time>Published: {blog?.publishedOn}</time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div className='relative my-8 w-full rounded-lg'>
                   <Image
                     src={blog?.image?.url}
