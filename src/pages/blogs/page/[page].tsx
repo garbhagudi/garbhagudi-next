@@ -223,16 +223,20 @@ export async function getStaticProps({ params, query }) {
     };
   }
 
-  const apolloQuery = async ({ limit, offset, authorSlug }) => {
+  // Build WHERE object safely
+  const where = authorSlug
+    ? {
+        author: {
+          slug: authorSlug,
+        },
+      }
+    : null; // Hygraph accepts null → means no filter
+
+  const apolloQuery = async ({ limit, offset, where }) => {
     return apolloClient.query({
       query: gql`
-        query ($limit: Int!, $offset: Int!, $authorSlug: String) {
-          blogsConnection(
-            orderBy: publishedOn_DESC
-            first: $limit
-            skip: $offset
-            where: $authorSlug ? { author: { slug: $authorSlug } } : {}
-          ) {
+        query ($limit: Int!, $offset: Int!, $where: BlogWhereInput) {
+          blogsConnection(orderBy: publishedOn_DESC, first: $limit, skip: $offset, where: $where) {
             blogs: edges {
               node {
                 id
@@ -244,14 +248,18 @@ export async function getStaticProps({ params, query }) {
                 }
                 author {
                   ... on Author {
-                    image { url }
+                    image {
+                      url
+                    }
                     imageAlt
                     authorName
                     slug
                   }
                   ... on Doctor {
                     name
-                    image { url }
+                    image {
+                      url
+                    }
                     slug
                     imageAlt
                   }
@@ -276,7 +284,7 @@ export async function getStaticProps({ params, query }) {
       variables: {
         limit,
         offset,
-        authorSlug: authorSlug || null, // optional
+        where, // passes either null OR { author: { slug } }
       },
     });
   };
@@ -284,7 +292,7 @@ export async function getStaticProps({ params, query }) {
   const { data } = await throttledFetch(apolloQuery, {
     limit,
     offset: (page - 1) * limit,
-    authorSlug,
+    where,
   });
 
   const totalBlogs = data?.blogsConnection?.aggregate?.count || 0;
