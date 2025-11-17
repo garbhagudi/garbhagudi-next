@@ -208,15 +208,6 @@ export const getStaticProps = async () => {
           image {
             url
           }
-          doctor {
-            slug
-            name
-            id
-            image {
-              url
-            }
-            imageUrl
-          }
         }
       }
     `,

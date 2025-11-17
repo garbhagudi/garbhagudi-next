@@ -312,7 +312,7 @@ const Blog = ({ blog }) => {
                   </div>
                   <div className='flex items-center justify-center'>
                     <div className='flex-shrink-0'>
-                      <Link href={`/blogs/page/1`} passHref>
+                      <Link href={`/blogs/page/1?author=${blog?.author?.slug}`} passHref>
                         <div className=''>
                           <span className='sr-only'>By: GarbhaGudi IVF Centre</span>
                           <Image

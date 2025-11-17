@@ -20,6 +20,7 @@ interface BlogProps {
   currentPageNumber: number;
   hasNextPage: boolean;
   hasPreviousPage: boolean;
+  authorSlug: string | null;
   searchTerms: {
     title: string;
     slug: string;
@@ -55,6 +56,7 @@ function BlogPage({
   blogs,
   aggregate,
   searchTerms,
+  authorSlug,
 }: BlogProps) {
   const router = useRouter();
   const title = `Blogs | Page ${currentPageNumber} | GarbhaGudi IVF Centre`;
@@ -193,8 +195,8 @@ function BlogPage({
               nextPage={currentPageNumber + 1}
               previousPage={currentPageNumber - 1}
               total={aggregate.count}
-              nextLink={`/blogs/page/${currentPageNumber + 1}`}
-              previousLink={`/blogs/page/${currentPageNumber - 1}`}
+              nextLink={`/blogs/page/${currentPageNumber + 1}${authorSlug ? `?author=${authorSlug}` : ''}`}
+              previousLink={`/blogs/page/${currentPageNumber - 1}${authorSlug ? `?author=${authorSlug}` : ''}`}
               isNext={hasNextPage}
               isPrev={hasPreviousPage}
             />
@@ -208,10 +210,10 @@ function BlogPage({
 
 export default BlogPage;
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, query }) {
   const page = parseInt(params.page, 10);
+  const authorSlug = query?.author || null;
 
-  // invalid page number (not a number or < 1) → redirect to page 1
   if (isNaN(page) || page < 1) {
     return {
       redirect: {
@@ -220,11 +222,17 @@ export async function getStaticProps({ params }) {
       },
     };
   }
-  const apolloQuery = async ({ limit, offset }) => {
+
+  const apolloQuery = async ({ limit, offset, authorSlug }) => {
     return apolloClient.query({
       query: gql`
-        query ($limit: Int!, $offset: Int!) {
-          blogsConnection(orderBy: publishedOn_DESC, first: $limit, skip: $offset) {
+        query ($limit: Int!, $offset: Int!, $authorSlug: String) {
+          blogsConnection(
+            orderBy: publishedOn_DESC
+            first: $limit
+            skip: $offset
+            where: $authorSlug ? { author: { slug: $authorSlug } } : {}
+          ) {
             blogs: edges {
               node {
                 id
@@ -234,12 +242,18 @@ export async function getStaticProps({ params }) {
                 image {
                   url
                 }
-                doctor {
-                  slug
-                  name
-                  id
-                  image {
-                    url
+                author {
+                  ... on Author {
+                    image { url }
+                    imageAlt
+                    authorName
+                    slug
+                  }
+                  ... on Doctor {
+                    name
+                    image { url }
+                    slug
+                    imageAlt
                   }
                 }
               }
@@ -252,6 +266,7 @@ export async function getStaticProps({ params }) {
               count
             }
           }
+
           allBlogs: blogs {
             title
             slug
@@ -261,6 +276,7 @@ export async function getStaticProps({ params }) {
       variables: {
         limit,
         offset,
+        authorSlug: authorSlug || null, // optional
       },
     });
   };
@@ -268,16 +284,14 @@ export async function getStaticProps({ params }) {
   const { data } = await throttledFetch(apolloQuery, {
     limit,
     offset: (page - 1) * limit,
+    authorSlug,
   });
 
   const totalBlogs = data?.blogsConnection?.aggregate?.count || 0;
   const totalPages = Math.ceil(totalBlogs / limit);
 
-  // page > total pages → return 404 (instead of redirect)
-  if (page > totalPages) {
-    return {
-      notFound: true,
-    };
+  if (page > totalPages && totalBlogs > 0) {
+    return { notFound: true };
   }
 
   return {
@@ -286,6 +300,7 @@ export async function getStaticProps({ params }) {
       blogs: data.blogsConnection.blogs,
       aggregate: data.blogsConnection.aggregate,
       searchTerms: data.allBlogs,
+      authorSlug,
       ...data.blogsConnection.pageInfo,
     },
     revalidate: 180,
