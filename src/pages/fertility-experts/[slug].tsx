@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import { SiGooglemaps } from 'react-icons/si';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import BlogsSnip from 'sections/home/newBlogs';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 const ExtraSlot = dynamic(() => import('sections/fertility-experts/ExtraSlot'), {
@@ -52,6 +53,14 @@ export const getStaticProps = async ({ params }) => {
           educationCredentials {
             raw
             text
+          }
+          blogs {
+            id
+            title
+            slug
+            image {
+              url
+            }
           }
         }
       }
@@ -442,6 +451,9 @@ const Doctor = ({ doctor }) => {
                       </div>
                     )}
                   </div>
+                  {doctor?.blogs && doctor?.blogs?.length > 0 && (
+                    <BlogsSnip posts={doctor?.blogs} />
+                  )}
                   {doctor?.videoTestimonials?.length > 0 && (
                     <div className='my-5'>
                       <VideoTestimonials testimonials={doctor?.videoTestimonials} />
