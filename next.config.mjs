@@ -8,7 +8,7 @@ const nextConfig = {
     cpus: 1,
   },
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    // removeConsole: process.env.NODE_ENV === 'production',
   },
   transpilePackages: ['some-es6-library', 'zod', 'framer-motion'],
   images: {
@@ -2657,5 +2657,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-
-
