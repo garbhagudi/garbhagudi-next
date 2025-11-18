@@ -224,7 +224,7 @@ export async function getStaticProps({ params }) {
   } else {
     authorSlug = requestURL?.split('?')?.[1]?.split('=')[1];
   }
-  console.log(requestURL, authorSlug);
+  console.log(requestURL, authorSlug, global, global.__incrementalCache);
 
   if (isNaN(page) || page < 1) {
     return {
