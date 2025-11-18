@@ -34,12 +34,12 @@ interface BlogProps {
       image: {
         url: string;
       };
-      doctor: {
-        slug: string;
-        name: string;
-        id: string;
-        image: {
-          url: string;
+      author?: {
+        authorName?: string;
+        name?: string;
+        slug?: string;
+        image?: {
+          url?: string;
         };
       };
     };
@@ -160,7 +160,7 @@ function BlogPage({
                     </div>
                     <div className='mt-6 flex items-center'>
                       <div className='flex-shrink-0'>
-                        <Link href={`/doctors/${item?.node?.doctor?.slug}`} passHref>
+                        <Link href={`/`} passHref>
                           <div className=''>
                             <span className='sr-only'>By: GarbhaGudi IVF Centre</span>
                             <Image
@@ -176,7 +176,12 @@ function BlogPage({
                       <div>
                         <div className='text-base font-medium text-gray-800 dark:text-gray-200'>
                           <Link href={'/'}>
-                            <div className='font-lexend'>Author : GarbhaGudi IVF Centre</div>
+                            <div className='font-lexend'>
+                              Author :{' '}
+                              {item?.node?.author?.authorName ||
+                                item?.node.author?.name ||
+                                'GarbhaGudi IVF Centre'}
+                            </div>
                           </Link>
                         </div>
                         <div className='flex space-x-1 font-lexend text-sm text-gray-700 dark:text-gray-200'>
@@ -219,6 +224,7 @@ export async function getStaticProps({ params }) {
   } else {
     authorSlug = requestURL?.split('?')?.[1]?.split('=')[1];
   }
+  console.log(requestURL, authorSlug);
 
   if (isNaN(page) || page < 1) {
     return {
