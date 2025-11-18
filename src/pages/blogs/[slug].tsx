@@ -13,7 +13,6 @@ const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false }
 const Share = dynamic(() => import('components/share'), { ssr: false });
 const Loading = dynamic(() => import('components/Loading'), { ssr: true });
 const BreadCrumbs = dynamic(() => import('components/breadcrumbs'), { ssr: true });
-const LandingPagePopUp = dynamic(() => import('components/landingPagePopUp'), { ssr: false });
 const FAQs = dynamic(() => import('components/FAQs'), { ssr: false });
 const RichText = dynamic(
   () => import('@graphcms/rich-text-react-renderer').then((mod) => mod.RichText),
@@ -312,29 +311,31 @@ const Blog = ({ blog }) => {
                   </div>
                   {blog?.author && (
                     <div className='flex items-center justify-center'>
-                      <div className='flex-shrink-0'>
-                        <Link href={`/blogs/page/1?author=${blog?.author?.slug}`} passHref>
-                          <div className='mr-3 h-12 w-12 md:mr-5 md:h-16 md:w-16'>
-                            <span className='sr-only'>By: GarbhaGudi IVF Centre</span>
-                            <Image
-                              className='h-full w-full scale-150 rounded-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert'
-                              src={blog?.author?.image?.url}
-                              alt={blog?.author?.imageAlt}
-                              width={50}
-                              height={50}
-                            />
-                          </div>
-                        </Link>
-                      </div>
+                      {blog?.author?.name && (
+                        <div className='flex-shrink-0'>
+                          <Link href={`/fertility-experts/${blog?.author?.slug}`} passHref>
+                            <div className='mr-3 h-12 w-12 md:mr-5 md:h-16 md:w-16'>
+                              <span className='sr-only'>By: GarbhaGudi IVF Centre</span>
+                              <Image
+                                className='h-full w-full scale-150 rounded-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert'
+                                src={blog?.author?.image?.url}
+                                alt={blog?.author?.imageAlt}
+                                width={50}
+                                height={50}
+                              />
+                            </div>
+                          </Link>
+                        </div>
+                      )}
                       <div>
                         <div className='text-base font-medium text-gray-800 dark:text-gray-200'>
                           {blog?.author?.authorName ? (
                             <div className='font-lexend'>
-                              Reviewed By : {blog?.author?.authorName}
+                              Verified by : {blog?.author?.authorName}
                             </div>
                           ) : (
                             <Link href={`/fertility-experts/${blog?.author?.slug}`} passHref>
-                              <div className='font-lexend'>Reviewed By : {blog?.author?.name}</div>
+                              <div className='font-lexend'>Verified by : {blog?.author?.name}</div>
                             </Link>
                           )}
                         </div>
@@ -386,7 +387,6 @@ const Blog = ({ blog }) => {
         ) : (
           <Error statusCode={404} />
         )}
-        <LandingPagePopUp />
       </div>
       <Dialog open={isOpen} as='div' className='relative z-10 focus:outline-none' onClose={close}>
         <div className='fixed inset-0 top-1/4 z-10 w-screen overflow-y-auto'>
