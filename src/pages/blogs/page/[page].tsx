@@ -210,9 +210,15 @@ function BlogPage({
 
 export default BlogPage;
 
-export async function getStaticProps({ params, query }) {
+export async function getStaticProps({ params }) {
   const page = parseInt(params.page, 10);
-  const authorSlug = query?.author || null;
+  const requestURL = global.__incrementalCache?.requestHeaders?.referer;
+  let authorSlug = null;
+  if (requestURL?.split('/')[3] === 'fertility-experts') {
+    authorSlug = requestURL?.split('/')[4];
+  } else {
+    authorSlug = requestURL?.split('?')?.[1]?.split('=')[1];
+  }
 
   if (isNaN(page) || page < 1) {
     return {
@@ -298,7 +304,7 @@ export async function getStaticProps({ params, query }) {
       blogs: data.blogsConnection.blogs,
       aggregate: data.blogsConnection.aggregate,
       searchTerms: data.allBlogs,
-      authorSlug,
+      authorSlug: authorSlug ? authorSlug : null,
       ...data.blogsConnection.pageInfo,
     },
     revalidate: 180,

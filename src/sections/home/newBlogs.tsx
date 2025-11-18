@@ -17,12 +17,12 @@ interface postsProps {
 const BlogsSnip = ({ posts, slug }: postsProps) => {
   return (
     <div
-      className={`bg-white pb-20 ${slug ? 'pt-10' : 'pt-16 lg:pt-24'} dark:bg-gray-800 sm:px-6 lg:px-8 lg:pb-20`}
+      className={`bg-white pb-20 ${slug ? 'pt-10 lg:pt-12' : 'pt-16 lg:pt-24'} dark:bg-gray-800 sm:px-6 lg:px-8 lg:pb-20`}
     >
       <div className='relative mx-auto max-w-lg lg:max-w-7xl'>
         <div className='border-b pb-4 dark:border-gray-600'>
           <h2 className='text-center font-heading text-3xl font-extrabold tracking-tight text-gray-800 dark:text-gray-200 sm:text-4xl'>
-            {slug ? 'Reviewed Blogs' : 'Recent Blogs'}
+            {slug ? 'Verified Blogs' : 'Recent Blogs'}
           </h2>
         </div>
         <div className='mt-6 flex flex-col items-center justify-center pb-6 md:flex-row md:flex-wrap'>
