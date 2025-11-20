@@ -68,6 +68,7 @@ export const getStaticProps = async ({ params }) => {
               }
             }
             publishedOn
+            updatedAt
           }
         }
       `,
@@ -138,6 +139,38 @@ const Blog = ({ blog }) => {
   function close() {
     setIsOpen(false);
   }
+  function addDocJsonLd() {
+    const docJsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://www.garbhagudi.com/blogs/${blog?.slug}`,
+      },
+      headline: blog?.title,
+      image: blog?.image?.url,
+      author: {
+        '@type': blog?.author?.authorName || blog?.author?.name ? 'Person' : 'Organization',
+        name: blog?.author?.authorName || blog?.author?.name || 'GarbhaGudi IVF Centre',
+        url: blog?.author?.name
+          ? `https://www.garbhagudi.com/fertility-experts/${blog?.author?.slug}`
+          : 'https://www.garbhagudi.com',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'GarbhaGudi IVF Centre',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1751352018/GG_New-Hori_Logo_ziwur1.svg',
+        },
+      },
+      datePublished: blog?.publishedOn,
+      dateModified: blog?.updatedAt,
+    };
+    return {
+      __html: JSON.stringify(docJsonLd, null, 2),
+    };
+  }
   return (
     <>
       <div>
@@ -150,10 +183,10 @@ const Blog = ({ blog }) => {
             fetchPriority='high'
             type='image/webp'
             imageSrcSet={`
-      ${blog?.image?.url}?w=480 480w,
-      ${blog?.image?.url}?w=800 800w,
-      ${blog?.image?.url}?w=1200 1200w
-    `}
+                ${blog?.image?.url}?w=480 480w,
+                ${blog?.image?.url}?w=800 800w,
+                ${blog?.image?.url}?w=1200 1200w
+        `}
             imageSizes='(max-width: 768px) 100vw, 800px'
           />
           <link rel='dns-prefetch' href='https://media.graphassets.com' />
@@ -171,6 +204,7 @@ const Blog = ({ blog }) => {
           <meta name='keywords' content={keywords} />
 
           {/* Ld+JSON Data */}
+          <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
 
           {/* Open Graph / Facebook */}
           <meta property='og:title' content={blog?.ogTitle || title} />
