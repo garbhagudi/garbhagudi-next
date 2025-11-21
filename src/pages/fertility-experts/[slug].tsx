@@ -54,6 +54,7 @@ export const getStaticProps = async ({ params }) => {
             raw
             text
           }
+          docJsonLd
           blogs {
             id
             title
@@ -115,19 +116,11 @@ const Doctor = ({ doctor }) => {
   const router = useRouter();
   const defaultMetaTile = `${doctor?.name} | ${doctor?.designation} | ${doctor?.location[0]?.title} | GarbhaGudi `;
   function addDocJsonLd() {
+    if (!doctor?.docJsonLd) return { __html: '' };
+    const jsonLD =
+      typeof doctor.docJsonLd === 'string' ? JSON.parse(doctor.docJsonLd) : doctor.docJsonLd;
     return {
-      __html: `{
-        "@context": "https://schema.org/",
-        "@type": "Person",
-        "name": "${doctor?.name}",
-        "url": "https://garbhagudi.com/fertility-experts/${doctor?.slug}",
-        "image": "${doctor?.image?.url}",
-        "jobTitle": "${doctor?.designation}",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "GarbhaGudi IVF Centre"
-        }
-      }`,
+      __html: JSON.stringify(jsonLD, null, 2),
     };
   }
 
