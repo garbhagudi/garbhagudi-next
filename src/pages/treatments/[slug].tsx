@@ -148,9 +148,8 @@ const Treatment = ({ treatment }) => {
       __html: `{
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": ${
-          treatment?.faq &&
-          treatment?.faq?.map((item): any => {
+        "mainEntity": ${treatment?.faq?.map(
+          (item: { question: string; answer: { text: string } }) => {
             return {
               '@type': 'Question',
               name: item.question,
@@ -159,8 +158,8 @@ const Treatment = ({ treatment }) => {
                 text: item.answer.text,
               },
             };
-          })
-        }
+          }
+        )}
       }
       `,
     };
