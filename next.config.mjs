@@ -2652,6 +2652,11 @@ const nextConfig = {
         destination: '/solutions/male-fertility-treatment-in-bangalore',
         permanent: true,
       },
+      {
+        source: '/blogs/8-sings-of-healthy-sperm',
+        destination: '/blogs/8-signs-of-healthy-sperm',
+        permanent: true,
+      },
     ];
   },
 };
