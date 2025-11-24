@@ -148,23 +148,23 @@ const Treatment = ({ treatment }) => {
       __html: `{
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": ${treatment?.faq?.map(
-          (item: { question: string; answer: { text: string } }) => {
-            return {
-              '@type': 'Question',
-              name: item.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: item.answer.text,
-              },
-            };
-          }
-        )}
+        "mainEntity": [${treatment?.faq
+          ?.map(
+            (item: { question: string; answer: { text: string } }) => `{
+              "@type": "Question",
+              "name": "${item.question.replace(/"/g, '\\"')}",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "${item.answer.text.replace(/"/g, '\\"')}"
+              } 
+            }`
+          )
+          .join(',')}]
+          
       }
       `,
     };
   }
-
   function addDocJsonLd() {
     if (!treatment?.docJsonLd) return { __html: '' };
     const jsonLD =
@@ -205,11 +205,13 @@ const Treatment = ({ treatment }) => {
             {treatment?.docJsonLd && (
               <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
             )}
-            <script
-              type='application/ld+json'
-              dangerouslySetInnerHTML={faqJsonLd()}
-              id='faq-jsonld'
-            />
+            {treatment?.faq?.length > 0 && (
+              <script
+                type='application/ld+json'
+                dangerouslySetInnerHTML={faqJsonLd()}
+                id='faq-jsonld'
+              />
+            )}
           </>
         )}
         {/* Open Graph / Facebook */}
