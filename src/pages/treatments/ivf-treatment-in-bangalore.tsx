@@ -268,6 +268,7 @@ const Ivf = () => {
           content='What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).'
         />
         <meta name='twitter:image' content='https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm' />
+        <link rel='canonical' href='https://garbhagudi.com/treatments/ivf-treatment-in-bangalore' />
       </Head>
       <div>
         <Banner />

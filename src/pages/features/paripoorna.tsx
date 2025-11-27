@@ -57,6 +57,7 @@ const Paripoorna = () => {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1700052783/paripoorna/mother-with-daughter-lie-bed-dog-looking-them-min_uecuvg.webp'
         />
+        <link rel='canonical' href='https://garbhagudi.com/features/paripoorna' />
       </Head>
 
       <div className="overflow-x-hidden bg-[url('https://res.cloudinary.com/garbhagudiivf/image/upload/v1669643962/Banner/Bunting_kgdona.webp')] bg-contain bg-no-repeat">
