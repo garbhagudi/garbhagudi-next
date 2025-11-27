@@ -54,6 +54,7 @@ const Yoga: NextPage = () => {
         <meta property='og:image:height' content='630' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://www.garbhagudi.com/yoga' />
+        <link rel='canonical' href='https://garbhagudi.com/yoga' />
       </Head>
       <Header />
       <Hero />

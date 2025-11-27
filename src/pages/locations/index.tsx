@@ -51,6 +51,7 @@ const Locations = ({ branches }) => {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277077/Locations/1280x500_HN_wql2mm.webp'
         />
+        <link rel='canonical' href='https://garbhagudi.com/locations' />
       </Head>
       <div className=''>
         <Banner branchTitle={''} />
