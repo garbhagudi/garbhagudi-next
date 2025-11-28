@@ -300,7 +300,7 @@ export async function getStaticProps({ params }) {
   const totalPages = Math.ceil(totalBlogs / limit);
 
   if (page > totalPages && totalBlogs > 0) {
-    return { notFound: true };
+    return { notFound: true, status: 404 };
   }
 
   return {

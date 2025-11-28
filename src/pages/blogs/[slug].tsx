@@ -83,6 +83,7 @@ export const getStaticProps = async ({ params }) => {
     // Return a 404 if no blogs are found
     return {
       notFound: true,
+      status: 404,
     };
   }
 
@@ -92,6 +93,7 @@ export const getStaticProps = async ({ params }) => {
     // Return a 404 if no blogs are found
     return {
       notFound: true,
+      status: 404,
     };
   }
   return {
