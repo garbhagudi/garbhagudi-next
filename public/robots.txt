@@ -1,5 +1,31 @@
 User-agent: *
+
+# Allow full site crawling
 Disallow:
 
-Sitemap: https://www.garbhagudi.com/sitemap.xml
+# Block query parameters that create duplicate URLs (Tracking params)
+Disallow: /*?fbclid=
+Disallow: /*?campaignid=
+Disallow: /*?keyword=
+Disallow: /*?device=
+Disallow: /*?matchtype=
+Disallow: /*?adtype=
+Disallow: /*?productchannel=
+Disallow: /*?id=
+Disallow: /*?utm_
+Disallow: /*?ref=
+Disallow: /*?source=
 
+# Block pageVisit tracking duplicates
+Disallow: /*?pageVisit=
+
+# Block Chrome translation tracking URLs
+Disallow: /*?_x_tr_
+
+# Block any chain of parameters after these
+Disallow: /*&fbclid=
+Disallow: /*&pageVisit=
+Disallow: /*&_x_tr_
+
+# Sitemap declaration
+Sitemap: https://www.garbhagudi.com/sitemap.xml

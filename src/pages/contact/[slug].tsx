@@ -30,6 +30,7 @@ export const getStaticProps = async ({ params }) => {
   if (!data || !data.valueAddedService) {
     return {
       notFound: true,
+      status: 404,
     };
   }
   return {
