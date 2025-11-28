@@ -55,7 +55,6 @@ export const getStaticProps = async ({ params }) => {
   if (data?.error || !data?.treatment) {
     return {
       notFound: true,
-      status: 404,
     };
   }
   return {

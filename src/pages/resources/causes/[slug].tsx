@@ -35,7 +35,6 @@ export const getStaticProps = async ({ params }) => {
   if (data?.error || !data.cause) {
     return {
       notFound: true,
-      status: 404,
     };
   }
   return {
