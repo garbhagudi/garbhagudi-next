@@ -121,6 +121,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/tag/:slug',
+        destination: '/treatments',
+        permanent: true,
+      },
+      {
         source: '/infertility',
         destination: '/treatments/infertility-treatment-in-bangalore',
         permanent: true,
@@ -2655,6 +2660,407 @@ const nextConfig = {
       {
         source: '/blogs/8-sings-of-healthy-sperm',
         destination: '/blogs/8-signs-of-healthy-sperm',
+        permanent: true,
+      },
+      {
+        source: '/privacy-statement',
+        destination: '/legal/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/contact-us',
+        destination: '/contact/enquiry',
+        permanent: true,
+      },
+      {
+        source: '/index.html',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/ivf-from-home',
+        destination: '/ivf/home',
+        permanent: true,
+      },
+      {
+        source: '/default.aspx',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/legal/dGVybXMtYW',
+        destination: '/legal/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/male-infertility',
+        destination: '/solutions/male-infertility-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/online-consultation',
+        destination: '/contact/enquiry',
+        permanent: true,
+      },
+      {
+        source: '/tejashwini-ananth-kumar-international-womens-day',
+        destination: '/events/international-ivf-day',
+        permanent: true,
+      },
+      {
+        source: '/default.html',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/ivf',
+        destination: '/ivf/home',
+        permanent: true,
+      },
+      {
+        source: '/privacy-policy',
+        destination: '/legal/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/robot.txt',
+        destination: '/robots.txt',
+        permanent: true,
+      },
+      {
+        source: '/blogs/ivf-cost',
+        destination: '/treatments/ivf-treatment-cost-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/blogs/ivf-cost',
+        destination: '/treatments/ivf-treatment-cost-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/home.htm',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/home.html',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/infertility-in-men-and-women',
+        destination: '/blogs/infertility-in-men-and-women',
+        permanent: true,
+      },
+      {
+        source: '/stress-in-infertility',
+        destination: '/blogs/stress-in-infertility',
+        permanent: true,
+      },
+      {
+        source: '/success-rate',
+        destination: '/features/success-rates-of-ivf',
+        permanent: true,
+      },
+      {
+        source: '/talk-series-dr-asha-s-vijay-tuberculosis-affecting-fertility',
+        destination: '/fertility-experts/dr-asha-s-vijay',
+        permanent: true,
+      },
+      {
+        source: '/terms-and-conditions',
+        destination: '/legal/terms-and-conditions',
+        permanent: true,
+      },
+      {
+        source: '/the-breakthrough-book-featured-in-bengaluru-isiri',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/treatments/aXZmLXRyZW',
+        destination: '/treatments',
+        permanent: true,
+      },
+      {
+        source: '/treatments/iui-treatment-in-hosur',
+        destination: '/treatments/iui-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/viral-infection-female-infertility',
+        destination: '/blogs/viral-infection-and-female-infertility',
+        permanent: true,
+      },
+      {
+        source: '/what-is-icsi',
+        destination: '/blogs/what-is-icsi',
+        permanent: true,
+      },
+      {
+        source: '/will-pcos-affect-general-health',
+        destination: '/blogs/will-pcos-affect-my-general-health',
+        permanent: true,
+      },
+      {
+        source: '/women-entrepreneur-of-the-year-by-indian-womens-achievers-awardsiwaa-2021',
+        destination: '/about/awards-and-accolades',
+        permanent: true,
+      },
+      {
+        source: '/zero-count-to-millions-of-joy',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/100-free-iui',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/affordable-treatments-2',
+        destination: '/features/affordable-treatments',
+        permanent: true,
+      },
+      {
+        source:
+          '/akhila-karnataka-satsangha-bhajana-maha-mandali-sabhar-felicitated-dr-asha-s-vijay',
+        destination: '/fertility-experts/dr-asha-s-vijay',
+        permanent: true,
+      },
+      {
+        source: '/amp',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/asha-mam-delivering-a-women-wellness-talk-at-bmtc-womens-day-celebrations',
+        destination: '/fertility-experts/dr-asha-s-vijay',
+        permanent: true,
+      },
+      {
+        source: '/ashakirana',
+        destination: '/fertility-experts/dr-asha-s-vijay',
+        permanent: true,
+      },
+      {
+        source: '/author/admin',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/best-infertility-hospital-in-marathahalli-bangalore',
+        destination: '/fertility-center/best-infertility-clinic-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/blood-investigations-2',
+        destination: '/diagnosis/blood-investigations',
+        permanent: true,
+      },
+      {
+        source: '/blood-investigations',
+        destination: '/diagnosis/blood-investigations',
+        permanent: true,
+      },
+      {
+        source: '/brand-resources',
+        destination: '/resources',
+        permanent: true,
+      },
+      {
+        source: '/can-certain-medications-reduce-fertility',
+        destination: '/blogs/can-certain-medications-affect-fertility',
+        permanent: true,
+      },
+      {
+        source: '/can-depression-cause-infertility',
+        destination: '/blogs/can-depression-cause-infertility',
+        permanent: true,
+      },
+      {
+        source: '/career',
+        destination: '/careers',
+        permanent: true,
+      },
+      {
+        source: '/case-studies',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/treatment-protocols',
+        destination: '/features/treatment-protocols',
+        permanent: true,
+      },
+      {
+        source: '/test-tube-baby',
+        destination: '/blogs/test-tube-baby',
+        permanent: true,
+      },
+      {
+        source: '/testimonials',
+        destination: '/success-stories',
+        permanent: true,
+      },
+      {
+        source: '/the-top-7-causes-of-infertility-in-women',
+        destination: '/blogs/the-top-7-causes-of-infertility-in-women',
+        permanent: true,
+      },
+      {
+        source: '/thyroid-and-fertility-2',
+        destination: '/blogs/thyroid-and-fertility',
+        permanent: true,
+      },
+      {
+        source: '/thyroid-and-fertility',
+        destination: '/blogs/thyroid-and-fertility',
+        permanent: true,
+      },
+      {
+        source: '/time-taken-for-the-ivf-process',
+        destination: '/blogs/how-much-time-does-the-ivf-process-take',
+        permanent: true,
+      },
+      {
+        source: '/the-top-7-causes-of-infertility-in-women',
+        destination: '/blogs/the-top-7-causes-of-infertility-in-women',
+        permanent: true,
+      },
+      {
+        source: '/temp',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/success-of-fertility-treatments',
+        destination: '/blogs/success-of-fertility-treatments',
+        permanent: true,
+      },
+      {
+        source: '/sperm-donation-center-in-bangalore',
+        destination: '/blogs/sperms-and-male-infertility',
+        permanent: true,
+      },
+      {
+        source: '/stimulation-protocols-fertility-preservation',
+        destination: '/blogs/page/1',
+        permanent: true,
+      },
+      {
+        source: '/refund-policy',
+        destination: '/legal/refund-policy',
+        permanent: true,
+      },
+      {
+        source: '/role-of-hysteroscopy-in-infertility',
+        destination: '/treatments/hysteroscopy-treatment-in-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/safe-parenthood-donor-insemination',
+        destination: '/blogs/best-option-for-parenthood-ivf-or-iui',
+        permanent: true,
+      },
+      {
+        source: '/sample-page',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/second-opinion-for-patients',
+        destination: '/blogs/page/1',
+        permanent: true,
+      },
+      {
+        source: '/services/:path*',
+        destination: '/treatments',
+        permanent: true,
+      },
+      {
+        source: '/shesight-dr-asha-s-vijay-is-the-cover-personality',
+        destination: '/fertility-experts/dr-asha-s-vijay',
+        permanent: true,
+      },
+      {
+        source: '/shortcodes/testimonials/',
+        destination: '/success-stories',
+        permanent: true,
+      },
+      {
+        source: '/repeated-miscarriage',
+        destination: '/blogs/repeated-miscarriage',
+        permanent: true,
+      },
+      {
+        source: '/repeated-ivf-failure-happen',
+        destination: '/blogs/why-does-repeated-ivf-failure-happen',
+        permanent: true,
+      },
+      {
+        source: '/profile/dr-asha-s-vijay',
+        destination: '/fertility-experts/dr-asha-s-vijay',
+        permanent: true,
+      },
+      {
+        source: '/privacy-statement',
+        destination: '/legal/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/premature-ovarian-failure-or-primary-ovarian-insufficiency-pof-or-poi',
+        destination: '/blogs/premature-ovarian-failure-or-primary-ovarian-insufficiency-pof-or-poi',
+        permanent: true,
+      },
+      {
+        source: '/pre-implantation-genetic-diagnosis-2',
+        destination: '/diagnosis/pre-implantation-genetic-diagnosis-pgd',
+        permanent: true,
+      },
+      {
+        source: '/polycystic-ovarian-syndrome',
+        destination: '/causes/polycystic-ovarian-syndrome-pcos',
+        permanent: true,
+      },
+      {
+        source: '/pesa-and-tesa',
+        destination: '/treatments/pesa-and-tesa',
+        permanent: true,
+      },
+      {
+        source: '/pelvic-infections-and-infertility',
+        destination: '/blogs/pelvic-infections-and-infertility',
+        permanent: true,
+      },
+      {
+        source: '/ovulation-disorders',
+        destination: '/causes/ovulation-disorders',
+        permanent: true,
+      },
+      {
+        source: '/other-male-procedures',
+        destination: '/treatments/other-male-procedures',
+        permanent: true,
+      },
+      {
+        source: '/natural-pregnancy',
+        destination: '/treatments/natural-pregnancy',
+        permanent: true,
+      },
+      {
+        source: '/medical-tourism',
+        destination: '/careers/international-marketing-and-medical-tourism',
+        permanent: true,
+      },
+      {
+        source: '/media',
+        destination: '/contact/media-kit',
+        permanent: true,
+      },
+      {
+        source: '/loaction',
+        destination: '/locations',
         permanent: true,
       },
     ];
