@@ -92,25 +92,31 @@ const Treatment = ({ treatment }) => {
   }
 
   function addReviewJsonLd() {
+    if (!treatment?.title || !treatment?.imageUrl) {
+      return { __html: '' };
+    }
+
+    const title = treatment.title.replace(/"/g, '\\"');
+    const image = treatment.imageUrl;
+    const description = treatment?.content?.text?.slice(0, 160)?.replace(/"/g, '\\"') || '';
+
     return {
       __html: `{
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        "name": "${treatment?.title}",
-        "image": "${treatment?.imageUrl}",
-        "description": "${treatment?.content?.text.slice(0, 160)}",
-        "brand": {
-          "@type": "Brand",
-          "name": "GarbhaGudi IVF Centre"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "bestRating": "5",
-          "worstRating": "1",
-          "reviewCount": "604"
-        }
-      }`,
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "${title}",
+      "image": "${image}",
+      "description": "${description}",
+      "brand": {
+        "@type": "Brand",
+        "name": "GarbhaGudi IVF Centre"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "604"
+      }
+    }`,
     };
   }
 
