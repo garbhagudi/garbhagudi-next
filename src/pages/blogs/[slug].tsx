@@ -121,8 +121,6 @@ export async function getStaticPaths() {
   };
 }
 export function getYouTubeFromRichText(richText) {
-  console.log(richText);
-
   if (!richText) return '';
 
   const extract = (node) => {
