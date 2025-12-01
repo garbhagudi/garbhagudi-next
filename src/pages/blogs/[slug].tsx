@@ -6,7 +6,7 @@ import apolloClient from 'lib/apollo-graphcms';
 import { throttledFetch } from 'lib/throttle';
 import dynamic from 'next/dynamic';
 import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 const Error = dynamic(() => import('next/error'));
 const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
@@ -120,13 +120,48 @@ export async function getStaticPaths() {
     fallback: true,
   };
 }
+export function getYouTubeFromRichText(richText) {
+  console.log(richText);
+
+  if (!richText) return '';
+
+  const extract = (node) => {
+    if (!node) return '';
+    if (
+      node.type === 'iframe' &&
+      (node.url?.includes('youtube.com') || node.url?.includes('youtu.be'))
+    ) {
+      return node.url;
+    }
+    if (node.type === 'html' && typeof node.value === 'string') {
+      const match = node.value.match(/https?:\/\/(?:www\.)?(youtube\.com|youtu\.be)[^\"]+/);
+      if (match) return match[0];
+    }
+    if (node.children) {
+      for (const child of node.children) {
+        const found = extract(child);
+        if (found) return found;
+      }
+    }
+    return '';
+  };
+
+  return extract(richText);
+}
 
 const Blog = ({ blog }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [youtubeURL, setYoutubeURL] = useState<string | null>('');
   const title = `${blog?.metaTitle || blog?.title}`;
   const description = `${blog?.metaDescription || blog?.content?.text.slice(0, 160)}`;
   const keywords = `${blog?.metaKeywords || blog?.title}`;
   const router = useRouter();
+  useEffect(() => {
+    if (blog) {
+      const url = getYouTubeFromRichText(blog?.content?.raw);
+      setYoutubeURL(url);
+    }
+  }, [blog]);
 
   if (router.isFallback) {
     return <Loading />;
@@ -205,6 +240,27 @@ const Blog = ({ blog }) => {
 
           {/* Ld+JSON Data */}
           <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
+          {/* Video Schema if video found */}
+          {youtubeURL && (
+            <script
+              type='application/ld+json'
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'VideoObject',
+                  name: blog?.title,
+                  description: description,
+                  thumbnailUrl: blog?.image?.url,
+                  uploadDate: blog?.publishedOn,
+                  embedUrl: youtubeURL,
+                  potentialAction: {
+                    '@type': 'WatchAction',
+                    target: youtubeURL,
+                  },
+                }),
+              }}
+            />
+          )}
 
           {/* Open Graph / Facebook */}
           <meta property='og:title' content={blog?.ogTitle || title} />
@@ -356,6 +412,7 @@ const Blog = ({ blog }) => {
                                 alt={blog?.author?.imageAlt}
                                 width={50}
                                 height={50}
+                                priority
                               />
                             </div>
                           </Link>
