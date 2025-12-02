@@ -64,33 +64,34 @@ const Ivf = () => {
   function addProductJsonLd() {
     return {
       __html: `{
-        "@context": "https://schema.org/",
-        "@type": "Service",
-        "name": "In-vitro Fertilization (IVF)",
-        "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
-        "description": "What is IVF and how does it work ? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
-        "offers": {
+      "@context": "https://schema.org/",
+      "@type": "Service",
+      "name": "In-vitro Fertilization (IVF)",
+      "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
+      "description": "What is IVF and how does it work ? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
+      "offers": {
         "@type": "AggregateOffer",
         "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf",
         "priceCurrency": "INR",
         "lowPrice": "90000",
         "highPrice": "220000"
-        },
-        "aggregateRating": {
+      },
+      "provider": {
+        "@type": "Hospital",
+        "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
+        "name": "GarbhaGudi IVF Centre",
+        "telephone": "+91 9108 9108 32",
+        "priceRange": "160000 - 400000"
+      },
+      "aggregateRating": {
         "@type": "AggregateRating",
-          "itemReviewed": {
-          "@type": "Hospital",
-          "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
-          "name": "GarbhaGudi IVF Centre",
-          "telephone": "+91 9108 9108 32",
-          "priceRange": "160000 - 400000",
-            "ratingValue": "4.8",
-            "bestRating": "5",
-            "worstRating": "1",
-            "reviewCount": "604"
-          }
-        }
-      }`,
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "604",
+        "reviewCount": "604"
+      }
+    }`,
     };
   }
 

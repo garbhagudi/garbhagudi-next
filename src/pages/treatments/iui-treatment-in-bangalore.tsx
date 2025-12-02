@@ -124,35 +124,37 @@ const Iui = () => {
   function addProductJsonLd() {
     return {
       __html: `{
-        "@context": "https://schema.org/",
-        "@type": "Service",
-        "name": "Intra-Uterine Insemination (IUI)",
-        "image": "https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp",
-        "description": "IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy.",
-        "offers": {
+      "@context": "https://schema.org/",
+      "@type": "Service",
+      "name": "Intra-Uterine Insemination (IUI)",
+      "image": "https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp",
+      "description": "IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy.",
+      "offers": {
         "@type": "AggregateOffer",
         "url": "https://www.garbhagudi.com/treatments/intra-uterine-insemination-iui",
         "priceCurrency": "INR",
         "lowPrice": "90000",
         "highPrice": "220000"
-        },
-        "aggregateRating": {
+      },
+      "provider": {
+        "@type": "Hospital",
+        "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
+        "name": "GarbhaGudi IVF Centre",
+        "telephone": "+91 9108 9108 32",
+        "priceRange": "160000 - 400000"
+      },
+      "aggregateRating": {
         "@type": "AggregateRating",
-          "itemReviewed": {
-          "@type": "Hospital",
-          "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
-          "name": "GarbhaGudi IVF Centre",
-          "telephone": "+91 9108 9108 32",
-          "priceRange": "160000 - 400000",
-            "ratingValue": "4.8",
-            "bestRating": "5",
-            "worstRating": "1",
-            "reviewCount": "604"
-          }
-        }
-      }`,
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "604",
+        "reviewCount": "604"
+      }
+    }`,
     };
   }
+
   function addDocJsonLd() {
     return {
       __html: `{
