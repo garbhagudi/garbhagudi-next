@@ -249,7 +249,7 @@ const Blog = ({ blog }) => {
                   name: blog?.title,
                   description: description,
                   thumbnailUrl: blog?.image?.url,
-                  uploadDate: blog?.publishedOn,
+                  uploadDate: new Date(blog?.publishedOn).toISOString(),
                   embedUrl: youtubeURL,
                   potentialAction: {
                     '@type': 'WatchAction',
