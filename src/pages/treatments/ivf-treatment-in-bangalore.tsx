@@ -33,7 +33,7 @@ const Ivf = () => {
               "@type": "ListItem",
               "position": "3",
               "name": "In-vitro Fertilization (IVF)",
-              "item": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf"
+              "item": "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore"
             }
           ]
         }`,
@@ -44,20 +44,17 @@ const Ivf = () => {
     return {
       __html: `{
       "@context": "https://schema.org",
-      "@type": "MedicalProcedure",
-      "name": "In-vitro Fertilization (IVF)",
+      "@type": "MedicalBusiness",
+      "additionalType": "https://schema.org/Hospital",
+      "name": "GarbhaGudi IVF Centre - IVF Treatment in Bangalore",
       "description": "IVF or In Vitro Fertilization is one of the most widely used Assisted Reproductive Techniques (ART).",
-      "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf",
+      "url": "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore",
       "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
-      "provider": {
-        "@type": "Hospital",
-        "name": "GarbhaGudi IVF Centre",
-        "telephone": "+91 9108 9108 32"
-      },
+      "telephone": "+91 9108 9108 32",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "604"
+        "ratingValue": 4.8,
+        "ratingCount": 604
       }
     }`,
     };
@@ -115,25 +112,25 @@ const Ivf = () => {
             "@type": "HowToStep",
             "text": "The process of IVF begins with fertility medications and hormones, which are given to the woman for about 10 – 12 days to stimulate the growth of multiple eggs in the ovary. Transvaginal ultrasound scans and hormone analysis is done to know the status of growing eggs.",
             "name": "Ovulation induction",
-            "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf#:~:text=may%20be%20required.-,Ovulation%20induction,-The%20process%20of"
+            "url": "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore#:~:text=may%20be%20required.-,Ovulation%20induction,-The%20process%20of"
           },
           {
             "@type": "HowToStep",
             "text": "Egg retrieval is done 34 to 36 hours after the final trigger injection and before ovulation.",
             "name": "Egg retrieval",
-            "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf#:~:text=hormones%20being%20injected.-,Egg%20retrieval,-Egg%20retrieval%20is"
+            "url": "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore#:~:text=hormones%20being%20injected.-,Egg%20retrieval,-Egg%20retrieval%20is"
           },
           {
             "@type": "HowToStep",
             "text": "The male counterpart is asked to produce a sample of semen by ejaculating. The sperms and eggs are put together in a dish and stored in the laboratory in a controlled environment to encourage fertilization.",
             "name": "Fertilization",
-            "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf#:~:text=fertilize%20the%20eggs.-,Fertilization,-The%20male%20counterpart"
+            "url": "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore#:~:text=fertilize%20the%20eggs.-,Fertilization,-The%20male%20counterpart"
           },
           {
             "@type": "HowToStep",
             "text": "The embryos are usually transferred into the woman’s uterus three to five days after egg retrieval and fertilization.",
             "name": "Embryo Transfer",
-            "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf#:~:text=IVF%20cycles%20failed.-,Embryo%20Transfer,-The%20embryos%20are"
+            "url": "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore#:~:text=IVF%20cycles%20failed.-,Embryo%20Transfer,-The%20embryos%20are"
           },
           {
             "@type": "HowToStep",
