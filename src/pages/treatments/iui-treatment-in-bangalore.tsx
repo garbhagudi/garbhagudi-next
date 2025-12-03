@@ -12,27 +12,6 @@ const Faq = dynamic(() => import('sections/misc/iui-main/faq'), { ssr: false });
 const ContentXtra = dynamic(() => import('sections/misc/iui-main/more-content'), { ssr: false });
 
 const Iui = () => {
-  function addReviewJsonLd() {
-    return {
-      __html: `{
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        "name": "Intra-Uterine Insemination (IUI)",
-        "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
-        "description": "IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy.",
-        "brand": {
-          "@type": "Brand",
-          "name": "GarbhaGudi IVF Centre"
-        },
-        "aggregateRating": {
-      "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "604"
-        }
-      }`,
-    };
-  }
-
   function addBreadcrumbsJsonLd() {
     return {
       __html: `{
@@ -124,53 +103,26 @@ const Iui = () => {
   function addProductJsonLd() {
     return {
       __html: `{
-      "@context": "https://schema.org/",
-      "@type": "Service",
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
       "name": "Intra-Uterine Insemination (IUI)",
-      "image": "https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp",
       "description": "IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy.",
-      "offers": {
-        "@type": "AggregateOffer",
-        "url": "https://www.garbhagudi.com/treatments/intra-uterine-insemination-iui",
-        "priceCurrency": "INR",
-        "lowPrice": "90000",
-        "highPrice": "220000"
-      },
+      "url": "https://www.garbhagudi.com/treatments/intra-uterine-insemination-iui",
+      "image": "https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp",
       "provider": {
         "@type": "Hospital",
-        "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
         "name": "GarbhaGudi IVF Centre",
-        "telephone": "+91 9108 9108 32",
-        "priceRange": "160000 - 400000"
+        "telephone": "+91 9108 9108 32"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "604",
-        "reviewCount": "604"
+        "ratingCount": "604"
       }
     }`,
     };
   }
 
-  function addDocJsonLd() {
-    return {
-      __html: `{
-  "@context": "https://schema.org/",
-  "@type": "Product",
-  "name": "Experience the hope of starting a family with IUI treatment in Bangalore",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "604",
-    "reviewCount": "1200"
-  }
-}
-`,
-    };
-  }
   return (
     <div>
       <Head>
@@ -187,25 +139,13 @@ const Iui = () => {
           content='Explore the best IUI treatment in Bangalore at GarbhaGudi IVF Centre. High success rates, affordable costs & expert care. Book a consultation today!'
         />
 
-        {/* Ld+JSON Data */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addReviewJsonLd()}
-          key='review-jsonld'
-        />
-
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addProductJsonLd()}
-          key='product-jsonld'
-        />
+        <script type='application/ld+json' dangerouslySetInnerHTML={addProductJsonLd()} />
 
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
           key='breadcrumbs-jsonld'
         />
-        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
 
         <script
           type='application/ld+json'
