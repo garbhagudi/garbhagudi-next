@@ -11,27 +11,6 @@ const Video = dynamic(() => import('sections/misc/ivf-main/video'), { ssr: false
 const Related = dynamic(() => import('sections/misc/ivf-main/related'), { ssr: false });
 
 const Ivf = () => {
-  function addReviewJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "Product",
-          "name": "In-vitro Fertilization (IVF)",
-          "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
-          "description": "What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
-          "brand": {
-            "@type": "Brand",
-            "name": "GarbhaGudi IVF Centre"
-          },
-          "aggregateRating": {
-    "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "604"
-          }
-        }`,
-    };
-  }
-
   function addBreadcrumbsJsonLd() {
     return {
       __html: `{
@@ -64,32 +43,21 @@ const Ivf = () => {
   function addProductJsonLd() {
     return {
       __html: `{
-      "@context": "https://schema.org/",
-      "@type": "Service",
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
       "name": "In-vitro Fertilization (IVF)",
+      "description": "IVF or In Vitro Fertilization is one of the most widely used Assisted Reproductive Techniques (ART).",
+      "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf",
       "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
-      "description": "What is IVF and how does it work ? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
-      "offers": {
-        "@type": "AggregateOffer",
-        "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf",
-        "priceCurrency": "INR",
-        "lowPrice": "90000",
-        "highPrice": "220000"
-      },
       "provider": {
         "@type": "Hospital",
-        "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
         "name": "GarbhaGudi IVF Centre",
-        "telephone": "+91 9108 9108 32",
-        "priceRange": "160000 - 400000"
+        "telephone": "+91 9108 9108 32"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "604",
-        "reviewCount": "604"
+        "ratingCount": "604"
       }
     }`,
     };
@@ -183,22 +151,7 @@ const Ivf = () => {
       }`,
     };
   }
-  function addDocJsonLd() {
-    return {
-      __html: `{
-  "@context": "https://schema.org/",
-  "@type": "Product",
-  "name": "Helping couples in their Journey towards Parenthood",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "ratingCount": "604",
-    "reviewCount": "1200"
-  }
-}
-`,
-    };
-  }
+
   return (
     <div>
       <Head>
@@ -238,12 +191,6 @@ const Ivf = () => {
           type='application/ld+json'
           dangerouslySetInnerHTML={addFaqJsonLd()}
           id='howto-jsonld'
-        />
-        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addReviewJsonLd()}
-          id='review-jsonld'
         />
         {/* Open Graph / Facebook */}
 
