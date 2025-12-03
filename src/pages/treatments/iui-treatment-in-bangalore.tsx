@@ -34,7 +34,7 @@ const Iui = () => {
               "@type": "ListItem",
               "position": "3",
               "name": "Intra-Uterine Insemination (IUI)",
-              "item": "https://www.garbhagudi.com/treatments/intra-uterine-insemination-iui"
+              "item": "https://www.garbhagudi.com/treatments/iui-treatment-in-bangalore"
             }
           ]
         }`,
@@ -104,10 +104,10 @@ const Iui = () => {
     return {
       __html: `{
       "@context": "https://schema.org",
-      "@type": "MedicalProcedure",
+      "@type": "MedicalBusiness",
       "name": "Intra-Uterine Insemination (IUI)",
       "description": "IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy.",
-      "url": "https://www.garbhagudi.com/treatments/intra-uterine-insemination-iui",
+      "url": "https://www.garbhagudi.com/treatments/iui-treatment-in-bangalore",
       "image": "https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp",
       "provider": {
         "@type": "Hospital",
@@ -116,8 +116,8 @@ const Iui = () => {
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "604"
+        "ratingValue": 4.8,
+        "ratingCount": 604
       }
     }`,
     };
