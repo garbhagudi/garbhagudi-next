@@ -95,7 +95,6 @@ const AwardPage = ({ award }: AwardProps) => {
         <link rel='preload' href={award?.image?.url} as='image' />
         <link rel='dns-prefetch' href='https://media.graphassets.com' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta name='robots' content='noindex, nofollow' />
         <title>{title}</title>
         <meta name='title' content={title} />
         <meta name='description' content={award?.content?.text.slice(0, 160)} />
