@@ -73,15 +73,6 @@ const doctors = [
       'Ms. Suraksha B, a dedicated Senior Yoga Therapist with a profound passion for promoting holistic well-being and inner harmony. Suraksha holds a Master of Science degree in Yogic Science from Mangalore University and Post Graduate certificate in Clinical Diet and Nutrition, KSOU, Mysuru. She has been a coach and manager in prestigious events like the All-India Inter-University Yoga Competition, representing the Department of Human Consciousness & Yogic Science.',
   },
   {
-    id: 2,
-    name: 'Dr. Saathvi D',
-    qualification: 'BNYS',
-    designation: 'Yoga Therapist',
-    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/bc8IPOjUR6aPrAoGjgHU',
-    content:
-      'Dr. Saathvi D, a skilled Yoga Therapist with a strong academic foundation, holding a Bachelor’s degree in Naturopathic and Yoga Sciences, is dedicated to nurturing wellness through the transformative power of yoga and naturopathy. She is committed to helping individuals achieve optimal health and well-being. Her compassionate approach and tailored therapeutic methods inspire confidence and empowerment, making her an integral part of the wellness community.',
-  },
-  {
     id: 3,
     name: 'Dr. Jala R',
     qualification: 'BNYS',
