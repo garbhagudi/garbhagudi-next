@@ -108,11 +108,35 @@ const Iui = () => {
       "name": "Intra-Uterine Insemination (IUI)",
       "description": "IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy.",
       "url": "https://www.garbhagudi.com/treatments/iui-treatment-in-bangalore",
-      "image": "https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp",
+ "image": 
+        "https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp"
+      ,
+       "telephone": "+91 9108 9108 32",
+            "priceRange": "₹1,10,000 - ₹1,60,000",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "CMR Road, Kalyan Nagar",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560043",
+        "addressCountry": "IN"
+      },
       "provider": {
         "@type": "Hospital",
         "name": "GarbhaGudi IVF Centre",
-        "telephone": "+91 9108 9108 32"
+        "telephone": "+91 9108 9108 32",
+           "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "CMR Road, Kalyan Nagar",
+          "addressLocality": "Bengaluru",
+          "addressRegion": "Karnataka",
+          "postalCode": "560043",
+          "addressCountry": "IN"
+        },
+         "image":
+        "https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp"
+      ,
+        "priceRange": "₹1,10,000 - ₹1,60,000"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
