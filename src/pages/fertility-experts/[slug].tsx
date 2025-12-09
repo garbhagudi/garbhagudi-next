@@ -124,6 +124,35 @@ const Doctor = ({ doctor }) => {
     };
   }
 
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "Home",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Our Fertility Experts",
+              "item": "https://www.garbhagudi.com/treatments/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${doctor?.name}",
+              "item": "https://www.garbhagudi.com/fertility-experts/${doctor?.slug}"
+            }
+          ]
+        }`,
+    };
+  }
+
   if (router.isFallback) {
     return (
       <div className='text-content flex h-screen animate-ping items-center justify-center text-brandPink'>
@@ -148,6 +177,11 @@ const Doctor = ({ doctor }) => {
           type='application/ld+json'
           dangerouslySetInnerHTML={addDocJsonLd()}
           key='org-jsonld'
+        />
+        <script
+          id='breadcrumbs-jsonld'
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
         />
 
         {/* Open Graph / Facebook */}

@@ -51,6 +51,15 @@ const Ivf = () => {
       "url": "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore",
       "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
       "telephone": "+91 9108 9108 32",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "CMR Road, Kalyan Nagar",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560043",
+        "addressCountry": "IN"
+      },
+      "priceRange": "₹1,10,000 - ₹1,60,000",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,

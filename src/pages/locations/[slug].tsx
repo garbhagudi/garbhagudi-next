@@ -25,6 +25,34 @@ const Branch = ({ branch }) => {
       __html: JSON.stringify(jsonLD, null, 2),
     };
   }
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "HOME",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Branches",
+              "item": "https://www.garbhagudi.com/locations/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${branch?.title}",
+              "item": "https://www.garbhagudi.com/locations/${branch?.slug}"
+            }
+          ]
+        }`,
+    };
+  }
   const isNewBranch = branch?.slug === 'hosur';
   return (
     <div>
@@ -45,6 +73,11 @@ const Branch = ({ branch }) => {
           data-next-head=''
           dangerouslySetInnerHTML={addDocJsonLd()}
           key='org-jsonld'
+        />
+        <script
+          id='breadcrumbs-jsonld'
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
         />
         {/* Open Graph / Facebook */}
 

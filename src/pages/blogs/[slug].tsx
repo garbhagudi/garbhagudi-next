@@ -197,11 +197,39 @@ const Blog = ({ blog }) => {
           url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1751352018/GG_New-Hori_Logo_ziwur1.svg',
         },
       },
-      datePublished: blog?.publishedOn,
-      dateModified: blog?.updatedAt,
+      datePublished: new Date(blog?.publishedOn).toISOString(),
+      dateModified: new Date(blog?.updatedAt).toISOString(),
     };
     return {
       __html: JSON.stringify(docJsonLd, null, 2),
+    };
+  }
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "Home",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Blogs",
+              "item": "https://www.garbhagudi.com/blogs/page/1"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${blog?.title}",
+              "item": "https://www.garbhagudi.com/blogs/${blog?.slug}"
+            }
+          ]
+        }`,
     };
   }
   return (
@@ -237,6 +265,11 @@ const Blog = ({ blog }) => {
           <meta name='keywords' content={keywords} />
 
           {/* Ld+JSON Data */}
+          <script
+            id='breadcrumbs-jsonld'
+            type='application/ld+json'
+            dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+          />
           <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
           {/* Video Schema if video found */}
           {youtubeURL && (
