@@ -7,16 +7,16 @@ const Banner = () => {
   const path = usePathname();
   return (
     <div className='bg-white pb-8 dark:bg-gray-800 sm:pb-12 lg:pb-12'>
-      <div className='overflow-hidden pt-8 font-content sm:pt-12 lg:relative lg:py-36'>
+      <div className='overflow-hidden pt-8 font-content sm:pt-12 lg:relative lg:py-16'>
         <div className='block sm:mx-auto sm:hidden sm:max-w-3xl sm:px-6'>
-          <div className='py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
+          <div className='pt-8 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
             <div className='relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12'>
               <Image
-                className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742808594/paripoorna/IVF_Compressed_kmekqi_bewqzl.webp'
+                className='h-[380] w-[380] rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762522383/paripoorna_Landing_Page_Banner-04_utjoyh.webp'
                 alt='happy couple with a baby'
-                width={590}
-                height={460}
+                width={380}
+                height={380}
                 priority={true}
               />
             </div>
@@ -25,26 +25,12 @@ const Banner = () => {
         <div className='mx-auto max-w-md px-3 sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-20 lg:px-8'>
           <div>
             <div className=''>
-              <div className='color-pop rounded-lg'>
-                <div className='flex flex-col items-start rounded-lg bg-transparent px-2.5 py-2 text-base font-bold text-white'>
-                  <div>
-                    <span className='font-lexend font-semibold'>
-                      Offer of the Month* : Rs.1,00,000 Discount on IVF Treatment. Valid upto 31st
-                      December 2024
-                    </span>
-                  </div>
-                  <span className='w-full text-right font-lexend text-xs'>
-                    *Valid till Oct 31st 2024
-                  </span>
-                </div>
-              </div>
               <div className='mt-12 text-gray-800 dark:text-gray-200 sm:max-w-xl'>
                 <h1 className='font-heading text-4xl font-extrabold sm:text-5xl'>
                   Welcome to the Best IVF Centre In Bangalore
                 </h1>
                 <p className='mt-6 text-xl'>
-                  Get start on your journey towards parenthood with upto Rs. 1,00,000 /- off on IVF
-                  Treatment.
+                  Get started on your journey towards parenthood with our fertility experts
                 </p>
                 <p className='mt-2 text-base'>EMI Facility Available at 0% Interest.</p>
               </div>
@@ -61,7 +47,7 @@ const Banner = () => {
                     Families
                   </div>
                   <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
-                    <span className='font-bold text-brandPink dark:text-gg-400'>12+</span> Years of
+                    <span className='font-bold text-brandPink dark:text-gg-400'>15+</span> Years of
                     Experience
                   </div>
                   <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
@@ -69,7 +55,7 @@ const Banner = () => {
                     Success Rate
                   </div>
                   <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
-                    <span className='font-bold text-brandPink dark:text-gg-400'>9</span> Centres in
+                    <span className='font-bold text-brandPink dark:text-gg-400'>10</span> Centres in
                     Karnataka
                   </div>
                 </div>
@@ -89,7 +75,7 @@ const Banner = () => {
                     <span className=''> across all our branches</span>
                   </div>
                 </div>
-                <div className='glow mt-6 w-72 px-3 py-2 text-center hover:shadow-sm hover:shadow-brandPink dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gg-500'>
+                <div className='glow my-6 w-72 px-3 py-2 text-center hover:shadow-sm hover:shadow-brandPink dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gg-500'>
                   <span></span>
                   <span></span>
                   <span></span>
@@ -139,7 +125,7 @@ const Banner = () => {
             <div className='relative mt-24 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-[28rem] lg:max-w-none lg:pl-12'>
               <Image
                 className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742808594/paripoorna/IVF_Compressed_kmekqi_bewqzl.webp'
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762522383/paripoorna_Landing_Page_Banner-03_1_wmtbbl.webp'
                 alt='happy couple with a baby'
                 width={500}
                 height={500}
@@ -147,6 +133,17 @@ const Banner = () => {
               />
             </div>
           </div>
+        </div>
+      </div>
+      <div className='color-pop mx-auto max-w-fit rounded-lg p-1 lg:p-2.5'>
+        <div className='flex flex-col items-start gap-1 rounded-lg bg-transparent px-2.5 py-2 text-base font-bold text-white'>
+          <div className='font-lexend font-semibold'>
+            Get a flat ₹1,11,111/- discount on your IVF treatment with PARIPOORNA at GarbhaGudi IVF
+            Centre.
+          </div>
+          <span className='w-full text-left font-lexend md:text-center'>
+            Celebrate the season of parenthood and make your dream of a family come true.
+          </span>
         </div>
       </div>
     </div>

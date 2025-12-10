@@ -18,6 +18,7 @@ export const getStaticProps = async ({ params }) => {
         article(where: { slug: $slug }) {
           id
           title
+          slug
           metaTitle
           metaDescription
           metaKeywords
@@ -25,6 +26,7 @@ export const getStaticProps = async ({ params }) => {
           image {
             url
           }
+          imageUrl
           content {
             raw
             text
@@ -87,12 +89,14 @@ interface FaqProps {
 interface BlogProps {
   article: {
     title: string;
+    slug: string;
     metaTitle: string;
     metaDescription: string;
     metaKeywords: string;
     image: {
       url: string;
     };
+    imageUrl: string;
     content: {
       text: string;
       raw: {
@@ -111,13 +115,65 @@ const Blog = ({ article }: BlogProps) => {
     return <Loading />;
   }
 
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "HOME",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Fertility Center",
+              "item": "https://www.garbhagudi.com/fertility-center/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${article?.title}",
+              "item": "https://www.garbhagudi.com/fertility-center/${article?.slug}"
+            }
+          ]
+        }`,
+    };
+  }
+
+  function faqJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [${article?.faq
+          ?.map(
+            (item: { question: string; answer: { text: string } }) => `{
+              "@type": "Question",
+              "name": "${item.question.replace(/"/g, '\\"')}",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "${item.answer.text.replace(/"/g, '\\"')}"
+              } 
+            }`
+          )
+          .join(',')}]
+          
+      }
+      `,
+    };
+  }
+
   const title = `${article?.title} | GarbhaGudi`;
 
   return (
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='preload' href={article?.image?.url} as='image' />
+        <link rel='preload' href={article?.imageUrl} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={`${article?.metaTitle}`} />
@@ -131,7 +187,7 @@ const Blog = ({ article }: BlogProps) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta property='og:description' content={article?.metaDescription} />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content={article?.image.url} />
+        <meta property='og:image' content={article?.imageUrl} />
 
         {/* Twitter*/}
 
@@ -139,7 +195,21 @@ const Blog = ({ article }: BlogProps) => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={`${article?.metaTitle} | GarbhaGudi IVF Centre`} />
         <meta name='twitter:description' content={article?.metaDescription} />
-        <meta name='twitter:image' content={article?.image.url} />
+        <meta name='twitter:image' content={article?.imageUrl} />
+
+        {/* Ld+JSON Data */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+          key='breadcrumbs-jsonld'
+        />
+        {article?.faq?.length > 0 && (
+          <script
+            type='application/ld+json'
+            dangerouslySetInnerHTML={faqJsonLd()}
+            id='faq-jsonld'
+          />
+        )}
       </Head>
       <div className='relative overflow-hidden bg-white py-16 dark:bg-gray-800'>
         <div className='hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full'>
@@ -239,7 +309,10 @@ const Blog = ({ article }: BlogProps) => {
             </h1>
             <Image
               className='mb-5 mt-10 w-full rounded-lg'
-              src={article?.image?.url}
+              src={
+                article?.imageUrl ||
+                'https://res.cloudinary.com/decyl0nmm/image/upload/v1762938523/Best_IVF_Center_GarbhaGudi-1_shyb2u.webp'
+              }
               alt={article?.imageAlt}
               width={800}
               height={500}

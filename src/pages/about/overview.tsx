@@ -67,7 +67,7 @@ const Overview = ({ directors }) => {
                         <div className='aspect-square'>
                           <Image
                             className='object-fit h-96 w-96 rounded-3xl shadow-2xl'
-                            src={item.image.url}
+                            src={item.imageUrl}
                             alt={item.name}
                             width={500}
                             height={500}
@@ -117,6 +117,7 @@ export const getStaticProps = async () => {
           image {
             url
           }
+          imageUrl
           id
           description
         }

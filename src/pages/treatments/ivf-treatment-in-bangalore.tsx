@@ -11,29 +11,6 @@ const Video = dynamic(() => import('sections/misc/ivf-main/video'), { ssr: false
 const Related = dynamic(() => import('sections/misc/ivf-main/related'), { ssr: false });
 
 const Ivf = () => {
-  function addReviewJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "Product",
-          "name": "In-vitro Fertilization (IVF)",
-          "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
-          "description": "What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
-          "brand": {
-            "@type": "Brand",
-            "name": "GarbhaGudi IVF Centre"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "bestRating": "5",
-            "worstRating": "1",
-            "reviewCount": "604"
-          }
-        }`,
-    };
-  }
-
   function addBreadcrumbsJsonLd() {
     return {
       __html: `{
@@ -56,43 +33,53 @@ const Ivf = () => {
               "@type": "ListItem",
               "position": "3",
               "name": "In-vitro Fertilization (IVF)",
-              "item": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf"
+              "item": "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore"
             }
           ]
         }`,
     };
   }
 
-  function addProductJsonLd() {
+  function addDocJsonLd() {
     return {
       __html: `{
-        "@context": "https://schema.org/",
-        "@type": "Service",
-        "name": "In-vitro Fertilization (IVF)",
-        "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
-        "description": "What is IVF and how does it work ? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
-        "offers": {
-        "@type": "AggregateOffer",
-        "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf",
-        "priceCurrency": "INR",
-        "lowPrice": "90000",
-        "highPrice": "220000"
-        },
-        "aggregateRating": {
+  "name": "IVF Treatment",
+  "@type": "Product",
+  "@context": "https://schema.org/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingCount": "604",
+    "ratingValue": "4.9",
+    "reviewCount": "1200"
+  }
+}`,
+    };
+  }
+
+  function addReviewJsonLd() {
+    const title = 'IVF Treatment in Bangalore: Trusted Fertility Solutions';
+    const image =
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1672381537/Misc/happy-pregnant-woman-late-pregnancy-stage-sitting-grass-lawn-min_11zon_xkeac0.webp';
+    const description =
+      'Explore the best IVF treatment in Bangalore at GarbhaGudi IVF Centre. High success rates, expert care & affordable costs. Book a consultation today!';
+
+    return {
+      __html: `{
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "${title}",
+      "image": "${image}",
+      "description": "${description}",
+      "brand": {
+        "@type": "Brand",
+        "name": "GarbhaGudi IVF Centre"
+      },
+      "aggregateRating": {
         "@type": "AggregateRating",
-          "itemReviewed": {
-          "@type": "Hospital",
-          "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
-          "name": "GarbhaGudi IVF Centre",
-          "telephone": "+91 9108 9108 32",
-          "priceRange": "160000 - 400000",
-            "ratingValue": "4.8",
-            "bestRating": "5",
-            "worstRating": "1",
-            "reviewCount": "604"
-          }
-        }
-      }`,
+        "ratingValue": "4.8",
+        "ratingCount": "604"
+      }
+    }`,
     };
   }
 
@@ -148,25 +135,25 @@ const Ivf = () => {
             "@type": "HowToStep",
             "text": "The process of IVF begins with fertility medications and hormones, which are given to the woman for about 10 – 12 days to stimulate the growth of multiple eggs in the ovary. Transvaginal ultrasound scans and hormone analysis is done to know the status of growing eggs.",
             "name": "Ovulation induction",
-            "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf#:~:text=may%20be%20required.-,Ovulation%20induction,-The%20process%20of"
+            "url": "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore#:~:text=may%20be%20required.-,Ovulation%20induction,-The%20process%20of"
           },
           {
             "@type": "HowToStep",
             "text": "Egg retrieval is done 34 to 36 hours after the final trigger injection and before ovulation.",
             "name": "Egg retrieval",
-            "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf#:~:text=hormones%20being%20injected.-,Egg%20retrieval,-Egg%20retrieval%20is"
+            "url": "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore#:~:text=hormones%20being%20injected.-,Egg%20retrieval,-Egg%20retrieval%20is"
           },
           {
             "@type": "HowToStep",
             "text": "The male counterpart is asked to produce a sample of semen by ejaculating. The sperms and eggs are put together in a dish and stored in the laboratory in a controlled environment to encourage fertilization.",
             "name": "Fertilization",
-            "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf#:~:text=fertilize%20the%20eggs.-,Fertilization,-The%20male%20counterpart"
+            "url": "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore#:~:text=fertilize%20the%20eggs.-,Fertilization,-The%20male%20counterpart"
           },
           {
             "@type": "HowToStep",
             "text": "The embryos are usually transferred into the woman’s uterus three to five days after egg retrieval and fertilization.",
             "name": "Embryo Transfer",
-            "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf#:~:text=IVF%20cycles%20failed.-,Embryo%20Transfer,-The%20embryos%20are"
+            "url": "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore#:~:text=IVF%20cycles%20failed.-,Embryo%20Transfer,-The%20embryos%20are"
           },
           {
             "@type": "HowToStep",
@@ -184,22 +171,7 @@ const Ivf = () => {
       }`,
     };
   }
-  function addDocJsonLd() {
-    return {
-      __html: `{
-  "@context": "https://schema.org/",
-  "@type": "Product",
-  "name": "Helping couples in their Journey towards Parenthood",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "ratingCount": "604",
-    "reviewCount": "1200"
-  }
-}
-`,
-    };
-  }
+
   return (
     <div>
       <Head>
@@ -219,7 +191,7 @@ const Ivf = () => {
         {/* Ld+JSON Data */}
         <script
           type='application/ld+json'
-          dangerouslySetInnerHTML={addProductJsonLd()}
+          dangerouslySetInnerHTML={addDocJsonLd()}
           id='product-jsonld'
         />
 
@@ -240,7 +212,6 @@ const Ivf = () => {
           dangerouslySetInnerHTML={addFaqJsonLd()}
           id='howto-jsonld'
         />
-        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={addReviewJsonLd()}
@@ -268,6 +239,7 @@ const Ivf = () => {
           content='What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).'
         />
         <meta name='twitter:image' content='https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm' />
+        <link rel='canonical' href='https://garbhagudi.com/treatments/ivf-treatment-in-bangalore' />
       </Head>
       <div>
         <Banner />

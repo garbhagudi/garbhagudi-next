@@ -6,7 +6,6 @@ import { gql } from '@apollo/client';
 import BannerComponent from 'sections/home/bannerComponent';
 const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
 const DoctorList = dynamic(() => import('sections/home/doctorList'), { ssr: false });
-const LandingPagePopUp = dynamic(() => import('components/landingPagePopUp'), { ssr: false });
 
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
@@ -165,7 +164,6 @@ const Home = ({ data, testimonials }) => {
       <HomeComponent testimonialPassthrough={testimonials} blogsPassthrough={data.blogs} />
       <DoctorList doctors={data.doctors} />
       <Faq />
-      <LandingPagePopUp />
     </div>
   );
 };
@@ -185,6 +183,7 @@ export const getStaticProps = async () => {
           image {
             url
           }
+          imageUrl
           imageAlt
           medicalRegNo
           id
@@ -197,6 +196,7 @@ export const getStaticProps = async () => {
           image {
             url
           }
+          imageUrl
         }
         blogs(first: 3, orderBy: publishedOn_DESC) {
           id
@@ -205,14 +205,6 @@ export const getStaticProps = async () => {
           slug
           image {
             url
-          }
-          doctor {
-            slug
-            name
-            id
-            image {
-              url
-            }
           }
         }
       }

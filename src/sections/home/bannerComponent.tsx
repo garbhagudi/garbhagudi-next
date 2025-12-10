@@ -13,6 +13,7 @@ interface bannerProps {
       image: {
         url: string;
       };
+      imageUrl: string;
     },
   ];
 }

@@ -51,6 +51,7 @@ const Locations = ({ branches }) => {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277077/Locations/1280x500_HN_wql2mm.webp'
         />
+        <link rel='canonical' href='https://garbhagudi.com/locations' />
       </Head>
       <div className=''>
         <Banner branchTitle={''} />
@@ -67,7 +68,7 @@ const Locations = ({ branches }) => {
               <div className='mx-auto flex max-w-sm flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-brandPink'>
                 <div className='overflow-hidden'>
                   <Image
-                    src={items?.branchPicture?.url}
+                    src={items?.branchPictureUrl}
                     alt={items?.title}
                     width={480}
                     height={100}
@@ -97,6 +98,7 @@ export const getStaticProps = async () => {
           branchPicture {
             url
           }
+          branchPictureUrl
           title
           slug
           id

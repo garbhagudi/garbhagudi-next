@@ -20,6 +20,7 @@ interface BlogProps {
   currentPageNumber: number;
   hasNextPage: boolean;
   hasPreviousPage: boolean;
+  authorSlug: string | null;
   searchTerms: {
     title: string;
     slug: string;
@@ -33,12 +34,12 @@ interface BlogProps {
       image: {
         url: string;
       };
-      doctor: {
-        slug: string;
-        name: string;
-        id: string;
-        image: {
-          url: string;
+      author?: {
+        authorName?: string;
+        name?: string;
+        slug?: string;
+        image?: {
+          url?: string;
         };
       };
     };
@@ -55,6 +56,7 @@ function BlogPage({
   blogs,
   aggregate,
   searchTerms,
+  authorSlug,
 }: BlogProps) {
   const router = useRouter();
   const title = `Blogs | Page ${currentPageNumber} | GarbhaGudi IVF Centre`;
@@ -142,7 +144,7 @@ function BlogPage({
                         width={380}
                         height={214}
                         sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 380px'
-                        className='h-auto w-full rounded-t-lg object-cover'
+                        className='h-60 w-full rounded-t-lg object-cover'
                         priority={index < 3}
                         fetchPriority={index < 1 ? 'high' : 'auto'}
                       />
@@ -158,7 +160,7 @@ function BlogPage({
                     </div>
                     <div className='mt-6 flex items-center'>
                       <div className='flex-shrink-0'>
-                        <Link href={`/doctors/${item?.node?.doctor?.slug}`} passHref>
+                        <Link href={`/`} passHref>
                           <div className=''>
                             <span className='sr-only'>By: GarbhaGudi IVF Centre</span>
                             <Image
@@ -174,7 +176,12 @@ function BlogPage({
                       <div>
                         <div className='text-base font-medium text-gray-800 dark:text-gray-200'>
                           <Link href={'/'}>
-                            <div className='font-lexend'>Author : GarbhaGudi IVF Centre</div>
+                            <div className='font-lexend'>
+                              Author :{' '}
+                              {item?.node?.author?.authorName ||
+                                item?.node.author?.name ||
+                                'GarbhaGudi IVF Centre'}
+                            </div>
                           </Link>
                         </div>
                         <div className='flex space-x-1 font-lexend text-sm text-gray-700 dark:text-gray-200'>
@@ -193,8 +200,8 @@ function BlogPage({
               nextPage={currentPageNumber + 1}
               previousPage={currentPageNumber - 1}
               total={aggregate.count}
-              nextLink={`/blogs/page/${currentPageNumber + 1}`}
-              previousLink={`/blogs/page/${currentPageNumber - 1}`}
+              nextLink={`/blogs/page/${currentPageNumber + 1}${authorSlug ? `?author=${authorSlug}` : ''}`}
+              previousLink={`/blogs/page/${currentPageNumber - 1}${authorSlug ? `?author=${authorSlug}` : ''}`}
               isNext={hasNextPage}
               isPrev={hasPreviousPage}
             />
@@ -210,8 +217,14 @@ export default BlogPage;
 
 export async function getStaticProps({ params }) {
   const page = parseInt(params.page, 10);
+  const requestURL = global.__incrementalCache?.requestHeaders?.referer;
+  let authorSlug = null;
+  if (requestURL?.split('/')[3] === 'fertility-experts') {
+    authorSlug = requestURL?.split('/')[4];
+  } else {
+    authorSlug = requestURL?.split('?')?.[1]?.split('=')[1];
+  }
 
-  // invalid page number (not a number or < 1) → redirect to page 1
   if (isNaN(page) || page < 1) {
     return {
       redirect: {
@@ -220,64 +233,74 @@ export async function getStaticProps({ params }) {
       },
     };
   }
-  const apolloQuery = async ({ limit, offset }) => {
-    return apolloClient.query({
-      query: gql`
-        query ($limit: Int!, $offset: Int!) {
-          blogsConnection(orderBy: publishedOn_DESC, first: $limit, skip: $offset) {
-            blogs: edges {
-              node {
-                id
-                title
-                publishedOn
+
+  // correct union filter for author
+  const where = authorSlug
+    ? {
+        OR: [
+          { author: { Author: { slug: authorSlug } } },
+          { author: { Doctor: { slug: authorSlug } } },
+        ],
+      }
+    : null;
+
+  const QUERY = gql`
+    query ($limit: Int!, $offset: Int!, $where: BlogWhereInput) {
+      blogsConnection(orderBy: publishedOn_DESC, first: $limit, skip: $offset, where: $where) {
+        blogs: edges {
+          node {
+            id
+            title
+            publishedOn
+            slug
+            image {
+              url
+            }
+            author {
+              ... on Author {
+                authorName
                 slug
                 image {
                   url
                 }
-                doctor {
-                  slug
-                  name
-                  id
-                  image {
-                    url
-                  }
+              }
+              ... on Doctor {
+                name
+                slug
+                image {
+                  url
                 }
               }
             }
-            pageInfo {
-              hasNextPage
-              hasPreviousPage
-            }
-            aggregate {
-              count
-            }
-          }
-          allBlogs: blogs {
-            title
-            slug
           }
         }
-      `,
-      variables: {
-        limit,
-        offset,
-      },
-    });
-  };
+        pageInfo {
+          hasNextPage
+          hasPreviousPage
+        }
+        aggregate {
+          count
+        }
+      }
+      allBlogs: blogs {
+        title
+        slug
+      }
+    }
+  `;
 
-  const { data } = await throttledFetch(apolloQuery, {
-    limit,
-    offset: (page - 1) * limit,
-  });
+  const { data } = await throttledFetch(async () =>
+    apolloClient.query({
+      query: QUERY,
+      variables: { limit, offset: (page - 1) * limit, where },
+    })
+  );
 
-  const totalBlogs = data?.blogsConnection?.aggregate?.count || 0;
+  const totalBlogs = data.blogsConnection.aggregate.count;
   const totalPages = Math.ceil(totalBlogs / limit);
 
-  // page > total pages → return 404 (instead of redirect)
-  if (page > totalPages) {
-    return {
-      notFound: true,
-    };
+  if (page > totalPages && totalBlogs > 0) {
+    return { notFound: true };
   }
 
   return {
@@ -286,6 +309,7 @@ export async function getStaticProps({ params }) {
       blogs: data.blogsConnection.blogs,
       aggregate: data.blogsConnection.aggregate,
       searchTerms: data.allBlogs,
+      authorSlug: authorSlug ? authorSlug : null,
       ...data.blogsConnection.pageInfo,
     },
     revalidate: 180,

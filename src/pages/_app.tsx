@@ -34,6 +34,7 @@ function MyApp({ Component, pageProps }) {
     '/treatments/iui-treatment-in-bangalore',
   ];
   const iuiTreatmentPage = router.pathname === '/treatments/iui-treatment-in-bangalore';
+  const isParipoornaPage = router.pathname === '/features/paripoorna';
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
@@ -142,7 +143,7 @@ function MyApp({ Component, pageProps }) {
         )}
       </ThemeProvider>
       <SpeedInsights />
-      <FloatRequestCallBack />
+      {!isParipoornaPage && <FloatRequestCallBack />}
       {!iuiTreatmentPage && <FloatWhatsApp />}
       <FloatPhone />
     </RootLayout>

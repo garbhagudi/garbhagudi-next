@@ -75,6 +75,35 @@ const Career = ({ career }) => {
 
   const title = `${career.position}`;
 
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "HOME",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Careers",
+              "item": "https://www.garbhagudi.com/careers/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${career?.position}",
+              "item": "https://www.garbhagudi.com/careers/${career?.slug}"
+            }
+          ]
+        }`,
+    };
+  }
+
   return (
     <div>
       <Head>
@@ -121,6 +150,13 @@ const Career = ({ career }) => {
         <meta
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Careers_vpudat.webp'
+        />
+
+        {/* Ld+JSON Data */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+          key='breadcrumbs-jsonld'
         />
       </Head>
       <BreadCrumbs

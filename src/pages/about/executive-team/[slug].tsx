@@ -22,6 +22,7 @@ export const getStaticProps = async ({ params }) => {
             image {
               url
             }
+            imageUrl
             bio {
               raw
               text
@@ -67,6 +68,35 @@ const ExecutiveTeam = ({ director }) => {
   }
 
   const title = `${director.name} | GarbhaGudi IVF Centre`;
+
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "About",
+              "item": "https://www.garbhagudi.com/about/overview"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Executive Team",
+              "item": "https://www.garbhagudi.com/about/executive-team"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${director?.name}",
+              "item": "https://www.garbhagudi.com/about/executive-team/${director?.slug}"
+            }
+          ]
+        }`,
+    };
+  }
   return (
     <div>
       <Head>
@@ -99,6 +129,12 @@ const ExecutiveTeam = ({ director }) => {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Directors_jbvcep.webp'
         />
+        {/* Ld+JSON Data */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+          key='breadcrumbs-jsonld'
+        />
       </Head>
       <BreadCrumbs
         text1='About'
@@ -126,7 +162,7 @@ const ExecutiveTeam = ({ director }) => {
               <div className='text-center sm:w-1/3 sm:py-8 sm:pr-8'>
                 <div className='inline-flex w-72 items-center justify-center rounded-full md:w-64'>
                   <Image
-                    src={director?.image.url}
+                    src={director?.imageUrl}
                     alt={director?.name}
                     className='rounded-full'
                     width={500}
@@ -165,7 +201,7 @@ const ExecutiveTeam = ({ director }) => {
               </div>
             </div>
           </div>
-          <Share pinmedia={director.image.url} />
+          <Share pinmedia={director.imageUrl} />
         </div>
       </section>
     </div>

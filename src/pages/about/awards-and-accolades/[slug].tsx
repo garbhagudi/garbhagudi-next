@@ -14,9 +14,11 @@ import Loading from 'components/Loading';
 interface AwardProps {
   award: {
     id: string;
+    slug: string;
     image: {
       url: string;
     };
+    imageUrl: string;
     doctor: {
       name: string;
     };
@@ -37,9 +39,11 @@ export const getStaticProps = async ({ params }) => {
         query ($slug: String!) {
           award(where: { slug: $slug }) {
             id
+            slug
             image {
               url
             }
+            imageUrl
             content {
               raw
               text
@@ -85,6 +89,34 @@ const AwardPage = ({ award }: AwardProps) => {
   if (router.isFallback) {
     return <Loading />;
   }
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "HOME",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Awards & Accolades",
+              "item": "https://www.garbhagudi.com/about/awards-and-accolades"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${award?.title}",
+              "item": "https://www.garbhagudi.com/about/awards-and-accolades/${award?.slug}"
+            }
+          ]
+        }`,
+    };
+  }
   return (
     <div>
       <Head>
@@ -93,7 +125,6 @@ const AwardPage = ({ award }: AwardProps) => {
         <link rel='preload' href={award?.image?.url} as='image' />
         <link rel='dns-prefetch' href='https://media.graphassets.com' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta name='robots' content='noindex, nofollow' />
         <title>{title}</title>
         <meta name='title' content={title} />
         <meta name='description' content={award?.content?.text.slice(0, 160)} />
@@ -110,6 +141,13 @@ const AwardPage = ({ award }: AwardProps) => {
         <meta name='twitter:title' content={`${award?.title} | GarbhaGudi`} />
         <meta name='twitter:description' content={award?.content?.text.slice(0, 160)} />
         <meta name='twitter:image' content={award?.image?.url} />
+
+        {/* Ld+JSON Data */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+          key='breadcrumbs-jsonld'
+        />
       </Head>
       <BreadCrumbs
         link1='/about/'
@@ -224,7 +262,7 @@ const AwardPage = ({ award }: AwardProps) => {
               <figure>
                 <Image
                   className='mb-5 mt-10 w-full rounded-lg'
-                  src={award?.image?.url}
+                  src={award?.imageUrl}
                   alt={award?.title}
                   width={500}
                   height={320}

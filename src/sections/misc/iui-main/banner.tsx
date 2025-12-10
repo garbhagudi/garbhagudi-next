@@ -8,7 +8,7 @@ const Banner = () => {
       <div className='relative grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
         <div className='relative col-span-2'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1744978945/April_Month_Landing_Page_Latest-02_zle4xm.webp'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp'
             width={720}
             height={360}
             alt='Start IVF from as low as 90K'
@@ -17,7 +17,7 @@ const Banner = () => {
             className='hidden h-full w-full md:block'
           />
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1745217384/April_Month_Landing_Page_Latest--02_sa0uzt.webp'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762504289/paripoorna_Landing_Page_Banner-01_wxgq38.webp'
             width={420}
             height={360}
             alt='Start IVF from as low as 90K'
@@ -45,24 +45,15 @@ const Banner = () => {
             Where expert fertility care meets state-of-the-art technology.
           </div>
           <div className='pt-5 font-content text-base'>
-            Experience the miracle of life with{' '}
-            <Link
-              href={'/treatments/iui-treatment-in-bangalore'}
-              className='text-brandPink hover:underline'
-            >
-              IUI treatment in Bangalore.
+            Experience the miracle of life with IUI treatment in Bangalore. Nestled in the heart of
+            the city, our state-of-the-art fertility clinic offers hope and a ray of sunshine for
+            couples who are looking to start a family. Our team of{' '}
+            <Link href={'/fertility-experts '} className='text-brandPink hover:underline'>
+              expert fertility specialists
             </Link>{' '}
-            Nestled in the heart of the city, our state-of-the-art fertility clinic offers hope and
-            a ray of sunshine for couples who are looking to start a family. Our team of expert
-            fertility specialists and cutting-edge technology will guide you on your journey towards
-            parenthood, every step of the way. Embrace the joy of holding your bundle of love in
-            your arms, with{' '}
-            <Link
-              href={'/treatments/iui-treatment-in-bangalore'}
-              className='text-brandPink hover:underline'
-            >
-              IUI treatment in Bangalore.
-            </Link>{' '}
+            and cutting-edge technology will guide you on your journey towards parenthood, every
+            step of the way. Embrace the joy of holding your bundle of love in your arms, with IUI
+            treatment in Bangalore.
           </div>
         </div>
         <Link

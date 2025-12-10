@@ -6,13 +6,13 @@ import apolloClient from 'lib/apollo-graphcms';
 import { throttledFetch } from 'lib/throttle';
 import dynamic from 'next/dynamic';
 import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 const Error = dynamic(() => import('next/error'));
 const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 const Loading = dynamic(() => import('components/Loading'), { ssr: true });
 const BreadCrumbs = dynamic(() => import('components/breadcrumbs'), { ssr: true });
-const LandingPagePopUp = dynamic(() => import('components/landingPagePopUp'), { ssr: false });
 const FAQs = dynamic(() => import('components/FAQs'), { ssr: false });
 const RichText = dynamic(
   () => import('@graphcms/rich-text-react-renderer').then((mod) => mod.RichText),
@@ -37,8 +37,23 @@ export const getStaticProps = async ({ params }) => {
             image {
               url
             }
-            doctor {
-              name
+            author {
+              ... on Author {
+                authorName
+                slug
+                image {
+                  url
+                }
+                imageAlt
+              }
+              ... on Doctor {
+                name
+                slug
+                image {
+                  url
+                }
+                imageAlt
+              }
             }
             content {
               raw
@@ -53,6 +68,7 @@ export const getStaticProps = async ({ params }) => {
               }
             }
             publishedOn
+            updatedAt
           }
         }
       `,
@@ -104,13 +120,46 @@ export async function getStaticPaths() {
     fallback: true,
   };
 }
+export function getYouTubeFromRichText(richText) {
+  if (!richText) return '';
+
+  const extract = (node) => {
+    if (!node) return '';
+    if (
+      node.type === 'iframe' &&
+      (node.url?.includes('youtube.com') || node.url?.includes('youtu.be'))
+    ) {
+      return node.url;
+    }
+    if (node.type === 'html' && typeof node.value === 'string') {
+      const match = node.value.match(/https?:\/\/(?:www\.)?(youtube\.com|youtu\.be)[^\"]+/);
+      if (match) return match[0];
+    }
+    if (node.children) {
+      for (const child of node.children) {
+        const found = extract(child);
+        if (found) return found;
+      }
+    }
+    return '';
+  };
+
+  return extract(richText);
+}
 
 const Blog = ({ blog }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [youtubeURL, setYoutubeURL] = useState<string | null>('');
   const title = `${blog?.metaTitle || blog?.title}`;
   const description = `${blog?.metaDescription || blog?.content?.text.slice(0, 160)}`;
   const keywords = `${blog?.metaKeywords || blog?.title}`;
   const router = useRouter();
+  useEffect(() => {
+    if (blog) {
+      const url = getYouTubeFromRichText(blog?.content?.raw);
+      setYoutubeURL(url);
+    }
+  }, [blog]);
 
   if (router.isFallback) {
     return <Loading />;
@@ -122,6 +171,66 @@ const Blog = ({ blog }) => {
 
   function close() {
     setIsOpen(false);
+  }
+  function addDocJsonLd() {
+    const docJsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://www.garbhagudi.com/blogs/${blog?.slug}`,
+      },
+      headline: blog?.title,
+      image: blog?.image?.url,
+      author: {
+        '@type': blog?.author?.authorName || blog?.author?.name ? 'Person' : 'Organization',
+        name: blog?.author?.authorName || blog?.author?.name || 'GarbhaGudi IVF Centre',
+        url: blog?.author?.name
+          ? `https://www.garbhagudi.com/fertility-experts/${blog?.author?.slug}`
+          : 'https://www.garbhagudi.com',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'GarbhaGudi IVF Centre',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1751352018/GG_New-Hori_Logo_ziwur1.svg',
+        },
+      },
+      datePublished: new Date(blog?.publishedOn).toISOString(),
+      dateModified: new Date(blog?.updatedAt).toISOString(),
+    };
+    return {
+      __html: JSON.stringify(docJsonLd, null, 2),
+    };
+  }
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "Home",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Blogs",
+              "item": "https://www.garbhagudi.com/blogs/page/1"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${blog?.title}",
+              "item": "https://www.garbhagudi.com/blogs/${blog?.slug}"
+            }
+          ]
+        }`,
+    };
   }
   return (
     <>
@@ -135,10 +244,10 @@ const Blog = ({ blog }) => {
             fetchPriority='high'
             type='image/webp'
             imageSrcSet={`
-      ${blog?.image?.url}?w=480 480w,
-      ${blog?.image?.url}?w=800 800w,
-      ${blog?.image?.url}?w=1200 1200w
-    `}
+                ${blog?.image?.url}?w=480 480w,
+                ${blog?.image?.url}?w=800 800w,
+                ${blog?.image?.url}?w=1200 1200w
+        `}
             imageSizes='(max-width: 768px) 100vw, 800px'
           />
           <link rel='dns-prefetch' href='https://media.graphassets.com' />
@@ -156,6 +265,33 @@ const Blog = ({ blog }) => {
           <meta name='keywords' content={keywords} />
 
           {/* Ld+JSON Data */}
+          <script
+            id='breadcrumbs-jsonld'
+            type='application/ld+json'
+            dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+          />
+          <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
+          {/* Video Schema if video found */}
+          {youtubeURL && (
+            <script
+              type='application/ld+json'
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'VideoObject',
+                  name: blog?.title,
+                  description: description,
+                  thumbnailUrl: blog?.image?.url,
+                  uploadDate: new Date(blog?.publishedOn).toISOString(),
+                  embedUrl: youtubeURL,
+                  potentialAction: {
+                    '@type': 'WatchAction',
+                    target: youtubeURL,
+                  },
+                }),
+              }}
+            />
+          )}
 
           {/* Open Graph / Facebook */}
           <meta property='og:title' content={blog?.ogTitle || title} />
@@ -287,14 +423,51 @@ const Blog = ({ blog }) => {
             </div>
             <div className='relative z-10 px-4 sm:px-6 lg:px-8'>
               <div className='mx-auto max-w-7xl'>
-                <h1 className='flex flex-col items-center justify-center gap-2'>
-                  <span className='block text-center font-heading text-2xl font-bold leading-8 tracking-tighter text-gray-800 dark:text-gray-200 sm:text-4xl'>
+                <div className='flex flex-col items-center justify-center gap-2'>
+                  <h1 className='block text-center font-heading text-2xl font-bold leading-8 tracking-tighter text-gray-800 dark:text-gray-200 sm:text-4xl'>
                     {blog?.title}
-                  </span>
+                  </h1>
                   <div onClick={open} className='cursor-pointer font-semibold text-gray-600'>
                     Disclaimer
                   </div>
-                </h1>
+                  {blog?.author && (
+                    <div className='flex items-center justify-center'>
+                      {blog?.author?.name && (
+                        <div className='flex-shrink-0'>
+                          <Link href={`/fertility-experts/${blog?.author?.slug}`} passHref>
+                            <div className='mr-3 h-12 w-12 md:mr-5 md:h-16 md:w-16'>
+                              <span className='sr-only'>By: GarbhaGudi IVF Centre</span>
+                              <Image
+                                className='h-full w-full scale-150 rounded-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert'
+                                src={blog?.author?.image?.url}
+                                alt={blog?.author?.imageAlt}
+                                width={50}
+                                height={50}
+                                priority
+                              />
+                            </div>
+                          </Link>
+                        </div>
+                      )}
+                      <div>
+                        <div className='text-base font-medium text-gray-800 dark:text-gray-200'>
+                          {blog?.author?.authorName ? (
+                            <div className='font-lexend'>
+                              Verified by : {blog?.author?.authorName}
+                            </div>
+                          ) : (
+                            <Link href={`/fertility-experts/${blog?.author?.slug}`} passHref>
+                              <div className='font-lexend'>Verified by : {blog?.author?.name}</div>
+                            </Link>
+                          )}
+                        </div>
+                        <div className='flex space-x-1 font-lexend text-sm text-gray-700 dark:text-gray-200'>
+                          <time>Published: {blog?.publishedOn}</time>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
                 <div className='relative my-8 w-full rounded-lg'>
                   <Image
                     src={blog?.image?.url}
@@ -318,6 +491,16 @@ const Blog = ({ blog }) => {
                           {children}
                         </a>
                       ),
+                      iframe: ({ url, width }) => (
+                        <iframe
+                          src={url || ''}
+                          width={width || '100%'}
+                          height={720}
+                          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                          allowFullScreen
+                          className='w-full rounded-md'
+                        />
+                      ),
                     }}
                   />
                 </div>
@@ -336,7 +519,6 @@ const Blog = ({ blog }) => {
         ) : (
           <Error statusCode={404} />
         )}
-        <LandingPagePopUp />
       </div>
       <Dialog open={isOpen} as='div' className='relative z-10 focus:outline-none' onClose={close}>
         <div className='fixed inset-0 top-1/4 z-10 w-screen overflow-y-auto'>

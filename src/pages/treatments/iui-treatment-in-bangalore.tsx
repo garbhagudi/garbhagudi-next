@@ -12,29 +12,6 @@ const Faq = dynamic(() => import('sections/misc/iui-main/faq'), { ssr: false });
 const ContentXtra = dynamic(() => import('sections/misc/iui-main/more-content'), { ssr: false });
 
 const Iui = () => {
-  function addReviewJsonLd() {
-    return {
-      __html: `{
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        "name": "Intra-Uterine Insemination (IUI)",
-        "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
-        "description": "IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy.",
-        "brand": {
-          "@type": "Brand",
-          "name": "GarbhaGudi IVF Centre"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "bestRating": "5",
-          "worstRating": "1",
-          "reviewCount": "604"
-        }
-      }`,
-    };
-  }
-
   function addBreadcrumbsJsonLd() {
     return {
       __html: `{
@@ -57,7 +34,7 @@ const Iui = () => {
               "@type": "ListItem",
               "position": "3",
               "name": "Intra-Uterine Insemination (IUI)",
-              "item": "https://www.garbhagudi.com/treatments/intra-uterine-insemination-iui"
+              "item": "https://www.garbhagudi.com/treatments/iui-treatment-in-bangalore"
             }
           ]
         }`,
@@ -123,60 +100,55 @@ const Iui = () => {
     };
   }
 
-  function addProductJsonLd() {
-    return {
-      __html: `{
-        "@context": "https://schema.org/",
-        "@type": "Service",
-        "name": "Intra-Uterine Insemination (IUI)",
-        "image": "https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp",
-        "description": "IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy.",
-        "offers": {
-        "@type": "AggregateOffer",
-        "url": "https://www.garbhagudi.com/treatments/intra-uterine-insemination-iui",
-        "priceCurrency": "INR",
-        "lowPrice": "90000",
-        "highPrice": "220000"
-        },
-        "aggregateRating": {
-        "@type": "AggregateRating",
-          "itemReviewed": {
-          "@type": "Hospital",
-          "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
-          "name": "GarbhaGudi IVF Centre",
-          "telephone": "+91 9108 9108 32",
-          "priceRange": "160000 - 400000",
-            "ratingValue": "4.8",
-            "bestRating": "5",
-            "worstRating": "1",
-            "reviewCount": "604"
-          }
-        }
-      }`,
-    };
-  }
   function addDocJsonLd() {
     return {
       __html: `{
-  "@context": "https://schema.org/",
+  "name": "IUI Treatment",
   "@type": "Product",
-  "name": "Experience the hope of starting a family with IUI treatment in Bangalore",
+  "@context": "https://schema.org/",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
     "ratingCount": "604",
+    "ratingValue": "4.9",
     "reviewCount": "1200"
   }
-}
-`,
+}`,
     };
   }
+
+  function addReviewJsonLd() {
+    const title = 'IUI Treatment in Bangalore: Trusted Fertility Solutions';
+    const image =
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp';
+    const description =
+      'Explore the best IUI treatment in Bangalore at GarbhaGudi IVF Centre. High success rates, affordable costs & expert care. Book a consultation today!';
+
+    return {
+      __html: `{
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "${title}",
+      "image": "${image}",
+      "description": "${description}",
+      "brand": {
+        "@type": "Brand",
+        "name": "GarbhaGudi IVF Centre"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "604"
+      }
+    }`,
+    };
+  }
+
   return (
     <div>
       <Head>
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722501966/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0_1_i7oozx.webp'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp'
           as='image'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -187,30 +159,23 @@ const Iui = () => {
           content='Explore the best IUI treatment in Bangalore at GarbhaGudi IVF Centre. High success rates, affordable costs & expert care. Book a consultation today!'
         />
 
-        {/* Ld+JSON Data */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addReviewJsonLd()}
-          key='review-jsonld'
-        />
-
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addProductJsonLd()}
-          key='product-jsonld'
-        />
+        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
 
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
           key='breadcrumbs-jsonld'
         />
-        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
 
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={addFaqJsonLd()}
           key='howto-jsonld'
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addReviewJsonLd()}
+          key='review-jsonld'
         />
 
         {/* Open Graph / Facebook */}
@@ -228,7 +193,7 @@ const Iui = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp'
         />
 
         {/* Twitter*/}
@@ -242,7 +207,7 @@ const Iui = () => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp'
         />
       </Head>
       <Header />

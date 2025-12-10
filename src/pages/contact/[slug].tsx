@@ -57,6 +57,34 @@ export const getStaticPaths = async () => {
 };
 
 const Vas = ({ valueAddedService }) => {
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "HOME",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Contact Us",
+              "item": "https://www.garbhagudi.com/contact/enquiry"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${valueAddedService?.title}",
+              "item": "https://www.garbhagudi.com/contact/${valueAddedService?.slug}"
+            }
+          ]
+        }`,
+    };
+  }
   return (
     <div>
       <Head>
@@ -96,6 +124,13 @@ const Vas = ({ valueAddedService }) => {
           content='GarbhaGudi has been reaching out to couples facing infertility and in the process growing steadily. But as it’s said, growth doesn’t happen in isolation. With this intention, we aim to forge strong partnerships with like-minded associates and in turn bring benefits to both patients who will get the best of treatment options at affordable costs and to partners who wish to grow their business through the strong branding of GarbhaGudi.'
         />
         <meta name='twitter:image' content={valueAddedService?.image?.url} />
+
+        {/* Ld+JSON Data */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+          key='breadcrumbs-jsonld'
+        />
       </Head>
       <BreadCrumbs
         link1='/gg-care'

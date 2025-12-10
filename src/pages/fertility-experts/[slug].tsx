@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import { SiGooglemaps } from 'react-icons/si';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import BlogsSnip from 'sections/home/newBlogs';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 const ExtraSlot = dynamic(() => import('sections/fertility-experts/ExtraSlot'), {
@@ -38,6 +39,7 @@ export const getStaticProps = async ({ params }) => {
           image {
             url
           }
+          imageUrl
           qualification
           designation
           medicalRegNo
@@ -51,6 +53,15 @@ export const getStaticProps = async ({ params }) => {
           educationCredentials {
             raw
             text
+          }
+          docJsonLd
+          blogs {
+            id
+            title
+            slug
+            image {
+              url
+            }
           }
         }
       }
@@ -92,24 +103,53 @@ export async function getStaticPaths() {
     fallback: true,
   };
 }
+const doctorRegistration = (slug: string) => {
+  if (slug === 'dr-radha-puchalapalli') {
+    return '(TNMC)';
+  } else if (slug === 'dr-jala') {
+    return '(KAUPB)';
+  }
+  return '(KMC)';
+};
 
 const Doctor = ({ doctor }) => {
   const router = useRouter();
   const defaultMetaTile = `${doctor?.name} | ${doctor?.designation} | ${doctor?.location[0]?.title} | GarbhaGudi `;
   function addDocJsonLd() {
+    if (!doctor?.docJsonLd) return { __html: '' };
+    const jsonLD =
+      typeof doctor.docJsonLd === 'string' ? JSON.parse(doctor.docJsonLd) : doctor.docJsonLd;
+    return {
+      __html: JSON.stringify(jsonLD, null, 2),
+    };
+  }
+
+  function addBreadcrumbsJsonLd() {
     return {
       __html: `{
-        "@context": "https://schema.org/",
-        "@type": "Person",
-        "name": "${doctor?.name}",
-        "url": "https://garbhagudi.com/fertility-experts/${doctor?.slug}",
-        "image": "${doctor?.image?.url}",
-        "jobTitle": "${doctor?.designation}",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "GarbhaGudi IVF Centre"
-        }
-      }`,
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "Home",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Our Fertility Experts",
+              "item": "https://www.garbhagudi.com/treatments/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${doctor?.name}",
+              "item": "https://www.garbhagudi.com/fertility-experts/${doctor?.slug}"
+            }
+          ]
+        }`,
     };
   }
 
@@ -138,6 +178,11 @@ const Doctor = ({ doctor }) => {
           dangerouslySetInnerHTML={addDocJsonLd()}
           key='org-jsonld'
         />
+        <script
+          id='breadcrumbs-jsonld'
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+        />
 
         {/* Open Graph / Facebook */}
 
@@ -146,7 +191,7 @@ const Doctor = ({ doctor }) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta property='og:description' content={doctor?.bio?.text.slice(0, 160)} />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content={doctor?.image.url} />
+        <meta property='og:image' content={doctor?.imageUrl} />
 
         {/* Twitter*/}
 
@@ -154,7 +199,7 @@ const Doctor = ({ doctor }) => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={doctor?.metaTitle || defaultMetaTile} />
         <meta name='twitter:description' content={doctor?.bio?.text.slice(0, 160)} />
-        <meta name='twitter:image' content={doctor?.image.url} />
+        <meta name='twitter:image' content={doctor?.imageUrl} />
       </Head>
       <BreadCrumbs
         text1={'Our Fertility Experts'}
@@ -211,7 +256,7 @@ const Doctor = ({ doctor }) => {
                         width={340}
                         height={340}
                         alt={doctor?.name}
-                        src={doctor?.image?.url}
+                        src={doctor?.imageUrl}
                         className='-m-16 -ml-20 -mt-44 mb-4 h-auto max-w-xs rounded-full border-none bg-gray-300/30 align-middle shadow-xl dark:bg-gray-600 lg:-ml-16'
                         priority={true}
                       />
@@ -228,9 +273,8 @@ const Doctor = ({ doctor }) => {
                   <div className='mb-2 text-gray-800 dark:text-gray-200'>{doctor?.designation}</div>
                   {doctor?.medicalRegNo && (
                     <div className='mb-2 text-gray-800 dark:text-gray-200'>
-                      Medical Registration Number{' '}
-                      {doctor?.slug === 'dr-radha-puchalapalli' ? '(TNMC)' : '(KMC)'} :{' '}
-                      <span className='font-bold underline'>{doctor?.medicalRegNo}</span>
+                      Medical Registration Number {doctorRegistration(doctor?.slug)}
+                      <span className='mx-1 font-bold underline'>{doctor?.medicalRegNo}</span>
                     </div>
                   )}
                   {doctor?.languages && (
@@ -434,6 +478,9 @@ const Doctor = ({ doctor }) => {
                       </div>
                     )}
                   </div>
+                  {doctor?.blogs && doctor?.blogs?.length > 0 && (
+                    <BlogsSnip posts={doctor?.blogs} slug={doctor?.slug} />
+                  )}
                   {doctor?.videoTestimonials?.length > 0 && (
                     <div className='my-5'>
                       <VideoTestimonials testimonials={doctor?.videoTestimonials} />

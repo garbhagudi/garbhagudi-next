@@ -22,6 +22,7 @@ interface Branches {
       image: {
         url: string;
       };
+      imageUrl: string;
       qualification: string;
       designation: string;
     }[];
@@ -40,7 +41,6 @@ const IndexPage = ({ branches }: Branches) => {
         <link rel='preconnect' href='https://res.cloudinary.com' />
         <link rel='preconnect' href='https://maps.googleapis.com' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta name='robots' content='noindex, nofollow' />
         <title>Best IVF Specialist in Bangalore</title>
         <meta name='title' content='Best IVF Specialist in Bangalore' />
         <meta
@@ -181,7 +181,7 @@ const IndexPage = ({ branches }: Branches) => {
                                   <div className='space-y-2'>
                                     <Image
                                       className='mx-auto my-auto mt-4 h-36 w-36 rounded-full bg-gray-400 dark:bg-gray-700'
-                                      src={doctor?.image.url}
+                                      src={doctor?.image.url || doctor?.imageUrl}
                                       alt={doctor?.name}
                                       width={500}
                                       height={500}
@@ -236,6 +236,7 @@ export const getStaticProps = async () => {
             image {
               url
             }
+            imageUrl
             qualification
             designation
           }
@@ -247,7 +248,6 @@ export const getStaticProps = async () => {
   return {
     props: {
       branches: data.branches,
-      fallback: true,
     },
     revalidate: 180,
   };

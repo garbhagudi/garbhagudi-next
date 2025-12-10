@@ -16,6 +16,7 @@ interface doctorListProps {
     image: {
       url: string;
     };
+    imageUrl: string;
     imageAlt: string;
   }[];
 }
@@ -99,7 +100,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                                   <div className='absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 bg-[length:400%] dark:bg-gray-400'></div>
                                   <Image
                                     className='shadow-champaigne rounded-full bg-transparent drop-shadow-2xl'
-                                    src={doctor.image.url}
+                                    src={doctor.image.url || doctor.imageUrl}
                                     alt={doctor.imageAlt || doctor.name}
                                     width={400}
                                     height={400}

@@ -19,6 +19,7 @@ export const getStaticProps = async ({ params }) => {
           image {
             url
           }
+          imageUrl
           content {
             raw
             text
@@ -63,12 +64,40 @@ export const getStaticPaths = async () => {
 const Vas = ({ valueAddedService }) => {
   const title = `${valueAddedService?.title} | GarbhaGudi IVF Centre}`;
   const desc = `${valueAddedService?.content.text.slice(0, 169)}`;
-  const image = `${valueAddedService?.image.url}`;
+  const image = `${valueAddedService?.imageUrl}`;
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "HOME",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Features",
+              "item": "https://www.garbhagudi.com/features"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${valueAddedService?.title}",
+              "item": "https://www.garbhagudi.com/features/${valueAddedService?.slug}"
+            }
+          ]
+        }`,
+    };
+  }
   return (
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='preload' href={valueAddedService?.image?.url} as='image' />
+        <link rel='preload' href={valueAddedService?.imageUrl} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>
           {valueAddedService?.title
@@ -94,6 +123,13 @@ const Vas = ({ valueAddedService }) => {
         <meta name='twitter:title' content={title} />
         <meta name='twitter:description' content={desc} />
         <meta name='twitter:image' content={image} />
+
+        {/* Ld+JSON Data */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+          key='breadcrumbs-jsonld'
+        />
       </Head>
       <BreadCrumbs
         link1='/features'
@@ -204,7 +240,7 @@ const Vas = ({ valueAddedService }) => {
               </h1>
               <Image
                 className='mb-5 mt-10 w-full rounded-lg'
-                src={valueAddedService?.image.url}
+                src={valueAddedService?.imageUrl}
                 alt={valueAddedService?.title}
                 width={1200}
                 height={500}

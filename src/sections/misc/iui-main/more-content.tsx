@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ContentXtra = () => {
   return (
@@ -48,9 +49,12 @@ const ContentXtra = () => {
       </div>
       <div className='mt-4 px-3 font-content'>
         It's important to note that IUI is usually done in conjunction with ovulation induction
-        medications. The success rate for IUI varies depending on several factors, including the
-        woman's age and the cause of infertility. It's a relatively simple and low-invasive
-        procedure.
+        medications. The{' '}
+        <Link href={'/features/success-rates-of-ivf'} className='text-brandPink hover:underline'>
+          success rate for IUI
+        </Link>{' '}
+        varies depending on several factors, including the woman's age and the cause of infertility.
+        It's a relatively simple and low-invasive procedure.
       </div>
       <div>
         <h3 className='px-3 pt-6 font-heading text-lg font-bold'>

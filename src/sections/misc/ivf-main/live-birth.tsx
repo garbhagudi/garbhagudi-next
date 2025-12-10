@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const LiveBirth = () => {
   return (
     <div className='mx-auto max-w-7xl text-gray-800 dark:text-gray-200'>
@@ -47,9 +49,13 @@ const LiveBirth = () => {
             </li>
           </ul>
           <div className='mt-4'>
-            Overall, the success rate of IVF can vary greatly depending on these and other factors.
-            It is important for patients to discuss their specific situation with their healthcare
-            provider to determine the best course of treatment.
+            Overall, the{' '}
+            <Link href={'features/success-rates-of-ivf'} className='text-brandPink hover:underline'>
+              success rate of IVF
+            </Link>{' '}
+            can vary greatly depending on these and other factors. It is important for patients to
+            discuss their specific situation with their healthcare provider to determine the best
+            course of treatment.
           </div>
         </div>
       </div>

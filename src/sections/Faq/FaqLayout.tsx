@@ -29,7 +29,7 @@ const AccordionLayout = ({
         onClick={() => handleSetIndex(index)}
         className={
           activeIndex === index
-            ? `text-md mt-3 flex w-full items-center justify-between rounded-t-lg bg-gg-500 px-3 py-2 font-heading font-semibold text-gray-200 transition-all duration-500 ease-in-out hover:cursor-pointer dark:bg-gg-400 dark:text-gray-800 sm:px-6 xl:text-xl`
+            ? `text-md mt-3 flex w-full items-center justify-between rounded-t-lg bg-gg-500 px-3 py-2 font-semibold text-gray-200 transition-all duration-500 ease-in-out hover:cursor-pointer dark:bg-gg-400 dark:text-gray-800 sm:px-6 xl:text-xl`
             : `text-md mt-3 flex w-full items-center justify-between border-gray-300 px-3 py-1 font-lexend font-medium text-gray-800 transition-all duration-500 ease-in-out hover:cursor-pointer hover:rounded-lg hover:bg-gg-400 hover:py-3 dark:text-gray-200 sm:px-6 sm:hover:text-lg xl:hover:text-xl`
         }
       >

@@ -8,7 +8,7 @@ const Steps = dynamic(() => import('sections/paripoorna/steps'), { ssr: false })
 const TermsConditions = dynamic(() => import('sections/paripoorna/tandc'), { ssr: false });
 const Paripoorna = () => {
   return (
-    <div>
+    <div className='text-justify'>
       <Head>
         {/* Primary Tags */}
         <link
@@ -17,8 +17,8 @@ const Paripoorna = () => {
           as='image'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>Paripoorna | Get flat ₹1,00,000 off on IVF Treatments</title>
-        <meta name='title' content='Paripoorna | Get a flat ₹1,00,000 off on IVF Treatments' />
+        <title>Paripoorna | Get Flat ₹1,11,111* OFF on your IVF Treatments</title>
+        <meta name='title' content='Paripoorna | Get Flat ₹1,11,111* OFF on your IVF Treatments' />
         <meta
           name='description'
           content='GarbhaGudi is where dreams come alive, hopes never fade and possibilities never end. We work to help you cherish the golden moment of holding your bundle of joy'
@@ -27,7 +27,7 @@ const Paripoorna = () => {
 
         <meta
           property='og:title'
-          content='Paripoorna | Get a flat ₹1,00,000 off on IVF Treatments'
+          content='Paripoorna | Get Flat ₹1,11,111* OFF on your IVF Treatments'
         />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
@@ -38,7 +38,7 @@ const Paripoorna = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1700052783/paripoorna/mother-with-daughter-lie-bed-dog-looking-them-min_uecuvg.webp'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1731247437/paripoorna/Paripoorna_English_tfrujt.webp'
         />
 
         {/* Twitter*/}
@@ -47,7 +47,7 @@ const Paripoorna = () => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta
           name='twitter:title'
-          content='Paripoorna | Get a flat ₹1,00,000 off on IVF Treatments'
+          content='Paripoorna | Get Flat ₹1,11,111* OFF on your IVF Treatments'
         />
         <meta
           name='twitter:description'
@@ -57,6 +57,7 @@ const Paripoorna = () => {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1700052783/paripoorna/mother-with-daughter-lie-bed-dog-looking-them-min_uecuvg.webp'
         />
+        <link rel='canonical' href='https://garbhagudi.com/features/paripoorna' />
       </Head>
 
       <div className="overflow-x-hidden bg-[url('https://res.cloudinary.com/garbhagudiivf/image/upload/v1669643962/Banner/Bunting_kgdona.webp')] bg-contain bg-no-repeat">
