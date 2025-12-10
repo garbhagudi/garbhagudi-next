@@ -18,6 +18,7 @@ export const getStaticProps = async ({ params }) => {
         article(where: { slug: $slug }) {
           id
           title
+          slug
           metaTitle
           metaDescription
           metaKeywords
@@ -88,6 +89,7 @@ interface FaqProps {
 interface BlogProps {
   article: {
     title: string;
+    slug: string;
     metaTitle: string;
     metaDescription: string;
     metaKeywords: string;
@@ -113,6 +115,101 @@ const Blog = ({ article }: BlogProps) => {
     return <Loading />;
   }
 
+  function addReviewJsonLd() {
+    if (!article?.title || !article?.image?.url) {
+      return { __html: '' };
+    }
+
+    const title = article.title.replace(/"/g, '\\"');
+    const image = article.image.url;
+    const description = article?.content?.text?.slice(0, 160)?.replace(/"/g, '\\"') || '';
+
+    return {
+      __html: `{
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "${title}",
+      "image": "${image}",
+      "description": "${description}",
+      "brand": {
+        "@type": "Brand",
+        "name": "GarbhaGudi IVF Centre"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "604"
+      }
+    }`,
+    };
+  }
+
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "HOME",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Solutions",
+              "item": "https://www.garbhagudi.com/solutions/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${article?.title}",
+              "item": "https://www.garbhagudi.com/solutions/${article?.slug}"
+            }
+          ]
+        }`,
+    };
+  }
+  function addDocJsonLd() {
+    return {
+      __html: `{
+  "name": "${article?.title}",
+  "@type": "Product",
+  "@context": "https://schema.org/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingCount": "604",
+    "ratingValue": "4.9",
+    "reviewCount": "1200"
+  }
+}`,
+    };
+  }
+  function faqJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [${article?.faq
+          ?.map(
+            (item: { question: string; answer: { text: string } }) => `{
+              "@type": "Question",
+              "name": "${item.question.replace(/"/g, '\\"')}",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "${item.answer.text.replace(/"/g, '\\"')}"
+              } 
+            }`
+          )
+          .join(',')}]
+          
+      }
+      `,
+    };
+  }
+
   const title = `${article?.title} | GarbhaGudi`;
   return (
     <div>
@@ -126,7 +223,6 @@ const Blog = ({ article }: BlogProps) => {
         <meta name='keywords' content={article?.metaKeywords} />
 
         {/* Open Graph / Facebook */}
-
         <meta property='og:title' content={`${article?.metaTitle}`} />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
@@ -135,12 +231,31 @@ const Blog = ({ article }: BlogProps) => {
         <meta property='og:image' content={article?.image.url} />
 
         {/* Twitter*/}
-
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={`${article?.metaTitle} | GarbhaGudi IVF Centre`} />
         <meta name='twitter:description' content={article?.metaDescription} />
         <meta name='twitter:image' content={article?.image.url} />
+
+        {/* Ld+JSON Data */}
+        <script
+          id='breadcrumbs-jsonld'
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+        />
+        <script
+          id='review-jsonld'
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addReviewJsonLd()}
+        />
+        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
+        {article?.faq?.length > 0 && (
+          <script
+            type='application/ld+json'
+            dangerouslySetInnerHTML={faqJsonLd()}
+            id='faq-jsonld'
+          />
+        )}
       </Head>
       <div className='relative overflow-hidden bg-white py-16 dark:bg-gray-800'>
         <div className='hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full'>

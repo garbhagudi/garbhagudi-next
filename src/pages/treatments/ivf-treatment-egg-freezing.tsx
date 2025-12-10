@@ -92,48 +92,44 @@ export default function fertility() {
     };
   }
 
-  function addProductJsonLd() {
+  function addDocJsonLd() {
+    return {
+      __html: `{
+  "name": "IVF Treatment & Egg Freezing",
+  "@type": "Product",
+  "@context": "https://schema.org/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingCount": "604",
+    "ratingValue": "4.9",
+    "reviewCount": "1200"
+  }
+}`,
+    };
+  }
+
+  function addReviewJsonLd() {
+    const title = 'IVF Treatment & Egg Freezing in Bangalore: Expert Fertility Care';
+    const image =
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--01_easb3r.webp';
+    const description =
+      'Explore advanced IVF treatment & egg freezing at GarbhaGudi IVF. Boost your fertility journey with expert care. Book a consultation today!';
+
     return {
       __html: `{
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "IVF Treatment & Egg Freezing in Bangalore",
-      "description": "Explore advanced IVF treatment and egg freezing options to preserve fertility and increase your chances of conception. Trusted by thousands of hopeful parents.",
-      "url": "https://www.garbhagudi.com/treatments/ivf-treatment-egg-freezing",
- "image": 
-        "https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--01_easb3r.webp"
-      ,
-       "telephone": "+91 9108 9108 32",
-            "priceRange": "₹1,10,000 - ₹1,60,000",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "CMR Road, Kalyan Nagar",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "Karnataka",
-        "postalCode": "560043",
-        "addressCountry": "IN"
-      },
-      "provider": {
-        "@type": "Hospital",
-        "name": "GarbhaGudi IVF Centre",
-        "telephone": "+91 9108 9108 32",
-           "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "CMR Road, Kalyan Nagar",
-          "addressLocality": "Bengaluru",
-          "addressRegion": "Karnataka",
-          "postalCode": "560043",
-          "addressCountry": "IN"
-        },
-         "image":
-        "https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--01_easb3r.webp"
-      ,
-        "priceRange": "₹1,10,000 - ₹1,60,000"
+      "@type": "Product",
+      "name": "${title}",
+      "image": "${image}",
+      "description": "${description}",
+      "brand": {
+        "@type": "Brand",
+        "name": "GarbhaGudi IVF Centre"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": 4.8,
-        "ratingCount": 604
+        "ratingValue": "4.8",
+        "ratingCount": "604"
       }
     }`,
     };
@@ -150,7 +146,6 @@ export default function fertility() {
         <link rel='dns-prefetch' href='https://media.graphassets.com' />
         {/* Primary Tags */}
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta name='robots' content='noindex, nofollow' />
         <title>IVF Treatment & Egg Freezing in Bangalore | GarbhaGudi</title>
         <meta name='title' content={'IVF Treatment & Egg Freezing in Bangalore | GarbhaGudi'} />
         <meta name='og:title' content='IVF Treatment & Egg Freezing | Expert Fertility Care' />
@@ -200,7 +195,7 @@ export default function fertility() {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--01_easb3r.webp'
         />
 
-        <script type='application/ld+json' dangerouslySetInnerHTML={addProductJsonLd()} />
+        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
 
         <script
           type='application/ld+json'
@@ -212,6 +207,12 @@ export default function fertility() {
           type='application/ld+json'
           dangerouslySetInnerHTML={addFaqJsonLd()}
           key='howto-jsonld'
+        />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addReviewJsonLd()}
+          key='review-jsonld'
         />
       </Head>
       <Banner />
