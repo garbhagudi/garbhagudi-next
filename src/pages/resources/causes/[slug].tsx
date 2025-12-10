@@ -69,6 +69,79 @@ const Blog = ({ cause }) => {
     return <Loading />;
   }
 
+  function addReviewJsonLd() {
+    if (!cause?.title || !cause?.image?.url) {
+      return { __html: '' };
+    }
+
+    const title = cause.title.replace(/"/g, '\\"');
+    const image = cause.image.url;
+    const description = cause?.content?.text?.slice(0, 160)?.replace(/"/g, '\\"') || '';
+
+    return {
+      __html: `{
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "${title}",
+      "image": "${image}",
+      "description": "${description}",
+      "brand": {
+        "@type": "Brand",
+        "name": "GarbhaGudi IVF Centre"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "604"
+      }
+    }`,
+    };
+  }
+
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "Resources",
+              "item": "https://www.garbhagudi.com/resources"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Causes",
+              "item": "https://www.garbhagudi.com/resources/causes"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${cause?.title}",
+              "item": "https://www.garbhagudi.com/resources/causes/${cause?.slug}"
+            }
+          ]
+        }`,
+    };
+  }
+  function addDocJsonLd() {
+    return {
+      __html: `{
+  "name": "${cause?.title}",
+  "@type": "Product",
+  "@context": "https://schema.org/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingCount": "604",
+    "ratingValue": "4.9",
+    "reviewCount": "1200"
+  }
+}`,
+    };
+  }
+
   const title = `${cause?.title} | GarbhaGudi`;
   return (
     <div>
@@ -97,6 +170,19 @@ const Blog = ({ cause }) => {
         <meta name='twitter:title' content={`${cause?.title} | GarbhaGudi IVF Centre`} />
         <meta name='twitter:description' content={cause?.content?.text.slice(0, 160)} />
         <meta name='twitter:image' content={cause?.imageUrl} />
+
+        {/* Ld+JSON Data */}
+        <script
+          id='breadcrumbs-jsonld'
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+        />
+        <script
+          id='review-jsonld'
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addReviewJsonLd()}
+        />
+        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
       </Head>
       <BreadCrumbs
         link1='/resources/causes'

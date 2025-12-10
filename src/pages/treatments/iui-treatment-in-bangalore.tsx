@@ -100,48 +100,44 @@ const Iui = () => {
     };
   }
 
-  function addProductJsonLd() {
+  function addDocJsonLd() {
+    return {
+      __html: `{
+  "name": "IUI Treatment",
+  "@type": "Product",
+  "@context": "https://schema.org/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingCount": "604",
+    "ratingValue": "4.9",
+    "reviewCount": "1200"
+  }
+}`,
+    };
+  }
+
+  function addReviewJsonLd() {
+    const title = 'IUI Treatment in Bangalore: Trusted Fertility Solutions';
+    const image =
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp';
+    const description =
+      'Explore the best IUI treatment in Bangalore at GarbhaGudi IVF Centre. High success rates, affordable costs & expert care. Book a consultation today!';
+
     return {
       __html: `{
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Intra-Uterine Insemination (IUI)",
-      "description": "IUI (Intrauterine Insemination) is a fertility treatment procedure in which sperm is placed directly inside a woman's uterus to increase the chance of pregnancy.",
-      "url": "https://www.garbhagudi.com/treatments/iui-treatment-in-bangalore",
- "image": 
-        "https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp"
-      ,
-       "telephone": "+91 9108 9108 32",
-            "priceRange": "₹1,10,000 - ₹1,60,000",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "CMR Road, Kalyan Nagar",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "Karnataka",
-        "postalCode": "560043",
-        "addressCountry": "IN"
-      },
-      "provider": {
-        "@type": "Hospital",
-        "name": "GarbhaGudi IVF Centre",
-        "telephone": "+91 9108 9108 32",
-           "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "CMR Road, Kalyan Nagar",
-          "addressLocality": "Bengaluru",
-          "addressRegion": "Karnataka",
-          "postalCode": "560043",
-          "addressCountry": "IN"
-        },
-         "image":
-        "https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.webp"
-      ,
-        "priceRange": "₹1,10,000 - ₹1,60,000"
+      "@type": "Product",
+      "name": "${title}",
+      "image": "${image}",
+      "description": "${description}",
+      "brand": {
+        "@type": "Brand",
+        "name": "GarbhaGudi IVF Centre"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": 4.8,
-        "ratingCount": 604
+        "ratingValue": "4.8",
+        "ratingCount": "604"
       }
     }`,
     };
@@ -163,7 +159,7 @@ const Iui = () => {
           content='Explore the best IUI treatment in Bangalore at GarbhaGudi IVF Centre. High success rates, affordable costs & expert care. Book a consultation today!'
         />
 
-        <script type='application/ld+json' dangerouslySetInnerHTML={addProductJsonLd()} />
+        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
 
         <script
           type='application/ld+json'
@@ -175,6 +171,11 @@ const Iui = () => {
           type='application/ld+json'
           dangerouslySetInnerHTML={addFaqJsonLd()}
           key='howto-jsonld'
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addReviewJsonLd()}
+          key='review-jsonld'
         />
 
         {/* Open Graph / Facebook */}

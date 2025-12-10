@@ -153,48 +153,44 @@ const InfertilityPage = ({ doctors }) => {
     };
   }
 
-  function addProductJsonLd() {
+  function addDocJsonLd() {
+    return {
+      __html: `{
+  "name": "Infertility Treatment",
+  "@type": "Product",
+  "@context": "https://schema.org/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingCount": "604",
+    "ratingValue": "4.9",
+    "reviewCount": "1200"
+  }
+}`,
+    };
+  }
+
+  function addReviewJsonLd() {
+    const title = 'Infertility Treatment';
+    const image =
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1691229236/Misc/pregnant-woman-min_wvchfc.webp';
+    const description =
+      'Explore top-notch infertility treatment in Bangalore at GarbhaGudi IVF Centre. Expert care, advanced procedures & high success rates. Book a consultation!';
+
     return {
       __html: `{
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Infertility Treatment in Bangalore",
-      "description": "Infertility Treatment is a comprehensive approach designed to assist couples struggling to conceive naturally. For those seeking top-notch Fertility Treatment in Bangalore, GarbhaGudi IVF Centre offers cutting-edge solutions and compassionate care.",
-      "url": "https://www.garbhagudi.com/treatments/infertility-treatment-in-bangalore",
- "image": 
-        "https://res.cloudinary.com/garbhagudiivf/image/upload/v1691234594/Misc/gynecologist-performing-ultrasound-consultation-min_qb43zc.webp"
-      ,
-       "telephone": "+91 9108 9108 32",
-            "priceRange": "₹1,10,000 - ₹1,60,000",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "CMR Road, Kalyan Nagar",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "Karnataka",
-        "postalCode": "560043",
-        "addressCountry": "IN"
-      },
-      "provider": {
-        "@type": "Hospital",
-        "name": "GarbhaGudi IVF Centre",
-        "telephone": "+91 9108 9108 32",
-           "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "CMR Road, Kalyan Nagar",
-          "addressLocality": "Bengaluru",
-          "addressRegion": "Karnataka",
-          "postalCode": "560043",
-          "addressCountry": "IN"
-        },
-         "image":
-        "https://res.cloudinary.com/garbhagudiivf/image/upload/v1691234594/Misc/gynecologist-performing-ultrasound-consultation-min_qb43zc.webp"
-      ,
-        "priceRange": "₹1,10,000 - ₹1,60,000"
+      "@type": "Product",
+      "name": "${title}",
+      "image": "${image}",
+      "description": "${description}",
+      "brand": {
+        "@type": "Brand",
+        "name": "GarbhaGudi IVF Centre"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": 4.8,
-        "ratingCount": 604
+        "ratingValue": "4.8",
+        "ratingCount": "604"
       }
     }`,
     };
@@ -254,7 +250,7 @@ const InfertilityPage = ({ doctors }) => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
         />
 
-        <script type='application/ld+json' dangerouslySetInnerHTML={addProductJsonLd()} />
+        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
 
         <script
           type='application/ld+json'
@@ -266,6 +262,11 @@ const InfertilityPage = ({ doctors }) => {
           type='application/ld+json'
           dangerouslySetInnerHTML={addFaqJsonLd()}
           key='howto-jsonld'
+        />
+        <script
+          id='review-jsonld'
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addReviewJsonLd()}
         />
       </Head>
       <Banner />

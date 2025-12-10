@@ -68,6 +68,35 @@ const ExecutiveTeam = ({ director }) => {
   }
 
   const title = `${director.name} | GarbhaGudi IVF Centre`;
+
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "About",
+              "item": "https://www.garbhagudi.com/about/overview"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Executive Team",
+              "item": "https://www.garbhagudi.com/about/executive-team"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "${director?.name}",
+              "item": "https://www.garbhagudi.com/about/executive-team/${director?.slug}"
+            }
+          ]
+        }`,
+    };
+  }
   return (
     <div>
       <Head>
@@ -99,6 +128,12 @@ const ExecutiveTeam = ({ director }) => {
         <meta
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Directors_jbvcep.webp'
+        />
+        {/* Ld+JSON Data */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+          key='breadcrumbs-jsonld'
         />
       </Head>
       <BreadCrumbs

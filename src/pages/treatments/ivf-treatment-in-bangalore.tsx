@@ -40,30 +40,44 @@ const Ivf = () => {
     };
   }
 
-  function addProductJsonLd() {
+  function addDocJsonLd() {
+    return {
+      __html: `{
+  "name": "IVF Treatment",
+  "@type": "Product",
+  "@context": "https://schema.org/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingCount": "604",
+    "ratingValue": "4.9",
+    "reviewCount": "1200"
+  }
+}`,
+    };
+  }
+
+  function addReviewJsonLd() {
+    const title = 'IVF Treatment in Bangalore: Trusted Fertility Solutions';
+    const image =
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1672381537/Misc/happy-pregnant-woman-late-pregnancy-stage-sitting-grass-lawn-min_11zon_xkeac0.webp';
+    const description =
+      'Explore the best IVF treatment in Bangalore at GarbhaGudi IVF Centre. High success rates, expert care & affordable costs. Book a consultation today!';
+
     return {
       __html: `{
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "additionalType": "https://schema.org/Hospital",
-      "name": "GarbhaGudi IVF Centre - IVF Treatment in Bangalore",
-      "description": "IVF or In Vitro Fertilization is one of the most widely used Assisted Reproductive Techniques (ART).",
-      "url": "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore",
-      "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
-      "telephone": "+91 9108 9108 32",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "CMR Road, Kalyan Nagar",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "Karnataka",
-        "postalCode": "560043",
-        "addressCountry": "IN"
+      "@type": "Product",
+      "name": "${title}",
+      "image": "${image}",
+      "description": "${description}",
+      "brand": {
+        "@type": "Brand",
+        "name": "GarbhaGudi IVF Centre"
       },
-      "priceRange": "₹1,10,000 - ₹1,60,000",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": 4.8,
-        "ratingCount": 604
+        "ratingValue": "4.8",
+        "ratingCount": "604"
       }
     }`,
     };
@@ -177,7 +191,7 @@ const Ivf = () => {
         {/* Ld+JSON Data */}
         <script
           type='application/ld+json'
-          dangerouslySetInnerHTML={addProductJsonLd()}
+          dangerouslySetInnerHTML={addDocJsonLd()}
           id='product-jsonld'
         />
 
@@ -197,6 +211,11 @@ const Ivf = () => {
           type='application/ld+json'
           dangerouslySetInnerHTML={addFaqJsonLd()}
           id='howto-jsonld'
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addReviewJsonLd()}
+          id='review-jsonld'
         />
         {/* Open Graph / Facebook */}
 
