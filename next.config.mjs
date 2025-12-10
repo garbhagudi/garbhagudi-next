@@ -916,11 +916,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/careers/academic-coordinator',
-        destination: '/careers',
-        permanent: true,
-      },
-      {
         source: '/category/doctors',
         destination: '/fertility-experts',
         permanent: true,
@@ -3068,3 +3063,4 @@ const nextConfig = {
 };
 
 export default nextConfig;
+
