@@ -19,6 +19,28 @@ interface CareerProps {
   };
 }
 const IndexPage = ({ careers }) => {
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "Home",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Careers",
+              "item": "https://www.garbhagudi.com/careers"
+            }
+          ]
+        }`,
+    };
+  }
   return (
     <div>
       <Head>
@@ -66,6 +88,12 @@ const IndexPage = ({ careers }) => {
         <meta
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Careers_vpudat.webp'
+        />
+
+        <script
+          id='breadcrumbs-jsonld'
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
         />
       </Head>
       <BreadCrumbs
