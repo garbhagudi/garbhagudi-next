@@ -43,6 +43,34 @@ interface Award {
 }
 
 const Awards = ({ award }: Award) => {
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "Home",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "About",
+              "item": "https://www.garbhagudi.com/about/overview"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "Awards & Accolades",
+              "item": "https://www.garbhagudi.com/about/awards-and-accolades"
+            },
+          ]
+        }`,
+    };
+  }
   return (
     <div>
       <Head>
@@ -84,6 +112,12 @@ const Awards = ({ award }: Award) => {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
         />
+
+        <script
+          id='breadcrumbs-jsonld'
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+        />
       </Head>
       <BreadCrumbs
         link1='/about/overview'
@@ -115,7 +149,7 @@ const Awards = ({ award }: Award) => {
                   <div className='flex-shrink-0'>
                     <Image
                       className='h-38 w-full cursor-pointer rounded-t-lg object-contain'
-                      src={item?.imageUrl}
+                      src={item?.image?.url}
                       alt={item?.title}
                       width={360}
                       height={180}

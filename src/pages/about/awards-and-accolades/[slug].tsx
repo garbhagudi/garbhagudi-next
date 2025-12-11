@@ -262,7 +262,7 @@ const AwardPage = ({ award }: AwardProps) => {
               <figure>
                 <Image
                   className='mb-5 mt-10 w-full rounded-lg'
-                  src={award?.imageUrl}
+                  src={award?.image?.url}
                   alt={award?.title}
                   width={500}
                   height={320}
