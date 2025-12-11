@@ -6,6 +6,34 @@ import { gql } from '@apollo/client';
 import Image from 'next/image';
 
 const IndexPage = ({ causes }) => {
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "Home",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Resources",
+              "item": "https://www.garbhagudi.com/resources"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "Causes",
+              "item": "https://www.garbhagudi.com/resources/causes"
+            },
+          ]
+        }`,
+    };
+  }
   return (
     <div>
       <Head>
@@ -47,9 +75,14 @@ const IndexPage = ({ causes }) => {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Cau_Diag_Treat_d0t3vx.webp'
         />
+        <script
+          id='breadcrumbs-jsonld'
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+        />
       </Head>
       <BreadCrumbs
-        link1='/resources/causes'
+        link1='/resources'
         text1='Resources'
         text2='Causes'
         link2='/resources/causes'
