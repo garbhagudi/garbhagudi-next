@@ -60,7 +60,34 @@ function BlogPage({
 }: BlogProps) {
   const router = useRouter();
   const title = `Blogs | Page ${currentPageNumber} | GarbhaGudi IVF Centre`;
-
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "Home",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Blogs",
+              "item": "https://www.garbhagudi.com/blogs/page/1"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "Page ${currentPageNumber}",
+              "item": "https://www.garbhagudi.com/blogs/page/${currentPageNumber}"
+            }
+          ]
+        }`,
+    };
+  }
   if (router.isFallback) {
     return <Loading />;
   }
@@ -110,6 +137,12 @@ function BlogPage({
           <meta
             name='twitter:image'
             content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Blog_Index_nqj7cm.webp'
+          />
+
+          <script
+            id='breadcrumbs-jsonld'
+            type='application/ld+json'
+            dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
           />
         </Head>
         <BreadCrumbs

@@ -34,6 +34,28 @@ const IndexPage = ({ branches }: Branches) => {
   if (router.isFallback) {
     return <Loading />;
   }
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "Home",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "Our Fertility Experts",
+              "item": "https://www.garbhagudi.com/fertility-experts"
+            }
+          ]
+        }`,
+    };
+  }
   return (
     <div>
       <Head>
@@ -75,6 +97,12 @@ const IndexPage = ({ branches }: Branches) => {
         <meta
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+        />
+
+        <script
+          id='breadcrumbs-jsonld'
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
         />
       </Head>
       <BreadCrumbs
