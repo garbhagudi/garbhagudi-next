@@ -11,32 +11,84 @@ const Video = dynamic(() => import('sections/misc/ivf-main/video'), { ssr: false
 const Related = dynamic(() => import('sections/misc/ivf-main/related'), { ssr: false });
 
 const Ivf = () => {
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "HOME",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "treatments",
+              "item": "https://www.garbhagudi.com/treatments/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "In-vitro Fertilization (IVF)",
+              "item": "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore"
+            }
+          ]
+        }`,
+    };
+  }
+
   function addDocJsonLd() {
     return {
       __html: `{
+  "name": "IVF Treatment",
+  "@type": "Product",
+  "@context": "https://schema.org/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingCount": "604",
+    "ratingValue": "4.9",
+    "reviewCount": "1200"
+  }
+}`,
+    };
+  }
+
+  function addReviewJsonLd() {
+    const title = 'IVF Treatment in Bangalore: Trusted Fertility Solutions';
+    const image =
+      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1672381537/Misc/happy-pregnant-woman-late-pregnancy-stage-sitting-grass-lawn-min_11zon_xkeac0.webp';
+    const description =
+      'Explore the best IVF treatment in Bangalore at GarbhaGudi IVF Centre. High success rates, expert care & affordable costs. Book a consultation today!';
+
+    return {
+      __html: `{
       "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "name": "IVF Treatment",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingCount": 604,
-            "ratingValue": "4.9",
-            "reviewCount": 1200
-          }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", position: 1, name: "HOME", item: "https://www.garbhagudi.com/" },
-            { "@type": "ListItem", position: 2, name: "Treatments", item: "https://www.garbhagudi.com/treatments" },
-            { "@type": "ListItem", position: 3, name: "IVF Treatment in Bangalore", item: "https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore" }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [{
+      "@type": "Product",
+      "name": "${title}",
+      "image": "${image}",
+      "description": "${description}",
+      "brand": {
+        "@type": "Brand",
+        "name": "GarbhaGudi IVF Centre"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "604"
+      }
+    }`,
+    };
+  }
+
+  function addFaqJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
           "@type": "Question",
           "name": "What is the average IVF cost in Bangalore?",
           "acceptedAnswer": {
@@ -65,9 +117,15 @@ const Ivf = () => {
             "text": "There are several additional costs that can be associated with in vitro fertilization (IVF) treatment. These can include: Medications: The medications needed to stimulate egg production and prepare the uterus for pregnancy can be expensive. These medications are usually not covered by insurance. Genetic testing: Pre-implantation genetic testing (PGT) can be done to check the health of the embryos before they are transferred to the uterus. Anesthesia: Some patients may need to be sedated for the egg retrieval procedure, which can add to the cost of the treatment. Storage of frozen embryos: If you have leftover embryos after the IVF cycle, you may choose to have them frozen for future use. Multiple cycles: It is common for patients to need more than one cycle of IVF in order to become pregnant. Each additional cycle can add to the overall cost of treatment.This can add to the cost of the treatment. It is important to discuss the potential costs of IVF treatment with your doctor and fertility clinic in order to fully understand the expenses you may incur."
           }
         }]
-        },
-        {
-          "@type": "HowTo",
+      }`,
+    };
+  }
+
+  function addHowToJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org/",
+        "@type": "HowTo",
         "name": "How do you prepare for IVF?",
         "description": "Various screening procedures have to be done before beginning an IVF cycle",
         "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
@@ -110,9 +168,7 @@ const Ivf = () => {
             "url": "After the Embryo Transfer procedure"
           }
         ]
-        }
-      ]
-    }`,
+      }`,
     };
   }
 
@@ -137,6 +193,29 @@ const Ivf = () => {
           type='application/ld+json'
           dangerouslySetInnerHTML={addDocJsonLd()}
           id='product-jsonld'
+        />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+          id='breadcrumbs-jsonld'
+        />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addHowToJsonLd()}
+          id='howto-jsonld'
+        />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addFaqJsonLd()}
+          id='howto-jsonld'
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={addReviewJsonLd()}
+          id='review-jsonld'
         />
         {/* Open Graph / Facebook */}
 
