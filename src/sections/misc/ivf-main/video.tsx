@@ -1,22 +1,21 @@
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-const Video = () => {
-  return (
-    <div className='mx-auto px-3'>
-      <h2 className='-mt-10 py-4 text-center font-heading text-2xl font-bold text-gray-800 dark:text-gray-200 lg:-mt-0 lg:text-4xl'>
-        What is IVF and How is it Beneficial? Know from our Experts.
-      </h2>
-      <div className='mx-auto mt-8 aspect-video overflow-hidden rounded-3xl border-2 border-brandPink sm:px-0 md:w-4/6'>
-        <LiteYouTubeEmbed
-          id='b2tdqev4DpQ'
-          title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
-          poster='maxresdefault'
-          webp={true}
-        />
-      </div>
+const Video = () => (
+  <section className='mx-auto px-3 text-center'>
+    <h2 className='py-4 font-heading text-2xl font-bold text-gray-800 dark:text-gray-200 lg:text-4xl'>
+      What is IVF and How is it Beneficial?
+    </h2>
+
+    <div className='mx-auto mt-6 aspect-video rounded-2xl border-2 border-brandPink md:w-3/5'>
+      <LiteYouTubeEmbed
+        id='b2tdqev4DpQ'
+        title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre'
+        poster='maxresdefault'
+        webp
+      />
     </div>
-  );
-};
+  </section>
+);
 
 export default Video;

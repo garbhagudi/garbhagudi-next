@@ -162,7 +162,7 @@ const ExecutiveTeam = ({ director }) => {
               <div className='text-center sm:w-1/3 sm:py-8 sm:pr-8'>
                 <div className='inline-flex w-72 items-center justify-center rounded-full md:w-64'>
                   <Image
-                    src={director?.imageUrl}
+                    src={director?.image?.url}
                     alt={director?.name}
                     className='rounded-full'
                     width={500}
@@ -201,7 +201,7 @@ const ExecutiveTeam = ({ director }) => {
               </div>
             </div>
           </div>
-          <Share pinmedia={director.imageUrl} />
+          <Share pinmedia={director?.image?.url} />
         </div>
       </section>
     </div>

@@ -356,7 +356,7 @@ const Blog = ({ article }: BlogProps) => {
             <Image
               className='mb-5 mt-10 w-full rounded-lg'
               src={
-                article?.imageUrl ||
+                article?.image?.url ||
                 'https://res.cloudinary.com/decyl0nmm/image/upload/v1762938523/Best_IVF_Center_GarbhaGudi-1_shyb2u.webp'
               }
               alt={article?.imageAlt}

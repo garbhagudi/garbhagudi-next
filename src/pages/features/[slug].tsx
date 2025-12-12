@@ -64,7 +64,7 @@ export const getStaticPaths = async () => {
 const Vas = ({ valueAddedService }) => {
   const title = `${valueAddedService?.title} | GarbhaGudi IVF Centre}`;
   const desc = `${valueAddedService?.content.text.slice(0, 169)}`;
-  const image = `${valueAddedService?.imageUrl}`;
+  const image = `${valueAddedService?.image?.url}`;
   function addBreadcrumbsJsonLd() {
     return {
       __html: `{
@@ -97,7 +97,7 @@ const Vas = ({ valueAddedService }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='preload' href={valueAddedService?.imageUrl} as='image' />
+        <link rel='preload' href={valueAddedService?.image?.url} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>
           {valueAddedService?.title
@@ -240,7 +240,7 @@ const Vas = ({ valueAddedService }) => {
               </h1>
               <Image
                 className='mb-5 mt-10 w-full rounded-lg'
-                src={valueAddedService?.imageUrl}
+                src={valueAddedService?.image?.url}
                 alt={valueAddedService?.title}
                 width={1200}
                 height={500}
