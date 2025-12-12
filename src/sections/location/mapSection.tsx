@@ -129,7 +129,7 @@ const MapSection = ({ maplink, address, description, doctors, title }: MapSectio
                       <div className='bg-[length: 400%] absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
                       <Image
                         className='rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
-                        src={item?.imageUrl}
+                        src={item?.image?.url}
                         alt={item?.name}
                         width={500}
                         height={500}

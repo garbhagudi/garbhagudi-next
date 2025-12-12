@@ -317,13 +317,13 @@ const InfertilityPage = ({ doctors }) => {
                   imageComponent={
                     <ImageComponent
                       name={items.name}
-                      image={items.imageUrl}
+                      image={items.image?.url}
                       designation={items.designation}
                       imageAlt={items.imageAlt}
                     />
                   }
                   activeIndex={activeIndex}
-                  docpic={items.imageUrl}
+                  docpic={items.image?.url}
                   name={items.name}
                   bio={items.bio.raw.children}
                   setActiveIndex={setActiveIndex}

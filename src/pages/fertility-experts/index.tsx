@@ -209,7 +209,7 @@ const IndexPage = ({ branches }: Branches) => {
                                   <div className='space-y-2'>
                                     <Image
                                       className='mx-auto my-auto mt-4 h-36 w-36 rounded-full bg-gray-400 dark:bg-gray-700'
-                                      src={doctor?.image.url || doctor?.imageUrl}
+                                      src={doctor?.image?.url}
                                       alt={doctor?.name}
                                       width={500}
                                       height={500}

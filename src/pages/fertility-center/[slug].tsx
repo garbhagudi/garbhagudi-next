@@ -173,7 +173,7 @@ const Blog = ({ article }: BlogProps) => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='preload' href={article?.imageUrl} as='image' />
+        <link rel='preload' href={article?.image?.url} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={`${article?.metaTitle}`} />
@@ -187,7 +187,7 @@ const Blog = ({ article }: BlogProps) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta property='og:description' content={article?.metaDescription} />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content={article?.imageUrl} />
+        <meta property='og:image' content={article?.image?.url} />
 
         {/* Twitter*/}
 
@@ -195,7 +195,7 @@ const Blog = ({ article }: BlogProps) => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={`${article?.metaTitle} | GarbhaGudi IVF Centre`} />
         <meta name='twitter:description' content={article?.metaDescription} />
-        <meta name='twitter:image' content={article?.imageUrl} />
+        <meta name='twitter:image' content={article?.image?.url} />
 
         {/* Ld+JSON Data */}
         <script
@@ -310,7 +310,7 @@ const Blog = ({ article }: BlogProps) => {
             <Image
               className='mb-5 mt-10 w-full rounded-lg'
               src={
-                article?.imageUrl ||
+                article?.image?.url ||
                 'https://res.cloudinary.com/decyl0nmm/image/upload/v1762938523/Best_IVF_Center_GarbhaGudi-1_shyb2u.webp'
               }
               alt={article?.imageAlt}

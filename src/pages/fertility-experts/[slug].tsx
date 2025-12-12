@@ -191,7 +191,7 @@ const Doctor = ({ doctor }) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta property='og:description' content={doctor?.bio?.text.slice(0, 160)} />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content={doctor?.imageUrl} />
+        <meta property='og:image' content={doctor?.image?.url} />
 
         {/* Twitter*/}
 
@@ -199,7 +199,7 @@ const Doctor = ({ doctor }) => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={doctor?.metaTitle || defaultMetaTile} />
         <meta name='twitter:description' content={doctor?.bio?.text.slice(0, 160)} />
-        <meta name='twitter:image' content={doctor?.imageUrl} />
+        <meta name='twitter:image' content={doctor?.image?.url} />
       </Head>
       <BreadCrumbs
         text1={'Our Fertility Experts'}
@@ -256,7 +256,7 @@ const Doctor = ({ doctor }) => {
                         width={340}
                         height={340}
                         alt={doctor?.name}
-                        src={doctor?.imageUrl}
+                        src={doctor?.image?.url}
                         className='-m-16 -ml-20 -mt-44 mb-4 h-auto max-w-xs rounded-full border-none bg-gray-300/30 align-middle shadow-xl dark:bg-gray-600 lg:-ml-16'
                         priority={true}
                       />

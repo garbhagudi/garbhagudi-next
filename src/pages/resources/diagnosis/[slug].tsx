@@ -147,7 +147,7 @@ const Diagnosis = ({ diagnosis }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='preload' href={diagnosis?.imageUrl} as='image' />
+        <link rel='preload' href={diagnosis?.image?.url} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={`${diagnosis?.title} | GarbhaGudi IVF Centre`} />
@@ -160,7 +160,7 @@ const Diagnosis = ({ diagnosis }) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta property='og:description' content={diagnosis?.content?.text.slice(0, 160)} />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content={diagnosis?.imageUrl} />
+        <meta property='og:image' content={diagnosis?.image?.url} />
 
         {/* Twitter*/}
 
@@ -168,7 +168,7 @@ const Diagnosis = ({ diagnosis }) => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={`${diagnosis?.title} | GarbhaGudi IVF Centre`} />
         <meta name='twitter:description' content={diagnosis?.content?.text.slice(0, 160)} />
-        <meta name='twitter:image' content={diagnosis?.imageUrl} />
+        <meta name='twitter:image' content={diagnosis?.image?.url} />
 
         {/* Ld+JSON Data */}
         <script
@@ -292,7 +292,7 @@ const Diagnosis = ({ diagnosis }) => {
             <figure>
               <Image
                 className='mb-5 mt-10 w-full rounded-lg'
-                src={diagnosis?.imageUrl}
+                src={diagnosis?.image?.url}
                 alt={diagnosis?.title}
                 width={800}
                 height={500}
@@ -313,7 +313,7 @@ const Diagnosis = ({ diagnosis }) => {
               />
             </div>
             <div>
-              <Share pinmedia={diagnosis?.imageUrl} />
+              <Share pinmedia={diagnosis?.image?.url} />
             </div>
           </div>
         </div>
