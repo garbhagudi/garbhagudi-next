@@ -259,9 +259,13 @@ body {
 }
 
 @media screen and (max-width: 420px) {
-  .zsiq_flt_rel{
+  .zsiq_flt_rel {
     position: absolute;
     bottom: 70px;
   }
-  
+}
+
+.bg-dotted-pattern {
+  background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+  background-size: 20px 20px;
 }
