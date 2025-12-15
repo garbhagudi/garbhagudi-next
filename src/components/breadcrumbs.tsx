@@ -16,10 +16,10 @@ const BreadCrumbs = ({
   text1: string;
   link2: string;
   text2: string;
-  link3: string;
-  text3: string;
-  link4: string;
-  text4: string;
+  link3?: string;
+  text3?: string;
+  link4?: string;
+  text4?: string;
 }) => {
   return (
     <div>
