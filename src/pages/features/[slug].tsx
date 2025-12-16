@@ -5,7 +5,10 @@ import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
+const Cta = dynamic(() => import('sections/gg-care/cta'), {
+  ssr: false,
+  loading: () => null,
+});
 
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
@@ -94,19 +97,12 @@ const Vas = ({ valueAddedService }) => {
   return (
     <main className='bg-white py-16 dark:bg-gray-800'>
       <Head>
-        {/* Primary Tags */}
-        <link rel='preload' href={valueAddedService?.image?.url} as='image' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='description' content={valueAddedService?.metaDescription} />
-
-        {/* Open Graph / Facebook */}
         <meta property='og:title' content={title} />
         <meta property='og:description' content={desc} />
         <meta property='og:image' content={image} />
         <meta property='og:type' content='article' />
-
-        {/* Twitter*/}
         <meta name='twitter:card' content='summary_large_image' />
 
         {/* Ld+JSON Data */}
@@ -122,36 +118,33 @@ const Vas = ({ valueAddedService }) => {
         link2={valueAddedService?.slug}
         text2={valueAddedService.title}
       />
-      <div className='bg-dotted-pattern relative overflow-hidden'>
-        <div className='relative px-4 sm:px-6 lg:px-8'>
-          <article className='mx-auto max-w-7xl'>
-            <h1 className='mt-4 block text-center font-heading text-2xl font-bold leading-8 tracking-tight text-gray-800 dark:text-gray-200 sm:text-4xl'>
-              {valueAddedService?.title}
-            </h1>
-            <Image
-              className='mb-5 mt-10 w-full rounded-lg'
-              src={valueAddedService?.image?.url}
-              alt={valueAddedService?.title}
-              width={1200}
-              height={500}
-              priority={true}
-            />
-            <section className='text-justify text-gray-800 dark:text-gray-200'>
-              <RichText
-                content={valueAddedService?.content.raw.children}
-                renderers={{
-                  p: ({ children }) => <p className='text-justify'>{children}</p>,
-                  a: ({ children, href }) => (
-                    <a href={href} className='text-gg-500 underline'>
-                      {children}
-                    </a>
-                  ),
-                }}
-              />
-            </section>
-          </article>
-        </div>
-      </div>
+
+      <article className='mx-auto max-w-7xl overflow-hidden px-4 sm:px-6 lg:px-8'>
+        <h1 className='mt-4 block text-center font-heading text-2xl font-bold leading-8 tracking-tight text-gray-800 dark:text-gray-200 sm:text-4xl'>
+          {valueAddedService?.title}
+        </h1>
+        <Image
+          className='mb-5 mt-10 w-full rounded-lg'
+          src={valueAddedService?.image?.url}
+          alt={valueAddedService?.title}
+          width={1200}
+          height={500}
+          priority={true}
+        />
+        <section className='text-justify text-gray-800 dark:text-gray-200'>
+          <RichText
+            content={valueAddedService?.content.raw.children}
+            renderers={{
+              p: ({ children }) => <p className='text-justify'>{children}</p>,
+              a: ({ children, href }) => (
+                <a href={href} className='text-gg-500 underline'>
+                  {children}
+                </a>
+              ),
+            }}
+          />
+        </section>
+      </article>
       <Cta />
     </main>
   );
