@@ -141,6 +141,16 @@ const Vas = ({ valueAddedService }) => {
                   {children}
                 </a>
               ),
+              iframe: ({ url, width }) => (
+                <iframe
+                  src={url || ''}
+                  width={width || '100%'}
+                  height={720}
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                  allowFullScreen
+                  className='w-full rounded-md'
+                />
+              ),
             }}
           />
         </section>
