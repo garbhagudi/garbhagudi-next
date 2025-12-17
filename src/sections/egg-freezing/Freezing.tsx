@@ -73,9 +73,9 @@ export default function Freezing() {
   ];
   return (
     <div className='font-nunito-Sans lg:pb-6'>
-      <div className='flex items-center justify-center py-3 text-2xl font-extrabold md:py-6 md:text-4xl'>
-        Why Choose Egg Freezing?
-      </div>
+      <h1 className='flex items-center justify-center py-3 text-2xl font-extrabold md:py-6 md:text-4xl'>
+        Why Choose IVF Treatment Egg Freezing?
+      </h1>
       <div className='mx-auto mb-10 w-8/12 text-center text-lg font-normal text-[#1D1D1D] opacity-70 md:mb-20 md:w-9/12 md:text-xl'>
         Egg freezing involves a few carefully planned steps, all overseen by experienced fertility
         experts to ensure safety and comfort.
