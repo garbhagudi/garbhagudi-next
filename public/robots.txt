@@ -13,11 +13,13 @@ Disallow: /*?adtype=
 Disallow: /*?productchannel=
 Disallow: /*?id=
 Disallow: /*?utm_
-Disallow: /*?ref=
 Disallow: /*?source=
+Disallow: /*?gad_source=
 
 # Block pageVisit tracking duplicates
 Disallow: /*?pageVisit=
+Disallow: /*?author=
+
 
 # Block Chrome translation tracking URLs
 Disallow: /*?_x_tr_
@@ -26,6 +28,7 @@ Disallow: /*?_x_tr_
 Disallow: /*&fbclid=
 Disallow: /*&pageVisit=
 Disallow: /*&_x_tr_
+Disallow: /*&gclid
 
 # Sitemap declaration
 Sitemap: https://www.garbhagudi.com/sitemap.xml

@@ -102,6 +102,7 @@ const Home = ({ data, testimonials }) => {
           name='description'
           content='GarbhaGudi is one of the best IVF Clinic in Bangalore with a high success rate for IVF / infertility treatment. Book a Consultation now with the best IVF hospital in Bangalore.'
         />
+        <link rel='canonical' href='https://www.garbhagudi.com/' />
         {/* Ld+JSON Data */}
 
         <script

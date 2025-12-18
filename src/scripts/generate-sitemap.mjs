@@ -207,7 +207,7 @@ function generateSiteMap(
     lastmod: new Date().toISOString(),
   });
   pages.push({
-    loc: `${BASE_URL}/diagnosis`,
+    loc: `${BASE_URL}/resources/diagnosis`,
     lastmod: new Date().toISOString(),
   });
   pages.push({
@@ -263,19 +263,11 @@ function generateSiteMap(
     lastmod: new Date().toISOString(),
   });
   pages.push({
-    loc: `${BASE_URL}/lp/dh/enquiry`,
-    lastmod: new Date().toISOString(),
-  });
-  pages.push({
     loc: `${BASE_URL}/lp/egg-freezing`,
     lastmod: new Date().toISOString(),
   });
   pages.push({
     loc: `${BASE_URL}/lp/itwmedia/enquiry`,
-    lastmod: new Date().toISOString(),
-  });
-  pages.push({
-    loc: `${BASE_URL}/lp/newsfirstdigital/enquiry`,
     lastmod: new Date().toISOString(),
   });
   pages.push({
@@ -311,11 +303,11 @@ function generateSiteMap(
     lastmod: new Date().toISOString(),
   });
   pages.push({
-    loc: `${BASE_URL}/brand-resources`,
+    loc: `${BASE_URL}/resources`,
     lastmod: new Date().toISOString(),
   });
   pages.push({
-    loc: `${BASE_URL}/causes`,
+    loc: `${BASE_URL}/resources/causes`,
     lastmod: new Date().toISOString(),
   });
   pages.push({
@@ -484,10 +476,6 @@ function generateSiteMap(
   });
   pages.push({
     loc: `${BASE_URL}/solutions/cost-of-infertility-test-in-bangalore`,
-    lastmod: new Date().toISOString(),
-  });
-  pages.push({
-    loc: `${BASE_URL}/facilities/cost-of-iui-in-bangalore`,
     lastmod: new Date().toISOString(),
   });
   pages.push({

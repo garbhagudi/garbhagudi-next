@@ -10,6 +10,12 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 export const getStaticProps = async ({ params }) => {
+  if (!params?.slug || params.slug === '[slug]' || params.slug === 'undefined') {
+    return {
+      notFound: true,
+      revalidate: 60,
+    };
+  }
   const { data } =
     (await apolloClient.query({
       query: gql`
@@ -34,7 +40,12 @@ export const getStaticProps = async ({ params }) => {
         slug: params.slug,
       },
     })) || {};
-
+  if (!data.director) {
+    return {
+      notFound: true,
+      revalidate: 60,
+    };
+  }
   return {
     props: {
       director: data.director,
@@ -101,7 +112,10 @@ const ExecutiveTeam = ({ director }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-
+        <link
+          rel='canonical'
+          href={`https://www.garbhagudi.com/about/executive-team/${director?.slug}`}
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={`${director.name} | GarbhaGudi IVF Centre`} />
