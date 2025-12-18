@@ -39,7 +39,6 @@ const IndexPage = ({ diagnoses }) => {
       <div>
         <Head>
           {/* Primary Tags */}
-
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <title>Diagnosis | GarbhaGudi</title>
           <meta name='title' content='Diagnosis | GarbhaGudi IVF Centre' />

@@ -10,6 +10,12 @@ import dynamic from 'next/dynamic';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 export const getStaticProps = async ({ params }) => {
+  if (!params?.slug || params.slug === '[slug]' || params.slug === 'undefined') {
+    return {
+      notFound: true,
+      revalidate: 60,
+    };
+  }
   const { data } = await apolloClient.query({
     query: gql`
       query ($slug: String!) {
@@ -148,6 +154,10 @@ const Diagnosis = ({ diagnosis }) => {
       <Head>
         {/* Primary Tags */}
         <link rel='preload' href={diagnosis?.image?.url} as='image' />
+        <link
+          rel='canonical'
+          href={`https://www.garbhagudi.com/resources/diagnosis/${diagnosis?.slug}`}
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={`${diagnosis?.title} | GarbhaGudi IVF Centre`} />

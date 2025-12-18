@@ -33,29 +33,42 @@ interface AwardProps {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const { data } =
-    (await apolloClient.query({
-      query: gql`
-        query ($slug: String!) {
-          award(where: { slug: $slug }) {
-            id
-            slug
-            image {
-              url
-            }
-            imageUrl
-            content {
-              raw
-              text
-            }
-            title
+  if (!params?.slug || params.slug === '[slug]' || params.slug === 'undefined') {
+    return {
+      notFound: true,
+      revalidate: 60,
+    };
+  }
+
+  const { data } = await apolloClient.query({
+    query: gql`
+      query ($slug: String!) {
+        award(where: { slug: $slug }) {
+          id
+          slug
+          image {
+            url
           }
+          imageUrl
+          content {
+            raw
+            text
+          }
+          title
         }
-      `,
-      variables: {
-        slug: params.slug,
-      },
-    })) || {};
+      }
+    `,
+    variables: {
+      slug: params.slug,
+    },
+  });
+
+  if (!data?.award) {
+    return {
+      notFound: true,
+      revalidate: 60,
+    };
+  }
 
   return {
     props: {
@@ -79,7 +92,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths: data.awards.map((award) => ({ params: { slug: award.slug } })),
-    fallback: true,
+    fallback: 'blocking',
   };
 };
 
@@ -123,6 +136,10 @@ const AwardPage = ({ award }: AwardProps) => {
         {/* Primary Tags */}
         {/* Preload the main image */}
         <link rel='preload' href={award?.image?.url} as='image' />
+        <link
+          rel='canonical'
+          href={`https://www.garbhagudi.com/about/awards-and-accolades/${award?.slug}`}
+        />
         <link rel='dns-prefetch' href='https://media.graphassets.com' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>

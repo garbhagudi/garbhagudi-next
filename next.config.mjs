@@ -2890,7 +2890,17 @@ const nextConfig = {
       },
       {
         source: '/test-tube-baby',
-        destination: '/blogs/test-tube-baby',
+        destination: '/blogs/page/1',
+        permanent: true,
+      },
+      {
+        source: '/blogs/test-tube-baby',
+        destination: '/blogs/page/1',
+        permanent: true,
+      },
+      {
+        source: '/blogs/the-procedure-of-the-hsg-test',
+        destination: '/blogs/page/1',
         permanent: true,
       },
       {
@@ -3056,6 +3066,41 @@ const nextConfig = {
       {
         source: '/loaction',
         destination: '/locations',
+        permanent: true,
+      },
+      {
+        source: '/diagnosis',
+        destination: '/resources/diagnosis',
+        permanent: true,
+      },
+      {
+        source: '/causes',
+        destination: '/resources/causes',
+        permanent: true,
+      },
+      {
+        source: '/causes',
+        destination: '/resources/causes',
+        permanent: true,
+      },
+      {
+        source: '/lp/newsfirstdigital/enquiry',
+        destination: '/lp/ivf-enquiry-form',
+        permanent: true,
+      },
+      {
+        source: '/lp/dh/enquiry',
+        destination: '/lp/ivf-enquiry-form',
+        permanent: true,
+      },
+      {
+        source: '/features/partnership',
+        destination: '/contact/partnership',
+        permanent: true,
+      },
+      {
+        source: '/facilities/varicocele-treatment-in-bangalore',
+        destination: '/solutions/varicocele-treatment-in-bangalore',
         permanent: true,
       },
     ];

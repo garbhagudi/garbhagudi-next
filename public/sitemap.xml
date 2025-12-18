@@ -104,7 +104,7 @@
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/diagnosis</loc>
+        <loc>https://www.garbhagudi.com/resources/diagnosis</loc>
         <lastmod>2025-10-03T08:56:28.773Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -188,12 +188,6 @@
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/lp/dh/enquiry</loc>
-        <lastmod>2025-10-03T08:56:28.773Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-      </url>
-      <url>
         <loc>https://www.garbhagudi.com/lp/egg-freezing</loc>
         <lastmod>2025-10-03T08:56:28.773Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -201,12 +195,6 @@
       </url>
       <url>
         <loc>https://www.garbhagudi.com/lp/itwmedia/enquiry</loc>
-        <lastmod>2025-10-03T08:56:28.773Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-      </url>
-      <url>
-        <loc>https://www.garbhagudi.com/lp/newsfirstdigital/enquiry</loc>
         <lastmod>2025-10-03T08:56:28.773Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -807,12 +795,6 @@
       </url>
       <url>
         <loc>https://www.garbhagudi.com/blogs/why-choose-garbhagudi-for-ivf</loc>
-        <lastmod>2025-10-03T08:56:28.773Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-      </url>
-      <url>
-        <loc>https://www.garbhagudi.com/blogs/test-tube-baby</loc>
         <lastmod>2025-10-03T08:56:28.773Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -1809,12 +1791,6 @@
       </url>
       <url>
         <loc>https://www.garbhagudi.com/blogs/necrozoospermia</loc>
-        <lastmod>2025-10-03T08:56:28.774Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-      </url>
-      <url>
-        <loc>https://www.garbhagudi.com/blogs/the-procedure-of-the-hsg-test</loc>
         <lastmod>2025-10-03T08:56:28.774Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -4358,91 +4334,91 @@
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/diagnosis/blood-investigations</loc>
+        <loc>https://www.garbhagudi.com/resources/diagnosis/blood-investigations</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/diagnosis/semen-analysis</loc>
+        <loc>https://www.garbhagudi.com/resources/diagnosis/semen-analysis</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/diagnosis/ultrasound-scan</loc>
+        <loc>https://www.garbhagudi.com/resources/diagnosis/ultrasound-scan</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/diagnosis/pre-implantation-genetic-screening-pgs</loc>
+        <loc>https://www.garbhagudi.com/resources/diagnosis/pre-implantation-genetic-screening-pgs</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/diagnosis/pre-implantation-genetic-diagnosis-pgd</loc>
+        <loc>https://www.garbhagudi.com/resources/diagnosis/pre-implantation-genetic-diagnosis-pgd</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/diagnosis/endometrial-receptivity-array-era</loc>
+        <loc>https://www.garbhagudi.com/resources/diagnosis/endometrial-receptivity-array-era</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/diagnosis/ovarian-reserve-tests-ort</loc>
+        <loc>https://www.garbhagudi.com/resources/diagnosis/ovarian-reserve-tests-ort</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/diagnosis/hysterosalpingogram</loc>
+        <loc>https://www.garbhagudi.com/resources/diagnosis/hysterosalpingogram</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/causes/blocked-fallopian-tubes</loc>
+        <loc>https://www.garbhagudi.com/resources/causes/blocked-fallopian-tubes</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/causes/polycystic-ovarian-syndrome-pcos</loc>
+        <loc>https://www.garbhagudi.com/resources/causes/polycystic-ovarian-syndrome-pcos</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/causes/ovulation-disorders</loc>
+        <loc>https://www.garbhagudi.com/resources/causes/ovulation-disorders</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/causes/surgical-complications</loc>
+        <loc>https://www.garbhagudi.com/resources/causes/surgical-complications</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/causes/obesity-and-fertility</loc>
+        <loc>https://www.garbhagudi.com/resources/causes/obesity-and-fertility</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/causes/pelvic-inflamatory-disease</loc>
+        <loc>https://www.garbhagudi.com/resources/causes/pelvic-inflamatory-disease</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/causes/hormonal-disorders</loc>
+        <loc>https://www.garbhagudi.com/resources/causes/hormonal-disorders</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -4850,12 +4826,6 @@
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://www.garbhagudi.com/features/partnership</loc>
-        <lastmod>2025-10-03T08:56:28.775Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-      </url>
-      <url>
         <loc>https://www.garbhagudi.com/features/holistic-approach</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -4959,12 +4929,6 @@
       </url>
       <url>
         <loc>https://www.garbhagudi.com/solutions/cost-of-infertility-test-in-bangalore</loc>
-        <lastmod>2025-10-03T08:56:28.775Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-      </url>
-      <url>
-        <loc>https://www.garbhagudi.com/facilities/cost-of-iui-in-bangalore</loc>
         <lastmod>2025-10-03T08:56:28.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

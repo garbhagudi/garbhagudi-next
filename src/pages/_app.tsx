@@ -27,9 +27,8 @@ function MyApp({ Component, pageProps }) {
     '/lp/ivf-enquiry-form',
     '/lp/ivf-enquiry-form-call',
     '/yoga',
-    '/lp/dh/enquiry',
+    '/lp/ivf-enquiry-form',
     '/lp/itwmedia/enquiry',
-    '/lp/newsfirstdigital/enquiry',
     '/lp/egg-freezing',
     '/treatments/iui-treatment-in-bangalore',
   ];
