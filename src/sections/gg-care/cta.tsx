@@ -23,7 +23,7 @@ const Cta = () => {
           </Link>
 
           <a
-            href='https://wa.me/919108910832?text=Hi.'
+            href='https://wa.me/918951813344?text=Hi.'
             target='_blank'
             rel='noreferrer'
             className='inline-flex items-center justify-center rounded-md bg-gg-500 px-5 py-3 font-content text-base font-medium text-gray-200 hover:bg-brandPink3 dark:hover:bg-gg-600'
