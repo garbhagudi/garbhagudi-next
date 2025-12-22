@@ -94,12 +94,6 @@ const ExecutiveTeam = ({ director }) => {
             },
             {
               "@type": "ListItem",
-              "position": "2",
-              "name": "Executive Team",
-              "item": "https://www.garbhagudi.com/about/executive-team"
-            },
-            {
-              "@type": "ListItem",
               "position": "3",
               "name": "${director?.name}",
               "item": "https://www.garbhagudi.com/about/executive-team/${director?.slug}"

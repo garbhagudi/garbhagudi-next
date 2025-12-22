@@ -857,7 +857,7 @@ const nextConfig = {
       },
       {
         source: '/executive-team',
-        destination: '/about/overview',
+        destination: 'https://www.garbhagudi.com/about/overview',
         permanent: true,
       },
       {
