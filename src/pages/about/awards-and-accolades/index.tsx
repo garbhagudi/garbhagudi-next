@@ -66,7 +66,7 @@ const Awards = ({ award }: Award) => {
               "position": "3",
               "name": "Awards & Accolades",
               "item": "https://www.garbhagudi.com/about/awards-and-accolades"
-            },
+            }
           ]
         }`,
     };

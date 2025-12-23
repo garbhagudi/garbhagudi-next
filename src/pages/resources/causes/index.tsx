@@ -29,7 +29,7 @@ const IndexPage = ({ causes }) => {
               "position": "3",
               "name": "Causes",
               "item": "https://www.garbhagudi.com/resources/causes"
-            },
+            }
           ]
         }`,
     };

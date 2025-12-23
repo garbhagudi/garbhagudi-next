@@ -29,7 +29,7 @@ const IndexPage = ({ diagnoses }) => {
               "position": "3",
               "name": "Diagnosis",
               "item": "https://www.garbhagudi.com/resources/diagnosis"
-            },
+            }
           ]
         }`,
     };
