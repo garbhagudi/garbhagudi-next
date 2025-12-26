@@ -4,6 +4,7 @@ import { RichText } from '@graphcms/rich-text-react-renderer';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import Image from 'next/image';
+import FAQs from 'components/FAQs';
 
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
@@ -19,6 +20,14 @@ export const getStaticProps = async ({ params }) => {
           }
           content {
             raw
+          }
+          faq {
+            id
+            question
+            answer {
+              raw
+              text
+            }
           }
         }
       }
@@ -259,6 +268,11 @@ const Vas = ({ valueAddedService }) => {
                 }}
               />
             </div>
+            {valueAddedService?.faq?.length > 0 && (
+              <div className='mt-6'>
+                <FAQs data={valueAddedService?.faq} activeIndex={valueAddedService?.faq[0]?.id} />
+              </div>
+            )}
             <div></div>
           </div>
         </div>
