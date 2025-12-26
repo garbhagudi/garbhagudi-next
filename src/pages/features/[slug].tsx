@@ -5,6 +5,7 @@ import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import FAQs from 'components/FAQs';
 const Cta = dynamic(() => import('sections/gg-care/cta'), {
   ssr: false,
   loading: () => null,
@@ -25,6 +26,14 @@ export const getStaticProps = async ({ params }) => {
           content {
             raw
             text
+          }
+          faq {
+            id
+            question
+            answer {
+              raw
+              text
+            }
           }
         }
       }
@@ -154,6 +163,11 @@ const Vas = ({ valueAddedService }) => {
             }}
           />
         </section>
+        {valueAddedService?.faq?.length > 0 && (
+          <div className='mt-6'>
+            <FAQs data={valueAddedService?.faq} activeIndex={valueAddedService?.faq[0]?.id} />
+          </div>
+        )}
       </article>
       <Cta />
     </main>
