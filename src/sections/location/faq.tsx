@@ -22,24 +22,6 @@ const Faq = ({ branch }) => {
                 page. You can find all the information related to {branch} branch and how to contact
                 there. Alternatively, you can use the chat feature that the bottom right-hand corner
                 to ask us your queries.
-                <div className='mt-4'>
-                  {contactData.locations.map(
-                    (items) =>
-                      items.name === branch && (
-                        <div key={items.id}>
-                          <div className='font-semibold'>{items.name} branch</div>
-                          <div>
-                            <Link
-                              href={`tel:${items.phone}`}
-                              className='text-gg-500 hover:underline dark:text-gg-400'
-                            >
-                              {items.phone}
-                            </Link>
-                          </div>
-                        </div>
-                      )
-                  )}
-                </div>
                 <div className='mt-4 grid grid-cols-1 gap-4 md:grid-cols-2'>
                   {contactData.getInTouch.map((items) => (
                     <div key={items.id}>
