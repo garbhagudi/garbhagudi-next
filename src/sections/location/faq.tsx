@@ -67,10 +67,11 @@ const Faq = ({ branch }) => {
               <div className='md:col-span-8 md:pl-0'>
                 The total cost of IVF in <strong>{branch}</strong> can vary depending on the
                 individual patient's needs. On average, the cost of a single IVF cycle in{' '}
-                <strong>{branch}</strong> starts from INR{' '}
-                {branch === 'Davanagere' || branch === 'Hosur' ? '1,50,000' : '1,60,000'}. It's
-                important to speak with a specialist at the clinic to understand the total cost and
-                any additional fees that may apply.
+                <strong>{branch}</strong> starts from ₹{' '}
+                {/* {branch === 'Davanagere' || branch === 'Hosur' ? '1,50,000' : '1,65,000'}. It's */}
+                {branch === 'Hosur' ? '1,50,000' : '1,65,000'}. It's important to speak with a
+                fertility specialist at the clinic to understand the total cost and any additional
+                fees that may apply.
               </div>
             </div>
           </div>
