@@ -13,7 +13,7 @@ const Banner = () => {
             <div className='relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12'>
               <Image
                 className='h-[380] w-[380] rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762522383/paripoorna_Landing_Page_Banner-04_utjoyh.webp'
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1767957948/GG_IVF_Home_Mobile_dbowuz.webp'
                 alt='happy couple with a baby'
                 width={380}
                 height={380}
@@ -125,7 +125,7 @@ const Banner = () => {
             <div className='relative mt-24 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-[28rem] lg:max-w-none lg:pl-12'>
               <Image
                 className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762522383/paripoorna_Landing_Page_Banner-03_1_wmtbbl.webp'
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1767957948/GG_IVF_Home_WEB_vtjynv.webp'
                 alt='happy couple with a baby'
                 width={500}
                 height={500}
@@ -135,7 +135,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className='color-pop mx-auto max-w-fit rounded-lg p-1 lg:p-2.5'>
+      {/* <div className='color-pop mx-auto max-w-fit rounded-lg p-1 lg:p-2.5'>
         <div className='flex flex-col items-start gap-1 rounded-lg bg-transparent px-2.5 py-2 text-base font-bold text-white'>
           <div className='font-lexend font-semibold'>
             Get a flat ₹1,11,111/- discount on your IVF treatment with PARIPOORNA at GarbhaGudi IVF
@@ -145,7 +145,7 @@ const Banner = () => {
             Celebrate the season of parenthood and make your dream of a family come true.
           </span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
