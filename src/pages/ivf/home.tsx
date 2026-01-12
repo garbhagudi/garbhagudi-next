@@ -37,9 +37,9 @@ const Stage = dynamic(() => import('sections/LandingPages/Neutral/stage'), {
 const Treatments = dynamic(() => import('sections/LandingPages/Neutral/treatments'), {
   ssr: false,
 });
-const FloatWhatsApp = dynamic(() => import('components/FloatWhatsapp'), {
-  ssr: true,
-});
+// const FloatWhatsApp = dynamic(() => import('components/FloatWhatsapp'), {
+//   ssr: true,
+// });
 const Cta = dynamic(() => import('sections/gg-care/cta'), {
   ssr: false,
 });
@@ -97,11 +97,11 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
         />
-        <link
+        {/* <link
           rel='preload'
           href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742808594/paripoorna/IVF_Compressed_kmekqi_bewqzl.webp'
           as='image'
-        />
+        /> */}
       </Head>
       <div>
         <Banner />
@@ -172,7 +172,7 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
         </div>
         <Branch branches={branches} />
         <Cta />
-        <FloatWhatsApp />
+        {/* <FloatWhatsApp /> */}
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ const AshaSection = () => {
                   <Image
                     className='h-56 w-56 rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
                     alt='Dr Asha'
-                    src='https://media.graphassets.com/tEF3ZeEhSoeekeSEh47v'
+                    src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1768212663/Asha_Mam_ynziyk.png'
                     width={500}
                     height={500}
                     loading='lazy'
