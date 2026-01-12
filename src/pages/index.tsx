@@ -6,6 +6,7 @@ import { gql } from '@apollo/client';
 import BannerComponent from 'sections/home/bannerComponent';
 const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
 const DoctorList = dynamic(() => import('sections/home/doctorList'), { ssr: false });
+const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false });
 
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
@@ -161,6 +162,7 @@ const Home = ({ data, testimonials }) => {
           content='mzhcIRsJx6D4QkbJJp3Tepas8Lyv6sJLWmGb0DvKOrw'
         />
       </Head>
+      <FloatPhone presentation={false}/>
       <BannerComponent banners={data.banners} />
       <HomeComponent testimonialPassthrough={testimonials} blogsPassthrough={data.blogs} />
       <DoctorList doctors={data.doctors} />
