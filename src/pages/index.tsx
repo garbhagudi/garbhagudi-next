@@ -162,7 +162,7 @@ const Home = ({ data, testimonials }) => {
           content='mzhcIRsJx6D4QkbJJp3Tepas8Lyv6sJLWmGb0DvKOrw'
         />
       </Head>
-      <FloatPhone presentation={false}/>
+      <FloatPhone presentation={false} />
       <BannerComponent banners={data.banners} />
       <HomeComponent testimonialPassthrough={testimonials} blogsPassthrough={data.blogs} />
       <DoctorList doctors={data.doctors} />

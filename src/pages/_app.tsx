@@ -86,7 +86,7 @@ function MyApp({ Component, pageProps }) {
         <link rel='preconnect' href='https://salesiq.zoho.com' crossOrigin='anonymous' />
         <link rel='preconnect' href='https://media.graphassets.com' />
       </Head>
-      <FloatPhone presentation={true}/>
+      <FloatPhone presentation={true} />
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />
