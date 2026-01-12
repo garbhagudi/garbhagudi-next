@@ -20,7 +20,7 @@ const FloatPhone = () => {
   }
   return (
     <>
-      <div className='fixed bottom-0 z-10 grid w-full animate-shake cursor-pointer grid-cols-2 items-center justify-center bg-gg-500 px-2 font-content font-bold text-white transition-opacity ease-in hover:opacity-100 md:hidden'>
+      <div className='fixed left-0 top-20 z-10 grid w-full animate-shake cursor-pointer grid-cols-2 items-center justify-center bg-gg-500 px-2 font-content font-bold text-white transition-opacity ease-in hover:opacity-100 md:hidden'>
         {/* Book Appointment Button */}
         <button
           className='flex h-full flex-col items-center justify-center gap-y-1 border-r p-2.5'
@@ -63,6 +63,7 @@ const FloatPhone = () => {
                   className='h-full w-full rounded-t-md'
                   width={380}
                   height={220}
+                  fetchPriority='high'
                 />
                 <CloseButton
                   className={'absolute right-2 top-1 h-fit w-fit rounded-2xl bg-white text-gg-500'}
