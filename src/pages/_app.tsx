@@ -86,7 +86,7 @@ function MyApp({ Component, pageProps }) {
         <link rel='preconnect' href='https://salesiq.zoho.com' crossOrigin='anonymous' />
         <link rel='preconnect' href='https://media.graphassets.com' />
       </Head>
-
+      <FloatPhone presentation={true} />
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />
@@ -107,7 +107,6 @@ function MyApp({ Component, pageProps }) {
       <SpeedInsights />
       {!isParipoornaPage && <FloatRequestCallBack />}
       {isReady && !iuiTreatmentPage && !ivfHomePage && <FloatWhatsApp />}
-      <FloatPhone />
     </RootLayout>
   );
 }
