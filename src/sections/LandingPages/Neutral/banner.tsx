@@ -7,17 +7,18 @@ const Banner = () => {
   const path = usePathname();
   return (
     <div className='bg-white pb-8 dark:bg-gray-800 sm:pb-12 lg:pb-12'>
-      <div className='overflow-hidden pt-8 font-content sm:pt-12 lg:relative lg:py-16'>
+      <div className='overflow-hidden pt-2 font-content sm:pt-12 lg:relative lg:py-1'>
         <div className='block sm:mx-auto sm:hidden sm:max-w-3xl sm:px-6'>
-          <div className='pt-8 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
+          <div className='pt-8 sm:relative sm:mt-8 sm:pb-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
             <div className='relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12'>
               <Image
                 className='h-[380] w-[380] rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1767957948/GG_IVF_Home_Mobile_dbowuz.webp'
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1768212663/Jan_Month_offer_LP-_kkobnu.webp'
                 alt='happy couple with a baby'
                 width={380}
                 height={380}
                 priority={true}
+                fetchPriority='high'
               />
             </div>
           </div>
@@ -130,6 +131,7 @@ const Banner = () => {
                 width={500}
                 height={500}
                 priority={true}
+                fetchPriority='high'
               />
             </div>
           </div>

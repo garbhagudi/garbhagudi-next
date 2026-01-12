@@ -34,6 +34,7 @@ function HeroHome() {
                   width={200}
                   height={200}
                   loading='lazy'
+                  fetchPriority='high'
                 />
               </div>
             ))}
