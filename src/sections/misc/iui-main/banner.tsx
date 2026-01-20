@@ -8,16 +8,16 @@ const Banner = () => {
       <div className='relative grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
         <div className='relative col-span-2'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1767957948/GG_IVF_WEB_hrcjyg.webp'
             width={720}
             height={360}
             alt='Start IVF from as low as 90K'
             priority={true}
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
             className='hidden h-full w-full md:block'
-          />
+            />
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762504289/paripoorna_Landing_Page_Banner-01_wxgq38.webp'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1767957947/GG_IVF_Mobile_ksbdr7.webp'
             width={420}
             height={360}
             alt='Start IVF from as low as 90K'
