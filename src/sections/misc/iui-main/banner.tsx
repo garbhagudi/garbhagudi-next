@@ -15,7 +15,7 @@ const Banner = () => {
             priority={true}
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
             className='hidden h-full w-full md:block'
-            />
+          />
           <Image
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1767957947/GG_IVF_Mobile_ksbdr7.webp'
             width={420}
