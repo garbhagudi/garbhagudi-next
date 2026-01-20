@@ -101,7 +101,7 @@ const DoctorLayout = ({
                           type='button'
                           className='rounded-md bg-brandPink px-3 py-2 font-lexend font-medium uppercase text-white dark:bg-gray-500 dark:hover:bg-gg-400'
                         >
-                          Consult Dr. Asha S Vijay
+                          Consult Dr. {name}
                         </button>
                       </Link>
                       <button
