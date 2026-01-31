@@ -13,7 +13,7 @@ const Banner = () => {
             <div className='relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12'>
               <Image
                 className='h-[380] w-[380] rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1768212663/Jan_Month_offer_LP-_kkobnu.webp'
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1769839387/Feb_Month_Offer_Landing_Page_Banner-04_kkgsdz.webp'
                 alt='happy couple with a baby'
                 width={380}
                 height={380}
@@ -126,7 +126,7 @@ const Banner = () => {
             <div className='relative mt-24 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-[28rem] lg:max-w-none lg:pl-12'>
               <Image
                 className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1767957948/GG_IVF_Home_WEB_vtjynv.webp'
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1769839388/Feb_Month_Offer_Landing_Page_Banner-03_ctqbpk.webp'
                 alt='happy couple with a baby'
                 width={500}
                 height={500}
