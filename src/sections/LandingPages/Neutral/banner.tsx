@@ -123,7 +123,7 @@ const Banner = () => {
                 <rect width={404} height={392} fill='url(#837c3e70-6c3a-44e6-8854-cc48c737b659)' />
               </svg>
             </div>
-            <div className='relative mt-24 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-[28rem] lg:max-w-none lg:pl-12'>
+            <div className='relative mt-6 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-[28rem] lg:max-w-none lg:pl-12'>
               <Image
                 className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
                 src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1769839388/Feb_Month_Offer_Landing_Page_Banner-03_ctqbpk.webp'
