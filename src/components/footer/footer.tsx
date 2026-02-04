@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import {
   BsYoutube,
@@ -58,6 +59,8 @@ const navigation = {
 export default function Footer() {
   const router = useRouter();
   const isYogaPage = router.pathname === '/yoga';
+  const path = usePathname();
+  const isIvfHome = path.includes('/ivf/home');
   return (
     <footer
       className='bg-neutral-50 font-content dark:bg-gray-800'
@@ -67,109 +70,113 @@ export default function Footer() {
       <h2 id='footerHeading' className='sr-only'>
         Footer
       </h2>
-      <div className='mx-auto flex max-w-7xl flex-col justify-between border-t px-1 pb-12 dark:border-gray-600 sm:px-6 lg:flex-row lg:py-8'>
-        <div className='xl:grid xl:grid-cols-2 xl:gap-8'>
-          <div className='mt-12 grid grid-cols-1 gap-8 text-center antialiased xl:col-span-full xl:mt-0 xl:grid-cols-1'>
-            <div className='grid grid-cols-3 gap-5 md:grid-cols-6'>
-              <div className=''>
-                <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
-                  Treatments
-                </h3>
-                <ul className='mt-4 space-y-1'>
-                  {navigation.treatments.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} passHref>
-                        <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
-                          {item.name}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className=''>
-                <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
-                  Locations
-                </h3>
-                <ul className='mt-4 space-y-1'>
-                  {navigation.locations.map((item) => (
-                    <li key={item.name}>
-                      <Link passHref href={item.href}>
-                        <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
-                          {item.name}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className=''>
-                <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
-                  Resources
-                </h3>
-                <ul className='mt-4 space-y-1'>
-                  {navigation.resources.map((item) => (
-                    <li key={item.name}>
-                      <Link passHref href={item.href}>
-                        <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
-                          {item.name}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className=''>
-                <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
-                  Companies
-                </h3>
-                <ul className='mt-4 space-y-1'>
-                  {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <Link passHref href={item.href}>
-                        <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
-                          {item.name}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className=''>
-                <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
-                  Contact
-                </h3>
-                <ul className='mt-4 space-y-1'>
-                  {navigation.contact.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} passHref>
-                        <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
-                          {item.name}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className=''>
-                <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
-                  Legal
-                </h3>
-                <ul className='mt-4 space-y-1'>
-                  {navigation.legal.map((item) => (
-                    <li key={item.name}>
-                      <Link passHref href={item.href}>
-                        <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
-                          {item.name}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+      <div
+        className={`mx-auto flex max-w-7xl flex-col ${isIvfHome ? 'justify-center' : 'justify-between'} border-t px-1 pb-12 dark:border-gray-600 sm:px-6 lg:flex-row lg:py-8`}
+      >
+        {isIvfHome ? null : (
+          <div className='xl:grid xl:grid-cols-2 xl:gap-8'>
+            <div className='mt-12 grid grid-cols-1 gap-8 text-center antialiased xl:col-span-full xl:mt-0 xl:grid-cols-1'>
+              <div className='grid grid-cols-3 gap-5 md:grid-cols-6'>
+                <div className=''>
+                  <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
+                    Treatments
+                  </h3>
+                  <ul className='mt-4 space-y-1'>
+                    {navigation.treatments.map((item) => (
+                      <li key={item.name}>
+                        <Link href={item.href} passHref>
+                          <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
+                            {item.name}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className=''>
+                  <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
+                    Locations
+                  </h3>
+                  <ul className='mt-4 space-y-1'>
+                    {navigation.locations.map((item) => (
+                      <li key={item.name}>
+                        <Link passHref href={item.href}>
+                          <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
+                            {item.name}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className=''>
+                  <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
+                    Resources
+                  </h3>
+                  <ul className='mt-4 space-y-1'>
+                    {navigation.resources.map((item) => (
+                      <li key={item.name}>
+                        <Link passHref href={item.href}>
+                          <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
+                            {item.name}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className=''>
+                  <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
+                    Companies
+                  </h3>
+                  <ul className='mt-4 space-y-1'>
+                    {navigation.company.map((item) => (
+                      <li key={item.name}>
+                        <Link passHref href={item.href}>
+                          <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
+                            {item.name}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className=''>
+                  <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
+                    Contact
+                  </h3>
+                  <ul className='mt-4 space-y-1'>
+                    {navigation.contact.map((item) => (
+                      <li key={item.name}>
+                        <Link href={item.href} passHref>
+                          <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
+                            {item.name}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className=''>
+                  <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
+                    Legal
+                  </h3>
+                  <ul className='mt-4 space-y-1'>
+                    {navigation.legal.map((item) => (
+                      <li key={item.name}>
+                        <Link passHref href={item.href}>
+                          <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
+                            {item.name}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
         {!isYogaPage && (
           <div className='mt-5 w-fit self-center rounded-md bg-gray-800 md:mt-0'>
             <Form />
