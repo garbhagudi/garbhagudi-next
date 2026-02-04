@@ -21,9 +21,21 @@ interface MapSectionProps {
     slug: string;
   }[];
   title: string;
+  areasServed?: {
+    title?: string;
+    description?: string;
+    areas: string[][];
+  };
 }
 
-const MapSection = ({ maplink, address, description, doctors, title }: MapSectionProps) => {
+const MapSection = ({
+  maplink,
+  address,
+  description,
+  doctors,
+  title,
+  areasServed,
+}: MapSectionProps) => {
   const [showFullText, setShowFullText] = useState(false);
 
   return (
@@ -111,6 +123,49 @@ const MapSection = ({ maplink, address, description, doctors, title }: MapSectio
             </button>
           </div>
         </div>
+
+        {/* Areas Served */}
+        {areasServed && areasServed?.areas && areasServed.areas.length > 0 && (
+          <div className='w-full py-6 md:py-8 lg:py-12'>
+            <h3 className='py-3 font-heading text-xl font-bold text-gray-800 dark:text-gray-200 md:text-2xl lg:text-3xl'>
+              {areasServed?.title}
+            </h3>
+            <p className='mb-4 font-content text-gray-700 dark:text-gray-300 md:mb-6 md:text-base'>
+              {areasServed?.description}
+            </p>
+            <div className='overflow-x-auto rounded-lg border border-gray-300 dark:border-gray-600 md:rounded-2xl'>
+              <table className='w-full table-fixed border-collapse text-xs md:text-sm lg:text-base'>
+                <tbody>
+                  {areasServed?.areas?.map((row, rowIndex) => (
+                    <tr
+                      key={rowIndex}
+                      className={`${
+                        rowIndex < areasServed.areas.length - 1
+                          ? 'border-b border-gray-300 dark:border-gray-600'
+                          : ''
+                      }`}
+                    >
+                      {row.map((area, colIndex) => (
+                        <td
+                          key={`${rowIndex}-${colIndex}`}
+                          className={`px-2 py-2 font-content text-gray-800 dark:text-gray-200 sm:px-3 sm:py-3 md:px-6 md:py-4 ${
+                            rowIndex % 2 === 0 ? 'bg-gray-50 dark:bg-gray-700' : ''
+                          } ${
+                            colIndex < row.length - 1
+                              ? 'border-r border-gray-300 dark:border-gray-600'
+                              : ''
+                          }`}
+                        >
+                          {area}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
 
         {/* Fertility Specialists */}
         <div className='flex w-full flex-col pb-8 md:mt-0'>
