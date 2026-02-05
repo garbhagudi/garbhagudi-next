@@ -21,11 +21,8 @@ interface MapSectionProps {
     slug: string;
   }[];
   title: string;
-  areasServed?: {
-    title?: string;
-    description?: string;
-    areas: string[][];
-  };
+  areasDescription?: RichTextContent;
+  areasServed?: { areas: string[][] };
 }
 
 const MapSection = ({
@@ -34,6 +31,7 @@ const MapSection = ({
   description,
   doctors,
   title,
+  areasDescription,
   areasServed,
 }: MapSectionProps) => {
   const [showFullText, setShowFullText] = useState(false);
@@ -125,14 +123,26 @@ const MapSection = ({
         </div>
 
         {/* Areas Served */}
-        {areasServed && areasServed?.areas && areasServed.areas.length > 0 && (
+        {areasServed && (
           <div className='w-full py-6 md:py-8 lg:py-12'>
             <h3 className='py-3 font-heading text-xl font-bold text-gray-800 dark:text-gray-200 md:text-2xl lg:text-3xl'>
-              {areasServed?.title}
+              Areas Served by Our {title} IVF Centre
             </h3>
-            <p className='mb-4 font-content text-gray-700 dark:text-gray-300 md:mb-6 md:text-base'>
-              {areasServed?.description}
-            </p>
+            {areasDescription && (
+              <div className='mb-4 font-content text-gray-700 dark:text-gray-300 md:mb-6 md:text-base'>
+                <RichText
+                  content={areasDescription}
+                  renderers={{
+                    p: ({ children }) => <p className='text-justify'>{children}</p>,
+                    a: ({ children, href }) => (
+                      <a href={href} className='text-gg-500 underline'>
+                        {children}
+                      </a>
+                    ),
+                  }}
+                />
+              </div>
+            )}
             <div className='overflow-x-auto rounded-lg border border-gray-300 dark:border-gray-600 md:rounded-2xl'>
               <table className='w-full table-fixed border-collapse text-xs md:text-sm lg:text-base'>
                 <tbody>
