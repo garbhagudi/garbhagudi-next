@@ -104,6 +104,7 @@ const Branch = ({ branch }) => {
         description={branch?.about?.raw?.children}
         doctors={branch?.doctors}
         title={branch?.title}
+        areasDescription={branch?.areasDescription?.raw?.children}
         areasServed={branch?.areasServed}
       />
       <Cta />
@@ -147,6 +148,9 @@ export const getStaticProps = async ({ params }) => {
           virtualTourLink1
           virtualTourLink2
           virtualTourLink3
+          areasDescription {
+            raw
+          }
           areasServed
           doctors(orderBy: order_ASC) {
             id
