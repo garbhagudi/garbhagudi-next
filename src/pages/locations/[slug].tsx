@@ -60,7 +60,7 @@ const Branch = ({ branch }) => {
         {/* Primary Tags */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1672381537/Misc/happy-pregnant-woman-late-pregnancy-stage-sitting-grass-lawn-min_11zon_xkeac0.webp'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1770374577/Pregnant_Lady.jpg_zvlxr3.jpg'
           as='image'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />

@@ -5,7 +5,7 @@ const Banner = ({ branchTitle }) => {
   const path = usePathname();
   return (
     <div>
-      <div className='bg-[url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1672381537/Misc/happy-pregnant-woman-late-pregnancy-stage-sitting-grass-lawn-min_11zon_xkeac0.webp)] bg-cover bg-right bg-no-repeat shadow-2xl sm:bg-center'>
+      <div className='bg-[url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1770374577/Pregnant_Lady.jpg_zvlxr3.jpg)] bg-cover bg-right bg-no-repeat shadow-2xl sm:bg-center'>
         <div className='h-full w-full bg-gradient-to-r from-white to-transparent py-6 dark:from-gray-800 dark:to-gray-800/10'>
           <div className='mx-auto flex h-[50vh] max-w-5xl items-center'>
             <div className='absolute z-10'>
