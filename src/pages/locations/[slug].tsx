@@ -151,7 +151,9 @@ export const getStaticProps = async ({ params }) => {
           areasDescription {
             raw
           }
-          areasServed
+          areasServed {
+            raw
+          }
           doctors(orderBy: order_ASC) {
             id
             name
