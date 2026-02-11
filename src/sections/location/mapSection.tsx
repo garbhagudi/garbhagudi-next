@@ -22,7 +22,9 @@ interface MapSectionProps {
   }[];
   title: string;
   areasDescription?: RichTextContent;
-  areasServed?: { areas: string[][] };
+  areasServed?: {
+    raw: RichTextContent;
+  };
 }
 
 const MapSection = ({
@@ -143,37 +145,36 @@ const MapSection = ({
                 />
               </div>
             )}
-            <div className='overflow-x-auto rounded-lg border border-gray-300 dark:border-gray-600 md:rounded-2xl'>
-              <table className='w-full table-fixed border-collapse text-xs md:text-sm lg:text-base'>
-                <tbody>
-                  {areasServed?.areas?.map((row, rowIndex) => (
-                    <tr
-                      key={rowIndex}
-                      className={`${
-                        rowIndex < areasServed.areas.length - 1
-                          ? 'border-b border-gray-300 dark:border-gray-600'
-                          : ''
-                      }`}
-                    >
-                      {row.map((area, colIndex) => (
-                        <td
-                          key={`${rowIndex}-${colIndex}`}
-                          className={`px-2 py-2 font-content text-gray-800 dark:text-gray-200 sm:px-3 sm:py-3 md:px-6 md:py-4 ${
-                            rowIndex % 2 === 0 ? 'bg-gray-50 dark:bg-gray-700' : ''
-                          } ${
-                            colIndex < row.length - 1
-                              ? 'border-r border-gray-300 dark:border-gray-600'
-                              : ''
-                          }`}
-                        >
-                          {area}
+            {areasServed && (
+              <div className='w-full overflow-x-auto'>
+                <div className='w-full overflow-hidden rounded-2xl border border-gray-300 dark:border-gray-600'>
+                  <RichText
+                    content={areasServed?.raw}
+                    renderers={{
+                      table: ({ children }) => (
+                        <table className='w-full min-w-full border-collapse text-xs md:text-sm lg:text-base'>
+                          {children}
+                        </table>
+                      ),
+
+                      table_row: ({ children }) => (
+                        <tr className='border-b border-gray-300 even:bg-gray-50 dark:border-gray-600 dark:even:bg-gray-700'>
+                          {children}
+                        </tr>
+                      ),
+
+                      table_cell: ({ children }) => (
+                        <td className='border-r border-gray-300 px-4 py-4 font-content text-gray-800 last:border-r-0 dark:border-gray-600 dark:text-gray-200'>
+                          {children}
                         </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                      ),
+
+                      p: ({ children }) => <span className='m-0 block'>{children}</span>,
+                    }}
+                  />
+                </div>
+              </div>
+            )}
           </div>
         )}
 
