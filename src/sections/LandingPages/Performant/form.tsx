@@ -54,6 +54,18 @@ const Form = () => {
         throw new Error('Network response was not ok');
       }
       setLoad(false);
+
+      if (typeof window !== 'undefined') {
+        window.dataLayer = window.dataLayer || [];
+
+        window.dataLayer.push({
+          event: 'form_submit',
+          user_data: {
+            email: data.Email,
+            phone_number: data?.Phone,
+          },
+        });
+      }
       if (responseData?.data[0]?.code === 'SUCCESS') {
         router.push('/thank-you.html');
       }

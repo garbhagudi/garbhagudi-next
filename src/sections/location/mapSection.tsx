@@ -90,7 +90,8 @@ const MapSection = ({
           {/* Description */}
           <div className='flex flex-col items-center px-6 font-content text-gray-800 dark:text-gray-200 lg:w-1/2'>
             <h2 className='py-3 font-heading text-xl font-bold lg:text-2xl'>
-              GarbhaGudi IVF Centre, {title}
+              {/* GarbhaGudi IVF Centre, {title} */}
+              Garbhagudi - Best IVF Centre in {title}
             </h2>
 
             <div
