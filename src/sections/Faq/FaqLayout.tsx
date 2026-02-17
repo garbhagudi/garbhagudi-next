@@ -1,13 +1,17 @@
+'use client';
+
 import { HiChevronDown } from 'react-icons/hi';
 import { Transition } from '@headlessui/react';
+import { ReactNode } from 'react';
 
 interface AccordionLayoutProps {
-  title: string;
-  children: React.ReactNode;
+  title: ReactNode;
+  children: ReactNode;
   index: number | string;
-  activeIndex: string | number | null;
-  setActiveIndex: (index: number | string) => void;
+  activeIndex: number | string | null;
+  setActiveIndex: (index: number | string | null) => void;
 }
+
 const AccordionLayout = ({
   title,
   children,
@@ -15,50 +19,43 @@ const AccordionLayout = ({
   activeIndex,
   setActiveIndex,
 }: AccordionLayoutProps) => {
-  const handleSetIndex = (index: number | string) => {
-    if (activeIndex === index) {
-      setActiveIndex(null);
-    } else {
-      setActiveIndex(index);
-    }
+  const isActive = activeIndex === index;
+
+  const handleSetIndex = () => {
+    setActiveIndex(isActive ? null : index);
   };
 
   return (
     <>
       <div
-        onClick={() => handleSetIndex(index)}
+        onClick={handleSetIndex}
         className={
-          activeIndex === index
+          isActive
             ? `text-md mt-3 flex w-full items-center justify-between rounded-t-lg bg-gg-500 px-3 py-2 font-semibold text-gray-200 transition-all duration-500 ease-in-out hover:cursor-pointer dark:bg-gg-400 dark:text-gray-800 sm:px-6 xl:text-xl`
             : `text-md mt-3 flex w-full items-center justify-between border-gray-300 px-3 py-1 font-lexend font-medium text-gray-800 transition-all duration-500 ease-in-out hover:cursor-pointer hover:rounded-lg hover:bg-gg-400 hover:py-3 dark:text-gray-200 sm:px-6 sm:hover:text-lg xl:hover:text-xl`
         }
       >
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center'>
           <div className='mt-1'>{title}</div>
         </div>
-        <div>
-          {activeIndex === index ? (
-            <HiChevronDown className='h-8 w-8 rotate-180 transition-all duration-500' />
-          ) : (
-            <HiChevronDown className='h-8 w-8' />
-          )}
-        </div>
+
+        <HiChevronDown
+          className={`h-8 w-8 transition-transform duration-500 ${isActive ? 'rotate-180' : ''}`}
+        />
       </div>
+
       <Transition
-        as={'div'}
-        show={true}
+        show={isActive}
         enter='transition duration-300 ease-out'
         enterFrom='transform scale-95 opacity-0'
         enterTo='transform scale-100 opacity-100'
-        leave='transition duration-100 ease-out'
+        leave='transition duration-200 ease-in'
         leaveFrom='transform scale-100 opacity-100'
         leaveTo='transform scale-95 opacity-0'
       >
-        {activeIndex === index && (
-          <div className='shadow-3xl rounded-b-lg border-2 border-gg-500 p-4 font-lexend text-gray-800 dark:border-gg-400 dark:text-gray-200'>
-            {children}
-          </div>
-        )}
+        <div className='shadow-3xl rounded-b-lg border-2 border-gg-500 p-4 font-lexend text-gray-800 dark:border-gg-400 dark:text-gray-200'>
+          {children}
+        </div>
       </Transition>
     </>
   );
