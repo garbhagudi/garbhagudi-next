@@ -75,23 +75,25 @@ const Faq = ({ branch }: FaqProps) => {
       ),
       Answer: (
         <div>
-          The total cost of IVF in <strong>{branch}</strong> starts from ₹1,65,000. The cost may
+          The total cost of IVF in <strong>{branch}</strong> starts from ₹
+          {branch === 'Davanagere' || branch === 'Hosur' ? '1,50,000' : '1,65,000'}. The cost may
           vary depending on medical condition and treatment protocol.
         </div>
       ),
     },
     {
       id: 4,
-      Question: 'What is included in ₹1,65,000?',
+      Question: `What is included in ₹${branch === 'Davanagere' || branch === 'Hosur' ? '1,50,000' : '1,65,000'}?`,
       Answer: (
         <div className='space-y-4'>
           <p>
-            This ₹1,65,000 includes fertility specialist consultations, oocyte pickup (OPU),
-            follicular monitoring scans, and the complete IVF process including OPU procedures, OT
-            charges, embryology laboratory charges, specialist and nursing fees, culture media and
-            consumables, intracytoplasmic sperm injection (ICSI) charges, sperm preparation charges,
-            embryologist fees, embryo freezing for six months, thawing, embryo transfer (ET) or
-            frozen embryo transfer (FET), and post-OPU ultrasound (USG) scan examination.
+            This ₹{branch === 'Davanagere' || branch === 'Hosur' ? '1,50,000' : '1,65,000'} includes
+            fertility specialist consultations, oocyte pickup (OPU), follicular monitoring scans,
+            and the complete IVF process including OPU procedures, OT charges, embryology laboratory
+            charges, specialist and nursing fees, culture media and consumables, intracytoplasmic
+            sperm injection (ICSI) charges, sperm preparation charges, embryologist fees, embryo
+            freezing for six months, thawing, embryo transfer (ET) or frozen embryo transfer (FET),
+            and post-OPU ultrasound (USG) scan examination.
           </p>
 
           <p>
