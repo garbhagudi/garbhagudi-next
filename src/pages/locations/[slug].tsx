@@ -110,6 +110,7 @@ const Branch = ({ branch }) => {
       <Cta />
       <Faq branch={branch?.title} />
       <VirtualTour
+        branch={branch?.title}
         link1={branch?.virtualTourLink1}
         link2={branch?.virtualTourLink2}
         link3={branch?.virtualTourLink3}
