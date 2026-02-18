@@ -1,10 +1,10 @@
-const VirtualTour = ({ link1, link2, link3 }) => {
+const VirtualTour = ({ branch, link1, link2, link3 }) => {
   return (
     <div className='mx-auto max-w-7xl'>
       {link1 && (
         <h3 className='mx-auto py-3 text-center font-heading text-2xl font-bold text-gray-800 dark:text-gray-200 md:text-4xl'>
           {/* Virtual Tour */}
-          Explore Our Fertility Clinic in Kalyan Nagar
+          Explore Our Fertility Clinic in {branch}
         </h3>
       )}
       <ul className='mx-auto grid max-w-7xl grid-cols-1 px-2 py-8 sm:gap-x-0 lg:grid-cols-3'>
