@@ -17,6 +17,9 @@ const ExtraSlot = dynamic(() => import('sections/fertility-experts/ExtraSlot'), 
 const VideoTestimonials = dynamic(() => import('sections/fertility-experts/videoTestimonials'), {
   ssr: false,
 });
+const AccordionSection = dynamic(() => import('sections/accordianSection/accordionSection'), {
+  ssr: false,
+});
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
     query: gql`
@@ -64,6 +67,14 @@ export const getStaticProps = async ({ params }) => {
             }
           }
         }
+        accordionSections(orderBy: createdAt_ASC) {
+          heading
+          defaultOpen
+          links {
+            label
+            url
+          }
+        }
       }
     `,
     variables: {
@@ -81,6 +92,7 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       doctor: data.doctor,
+      accordionSections: data?.accordionSections || [],
     },
     revalidate: 180,
   };
@@ -112,7 +124,7 @@ const doctorRegistration = (slug: string) => {
   return '(KMC)';
 };
 
-const Doctor = ({ doctor }) => {
+const Doctor = ({ doctor, accordionSections }) => {
   const router = useRouter();
   const defaultMetaTile = `${doctor?.name} | ${doctor?.designation} | ${doctor?.location[0]?.title} | GarbhaGudi `;
   function addDocJsonLd() {
@@ -493,6 +505,7 @@ const Doctor = ({ doctor }) => {
           </div>
         </section>
       </main>
+      <AccordionSection sections={accordionSections} />
       <Cta />
     </div>
   );

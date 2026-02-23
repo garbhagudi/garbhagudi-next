@@ -6,11 +6,14 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import dynamic from 'next/dynamic';
-import AccordionSection from 'sections/accordianSection/accordionSection';
+
 const MapSection = dynamic(() => import('sections/location/mapSection'), { ssr: false });
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Faq = dynamic(() => import('sections/location/faq'), { ssr: false });
 const VirtualTour = dynamic(() => import('sections/location/virtualTour'), { ssr: false });
+const AccordionSection = dynamic(() => import('sections/accordianSection/accordionSection'), {
+  ssr: false,
+});
 
 const Branch = ({ branch, accordionSections }) => {
   const router = useRouter();
@@ -109,7 +112,7 @@ const Branch = ({ branch, accordionSections }) => {
         areasServed={branch?.areasServed}
       />
       <Cta />
-      <Faq branch={branch?.title} />
+      <Faq data={branch?.faq || []} />
       <AccordionSection sections={accordionSections} />
       <VirtualTour
         branch={branch?.title}
@@ -168,6 +171,14 @@ export const getStaticProps = async ({ params }) => {
               url
             }
             imageUrl
+          }
+          faq {
+            id
+            question
+            answer {
+              raw
+              text
+            }
           }
         }
         accordionSections(orderBy: createdAt_ASC) {
