@@ -11,6 +11,9 @@ import dynamic from 'next/dynamic';
 const FAQs = dynamic(() => import('components/FAQs'), { ssr: false });
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
+const AccordionSection = dynamic(() => import('sections/accordianSection/accordionSection'), {
+  ssr: false,
+});
 
 export const getStaticProps = async ({ params }) => {
   const apolloQuery = async ({ slug }) => {
@@ -44,6 +47,14 @@ export const getStaticProps = async ({ params }) => {
               }
             }
           }
+          accordionSections(orderBy: createdAt_ASC) {
+            heading
+            defaultOpen
+            links {
+              label
+              url
+            }
+          }
         }
       `,
       variables: {
@@ -60,6 +71,7 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       treatment: data.treatment,
+      accordionSections: data?.accordionSections || [],
     },
     revalidate: 180,
   };
@@ -85,7 +97,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-const Treatment = ({ treatment }) => {
+const Treatment = ({ treatment, accordionSections }) => {
   const router = useRouter();
   if (router.isFallback) {
     return <Loading />;
@@ -296,7 +308,7 @@ const Treatment = ({ treatment }) => {
           <FAQs data={treatment.faq} activeIndex={treatment.faq[0]?.id} />
         </div>
       )}
-
+      <AccordionSection sections={accordionSections} />
       <Cta />
     </div>
   );
