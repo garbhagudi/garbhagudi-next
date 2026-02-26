@@ -13,7 +13,7 @@ interface FaqProps {
     text: string;
   };
 }
-const FAQs = ({ data, activeIndex }: { data: [FaqProps]; activeIndex: string }) => {
+const FAQs = ({ data, activeIndex }: { data: FaqProps[]; activeIndex: string }) => {
   const [activeIndex1, setActiveIndex1] = useState<string | number | null>(activeIndex);
   return (
     data?.length > 0 && (

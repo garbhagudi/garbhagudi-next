@@ -11,6 +11,7 @@ import dynamic from 'next/dynamic';
 import BlogsSnip from 'sections/home/newBlogs';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
+const FAQs = dynamic(() => import('components/FAQs'), { ssr: false });
 const ExtraSlot = dynamic(() => import('sections/fertility-experts/ExtraSlot'), {
   ssr: false,
 });
@@ -64,6 +65,14 @@ export const getStaticProps = async ({ params }) => {
             slug
             image {
               url
+            }
+          }
+          faq {
+            id
+            question
+            answer {
+              raw
+              text
             }
           }
         }
@@ -505,6 +514,9 @@ const Doctor = ({ doctor, accordionSections }) => {
           </div>
         </section>
       </main>
+      {doctor?.faq && Array.isArray(doctor.faq) && doctor.faq.length > 0 && (
+        <FAQs data={doctor.faq} activeIndex={doctor.faq[0]?.id} />
+      )}
       <AccordionSection sections={accordionSections} />
       <Cta />
     </div>
