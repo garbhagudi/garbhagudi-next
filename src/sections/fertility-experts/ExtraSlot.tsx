@@ -20,12 +20,11 @@ const ExtraSlot = ({ effectiveDate, timings }: ExtraSlotProps) => {
           {timings.map((slot, index) => (
             <li
               key={index}
-              className={`flex justify-between pb-2 ${index < timings.length - 1 ? 'border-b border-gray-700' : ''
-                }`}
+              className={`flex justify-between pb-2 ${
+                index < timings.length - 1 ? 'border-b border-gray-700' : ''
+              }`}
             >
-              <span className='font-bold text-gray-800 dark:text-gray-200'>
-                {slot.doctorName}
-              </span>
+              <span className='font-bold text-gray-800 dark:text-gray-200'>{slot.doctorName}</span>
               <span className='text-gray-600 dark:text-gray-100'>{slot.timing}</span>
             </li>
           ))}
