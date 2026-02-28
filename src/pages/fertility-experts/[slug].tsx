@@ -12,9 +12,6 @@ import BlogsSnip from 'sections/home/newBlogs';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 const FAQs = dynamic(() => import('components/FAQs'), { ssr: false });
-const ExtraSlot = dynamic(() => import('sections/fertility-experts/ExtraSlot'), {
-  ssr: false,
-});
 const VideoTestimonials = dynamic(() => import('sections/fertility-experts/videoTestimonials'), {
   ssr: false,
 });
@@ -417,7 +414,6 @@ const Doctor = ({ doctor, accordionSections }) => {
                             </div>
                           </div>
                         </div>
-                        {doctor?.slug === 'dr-vandana-ramanathan' && <ExtraSlot />}
                         <p className='mt-5 text-xs text-gray-800 dark:text-gray-200'>
                           *Appointments are subject to doctor availability. Please, make sure you
                           have given your registered number if you have already visited GarbhaGudi.
