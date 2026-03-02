@@ -66,7 +66,7 @@ const Form = () => {
           },
         });
       }
-      if (responseData?.data[0]?.code === 'SUCCESS') {
+      if (response.ok && responseData?.data && responseData.data.length > 0) {
         router.push('/thank-you.html');
       }
     } catch (err) {
