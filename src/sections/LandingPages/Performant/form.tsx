@@ -49,7 +49,6 @@ const Form = () => {
         body: JSON.stringify({ data }),
       });
 
-      const responseData = await response.json();
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -66,7 +65,8 @@ const Form = () => {
           },
         });
       }
-      if (response.ok && responseData?.data && responseData.data.length > 0) {
+
+      if (response.ok) {
         router.push('/thank-you.html');
       }
     } catch (err) {
