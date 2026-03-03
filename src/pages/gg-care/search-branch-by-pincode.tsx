@@ -13,6 +13,8 @@ const availableZipcodes = [
   '560094',
   '560072',
   '560064',
+  '577004',
+  '635109',
 ];
 
 interface Coordinates {
