@@ -425,7 +425,12 @@ const Doctor = ({ doctor, accordionSections }) => {
                 <div className='mt-10 border-t border-gray-300 py-10'>
                   <div className='flex flex-col items-center justify-center gap-y-2'>
                     <div className='w-full px-4 lg:w-9/12'>
-                      <h2 className='text-2xl font-bold'>{`About ${doctor?.name}`}</h2>
+                      <h2 className='text-2xl font-bold text-gray-900 dark:text-gray-100'>
+                        About {doctor?.name}{' '}
+                        <span className='font-medium text-gray-600 dark:text-gray-400'>
+                          - {doctor?.designation}
+                        </span>
+                      </h2>
                       <div className='prose mb-4 text-justify text-gray-800 dark:text-gray-200'>
                         <RichText
                           content={doctor?.bio?.raw?.children}
