@@ -4,6 +4,8 @@ import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 interface Article {
   articles: {
@@ -19,6 +21,11 @@ interface Article {
 }
 
 const IndexPage = ({ articles }: Article) => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Solutions', url: 'https://www.garbhagudi.com/solutions' },
+  ]);
+
   return (
     <div>
       <Head>
@@ -30,6 +37,13 @@ const IndexPage = ({ articles }: Article) => {
         <meta
           name='description'
           content='Explore advanced fertility solutions at GarbhaGudi IVF. Personalized treatments, high success rates & compassionate care. Book a consultation today!'
+        />
+
+        {/* Breadcrumb Schema */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
         />
 
         {/* Open Graph / Facebook */}
@@ -61,6 +75,7 @@ const IndexPage = ({ articles }: Article) => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
         />
       </Head>
+      <BreadCrumbs text1='Solutions' link1='/solutions' text2='' link2='' />
       <h1 className='mx-auto max-w-7xl pt-12 text-center font-heading text-4xl font-semibold'>
         Solutions
       </h1>

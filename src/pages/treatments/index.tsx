@@ -5,6 +5,7 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import Image from 'next/image';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
 interface TreatmentProps {
   treatments: {
@@ -20,6 +21,11 @@ interface TreatmentProps {
 }
 
 const IndexPage = ({ treatments }: TreatmentProps) => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Treatments', url: 'https://www.garbhagudi.com/treatments' },
+  ]);
+
   return (
     <div>
       <Head>
@@ -31,6 +37,13 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
         <meta
           name='description'
           content='Treatment options, procedure details and advanced treatment options for male and female infertility treatment available at GarbhaGudi'
+        />
+
+        {/* Breadcrumb Schema */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
         />
 
         {/* Open Graph / Facebook */}

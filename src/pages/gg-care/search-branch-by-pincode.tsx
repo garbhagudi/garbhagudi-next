@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { FaSpinner } from 'react-icons/fa';
 import Head from 'next/head';
 import Image from 'next/image';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
 // List of available zipcodes
 const availableZipcodes = [
@@ -106,6 +108,15 @@ const NearestZipcodeFinder: React.FC = () => {
     return deg * (Math.PI / 180);
   };
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'GG Care', url: 'https://www.garbhagudi.com/gg-care' },
+    {
+      name: 'Search Branch by Pincode',
+      url: 'https://www.garbhagudi.com/gg-care/search-branch-by-pincode',
+    },
+  ]);
+
   return (
     <div>
       <Head>
@@ -117,6 +128,13 @@ const NearestZipcodeFinder: React.FC = () => {
         <meta
           name='description'
           content='To book an appointment for your Fertility and IVF treatment in GarbhaGudi, you can contact on 9108910832 or you can also Email us on dreams@garbhagudi.com.'
+        />
+
+        {/* Breadcrumb Schema */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
         />
 
         {/* Open Graph / Facebook */}
@@ -148,6 +166,7 @@ const NearestZipcodeFinder: React.FC = () => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.webp'
         />
       </Head>
+      <BreadCrumbs text1='GG Care' link1='/gg-care' text2='Search Branch by Pincode' link2='' />
 
       <div className='mt-10 flex flex-col items-center justify-center'>
         <h1 className='px-2 py-6 pb-6 text-center font-heading text-3xl font-semibold lg:pt-12 lg:text-4xl'>
