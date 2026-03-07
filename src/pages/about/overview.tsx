@@ -4,9 +4,16 @@ import Head from 'next/head';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 const Header = dynamic(() => import('sections/about/header'), { ssr: true });
 const CoreVision = dynamic(() => import('sections/about/coreVision'), { ssr: false });
 const Overview = ({ directors }) => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'About', url: 'https://www.garbhagudi.com/about/overview' },
+  ]);
+
   return (
     <div>
       <Head>
@@ -18,6 +25,13 @@ const Overview = ({ directors }) => {
         <meta
           name='description'
           content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art cutting-edge technology to address infertility.'
+        />
+
+        {/* Breadcrumb Schema */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
         />
 
         {/* Open Graph / Facebook */}
@@ -49,6 +63,7 @@ const Overview = ({ directors }) => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
         />
       </Head>
+      <BreadCrumbs text1='About' link1='/about/overview' text2='' link2='' />
       <Header />
       <div className='bg-white dark:bg-gray-800'>
         <div className='mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-24'>

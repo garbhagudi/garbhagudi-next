@@ -2,7 +2,26 @@ import React from 'react';
 import Link from 'next/link';
 import { HiHome, HiChevronRight } from 'react-icons/hi';
 
-const BreadCrumbs = ({
+interface BreadcrumbItem {
+  link?: string;
+  text: string;
+}
+
+interface BreadCrumbsProps {
+  items?: BreadcrumbItem[];
+  // Legacy props for backward compatibility
+  link1?: string;
+  text1?: string;
+  link2?: string;
+  text2?: string;
+  link3?: string;
+  text3?: string;
+  link4?: string;
+  text4?: string;
+}
+
+const BreadCrumbs: React.FC<BreadCrumbsProps> = ({
+  items,
   link1,
   text1,
   link2,
@@ -11,16 +30,23 @@ const BreadCrumbs = ({
   text3,
   link4,
   text4,
-}: {
-  link1: string;
-  text1: string;
-  link2: string;
-  text2: string;
-  link3?: string;
-  text3?: string;
-  link4?: string;
-  text4?: string;
 }) => {
+  // Support both new API (items) and legacy API (link1, text1, etc.)
+  let breadcrumbItems: BreadcrumbItem[] = [];
+
+  if (items && items.length > 0) {
+    breadcrumbItems = items;
+  } else {
+    // Legacy API support
+    if (text1) breadcrumbItems.push({ link: link1, text: text1 });
+    if (text2) breadcrumbItems.push({ link: link2, text: text2 });
+    if (text3) breadcrumbItems.push({ link: link3, text: text3 });
+    if (text4) breadcrumbItems.push({ link: link4, text: text4 });
+  }
+
+  // Filter out items without text
+  const validItems = breadcrumbItems.filter((item) => item.text);
+
   return (
     <div>
       <nav
@@ -29,94 +55,40 @@ const BreadCrumbs = ({
       >
         <ol className='flex flex-row items-center space-x-1'>
           <li className='inline-flex items-center'>
-            <Link passHref href='/'>
-              <span className='flex items-center justify-center text-sm'>
+            <Link href='/' passHref>
+              <span className='flex items-center justify-center text-sm text-gray-800 hover:text-brandPink2 dark:text-gray-200'>
                 <HiHome className='mb-0.5 mr-1 h-4 w-4' /> Home
               </span>
             </Link>
           </li>
-          {link1 && (
-            <li>
-              <div className='flex cursor-pointer items-center'>
-                <HiChevronRight className='h-5 w-5' />
-                <a
-                  href={link1}
-                  className='ml-1 mt-0.5 text-sm text-gray-800 hover:text-brandPink2 dark:text-gray-200'
-                >
-                  {text1}
-                </a>
-              </div>
-            </li>
-          )}
-          {text2 && (
-            <li aria-current='page'>
-              <Link href={link2} passHref>
-                <div className='flex cursor-pointer items-center'>
-                  <svg
-                    className='h-6 w-6 text-gray-400'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      fillRule='evenodd'
-                      d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
-                      clipRule='evenodd'
-                    ></path>
-                  </svg>
-                  <span className='ml-1 cursor-pointer text-sm text-gray-800 hover:text-brandPink2 dark:text-gray-200'>
-                    {text2}
-                  </span>
-                </div>
-              </Link>
-            </li>
-          )}
-          {text3 && (
-            <li aria-current='page'>
-              <Link href={link3} passHref>
+          {validItems.map((item, index) => {
+            const isLast = index === validItems.length - 1;
+            return (
+              <li key={index} className={isLast ? 'inline-flex items-center' : ''}>
                 <div className='flex items-center'>
-                  <svg
-                    className='h-6 w-6 text-gray-400'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      fillRule='evenodd'
-                      d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
-                      clipRule='evenodd'
-                    ></path>
-                  </svg>
-                  <span className='ml-1 text-sm font-medium text-gray-800 hover:text-brandPink2 dark:text-gray-200'>
-                    {text3}
-                  </span>
+                  <HiChevronRight className='h-5 w-5 text-gray-400' />
+                  {item.link && !isLast ? (
+                    <Link href={item.link} passHref>
+                      <span className='ml-1 text-sm text-gray-800 hover:text-brandPink2 dark:text-gray-200'>
+                        {item.text}
+                      </span>
+                    </Link>
+                  ) : (
+                    <span
+                      className={`ml-1 text-sm ${
+                        isLast
+                          ? 'font-medium text-gray-800 dark:text-gray-200'
+                          : 'text-gray-800 hover:text-brandPink2 dark:text-gray-200'
+                      }`}
+                      aria-current={isLast ? 'page' : undefined}
+                    >
+                      {item.text}
+                    </span>
+                  )}
                 </div>
-              </Link>
-            </li>
-          )}
-          {text4 && (
-            <li aria-current='page'>
-              <Link href={link4} passHref>
-                <div className='flex items-center'>
-                  <svg
-                    className='h-6 w-6 text-gray-400'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      fillRule='evenodd'
-                      d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
-                      clipRule='evenodd'
-                    ></path>
-                  </svg>
-                  <span className='ml-1 text-sm font-medium text-gray-800 hover:text-brandPink2 dark:text-gray-200'>
-                    {text4}
-                  </span>
-                </div>
-              </Link>
-            </li>
-          )}
+              </li>
+            );
+          })}
         </ol>
       </nav>
     </div>

@@ -1,6 +1,8 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Hero from 'sections/gg-care/hero';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 const Contact = dynamic(() => import('sections/gg-care/content'), { ssr: false });
 const Stats = dynamic(() => import('sections/gg-care/stats'), { ssr: false });
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
@@ -9,6 +11,11 @@ const FindBranch = dynamic(() => import('sections/gg-care/find-branch'), { ssr: 
 const Share = dynamic(() => import('components/share'), { ssr: false });
 
 const IndexPage = () => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'GG Care', url: 'https://www.garbhagudi.com/gg-care' },
+  ]);
+
   return (
     <div>
       <Head>
@@ -27,6 +34,13 @@ const IndexPage = () => {
         <meta
           name='description'
           content='To book an appointment for your Fertility and IVF treatment in GarbhaGudi, you can contact on 9108910832 or you can also Email us on dreams@garbhagudi.com.'
+        />
+
+        {/* Breadcrumb Schema */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
         />
 
         {/* Open Graph / Facebook */}
@@ -64,6 +78,7 @@ const IndexPage = () => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.webp'
         />
       </Head>
+      <BreadCrumbs text1='GG Care' link1='/gg-care' text2='' link2='' />
       <Hero />
       <Video />
       <Stats />

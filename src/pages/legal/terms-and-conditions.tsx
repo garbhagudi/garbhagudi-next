@@ -1,8 +1,15 @@
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import dynamic from 'next/dynamic';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Terms = () => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Legal', url: 'https://www.garbhagudi.com/legal' },
+    { name: 'Terms and Conditions', url: 'https://www.garbhagudi.com/legal/terms-and-conditions' },
+  ]);
+
   return (
     <div>
       <Head>
@@ -14,6 +21,13 @@ const Terms = () => {
         <meta
           name='description'
           content="Read GarbhaGudi's Terms & Conditions to understand our policies. Stay informed about your rights & responsibilities. Click here to learn more!"
+        />
+
+        {/* Breadcrumb Schema */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
         />
 
         {/* Open Graph / Facebook */}

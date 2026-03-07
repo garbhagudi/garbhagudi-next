@@ -1,7 +1,15 @@
 import GarbhaGudiWay from 'sections/tools/gg-way';
 import Head from 'next/head';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
 const GGWays = () => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'About', url: 'https://www.garbhagudi.com/about/overview' },
+    { name: 'GarbhaGudi Way', url: 'https://www.garbhagudi.com/about/garbhagudi-way' },
+  ]);
+
   return (
     <div>
       <Head>
@@ -13,6 +21,13 @@ const GGWays = () => {
         <meta
           name='description'
           content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art cutting-edge technology to address infertility.'
+        />
+
+        {/* Breadcrumb Schema */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
         />
 
         {/* Open Graph / Facebook */}
@@ -44,6 +59,7 @@ const GGWays = () => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
         />
       </Head>
+      <BreadCrumbs text1='About' link1='/about/overview' text2='GarbhaGudi Way' link2='' />
       <GarbhaGudiWay />
     </div>
   );

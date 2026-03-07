@@ -1,8 +1,15 @@
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import dynamic from 'next/dynamic';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Refund = () => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Legal', url: 'https://www.garbhagudi.com/legal' },
+    { name: 'Cancellation & Refund Policy', url: 'https://www.garbhagudi.com/legal/refund-policy' },
+  ]);
+
   return (
     <div>
       <Head>
@@ -14,6 +21,13 @@ const Refund = () => {
         <meta
           name='description'
           content="Learn about GarbhaGudi IVF Centre's refund policy for treatments & services. Clear, transparent guidelines to ensure your peace of mind. Read now!"
+        />
+
+        {/* Breadcrumb Schema */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
         />
 
         {/* Open Graph / Facebook */}
