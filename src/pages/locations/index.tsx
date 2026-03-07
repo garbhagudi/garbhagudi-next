@@ -4,8 +4,15 @@ import { gql } from '@apollo/client';
 import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
 const Locations = ({ branches }) => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Locations', url: 'https://www.garbhagudi.com/locations' },
+  ]);
+
   return (
     <div>
       <Head>
@@ -21,6 +28,13 @@ const Locations = ({ branches }) => {
         <meta
           name='description'
           content='GarbhaGudi is where dreams come alive, hopes never fade and possibilities never end. We work to help you cherish the golden moment of holding your bundle of joy'
+        />
+
+        {/* Breadcrumb Schema */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
         />
 
         {/* Open Graph / Facebook */}
@@ -53,6 +67,7 @@ const Locations = ({ branches }) => {
         />
         <link rel='canonical' href='https://garbhagudi.com/locations' />
       </Head>
+      <BreadCrumbs text1='Locations' link1='/locations' text2='' link2='' />
       <div className=''>
         <Banner branchTitle={''} />
         <h1 className='pt-10 text-center font-heading text-3xl font-bold lg:pt-16 lg:text-4xl'>

@@ -1,7 +1,15 @@
 import Faq from 'sections/Faq/faq';
 import Head from 'next/head';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
 const faq = () => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
+    { name: 'FAQ', url: 'https://www.garbhagudi.com/resources/faq' },
+  ]);
+
   return (
     <div>
       <Head>
@@ -13,6 +21,13 @@ const faq = () => {
         <meta
           name='description'
           content='Explore Frequently Asked Questions about fertility treatments at GarbhaGudi. Get expert answers & clear your doubts today! Visit now to learn more.'
+        />
+
+        {/* Breadcrumb Schema */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
         />
 
         {/* Open Graph / Facebook */}
@@ -44,6 +59,7 @@ const faq = () => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802155/SEO/OG_images_FAQs_k40phu.webp'
         />
       </Head>
+      <BreadCrumbs text1='Resources' link1='/resources' text2='FAQ' link2='' />
       <Faq />
     </div>
   );

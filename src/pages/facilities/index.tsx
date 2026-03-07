@@ -4,6 +4,7 @@ import BreadCrumbs from 'components/breadcrumbs';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
 interface Article {
   articles: {
@@ -21,6 +22,11 @@ interface Article {
 }
 
 const IndexPage = ({ articles }: Article) => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Facilities', url: 'https://www.garbhagudi.com/facilities' },
+  ]);
+
   return (
     <div>
       <Head>
@@ -31,8 +37,16 @@ const IndexPage = ({ articles }: Article) => {
         <meta name='title' content='Facilities | GarbhaGudi IVF Centre' />
         <meta
           name='description'
-          content='Explore top-notch facilities designed for comfort & convenience. From modern amenities to exceptional services, we’ve got you covered! Visit us today!'
+          content="Explore top-notch facilities designed for comfort & convenience. From modern amenities to exceptional services, we've got you covered! Visit us today!"
         />
+
+        {/* Breadcrumb Schema */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
+        />
+
         {/* Open Graph / Facebook */}
 
         <meta property='og:title' content='Facilities | GarbhaGudi IVF Centre' />
@@ -40,7 +54,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta
           property='og:description'
-          content='Explore top-notch facilities designed for comfort & convenience. From modern amenities to exceptional services, we’ve got you covered! Visit us today!'
+          content="Explore top-notch facilities designed for comfort & convenience. From modern amenities to exceptional services, we've got you covered! Visit us today!"
         />
         <meta property='og:type' content='website' />
         <meta
@@ -55,7 +69,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta name='twitter:title' content='Facilities | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
-          content='Explore top-notch facilities designed for comfort & convenience. From modern amenities to exceptional services, we’ve got you covered! Visit us today!'
+          content="Explore top-notch facilities designed for comfort & convenience. From modern amenities to exceptional services, we've got you covered! Visit us today!"
         />
         <meta
           name='twitter:image'

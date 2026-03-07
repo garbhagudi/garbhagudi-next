@@ -1,8 +1,15 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
 const IndexPage = () => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
+  ]);
+
   return (
     <div>
       <div>
@@ -15,6 +22,13 @@ const IndexPage = () => {
           <meta
             name='description'
             content='Explore top Resources on fertility, IVF, and parenting at GarbhaGudi. Get expert advice, guides, and support. Visit now for valuable insights!'
+          />
+
+          {/* Breadcrumb Schema */}
+          <script
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+            id='breadcrumbs-jsonld'
           />
 
           {/* Open Graph / Facebook */}
@@ -46,6 +60,7 @@ const IndexPage = () => {
             content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802155/SEO/OG_images_FAQs_k40phu.webp'
           />
         </Head>
+        <BreadCrumbs text1='Resources' link1='/resources' text2='' link2='' />
         <div className='mx-auto max-w-7xl'>
           <h1 className='pt-10 text-center font-heading text-4xl font-bold text-gray-800 dark:text-gray-200 lg:pt-24 lg:text-5xl'>
             Resources
