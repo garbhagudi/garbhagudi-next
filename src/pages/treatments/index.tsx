@@ -123,7 +123,11 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                               <div className='w-1/3'>
                                 <Image
                                   className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
-                                  src={item?.iconUrl}
+                                  src={
+                                    item?.iconUrl ||
+                                    item?.icon?.url ||
+                                    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264858/Icons/Resources/FAQs_x8rsvf.svg'
+                                  }
                                   alt={item?.title}
                                   width={100}
                                   height={100}
@@ -196,7 +200,11 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                               <div className='w-1/3'>
                                 <Image
                                   className='h-16 w-16 rounded-full object-cover'
-                                  src={item?.iconUrl}
+                                  src={
+                                    item?.iconUrl ||
+                                    item?.icon?.url ||
+                                    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264858/Icons/Resources/FAQs_x8rsvf.svg'
+                                  }
                                   alt={item?.title}
                                   width={100}
                                   height={100}
@@ -225,7 +233,11 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                               <div className='w-1/3'>
                                 <Image
                                   className='h-16 w-16 rounded-full object-cover'
-                                  src={item?.iconUrl}
+                                  src={
+                                    item?.iconUrl ||
+                                    item?.icon?.url ||
+                                    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264858/Icons/Resources/FAQs_x8rsvf.svg'
+                                  }
                                   alt={item?.title}
                                   width={100}
                                   height={100}
