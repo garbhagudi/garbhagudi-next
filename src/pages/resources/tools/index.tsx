@@ -2,8 +2,15 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
 const IndexPage = () => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
+    { name: 'Tools', url: 'https://www.garbhagudi.com/resources/tools' },
+  ]);
   return (
     <div>
       <Head>
@@ -45,7 +52,22 @@ const IndexPage = () => {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.webp'
         />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
+        />
       </Head>
+      <BreadCrumbs
+        link1='/resources'
+        text1='Resources'
+        text2='Tools'
+        link2='/resources/tools'
+        link3={''}
+        text3={''}
+        link4={''}
+        text4={''}
+      />
       <h1 className='mx-auto max-w-7xl pt-12 text-center font-heading text-4xl font-semibold'>
         Tools and Calcualtors
       </h1>

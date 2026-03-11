@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { HiChevronRight } from 'react-icons/hi';
 import Image from 'next/image';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
 export const getStaticProps = async () => {
   const { data } = await apolloClient.query({
@@ -31,6 +33,10 @@ export const getStaticProps = async () => {
 };
 
 const IndexPage = ({ medias }) => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Publications', url: 'https://www.garbhagudi.com/publications' },
+  ]);
   return (
     <div>
       <Head>
@@ -72,7 +78,22 @@ const IndexPage = ({ medias }) => {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1658492748/SEO/SEO_Website_image-min_wjkpwk.webp'
         />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
+        />
       </Head>
+      <BreadCrumbs
+        link1='/publications'
+        text1='Publications'
+        text2=''
+        link2=''
+        link3={''}
+        text3={''}
+        link4={''}
+        text4={''}
+      />
       <div className='mx-auto max-w-7xl'>
         <h1 className='pt-10 text-center font-heading text-4xl font-bold lg:pt-24 lg:text-5xl'>
           Publications

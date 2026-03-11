@@ -7,6 +7,8 @@ import Link from 'next/link';
 import { VscVerified } from 'react-icons/vsc';
 import moment from 'moment';
 import Image from 'next/image';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
@@ -47,6 +49,11 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
   const [url2, setUrl2] = useState(garbhasandesha?.items[0].snippet.resourceId.videoId);
   const [url3, setUrl3] = useState(tvAppearance?.items[0].snippet.resourceId.videoId);
   const [url4, setUrl4] = useState(testimonials?.items[0].snippet.resourceId.videoId);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
+    { name: 'Video Resources', url: 'https://www.garbhagudi.com/resources/video-resources' },
+  ]);
   const renderRecommended = (image: string, url: string, label: string, by: string) => {
     return (
       <div className='flex items-center justify-start border-b pb-4 font-sans md:border-none md:pb-0'>
@@ -212,7 +219,22 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1658492748/SEO/SEO_Website_image-min_wjkpwk.webp'
         />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
+        />
       </Head>
+      <BreadCrumbs
+        link1='/resources'
+        text1='Resources'
+        text2='Video Resources'
+        link2='/resources/video-resources'
+        link3={''}
+        text3={''}
+        link4={''}
+        text4={''}
+      />
       <div className='mx-auto'>
         <div>
           <h1 className='text-brandDark py-6 text-center font-heading text-2xl font-bold sm:text-4xl'>

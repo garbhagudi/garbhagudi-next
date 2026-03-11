@@ -1,6 +1,8 @@
 import { useState, useCallback, useMemo } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
 // Dynamically import components with SSR disabled
 const Poor = dynamic(() => import('sections/tools/fqc/results').then((mod) => mod.Poor), {
@@ -143,6 +145,15 @@ const IndexPage: React.FC = () => {
     return ResultComponent ? <ResultComponent /> : null;
   };
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
+    { name: 'Tools', url: 'https://www.garbhagudi.com/resources/tools' },
+    {
+      name: 'Fertility Quotient Calculator',
+      url: 'https://www.garbhagudi.com/resources/tools/fertility-quotient-calculator',
+    },
+  ]);
   return (
     <div>
       <Head>
@@ -185,7 +196,22 @@ const IndexPage: React.FC = () => {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.webp'
         />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
+        />
       </Head>
+      <BreadCrumbs
+        link1='/resources'
+        text1='Resources'
+        text2='Tools'
+        link2='/resources/tools'
+        text3='Fertility Quotient Calculator'
+        link3='/resources/tools/fertility-quotient-calculator'
+        link4={''}
+        text4={''}
+      />
       <div className='mx-auto max-w-7xl font-content'>
         <h1 className='py-8 text-center font-heading text-4xl font-semibold text-gray-800 dark:text-gray-200'>
           Fertility Quotient Calculator

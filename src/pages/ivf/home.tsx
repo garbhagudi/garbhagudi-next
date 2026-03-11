@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 const Banner = dynamic(() => import('sections/LandingPages/Neutral/banner'), { ssr: true });
 const Video = dynamic(() => import('sections/home/video'), {
   ssr: false,
@@ -52,6 +54,10 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
       display: 'none',
     },
   };
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'IVF', url: 'https://www.garbhagudi.com/ivf/home' },
+  ]);
   return (
     <div>
       <Head>
@@ -102,7 +108,22 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
           href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742808594/paripoorna/IVF_Compressed_kmekqi_bewqzl.webp'
           as='image'
         /> */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
+        />
       </Head>
+      <BreadCrumbs
+        link1='/ivf/home'
+        text1='IVF'
+        text2=''
+        link2=''
+        link3={''}
+        text3={''}
+        link4={''}
+        text4={''}
+      />
       <div>
         <Banner />
         <About />
