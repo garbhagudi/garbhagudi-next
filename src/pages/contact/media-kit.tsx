@@ -1,7 +1,14 @@
 import Head from 'next/head';
 import MediaKit from 'sections/mediaKit/main';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
 const IndexPage = () => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Contact', url: 'https://www.garbhagudi.com/contact' },
+    { name: 'Media Kit', url: 'https://www.garbhagudi.com/contact/media-kit' },
+  ]);
   return (
     <div className='min-h-screen'>
       <Head>
@@ -38,7 +45,22 @@ const IndexPage = () => {
           content='Explore our Media Kit for brand assets, press info, and collaboration opportunities. Download now to partner with GarbhaGudi IVF Centre!
 '
         />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
+        />
       </Head>
+      <BreadCrumbs
+        link1='/contact'
+        text1='Contact'
+        text2='Media Kit'
+        link2='/contact/media-kit'
+        link3={''}
+        text3={''}
+        link4={''}
+        text4={''}
+      />
       <MediaKit />
     </div>
   );

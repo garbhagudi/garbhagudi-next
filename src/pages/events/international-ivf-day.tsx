@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
 const Cta = dynamic(() => import('sections/gg-care/cta'), {
   ssr: false,
@@ -20,6 +22,14 @@ const BranchEvent = dynamic(() => import('sections/misc/international-ivf-day/Br
 const Page = () => {
   const title = `Celebrate International IVF Day with GarbhaGudi - Expert Care`;
   const desc = `Celebrate International IVF Day with GarbhaGudi! Explore our special events & advancements in IVF. Join us to empower fertility journeys. Visit now!`;
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Events', url: 'https://www.garbhagudi.com/events' },
+    {
+      name: 'International IVF Day',
+      url: 'https://www.garbhagudi.com/events/international-ivf-day',
+    },
+  ]);
   return (
     <div>
       <Head>
@@ -38,7 +48,22 @@ const Page = () => {
           name='og:description'
           content='Join GarbhaGudi IVF Centre in celebrating International IVF Day with a 21-day yoga challenge designed to enhance reproductive health and support your fertility journey.'
         />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
+        />
       </Head>
+      <BreadCrumbs
+        link1='/events'
+        text1='Events'
+        text2='International IVF Day'
+        link2='/events/international-ivf-day'
+        link3={''}
+        text3={''}
+        link4={''}
+        text4={''}
+      />
       <div className='relative overflow-hidden bg-white py-16 dark:bg-gray-800'>
         <div className='relative px-4 sm:px-6 lg:px-8'>
           <div className='mx-auto max-w-7xl'>

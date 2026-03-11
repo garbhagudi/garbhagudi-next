@@ -1,5 +1,7 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 const Hero = dynamic(() => import('sections/misc/ghar-ghar-garbhagudi/hero'), { ssr: true });
 const Gallery = dynamic(() => import('sections/misc/ghar-ghar-garbhagudi/gallery'), { ssr: false });
 const EventInfo = dynamic(() => import('sections/misc/ghar-ghar-garbhagudi/eventInfo'), {
@@ -17,6 +19,11 @@ const ContentTwo = dynamic(
 );
 
 const IndexPage = () => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Events', url: 'https://www.garbhagudi.com/events' },
+    { name: 'Ghar Ghar GarbhaGudi', url: 'https://www.garbhagudi.com/events/ghar-ghar-garbhagudi' },
+  ]);
   return (
     <div>
       <Head>
@@ -58,7 +65,22 @@ const IndexPage = () => {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1694509085/Misc/GGG_Logo_eng_thb8cv.webp'
         />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
+        />
       </Head>
+      <BreadCrumbs
+        link1='/events'
+        text1='Events'
+        text2='Ghar Ghar GarbhaGudi'
+        link2='/events/ghar-ghar-garbhagudi'
+        link3={''}
+        text3={''}
+        link4={''}
+        text4={''}
+      />
       <Hero />
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <EventInfo />

@@ -1,9 +1,16 @@
 import MythsFacts from 'sections/myth-and-facts';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 
 const MythsAndFacts = () => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
+    { name: 'Myths and Facts', url: 'https://www.garbhagudi.com/resources/myths-and-facts' },
+  ]);
   return (
     <div>
       <Head>
@@ -46,7 +53,22 @@ const MythsAndFacts = () => {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802155/SEO/OG_images_FAQs_k40phu.webp'
         />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
+        />
       </Head>
+      <BreadCrumbs
+        link1='/resources'
+        text1='Resources'
+        text2='Myths and Facts'
+        link2='/resources/myths-and-facts'
+        link3={''}
+        text3={''}
+        link4={''}
+        text4={''}
+      />
       <MythsFacts />
       <Cta />
     </div>

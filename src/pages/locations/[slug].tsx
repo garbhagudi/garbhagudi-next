@@ -6,6 +6,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import dynamic from 'next/dynamic';
+import BreadCrumbs from 'components/breadcrumbs';
 
 const MapSection = dynamic(() => import('sections/location/mapSection'), { ssr: false });
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
@@ -103,6 +104,16 @@ const Branch = ({ branch, accordionSections }) => {
         <meta name='twitter:description' content={branch?.metaDescription} />
         <meta name='twitter:image' content={branch?.branchPicture?.url} />
       </Head>
+      <BreadCrumbs
+        link1='/locations'
+        text1='Locations'
+        text2={branch?.title}
+        link2={`/locations/${branch?.slug}`}
+        link3={''}
+        text3={''}
+        link4={''}
+        text4={''}
+      />
       <Banner branchTitle={branch?.title} />
       <TreatmentOptions branch={branch?.title} image={branch?.nabh?.url || ''} />
       <MapSection
