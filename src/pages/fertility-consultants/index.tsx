@@ -3,6 +3,8 @@ import Head from 'next/head';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
 interface Article {
   articles: {
@@ -18,6 +20,10 @@ interface Article {
 }
 
 const IndexPage = ({ articles }: Article) => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Fertility Consultants', url: 'https://www.garbhagudi.com/fertility-consultants' },
+  ]);
   return (
     <div>
       <Head>
@@ -59,7 +65,22 @@ const IndexPage = ({ articles }: Article) => {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
         />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+          id='breadcrumbs-jsonld'
+        />
       </Head>
+      <BreadCrumbs
+        link1='/fertility-consultants'
+        text1='Fertility Consultants'
+        text2=''
+        link2=''
+        link3={''}
+        text3={''}
+        link4={''}
+        text4={''}
+      />
       <h1 className='mx-auto max-w-7xl pt-12 text-center font-heading text-4xl font-semibold'>
         Fertility Consultants
       </h1>

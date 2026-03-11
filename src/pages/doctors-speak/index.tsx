@@ -6,6 +6,8 @@ import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
+import BreadCrumbs from 'components/breadcrumbs';
+import { generateBreadcrumbSchema } from 'lib/schema-utils';
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 interface VideoItem {
   id: string;
@@ -40,6 +42,10 @@ const IndexPage = () => {
   }, [currentPageNumber, pageToken]);
   const description =
     'Doctors at GarbhaGudi IVF Centre provide information about male and female fertility concerns, as well as the therapies required for a healthy pregnancy.';
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'Doctors Speak', url: 'https://www.garbhagudi.com/doctors-speak' },
+  ]);
   return (
     <>
       {doctorsSpeakData ? (
@@ -67,7 +73,22 @@ const IndexPage = () => {
             <meta name='twitter:site' content='@garbhagudiivf' />
             <meta name='twitter:title' content='Doctors Speak | GarbhaGudi IVF' />
             <meta name='twitter:description' content={description} />
+            <script
+              type='application/ld+json'
+              dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+              id='breadcrumbs-jsonld'
+            />
           </Head>
+          <BreadCrumbs
+            link1='/doctors-speak'
+            text1='Doctors Speak'
+            text2=''
+            link2=''
+            link3={''}
+            text3={''}
+            link4={''}
+            text4={''}
+          />
           <div className='relative px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24'>
             <div className='relative mx-auto max-w-7xl'>
               <div className='text-center'>
