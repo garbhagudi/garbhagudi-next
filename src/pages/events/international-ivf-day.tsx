@@ -25,7 +25,10 @@ const Page = () => {
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', url: 'https://www.garbhagudi.com/' },
     { name: 'Events', url: 'https://www.garbhagudi.com/events' },
-    { name: 'International IVF Day', url: 'https://www.garbhagudi.com/events/international-ivf-day' },
+    {
+      name: 'International IVF Day',
+      url: 'https://www.garbhagudi.com/events/international-ivf-day',
+    },
   ]);
   return (
     <div>

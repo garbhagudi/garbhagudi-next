@@ -117,7 +117,7 @@ const IndexPage: React.FC = () => {
 
     setResult({ score, percent, category });
     setError('');
-  }, [formData, mapInput]);
+  }, [formData, mapInput, mappings]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
