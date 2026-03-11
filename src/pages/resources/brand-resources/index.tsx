@@ -24,7 +24,7 @@ const IndexPage = () => {
         />
         <meta
           name='og:description'
-          content='Explore our Brand Resources for logos, guidelines, and more. Elevate your brand with GarbhaGudi' s trusted assets. Download now and stay consistent!'
+          content="Explore our Brand Resources for logos, guidelines, and more. Elevate your brand with GarbhaGudi's trusted assets. Download now and stay consistent!"
         />
         <script
           type='application/ld+json'
