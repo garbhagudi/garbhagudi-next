@@ -5,7 +5,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang='en-IN'>
-        <Head></Head>
+        <Head>
+          <script src='https://t.contentsquare.net/uxa/66153290f9825.js'></script>
+        </Head>
         <body>
           <Script
             id='gtm-script'
