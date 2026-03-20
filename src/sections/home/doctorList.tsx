@@ -43,7 +43,9 @@ const CATEGORY_ORDER = [
 function orderCategoryKeys(keys: string[]): string[] {
   const keySet = new Set(keys);
   const ordered = CATEGORY_ORDER.filter((c) => keySet.has(c));
-  const rest = keys.filter((k) => !CATEGORY_ORDER.includes(k as (typeof CATEGORY_ORDER)[number])).sort();
+  const rest = keys
+    .filter((k) => !CATEGORY_ORDER.includes(k as (typeof CATEGORY_ORDER)[number]))
+    .sort();
   return [...ordered, ...rest];
 }
 
