@@ -7,6 +7,7 @@ import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import RichTextIframe from 'components/RichTextIframe';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 export const getStaticProps = async ({ params }) => {
@@ -319,6 +320,7 @@ const Diagnosis = ({ diagnosis }) => {
                       {children}
                     </a>
                   ),
+                  iframe: (props) => <RichTextIframe {...props} />,
                 }}
               />
             </div>

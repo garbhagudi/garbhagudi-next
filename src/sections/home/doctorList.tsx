@@ -30,6 +30,25 @@ const CATEGORY_TITLES: Record<string, string> = {
   consultants: 'Consultant',
 };
 
+/** Tab order on desktop; keys not present in data are omitted (except andrologist — see below). */
+const CATEGORY_ORDER = [
+  'fertilitySpecialist',
+  'embryologist',
+  'andrologist',
+  'yogaSpecialist',
+  'medicalSuperintendent',
+  'consultants',
+] as const;
+
+function orderCategoryKeys(keys: string[]): string[] {
+  const keySet = new Set(keys);
+  const ordered = CATEGORY_ORDER.filter((c) => keySet.has(c));
+  const rest = keys
+    .filter((k) => !CATEGORY_ORDER.includes(k as (typeof CATEGORY_ORDER)[number]))
+    .sort();
+  return [...ordered, ...rest];
+}
+
 const DoctorList = (doctorList: doctorListProps) => {
   const defaultControlsConfig = {
     pagingDotsStyle: {
@@ -47,7 +66,11 @@ const DoctorList = (doctorList: doctorListProps) => {
     },
     {} as Record<string, typeof doctorList.doctors>
   );
-  const categories = Object.keys(groupedDoctors);
+  // Always show Andrologists tab after Embryologists (empty until CMS has doctors with category `andrologist`).
+  if (!groupedDoctors.andrologist) {
+    groupedDoctors.andrologist = [];
+  }
+  const categories = orderCategoryKeys(Object.keys(groupedDoctors));
   return (
     <div>
       <div
@@ -88,41 +111,47 @@ const DoctorList = (doctorList: doctorListProps) => {
                 <TabPanels className='mt-8'>
                   {categories.map((category) => (
                     <TabPanel key={category}>
-                      <div className='grid grid-cols-2 gap-8 lg:grid-cols-4'>
-                        {groupedDoctors[category].map((doctor) => (
-                          <div
-                            key={doctor.id}
-                            className='transition-all duration-300 hover:scale-105'
-                          >
-                            <Link href={`/fertility-experts/${doctor.slug}`} passHref>
-                              <div className='space-y-4'>
-                                <div className='relative mx-auto h-44 w-44'>
-                                  <div className='absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 bg-[length:400%] dark:bg-gray-400'></div>
-                                  <Image
-                                    className='shadow-champaigne rounded-full bg-transparent drop-shadow-2xl'
-                                    src={doctor.image.url}
-                                    alt={doctor.imageAlt || doctor.name}
-                                    width={400}
-                                    height={400}
-                                    loading='lazy'
-                                  />
+                      {groupedDoctors[category].length === 0 ? (
+                        <p className='font-content text-gray-600 dark:text-gray-300'>
+                          Expert profiles in this category will appear here soon.
+                        </p>
+                      ) : (
+                        <div className='grid grid-cols-2 gap-8 lg:grid-cols-4'>
+                          {groupedDoctors[category].map((doctor) => (
+                            <div
+                              key={doctor.id}
+                              className='transition-all duration-300 hover:scale-105'
+                            >
+                              <Link href={`/fertility-experts/${doctor.slug}`} passHref>
+                                <div className='space-y-4'>
+                                  <div className='relative mx-auto h-44 w-44'>
+                                    <div className='absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 bg-[length:400%] dark:bg-gray-400'></div>
+                                    <Image
+                                      className='shadow-champaigne rounded-full bg-transparent drop-shadow-2xl'
+                                      src={doctor.image.url}
+                                      alt={doctor.imageAlt || doctor.name}
+                                      width={400}
+                                      height={400}
+                                      loading='lazy'
+                                    />
+                                  </div>
+                                  <div className='space-y-0.5'>
+                                    <h3 className='font-heading text-lg font-bold text-gray-800 dark:text-gray-200'>
+                                      {doctor.name}
+                                    </h3>
+                                    <p className='text-sm text-purple-900 dark:text-purple-200'>
+                                      {doctor.qualification}
+                                    </p>
+                                    <p className='text-sm text-gg-500 dark:text-gg-300'>
+                                      {doctor.designation}
+                                    </p>
+                                  </div>
                                 </div>
-                                <div className='space-y-0.5'>
-                                  <h3 className='font-heading text-lg font-bold text-gray-800 dark:text-gray-200'>
-                                    {doctor.name}
-                                  </h3>
-                                  <p className='text-sm text-purple-900 dark:text-purple-200'>
-                                    {doctor.qualification}
-                                  </p>
-                                  <p className='text-sm text-gg-500 dark:text-gg-300'>
-                                    {doctor.designation}
-                                  </p>
-                                </div>
-                              </div>
-                            </Link>
-                          </div>
-                        ))}
-                      </div>
+                              </Link>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </TabPanel>
                   ))}
                 </TabPanels>

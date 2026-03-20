@@ -33,7 +33,7 @@ const Form = () => {
   useEffect(() => {
     setValue('Page_Visited', `${window.location?.origin}${pageVisit}`);
     setValue('Consent', getValues().Consent ? 'Yes' : 'No');
-  }, [pageVisit, setValue]);
+  }, [pageVisit, setValue, getValues]);
   useEffect(() => {
     setValue('UTM_Campaign', utmCampaign);
   }, [utmCampaign, setValue]);
