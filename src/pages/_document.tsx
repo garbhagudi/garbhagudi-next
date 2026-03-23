@@ -5,13 +5,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang='en-IN'>
-        <Head>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `(function(){var s=document.createElement('script');s.src='https://t.contentsquare.net/uxa/66153290f9825.js';s.async=true;document.head.appendChild(s);})();`,
-            }}
-          />
-        </Head>
+        <Head />
         <body>
           <Script
             id='gtm-script'
