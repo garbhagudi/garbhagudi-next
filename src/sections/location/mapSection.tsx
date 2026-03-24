@@ -185,7 +185,7 @@ const MapSection = ({
             Fertility Specialists at {title}
           </h2>
           <div className='mx-auto grid grid-cols-2 gap-3 space-y-0 sm:gap-8 sm:space-y-0 lg:grid-cols-6'>
-            {doctors?.map((item) => (
+            {(doctors ?? []).map((item) => (
               <div
                 className='mx-auto mb-2 flex transform flex-col items-center justify-start text-center transition-all duration-500 ease-in-out hover:scale-105'
                 key={item?.id}
