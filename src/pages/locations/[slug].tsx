@@ -192,7 +192,7 @@ export const getStaticProps = async ({ params }) => {
           areasServed {
             raw
           }
-          doctors(orderBy: order_ASC) {
+          doctors {
             id
             name
             slug
