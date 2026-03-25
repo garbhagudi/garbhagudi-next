@@ -15,9 +15,9 @@ const VirtualTour = dynamic(() => import('sections/location/virtualTour'), { ssr
 const AccordionSection = dynamic(() => import('sections/accordianSection/accordionSection'), {
   ssr: false,
 });
-const ExtraSlot = dynamic(() => import('sections/fertility-experts/ExtraSlot'), {
-  ssr: false,
-});
+// const ExtraSlot = dynamic(() => import('sections/fertility-experts/ExtraSlot'), {
+//   ssr: false,
+// });
 
 const Branch = ({ branch, accordionSections }) => {
   const router = useRouter();
@@ -125,7 +125,7 @@ const Branch = ({ branch, accordionSections }) => {
         areasDescription={branch?.areasDescription?.raw?.children}
         areasServed={branch?.areasServed}
       />
-      {branch?.slug == 'marathahalli' && (
+      {/* {branch?.slug == 'marathahalli' && (
         <ExtraSlot
           effectiveDate='Effective From 2nd March 2026. You may book your appointment at your convenience'
           timings={[
@@ -133,8 +133,8 @@ const Branch = ({ branch, accordionSections }) => {
             { doctorName: 'Dr. Vandana Ramanathan', timing: '12PM to 7PM' },
           ]}
         />
-      )}
-      {branch?.slug == 'kalyan-nagar' && (
+      )} */}
+      {/* {branch?.slug == 'kalyan-nagar' && (
         <ExtraSlot
           effectiveDate='Effective From 2nd March 2026. You may book your appointment at your convenience'
           timings={[
@@ -142,7 +142,7 @@ const Branch = ({ branch, accordionSections }) => {
             { doctorName: 'Dr. P. V. Vasavi Devi', timing: '4:00 pm - 7:00 pm' },
           ]}
         />
-      )}
+      )} */}
       <Cta />
       <Faq data={branch?.faq || []} />
       <AccordionSection sections={accordionSections} />
