@@ -15,9 +15,9 @@ const VirtualTour = dynamic(() => import('sections/location/virtualTour'), { ssr
 const AccordionSection = dynamic(() => import('sections/accordianSection/accordionSection'), {
   ssr: false,
 });
-const ExtraSlot = dynamic(() => import('sections/fertility-experts/ExtraSlot'), {
-  ssr: false,
-});
+// const ExtraSlot = dynamic(() => import('sections/fertility-experts/ExtraSlot'), {
+//   ssr: false,
+// });
 
 const Branch = ({ branch, accordionSections }) => {
   const router = useRouter();
