@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }}
           />
           {/* Google Tag Manager — GTM-5T77DVZ */}
-          <Script
+          {/* <Script
             id='gtm-script-5t77dvz'
             strategy='afterInteractive'
             dangerouslySetInnerHTML={{
@@ -38,7 +38,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5T77DVZ');
 `,
             }}
-          />
+          /> */}
           <Script
             id='hotjar'
             strategy='afterInteractive'
@@ -56,12 +56,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }}
           />
           {/* Google Tag Manager (noscript) — GTM-5T77DVZ */}
-          <noscript
+          {/* <noscript
             dangerouslySetInnerHTML={{
               __html:
                 '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5T77DVZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>',
             }}
-          />
+          /> */}
           <Main />
           <NextScript />
         </body>
