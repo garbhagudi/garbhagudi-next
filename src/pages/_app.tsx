@@ -8,7 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 // import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
-import FloatWhatsApp from 'components/FloatWhatsapp';
+// import FloatWhatsApp from 'components/FloatWhatsapp';
 
 // Dynamically import components
 const Footer = dynamic(() => import('components/footer/footer'), { ssr: false });
@@ -106,7 +106,7 @@ function MyApp({ Component, pageProps }) {
       </ThemeProvider>
       <SpeedInsights />
       {!isParipoornaPage && <FloatRequestCallBack />}
-      {isReady && !iuiTreatmentPage && !ivfHomePage && <FloatWhatsApp />}
+      {/* {isReady && !iuiTreatmentPage && !ivfHomePage && <FloatWhatsApp />} */}
     </RootLayout>
   );
 }
