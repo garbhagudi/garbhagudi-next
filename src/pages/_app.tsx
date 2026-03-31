@@ -34,17 +34,17 @@ function MyApp({ Component, pageProps }) {
   ];
 
   const iuiTreatmentPage = router.pathname === '/treatments/iui-treatment-in-bangalore';
-  const ivfHomePage = router.pathname === '/ivf/home';
+  // const ivfHomePage = router.pathname === '/ivf/home';
   const isParipoornaPage = router.pathname === '/features/paripoorna';
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [isReady, setIsReady] = useState(false);
+  // const [isReady, setIsReady] = useState(false);
   useEffect(() => {
     const userAgent = typeof window !== 'undefined' ? navigator.userAgent : '';
     setIsMobile(/Mobi|Android/i.test(userAgent));
-    setIsReady(true);
+    // setIsReady(true);
   }, []);
 
   const showSalesIQ = !(router.pathname === '/contact/enquiry' && isMobile);
