@@ -32,7 +32,15 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'Failed to retrieve access token' });
     }
 
-    const requestData = JSON.stringify({ data: [req.body.data] });
+    const leadData = req?.body?.data || {};
+    const requestData = JSON.stringify({
+      data: [
+        {
+          ...leadData,
+          Lead_Status: leadData?.Lead_Status ?? 'New',
+        },
+      ],
+    });
 
     const response = await fetch(process.env.ZOHO_API_URL, {
       method: 'POST',
