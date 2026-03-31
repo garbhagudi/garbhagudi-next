@@ -8,7 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 // import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
-import FloatWhatsApp from 'components/FloatWhatsapp';
+// import FloatWhatsApp from 'components/FloatWhatsapp';
 
 // Dynamically import components
 const Footer = dynamic(() => import('components/footer/footer'), { ssr: false });
@@ -34,17 +34,17 @@ function MyApp({ Component, pageProps }) {
   ];
 
   const iuiTreatmentPage = router.pathname === '/treatments/iui-treatment-in-bangalore';
-  const ivfHomePage = router.pathname === '/ivf/home';
+  // const ivfHomePage = router.pathname === '/ivf/home';
   const isParipoornaPage = router.pathname === '/features/paripoorna';
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [isReady, setIsReady] = useState(false);
+  // const [isReady, setIsReady] = useState(false);
   useEffect(() => {
     const userAgent = typeof window !== 'undefined' ? navigator.userAgent : '';
     setIsMobile(/Mobi|Android/i.test(userAgent));
-    setIsReady(true);
+    // setIsReady(true);
   }, []);
 
   const showSalesIQ = !(router.pathname === '/contact/enquiry' && isMobile);
@@ -106,7 +106,7 @@ function MyApp({ Component, pageProps }) {
       </ThemeProvider>
       <SpeedInsights />
       {!isParipoornaPage && <FloatRequestCallBack />}
-      {isReady && !iuiTreatmentPage && !ivfHomePage && <FloatWhatsApp />}
+      {/* {isReady && !iuiTreatmentPage && !ivfHomePage && <FloatWhatsApp />} */}
     </RootLayout>
   );
 }
