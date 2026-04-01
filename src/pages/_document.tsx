@@ -6,7 +6,8 @@ class MyDocument extends Document {
     return (
       <Html lang='en-IN'>
         <Head>
-          {/* Google Tag Manager — GTM-NSZH8N9M (head snippet) */}
+          {/* Google Tag Manager — injected once here for every Next.js page (custom Document) */}
+          {/* eslint-disable-next-line @next/next/next-script-for-ga -- GTM official inline snippet */}
           <script
             dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -16,15 +17,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NSZH8N9M');`,
             }}
           />
+          {/* End Google Tag Manager */}
         </Head>
         <body>
-          {/* Google Tag Manager (noscript) — GTM-NSZH8N9M */}
+          {/* Google Tag Manager (noscript) — first in body for every Next.js page */}
           <noscript
             dangerouslySetInnerHTML={{
               __html:
                 '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSZH8N9M" height="0" width="0" style="display:none;visibility:hidden"></iframe>',
             }}
           />
+          {/* End Google Tag Manager (noscript) */}
           {/* Google Tag Manager — GTM-5T77DVZ */}
           {/* <Script
             id='gtm-script-5t77dvz'
