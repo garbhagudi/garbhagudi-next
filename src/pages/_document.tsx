@@ -5,20 +5,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang='en-IN'>
-        <Head>
-          {/* Google Tag Manager — injected once here for every Next.js page (custom Document) */}
-          {/* eslint-disable-next-line @next/next/next-script-for-ga -- GTM official inline snippet */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NSZH8N9M');`,
-            }}
-          />
-          {/* End Google Tag Manager */}
-        </Head>
+        <Head />
         <body>
           {/* Google Tag Manager (noscript) — first in body for every Next.js page */}
           <noscript
