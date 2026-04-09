@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import BookAnAppointment from './bookAnAppointment';
+
+const AMH_LEVELS_BLOG_HREF = '/blogs/amh-levels-explained-what-they-mean-for-female-fertility';
 
 export default function FertilityTest() {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,13 +64,26 @@ export default function FertilityTest() {
           <ul className='list-inside list-disc py-2 font-nunito-Sans text-lg text-[#6C6C6C]'>
             <li className='custom-list-item text-wrap'>
               A hormone produced by the ovaries in females and the testicles in males that helps
-              develop reproductive organs. AMH levels can be measured in the blood to help diagnose
-              conditions and make decisions about fertility treatments.
+              develop reproductive organs. 
+              <Link
+                href={AMH_LEVELS_BLOG_HREF}
+                className='text-gg-500 underline decoration-gg-500 underline-offset-2 hover:text-gg-600'
+              >
+                AMH Levels
+              </Link>{' '}
+              can be measured in the blood to help diagnose conditions and make decisions about
+              fertility treatments.
             </li>
             <li className='custom-list-item text-wrap'>
-              AMH levels indicate the number of eggs remaining in the ovaries, also known as ovarian
-              reserve. AMH levels decrease with age, and can be used to estimate how long a woman
-              has left to conceive.
+              <Link
+                href={AMH_LEVELS_BLOG_HREF}
+                className='text-gg-500 underline decoration-gg-500 underline-offset-2 hover:text-gg-600'
+              >
+                AMH Levels
+              </Link>{' '}
+              indicate the number of eggs remaining in the ovaries, also known as ovarian reserve. 
+              AMH levels decrease with age, and can be used to estimate how long a woman has left to
+              conceive.
             </li>
           </ul>
           <div className='mt-7 w-2/3 md:w-1/3 lg:mt-10'>
