@@ -52,7 +52,6 @@ const Form = () => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      setLoad(false);
 
       if (typeof window !== 'undefined') {
         window.dataLayer = window.dataLayer || [];
@@ -66,12 +65,11 @@ const Form = () => {
         });
       }
 
-      if (response.ok) {
-        router.push('/thank-you.html');
-      }
+      await router.push('/thank-you');
     } catch (err) {
-      setLoad(false);
       console.log(err);
+    } finally {
+      setLoad(false);
     }
   };
   return (
