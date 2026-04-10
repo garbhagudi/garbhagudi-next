@@ -73,9 +73,7 @@ function parseServiceAccountJsonString(raw: string): Record<string, unknown> | n
       'GOOGLE_SERVICE_ACCOUNT_JSON uses single quotes inside {…}. Use double quotes for JSON keys/strings, or use GOOGLE_SERVICE_ACCOUNT_JSON_BASE64.'
     );
   } else {
-    console.error(
-      'GOOGLE_SERVICE_ACCOUNT_JSON is not valid JSON (first chars):'
-    );
+    console.error('GOOGLE_SERVICE_ACCOUNT_JSON is not valid JSON (first chars):');
   }
   return null;
 }
@@ -374,7 +372,7 @@ export async function appendMissedLeadToSheet(
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
-    console.error("error", msg);
+    console.error('error', msg);
     throw e;
   }
 }
