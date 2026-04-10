@@ -12,11 +12,11 @@ const Banner = () => {
           <div className='pt-8 sm:relative sm:mt-8 sm:pb-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
             <div className='relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12'>
               <Image
-                className='h-[380] w-[380] rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1769839387/Feb_Month_Offer_Landing_Page_Banner-04_kkgsdz.webp'
-                alt='happy couple with a baby'
-                width={380}
-                height={380}
+                className='h-auto w-full max-w-sm rounded-md shadow-xl ring-1 ring-black ring-opacity-5 sm:max-w-md lg:h-full lg:w-auto lg:max-w-none'
+                src='/images/ivf-home/banner-mobile.png'
+                alt='Offer: 1st free fertility consultation and 50% off 25-test fertility care panel; patient with doctor'
+                width={758}
+                height={1024}
                 priority={true}
                 fetchPriority='high'
               />
@@ -125,11 +125,11 @@ const Banner = () => {
             </div>
             <div className='relative mt-6 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-[28rem] lg:max-w-none lg:pl-12'>
               <Image
-                className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1769839388/Feb_Month_Offer_Landing_Page_Banner-03_ctqbpk.webp'
-                alt='happy couple with a baby'
-                width={500}
-                height={500}
+                className='h-auto w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
+                src='/images/ivf-home/banner-web.png'
+                alt='Offer: 1st free fertility consultation and 50% off 25-test fertility care panel; patient with doctor'
+                width={1024}
+                height={768}
                 priority={true}
                 fetchPriority='high'
               />
