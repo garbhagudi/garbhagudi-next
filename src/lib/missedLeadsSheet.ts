@@ -180,23 +180,16 @@ function loadCredentialsFromKeyFilePath(relOrAbs: string): Record<string, unknow
 }
 
 function getServiceAccountCredentials(): Record<string, unknown> | null {
-  const keyPath = getServiceAccountKeyFilePath();
-  if (keyPath) {
-    const fromKeyFile = loadCredentialsFromKeyFilePath(keyPath);
-    if (fromKeyFile) {
-      return fromKeyFile;
-    }
-    return null;
-  }
-
   const b64 = process.env.GOOGLE_SERVICE_ACCOUNT_JSON_BASE64?.trim();
   if (b64) {
     try {
       const decoded = Buffer.from(b64, 'base64').toString('utf8');
-      return parseServiceAccountJsonString(decoded);
+      const parsed = parseServiceAccountJsonString(decoded);
+      if (parsed) {
+        return parsed;
+      }
     } catch (e) {
       console.error('GOOGLE_SERVICE_ACCOUNT_JSON_BASE64 could not be decoded/parsed:', e);
-      return null;
     }
   }
 
@@ -210,7 +203,22 @@ function getServiceAccountCredentials(): Record<string, unknown> | null {
 
   const fromEnvFile = readGoogleServiceAccountJsonFromEnvFiles();
   if (fromEnvFile) {
-    return parseServiceAccountJsonString(fromEnvFile);
+    const parsed = parseServiceAccountJsonString(fromEnvFile);
+    if (parsed) {
+      return parsed;
+    }
+  }
+
+  const keyPath = getServiceAccountKeyFilePath();
+  if (keyPath) {
+    const fromKeyFile = loadCredentialsFromKeyFilePath(keyPath);
+    if (fromKeyFile) {
+      return fromKeyFile;
+    }
+    console.error(
+      '[missed-leads] Service account key file path set but file missing or invalid:',
+      keyPath
+    );
   }
 
   return null;
@@ -300,7 +308,8 @@ async function getNextMissedLeadSerial(
 /**
  * Appends one row when Zoho lead creation fails.
  * Sheet columns: Sr. | Name | Phone | email | Date & time (DD MMM YYYY HH:mm, default TZ Asia/Kolkata).
- * Prefer a key file: GOOGLE_APPLICATION_CREDENTIALS or GOOGLE_SERVICE_ACCOUNT_JSON_PATH.
+ * Credentials (first match wins): GOOGLE_SERVICE_ACCOUNT_JSON_BASE64, GOOGLE_SERVICE_ACCOUNT_JSON,
+ * then GOOGLE_APPLICATION_CREDENTIALS / GOOGLE_SERVICE_ACCOUNT_JSON_PATH (key file).
  */
 export async function appendMissedLeadToSheet(
   leadData: LeadPayload,
@@ -310,7 +319,7 @@ export async function appendMissedLeadToSheet(
   const credentials = getServiceAccountCredentials();
   if (!credentials) {
     console.error(
-      '[missed-leads] Sheet skipped — set GOOGLE_APPLICATION_CREDENTIALS (path to key JSON) or another credential source. Reason:',
+      '[missed-leads] Sheet skipped — set GOOGLE_SERVICE_ACCOUNT_JSON_BASE64 or GOOGLE_SERVICE_ACCOUNT_JSON, or GOOGLE_APPLICATION_CREDENTIALS (path to key JSON). Reason:',
       failureReason,
       'Payload:',
       JSON.stringify(leadData)
