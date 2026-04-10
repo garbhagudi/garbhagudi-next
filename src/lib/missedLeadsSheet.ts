@@ -74,8 +74,7 @@ function parseServiceAccountJsonString(raw: string): Record<string, unknown> | n
     );
   } else {
     console.error(
-      'GOOGLE_SERVICE_ACCOUNT_JSON is not valid JSON (first chars):',
-      JSON.stringify(s.slice(0, 40))
+      'GOOGLE_SERVICE_ACCOUNT_JSON is not valid JSON (first chars):'
     );
   }
   return null;
@@ -375,21 +374,7 @@ export async function appendMissedLeadToSheet(
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
-    const who =
-      typeof credentials.client_email === 'string' ? credentials.client_email : '(unknown)';
-    console.error(
-      '[missed-leads] Google Sheets append failed:',
-      msg,
-      '— share the spreadsheet with this service account as Editor:',
-      who,
-      'spreadsheetId:',
-      spreadsheetId,
-      'Reason:',
-      failureReason,
-      zohoDetail ? `Zoho detail: ${zohoDetail}` : '',
-      'Lead:',
-      JSON.stringify(leadData)
-    );
+    console.error("error", msg);
     throw e;
   }
 }
