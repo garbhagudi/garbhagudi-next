@@ -169,7 +169,9 @@ function loadCredentialsFromKeyFilePath(relOrAbs: string): Record<string, unknow
     const text = fs.readFileSync(abs, 'utf8');
     const obj = JSON.parse(text) as Record<string, unknown>;
     if (obj?.type !== 'service_account') {
-      console.error('[missed-leads] JSON file must be a Google service account key (type: service_account).');
+      console.error(
+        '[missed-leads] JSON file must be a Google service account key (type: service_account).'
+      );
       return null;
     }
     return obj;
@@ -240,7 +242,10 @@ function formatMissedLeadSheetDateTime(date: Date): string {
   });
   const parts = fmt.formatToParts(date);
   const v = (t: Intl.DateTimeFormatPartTypes) =>
-    parts.find((p) => p.type === t)?.value?.replace(',', '')?.trim() ?? '';
+    parts
+      .find((p) => p.type === t)
+      ?.value?.replace(',', '')
+      ?.trim() ?? '';
   const day = v('day');
   const month = v('month');
   const year = v('year');
@@ -254,7 +259,7 @@ function formatMissedLeadSheetDateTime(date: Date): string {
 async function ensureMissedLeadsTableHeader(
   sheets: sheets_v4.Sheets,
   spreadsheetId: string,
-  tabName: string,
+  tabName: string
 ): Promise<void> {
   const headerRange = `${tabName}!A1:E1`;
   const existing = await sheets.spreadsheets.values.get({
@@ -268,9 +273,15 @@ async function ensureMissedLeadsTableHeader(
       .toLowerCase() === 'date & time';
   if (
     String(row[0] ?? '').trim() === 'Sr.' &&
-    String(row[1] ?? '').trim().toLowerCase() === 'name' &&
-    String(row[2] ?? '').trim().toLowerCase() === 'phone' &&
-    String(row[3] ?? '').trim().toLowerCase() === 'email' &&
+    String(row[1] ?? '')
+      .trim()
+      .toLowerCase() === 'name' &&
+    String(row[2] ?? '')
+      .trim()
+      .toLowerCase() === 'phone' &&
+    String(row[3] ?? '')
+      .trim()
+      .toLowerCase() === 'email' &&
     dateHeaderOk
   ) {
     return;
@@ -286,7 +297,7 @@ async function ensureMissedLeadsTableHeader(
 async function getNextMissedLeadSerial(
   sheets: sheets_v4.Sheets,
   spreadsheetId: string,
-  tabName: string,
+  tabName: string
 ): Promise<number> {
   const res = await sheets.spreadsheets.values.get({
     spreadsheetId,
@@ -321,6 +332,7 @@ export async function appendMissedLeadToSheet(
     console.error(
       '[missed-leads] Sheet skipped — set GOOGLE_SERVICE_ACCOUNT_JSON_BASE64 or GOOGLE_SERVICE_ACCOUNT_JSON, or GOOGLE_APPLICATION_CREDENTIALS (path to key JSON). Reason:',
       failureReason,
+      zohoDetail ? `Zoho detail: ${zohoDetail}` : '',
       'Payload:',
       JSON.stringify(leadData)
     );
@@ -374,6 +386,7 @@ export async function appendMissedLeadToSheet(
       spreadsheetId,
       'Reason:',
       failureReason,
+      zohoDetail ? `Zoho detail: ${zohoDetail}` : '',
       'Lead:',
       JSON.stringify(leadData)
     );
