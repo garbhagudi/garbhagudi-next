@@ -20,14 +20,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
-import {
-  type FormEvent,
-  useEffect,
-  useId,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from 'react';
+import { type FormEvent, useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
 
 import {
@@ -53,10 +46,7 @@ declare global {
   interface Window {
     // grecaptcha is injected by Google's api.js — typed loosely on purpose.
     grecaptcha?: {
-      render?: (
-        container: HTMLElement | string,
-        options: Record<string, unknown>,
-      ) => number;
+      render?: (container: HTMLElement | string, options: Record<string, unknown>) => number;
       getResponse?: (widgetId?: number) => string;
       reset?: (widgetId?: number) => void;
     };
@@ -65,8 +55,7 @@ declare global {
 
 /* `useLayoutEffect` would warn during SSR; this falls back to `useEffect`
  * on the server so hidden state is synced as soon as the DOM exists. */
-const useIsoLayoutEffect =
-  typeof window === 'undefined' ? useEffect : useLayoutEffect;
+const useIsoLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
 /* React requires `value` + `onChange` together, so we point all hidden
  * controlled inputs at this no-op onChange. */
@@ -98,7 +87,7 @@ const EMPTY_HIDDEN: HiddenState = {
 
 function computeHidden(
   query: Record<string, unknown> | undefined,
-  pageVisitPath: string,
+  pageVisitPath: string
 ): HiddenState {
   const cookies = utmFromCookies();
   const fromQuery = utmFromRouterQuery(query);
@@ -109,11 +98,9 @@ function computeHidden(
   let referrer = '';
   let redirectUrl = '';
   if (typeof window !== 'undefined') {
-    const path =
-      pageVisitPath || window.location.pathname || '/';
+    const path = pageVisitPath || window.location.pathname || '/';
     referrer = `${window.location.origin}${path.startsWith('/') ? path : `/${path}`}`;
-    redirectUrl =
-      zohoFormRedirectUrl || `${window.location.origin}/thank-you`;
+    redirectUrl = zohoFormRedirectUrl || `${window.location.origin}/thank-you`;
   }
 
   return {
@@ -131,11 +118,7 @@ function computeHidden(
 
 type FieldErrors = { name?: string; phone?: string; email?: string };
 
-function validateFields(values: {
-  name: string;
-  phone: string;
-  email: string;
-}): FieldErrors {
+function validateFields(values: { name: string; phone: string; email: string }): FieldErrors {
   const err: FieldErrors = {};
   if (!values.name || values.name.length < 2) {
     err.name = 'Full Name is required';
@@ -155,19 +138,12 @@ function validateFields(values: {
 
 function readFormValues(form: HTMLFormElement) {
   const name = (
-    (form.elements.namedItem('SingleLine') as HTMLInputElement | null)
-      ?.value ?? ''
+    (form.elements.namedItem('SingleLine') as HTMLInputElement | null)?.value ?? ''
   ).trim();
   const phoneRaw =
-    (
-      form.elements.namedItem(
-        'PhoneNumber_countrycode',
-      ) as HTMLInputElement | null
-    )?.value ?? '';
+    (form.elements.namedItem('PhoneNumber_countrycode') as HTMLInputElement | null)?.value ?? '';
   const phone = phoneRaw.replace(/\D/g, '');
-  const email = (
-    (form.elements.namedItem('Email') as HTMLInputElement | null)?.value ?? ''
-  ).trim();
+  const email = ((form.elements.namedItem('Email') as HTMLInputElement | null)?.value ?? '').trim();
   return { name, phone, email };
 }
 
@@ -176,10 +152,7 @@ const Form = () => {
   const path = usePathname();
   const suffix = useId().replace(/:/g, '');
   const pageVisitPath =
-    (router.query?.pageVisit as string | undefined) ||
-    path ||
-    router.asPath ||
-    '/';
+    (router.query?.pageVisit as string | undefined) || path || router.asPath || '/';
 
   const formRef = useRef<HTMLFormElement>(null);
   const recaptchaContainerRef = useRef<HTMLDivElement>(null);
@@ -197,10 +170,7 @@ const Form = () => {
    * the values that will be POSTed. */
   useIsoLayoutEffect(() => {
     setHidden(
-      computeHidden(
-        router.isReady ? (router.query as Record<string, unknown>) : {},
-        pageVisitPath,
-      ),
+      computeHidden(router.isReady ? (router.query as Record<string, unknown>) : {}, pageVisitPath)
     );
   }, [router.isReady, router.query, pageVisitPath]);
 
@@ -223,8 +193,6 @@ const Form = () => {
     }
 
     let cancelled = false;
-    let pollHandle: number | undefined;
-
     const renderWidget = () => {
       if (cancelled) return;
       if (!recaptchaContainerRef.current) return;
@@ -232,26 +200,21 @@ const Form = () => {
       const grecaptcha = window.grecaptcha;
       if (!grecaptcha?.render) return;
       try {
-        recaptchaWidgetIdRef.current = grecaptcha.render(
-          recaptchaContainerRef.current,
-          {
-            sitekey: recaptchaSiteKey,
-            callback: () => {
-              setCaptchaSolved(true);
-              setCaptchaError('');
-            },
-            'expired-callback': () => {
-              setCaptchaSolved(false);
-              setCaptchaError('Verification expired — please tick again.');
-            },
-            'error-callback': () => {
-              setCaptchaSolved(false);
-              setCaptchaError(
-                'reCAPTCHA failed to load. Check your site-key/version.',
-              );
-            },
+        recaptchaWidgetIdRef.current = grecaptcha.render(recaptchaContainerRef.current, {
+          sitekey: recaptchaSiteKey,
+          callback: () => {
+            setCaptchaSolved(true);
+            setCaptchaError('');
           },
-        );
+          'expired-callback': () => {
+            setCaptchaSolved(false);
+            setCaptchaError('Verification expired — please tick again.');
+          },
+          'error-callback': () => {
+            setCaptchaSolved(false);
+            setCaptchaError('reCAPTCHA failed to load. Check your site-key/version.');
+          },
+        });
       } catch {
         /* `grecaptcha.render` throws if called twice on the same element;
          * we treat that as already-rendered and move on. */
@@ -274,16 +237,16 @@ const Form = () => {
       document.head.appendChild(script);
     }
 
-    pollHandle = window.setInterval(() => {
+    const pollHandle = window.setInterval(() => {
       if (window.grecaptcha?.render) {
-        if (pollHandle) window.clearInterval(pollHandle);
+        window.clearInterval(pollHandle);
         renderWidget();
       }
     }, 100);
 
     return () => {
       cancelled = true;
-      if (pollHandle) window.clearInterval(pollHandle);
+      window.clearInterval(pollHandle);
     };
   }, [captchaModalOpen]);
 
@@ -304,7 +267,7 @@ const Form = () => {
 
     const fresh = computeHidden(
       router.isReady ? (router.query as Record<string, unknown>) : {},
-      pageVisitPath,
+      pageVisitPath
     );
     flushSync(() => setHidden(fresh));
 
@@ -327,9 +290,7 @@ const Form = () => {
 
     /* Normalize the phone field to digits-only so Zoho stores a clean
      * value (browser default would post whatever the user typed). */
-    const phoneEl = form.elements.namedItem(
-      'PhoneNumber_countrycode',
-    ) as HTMLInputElement | null;
+    const phoneEl = form.elements.namedItem('PhoneNumber_countrycode') as HTMLInputElement | null;
     if (phoneEl) phoneEl.value = values.phone;
 
     if (!recaptchaSiteKey) {
@@ -356,13 +317,10 @@ const Form = () => {
     if (!form) return;
     if (submitting) return;
 
-    const grecaptcha =
-      typeof window !== 'undefined' ? window.grecaptcha : null;
+    const grecaptcha = typeof window !== 'undefined' ? window.grecaptcha : null;
     const widgetId = recaptchaWidgetIdRef.current;
     const token =
-      grecaptcha?.getResponse && widgetId !== null
-        ? grecaptcha.getResponse(widgetId)
-        : '';
+      grecaptcha?.getResponse && widgetId !== null ? grecaptcha.getResponse(widgetId) : '';
     if (!token) {
       setCaptchaError('Please tick "I\'m not a robot" to continue.');
       return;
@@ -381,9 +339,7 @@ const Form = () => {
         error?: string;
       };
       if (!data?.ok) {
-        setCaptchaError(
-          data?.error || 'Verification failed. Please retry the checkbox.',
-        );
+        setCaptchaError(data?.error || 'Verification failed. Please retry the checkbox.');
         if (grecaptcha?.reset && widgetId !== null) grecaptcha.reset(widgetId);
         setCaptchaSolved(false);
         setSubmitting(false);
@@ -401,8 +357,7 @@ const Form = () => {
     form.submit();
   };
 
-  const fieldPill =
-    'w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left';
+  const fieldPill = 'w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left';
   const fieldInput =
     'w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none';
 
@@ -434,36 +389,16 @@ const Form = () => {
           value={hidden.zf_redirect_url}
           onChange={NOOP_ONCHANGE}
         />
-        <input
-          type='hidden'
-          name='zc_gad'
-          value={hidden.gclid}
-          onChange={NOOP_ONCHANGE}
-        />
-        <input
-          type='hidden'
-          name='utm_source'
-          value={hidden.utm_source}
-          onChange={NOOP_ONCHANGE}
-        />
-        <input
-          type='hidden'
-          name='utm_medium'
-          value={hidden.utm_medium}
-          onChange={NOOP_ONCHANGE}
-        />
+        <input type='hidden' name='zc_gad' value={hidden.gclid} onChange={NOOP_ONCHANGE} />
+        <input type='hidden' name='utm_source' value={hidden.utm_source} onChange={NOOP_ONCHANGE} />
+        <input type='hidden' name='utm_medium' value={hidden.utm_medium} onChange={NOOP_ONCHANGE} />
         <input
           type='hidden'
           name='utm_campaign'
           value={hidden.utm_campaign}
           onChange={NOOP_ONCHANGE}
         />
-        <input
-          type='hidden'
-          name='utm_term'
-          value={hidden.utm_term}
-          onChange={NOOP_ONCHANGE}
-        />
+        <input type='hidden' name='utm_term' value={hidden.utm_term} onChange={NOOP_ONCHANGE} />
         <input
           type='hidden'
           name='utm_content'
@@ -476,11 +411,7 @@ const Form = () => {
           value={hidden.utm_details}
           onChange={NOOP_ONCHANGE}
         />
-        <input
-          type='hidden'
-          name={zohoFormLeadSourceFieldName}
-          defaultValue={zohoLeadSource}
-        />
+        <input type='hidden' name={zohoFormLeadSourceFieldName} defaultValue={zohoLeadSource} />
         <input
           type='hidden'
           name={zohoFormLeadSubSourceFieldName}
@@ -495,10 +426,7 @@ const Form = () => {
 
         <div className='mx-auto flex flex-col space-y-5 px-3'>
           <div className='mx-auto max-w-sm'>
-            <label
-              htmlFor={`SingleLine-${suffix}`}
-              className='flex items-center justify-start'
-            >
+            <label htmlFor={`SingleLine-${suffix}`} className='flex items-center justify-start'>
               <span className={fieldPill}>Full Name</span>
               <input
                 type='text'
@@ -514,17 +442,12 @@ const Form = () => {
               />
             </label>
             {errors.name && (
-              <p className='absolute ml-[1.2em] text-sm text-red-500'>
-                {errors.name}
-              </p>
+              <p className='absolute ml-[1.2em] text-sm text-red-500'>{errors.name}</p>
             )}
           </div>
 
           <div className='mx-auto max-w-sm'>
-            <label
-              htmlFor={`PhoneNumber-${suffix}`}
-              className='flex items-center justify-start'
-            >
+            <label htmlFor={`PhoneNumber-${suffix}`} className='flex items-center justify-start'>
               <span className={fieldPill}>Phone</span>
               <input
                 type='text'
@@ -541,17 +464,12 @@ const Form = () => {
               />
             </label>
             {errors.phone && (
-              <p className='absolute ml-[1.2em] text-sm text-red-500'>
-                {errors.phone}
-              </p>
+              <p className='absolute ml-[1.2em] text-sm text-red-500'>{errors.phone}</p>
             )}
           </div>
 
           <div className='mx-auto max-w-sm'>
-            <label
-              htmlFor={`Email-${suffix}`}
-              className='flex items-center justify-start'
-            >
+            <label htmlFor={`Email-${suffix}`} className='flex items-center justify-start'>
               <span className={fieldPill}>Email</span>
               <input
                 type='email'
@@ -567,9 +485,7 @@ const Form = () => {
               />
             </label>
             {errors.email && (
-              <p className='absolute ml-[1.2em] text-sm text-red-500'>
-                {errors.email}
-              </p>
+              <p className='absolute ml-[1.2em] text-sm text-red-500'>{errors.email}</p>
             )}
           </div>
         </div>
@@ -585,9 +501,8 @@ const Form = () => {
               className='h-6 w-6 cursor-pointer accent-gg-500 checked:border-gg-500 checked:bg-gg-500'
             />
             <span className='text-justify text-sm text-gray-500'>
-              By submitting this form I agree to be contacted by GarbhaGudi IVF
-              Centre using the contact details through SMS, WhatsApp and Phone
-              Calls. I also agree to the
+              By submitting this form I agree to be contacted by GarbhaGudi IVF Centre using the
+              contact details through SMS, WhatsApp and Phone Calls. I also agree to the
               <Link href='/legal/terms-and-conditions' className='px-1 text-gg-400'>
                 Terms and Conditions
               </Link>
@@ -624,7 +539,7 @@ const Form = () => {
             aria-label='Close verification dialog'
             disabled={submitting}
             onClick={handleCloseCaptchaModal}
-            className='absolute inset-0 h-full w-full cursor-default bg-black/55 backdrop-blur-sm disabled:cursor-not-allowed'
+            className='bg-black/55 absolute inset-0 h-full w-full cursor-default backdrop-blur-sm disabled:cursor-not-allowed'
           />
           <div className='relative z-10 w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-2xl'>
             <div className='flex items-start justify-between gap-4 border-b border-gray-100 px-5 py-4 sm:px-6'>
@@ -656,10 +571,7 @@ const Form = () => {
               {/* reCAPTCHA v2 widget mounts here (304×78, fixed by Google). */}
               <div ref={recaptchaContainerRef} />
               {captchaError && (
-                <p
-                  role='alert'
-                  className='text-center text-xs font-medium text-red-600 sm:text-sm'
-                >
+                <p role='alert' className='text-center text-xs font-medium text-red-600 sm:text-sm'>
                   {captchaError}
                 </p>
               )}

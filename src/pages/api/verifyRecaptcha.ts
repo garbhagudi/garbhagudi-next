@@ -15,8 +15,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const RECAPTCHA_SECRET =
-  process.env.RECAPTCHA_SECRET_KEY?.trim() ||
-  '6LcWOt8sAAAAAJXhE052WghZb34V7eym_--zA3g3';
+  process.env.RECAPTCHA_SECRET_KEY?.trim() || '6LcWOt8sAAAAAJXhE052WghZb34V7eym_--zA3g3';
 
 const SITEVERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify';
 
@@ -35,10 +34,7 @@ function getClientIp(req: NextApiRequest): string {
   return req.socket?.remoteAddress || '';
 }
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ ok: false, error: 'Method Not Allowed' });
@@ -47,15 +43,11 @@ export default async function handler(
   const body = (req.body || {}) as { token?: unknown };
   const token = String(body.token ?? '').trim();
   if (!token) {
-    return res
-      .status(400)
-      .json({ ok: false, error: 'Please confirm you are not a robot.' });
+    return res.status(400).json({ ok: false, error: 'Please confirm you are not a robot.' });
   }
 
   if (!RECAPTCHA_SECRET) {
-    return res
-      .status(500)
-      .json({ ok: false, error: 'reCAPTCHA secret is not configured.' });
+    return res.status(500).json({ ok: false, error: 'reCAPTCHA secret is not configured.' });
   }
 
   try {
@@ -87,10 +79,7 @@ export default async function handler(
   } catch (error) {
     return res.status(500).json({
       ok: false,
-      error:
-        error instanceof Error
-          ? error.message
-          : 'Verification request failed.',
+      error: error instanceof Error ? error.message : 'Verification request failed.',
     });
   }
 }

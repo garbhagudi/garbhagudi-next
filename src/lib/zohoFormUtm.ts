@@ -9,13 +9,7 @@
  *   3. `window.location.search` — authoritative at submit time.
  */
 
-const UTM_KEYS = [
-  'utm_source',
-  'utm_medium',
-  'utm_campaign',
-  'utm_term',
-  'utm_content',
-] as const;
+const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'] as const;
 
 export type UtmKey = (typeof UTM_KEYS)[number];
 export type UtmMap = Partial<Record<UtmKey, string>>;
@@ -26,9 +20,7 @@ function firstQueryValue(value: unknown): string {
   return String(value).trim();
 }
 
-export function utmFromRouterQuery(
-  query: Record<string, unknown> | undefined | null,
-): UtmMap {
+export function utmFromRouterQuery(query: Record<string, unknown> | undefined | null): UtmMap {
   if (!query || typeof query !== 'object') return {};
   const out: UtmMap = {};
   UTM_KEYS.forEach((k) => {

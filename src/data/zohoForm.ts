@@ -18,8 +18,7 @@ export const zohoFormActionUrl =
  * back to `<origin>/thank-you` at runtime. If the value here is set it
  * wins on every submit.
  */
-export const zohoFormRedirectUrl =
-  process.env.NEXT_PUBLIC_ZOHO_FORM_REDIRECT_URL?.trim() || '';
+export const zohoFormRedirectUrl = process.env.NEXT_PUBLIC_ZOHO_FORM_REDIRECT_URL?.trim() || '';
 
 /** Source attribution defaults — same intent as the previous CRM payload. */
 export const zohoLeadSource = 'Online';
@@ -34,12 +33,10 @@ export const zohoFormLeadSourceFieldName =
   process.env.NEXT_PUBLIC_ZOHO_FORM_FIELD_LEAD_SOURCE?.trim() || 'Lead_Source';
 
 export const zohoFormLeadSubSourceFieldName =
-  process.env.NEXT_PUBLIC_ZOHO_FORM_FIELD_LEAD_SUB_SOURCE?.trim() ||
-  'Lead_Sub_Source';
+  process.env.NEXT_PUBLIC_ZOHO_FORM_FIELD_LEAD_SUB_SOURCE?.trim() || 'Lead_Sub_Source';
 
 export const zohoFormUtmDetailsFieldName =
-  process.env.NEXT_PUBLIC_ZOHO_FORM_FIELD_UTM_DETAILS?.trim() ||
-  'UTM_Campaign_Details';
+  process.env.NEXT_PUBLIC_ZOHO_FORM_FIELD_UTM_DETAILS?.trim() || 'UTM_Campaign_Details';
 
 /**
  * Google reCAPTCHA v2 (Checkbox) site key — public, safe to ship.
@@ -49,5 +46,4 @@ export const zohoFormUtmDetailsFieldName =
  * `grecaptcha.render`.
  */
 export const recaptchaSiteKey =
-  process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim() ||
-  '6LcWOt8sAAAAABDnmimSTmWdk6VBVL4Ow0a92Y_2';
+  process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim() || '6LcWOt8sAAAAABDnmimSTmWdk6VBVL4Ow0a92Y_2';
