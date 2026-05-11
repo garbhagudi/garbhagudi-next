@@ -128,12 +128,12 @@ function validateFields(values: { name: string; phone: string; email: string }):
   } else if (!/^\d{10}$/.test(values.phone)) {
     err.phone = 'Enter a valid 10-digit phone number';
   }
-  const emailTrimmed = values.email.trim();
-  if (!emailTrimmed) {
-    err.email = 'Email is required';
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailTrimmed)) {
-    err.email = 'Invalid email format';
-  }
+  // const emailTrimmed = values.email.trim();
+  // if (!emailTrimmed) {
+  //   err.email = 'Email is required';
+  // } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailTrimmed)) {
+  //   err.email = 'Invalid email format';
+  // }
   return err;
 }
 
@@ -513,8 +513,6 @@ const Form = () => {
                 defaultValue=''
                 className={fieldInput}
                 aria-invalid={errors.email ? 'true' : 'false'}
-                aria-required='true'
-                required
                 onInput={() => clearFieldError('email')}
               />
             </label>
