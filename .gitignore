@@ -5,6 +5,8 @@ node_modules
 /.pnp
 .pnp.js
 .env
+# Local key material (use GOOGLE_SERVICE_ACCOUNT_JSON_BASE64 in .env instead)
+secrets/
 package-lock.json
 
 # testing
