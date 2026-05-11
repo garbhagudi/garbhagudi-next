@@ -125,15 +125,30 @@ function validateFields(values: { name: string; phone: string; email: string }):
   }
   if (!values.phone) {
     err.phone = 'Phone is required';
-  } else if (!/^[0-9]{10}$/.test(values.phone)) {
-    err.phone = 'Invalid phone number';
+  } else if (!/^\d{10}$/.test(values.phone)) {
+    err.phone = 'Enter a valid 10-digit phone number';
   }
-  if (!values.email) {
+  const emailTrimmed = values.email.trim();
+  if (!emailTrimmed) {
     err.email = 'Email is required';
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailTrimmed)) {
     err.email = 'Invalid email format';
   }
   return err;
+}
+
+const FIELD_ERROR_ORDER: (keyof FieldErrors)[] = ['name', 'phone', 'email'];
+
+function focusFirstFieldError(next: FieldErrors, suffix: string) {
+  const firstKey = FIELD_ERROR_ORDER.find((k) => next[k]);
+  const idMap: Record<string, string> = {
+    name: `SingleLine-${suffix}`,
+    phone: `PhoneNumber-${suffix}`,
+    email: `Email-${suffix}`,
+  };
+  const el = firstKey ? document.getElementById(idMap[firstKey]) : null;
+  el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  el?.focus();
 }
 
 function readFormValues(form: HTMLFormElement) {
@@ -275,16 +290,7 @@ const Form = () => {
     const next = validateFields(values);
     setErrors(next);
     if (Object.keys(next).length > 0) {
-      const order: (keyof FieldErrors)[] = ['name', 'phone', 'email'];
-      const firstKey = order.find((k) => next[k]);
-      const idMap: Record<string, string> = {
-        name: `SingleLine-${suffix}`,
-        phone: `PhoneNumber-${suffix}`,
-        email: `Email-${suffix}`,
-      };
-      const el = firstKey ? document.getElementById(idMap[firstKey]) : null;
-      el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      el?.focus();
+      focusFirstFieldError(next, suffix);
       return;
     }
 
@@ -350,6 +356,20 @@ const Form = () => {
       setSubmitting(false);
       return;
     }
+
+    const values = readFormValues(form);
+    const validation = validateFields(values);
+    if (Object.keys(validation).length > 0) {
+      setErrors(validation);
+      setSubmitting(false);
+      setCaptchaModalOpen(false);
+      if (grecaptcha?.reset && widgetId !== null) grecaptcha.reset(widgetId);
+      focusFirstFieldError(validation, suffix);
+      return;
+    }
+
+    const phoneEl = form.elements.namedItem('PhoneNumber_countrycode') as HTMLInputElement | null;
+    if (phoneEl) phoneEl.value = values.phone;
 
     /* Native browser POST — bypasses this React handler so we don't loop
      * back through validation, and Zoho's redirect (`zf_redirect_url`)
@@ -451,16 +471,26 @@ const Form = () => {
               <span className={fieldPill}>Phone</span>
               <input
                 type='text'
+                inputMode='numeric'
+                pattern='\d{10}'
+                title='10-digit mobile number'
                 id={`PhoneNumber-${suffix}`}
                 name='PhoneNumber_countrycode'
-                placeholder='Enter phone number'
-                inputMode='numeric'
+                placeholder='10-digit mobile number'
                 autoComplete='tel'
-                maxLength={20}
+                maxLength={10}
                 defaultValue=''
                 className={fieldInput}
                 aria-invalid={errors.phone ? 'true' : 'false'}
-                onInput={() => clearFieldError('phone')}
+                aria-required='true'
+                onInput={(e) => {
+                  const el = e.currentTarget;
+                  const digits = el.value.replace(/\D/g, '').slice(0, 10);
+                  if (el.value !== digits) {
+                    el.value = digits;
+                  }
+                  clearFieldError('phone');
+                }}
               />
             </label>
             {errors.phone && (
@@ -470,7 +500,9 @@ const Form = () => {
 
           <div className='mx-auto max-w-sm'>
             <label htmlFor={`Email-${suffix}`} className='flex items-center justify-start'>
-              <span className={fieldPill}>Email</span>
+              <span className={fieldPill}>
+                Email ID<span className='text-red-500'> *</span>
+              </span>
               <input
                 type='email'
                 id={`Email-${suffix}`}
@@ -481,6 +513,8 @@ const Form = () => {
                 defaultValue=''
                 className={fieldInput}
                 aria-invalid={errors.email ? 'true' : 'false'}
+                aria-required='true'
+                required
                 onInput={() => clearFieldError('email')}
               />
             </label>
