@@ -93,7 +93,7 @@ function MyApp({ Component, pageProps }) {
           name='robots'
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
-        <link rel='preconnect' href='https://salesiq.zoho.com' crossOrigin='anonymous' />
+        <link rel='preconnect' href='https://salesiq.zohopublic.com' crossOrigin='anonymous' />
         <link rel='preconnect' href='https://media.graphassets.com' />
       </Head>
       <FloatPhone presentation={true} />
@@ -107,12 +107,7 @@ function MyApp({ Component, pageProps }) {
             {!iuiTreatmentPage && <Footer />}
           </div>
         )}
-        {shouldDisplay && showSalesIQ && (
-          <Salesiq
-            widgetCode='93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0'
-            domain='https://salesiq.zoho.com/widget'
-          />
-        )}
+        {shouldDisplay && showSalesIQ && <Salesiq />}
       </ThemeProvider>
       <SpeedInsights />
       {!isParipoornaPage && <FloatRequestCallBack />}

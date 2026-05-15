@@ -7,7 +7,7 @@
  * is gated by a Google reCAPTCHA v2 (Checkbox) popup.
  *
  * Submission flow (mirrors `dash-ivf-next`):
- *   1. Validate name / phone / email client-side.
+ *   1. Validate name / phone client-side; email optional (format checked if provided).
  *   2. Sync UTM + attribution hidden inputs synchronously via flushSync.
  *   3. Open captcha popup; reCAPTCHA v2 widget renders inside it.
  *   4. User ticks the checkbox and clicks "Verify & Submit".
@@ -129,9 +129,7 @@ function validateFields(values: { name: string; phone: string; email: string }):
     err.phone = 'Enter a valid 10-digit phone number';
   }
   const emailTrimmed = values.email.trim();
-  if (!emailTrimmed) {
-    err.email = 'Email is required';
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailTrimmed)) {
+  if (emailTrimmed && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailTrimmed)) {
     err.email = 'Invalid email format';
   }
   return err;
@@ -500,9 +498,7 @@ const Form = () => {
 
           <div className='mx-auto max-w-sm'>
             <label htmlFor={`Email-${suffix}`} className='flex items-center justify-start'>
-              <span className={fieldPill}>
-                Email ID<span className='text-red-500'> *</span>
-              </span>
+              <span className={fieldPill}>Email ID</span>
               <input
                 type='email'
                 id={`Email-${suffix}`}
@@ -513,8 +509,6 @@ const Form = () => {
                 defaultValue=''
                 className={fieldInput}
                 aria-invalid={errors.email ? 'true' : 'false'}
-                aria-required='true'
-                required
                 onInput={() => clearFieldError('email')}
               />
             </label>
