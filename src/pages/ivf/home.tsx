@@ -62,10 +62,12 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
     <div>
       <Head>
         {/* Primary Tags */}
+        <link rel='preload' href='/images/mothers-day-offer-banner-mobile.png' as='image' />
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742808594/paripoorna/IVF_Compressed_kmekqi_bewqzl.webp'
+          href='/images/mothers-day-offer-banner-desktop.png'
           as='image'
+          media='(min-width: 640px)'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Bangalore's Best IVF Centres | GarbhaGudi IVF Centre</title>
