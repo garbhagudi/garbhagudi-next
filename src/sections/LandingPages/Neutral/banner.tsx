@@ -2,14 +2,7 @@ import { HiStar } from 'react-icons/hi';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-
-const BANNER_ALT =
-  "GarbhaGudi IVF Mother's Day offer: ₹25,000 off IVF treatment package, first free fertility consultation, and 50% off 25-test fertility care panel.";
-
-const BANNER_IMAGES = {
-  mobile: '/images/mothers-day-offer-banner-mobile.png',
-  desktop: '/images/mothers-day-offer-banner-desktop.png',
-} as const;
+import { MOTHERS_DAY_BANNER_ALT, MOTHERS_DAY_BANNER_IMAGES } from 'data/mothersDayBanners';
 
 const Banner = () => {
   const path = usePathname();
@@ -21,8 +14,8 @@ const Banner = () => {
             <div className='relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12'>
               <Image
                 className='h-auto w-full max-w-md rounded-md shadow-xl ring-1 ring-black ring-opacity-5'
-                src={BANNER_IMAGES.mobile}
-                alt={BANNER_ALT}
+                src={MOTHERS_DAY_BANNER_IMAGES.mobile}
+                alt={MOTHERS_DAY_BANNER_ALT}
                 width={731}
                 height={1024}
                 priority={true}
@@ -135,8 +128,8 @@ const Banner = () => {
             <div className='relative mt-6 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-[28rem] lg:max-w-none lg:pl-12'>
               <Image
                 className='h-auto w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:max-w-none'
-                src={BANNER_IMAGES.desktop}
-                alt={BANNER_ALT}
+                src={MOTHERS_DAY_BANNER_IMAGES.desktop}
+                alt={MOTHERS_DAY_BANNER_ALT}
                 width={1024}
                 height={536}
                 priority={true}

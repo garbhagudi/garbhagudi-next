@@ -104,6 +104,13 @@ const Home = ({ data, testimonials }) => {
           content='GarbhaGudi is one of the best IVF Clinic in Bangalore with a high success rate for IVF / infertility treatment. Book a Consultation now with the best IVF hospital in Bangalore.'
         />
         <link rel='canonical' href='https://www.garbhagudi.com/' />
+        <link rel='preload' href='/images/mothers-day-offer-banner-mobile.png' as='image' />
+        <link
+          rel='preload'
+          href='/images/mothers-day-offer-banner-desktop.png'
+          as='image'
+          media='(min-width: 768px)'
+        />
         {/* Ld+JSON Data */}
 
         <script
@@ -163,7 +170,7 @@ const Home = ({ data, testimonials }) => {
         />
       </Head>
       <FloatPhone presentation={false} />
-      <BannerComponent banners={data.banners} />
+      <BannerComponent />
       <HomeComponent testimonialPassthrough={testimonials} blogsPassthrough={data.blogs} />
       <DoctorList doctors={data.doctors} />
       <Faq />
@@ -191,15 +198,6 @@ export const getStaticProps = async () => {
           medicalRegNo
           id
           designation
-        }
-        banners(orderBy: order_ASC) {
-          title
-          id
-          url
-          image {
-            url
-          }
-          imageUrl
         }
         blogs(first: 3, orderBy: publishedOn_DESC) {
           id
