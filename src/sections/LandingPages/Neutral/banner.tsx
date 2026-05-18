@@ -8,27 +8,25 @@ const Banner = () => {
   const path = usePathname();
   return (
     <div className='bg-white pb-8 dark:bg-gray-800 sm:pb-12 lg:pb-12'>
-      <div className='overflow-hidden pt-2 font-content sm:pt-12 lg:relative lg:py-1'>
-        <div className='block sm:mx-auto sm:hidden sm:max-w-3xl sm:px-6'>
-          <div className='pt-8 sm:relative sm:mt-8 sm:pb-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
-            <div className='relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12'>
-              <Image
-                className='h-auto w-full max-w-md rounded-md shadow-xl ring-1 ring-black ring-opacity-5'
-                src={MOTHERS_DAY_BANNER_IMAGES.mobile}
-                alt={MOTHERS_DAY_BANNER_ALT}
-                width={731}
-                height={1024}
-                priority={true}
-                fetchPriority='high'
-                sizes='(max-width: 768px) 100vw, 0px'
-              />
-            </div>
-          </div>
+      <div className='overflow-x-hidden pt-2 font-content sm:pt-12 lg:relative lg:py-1'>
+        {/* Mobile banner — full width, no crop */}
+        <div className='block px-3 pb-6 sm:hidden'>
+          <Image
+            className='h-auto w-full rounded-md object-contain shadow-xl ring-1 ring-black/5'
+            src={MOTHERS_DAY_BANNER_IMAGES.mobile}
+            alt={MOTHERS_DAY_BANNER_ALT}
+            width={731}
+            height={1024}
+            priority
+            fetchPriority='high'
+            sizes='100vw'
+          />
         </div>
-        <div className='mx-auto max-w-md px-3 sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-20 lg:px-8'>
+
+        <div className='mx-auto max-w-md px-3 sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:px-8'>
           <div>
             <div className=''>
-              <div className='mt-12 text-gray-800 dark:text-gray-200 sm:max-w-xl'>
+              <div className='mt-6 text-gray-800 dark:text-gray-200 sm:mt-12 sm:max-w-xl'>
                 <h1 className='font-heading text-4xl font-extrabold sm:text-5xl'>
                   Welcome to the Best IVF Centre In Bangalore
                 </h1>
@@ -90,67 +88,25 @@ const Banner = () => {
               </div>
             </div>
           </div>
-        </div>
 
-        <div className='hidden sm:mx-auto sm:block sm:max-w-3xl sm:px-6'>
-          <div className='py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
-            <div className='hidden sm:block'>
-              <div className='absolute inset-y-0 left-1/2 w-screen rounded-l-3xl bg-gray-50 dark:bg-gray-700 lg:left-80 lg:right-0 lg:w-full' />
-              <svg
-                className='absolute right-1/2 top-8 -mr-3 lg:left-0 lg:m-0'
-                width={404}
-                height={392}
-                fill='none'
-                viewBox='0 0 404 392'
-              >
-                <defs>
-                  <pattern
-                    id='837c3e70-6c3a-44e6-8854-cc48c737b659'
-                    x={0}
-                    y={0}
-                    width={20}
-                    height={20}
-                    patternUnits='userSpaceOnUse'
-                  >
-                    <rect
-                      x={0}
-                      y={0}
-                      width={4}
-                      height={4}
-                      className='text-gray-200 dark:text-gray-700'
-                      fill='currentColor'
-                    />
-                  </pattern>
-                </defs>
-                <rect width={404} height={392} fill='url(#837c3e70-6c3a-44e6-8854-cc48c737b659)' />
-              </svg>
-            </div>
-            <div className='relative mt-6 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-[28rem] lg:max-w-none lg:pl-12'>
+          {/* Desktop banner — scales to column width, no fixed height crop */}
+          <div className='relative hidden sm:block'>
+            <div className='absolute inset-y-0 left-0 hidden w-full rounded-l-3xl bg-gray-50 dark:bg-gray-700 lg:block' />
+            <div className='relative flex items-center justify-center py-8 lg:py-12'>
               <Image
-                className='h-auto w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:max-w-none'
+                className='h-auto w-full max-w-full rounded-md object-contain shadow-xl ring-1 ring-black/5'
                 src={MOTHERS_DAY_BANNER_IMAGES.desktop}
                 alt={MOTHERS_DAY_BANNER_ALT}
                 width={1024}
                 height={536}
-                priority={true}
+                priority
                 fetchPriority='high'
-                sizes='(min-width: 640px) 50vw, 0px'
+                sizes='(min-width: 1024px) 45vw, 50vw'
               />
             </div>
           </div>
         </div>
       </div>
-      {/* <div className='color-pop mx-auto max-w-fit rounded-lg p-1 lg:p-2.5'>
-        <div className='flex flex-col items-start gap-1 rounded-lg bg-transparent px-2.5 py-2 text-base font-bold text-white'>
-          <div className='font-lexend font-semibold'>
-            Get a flat ₹1,11,111/- discount on your IVF treatment with PARIPOORNA at GarbhaGudi IVF
-            Centre.
-          </div>
-          <span className='w-full text-left font-lexend md:text-center'>
-            Celebrate the season of parenthood and make your dream of a family come true.
-          </span>
-        </div>
-      </div> */}
     </div>
   );
 };
