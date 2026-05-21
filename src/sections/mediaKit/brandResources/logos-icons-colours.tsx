@@ -14,7 +14,7 @@ const LogosIconsColours = () => {
               <div className='flex items-center justify-center rounded-md bg-white'>
                 <Image
                   src={assets.img}
-                  alt='GarbhaGudi Full Color Logo'
+                  alt={assets.title}
                   width={320}
                   height={240}
                   className='flex items-center justify-center rounded-md'
@@ -38,11 +38,12 @@ const LogosIconsColours = () => {
                   </div>
                 ))}
               </div>
-              <div className='mt-6 flex items-center justify-center space-x-2 md:mt-0'>
+              <div className='mt-6 flex flex-wrap items-center justify-center gap-2 md:mt-0'>
                 <a
                   href={assets.svg}
                   download={`${assets.title}.svg`}
                   target='_blank'
+                  rel='noopener noreferrer'
                   className='rounded-md bg-gray-800 px-4 py-2 font-lexend text-white dark:bg-gg-500'
                 >
                   SVG
@@ -51,6 +52,7 @@ const LogosIconsColours = () => {
                   href={assets.png}
                   download={`${assets.title}.png`}
                   target='_blank'
+                  rel='noopener noreferrer'
                   className='rounded-md bg-gray-800 px-4 py-2 font-lexend text-white dark:bg-gg-500'
                 >
                   PNG
@@ -59,9 +61,19 @@ const LogosIconsColours = () => {
                   href={assets.jpg}
                   download={`${assets.title}.jpg`}
                   target='_blank'
+                  rel='noopener noreferrer'
                   className='rounded-md bg-gray-800 px-4 py-2 font-lexend text-white dark:bg-gg-500'
                 >
                   JPG
+                </a>
+                <a
+                  href={assets.pdf}
+                  download={`${assets.title}.pdf`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='rounded-md bg-gray-800 px-4 py-2 font-lexend text-white dark:bg-gg-500'
+                >
+                  PDF
                 </a>
               </div>
             </div>
