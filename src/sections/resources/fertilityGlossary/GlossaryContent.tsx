@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { HiArrowUp } from 'react-icons/hi';
 import glossaryData from './glossary-data.json';
 
@@ -15,6 +15,8 @@ const {
   sourceUrl: string;
 };
 
+const STICKY_TOP = 'top-16 lg:top-20';
+
 function groupEntries(entries: GlossaryEntry[], group: GlossaryGroup) {
   return entries
     .filter((entry) => entry.letter >= group.start && entry.letter <= group.end)
@@ -24,6 +26,7 @@ function groupEntries(entries: GlossaryEntry[], group: GlossaryGroup) {
 const GlossaryContent = () => {
   const [activeGroupId, setActiveGroupId] = useState(GLOSSARY_GROUPS[0].id);
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
+  const isScrollingRef = useRef(false);
 
   const entriesByGroup = useMemo(
     () =>
@@ -36,40 +39,72 @@ const GlossaryContent = () => {
 
   const scrollToGroup = useCallback((groupId: string) => {
     setActiveGroupId(groupId);
+    isScrollingRef.current = true;
     sectionRefs.current[groupId]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.setTimeout(() => {
+      isScrollingRef.current = false;
+    }, 600);
   }, []);
+
+  useEffect(() => {
+    const sections = GLOSSARY_GROUPS.map((group) => sectionRefs.current[group.id]).filter(
+      Boolean
+    ) as HTMLElement[];
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (isScrollingRef.current) return;
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible?.target.id) {
+          const groupId = visible.target.id.replace('glossary-', '');
+          setActiveGroupId(groupId);
+        }
+      },
+      { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.1, 0.25] }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, [entriesByGroup]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <div className='min-h-[70vh] bg-white dark:bg-gray-900'>
-      <div className='mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14'>
-        <header className='mb-8 border-b border-gg-200 pb-6 lg:mb-10'>
-          <h1 className='font-heading text-3xl font-bold text-gg-800 dark:text-gg-200 sm:text-4xl'>
+    <div className='bg-white dark:bg-gray-800'>
+      <div className='mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-24 lg:pt-14'>
+        <header className='mb-8 lg:mb-10'>
+          <h1 className='text-center font-heading text-4xl font-semibold text-gray-800 dark:text-gray-200 lg:text-5xl'>
             Fertility Glossary
           </h1>
-          <p className='mt-3 max-w-3xl font-content text-gray-700 dark:text-gray-300'>
+          <p className='font-contents mx-auto mt-4 max-w-3xl text-center text-lg text-gray-800 dark:text-gray-200'>
             Definitions of fertility and assisted reproductive technology terms, adapted from the
             ICMART glossary for quick reference.
           </p>
         </header>
 
-        <div className='flex flex-col gap-8 lg:flex-row lg:gap-10'>
-          <nav className='lg:w-36 lg:flex-shrink-0' aria-label='Glossary letter ranges'>
-            <ul className='flex flex-row flex-wrap gap-2 lg:flex-col lg:gap-3'>
+        <div className='flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-10'>
+          <nav
+            className={`sticky ${STICKY_TOP} z-30 shrink-0 self-start bg-white/95 py-2 backdrop-blur-sm dark:bg-gray-800/95 lg:w-40`}
+            aria-label='Glossary letter ranges'
+          >
+            <ul className='flex flex-row flex-wrap justify-center gap-2 lg:flex-col lg:justify-start lg:gap-3'>
               {GLOSSARY_GROUPS.map((group) => {
                 const isActive = activeGroupId === group.id;
                 return (
-                  <li key={group.id}>
+                  <li key={group.id} className='lg:w-full'>
                     <button
                       type='button'
                       onClick={() => scrollToGroup(group.id)}
-                      className={`w-full min-w-[5.5rem] rounded-md border px-4 py-2.5 text-center font-content text-sm font-semibold transition-colors sm:min-w-[6rem] lg:min-w-0 lg:text-left ${
+                      className={`min-w-[5.25rem] rounded-md border-2 px-4 py-2.5 text-center font-content text-sm font-semibold transition-colors lg:w-full lg:text-left ${
                         isActive
-                          ? 'border-gg-700 bg-gg-700 text-white'
-                          : 'border-gg-700 bg-white text-gg-700 hover:bg-gg-50 dark:border-gg-400 dark:bg-gray-900 dark:text-gg-300 dark:hover:bg-gray-800'
+                          ? 'border-gg-800 bg-gg-800 text-white shadow-sm'
+                          : 'border-gg-800 bg-white text-gg-800 hover:bg-gg-50 dark:border-gg-600 dark:bg-gray-800 dark:text-gg-200 dark:hover:bg-gray-700'
                       }`}
                       aria-current={isActive ? 'true' : undefined}
                     >
@@ -93,9 +128,11 @@ const GlossaryContent = () => {
                   ref={(el) => {
                     sectionRefs.current[group.id] = el;
                   }}
-                  className='scroll-mt-28 pb-12 last:pb-4'
+                  className='scroll-mt-36 pb-12 last:pb-4 lg:scroll-mt-28'
                 >
-                  <h2 className='sr-only'>{group.label}</h2>
+                  <h2 className='mb-6 border-b border-gg-200 pb-2 font-heading text-xl font-semibold text-gg-800 dark:border-gray-600 dark:text-gg-300 lg:sr-only'>
+                    {group.label}
+                  </h2>
                   <dl className='space-y-8'>
                     {entries.map((entry) => (
                       <div key={entry.term}>
@@ -103,7 +140,7 @@ const GlossaryContent = () => {
                           {entry.term}
                         </dt>
                         {entry.definition ? (
-                          <dd className='mt-2 font-content text-base leading-relaxed text-gray-800 dark:text-gray-200'>
+                          <dd className='font-contents mt-2 text-base leading-relaxed text-gray-800 dark:text-gray-200'>
                             {entry.definition}
                           </dd>
                         ) : null}
@@ -114,13 +151,13 @@ const GlossaryContent = () => {
               );
             })}
 
-            <p className='mt-8 border-t border-gray-200 pt-6 font-content text-sm text-gray-600 dark:border-gray-700 dark:text-gray-400'>
+            <p className='font-contents mt-8 border-t border-gray-200 pt-6 text-sm text-gray-600 dark:border-gray-600 dark:text-gray-400'>
               Source:{' '}
               <a
                 href={GLOSSARY_SOURCE_URL}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-gg-700 underline hover:text-gg-800 dark:text-gg-400'
+                className='text-brandPink hover:text-brandPink2 hover:underline'
               >
                 ICMART Glossary
               </a>
@@ -132,7 +169,7 @@ const GlossaryContent = () => {
       <button
         type='button'
         onClick={scrollToTop}
-        className='fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-sm bg-gg-700 text-white shadow-lg transition hover:bg-gg-800 focus:outline-none focus:ring-2 focus:ring-gg-500 focus:ring-offset-2'
+        className='fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-sm bg-gg-500 text-white shadow-lg transition hover:bg-brandPink3 focus:outline-none focus:ring-2 focus:ring-gg-400 focus:ring-offset-2 dark:bg-gg-600 dark:hover:bg-gg-500'
         aria-label='Back to top'
       >
         <HiArrowUp className='h-5 w-5' aria-hidden />
