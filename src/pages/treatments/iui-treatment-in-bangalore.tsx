@@ -146,11 +146,6 @@ const Iui = () => {
   return (
     <div>
       <Head>
-        <link
-          rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp'
-          as='image'
-        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>IUI Treatment in Bangalore: Trusted Fertility Solutions</title>
         <meta name='title' content='IUI Treatment in Bangalore: Trusted Fertility Solutions ' />
