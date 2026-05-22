@@ -111,51 +111,51 @@ const GlossaryContent = () => {
         </header>
 
         <div className='mt-8 lg:mt-10'>
-            {GLOSSARY_GROUPS.map((group) => {
-              const entries = entriesByGroup[group.id] ?? [];
-              if (entries.length === 0) return null;
+          {GLOSSARY_GROUPS.map((group) => {
+            const entries = entriesByGroup[group.id] ?? [];
+            if (entries.length === 0) return null;
 
-              return (
-                <section
-                  key={group.id}
-                  id={`glossary-${group.id}`}
-                  ref={(el) => {
-                    sectionRefs.current[group.id] = el;
-                  }}
-                  className='scroll-mt-36 pb-12 last:pb-4 lg:scroll-mt-28'
-                >
-                  <h2 className='mb-6 border-b border-gg-200 pb-2 font-heading text-xl font-semibold text-gg-800 dark:border-gray-600 dark:text-gg-300'>
-                    {group.label}
-                  </h2>
-                  <dl className='space-y-8'>
-                    {entries.map((entry) => (
-                      <div key={entry.term}>
-                        <dt className='font-heading text-lg font-bold text-gg-800 dark:text-gg-300'>
-                          {entry.term}
-                        </dt>
-                        {entry.definition ? (
-                          <dd className='font-contents mt-2 text-base leading-relaxed text-gray-800 dark:text-gray-200'>
-                            {entry.definition}
-                          </dd>
-                        ) : null}
-                      </div>
-                    ))}
-                  </dl>
-                </section>
-              );
-            })}
-
-            <p className='font-contents mt-8 border-t border-gray-200 pt-6 text-sm text-gray-600 dark:border-gray-600 dark:text-gray-400'>
-              Source:{' '}
-              <a
-                href={GLOSSARY_SOURCE_URL}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-brandPink hover:text-brandPink2 hover:underline'
+            return (
+              <section
+                key={group.id}
+                id={`glossary-${group.id}`}
+                ref={(el) => {
+                  sectionRefs.current[group.id] = el;
+                }}
+                className='scroll-mt-36 pb-12 last:pb-4 lg:scroll-mt-28'
               >
-                ICMART Glossary
-              </a>
-            </p>
+                <h2 className='mb-6 border-b border-gg-200 pb-2 font-heading text-xl font-semibold text-gg-800 dark:border-gray-600 dark:text-gg-300'>
+                  {group.label}
+                </h2>
+                <dl className='space-y-8'>
+                  {entries.map((entry) => (
+                    <div key={entry.term}>
+                      <dt className='font-heading text-lg font-bold text-gg-800 dark:text-gg-300'>
+                        {entry.term}
+                      </dt>
+                      {entry.definition ? (
+                        <dd className='font-contents mt-2 text-base leading-relaxed text-gray-800 dark:text-gray-200'>
+                          {entry.definition}
+                        </dd>
+                      ) : null}
+                    </div>
+                  ))}
+                </dl>
+              </section>
+            );
+          })}
+
+          <p className='font-contents mt-8 border-t border-gray-200 pt-6 text-sm text-gray-600 dark:border-gray-600 dark:text-gray-400'>
+            Source:{' '}
+            <a
+              href={GLOSSARY_SOURCE_URL}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-brandPink hover:text-brandPink2 hover:underline'
+            >
+              ICMART Glossary
+            </a>
+          </p>
         </div>
       </div>
     </div>
