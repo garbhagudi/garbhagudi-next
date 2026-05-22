@@ -73,42 +73,42 @@ const GlossaryContent = () => {
   return (
     <div className='bg-white dark:bg-gray-800'>
       <div className='mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-24 lg:pt-14'>
-        <header>
-          <h1 className='text-center font-heading text-4xl font-semibold text-gray-800 dark:text-gray-200 lg:text-5xl'>
+        <header className='text-center'>
+          <h1 className='font-heading text-4xl font-semibold text-gray-800 dark:text-gray-200 lg:text-5xl'>
             Fertility Lexicon
           </h1>
-          <p className='font-contents mx-auto mt-4 max-w-3xl text-center text-lg text-gray-800 dark:text-gray-200'>
+          <p className='font-contents mx-auto mt-4 max-w-3xl text-lg text-gray-800 dark:text-gray-200'>
             Definitions of fertility and assisted reproductive technology terms, adapted from the
             ICMART glossary for quick reference.
           </p>
-
-          <nav
-            className={`sticky ${STICKY_TOP} z-30 -mx-4 mt-8 border-b border-gg-100 bg-white/95 px-4 py-4 backdrop-blur-sm dark:border-gray-600 dark:bg-gray-800/95 sm:mx-0`}
-            aria-label='Glossary letter ranges'
-          >
-            <ul className='mx-auto flex max-w-4xl flex-row flex-wrap items-stretch justify-center gap-2 sm:flex-nowrap sm:gap-3'>
-              {GLOSSARY_GROUPS.map((group) => {
-                const isActive = activeGroupId === group.id;
-                return (
-                  <li key={group.id} className='min-w-[4.75rem] flex-1 sm:max-w-[7.5rem]'>
-                    <button
-                      type='button'
-                      onClick={() => scrollToGroup(group.id)}
-                      className={`h-full w-full rounded-md border-2 px-3 py-2.5 text-center font-content text-sm font-semibold transition-colors sm:px-4 ${
-                        isActive
-                          ? 'border-gg-800 bg-gg-800 text-white shadow-sm'
-                          : 'border-gg-800 bg-white text-gg-800 hover:bg-gg-50 dark:border-gg-600 dark:bg-gray-800 dark:text-gg-200 dark:hover:bg-gray-700'
-                      }`}
-                      aria-current={isActive ? 'true' : undefined}
-                    >
-                      {group.label}
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
         </header>
+
+        <nav
+          className={`sticky ${STICKY_TOP} z-40 -mx-4 mt-8 border-b border-gg-100 bg-white/95 px-4 py-4 shadow-sm backdrop-blur-sm dark:border-gray-600 dark:bg-gray-800/95 sm:mx-0`}
+          aria-label='Glossary letter ranges'
+        >
+          <ul className='mx-auto flex max-w-4xl flex-row flex-wrap items-stretch justify-center gap-2 sm:flex-nowrap sm:gap-3'>
+            {GLOSSARY_GROUPS.map((group) => {
+              const isActive = activeGroupId === group.id;
+              return (
+                <li key={group.id} className='min-w-[4.75rem] flex-1 sm:max-w-[7.5rem]'>
+                  <button
+                    type='button'
+                    onClick={() => scrollToGroup(group.id)}
+                    className={`h-full w-full rounded-md border-2 px-3 py-2.5 text-center font-content text-sm font-semibold transition-colors sm:px-4 ${
+                      isActive
+                        ? 'border-gg-800 bg-gg-800 text-white shadow-sm'
+                        : 'border-gg-800 bg-white text-gg-800 hover:bg-gg-50 dark:border-gg-600 dark:bg-gray-800 dark:text-gg-200 dark:hover:bg-gray-700'
+                    }`}
+                    aria-current={isActive ? 'true' : undefined}
+                  >
+                    {group.label}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
 
         <div className='mt-8 lg:mt-10'>
           {GLOSSARY_GROUPS.map((group) => {
@@ -122,7 +122,7 @@ const GlossaryContent = () => {
                 ref={(el) => {
                   sectionRefs.current[group.id] = el;
                 }}
-                className='scroll-mt-36 pb-12 last:pb-4 lg:scroll-mt-28'
+                className='scroll-mt-44 pb-12 last:pb-4 lg:scroll-mt-40'
               >
                 <h2 className='mb-6 border-b border-gg-200 pb-2 font-heading text-xl font-semibold text-gg-800 dark:border-gray-600 dark:text-gg-300'>
                   {group.label}
