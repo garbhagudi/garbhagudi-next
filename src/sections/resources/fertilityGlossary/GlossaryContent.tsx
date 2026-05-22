@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { HiArrowUp } from 'react-icons/hi';
 import glossaryData from './glossary-data.json';
 
 export type GlossaryEntry = { term: string; definition: string; letter: string };
@@ -71,37 +70,31 @@ const GlossaryContent = () => {
     return () => observer.disconnect();
   }, [entriesByGroup]);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <div className='bg-white dark:bg-gray-800'>
       <div className='mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-24 lg:pt-14'>
-        <header className='mb-8 lg:mb-10'>
+        <header>
           <h1 className='text-center font-heading text-4xl font-semibold text-gray-800 dark:text-gray-200 lg:text-5xl'>
-            Fertility Glossary
+            Fertility Lexicon
           </h1>
           <p className='font-contents mx-auto mt-4 max-w-3xl text-center text-lg text-gray-800 dark:text-gray-200'>
             Definitions of fertility and assisted reproductive technology terms, adapted from the
             ICMART glossary for quick reference.
           </p>
-        </header>
 
-        <div className='flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-10'>
           <nav
-            className={`sticky ${STICKY_TOP} z-30 shrink-0 self-start bg-white/95 py-2 backdrop-blur-sm dark:bg-gray-800/95 lg:w-40`}
+            className={`sticky ${STICKY_TOP} z-30 -mx-4 mt-8 border-b border-gg-100 bg-white/95 px-4 py-4 backdrop-blur-sm dark:border-gray-600 dark:bg-gray-800/95 sm:mx-0`}
             aria-label='Glossary letter ranges'
           >
-            <ul className='flex flex-row flex-wrap justify-center gap-2 lg:flex-col lg:justify-start lg:gap-3'>
+            <ul className='mx-auto flex max-w-4xl flex-row flex-wrap items-stretch justify-center gap-2 sm:flex-nowrap sm:gap-3'>
               {GLOSSARY_GROUPS.map((group) => {
                 const isActive = activeGroupId === group.id;
                 return (
-                  <li key={group.id} className='lg:w-full'>
+                  <li key={group.id} className='min-w-[4.75rem] flex-1 sm:max-w-[7.5rem]'>
                     <button
                       type='button'
                       onClick={() => scrollToGroup(group.id)}
-                      className={`min-w-[5.25rem] rounded-md border-2 px-4 py-2.5 text-center font-content text-sm font-semibold transition-colors lg:w-full lg:text-left ${
+                      className={`h-full w-full rounded-md border-2 px-3 py-2.5 text-center font-content text-sm font-semibold transition-colors sm:px-4 ${
                         isActive
                           ? 'border-gg-800 bg-gg-800 text-white shadow-sm'
                           : 'border-gg-800 bg-white text-gg-800 hover:bg-gg-50 dark:border-gg-600 dark:bg-gray-800 dark:text-gg-200 dark:hover:bg-gray-700'
@@ -115,8 +108,9 @@ const GlossaryContent = () => {
               })}
             </ul>
           </nav>
+        </header>
 
-          <div className='min-w-0 flex-1'>
+        <div className='mt-8 lg:mt-10'>
             {GLOSSARY_GROUPS.map((group) => {
               const entries = entriesByGroup[group.id] ?? [];
               if (entries.length === 0) return null;
@@ -130,7 +124,7 @@ const GlossaryContent = () => {
                   }}
                   className='scroll-mt-36 pb-12 last:pb-4 lg:scroll-mt-28'
                 >
-                  <h2 className='mb-6 border-b border-gg-200 pb-2 font-heading text-xl font-semibold text-gg-800 dark:border-gray-600 dark:text-gg-300 lg:sr-only'>
+                  <h2 className='mb-6 border-b border-gg-200 pb-2 font-heading text-xl font-semibold text-gg-800 dark:border-gray-600 dark:text-gg-300'>
                     {group.label}
                   </h2>
                   <dl className='space-y-8'>
@@ -162,18 +156,8 @@ const GlossaryContent = () => {
                 ICMART Glossary
               </a>
             </p>
-          </div>
         </div>
       </div>
-
-      <button
-        type='button'
-        onClick={scrollToTop}
-        className='fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-sm bg-gg-500 text-white shadow-lg transition hover:bg-brandPink3 focus:outline-none focus:ring-2 focus:ring-gg-400 focus:ring-offset-2 dark:bg-gg-600 dark:hover:bg-gg-500'
-        aria-label='Back to top'
-      >
-        <HiArrowUp className='h-5 w-5' aria-hidden />
-      </button>
     </div>
   );
 };
