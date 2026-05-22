@@ -14,7 +14,8 @@ const {
   sourceUrl: string;
 };
 
-const STICKY_TOP = 'top-16 lg:top-20';
+/** Below site header: mobile bar is taller than top-16 (64px) */
+const STICKY_TOP = 'top-[5.5rem] lg:top-20';
 
 function groupEntries(entries: GlossaryEntry[], group: GlossaryGroup) {
   return entries
@@ -84,7 +85,7 @@ const GlossaryContent = () => {
         </header>
 
         <nav
-          className={`sticky ${STICKY_TOP} z-40 -mx-4 mt-8 border-b border-gg-100 bg-white/95 px-4 py-4 shadow-sm backdrop-blur-sm dark:border-gray-600 dark:bg-gray-800/95 sm:mx-0`}
+          className={`sticky ${STICKY_TOP} z-40 -mx-4 mt-8 border-b border-gg-100 bg-white px-4 py-4 shadow-md dark:border-gray-600 dark:bg-gray-800 sm:mx-0`}
           aria-label='Glossary letter ranges'
         >
           <ul className='mx-auto flex max-w-4xl flex-row flex-wrap items-stretch justify-center gap-2 sm:flex-nowrap sm:gap-3'>
@@ -122,7 +123,7 @@ const GlossaryContent = () => {
                 ref={(el) => {
                   sectionRefs.current[group.id] = el;
                 }}
-                className='scroll-mt-44 pb-12 last:pb-4 lg:scroll-mt-40'
+                className='scroll-mt-52 pb-12 last:pb-4 lg:scroll-mt-40'
               >
                 <h2 className='mb-6 border-b border-gg-200 pb-2 font-heading text-xl font-semibold text-gg-800 dark:border-gray-600 dark:text-gg-300'>
                   {group.label}
