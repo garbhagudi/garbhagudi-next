@@ -40,33 +40,12 @@ def parse_sheet_fertility(path: Path) -> tuple[list[dict], str]:
     return entries, source_url
 
 
-def parse_sheet_additional(path: Path, source_url: str) -> tuple[list[dict], str]:
-    df = pd.read_excel(path, sheet_name="Additional Snippets")
-    entries = [{"term": df.columns[0], "definition": ""}]
-
-    for _, row in df.iterrows():
-        term = str(row.iloc[0]).strip() if pd.notna(row.iloc[0]) else ""
-        definition = (
-            str(row.iloc[1]).strip()
-            if pd.notna(row.iloc[1]) and str(row.iloc[1]) != "nan"
-            else ""
-        )
-        if term.startswith("http"):
-            source_url = term
-            continue
-        if term:
-            entries.append({"term": term, "definition": definition})
-
-    return entries, source_url
-
-
 def main(excel_path: Path = EXCEL_DEFAULT) -> None:
     fertility_entries, source_url = parse_sheet_fertility(excel_path)
-    additional_entries, source_url = parse_sheet_additional(excel_path, source_url)
 
     seen: set[str] = set()
     unique: list[dict] = []
-    for entry in fertility_entries + additional_entries:
+    for entry in fertility_entries:
         key = entry["term"].lower()
         if key in seen:
             continue
