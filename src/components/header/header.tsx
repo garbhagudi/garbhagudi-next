@@ -59,11 +59,11 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const path = usePathname();
   const isIvfHome = path?.includes('/ivf/home') || false;
-  const isGlossaryPage = path === '/resources/fertility-glossary';
+  const isLexiconPage = path === '/resources/lexicon';
   return (
     <div
       className={`sticky top-0 z-50 bg-auto bg-no-repeat shadow-xl dark:border-b dark:border-gray-600 lg:bg-cover ${
-        isGlossaryPage
+        isLexiconPage
           ? 'bg-white dark:bg-gray-800'
           : 'bg-white bg-opacity-70 backdrop-blur-2xl dark:bg-gray-800 dark:bg-opacity-70'
       }`}

@@ -111,6 +111,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/resources/fertility-glossary',
+        destination: '/resources/lexicon',
+        permanent: true,
+      },
+      {
         source: '/doctors',
         destination: '/fertility-experts',
         permanent: true,

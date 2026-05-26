@@ -4,11 +4,7 @@ import glossaryData from './glossary-data.json';
 export type GlossaryEntry = { term: string; definition: string; letter: string };
 export type GlossaryGroup = { id: string; label: string; start: string; end: string };
 
-const {
-  entries: GLOSSARY_ENTRIES,
-  groups: GLOSSARY_GROUPS,
-  sourceUrl: GLOSSARY_SOURCE_URL,
-} = glossaryData as {
+const { entries: GLOSSARY_ENTRIES, groups: GLOSSARY_GROUPS } = glossaryData as {
   entries: GlossaryEntry[];
   groups: GlossaryGroup[];
   sourceUrl: string;
@@ -76,7 +72,7 @@ const GlossaryContent = () => {
       <div className='mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-24 lg:pt-14'>
         <header className='text-center'>
           <h1 className='font-heading text-4xl font-semibold text-gray-800 dark:text-gray-200 lg:text-5xl'>
-            Fertility Lexicon
+            Lexicon
           </h1>
           <p className='font-contents mx-auto mt-4 max-w-3xl text-lg text-gray-800 dark:text-gray-200'>
             Definitions of fertility and assisted reproductive technology terms, adapted from the
@@ -86,7 +82,7 @@ const GlossaryContent = () => {
 
         <nav
           className={`sticky ${STICKY_TOP} z-40 -mx-4 mt-8 border-b border-gg-100 bg-white px-4 py-4 shadow-md dark:border-gray-600 dark:bg-gray-800 sm:mx-0`}
-          aria-label='Glossary letter ranges'
+          aria-label='Lexicon letter ranges'
         >
           <ul className='mx-auto flex max-w-4xl flex-row flex-wrap items-stretch justify-center gap-2 sm:flex-nowrap sm:gap-3'>
             {GLOSSARY_GROUPS.map((group) => {
@@ -146,17 +142,17 @@ const GlossaryContent = () => {
             );
           })}
 
-          <p className='font-contents mt-8 border-t border-gray-200 pt-6 text-sm text-gray-600 dark:border-gray-600 dark:text-gray-400'>
-            Source:{' '}
-            <a
-              href={GLOSSARY_SOURCE_URL}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-brandPink hover:text-brandPink2 hover:underline'
-            >
-              ICMART Glossary
-            </a>
-          </p>
+          <div className='font-contents mt-8 border-t border-gray-200 pt-6 text-sm leading-relaxed text-gray-600 dark:border-gray-600 dark:text-gray-400'>
+            <p className='font-semibold text-gray-800 dark:text-gray-200'>
+              The International Glossary on Infertility and Fertility Care
+            </p>
+            <p className='mt-2'>
+              The following glossary was developed in 2017 by a global panel of more than 100
+              multidisciplinary experts, professional organisations, and patient representatives to
+              provide consensus agreement on 283 items and definitions. Published in Fertility and
+              Sterility (FNS) and Human Reproduction (HR).
+            </p>
+          </div>
         </div>
       </div>
     </div>
