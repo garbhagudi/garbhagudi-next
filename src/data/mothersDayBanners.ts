@@ -1,5 +1,5 @@
 export const MOTHERS_DAY_BANNER_ALT =
-  "GarbhaGudi IVF Mother's Day offer: ₹25,000 off IVF treatment package, first free fertility consultation, and 50% off 25-test fertility care panel.";
+  'GarbhaGudi IVF offer: free first fertility expert consultation and baseline fertility (TVUS) scan, plus 50% off on 24 fertility tests. Valid until July 31, 2026.';
 
 export const MOTHERS_DAY_BANNER_IMAGES = {
   mobile: '/images/mothers-day-offer-banner-mobile.png',
