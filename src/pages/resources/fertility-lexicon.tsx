@@ -8,7 +8,7 @@ const LexiconPage = () => {
     { name: 'Home', url: 'https://www.garbhagudi.com/' },
     { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
     {
-      name: 'Lexicon',
+      name: 'Fertility Lexicon',
       url: 'https://www.garbhagudi.com/resources/fertility-lexicon',
     },
   ]);
@@ -53,7 +53,7 @@ const LexiconPage = () => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802155/SEO/OG_images_FAQs_k40phu.webp'
         />
       </Head>
-      <BreadCrumbs text1='Resources' link1='/resources' text2='Lexicon' link2='' />
+      <BreadCrumbs text1='Resources' link1='/resources' text2='Fertility Lexicon' link2='' />
       <GlossaryContent />
     </div>
   );
