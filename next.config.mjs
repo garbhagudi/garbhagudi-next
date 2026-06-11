@@ -112,7 +112,7 @@ const nextConfig = {
     return [
       {
         source: '/resources/fertility-glossary',
-        destination: '/resources/lexicon',
+        destination: '/resources/fertility-lexicon',
         permanent: true,
       },
       {
