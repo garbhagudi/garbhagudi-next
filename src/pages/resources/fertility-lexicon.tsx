@@ -9,7 +9,7 @@ const LexiconPage = () => {
     { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
     {
       name: 'Lexicon',
-      url: 'https://www.garbhagudi.com/resources/lexicon',
+      url: 'https://www.garbhagudi.com/resources/fertility-lexicon',
     },
   ]);
 
@@ -31,7 +31,7 @@ const LexiconPage = () => {
         />
         <meta property='og:title' content='Lexicon | GarbhaGudi IVF Centre' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
-        <meta property='og:url' content='https://www.garbhagudi.com/resources/lexicon' />
+        <meta property='og:url' content='https://www.garbhagudi.com/resources/fertility-lexicon' />
         <meta
           property='og:description'
           content='Browse fertility and IVF lexicon terms with clear definitions. A quick reference guide from GarbhaGudi.'
