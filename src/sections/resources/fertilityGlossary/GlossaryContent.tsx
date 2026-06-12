@@ -74,10 +74,10 @@ const GlossaryContent = () => {
           <h1 className='font-heading text-4xl font-semibold text-gray-800 dark:text-gray-200 lg:text-5xl'>
             Fertility Lexicon
           </h1>
-          <p className='font-contents mx-auto mt-4 max-w-3xl text-lg text-gray-800 dark:text-gray-200'>
+          {/* <p className='font-contents mx-auto mt-4 max-w-3xl text-lg text-gray-800 dark:text-gray-200'>
             Definitions of fertility and assisted reproductive technology terms, adapted from the
             ICMART glossary for quick reference.
-          </p>
+          </p> */}
         </header>
 
         <nav
