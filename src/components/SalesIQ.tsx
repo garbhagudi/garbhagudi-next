@@ -1,21 +1,19 @@
 import Script from 'next/script';
 
-const SalesIQ = (props) => {
-  const hasCode = props.hasOwnProperty('widgetCode');
+const SALESIQ_WIDGET_SRC =
+  'https://salesiq.zohopublic.com/widget?wc=siq972f5d7b03057cc80029ab10323f5bbf044b7286b067ba3d6c1e851505d4c958';
 
-  return hasCode ? (
+const SalesIQ = () => (
+  <>
     <Script
+      id='zoho-salesiq-bootstrap'
       strategy='lazyOnload'
-      id='zsiqchat'
       dangerouslySetInnerHTML={{
-        __html: `
-                    var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"${props.widgetCode}", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="${props.domain}";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);
-                `,
+        __html: 'window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}',
       }}
     />
-  ) : (
-    <div style={{ color: 'red' }}>Need to pass widget code</div>
-  );
-};
+    <Script id='zsiqscript' src={SALESIQ_WIDGET_SRC} strategy='lazyOnload' defer />
+  </>
+);
 
 export default SalesIQ;

@@ -12,7 +12,7 @@ const LPACta = () => {
           </span>
         </h2>
         <div className='mt-8 flex lg:mt-0 lg:flex-shrink-0'>
-          <Link href={'#leadForm'} className='inline-flex rounded-md shadow'>
+          <Link href='/contact/enquiry' className='inline-flex rounded-md shadow'>
             <button
               type='button'
               className='inline-flex items-center justify-center rounded-md border border-transparent bg-gg-500 px-5 py-3 font-content text-base font-medium text-gray-200 hover:bg-brandPink3 dark:bg-gg-500 dark:hover:bg-gg-600'

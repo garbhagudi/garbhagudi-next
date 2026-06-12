@@ -1,288 +1,161 @@
-import GarbhaGudiFullC from 'assets/gg-full-horizontal.svg';
-import GarbhaGudiFullColorV from 'assets/gg-vertical-full.svg';
+import GarbhaGudiIvfH from 'assets/gg-full-horizontal.svg';
+import GarbhaGudiIvfV from 'assets/gg-vertical-full.svg';
 import GarbhaGudiPharmaH from 'assets/pharma-full-horiontal.svg';
 import GarbhaGudiPharmaV from 'assets/pharma-full-vertical.svg';
-import GGCare from 'assets/ggcare-standalone.svg';
-import Emblem from 'assets/gg-emblem.svg';
 import GgirhrH from 'assets/ggirhr-full-horizontal.svg';
 import GgirhrV from 'assets/ggirhr-full-vertical.svg';
-import GarbhaGnan from 'assets/garbhagnan-standalone.svg';
-import BrandElement from 'assets/brand-element.svg';
+import GarbhaGnanFoundationH from 'assets/garbhagnan-standalone.svg';
+import GarbhaGnanFoundationV from 'assets/garbhagnan-foundation-vertical.svg';
+import GgVamshaVrukshaV from 'assets/gg-vamsha-vruksha-vertical.svg';
+
+const BASE = '/brand-resources';
+
 export const data = [
   {
     id: 1,
-    title: 'GarbhaGudi Colour Logo (Horizontal)',
-    img: GarbhaGudiFullC,
+    title: 'GarbhaGudi IVF (Horizontal)',
+    img: GarbhaGudiIvfH,
     colors: [
-      {
-        id: 1,
-        color: '#b47aa5',
-      },
-      {
-        id: 2,
-        color: '#ee3f65',
-      },
-      {
-        id: 3,
-        color: '#a6a8ab',
-      },
-      {
-        id: 4,
-        color: '#6d6e70',
-      },
-      {
-        id: 5,
-        color: '#58595b',
-      },
+      { id: 1, color: '#b479a4' },
+      { id: 2, color: '#ef4266' },
+      { id: 3, color: '#c7c4c3' },
+      { id: 4, color: '#4d4d4e' },
+      { id: 5, color: '#a8a8ab' },
+      { id: 6, color: '#353635' },
     ],
-    svg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923050/brandResources/gg-full-horizontal_bwacoj.svg',
-    png: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923050/brandResources/gg-full-horizontal_bwacoj.png',
-    jpg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923050/brandResources/gg-full-horizontal_bwacoj.jpg',
+    svg: `${BASE}/gg-ivf-horizontal.svg`,
+    png: `${BASE}/gg-ivf-horizontal.png`,
+    jpg: `${BASE}/gg-ivf-horizontal.jpg`,
+    pdf: `${BASE}/gg-ivf-horizontal.pdf`,
   },
   {
     id: 2,
-    title: 'GarbhaGudi Colour Logo (Vertical)',
-    img: GarbhaGudiFullColorV,
+    title: 'GarbhaGudi IVF (Vertical)',
+    img: GarbhaGudiIvfV,
     colors: [
-      {
-        id: 1,
-        color: '#b47aa5',
-      },
-      {
-        id: 2,
-        color: '#ee3f65',
-      },
-      {
-        id: 3,
-        color: '#a6a8ab',
-      },
-      {
-        id: 4,
-        color: '#6d6e70',
-      },
-      {
-        id: 5,
-        color: '#58595b',
-      },
+      { id: 1, color: '#b379a3' },
+      { id: 2, color: '#ef4266' },
+      { id: 3, color: '#a7a9ac' },
+      { id: 4, color: '#4d4d4e' },
+      { id: 5, color: '#5b5a5d' },
+      { id: 6, color: '#353635' },
     ],
-    svg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923052/brandResources/gg-vertical-full_anxjz8.svg',
-    png: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923052/brandResources/gg-vertical-full_anxjz8.png',
-    jpg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923052/brandResources/gg-vertical-full_anxjz8.jpg',
+    svg: `${BASE}/gg-ivf-vertical.svg`,
+    png: `${BASE}/gg-ivf-vertical.png`,
+    jpg: `${BASE}/gg-ivf-vertical.jpg`,
+    pdf: `${BASE}/gg-ivf-vertical.pdf`,
   },
   {
     id: 3,
     title: 'GarbhaGudi Pharma (Horizontal)',
     img: GarbhaGudiPharmaH,
     colors: [
-      {
-        id: 1,
-        color: '#ee3f65',
-      },
-      {
-        id: 2,
-        color: '#a6a8ab',
-      },
-      {
-        id: 3,
-        color: '#6d6e70',
-      },
-      {
-        id: 4,
-        color: '#58595b',
-      },
+      { id: 1, color: '#ef4166' },
+      { id: 2, color: '#a8aaad' },
+      { id: 3, color: '#58595b' },
+      { id: 4, color: '#4d4d4e' },
+      { id: 5, color: '#c7c5c4' },
+      { id: 6, color: '#353635' },
     ],
-    svg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923054/brandResources/pharma-full-horiontal_oq873d.svg',
-    png: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923054/brandResources/pharma-full-horiontal_oq873d.png',
-    jpg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923054/brandResources/pharma-full-horiontal_oq873d.jpg',
+    svg: `${BASE}/gg-pharma-horizontal.svg`,
+    png: `${BASE}/gg-pharma-horizontal.png`,
+    jpg: `${BASE}/gg-pharma-horizontal.jpg`,
+    pdf: `${BASE}/gg-pharma-horizontal.pdf`,
   },
   {
     id: 4,
     title: 'GarbhaGudi Pharma (Vertical)',
     img: GarbhaGudiPharmaV,
     colors: [
-      {
-        id: 1,
-        color: '#ee3f65',
-      },
-      {
-        id: 2,
-        color: '#a6a8ab',
-      },
-      {
-        id: 3,
-        color: '#6d6e70',
-      },
-      {
-        id: 4,
-        color: '#58595b',
-      },
+      { id: 1, color: '#ef4166' },
+      { id: 2, color: '#a7aaac' },
+      { id: 3, color: '#58595b' },
+      { id: 4, color: '#6d6e71' },
+      { id: 5, color: '#353635' },
     ],
-    svg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923055/brandResources/pharma-full-vertical_fajf0y.svg',
-    png: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923055/brandResources/pharma-full-vertical_fajf0y.png',
-    jpg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923055/brandResources/pharma-full-vertical_fajf0y.jpg',
+    svg: `${BASE}/gg-pharma-vertical.svg`,
+    png: `${BASE}/gg-pharma-vertical.png`,
+    jpg: `${BASE}/gg-pharma-vertical.jpg`,
+    pdf: `${BASE}/gg-pharma-vertical.pdf`,
   },
   {
     id: 5,
-    title: 'GG Care',
-    img: GGCare,
-    colors: [
-      {
-        id: 2,
-        color: '#58595b',
-      },
-      {
-        id: 3,
-        color: '#ee3f65',
-      },
-      {
-        id: 4,
-        color: '#5a595c',
-      },
-      {
-        id: 5,
-        color: '#46c0bc',
-      },
-    ],
-    svg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923049/brandResources/ggcare-standalone_ara7cg.svg',
-    png: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923049/brandResources/ggcare-standalone_ara7cg.png',
-    jpg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923049/brandResources/ggcare-standalone_ara7cg.jpg',
-  },
-  {
-    id: 6,
-    title: 'GarbhaGudi Emblem',
-    img: Emblem,
-    colors: [
-      {
-        id: 2,
-        color: '#ee3f65',
-      },
-      {
-        id: 4,
-        color: '#6d6e70',
-      },
-      {
-        id: 5,
-        color: '#58595b',
-      },
-    ],
-    svg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923049/brandResources/gg-emblem_rmknf9.svg',
-    png: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923049/brandResources/gg-emblem_rmknf9.png',
-    jpg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923049/brandResources/gg-emblem_rmknf9.jpg',
-  },
-  {
-    id: 7,
     title: 'GGIRHR (Horizontal)',
     img: GgirhrH,
     colors: [
-      {
-        id: 1,
-        color: '#58595b',
-      },
-      {
-        id: 2,
-        color: '#ee3f65',
-      },
-      {
-        id: 3,
-        color: '#79b6e3',
-      },
-      {
-        id: 4,
-        color: '#a6a8ab',
-      },
-      {
-        id: 5,
-        color: '#1f9cbe',
-      },
-      {
-        id: 6,
-        color: '#59595c',
-      },
+      { id: 1, color: '#209dbf' },
+      { id: 2, color: '#79b6e3' },
+      { id: 3, color: '#ef4166' },
+      { id: 4, color: '#a8aaad' },
+      { id: 5, color: '#58595b' },
+      { id: 6, color: '#353635' },
     ],
-    svg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923051/brandResources/ggirhr-full-horizontal_echyhh.svg',
-    png: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923051/brandResources/ggirhr-full-horizontal_echyhh.png',
-    jpg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923051/brandResources/ggirhr-full-horizontal_echyhh.jpg',
+    svg: `${BASE}/ggirhr-horizontal.svg`,
+    png: `${BASE}/ggirhr-horizontal.png`,
+    jpg: `${BASE}/ggirhr-horizontal.jpg`,
+    pdf: `${BASE}/ggirhr-horizontal.pdf`,
   },
   {
-    id: 8,
+    id: 6,
     title: 'GGIRHR (Vertical)',
     img: GgirhrV,
     colors: [
-      {
-        id: 1,
-        color: '#58595b',
-      },
-      {
-        id: 2,
-        color: '#ee3f65',
-      },
-      {
-        id: 3,
-        color: '#79b6e3',
-      },
-      {
-        id: 4,
-        color: '#a6a8ab',
-      },
-      {
-        id: 5,
-        color: '#1f9cbe',
-      },
-      {
-        id: 6,
-        color: '#59595c',
-      },
+      { id: 1, color: '#229dbf' },
+      { id: 2, color: '#7ab6e3' },
+      { id: 3, color: '#ef4166' },
+      { id: 4, color: '#a7aaac' },
+      { id: 5, color: '#595a5c' },
+      { id: 6, color: '#353635' },
     ],
-    svg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923052/brandResources/ggirhr-full-vertical_x8r5sq.svg',
-    png: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923052/brandResources/ggirhr-full-vertical_x8r5sq.png',
-    jpg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923052/brandResources/ggirhr-full-vertical_x8r5sq.jpg',
+    svg: `${BASE}/ggirhr-vertical.svg`,
+    png: `${BASE}/ggirhr-vertical.png`,
+    jpg: `${BASE}/ggirhr-vertical.jpg`,
+    pdf: `${BASE}/ggirhr-vertical.pdf`,
+  },
+  {
+    id: 7,
+    title: 'GarbhaGnan Foundation (Horizontal)',
+    img: GarbhaGnanFoundationH,
+    colors: [
+      { id: 1, color: '#005e7e' },
+      { id: 2, color: '#ef4066' },
+      { id: 3, color: '#58595b' },
+    ],
+    svg: `${BASE}/garbhagnan-foundation-horizontal.svg`,
+    png: `${BASE}/garbhagnan-foundation-horizontal.png`,
+    jpg: `${BASE}/garbhagnan-foundation-horizontal.jpg`,
+    pdf: `${BASE}/garbhagnan-foundation-horizontal.pdf`,
+  },
+  {
+    id: 8,
+    title: 'GarbhaGnan Foundation (Vertical)',
+    img: GarbhaGnanFoundationV,
+    colors: [
+      { id: 1, color: '#0a6080' },
+      { id: 2, color: '#ee4266' },
+      { id: 3, color: '#5a5a5c' },
+      { id: 4, color: '#efeeee' },
+      { id: 5, color: '#353635' },
+    ],
+    svg: `${BASE}/garbhagnan-foundation-vertical.svg`,
+    png: `${BASE}/garbhagnan-foundation-vertical.png`,
+    jpg: `${BASE}/garbhagnan-foundation-vertical.jpg`,
+    pdf: `${BASE}/garbhagnan-foundation-vertical.pdf`,
   },
   {
     id: 9,
-    title: 'GarbhaGnan',
-    img: GarbhaGnan,
+    title: 'GG Vamsha Vruksha (Vertical)',
+    img: GgVamshaVrukshaV,
     colors: [
-      {
-        id: 2,
-        color: '#ee4065',
-      },
-      {
-        id: 3,
-        color: '#58595b',
-      },
-      {
-        id: 4,
-        color: '#005e7e',
-      },
-      {
-        id: 5,
-        color: '#ee3f65',
-      },
+      { id: 1, color: '#5f2b7a' },
+      { id: 2, color: '#005c34' },
+      { id: 3, color: '#72bf44' },
+      { id: 4, color: '#ef4066' },
+      { id: 5, color: '#6d6e71' },
     ],
-    svg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923048/brandResources/garbhagnan-standalone_ywovpa.svg',
-    png: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923048/brandResources/garbhagnan-standalone_ywovpa.png',
-    jpg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923048/brandResources/garbhagnan-standalone_ywovpa.jpg',
-  },
-  {
-    id: 10,
-    title: 'Branding Elements',
-    img: BrandElement,
-    colors: [
-      {
-        id: 2,
-        color: '#5e2f7e',
-      },
-      {
-        id: 3,
-        color: '#fdc259',
-      },
-      {
-        id: 4,
-        color: '#b47aa5',
-      },
-    ],
-    svg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923048/brandResources/brand-element_ecgugg.svg',
-    png: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923048/brandResources/brand-element_ecgugg.png',
-    jpg: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1698923048/brandResources/brand-element_ecgugg.jpg',
+    svg: `${BASE}/gg-vamsha-vruksha-vertical.svg`,
+    png: `${BASE}/gg-vamsha-vruksha-vertical.png`,
+    jpg: `${BASE}/gg-vamsha-vruksha-vertical.jpg`,
+    pdf: `${BASE}/gg-vamsha-vruksha-vertical.pdf`,
   },
 ];

@@ -15,7 +15,7 @@ const CallToAction = () => {
         <div className='mt-8 flex lg:mt-0 lg:flex-shrink-0'>
           <div className='inline-flex rounded-md shadow'>
             <Link
-              href={'#leadForm'}
+              href='/contact/enquiry'
               className='rounded-lg bg-gg-500 px-4 py-3 font-content text-xl font-semibold text-white hover:bg-gg-400 dark:bg-gray-500 dark:hover:bg-gg-500'
             >
               Book an Appointment

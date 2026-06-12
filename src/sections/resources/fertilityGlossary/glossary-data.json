@@ -1,0 +1,1462 @@
+{
+  "sourceUrl": "https://www.icmartivf.org/glossary/i-m/#icmartInfo",
+  "groups": [
+    {
+      "id": "a-d",
+      "label": "A - D",
+      "start": "A",
+      "end": "D"
+    },
+    {
+      "id": "e-h",
+      "label": "E - H",
+      "start": "E",
+      "end": "H"
+    },
+    {
+      "id": "i-m",
+      "label": "I - M",
+      "start": "I",
+      "end": "M"
+    },
+    {
+      "id": "n-p",
+      "label": "N - P",
+      "start": "N",
+      "end": "P"
+    },
+    {
+      "id": "r-z",
+      "label": "R - Z",
+      "start": "R",
+      "end": "Z"
+    }
+  ],
+  "entries": [
+    {
+      "term": "Acrosome",
+      "definition": "A membrane-bound structure covering the anterior of the sperm head that contains enzymes necessary to penetrate the zona pellucida of the oocyte.",
+      "letter": "A"
+    },
+    {
+      "term": "Adenomyosis",
+      "definition": "A form of endometriosis marked by the presence of endometrium-like epithelium and stroma outside the endometrium in the myometrium.",
+      "letter": "A"
+    },
+    {
+      "term": "Adhesions",
+      "definition": "Bands of fibrous scar tissue that may bind the abdominal and pelvic organs, including the intestines and peritoneum, to each other. They can be dense and thick or filmy and thin.",
+      "letter": "A"
+    },
+    {
+      "term": "Age specific fertility rate (ASFR)",
+      "definition": "The number of live births per woman in a particular age group in a specific calendar year expressed per 1000 women in that age group.",
+      "letter": "A"
+    },
+    {
+      "term": "Agglutination",
+      "definition": "Clumping of spermatozoa in the ejaculate.",
+      "letter": "A"
+    },
+    {
+      "term": "Andrology",
+      "definition": "The medical practice dealing with the health of the male reproductive system.",
+      "letter": "A"
+    },
+    {
+      "term": "Aneuploidy",
+      "definition": "An abnormal number of chromosomes in a cell. The majority of embryos with aneuploidies are not compatible with life.",
+      "letter": "A"
+    },
+    {
+      "term": "Anti-sperm antibodies",
+      "definition": "Antibodies that recognize and bind to antigens on the surface of the spermatozoon.",
+      "letter": "A"
+    },
+    {
+      "term": "Aspermia",
+      "definition": "Lack of external ejaculation.",
+      "letter": "A"
+    },
+    {
+      "term": "Assisted hatching",
+      "definition": "An ART procedure in which the zona pellucida of an embryo is either thinned or perforated by chemical, mechanical or laser methods.",
+      "letter": "A"
+    },
+    {
+      "term": "Assisted reproductive technology (ART)",
+      "definition": "All interventions that include the in vitro handling of both human oocytes and sperm or of embryos for the purpose of reproduction. This includes, but is not limited to, IVF and embryo transfer ET, intracytoplasmic sperm injection ICSI, embryo biopsy, preimplantation genetic testing PGT, assisted hatching, gamete intrafallopian transfer GIFT, zygote intrafallopian transfer, gamete and embryo cryopreservation, semen, oocyte and embryo donation, and gestational carrier cycles. Thus, ART does not, and ART-only registries do not, include assisted insemination using sperm from either a woman's partner or a sperm donor. (See broader term, medically assisted reproduction, MAR.)",
+      "letter": "A"
+    },
+    {
+      "term": "Asthenoteratozoospermia",
+      "definition": "Reduced percentages of motile and morphologically normal sperm in the ejaculate below the lower reference limit. When reporting results, the reference criteria should be specified.",
+      "letter": "A"
+    },
+    {
+      "term": "Asthenozoospermia",
+      "definition": "Reduced percentage of motile sperm in the ejaculate below the lower reference limit. When reporting results, the reference criteria should be specified.",
+      "letter": "A"
+    },
+    {
+      "term": "Azoospermia",
+      "definition": "The absence of spermatozoa in the ejaculate.",
+      "letter": "A"
+    },
+    {
+      "term": "Binucleation",
+      "definition": "The presence of two nuclei in a blastomere (cell).",
+      "letter": "B"
+    },
+    {
+      "term": "Biochemical pregnancy",
+      "definition": "A pregnancy diagnosed only by the detection of beta hCG in serum or urine.",
+      "letter": "B"
+    },
+    {
+      "term": "Birth (single)",
+      "definition": "The complete expulsion or extraction from a woman of a fetus after 22 completed weeks of gestational age, irrespective of whether it is a live birth or stillbirth, or, if gestational age is unknown, a birth weight more than 500 grams. A single birth refers to an individual newborn; and a delivery of multiple births, such as a twin delivery, would be registered as two births.",
+      "letter": "B"
+    },
+    {
+      "term": "Blastocoele",
+      "definition": "Fluid-filled central region of the blastocyst.",
+      "letter": "B"
+    },
+    {
+      "term": "Blastocyst",
+      "definition": "The stage of preimplantation embryo development that occurs around day 5–6 after insemination or ICSI. The blastocyst contains a fluid filled central cavity (blastocoele), an outer layer of cells (trophectoderm) and an inner group of cells (inner cell mass).",
+      "letter": "B"
+    },
+    {
+      "term": "Blastomere",
+      "definition": "A cell in a cleavage stage embryo.",
+      "letter": "B"
+    },
+    {
+      "term": "Blastomere symmetry",
+      "definition": "The extent to which all blastomeres are even in size and shape.",
+      "letter": "B"
+    },
+    {
+      "term": "Bleeding after oocyte aspiration",
+      "definition": "Significant bleeding, internal or external, after oocyte aspiration retrieval requiring hospitalization for blood transfusion, surgical intervention, clinical observation or other medical procedure.",
+      "letter": "B"
+    },
+    {
+      "term": "Canceled ART cycle",
+      "definition": "An ART cycle in which ovarian stimulation or monitoring has been initiated with the intention to treat, but which did not proceed to follicular aspiration or in the case of a thawed or warmed embryo did not proceed to embryo transfer.",
+      "letter": "C"
+    },
+    {
+      "term": "Childlessness",
+      "definition": "A condition in which a person, voluntarily or involuntarily, is not a legal or societally-recognized parent to a child, or has had all children die.",
+      "letter": "C"
+    },
+    {
+      "term": "Chimerism",
+      "definition": "Presence in a single individual of two or more cell lines, each derived from different individuals.",
+      "letter": "C"
+    },
+    {
+      "term": "Cleavage stage embryos",
+      "definition": "Embryos beginning with the 2-cell stage and up to, but not including, the morula stage.",
+      "letter": "C"
+    },
+    {
+      "term": "Clinical fertility",
+      "definition": "The capacity to establish a clinical pregnancy.",
+      "letter": "C"
+    },
+    {
+      "term": "Clinical pregnancy",
+      "definition": "A pregnancy diagnosed by ultrasonographic visualization of one or more gestational sacs or definitive clinical signs of pregnancy. In addition to intra-uterine pregnancy, it includes a clinically documented ectopic pregnancy.",
+      "letter": "C"
+    },
+    {
+      "term": "Clinical pregnancy rate",
+      "definition": "The number of clinical pregnancies expressed per 100 initiated cycles, aspiration cycles or embryo transfer cycles. When clinical pregnancy rates are recorded, the denominator (initiated, aspirated or embryo transfer cycles) must be specified.",
+      "letter": "C"
+    },
+    {
+      "term": "Clinical pregnancy with fetal heart beat",
+      "definition": "A pregnancy diagnosed by ultrasonographic or clinical documentation of at least one fetus with a discernible heartbeat.",
+      "letter": "C"
+    },
+    {
+      "term": "Cohort total fertility rate (CTFR)",
+      "definition": "The observed average number of live born children per woman applied to a birth cohort of women as they age through time. This is obtained from data on women after completing their reproductive years.",
+      "letter": "C"
+    },
+    {
+      "term": "Compaction",
+      "definition": "The process during which tight junctions form between juxtaposed blastomeres resulting in a solid mass of cells with indistinguishable cell membranes.",
+      "letter": "C"
+    },
+    {
+      "term": "Complex aneuploidies",
+      "definition": "Two or more aneuploidies involving different chromosomes in the embryo. When autosomes are involved, this condition is not compatible with human life.",
+      "letter": "C"
+    },
+    {
+      "term": "Congenital anomalies",
+      "definition": "Structural or functional disorders that occur during intra-uterine life and can be identified prenatally, at birth or later in life. Congenital anomalies can be caused by single gene defects, chromosomal disorders, multifactorial inheritance, environmental teratogens and micronutrient deficiencies. The time of identification should be reported.",
+      "letter": "C"
+    },
+    {
+      "term": "Congenital anomaly birth rate",
+      "definition": "The number of births exhibiting signs of congenital anomalies per 10,000 births. The time of identification should have been reported.",
+      "letter": "C"
+    },
+    {
+      "term": "Congenital bilateral absence of the vasa deferentia (CBAVD)",
+      "definition": "The absence, at birth, of both duct systems (vas deferentia) that connect the testes to the urethra and may be associated with cystic fibrosis transmembrane conductance regulator (CTFR) gene mutation. Although the testes usually develop and function normally, men present with azoospermia.",
+      "letter": "C"
+    },
+    {
+      "term": "Conventional in vitro insemination",
+      "definition": "The co-incubation of oocytes with sperm in vitro with the goal of resulting in extracorporeal fertilization.",
+      "letter": "C"
+    },
+    {
+      "term": "Corona radiata cells",
+      "definition": "The innermost cells of the cumulus oophorus.",
+      "letter": "C"
+    },
+    {
+      "term": "Cross border reproductive care",
+      "definition": "The provision of reproductive health services in a different jurisdiction or outside of a recognized national border within which the person or persons legally reside.",
+      "letter": "C"
+    },
+    {
+      "term": "Cryopreservation",
+      "definition": "The process of slow freezing or vitrification to preserve biological material (e.g. gametes, zygotes, cleavage-stage embryos, blastocysts or gonadal tissue) at extreme low temperature.",
+      "letter": "C"
+    },
+    {
+      "term": "Cryptorchidism",
+      "definition": "Testis not in scrotal position within the neonatal period and, up to but not limited to, 1 year post birth. If the testis has not descended into the scrotum, this condition can cause primary testicular failure and increased risk of testicular cancer development.",
+      "letter": "C"
+    },
+    {
+      "term": "Cumulative delivery rate per aspiration/initiated cycle with at least one live birth",
+      "definition": "The number of deliveries with at least one live birth resulting from one initiated or aspirated ART cycle, including all cycles in which fresh and/or frozen embryos are transferred, until one delivery with a live birth occurs or until all embryos are used, whichever occurs first. The delivery of a singleton, twin, or other multiples is registered as one delivery. In the absence of complete data, the cumulative delivery rate is often estimated.",
+      "letter": "C"
+    },
+    {
+      "term": "Cumulus oophorus",
+      "definition": "The multi-layered mass of granulosa cells surrounding the oocyte.",
+      "letter": "C"
+    },
+    {
+      "term": "Cytoplasmic maturation",
+      "definition": "The process during which the oocyte acquires the capacity to support nuclear maturation, fertilization, pronuclei formation, syngamy and subsequent early cleavage divisions until activation of the embryonic genome.",
+      "letter": "C"
+    },
+    {
+      "term": "Cytoplasmic transfer",
+      "definition": "A procedure that can be performed at different stages of an oocyte's development to add to or replace various amounts of cytoplasm from a donor egg.",
+      "letter": "C"
+    },
+    {
+      "term": "Decreased spermatogenesis",
+      "definition": "A histological finding in which spermatogenesis is present with few cells in the seminiferous tubules, resulting in a decreased number or absence of sperm in the ejaculate.",
+      "letter": "D"
+    },
+    {
+      "term": "Delayed ejaculation",
+      "definition": "A condition in which it takes a man an extended period of time to reach orgasm and ejaculation.",
+      "letter": "D"
+    },
+    {
+      "term": "Delayed embryo transfer",
+      "definition": "A procedure in which embryo transfer is not performed within the time frame of the oocyte aspiration cycle but at a later time.",
+      "letter": "D"
+    },
+    {
+      "term": "Delivery",
+      "definition": "The complete expulsion or extraction from a woman of one or more fetuses, after at least 22 completed weeks of gestational age, irrespective of whether they are live births or stillbirths. A delivery of either a single or multiple newborn is considered as one delivery. If more than one newborn is delivered, it is often recognized as a delivery with multiple births.",
+      "letter": "D"
+    },
+    {
+      "term": "Delivery rate",
+      "definition": "The number of deliveries expressed per 100 initiated cycles, aspiration cycles, or embryo transfer cycles. When delivery rates are recorded, the denominator (initiated, aspirated or embryo transfer cycles) must be specified. It includes deliveries that resulted in the birth of one or more live births and/or stillbirths. The delivery of a singleton, twin or other multiple pregnancy is registered as one delivery. If more than one newborn is delivered, it is often recognized as a delivery with multiple births.",
+      "letter": "D"
+    },
+    {
+      "term": "Delivery rate after fertility treatment per patient",
+      "definition": "The number of deliveries with at least one live birth or stillbirth, expressed per 100 patients, after a specified time and following all treatments.",
+      "letter": "D"
+    },
+    {
+      "term": "Delivery with multiple births after fertility treatments",
+      "definition": "A single delivery with more than one newborn, following all fertility treatments.",
+      "letter": "D"
+    },
+    {
+      "term": "Diandric oocytes",
+      "definition": "An oocyte with an extra set of haploid chromosomes of paternal origin.",
+      "letter": "D"
+    },
+    {
+      "term": "Digynic oocytes",
+      "definition": "An oocyte with an extra set of haploid chromosomes of maternal origin.",
+      "letter": "D"
+    },
+    {
+      "term": "Diminished ovarian reserve",
+      "definition": "A term generally used to indicate a reduced number and/or reduced quality of oocytes, such that the ability to reproduce is decreased. (See ovarian reserve.)",
+      "letter": "D"
+    },
+    {
+      "term": "Diploidy/euploidy",
+      "definition": "The condition in which a cell has two haploid sets of chromosomes. Each chromosome in one set is paired with its counterpart in the other set. A diploid embryo has 22 pairs of autosomes and two sex chromosomes, the normal condition.",
+      "letter": "D"
+    },
+    {
+      "term": "Disomy",
+      "definition": "The normal number of chromosomes characterized by 22 pairs of autosomal chromosomes and one pair of sex chromosomes (XX or XY). The chromosome number in human cells is normally 46.",
+      "letter": "D"
+    },
+    {
+      "term": "Donor insemination",
+      "definition": "The process of placing laboratory processed sperm or semen from a man into the reproductive tract of a woman who is not his intimate sexual partner, for the purpose of initiating a pregnancy.",
+      "letter": "D"
+    },
+    {
+      "term": "Double embryo transfer (DET)",
+      "definition": "The transfer of two embryos in an ART procedure. This may be elective (eDET) when more than two embryos of sufficient quality for transfer are available.",
+      "letter": "D"
+    },
+    {
+      "term": "Early neonatal death/mortality",
+      "definition": "Death of a newborn within 7 days of birth.",
+      "letter": "E"
+    },
+    {
+      "term": "Ectopic pregnancy",
+      "definition": "A pregnancy outside the uterine cavity, diagnosed by ultrasound, surgical visualization or histopathology.",
+      "letter": "E"
+    },
+    {
+      "term": "Ejaculation",
+      "definition": "Co-ordinated contractions of the genitourinary tract leading to the ejection of spermatozoa and seminal fluid.",
+      "letter": "E"
+    },
+    {
+      "term": "Ejaculation retardata",
+      "definition": "A condition resulting in an inability to ejaculate during vaginal intercourse.",
+      "letter": "E"
+    },
+    {
+      "term": "Ejaculatory duct",
+      "definition": "The canal that passes through the prostate just lateral to the verumontanum where the vas deferens and the duct from the seminal vesicle coalesce.",
+      "letter": "E"
+    },
+    {
+      "term": "Elective embryo transfer",
+      "definition": "The transfer of one or more embryos, selected from a larger cohort of available embryos.",
+      "letter": "E"
+    },
+    {
+      "term": "Elective single embryo transfer (eSET)",
+      "definition": "The transfer of one (a single) embryo selected from a larger cohort of available embryos.",
+      "letter": "E"
+    },
+    {
+      "term": "Embryo",
+      "definition": "The biological organism resulting from the development of the zygote, until eight completed weeks after fertilization, equivalent to 10 weeks of gestational age.",
+      "letter": "E"
+    },
+    {
+      "term": "Embryo bank",
+      "definition": "Repository of cryopreserved embryos stored for future use.",
+      "letter": "E"
+    },
+    {
+      "term": "Embryo donation (for reproduction)",
+      "definition": "An ART cycle, which consists of the transfer of an embryo to the uterus or Fallopian tube of a female recipient, resulting from gametes that did not originate from the female recipient or from her male partner, if present.",
+      "letter": "E"
+    },
+    {
+      "term": "Embryo fragmentation",
+      "definition": "The process during which one or more blastomeres shed membrane vesicles containing cytoplasm and occasionally whole chromosomes or chromatin.",
+      "letter": "E"
+    },
+    {
+      "term": "Embryo recipient cycle",
+      "definition": "An ART cycle in which a woman's uterus is prepared to receive one or more cleavage stage embryos/blastocysts, resulting from gametes that did not originate from her or from her male partner, if present.",
+      "letter": "E"
+    },
+    {
+      "term": "Embryo transfer (ET)",
+      "definition": "Placement into the uterus of an embryo at any embryonic stage from day 1 to day 7 after IVF or ICSI. Embryos from day 1 to day three can also be transferred into the Fallopian tube.",
+      "letter": "E"
+    },
+    {
+      "term": "Embryo transfer cycle",
+      "definition": "An ART cycle in which one or more fresh or frozen/thawed embryos at cleavage or blastocyst stage are transferred into the uterus or Fallopian tube.",
+      "letter": "E"
+    },
+    {
+      "term": "Emission (semen)",
+      "definition": "Co-ordinated contractions of the vas deferentia, seminal vesicles, and ejaculatory ducts leading to deposition of semen into the urethral meatus prior to ejaculation.",
+      "letter": "E"
+    },
+    {
+      "term": "Endometriosis",
+      "definition": "A disease characterized by the presence of endometrium-like epithelium and stroma outside the endometrium and myometrium. Intrapelvic endometriosis can be located superficially on the peritoneum (peritoneal endometriosis), can extend 5 mm or more beneath the peritoneum (deep endometriosis) or can be present as an ovarian endometriotic cyst (endometrioma).",
+      "letter": "E"
+    },
+    {
+      "term": "Epididymis",
+      "definition": "A convoluted, highly coiled duct that transports the spermatozoa from the testis via the efferent ducts to the vas deferens.",
+      "letter": "E"
+    },
+    {
+      "term": "Erectile dysfunction",
+      "definition": "Inability to have and/or sustain an erection sufficient for intercourse.",
+      "letter": "E"
+    },
+    {
+      "term": "Euploidy",
+      "definition": "The condition in which a cell has chromosomes in an exact multiple of the haploid number; in the human this multiple is normally two. Thus, a normal embryo that is euploid is also diploid.",
+      "letter": "E"
+    },
+    {
+      "term": "Excessive ovarian response",
+      "definition": "An exaggerated response to ovarian stimulation characterized by the presence of more follicles than intended. Generally, more than 20 follicles >12 mm in size and/or more than 20 oocytes collected following ovarian stimulation are considered excessive, but these numbers are adaptable according to ethnic and other variables.",
+      "letter": "E"
+    },
+    {
+      "term": "Expectant fertility management",
+      "definition": "Management of fertility problems including infertility without any specific active clinical or therapeutic interventions other than fertility information and advice, to improve natural fertility, based upon the probability of becoming pregnant.",
+      "letter": "E"
+    },
+    {
+      "term": "Extremely low birth weight",
+      "definition": "Birth weight less than 1000 g.",
+      "letter": "E"
+    },
+    {
+      "term": "Extremely preterm birth",
+      "definition": "A birth that takes place after 22 but before 28 completed weeks of gestational age.",
+      "letter": "E"
+    },
+    {
+      "term": "Fecundability",
+      "definition": "The probability of a pregnancy, during a single menstrual cycle in a woman with adequate exposure to sperm and no contraception, culminating in a live birth. In population-based studies, fecundability is frequently measured as the monthly probability.",
+      "letter": "F"
+    },
+    {
+      "term": "Fecundity",
+      "definition": "Clinically defined as the capacity to have a live birth.",
+      "letter": "F"
+    },
+    {
+      "term": "Female infertility",
+      "definition": "Infertility caused primarily by female factors encompassing: ovulatory disturbances; diminished ovarian reserve; anatomical, endocrine, genetic, functional or immunological abnormalities of the reproductive system; chronic illness; and sexual conditions incompatible with coitus.",
+      "letter": "F"
+    },
+    {
+      "term": "Fertility",
+      "definition": "The capacity to establish a clinical pregnancy.",
+      "letter": "F"
+    },
+    {
+      "term": "Fertility awareness",
+      "definition": "The understanding of reproduction, fecundity, fecundability, and related individual risk factors (e.g. advanced age, sexual health factors such as sexually transmitted infections, and life style factors such as smoking, obesity) and non-individual risk factors (e.g. environmental and work place factors); including the awareness of societal and cultural factors affecting options to meet reproductive family planning, as well as family building needs.",
+      "letter": "F"
+    },
+    {
+      "term": "Fertility care",
+      "definition": "Interventions that include fertility awareness, support and fertility management with an intention to assist individuals and couples to realize their desires associated with reproduction and/or to build a family.",
+      "letter": "F"
+    },
+    {
+      "term": "Fertility preservation",
+      "definition": "Various interventions, procedures and technologies, including cryopreservation of gametes, embryos or ovarian and testicular tissue to preserve reproductive capacity.",
+      "letter": "F"
+    },
+    {
+      "term": "Fertilization",
+      "definition": "A sequence of biological processes initiated by entry of a spermatozoon into a mature oocyte followed by formation of the pronuclei.",
+      "letter": "F"
+    },
+    {
+      "term": "Fetal loss",
+      "definition": "Death of a fetus. It is referred to as early fetal loss when death takes place between 10 and 22 weeks of gestational age; late fetal loss, when death takes place between 22 and 28 weeks of gestational age; and stillbirth when death takes place after 28 weeks gestational age.",
+      "letter": "F"
+    },
+    {
+      "term": "Fetus",
+      "definition": "The stages of development of an organism from eight completed weeks of fertilization (equivalent to 10 weeks of gestational age) until the end of pregnancy",
+      "letter": "F"
+    },
+    {
+      "term": "Freeze-all cycle",
+      "definition": "An ART cycle in which, after oocyte aspiration, all oocytes and/or embryos are cryopreserved and no oocytes and/or embryos are transferred to a woman in that cycle.",
+      "letter": "F"
+    },
+    {
+      "term": "Frozen-thawed embryo transfer (FET) cycle",
+      "definition": "An ART procedure in which cycle monitoring is carried out with the intention of transferring to a woman, frozen/thawed or vitrified/warmed embryo(s)/blastocyst(s). Note: A FET cycle is initiated when specific medication is provided or cycle monitoring is started in the female recipient with the intention to transfer an embryo.",
+      "letter": "F"
+    },
+    {
+      "term": "Frozen-thawed oocyte cycle",
+      "definition": "An ART procedure in which cycle monitoring is carried out with the intention of fertilizing thawed/warmed oocytes and performing an embryo transfer.",
+      "letter": "F"
+    },
+    {
+      "term": "Full-term birth",
+      "definition": "A birth that takes place between 37 and 42 completed weeks of gestational age.",
+      "letter": "F"
+    },
+    {
+      "term": "Gamete intrafallopian transfer (GIFT)",
+      "definition": "An ART procedure in which both gametes (oocytes and spermatozoa) are transferred into a Fallopian tube(s).",
+      "letter": "G"
+    },
+    {
+      "term": "Germinal vesicle (GV)",
+      "definition": "The nucleus in an oocyte at prophase I.",
+      "letter": "G"
+    },
+    {
+      "term": "Gestational age",
+      "definition": "The age of an embryo or fetus calculated by the best obstetric estimate determined by assessments which may include early ultrasound and the date of the last menstrual period and/or perinatal details. In the case of ART, it is calculated by adding two weeks (14 days) to the number of completed weeks since fertilization. Note: For frozen-thawed embryo transfer (FET) cycles, an estimated date of fertilization is computed by subtracting the combined number of days an embryo was in culture pre-cryopreservation and post-thaw/-warm, from the transfer date of the FET cycle.",
+      "letter": "G"
+    },
+    {
+      "term": "Gestational carrier",
+      "definition": "A woman who carries a pregnancy with an agreement that she will give the offspring to the intended parent(s). Gametes can originate from the intended parent(s) and/or a third party (or parties). This replaces the term ‘surrogate.’",
+      "letter": "G"
+    },
+    {
+      "term": "Gestational sac",
+      "definition": "A fluid-filled structure associated with early pregnancy, which may be located inside or, in the case of an ectopic pregnancy, outside the uterus.",
+      "letter": "G"
+    },
+    {
+      "term": "Globozoospermia",
+      "definition": "Describes spermatozoa with a reduced or absent acrosome.",
+      "letter": "G"
+    },
+    {
+      "term": "Haploidy",
+      "definition": "The condition in which a cell has one set of each of the 23 single chromosomes. Mature human gametes are haploid, each having 23 single chromosomes.",
+      "letter": "H"
+    },
+    {
+      "term": "Hatching",
+      "definition": "The process by which an embryo at the blastocyst stage extrudes out of, and ultimately separates from, the zona pellucida.",
+      "letter": "H"
+    },
+    {
+      "term": "Heterotopic pregnancy",
+      "definition": "Concurrent pregnancy involving at least one embryo implanted in the uterine cavity and at least one implanted outside of the uterine cavity.",
+      "letter": "H"
+    },
+    {
+      "term": "High-order multiple births",
+      "definition": "The complete expulsion or extraction from their mother of three or more fetuses, after 22 completed weeks of gestational age, irrespective of whether they are live births or stillbirths.",
+      "letter": "H"
+    },
+    {
+      "term": "High-order multiple gestation",
+      "definition": "A pregnancy with three or more embryos or fetuses.",
+      "letter": "H"
+    },
+    {
+      "term": "Hydrosalpinx",
+      "definition": "A distally occluded, dilated, fluid-filled Fallopian tube.",
+      "letter": "H"
+    },
+    {
+      "term": "Hypergonadotropic hypogonadism",
+      "definition": "Gonadal failure associated with reduced gametogenesis, reduced gonadal steroid production and elevated gonadotropin production.",
+      "letter": "H"
+    },
+    {
+      "term": "Hyperspermia",
+      "definition": "High volume of ejaculate above the upper reference limit. When reporting results, the reference criteria should be specified.",
+      "letter": "H"
+    },
+    {
+      "term": "Hypogonadotropic hypogonadism",
+      "definition": "Gonadal failure associated with reduced gametogenesis and reduced gonadal steroid production due to reduced gonadotropin production or action.",
+      "letter": "H"
+    },
+    {
+      "term": "Hypospermatogenesis",
+      "definition": "Histopathologic description of reduced production of spermatozoa in the testes.",
+      "letter": "H"
+    },
+    {
+      "term": "Hypospermia",
+      "definition": "Low volume of ejaculate below the lower reference limit. When reporting results, the reference criteria should be specified.",
+      "letter": "H"
+    },
+    {
+      "term": "Iatrogenic testicular failure",
+      "definition": "Damage to testicular function after radiation, chemotherapy or hormone treatment; or devascularization as a consequence of hernia surgery.",
+      "letter": "I"
+    },
+    {
+      "term": "Immature oocyte",
+      "definition": "An oocyte at prophase of meiosis I, (i.e. an oocyte at the germinal vesicle (GV)-stage.)",
+      "letter": "I"
+    },
+    {
+      "term": "Implantation",
+      "definition": "The attachment and subsequent penetration by a zona-free blastocyst into the endometrium, but when it relates to an ectopic pregnancy, into tissue outside the uterine cavity. This process starts 5 to 7 days after fertilization of the oocyte usually resulting in the formation of a gestation sac.",
+      "letter": "I"
+    },
+    {
+      "term": "Implantation rate",
+      "definition": "The number of gestational sacs observed divided by the number of embryos transferred (usually expressed as a percentage, %).",
+      "letter": "I"
+    },
+    {
+      "term": "In vitro fertilization (IVF)",
+      "definition": "A sequence of procedures that involves extracorporeal fertilization of gametes. It includes conventional in vitro insemination and ICSI.",
+      "letter": "I"
+    },
+    {
+      "term": "In vitro maturation (IVM)",
+      "definition": "A sequence of laboratory procedures that enable extracorporeal maturation of immature oocytes into fully mature oocytes that are capable of being fertilized with potential to develop into embryos.",
+      "letter": "I"
+    },
+    {
+      "term": "Induced abortion",
+      "definition": "Intentional loss of an intrauterine pregnancy, through intervention by medical, surgical or unspecified means. (See induced embryo/fetal reduction.)",
+      "letter": "I"
+    },
+    {
+      "term": "Induced embryo/fetal reduction",
+      "definition": "An intervention intended to reduce the number of gestational sacs or embryos/fetuses in a multiple gestation.",
+      "letter": "I"
+    },
+    {
+      "term": "Infertility",
+      "definition": "A disease characterized by the failure to establish a clinical pregnancy after 12 months of regular, unprotected sexual intercourse or due to an impairment of a person's capacity to reproduce either as an individual or with his/her partner. Fertility interventions may be initiated in less than 1 year based on medical, sexual and reproductive history, age, physical findings and diagnostic testing. Infertility is a disease, which generates disability as an impairment of function.",
+      "letter": "I"
+    },
+    {
+      "term": "Infertility counseling",
+      "definition": "A professional intervention with the intention to mitigate the physical, emotional and psychosocial consequences of infertility.",
+      "letter": "I"
+    },
+    {
+      "term": "Initiated medically assisted reproduction cycle (iMAR)",
+      "definition": "A cycle in which the woman receives specific medication for ovarian stimulation or in which cycle monitoring is carried out with the intention to treat, irrespective of whether or not insemination is performed, follicular aspiration is attempted in an ovarian stimulation cycle or whether egg(s) or embryo(s) are thawed or transferred in a frozen embryo transfer (FET) cycle.",
+      "letter": "I"
+    },
+    {
+      "term": "Inner cell mass",
+      "definition": "A group of cells attached to the polar trophectoderm consisting of embryonic stem cells, which have the potential to develop into cells and tissues in the human body, except the placenta or amniotic membranes.",
+      "letter": "I"
+    },
+    {
+      "term": "Intended parent(s)",
+      "definition": "A couple or person who seek(s) to reproduce with the assistance of a gestational carrier or traditional gestational carrier.",
+      "letter": "I"
+    },
+    {
+      "term": "Intra-cervical insemination",
+      "definition": "A procedure in which laboratory processed sperm are placed in the cervix to attempt a pregnancy.",
+      "letter": "I"
+    },
+    {
+      "term": "Intracytoplasmic sperm injection (ICSI)",
+      "definition": "A procedure in which a single spermatozoon is injected into the oocyte cytoplasm.",
+      "letter": "I"
+    },
+    {
+      "term": "Intra-uterine insemination",
+      "definition": "A procedure in which laboratory processed sperm are placed in the uterus to attempt a pregnancy.",
+      "letter": "I"
+    },
+    {
+      "term": "Intra-uterine pregnancy",
+      "definition": "A state of reproduction in which an embryo has implanted in the uterus.",
+      "letter": "I"
+    },
+    {
+      "term": "Laparoscopic ovarian drilling",
+      "definition": "A surgical method for inducing ovulation in females with anovulatory or oligo-ovulatory polycystic ovarian syndrome, utilizing either laser or electrosurgery.",
+      "letter": "L"
+    },
+    {
+      "term": "Large for gestational age",
+      "definition": "A birth weight greater than the 90th centile of the sex-specific birth weight for a given gestational age reference. When reporting outcomes, the reference criteria should be specified. If gestational age is unknown, then the birth weight should be registered.",
+      "letter": "L"
+    },
+    {
+      "term": "Leukospermia",
+      "definition": "A high number of white blood cells in semen above the upper reference limit. When reporting results, the reference criteria should be specified.",
+      "letter": "L"
+    },
+    {
+      "term": "Leydig cell",
+      "definition": "Type of testicular cell located in the interstitial space between the seminiferous tubules, that secretes testosterone.",
+      "letter": "L"
+    },
+    {
+      "term": "Live birth",
+      "definition": "The complete expulsion or extraction from a woman of a product of fertilization, after 22 completed weeks of gestational age; which, after such separation, breathes or shows any other evidence of life, such as heart beat, umbilical cord pulsation or definite movement of voluntary muscles, irrespective of whether the umbilical cord has been cut or the placenta is attached. A birth weight of 500 grams or more can be used if gestational age is unknown. Live births refer to the individual newborn; for example, a twin delivery represents two live births.",
+      "letter": "L"
+    },
+    {
+      "term": "Live birth delivery rate",
+      "definition": "The number of deliveries that resulted in at least one live birth, expressed per 100 cycle attempts. In the case of ART/MAR interventions, they can be initiated cycles, insemination, aspiration cycles or embryo transfer cycles. When delivery rates are given, the denominator (initiated, inseminated, aspirated or embryo transfer cycles) must be specified.",
+      "letter": "L"
+    },
+    {
+      "term": "Low birth weight",
+      "definition": "Birth weight less than 2500 g.",
+      "letter": "L"
+    },
+    {
+      "term": "Luteal phase defect",
+      "definition": "A poorly defined abnormality of the endometrium presumably due to abnormally low progesterone secretion or action on the endometrium.",
+      "letter": "L"
+    },
+    {
+      "term": "Luteal phase support",
+      "definition": "Hormonal supplementation in the luteal phase, usually progesterone.",
+      "letter": "L"
+    },
+    {
+      "term": "Major congenital anomaly",
+      "definition": "A congenital anomaly that requires surgical repair of a defect, is a visually evident or life-threatening structural or functional defect, or causes death.",
+      "letter": "M"
+    },
+    {
+      "term": "Male infertility",
+      "definition": "Infertility caused primarily by male factors encompassing: abnormal semen parameters or function; anatomical, endocrine, genetic, functional or immunological abnormalities of the reproductive system; chronic illness; and sexual conditions incompatible with the ability to deposit semen in the vagina.",
+      "letter": "M"
+    },
+    {
+      "term": "Maternal spindle transfer",
+      "definition": "Transfer of the maternal spindle (including maternal chromosomes) from a patient's oocyte into a donated oocyte in which the maternal spindle with chromosomes has been removed.",
+      "letter": "M"
+    },
+    {
+      "term": "Mature oocyte",
+      "definition": "An oocyte at metaphase of meiosis II, exhibiting the first polar body and with the ability to become fertilized.",
+      "letter": "M"
+    },
+    {
+      "term": "Maturing oocyte",
+      "definition": "An oocyte that has progressed from prophase I but has not completed telophase I, thus does not exhibit the first polar body.",
+      "letter": "M"
+    },
+    {
+      "term": "Medically assisted reproduction (MAR)",
+      "definition": "Reproduction brought about through various interventions, procedures, surgeries and technologies to treat different forms of fertility impairment and infertility. These include ovulation induction, ovarian stimulation, ovulation triggering, all ART procedures, uterine transplantation and intrauterine, intracervical and intravaginal insemination with semen of husband/partner or donor.",
+      "letter": "M"
+    },
+    {
+      "term": "Microdissection testicular sperm extraction (MicroTESE)",
+      "definition": "A surgical procedure using an operating microscope to identify seminiferous tubules that may contain sperm to be extracted for IVF and/or ICSI.",
+      "letter": "M"
+    },
+    {
+      "term": "Micromanipulation in ART",
+      "definition": "A micro-operative ART procedure performed on sperm, egg or embryo; the most common ART micromanipulation procedures are ICSI, assisted hatching and gamete or embryo biopsy for PGT.",
+      "letter": "M"
+    },
+    {
+      "term": "Microsurgical epididymal sperm aspiration/extraction (MESA/MESE)",
+      "definition": "A surgical procedure performed with the assistance of an operating microscope to retrieve sperm from the epididymis of men with obstructive azoospermia. In the absence of optical magnification, any surgical procedure to retrieve sperm from the epididymis should also be registered as MESE.",
+      "letter": "M"
+    },
+    {
+      "term": "Mild ovarian stimulation for IVF",
+      "definition": "A protocol in which the ovaries are stimulated with gonadotropins, and/or other pharmacological compounds, with the intention of limiting the number of oocytes following stimulation for IVF.",
+      "letter": "M"
+    },
+    {
+      "term": "Missed spontaneous abortion/missed miscarriage",
+      "definition": "Spontaneous loss of a clinical pregnancy before 22 completed weeks of gestational age, in which the embryo(s) or fetus(es) is/are nonviable and is/are not spontaneously absorbed or expelled from the uterus.",
+      "letter": "M"
+    },
+    {
+      "term": "Modified natural cycle",
+      "definition": "An ART procedure in which one or more oocytes are collected from the ovaries during a spontaneous menstrual cycle. Pharmacological compounds are administered with the sole purpose of blocking the spontaneous LH surge and/or inducing final oocyte maturation.",
+      "letter": "M"
+    },
+    {
+      "term": "Monosomy",
+      "definition": "The absence of one of the two homologous chromosomes in embryos. Autosomal monosomies in embryos are not compatible with life. Embryos with sex chromosome monosomies are rarely compatible with life.",
+      "letter": "M"
+    },
+    {
+      "term": "Morula",
+      "definition": "An embryo formed after completion of compaction, typically 4 days after insemination or ICSI.",
+      "letter": "M"
+    },
+    {
+      "term": "Mosaicism",
+      "definition": "A state in which there is more than one karyotypically distinct cell population arising from a single embryo.",
+      "letter": "M"
+    },
+    {
+      "term": "Multinucleation",
+      "definition": "The presence of more than one nucleus in a cell.",
+      "letter": "M"
+    },
+    {
+      "term": "Multiple birth",
+      "definition": "The complete expulsion or extraction from a woman of more than one fetus, after 22 completed weeks of gestational age, irrespective of whether it is a live birth or stillbirth. Births refer to the individual newborn; for example, a twin delivery represents two births.",
+      "letter": "M"
+    },
+    {
+      "term": "Multiple gestation",
+      "definition": "A pregnancy with more than one embryo or fetus.",
+      "letter": "M"
+    },
+    {
+      "term": "Natural cycle ART",
+      "definition": "An ART procedure in which one or more oocytes are collected from the ovaries during a menstrual cycle without the use of any pharmacological compound.",
+      "letter": "N"
+    },
+    {
+      "term": "Necrozoospermia",
+      "definition": "The description of an ejaculate in which no live spermatozoa can be found.",
+      "letter": "N"
+    },
+    {
+      "term": "Neonatal death/mortality",
+      "definition": "Death of a live born baby within 28 days of birth. This can be sub-divided into a) early, if death occurs in the first 7 days after birth; and b) late, if death occurs between 8 and 28 days after birth.",
+      "letter": "N"
+    },
+    {
+      "term": "Neonatal mortality rate",
+      "definition": "Number of neonatal deaths (up to 28 days) per 1000 live births.",
+      "letter": "N"
+    },
+    {
+      "term": "Neonatal period",
+      "definition": "The period which commences at birth and ends at 28 completed days after birth.",
+      "letter": "N"
+    },
+    {
+      "term": "Non-obstructive azoospermia",
+      "definition": "Absence of spermatozoa in the ejaculate due to lack of production of mature spermatozoa.",
+      "letter": "N"
+    },
+    {
+      "term": "Nuclear maturation",
+      "definition": "The process during which the oocyte resumes meiosis and progresses from prophase I to metaphase II.",
+      "letter": "N"
+    },
+    {
+      "term": "Obstructive azoospermia",
+      "definition": "Absence of spermatozoa in the ejaculate due to occlusion of the ductal system.",
+      "letter": "O"
+    },
+    {
+      "term": "Oligospermia",
+      "definition": "A term for low semen volume now replaced by hypospermia to avoid confusion with oligozoospermia.",
+      "letter": "O"
+    },
+    {
+      "term": "Oligozoospermia",
+      "definition": "Low concentration of spermatozoa in the ejaculate below the lower reference limit. When reporting results, the reference criteria should be specified.",
+      "letter": "O"
+    },
+    {
+      "term": "Oocyte",
+      "definition": "The female gamete (egg).",
+      "letter": "O"
+    },
+    {
+      "term": "Oocyte aspiration",
+      "definition": "Ovarian follicular aspiration performed with the aim of retrieving oocytes.",
+      "letter": "O"
+    },
+    {
+      "term": "Oocyte bank",
+      "definition": "Repository of cryopreserved oocytes stored for future use.",
+      "letter": "O"
+    },
+    {
+      "term": "Oocyte donation",
+      "definition": "The use of oocytes from an egg donor for reproductive purposes or research.",
+      "letter": "O"
+    },
+    {
+      "term": "Oocyte donation cycle",
+      "definition": "An ART cycle in which oocytes are collected from an egg donor for reproductive purposes or research.",
+      "letter": "O"
+    },
+    {
+      "term": "Oocyte cryopreservation",
+      "definition": "The freezing or vitrification of oocytes for future use.",
+      "letter": "O"
+    },
+    {
+      "term": "Oocyte maturation triggering",
+      "definition": "An intervention intended to induce an oocyte in vitro or in vivo to resume meiosis to reach maturity (i.e. to reach metaphase II).",
+      "letter": "O"
+    },
+    {
+      "term": "Oocyte recipient cycle",
+      "definition": "An ART cycle in which a woman receives oocytes from a donor, or her partner if in a same sex relationship, to be used for reproductive purposes.",
+      "letter": "O"
+    },
+    {
+      "term": "Oolemma",
+      "definition": "The cytoplasmic membrane enclosing the oocyte.",
+      "letter": "O"
+    },
+    {
+      "term": "Ooplasm",
+      "definition": "The cytoplasm of the oocyte",
+      "letter": "O"
+    },
+    {
+      "term": "Ovarian hyperstimulation syndrome (OHSS)",
+      "definition": "An exaggerated systemic response to ovarian stimulation characterized by a wide spectrum of clinical and laboratory manifestations. It may be classified as mild, moderate or severe according to the degree of abdominal distention, ovarian enlargement and respiratory, hemodynamic and metabolic complications.",
+      "letter": "O"
+    },
+    {
+      "term": "Ovarian reserve",
+      "definition": "A term generally used to indicate the number and/or quality of oocytes, reflecting the ability to reproduce. Ovarian reserve can be assessed by any of several means. They include: female age; number of antral follicles on ultrasound; anti-Mullerian hormone levels; follicle stimulating hormone and estradiol levels; clomiphene citrate challenge test; response to gonadotropin stimulation, and oocyte and/or embryo assessment during an ART procedure, based on number, morphology or genetic assessment of the oocytes and/or embryos.",
+      "letter": "O"
+    },
+    {
+      "term": "Ovarian stimulation (OS)",
+      "definition": "Pharmacological treatment with the intention of inducing the development of ovarian follicles. It can be used for two purposes: 1) for timed intercourse or insemination; 2) in ART, to obtain multiple oocytes at follicular aspiration.",
+      "letter": "O"
+    },
+    {
+      "term": "Ovarian tissue cryopreservation",
+      "definition": "The process of slow-freezing or vitrification of tissue surgically excised from the ovary with the intention of preserving reproductive capacity.",
+      "letter": "O"
+    },
+    {
+      "term": "Ovarian torsion",
+      "definition": "Partial or complete rotation of the ovarian vascular pedicle that causes obstruction to ovarian blood flow, potentially leading to necrosis of ovarian tissue.",
+      "letter": "O"
+    },
+    {
+      "term": "Ovulation",
+      "definition": "The natural process of expulsion of a mature egg from its ovarian follicle.",
+      "letter": "O"
+    },
+    {
+      "term": "Ovulation induction (OI)",
+      "definition": "Pharmacological treatment of women with anovulation or oligo-ovulation with the intention of inducing normal ovulatory cycles.",
+      "letter": "O"
+    },
+    {
+      "term": "Parthenogenetic activation",
+      "definition": "The process by which an oocyte is activated to undergo development in the absence of fertilization.",
+      "letter": "P"
+    },
+    {
+      "term": "Parthenote",
+      "definition": "The product of an oocyte that has undergone activation in the absence of the paternal genome, with (induced) or without (spontaneous) a purposeful intervention.",
+      "letter": "P"
+    },
+    {
+      "term": "Percutaneous epididymal sperm aspiration (PESA)",
+      "definition": "A surgical procedure in which a needle is introduced percutaneously into the epididymis with the intention of obtaining sperm.",
+      "letter": "P"
+    },
+    {
+      "term": "Perinatal death/mortality",
+      "definition": "Fetal or neonatal death occurring during late pregnancy (at 22 completed weeks of gestational age and later), during childbirth, or up to seven completed days after birth.",
+      "letter": "P"
+    },
+    {
+      "term": "Perinatal mortality rate",
+      "definition": "The number of perinatal deaths per 1000 total births (stillbirths plus live births).",
+      "letter": "P"
+    },
+    {
+      "term": "Period total fertility rate (PTFR)",
+      "definition": "The estimated average number of live born children per woman that would be born to a cohort of women throughout their reproductive years, if the fertility rates by age in a given period remained constant at the current age-specific fertility rate.",
+      "letter": "P"
+    },
+    {
+      "term": "Perivitelline space",
+      "definition": "The space between the cytoplasmic membrane enclosing the oocyte and the innermost layer of the zona pellucida. (This space may contain the first and second polar bodies and extracellular fragments.)",
+      "letter": "P"
+    },
+    {
+      "term": "Pituitary down-regulation",
+      "definition": "A medical or pharmacological method to prevent the release of gonadotropins (FSH, LH) from the pituitary gland.",
+      "letter": "P"
+    },
+    {
+      "term": "Polar bodies",
+      "definition": "The small bodies containing chromosomes segregated from the oocyte by asymmetric division during telophase. The first polar body is extruded at telophase I and normally contains only chromosomes with duplicated chromatids (2c); the second polar body is extruded in response to fertilization or in response to parthenogenetic activation and normally contains chromosomes comprising single chromatids (1c).",
+      "letter": "P"
+    },
+    {
+      "term": "Polycystic ovary syndrome (PCOS)",
+      "definition": "A heterogeneous condition, which requires the presence of two of the following three criteria: (1) Oligo-ovulation or anovulation; (2) Hyperandrogenism (clinical evidence of hirsutism, acne, alopecia and/or biochemical hyperandrogenemia); (3) Polycystic ovaries, as assessed by ultrasound scan with more than 24 total antral follicles (2–9 mm in size) in both ovaries.",
+      "letter": "P"
+    },
+    {
+      "term": "Polycystic ovary (PCO)",
+      "definition": "An ovary with at least 12 follicles measuring 2–9 mm in diameter in at least one ovary (Rotterdam criteria). PCO may be present in women with PCOS, but also in women with normal ovulatory function and normal fertility.",
+      "letter": "P"
+    },
+    {
+      "term": "Polyploidy",
+      "definition": "The condition in which a cell has more than two haploid sets of chromosomes: e.g. a triploid embryo has three sets of chromosomes and a tetraploid embryo has four sets. Polyploidy in a human embryo is not compatible with life.",
+      "letter": "P"
+    },
+    {
+      "term": "Polyspermy",
+      "definition": "The process by which an oocyte is penetrated by more than one spermatozoon.",
+      "letter": "P"
+    },
+    {
+      "term": "Poor ovarian responder (POR) in assisted reproductive technology",
+      "definition": "A woman treated with ovarian stimulation for ART, in which at least two of the following features are present: (1) Advanced maternal age (≥40 years); (2) A previous poor ovarian response (≤3 oocytes with a conventional stimulation protocol aimed at obtaining more than three oocytes); and, (3) An abnormal ovarian reserve test (i.e. antral follicle count 5–7 follicles or anti-Mullerian hormone 0.5–1.1 ng/ml (Bologna criteria); or other reference values obtained from a standardized reference population.)",
+      "letter": "P"
+    },
+    {
+      "term": "Poor ovarian response (POR) to ovarian stimulation",
+      "definition": "A condition in which fewer than four follicles and/or oocytes are developed/obtained following ovarian stimulation with the intention of obtaining more follicles and oocytes.",
+      "letter": "P"
+    },
+    {
+      "term": "Post-implantation embryo",
+      "definition": "An embryo at a stage of development beyond attachment to the endometrium to eight completed weeks after fertilization, which is equivalent to 10 weeks of gestational age.",
+      "letter": "P"
+    },
+    {
+      "term": "Post-term birth",
+      "definition": "A live birth or stillbirth that takes place after 42 completed weeks of gestational age.",
+      "letter": "P"
+    },
+    {
+      "term": "Posthumous reproduction",
+      "definition": "A process utilizing gametes and/or embryos from a deceased person or persons with the intention of producing offspring.",
+      "letter": "P"
+    },
+    {
+      "term": "Pregnancy",
+      "definition": "A state of reproduction beginning with implantation of an embryo in a woman and ending with the complete expulsion and/or extraction of all products of implantation.",
+      "letter": "P"
+    },
+    {
+      "term": "Pregnancy loss",
+      "definition": "The outcome of any pregnancy that does not result in at least one live birth. When reporting pregnancy loss, the estimated gestational age at the end of pregnancy should be recorded.",
+      "letter": "P"
+    },
+    {
+      "term": "Pregnancy of unknown location (PUL)",
+      "definition": "A pregnancy documented by a positive human chorionic gonadotropin (hCG) test without visualization of pregnancy by ultrasound. This condition exists only after circulating hCG concentration is compatible with ultrasound visualization of a gestational sac.",
+      "letter": "P"
+    },
+    {
+      "term": "Pre-implantation embryo",
+      "definition": "An embryo at a stage of development beginning with division of the zygote into two cells and ending just prior to implantation into a uterus.",
+      "letter": "P"
+    },
+    {
+      "term": "Preimplantation genetic testing (PGT)",
+      "definition": "A test performed to analyze the DNA from oocytes (polar bodies) or embryos (cleavage stage or blastocyst) for HLA-typing or for determining genetic abnormalities. These include: PGT for aneuploidies (PGT-A); PGT for monogenic/single gene defects (PGT-M); and PGT for chromosomal structural rearrangements (PGT-SR).",
+      "letter": "P"
+    },
+    {
+      "term": "Preimplantation genetic diagnosis (PGD) and screening (PGS)",
+      "definition": "These terms have now been replaced by preimplantation genetic testing PGT. (See term PGT and its definitions.)",
+      "letter": "P"
+    },
+    {
+      "term": "Premature ejaculation",
+      "definition": "A condition in which semen is released sooner than desired.",
+      "letter": "P"
+    },
+    {
+      "term": "Premature ovarian insufficiency",
+      "definition": "A condition characterized by hypergonadotropic hypogonadism in women younger than age 40 years (also known as premature or primary ovarian failure). It includes women with premature menopause.",
+      "letter": "P"
+    },
+    {
+      "term": "Preterm birth",
+      "definition": "A birth that takes place after 22 weeks and before 37 completed weeks of gestational age.",
+      "letter": "P"
+    },
+    {
+      "term": "Primary childlessness",
+      "definition": "A condition in which a person has never delivered a live child, or has never been a legal or societally recognized parent to a child.",
+      "letter": "P"
+    },
+    {
+      "term": "Primary female infertility",
+      "definition": "A woman who has never been diagnosed with a clinical pregnancy and meets the criteria of being classified as having infertility.",
+      "letter": "P"
+    },
+    {
+      "term": "Primary involuntary childlessness",
+      "definition": "A condition in a person with a child wish, who has never delivered a live child, or has never been a legal or societally-recognized parent to a child. A major cause of primary involuntary childlessness is infertility.",
+      "letter": "P"
+    },
+    {
+      "term": "Primary male infertility",
+      "definition": "A man who has never initiated a clinical pregnancy and meets the criteria of being classified as infertile.",
+      "letter": "P"
+    },
+    {
+      "term": "Pronuclei transfer",
+      "definition": "Transfer of the pronuclei from a patient's zygote to an enucleated donated zygote.",
+      "letter": "P"
+    },
+    {
+      "term": "Pronucleus",
+      "definition": "A round structure in the oocyte surrounded by a membrane containing chromatin. Normally, two pronuclei are seen after fertilization, each containing a haploid set of chromosomes, one set from the oocyte and one from the sperm, before zygote formation.",
+      "letter": "P"
+    },
+    {
+      "term": "Recipient (ART)",
+      "definition": "A person or couple who receives donated eggs, sperm or embryos for the purposes of initiating a pregnancy with the intention of becoming a legally recognized parent.",
+      "letter": "R"
+    },
+    {
+      "term": "Recipient ART cycle",
+      "definition": "An ART cycle in which a woman receives zygote(s) or embryo(s) from donor(s) or a partner.",
+      "letter": "R"
+    },
+    {
+      "term": "Recurrent spontaneous abortion/miscarriage",
+      "definition": "The spontaneous loss of two or more clinical pregnancies prior to 22 completed weeks of gestational age.",
+      "letter": "R"
+    },
+    {
+      "term": "Reproductive surgery",
+      "definition": "Surgical procedures performed to diagnose, conserve, correct and/or improve reproductive function in either men or women. Surgery for contraceptive purposes, such as tubal ligation and vasectomy, are also included within this term.",
+      "letter": "R"
+    },
+    {
+      "term": "Retrograde ejaculation",
+      "definition": "A condition that causes the semen to be forced backward from the ejaculatory ducts into the bladder during ejaculation.",
+      "letter": "R"
+    },
+    {
+      "term": "Salpingectomy",
+      "definition": "The surgical removal of an entire Fallopian tube.",
+      "letter": "S"
+    },
+    {
+      "term": "Salpingitis isthmica nodosa (SIN)",
+      "definition": "A nodular thickening of the proximal Fallopian tube (where the tubes join the uterus), which can distort or occlude the tubes and increase the risk of ectopic pregnancy and infertility.",
+      "letter": "S"
+    },
+    {
+      "term": "Salpingostomy",
+      "definition": "A surgical procedure in which an opening is made in the Fallopian tube either to remove an ectopic pregnancy or open a blocked fluid-filled tube (hydrosalpinx).",
+      "letter": "S"
+    },
+    {
+      "term": "Secondary female infertility",
+      "definition": "A woman unable to establish a clinical pregnancy but who has previously been diagnosed with a clinical pregnancy.",
+      "letter": "S"
+    },
+    {
+      "term": "Secondary involuntary childlessness",
+      "definition": "A condition in a person with a child wish, who has previously delivered a live child, or is or has been a legal or societally-recognized parent to a child. A major cause of secondary involuntary childlessness is infertility.",
+      "letter": "S"
+    },
+    {
+      "term": "Secondary male infertility",
+      "definition": "A man who is unable to initiate a clinical pregnancy, but who had previously initiated a clinical pregnancy.",
+      "letter": "S"
+    },
+    {
+      "term": "Semen analysis",
+      "definition": "A description of the ejaculate to assess function of the male reproductive tract. Characteristic parameters include volume, pH, concentration, motility, vitality, morphology of spermatozoa and presence of other cells.",
+      "letter": "S"
+    },
+    {
+      "term": "Semen liquefaction",
+      "definition": "The process whereby proteolytic enzymes degrade proteins causing seminal plasma to liquefy.",
+      "letter": "S"
+    },
+    {
+      "term": "Semen viscosity",
+      "definition": "The description of the relative fluidity of seminal plasma.",
+      "letter": "S"
+    },
+    {
+      "term": "Semen volume",
+      "definition": "The amount of fluid in an ejaculate.",
+      "letter": "S"
+    },
+    {
+      "term": "Semen/Ejaculate",
+      "definition": "The fluid at ejaculation that contains the cells and secretions originating from the testes and sex accessory glands.",
+      "letter": "S"
+    },
+    {
+      "term": "Seminal plasma",
+      "definition": "The fluids of the ejaculate.",
+      "letter": "S"
+    },
+    {
+      "term": "Sertoli cell",
+      "definition": "The non-germinal cell type in the seminiferous tubule that mediates the actions of testosterone and FSH in the testis, provides nutrients and proteins to the developing spermatogenic cells, creates the blood-testis barrier, and secretes Mullerian-inhibiting hormone.",
+      "letter": "S"
+    },
+    {
+      "term": "Sertoli cell-only syndrome",
+      "definition": "A condition in which only Sertoli cells line the seminiferous tubules with usually a complete absence of germ cells; also referred to as germ cell aplasia. Spermatogenesis in isolated foci can be observed in rare cases.",
+      "letter": "S"
+    },
+    {
+      "term": "Severe ovarian hyperstimulation syndrome (OHSS)",
+      "definition": "A systemic response as a result of ovarian stimulation interventions that is characterized by severe abdominal discomfort and/or other symptoms of ascites, hemoconcentration (Hct > 45) and/or other serious biochemical abnormalities requiring hospitalization for observation and/or for medical intervention (paracentesis, other).",
+      "letter": "S"
+    },
+    {
+      "term": "Single embryo transfer (SET)",
+      "definition": "The transfer of one embryo in an ART procedure. Defined as elective (eSET) when more than one embryo of sufficient quality for transfer is available.",
+      "letter": "S"
+    },
+    {
+      "term": "Slow-freezing",
+      "definition": "A cryopreservation procedure in which the temperature of the cell(s) is lowered in a step-wise fashion, typically using a computer controlled rate, from physiological (or room) temperature to extreme low temperature.",
+      "letter": "S"
+    },
+    {
+      "term": "Small for gestational age",
+      "definition": "A birth weight less than the 10th centile for gestational age. When reporting results the reference criteria should be specified. If gestational age is unknown, the birth weight should be registered.",
+      "letter": "S"
+    },
+    {
+      "term": "Sperm bank",
+      "definition": "Repository of cryopreserved sperm stored for future use.",
+      "letter": "S"
+    },
+    {
+      "term": "Sperm concentration",
+      "definition": "The (measure of the) number of spermatozoa in millions per 1 ml of semen.",
+      "letter": "S"
+    },
+    {
+      "term": "Sperm density",
+      "definition": "A measure of the mass/volume ratio (specific gravity) for spermatozoa.",
+      "letter": "S"
+    },
+    {
+      "term": "Sperm isolation",
+      "definition": "A procedure that involves the separation of sperm through centrifugation and resuspension in culture media. It can be used to remove seminal plasma and infectious agents before IUI and ART procedures. This procedure has been shown to be effective in the removal of HIV. It may also be effective in removing other infectious particles but clinical safety and efficacy have to be established for each particular infection. This term is sometimes referred to as ‘sperm washing’.",
+      "letter": "S"
+    },
+    {
+      "term": "Sperm motility",
+      "definition": "The percentage of moving spermatozoa relative to the total number of spermatozoa.",
+      "letter": "S"
+    },
+    {
+      "term": "Sperm recipient cycle",
+      "definition": "A MAR cycle in which a woman receives spermatozoa from a person who is not her sexually intimate partner. In the case of ART registry data, a sperm recipient cycle would only include data from cycles using ART procedures.",
+      "letter": "S"
+    },
+    {
+      "term": "Sperm vitality",
+      "definition": "The percentage of live spermatozoa relative to the total number of spermatozoa.",
+      "letter": "S"
+    },
+    {
+      "term": "Spermatogenic arrest",
+      "definition": "Failure of germ cells to progress through specific stages of spermatogenesis at onset or during meiosis.",
+      "letter": "S"
+    },
+    {
+      "term": "Spermatozoon",
+      "definition": "The mature male reproductive cell produced in the testis that has the capacity to fertilize an oocyte. A head carries genetic material, a midpiece produces energy for movement, and a long, thin tail propels the sperm.",
+      "letter": "S"
+    },
+    {
+      "term": "Spontaneous abortion/miscarriage",
+      "definition": "The spontaneous loss of an intra-uterine pregnancy prior to 22 completed weeks of gestational age.",
+      "letter": "S"
+    },
+    {
+      "term": "Spontaneous reduction/vanishing sac(s)",
+      "definition": "The spontaneous disappearance of one or more gestational sacs with or without an embryo or fetus in a multiple pregnancy documented by ultrasound.",
+      "letter": "S"
+    },
+    {
+      "term": "Sterility",
+      "definition": "A permanent state of infertility.",
+      "letter": "S"
+    },
+    {
+      "term": "Stillbirth",
+      "definition": "The death of a fetus prior to the complete expulsion or extraction from its mother after 28 completed weeks of gestational age. The death is determined by the fact that, after such separation, the fetus does not breathe or show any other evidence of life, such as heartbeat, umbilical cord pulsation, or definite movement of voluntary muscles. Note: It includes deaths occurring during labor.",
+      "letter": "S"
+    },
+    {
+      "term": "Stillbirth rate",
+      "definition": "The number of stillbirths per 1000 total births (stillbirths plus live births).",
+      "letter": "S"
+    },
+    {
+      "term": "Subfertility",
+      "definition": "A term that should be used interchangeably with infertility.",
+      "letter": "S"
+    },
+    {
+      "term": "Syngamy",
+      "definition": "The process during which the female and male pronuclei fuse.",
+      "letter": "S"
+    },
+    {
+      "term": "Teratozoospermia",
+      "definition": "A reduced percentage of morphologically normal sperm in the ejaculate below the lower reference limits. When reporting results, the reference criteria should be specified.",
+      "letter": "T"
+    },
+    {
+      "term": "Testicular sperm aspiration/extraction (TESA/TESE)",
+      "definition": "A surgical procedure involving one or more testicular biopsies or needle aspirations to obtain sperm for use in IVF and/or ICSI.",
+      "letter": "T"
+    },
+    {
+      "term": "Thawing",
+      "definition": "The process of raising the temperature of slow-frozen cell(s) from the storage temperature to room/physiological temperature.",
+      "letter": "T"
+    },
+    {
+      "term": "Time to pregnancy (TTP)",
+      "definition": "The time taken to establish a pregnancy, measured in months or in numbers of menstrual cycles.",
+      "letter": "T"
+    },
+    {
+      "term": "Time-lapse imaging",
+      "definition": "The photographic recording of microscope image sequences at regular intervals in ART, referring to gametes, zygotes, cleavage-stage embryos or blastocysts.",
+      "letter": "T"
+    },
+    {
+      "term": "Total delivery rate with at least one live birth",
+      "definition": "The total number of deliveries with at least one live birth resulting from one initiated or aspirated ART cycle, including all cycles in which fresh and/or frozen embryos are transferred, including more than one delivery from one initiated or aspirated cycle if that occurs, until all embryos are used. Notes: The delivery of a singleton, twin or other multiple pregnancy is registered as one delivery. In the absence of complete data, the total delivery rate is often estimated.",
+      "letter": "T"
+    },
+    {
+      "term": "Total fertility rate (TFR)",
+      "definition": "The average number of live births per woman. It may be determined in retrospect, observed data (Cohort Total Fertility Rate, CTFR) or as an estimated average number (Period Total Fertility Rate, PTFR).",
+      "letter": "T"
+    },
+    {
+      "term": "Total sperm count",
+      "definition": "The calculated total number of sperm in the ejaculate (semen volume multiplied by the sperm concentration determined from an aliquot of semen).",
+      "letter": "T"
+    },
+    {
+      "term": "Traditional gestational carrier",
+      "definition": "A woman who donates her oocytes and is the gestational carrier for a pregnancy resulting from fertilization of her oocytes either through an ART procedure or insemination. This replaces the term ‘traditional surrogate.’",
+      "letter": "T"
+    },
+    {
+      "term": "Trisomy",
+      "definition": "An abnormal number of chromosome copies in a cell characterized by the presence of three homologous chromosomes rather than the normal two. The majority of human embryos with trisomies are incompatible with life.",
+      "letter": "T"
+    },
+    {
+      "term": "Trophectoderm",
+      "definition": "Cells forming the outer layer of a blastocyst that have the potential to develop into the placenta and amniotic membranes.",
+      "letter": "T"
+    },
+    {
+      "term": "Tubal pathology",
+      "definition": "Tubal abnormality resulting in dysfunction of the Fallopian tube, including partial or total obstruction of one or both tubes (proximally, distally or combined), hydrosalpinx and/or peri-tubal and/or periovarian adhesions affecting the normal ovum pick-up function. It usually occurs after pelvic inflammatory disease or pelvic surgery.",
+      "letter": "T"
+    },
+    {
+      "term": "Unexplained infertility",
+      "definition": "Infertility in couples with apparently normal ovarian function, Fallopian tubes, uterus, cervix and pelvis and with adequate coital frequency; and apparently normal testicular function, genito-urinary anatomy and a normal ejaculate. The potential for this diagnosis is dependent upon the methodologies used and/or those methodologies available.",
+      "letter": "U"
+    },
+    {
+      "term": "Unisomy",
+      "definition": "The condition in a cell resulting from loss of a single chromosome yielding a single copy of that particular chromosome rather than the normal two. The majority of unisomies in human embryos are incompatible with life.",
+      "letter": "U"
+    },
+    {
+      "term": "Vaginal insemination",
+      "definition": "A procedure whereby semen, collected from a non-lubricated condom or similar method, is deposited into the vaginal cavity of a female. An intervention that can be self-administered by a woman attempting pregnancy.",
+      "letter": "V"
+    },
+    {
+      "term": "Varicocele",
+      "definition": "A venous enlargement in the testicular pampiniform plexus.",
+      "letter": "V"
+    },
+    {
+      "term": "Varicocelectomy",
+      "definition": "Procedure to occlude or remove part of the internal spermatic vein in situations in which it has expanded into a varicocele.",
+      "letter": "V"
+    },
+    {
+      "term": "Vasectomy",
+      "definition": "Procedure to occlude the vas deferens. It is usually carried out bilaterally in order to secure sterilization.",
+      "letter": "V"
+    },
+    {
+      "term": "Very low birth weight",
+      "definition": "Birth weight less than 1500 g.",
+      "letter": "V"
+    },
+    {
+      "term": "Viscosity",
+      "definition": "The description of the relative fluidity of the semen.",
+      "letter": "V"
+    },
+    {
+      "term": "Vitrification",
+      "definition": "An ultra-rapid cryopreservation procedure that prevents ice formation within a cell whose aqueous phase is converted to a glass-like solid.",
+      "letter": "V"
+    },
+    {
+      "term": "Voluntary childlessness",
+      "definition": "A condition describing a person who does not have or has not had a child wish and does not have any biologically, legally or societally-recognized children.",
+      "letter": "V"
+    },
+    {
+      "term": "Warming (cells)",
+      "definition": "The process of raising the temperature of a vitrified cell or cells from the storage temperature to room/ physiological temperature.",
+      "letter": "W"
+    },
+    {
+      "term": "Y-chromosome microdeletions",
+      "definition": "Missing segments of the genetic material on the Y-chromosome that are associated with abnormal spermatogenesis.",
+      "letter": "Y"
+    },
+    {
+      "term": "Zona pellucida",
+      "definition": "The glycoprotein coat surrounding the oocyte.",
+      "letter": "Z"
+    },
+    {
+      "term": "Zygote",
+      "definition": "A single cell resulting from fertilization of a mature oocyte by a spermatozoon and before completion of the first mitotic division.",
+      "letter": "Z"
+    },
+    {
+      "term": "ZIFT: Zygote intrafallopian transfer",
+      "definition": "An ART procedure in which one or more zygotes is transferred into the Fallopian tube.",
+      "letter": "Z"
+    },
+    {
+      "term": "ART: Assisted reproductive technology",
+      "definition": "All interventions that include the in vitro handling of both human oocytes and sperm or of embryos for the purpose of reproduction. This includes, but is not limited to, IVF and embryo transfer ET, intracytoplasmic sperm injection ICSI, embryo biopsy, preimplantation genetic testing PGT, assisted hatching, gamete intrafallopian transfer GIFT, zygote intrafallopian transfer, gamete and embryo cryopreservation, semen, oocyte and embryo donation, and gestational carrier cycles. Thus, ART does not, and ART-only registries do not, include assisted insemination using sperm from either a woman’s partner or a sperm donor. (See broader term, medically assisted reproduction, MAR.)",
+      "letter": "A"
+    },
+    {
+      "term": "iMAR: Initiated medically assisted reproduction cycle",
+      "definition": "A cycle in which the woman receives specific medication for ovarian stimulation or in which cycle monitoring is carried out with the intention to treat, irrespective of whether or not insemination is performed, follicular aspiration is attempted in an ovarian stimulation cycle or whether egg(s) or embryo(s) are thawed or transferred in a frozen embryo transfer (FET) cycle.",
+      "letter": "I"
+    }
+  ]
+}
