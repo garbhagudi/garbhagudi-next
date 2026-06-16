@@ -37,7 +37,7 @@ export const useScrollSpy = (sectionIds: string[]) => {
           setActiveTab(visible.target.id.replace('guide-', ''));
         }
       },
-      { rootMargin: '-20% 0px -60% 0px', threshold: [0, 0.1, 0.25] },
+      { rootMargin: '-20% 0px -60% 0px', threshold: [0, 0.1, 0.25] }
     );
 
     sections.forEach((s) => observer.observe(s));

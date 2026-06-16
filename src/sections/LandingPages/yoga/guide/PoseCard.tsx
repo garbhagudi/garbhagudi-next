@@ -24,7 +24,7 @@ const PoseCard = ({ pose, accentColor }: { pose: Pose; accentColor: string }) =>
     {/* colour stripe */}
     <div className='h-1.5 w-full' style={{ backgroundColor: accentColor }} />
     <div className='flex flex-1 flex-col p-4 sm:p-5'>
-      <p className='font-content mb-4 text-xs leading-relaxed text-gray-600 dark:text-gray-300 sm:text-sm'>
+      <p className='mb-4 font-content text-xs leading-relaxed text-gray-600 dark:text-gray-300 sm:text-sm'>
         {pose.description}
       </p>
 
@@ -36,7 +36,10 @@ const PoseCard = ({ pose, accentColor }: { pose: Pose; accentColor: string }) =>
           </p>
           <ul className='space-y-1'>
             {pose.indications.map((item) => (
-              <li key={item} className='flex items-start gap-1 text-xs text-green-800 dark:text-green-200'>
+              <li
+                key={item}
+                className='flex items-start gap-1 text-xs text-green-800 dark:text-green-200'
+              >
                 <span className='mt-0.5 shrink-0 font-bold'>✓</span>
                 <span>{item}</span>
               </li>
@@ -51,7 +54,10 @@ const PoseCard = ({ pose, accentColor }: { pose: Pose; accentColor: string }) =>
           </p>
           <ul className='space-y-1'>
             {pose.contraindications.map((item) => (
-              <li key={item} className='flex items-start gap-1 text-xs text-red-800 dark:text-red-200'>
+              <li
+                key={item}
+                className='flex items-start gap-1 text-xs text-red-800 dark:text-red-200'
+              >
                 <span className='mt-0.5 shrink-0 font-bold'>⚠</span>
                 <span>{item}</span>
               </li>

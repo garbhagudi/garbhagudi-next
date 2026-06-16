@@ -17,7 +17,13 @@ export const SECTIONS: GuideSection[] = [
           'https://upload.wikimedia.org/wikipedia/commons/6/6f/Tadasana_Yoga-Asana_Nina-Mel.jpg',
         description:
           'A foundational standing posture that promotes proper spinal alignment and body awareness. Regular practice strengthens the legs, corrects posture, and cultivates a deep sense of groundedness.',
-        indications: ['Poor posture', 'Flat feet', 'Chronic fatigue', 'Lack of body awareness', 'Anxiety'],
+        indications: [
+          'Poor posture',
+          'Flat feet',
+          'Chronic fatigue',
+          'Lack of body awareness',
+          'Anxiety',
+        ],
         contraindications: ['Headache', 'Insomnia', 'Low blood pressure'],
       },
       {
@@ -50,7 +56,13 @@ export const SECTIONS: GuideSection[] = [
           'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Virabhadrasana_II_-_Warrior_II_Pose.jpg/960px-Virabhadrasana_II_-_Warrior_II_Pose.jpg',
         description:
           'A powerful posture that builds leg strength, opens the chest, and cultivates determination. Improves stamina, instils confidence, and stretches the hip flexors deeply.',
-        indications: ['Weak legs', 'Stiff hips', 'Lack of confidence', 'Frozen shoulder', 'Sciatica'],
+        indications: [
+          'Weak legs',
+          'Stiff hips',
+          'Lack of confidence',
+          'Frozen shoulder',
+          'Sciatica',
+        ],
         contraindications: ['High blood pressure', 'Heart problems', 'Knee injuries'],
       },
       {
@@ -72,7 +84,12 @@ export const SECTIONS: GuideSection[] = [
         description:
           'A full-body rejuvenating semi-inversion that simultaneously strengthens and stretches. Calms the nervous system, reduces fatigue, and lengthens the hamstrings and calves.',
         indications: ['Fatigue', 'Back pain', 'Mild depression', 'Sciatica', 'Headache'],
-        contraindications: ['Carpal tunnel syndrome', 'Late pregnancy', 'Diarrhea', 'Advanced hypertension'],
+        contraindications: [
+          'Carpal tunnel syndrome',
+          'Late pregnancy',
+          'Diarrhea',
+          'Advanced hypertension',
+        ],
       },
       {
         id: 'ashwa-sanchalanasana',
@@ -82,7 +99,13 @@ export const SECTIONS: GuideSection[] = [
           'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/ASHWA_SANCHALANASANA.jpg/960px-ASHWA_SANCHALANASANA.jpg',
         description:
           'A deep hip flexor and groin stretch that prepares the body for backbends and forward folds. Improves balance and stimulates the digestive organs.',
-        indications: ['Tight hip flexors', 'Sciatica', 'Constipation', 'Indigestion', 'Reproductive health'],
+        indications: [
+          'Tight hip flexors',
+          'Sciatica',
+          'Constipation',
+          'Indigestion',
+          'Reproductive health',
+        ],
         contraindications: ['Knee injuries', 'Severe back pain', 'Heart conditions'],
       },
       {
@@ -93,7 +116,13 @@ export const SECTIONS: GuideSection[] = [
           'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Hatha_yoga_child_pose.jpg/960px-Hatha_yoga_child_pose.jpg',
         description:
           'A deeply calming forward fold that decompresses the spine and activates the parasympathetic nervous system. Promotes emotional release and adrenal recovery.',
-        indications: ['Stress', 'Anger management', 'Back pain', 'Digestive problems', 'Adrenal fatigue'],
+        indications: [
+          'Stress',
+          'Anger management',
+          'Back pain',
+          'Digestive problems',
+          'Adrenal fatigue',
+        ],
         contraindications: ['High blood pressure (inversion stage)', 'Knee problems', 'Pregnancy'],
       },
     ],
@@ -124,7 +153,13 @@ export const SECTIONS: GuideSection[] = [
           'https://upload.wikimedia.org/wikipedia/commons/6/66/Paschimotanasana_Yoga-Asana_Nina-Mel.jpg',
         description:
           'A profound forward fold stretching the entire posterior chain. Calms an agitated mind, stimulates the liver and kidneys, and relieves stress and anxiety.',
-        indications: ['Stress', 'Mild depression', 'Digestive disorders', 'Insomnia', 'Menstrual discomfort'],
+        indications: [
+          'Stress',
+          'Mild depression',
+          'Digestive disorders',
+          'Insomnia',
+          'Menstrual discomfort',
+        ],
         contraindications: ['Asthma', 'Diarrhea', 'Acute back injury', 'Pregnancy'],
       },
       {
@@ -155,7 +190,13 @@ export const SECTIONS: GuideSection[] = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Baddha_konasana.jpg',
         description:
           'A hip-opening posture stretching inner thighs and groins. Valued for reproductive health, hormonal regulation, and preparing the body for conception and childbirth.',
-        indications: ['Menstrual discomfort', 'Urinary disorders', 'Flat feet', 'Infertility support', 'Pregnancy fatigue'],
+        indications: [
+          'Menstrual discomfort',
+          'Urinary disorders',
+          'Flat feet',
+          'Infertility support',
+          'Pregnancy fatigue',
+        ],
         contraindications: ['Groin or knee injury (use blanket support under knees)'],
       },
     ],
@@ -176,7 +217,13 @@ export const SECTIONS: GuideSection[] = [
           'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Bhujangasana_Yoga-Asana_Nina-Mel.jpg/960px-Bhujangasana_Yoga-Asana_Nina-Mel.jpg',
         description:
           'A gentle backbend that strengthens spinal musculature and opens the heart. Stimulates abdominal organs, relieves stress, and alleviates menstrual irregularities.',
-        indications: ['Back pain', 'Fatigue', 'Mild depression', 'Asthma', 'Irregular menstruation'],
+        indications: [
+          'Back pain',
+          'Fatigue',
+          'Mild depression',
+          'Asthma',
+          'Irregular menstruation',
+        ],
         contraindications: ['Acute back injury', 'Carpal tunnel syndrome', 'Headache', 'Pregnancy'],
       },
       {
@@ -219,7 +266,13 @@ export const SECTIONS: GuideSection[] = [
           'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Setubandhasana_oblique_view.JPG/960px-Setubandhasana_oblique_view.JPG',
         description:
           'A supported backbend strengthening the posterior chain while opening the chest. Reduces anxiety, activates glutes and hamstrings, and prevents osteoporosis.',
-        indications: ['Backache', 'Osteoporosis prevention', 'Anxiety', 'Fatigue', 'Mild depression'],
+        indications: [
+          'Backache',
+          'Osteoporosis prevention',
+          'Anxiety',
+          'Fatigue',
+          'Mild depression',
+        ],
         contraindications: ['Neck injury (use support)', 'Knee problems'],
       },
       {
@@ -230,7 +283,13 @@ export const SECTIONS: GuideSection[] = [
           'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Waist_Rotating_Pose.jpg/960px-Waist_Rotating_Pose.jpg',
         description:
           'A supine spinal twist detoxifying abdominal organs and releasing lower back tension. Gentler than seated twists due to gravitational assistance.',
-        indications: ['Back stiffness', 'Constipation', 'Digestive disorders', 'Hip tightness', 'Stress'],
+        indications: [
+          'Back stiffness',
+          'Constipation',
+          'Digestive disorders',
+          'Hip tightness',
+          'Stress',
+        ],
         contraindications: ['Pregnancy', 'Spinal disc problems', 'Hip replacement'],
       },
     ],
@@ -251,7 +310,14 @@ export const SECTIONS: GuideSection[] = [
           'https://upload.wikimedia.org/wikipedia/commons/0/03/Yoga_Padmasana_Lotus_Posture.jpg',
         description:
           'A nadi-shodhana technique purifying energy channels and harmonising both brain hemispheres. Reduces cortisol, balances the autonomic nervous system, and improves cardiovascular function.',
-        indications: ['Stress and anxiety', 'Hypertension', 'Insomnia', 'Irregular breathing', 'PCOS / hormonal imbalance', 'Mild depression'],
+        indications: [
+          'Stress and anxiety',
+          'Hypertension',
+          'Insomnia',
+          'Irregular breathing',
+          'PCOS / hormonal imbalance',
+          'Mild depression',
+        ],
         contraindications: ['Nasal congestion or cold', 'Extreme fatigue', 'Fever'],
       },
       {
@@ -261,8 +327,19 @@ export const SECTIONS: GuideSection[] = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/b/b6/Padmasana_feminino.jpg',
         description:
           'A calming resonance technique where humming exhalation generates vibration that directly stimulates the vagus nerve. Rapidly lowers blood pressure and mental agitation.',
-        indications: ['Anxiety and panic', 'Anger management', 'Insomnia', 'Hypertension', 'Migraine', 'Thyroid disorders'],
-        contraindications: ['Ear infection', 'Severe nasal congestion', 'Pregnancy (if uncomfortable)'],
+        indications: [
+          'Anxiety and panic',
+          'Anger management',
+          'Insomnia',
+          'Hypertension',
+          'Migraine',
+          'Thyroid disorders',
+        ],
+        contraindications: [
+          'Ear infection',
+          'Severe nasal congestion',
+          'Pregnancy (if uncomfortable)',
+        ],
       },
     ],
   },
@@ -385,7 +462,8 @@ export const FOOD_GROUPS: NutritionRow[] = [
     sources: 'Lemon, Orange, Amla, Grapefruit, Kiwi, Lime',
     benefits: 'Exceptional Vitamin C, antioxidants, immune modulation',
     indications: 'Low immunity, iron-deficiency anaemia, skin health, inflammation',
-    contraindications: 'Acidity and GERD — avoid on empty stomach; grapefruit interacts with medications',
+    contraindications:
+      'Acidity and GERD — avoid on empty stomach; grapefruit interacts with medications',
   },
   {
     name: 'Hydrating Vegetables',

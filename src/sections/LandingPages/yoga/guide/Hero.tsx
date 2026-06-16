@@ -22,13 +22,13 @@ const Hero = ({ onStart }: { onStart: () => void }) => (
       <span className='inline-block rounded-full bg-gg-100 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-gg-700 shadow-sm dark:bg-gg-900 dark:text-gg-300'>
         International Yoga Day 2025
       </span>
-      <h1 className='font-heading mx-auto mt-5 max-w-2xl text-3xl font-bold leading-tight text-gray-900 dark:text-white sm:text-4xl lg:text-6xl'>
+      <h1 className='mx-auto mt-5 max-w-2xl font-heading text-3xl font-bold leading-tight text-gray-900 dark:text-white sm:text-4xl lg:text-6xl'>
         Yoga for Wellness, Wisdom &amp;{' '}
         <span className='bg-gradient-to-r from-gg-500 to-gg-700 bg-clip-text text-transparent dark:from-gg-300 dark:to-gg-500'>
           World Peace
         </span>
       </h1>
-      <p className='font-content mx-auto mt-5 max-w-2xl text-sm text-gray-600 dark:text-gray-300 sm:text-base lg:text-lg'>
+      <p className='mx-auto mt-5 max-w-2xl font-content text-sm text-gray-600 dark:text-gray-300 sm:text-base lg:text-lg'>
         A curated guide to therapeutic asanas, pranayama, and nutritional essentials — designed to
         support fertility, hormonal balance, and whole-body wellbeing.
       </p>
