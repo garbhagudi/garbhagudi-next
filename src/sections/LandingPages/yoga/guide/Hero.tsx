@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 const STATS = [
   { value: '20+', label: 'Asanas & Pranayama' },
   { value: '5', label: 'Practice Categories' },
@@ -51,12 +49,6 @@ const Hero = ({ onStart }: { onStart: () => void }) => (
       </div>
 
       <div className='mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row'>
-        <Link
-          href='/yoga'
-          className='w-full rounded-lg border-2 border-gg-500 px-6 py-2.5 text-sm font-semibold text-gg-600 transition-colors hover:bg-gg-50 dark:border-gg-400 dark:text-gg-400 sm:w-auto'
-        >
-          ← Back to Yoga Programme
-        </Link>
         <button
           type='button'
           onClick={onStart}
