@@ -1,8 +1,10 @@
+import type { StaticImageData } from 'next/image';
+
 export type Pose = {
   id: string;
   sanskrit: string;
   english: string;
-  image: string;
+  image: string | StaticImageData;
   description: string;
   indications: string[];
   contraindications: string[];

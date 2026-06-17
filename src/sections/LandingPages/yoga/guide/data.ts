@@ -1,4 +1,10 @@
 import type { GuideSection, NutritionRow, Tab } from './types';
+import poseImg1 from 'assets/yoga/IMG_9468.jpg';
+import poseImg2 from 'assets/yoga/IMG_9495.jpg';
+import poseImg3 from 'assets/yoga/IMG_9501.jpg';
+import poseImg4 from 'assets/yoga/IMG_9537.jpg';
+import poseImg5 from 'assets/yoga/IMG_9556.jpg';
+import poseImg6 from 'assets/yoga/IMG_9581.jpg';
 
 export const SECTIONS: GuideSection[] = [
   {
@@ -13,8 +19,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'tadasana',
         sanskrit: 'Tadasana',
         english: 'Mountain Pose',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/6/6f/Tadasana_Yoga-Asana_Nina-Mel.jpg',
+        image: poseImg1,
         description:
           'A foundational standing posture that promotes proper spinal alignment and body awareness. Regular practice strengthens the legs, corrects posture, and cultivates a deep sense of groundedness.',
         indications: [
@@ -30,8 +35,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'vrikshasana',
         sanskrit: 'Vrikshasana',
         english: 'Tree Pose',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/7/72/Vriksasana_Yoga-Asana_Nina-Mel.jpg',
+        image: poseImg2,
         description:
           'A single-leg balancing posture that sharpens concentration and cultivates inner stability. Strengthens the ankles and knees, opens the hips, and develops coordination.',
         indications: ['Poor balance', 'Anxiety', 'Sciatica', 'Hip tightness', 'Flat feet'],
@@ -41,8 +45,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'katichakrasana',
         sanskrit: 'Katichakrasana',
         english: 'Standing Spinal Twist',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Saman_hasta_katichakrasana.jpg/960px-Saman_hasta_katichakrasana.jpg',
+        image: poseImg3,
         description:
           'A gentle rotational movement that releases tension along the spine and massages the abdominal organs. Improves lateral flexibility, aids digestion, and relieves shoulder stiffness.',
         indications: ['Back stiffness', 'Constipation', 'Shoulder tension', 'Sluggish digestion'],
@@ -52,8 +55,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'virabhadrasana',
         sanskrit: 'Virabhadrasana',
         english: 'Warrior Pose',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Virabhadrasana_II_-_Warrior_II_Pose.jpg/960px-Virabhadrasana_II_-_Warrior_II_Pose.jpg',
+        image: poseImg4,
         description:
           'A powerful posture that builds leg strength, opens the chest, and cultivates determination. Improves stamina, instils confidence, and stretches the hip flexors deeply.',
         indications: [
@@ -69,8 +71,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'viparita-virabhadrasana',
         sanskrit: 'Viparita Virabhadrasana',
         english: 'Reverse Warrior',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/5/58/Reverse_warrior_pose_%28white_background%29.jpg',
+        image: poseImg5,
         description:
           'An energising lateral extension that stretches the entire side body and opens the heart. Strengthens the legs while expanding the intercostal muscles and improving breath capacity.',
         indications: ['Side body tightness', 'Respiratory issues', 'Emotional tension', 'Fatigue'],
@@ -80,7 +81,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'adho-mukha-svanasana',
         sanskrit: 'Adho Mukha Svanasana',
         english: 'Downward-Facing Dog',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Adho_mukha_shvanasana.jpg',
+        image: poseImg6,
         description:
           'A full-body rejuvenating semi-inversion that simultaneously strengthens and stretches. Calms the nervous system, reduces fatigue, and lengthens the hamstrings and calves.',
         indications: ['Fatigue', 'Back pain', 'Mild depression', 'Sciatica', 'Headache'],
@@ -95,8 +96,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'ashwa-sanchalanasana',
         sanskrit: 'Ashwa Sanchalanasana',
         english: 'Equestrian Pose',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/ASHWA_SANCHALANASANA.jpg/960px-ASHWA_SANCHALANASANA.jpg',
+        image: poseImg1,
         description:
           'A deep hip flexor and groin stretch that prepares the body for backbends and forward folds. Improves balance and stimulates the digestive organs.',
         indications: [
@@ -112,8 +112,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'shashankasana',
         sanskrit: 'Shashankasana',
         english: 'Hare Pose',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Hatha_yoga_child_pose.jpg/960px-Hatha_yoga_child_pose.jpg',
+        image: poseImg2,
         description:
           'A deeply calming forward fold that decompresses the spine and activates the parasympathetic nervous system. Promotes emotional release and adrenal recovery.',
         indications: [
@@ -139,7 +138,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'dandasana',
         sanskrit: 'Dandasana',
         english: 'Staff Pose',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/5/5d/Dandasana_yoga_posture.jpg',
+        image: poseImg3,
         description:
           'The foundational seated posture that establishes proper spinal alignment. Engages deep core muscles and corrects rounded shoulders for sustained seated practice.',
         indications: ['Poor posture', 'Weak back muscles', 'Fatigue', 'Rounded shoulders'],
@@ -149,8 +148,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'paschimottanasana',
         sanskrit: 'Paschimottanasana',
         english: 'Seated Forward Bend',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/6/66/Paschimotanasana_Yoga-Asana_Nina-Mel.jpg',
+        image: poseImg4,
         description:
           'A profound forward fold stretching the entire posterior chain. Calms an agitated mind, stimulates the liver and kidneys, and relieves stress and anxiety.',
         indications: [
@@ -166,7 +164,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'purvottanasana',
         sanskrit: 'Purvottanasana',
         english: 'Upward Plank Pose',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/5/57/Purvottanasana.jpg',
+        image: poseImg5,
         description:
           'A heart-opening counter-posture to forward folds that builds arm, wrist, and leg strength. Stretches the chest and shoulders, counteracting prolonged sitting.',
         indications: ['Fatigue', 'Mild depression', 'Weak arms', 'Shoulder stiffness'],
@@ -176,8 +174,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'vakrasana',
         sanskrit: 'Vakrasana',
         english: 'Twisted Seated Pose',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Ardha_Matsyendrasana_-_Half_Lord_of_the_Fishes_Pose.jpg/960px-Ardha_Matsyendrasana_-_Half_Lord_of_the_Fishes_Pose.jpg',
+        image: poseImg6,
         description:
           'A gentle seated spinal twist that massages abdominal organs and improves spinal rotation. Stimulates digestion and is traditionally used for diabetes management.',
         indications: ['Constipation', 'Digestive issues', 'Diabetes management', 'Back stiffness'],
@@ -187,7 +184,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'baddha-konasana',
         sanskrit: 'Baddha Konasana',
         english: 'Butterfly Pose',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Baddha_konasana.jpg',
+        image: poseImg1,
         description:
           'A hip-opening posture stretching inner thighs and groins. Valued for reproductive health, hormonal regulation, and preparing the body for conception and childbirth.',
         indications: [
@@ -213,8 +210,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'bhujangasana',
         sanskrit: 'Bhujangasana',
         english: 'Cobra Pose',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Bhujangasana_Yoga-Asana_Nina-Mel.jpg/960px-Bhujangasana_Yoga-Asana_Nina-Mel.jpg',
+        image: poseImg2,
         description:
           'A gentle backbend that strengthens spinal musculature and opens the heart. Stimulates abdominal organs, relieves stress, and alleviates menstrual irregularities.',
         indications: [
@@ -230,8 +226,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'makarasana',
         sanskrit: 'Makarasana',
         english: 'Crocodile Pose',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Crocodile_pose.JPG/960px-Crocodile_pose.JPG',
+        image: poseImg3,
         description:
           'A deeply restorative prone posture that allows the spine to fully decompress. Especially effective for chronic back conditions and hypertension.',
         indications: ['Back pain', 'Sciatica', 'Slip disc', 'Hypertension', 'Chronic fatigue'],
@@ -251,8 +246,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'pavanamuktasana',
         sanskrit: 'Pavanamuktasana',
         english: 'Wind-Relieving Pose',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/A_style_of_pavanamuktasana_1.JPG/960px-A_style_of_pavanamuktasana_1.JPG',
+        image: poseImg4,
         description:
           'A gentle abdominal compression releasing trapped intestinal gas and stimulating peristalsis. Also stretches the lower back and sacrum.',
         indications: ['Flatulence', 'Constipation', 'Acidity', 'Lower back pain', 'Bloating'],
@@ -262,8 +256,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'setu-bandhasana',
         sanskrit: 'Setu Bandhasana',
         english: 'Bridge Pose',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Setubandhasana_oblique_view.JPG/960px-Setubandhasana_oblique_view.JPG',
+        image: poseImg5,
         description:
           'A supported backbend strengthening the posterior chain while opening the chest. Reduces anxiety, activates glutes and hamstrings, and prevents osteoporosis.',
         indications: [
@@ -279,8 +272,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'jathara-parivartanasana',
         sanskrit: 'Jathara Parivartanasana',
         english: 'Abdominal Twist',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Waist_Rotating_Pose.jpg/960px-Waist_Rotating_Pose.jpg',
+        image: poseImg6,
         description:
           'A supine spinal twist detoxifying abdominal organs and releasing lower back tension. Gentler than seated twists due to gravitational assistance.',
         indications: [
@@ -306,8 +298,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'anuloma-viloma',
         sanskrit: 'Anuloma Viloma',
         english: 'Alternate Nostril Breathing',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/0/03/Yoga_Padmasana_Lotus_Posture.jpg',
+        image: poseImg1,
         description:
           'A nadi-shodhana technique purifying energy channels and harmonising both brain hemispheres. Reduces cortisol, balances the autonomic nervous system, and improves cardiovascular function.',
         indications: [
@@ -324,7 +315,7 @@ export const SECTIONS: GuideSection[] = [
         id: 'bhramari',
         sanskrit: 'Bhramari Pranayama',
         english: 'Humming Bee Breath',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/b/b6/Padmasana_feminino.jpg',
+        image: poseImg2,
         description:
           'A calming resonance technique where humming exhalation generates vibration that directly stimulates the vagus nerve. Rapidly lowers blood pressure and mental agitation.',
         indications: [
