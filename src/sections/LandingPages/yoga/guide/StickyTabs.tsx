@@ -8,7 +8,7 @@ type StickyTabsProps = {
 
 const StickyTabs = ({ tabs, activeTab, onSelect }: StickyTabsProps) => (
   <nav
-    className='sticky top-36 z-40 border-b border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900 sm:top-24'
+    className='sticky top-20 z-40 border-b border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900'
     aria-label='Guide sections'
   >
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>

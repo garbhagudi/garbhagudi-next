@@ -1,9 +1,3 @@
-const STATS = [
-  { value: '20+', label: 'Asanas & Pranayama' },
-  { value: '5', label: 'Practice Categories' },
-  { value: '17', label: 'Vitamins, Minerals & Foods' },
-];
-
 const Hero = ({ onStart }: { onStart: () => void }) => (
   <div className='relative overflow-hidden bg-gradient-to-br from-gg-50 via-white to-gg-50 px-4 py-14 text-center dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 sm:py-20'>
     {/* decorative blobs */}
@@ -27,23 +21,6 @@ const Hero = ({ onStart }: { onStart: () => void }) => (
         A curated guide to therapeutic asanas, pranayama, and nutritional essentials designed for a
         healthy living.
       </p>
-
-      {/* stat chips */}
-      <div className='mt-7 flex flex-wrap items-center justify-center gap-2.5 sm:gap-4'>
-        {STATS.map((stat) => (
-          <div
-            key={stat.label}
-            className='rounded-xl border border-gg-100 bg-white/70 px-4 py-2 backdrop-blur dark:border-gray-700 dark:bg-gray-800/70'
-          >
-            <p className='font-heading text-lg font-bold text-gg-600 dark:text-gg-300 sm:text-xl'>
-              {stat.value}
-            </p>
-            <p className='font-content text-[11px] text-gray-500 dark:text-gray-400 sm:text-xs'>
-              {stat.label}
-            </p>
-          </div>
-        ))}
-      </div>
 
       <div className='mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row'>
         <button
