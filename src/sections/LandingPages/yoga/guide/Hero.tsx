@@ -24,7 +24,8 @@ const Hero = ({ onStart }: { onStart: () => void }) => (
         YOGA FOR HEALTHY AGEING
       </h1>
       <p className='mx-auto mt-5 max-w-2xl font-content text-sm text-gray-600 dark:text-gray-300 sm:text-base lg:text-lg'>
-        A curated guide to therapeutic asanas, pranayama, and nutritional essentials designed for a healthy living.
+        A curated guide to therapeutic asanas, pranayama, and nutritional essentials designed for a
+        healthy living.
       </p>
 
       {/* stat chips */}
