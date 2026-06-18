@@ -15,7 +15,10 @@ const Hero = ({ onStart }: { onStart: () => void }) => (
         International Yoga Day 2026
       </span>
       <h1 className='mx-auto mt-5 max-w-2xl font-heading text-3xl font-bold leading-tight text-gray-900 dark:text-white sm:text-4xl lg:text-6xl'>
-        YOGA FOR HEALTHY AGEING
+        YOGA FOR HEALTHY {' '}
+        <span className='bg-gradient-to-r from-gg-500 to-gg-700 bg-clip-text text-transparent dark:from-gg-300 dark:to-gg-500'>
+          AGEING
+        </span>
       </h1>
       <p className='mx-auto mt-5 max-w-2xl font-content text-sm text-gray-600 dark:text-gray-300 sm:text-base lg:text-lg'>
         A curated guide to therapeutic asanas, pranayama, and nutritional essentials designed for a
