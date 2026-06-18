@@ -47,7 +47,10 @@ function MyApp({ Component, pageProps }) {
     // setIsReady(true);
   }, []);
 
-  const showSalesIQ = !(router.pathname === '/contact/enquiry' && isMobile);
+  const hideSalesIQPaths = ['/yoga/guide'];
+  const showSalesIQ =
+    !(router.pathname === '/contact/enquiry' && isMobile) &&
+    !hideSalesIQPaths.includes(router.pathname);
 
   // useEffect(() => {
   //   TagManager.initialize({ gtmId: 'GTM-5T77DVZ' });

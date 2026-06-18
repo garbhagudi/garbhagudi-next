@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import type { Pose } from './types';
 
-const PoseCard = ({ pose, accentColor }: { pose: Pose; accentColor: string }) => (
+const PoseCard = ({ pose }: { pose: Pose }) => (
   <div className='group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800'>
-    {/* image with name overlay */}
+    {/* image */}
     <div className='relative aspect-[4/3] w-full overflow-hidden bg-gray-100 dark:bg-gray-700'>
       <Image
         src={pose.image}
@@ -13,17 +13,14 @@ const PoseCard = ({ pose, accentColor }: { pose: Pose; accentColor: string }) =>
         className='object-cover transition-transform duration-500 group-hover:scale-110'
         loading='lazy'
       />
-      <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent' />
-      <div className='absolute inset-x-0 bottom-0 p-4'>
-        <h3 className='font-heading text-lg font-bold leading-tight text-white drop-shadow-sm sm:text-xl'>
-          {pose.sanskrit}
-        </h3>
-        <p className='font-content text-xs font-medium text-white/90 sm:text-sm'>{pose.english}</p>
-      </div>
     </div>
-    {/* colour stripe */}
-    <div className='h-1.5 w-full' style={{ backgroundColor: accentColor }} />
     <div className='flex flex-1 flex-col p-4 sm:p-5'>
+      <h3 className='font-heading text-lg font-bold leading-tight text-gray-900 dark:text-white sm:text-xl'>
+        {pose.sanskrit}
+      </h3>
+      <p className='mb-3 font-content text-xs font-medium text-gray-500 dark:text-gray-400 sm:text-sm'>
+        {pose.english}
+      </p>
       <p className='mb-4 font-content text-xs leading-relaxed text-gray-600 dark:text-gray-300 sm:text-sm'>
         {pose.description}
       </p>

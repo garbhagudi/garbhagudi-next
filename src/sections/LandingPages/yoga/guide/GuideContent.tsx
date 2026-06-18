@@ -32,7 +32,7 @@ const GuideContent = () => {
               {/* Cards grid */}
               <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-3'>
                 {section.poses.map((pose) => (
-                  <PoseCard key={pose.id} pose={pose} accentColor={section.accentColor} />
+                  <PoseCard key={pose.id} pose={pose} />
                 ))}
               </div>
             </section>
