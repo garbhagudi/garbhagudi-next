@@ -36,6 +36,7 @@ function MyApp({ Component, pageProps }) {
   const iuiTreatmentPage = router.pathname === '/treatments/iui-treatment-in-bangalore';
   // const ivfHomePage = router.pathname === '/ivf/home';
   const isParipoornaPage = router.pathname === '/features/paripoorna';
+  const isYogaGuidePage = router.pathname === '/yoga/guide';
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
@@ -47,7 +48,10 @@ function MyApp({ Component, pageProps }) {
     // setIsReady(true);
   }, []);
 
-  const showSalesIQ = !(router.pathname === '/contact/enquiry' && isMobile);
+  const hideSalesIQPaths = ['/yoga/guide'];
+  const showSalesIQ =
+    !(router.pathname === '/contact/enquiry' && isMobile) &&
+    !hideSalesIQPaths.includes(router.pathname);
 
   // useEffect(() => {
   //   TagManager.initialize({ gtmId: 'GTM-5T77DVZ' });
@@ -96,7 +100,7 @@ function MyApp({ Component, pageProps }) {
         <link rel='preconnect' href='https://salesiq.zohopublic.com' crossOrigin='anonymous' />
         <link rel='preconnect' href='https://media.graphassets.com' />
       </Head>
-      {!iuiTreatmentPage && <FloatPhone presentation={true} />}
+      {!iuiTreatmentPage && !isYogaGuidePage && <FloatPhone presentation={true} />}
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />
@@ -110,7 +114,7 @@ function MyApp({ Component, pageProps }) {
         {shouldDisplay && showSalesIQ && <Salesiq />}
       </ThemeProvider>
       <SpeedInsights />
-      {!isParipoornaPage && !iuiTreatmentPage && <FloatRequestCallBack />}
+      {!isParipoornaPage && !iuiTreatmentPage && !isYogaGuidePage && <FloatRequestCallBack />}
       {/* {isReady && !iuiTreatmentPage && !ivfHomePage && <FloatWhatsApp />} */}
     </RootLayout>
   );
