@@ -17,7 +17,7 @@ const YogaGuidePage = () => {
         />
         <meta
           property='og:title'
-          content='Yoga Guide — Asanas, Pranayama &amp; Nutrition | GarbhaGudi IVF Centre'
+          content='Yoga Guide Asanas, Pranayama &amp; Nutrition | GarbhaGudi IVF Centre'
         />
         <meta
           property='og:description'
