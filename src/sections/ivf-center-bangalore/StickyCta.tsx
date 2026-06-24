@@ -13,7 +13,11 @@
 
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import { HiOutlineCalendar } from 'react-icons/hi';
-import { PHONE_DISPLAY, PHONE_DIGITS, WA_MESSAGE_DEFAULT } from 'sections/ivf-center-bangalore/constants';
+import {
+  PHONE_DISPLAY,
+  PHONE_DIGITS,
+  WA_MESSAGE_DEFAULT,
+} from 'sections/ivf-center-bangalore/constants';
 
 export interface StickyCtaProps {
   /** Display + tel number, e.g. "+91 89518 13344" */

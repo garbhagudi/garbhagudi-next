@@ -51,7 +51,10 @@ const Content = () => {
       </section>
 
       {/* Centre / hospital SEO content */}
-      <section className='bg-gradient-to-b from-white to-gg-50/40' aria-labelledby='why-centre-heading'>
+      <section
+        className='bg-gradient-to-b from-white to-gg-50/40'
+        aria-labelledby='why-centre-heading'
+      >
         <div className='mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16'>
           <h2
             id='why-centre-heading'

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { PHONE_DISPLAY, PHONE_TEL } from 'sections/ivf-center-bangalore/constants';
 
 /* Compact, transparent footer for the IVF-Centre landing page — supports the
@@ -14,20 +15,20 @@ const Footer = () => {
           </a>
         </p>
         <div className='mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-content text-xs text-gray-500'>
-          <a href='/legal/privacy-policy' className='hover:text-gg-600'>
+          <Link href='/legal/privacy-policy' className='hover:text-gg-600'>
             Privacy Policy
-          </a>
-          <a href='/legal/terms-and-conditions' className='hover:text-gg-600'>
+          </Link>
+          <Link href='/legal/terms-and-conditions' className='hover:text-gg-600'>
             Terms &amp; Conditions
-          </a>
-          <a href='/contact' className='hover:text-gg-600'>
+          </Link>
+          <Link href='/contact' className='hover:text-gg-600'>
             Contact
-          </a>
+          </Link>
         </div>
         <p className='mx-auto mt-4 max-w-2xl font-content text-[11px] leading-relaxed text-gray-400'>
-          Treatment outcomes vary from person to person and depend on individual medical
-          conditions. Information on this page is for general awareness and is not a substitute
-          for professional medical advice.
+          Treatment outcomes vary from person to person and depend on individual medical conditions.
+          Information on this page is for general awareness and is not a substitute for professional
+          medical advice.
         </p>
       </div>
     </footer>
