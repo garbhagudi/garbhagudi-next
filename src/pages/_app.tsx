@@ -31,12 +31,14 @@ function MyApp({ Component, pageProps }) {
     '/lp/itwmedia/enquiry',
     '/lp/egg-freezing',
     '/treatments/iui-treatment-in-bangalore',
+    '/ivf-center-bangalore',
   ];
 
   const iuiTreatmentPage = router.pathname === '/treatments/iui-treatment-in-bangalore';
   // const ivfHomePage = router.pathname === '/ivf/home';
   const isParipoornaPage = router.pathname === '/features/paripoorna';
   const isYogaGuidePage = router.pathname === '/yoga/guide';
+  const isIvfCentreLp = router.pathname === '/ivf-center-bangalore';
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
@@ -100,7 +102,7 @@ function MyApp({ Component, pageProps }) {
         <link rel='preconnect' href='https://salesiq.zohopublic.com' crossOrigin='anonymous' />
         <link rel='preconnect' href='https://media.graphassets.com' />
       </Head>
-      {!iuiTreatmentPage && !isYogaGuidePage && <FloatPhone presentation={true} />}
+      {!iuiTreatmentPage && !isYogaGuidePage && !isIvfCentreLp && <FloatPhone presentation={true} />}
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />
@@ -108,13 +110,15 @@ function MyApp({ Component, pageProps }) {
           <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
             {shouldDisplay && <Nav />}
             <Component {...pageProps} />
-            {!iuiTreatmentPage && <Footer />}
+            {!iuiTreatmentPage && !isIvfCentreLp && <Footer />}
           </div>
         )}
         {shouldDisplay && showSalesIQ && <Salesiq />}
       </ThemeProvider>
       <SpeedInsights />
-      {!isParipoornaPage && !iuiTreatmentPage && !isYogaGuidePage && <FloatRequestCallBack />}
+      {!isParipoornaPage && !iuiTreatmentPage && !isYogaGuidePage && !isIvfCentreLp && (
+        <FloatRequestCallBack />
+      )}
       {/* {isReady && !iuiTreatmentPage && !ivfHomePage && <FloatWhatsApp />} */}
     </RootLayout>
   );

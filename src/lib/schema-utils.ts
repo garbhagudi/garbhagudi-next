@@ -59,6 +59,38 @@ export function generateFAQSchema(faqs: FAQItem[]): string {
 }
 
 /**
+ * Generates MedicalClinic schema (JSON-LD) for SEO
+ * @param input Clinic details
+ * @returns JSON-LD string for MedicalClinic schema
+ */
+export interface MedicalClinicSchemaInput {
+  name: string;
+  description: string;
+  url: string;
+  telephone: string;
+  medicalSpecialty?: string;
+  /** City name, e.g. "Bangalore" */
+  areaServed?: string;
+  image?: string;
+}
+
+export function generateMedicalClinicSchema(input: MedicalClinicSchemaInput): string {
+  const medicalClinic = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalClinic',
+    name: input.name,
+    description: input.description,
+    url: input.url,
+    ...(input.medicalSpecialty ? { medicalSpecialty: input.medicalSpecialty } : {}),
+    ...(input.areaServed ? { areaServed: { '@type': 'City', name: input.areaServed } } : {}),
+    telephone: input.telephone,
+    ...(input.image ? { image: input.image } : {}),
+  };
+
+  return JSON.stringify(medicalClinic, null, 2);
+}
+
+/**
  * Helper function to escape JSON strings properly
  */
 export function escapeJsonString(str: string): string {
