@@ -31,12 +31,15 @@ function MyApp({ Component, pageProps }) {
     '/lp/itwmedia/enquiry',
     '/lp/egg-freezing',
     '/treatments/iui-treatment-in-bangalore',
+    '/bangladesh',
   ];
 
   const iuiTreatmentPage = router.pathname === '/treatments/iui-treatment-in-bangalore';
   // const ivfHomePage = router.pathname === '/ivf/home';
   const isParipoornaPage = router.pathname === '/features/paripoorna';
   const isYogaGuidePage = router.pathname === '/yoga/guide';
+  // Standalone landing page — renders its own nav/footer, so suppress the global Footer.
+  const isBangladeshPage = router.pathname === '/bangladesh';
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
@@ -108,7 +111,7 @@ function MyApp({ Component, pageProps }) {
           <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
             {shouldDisplay && <Nav />}
             <Component {...pageProps} />
-            {!iuiTreatmentPage && <Footer />}
+            {!iuiTreatmentPage && !isBangladeshPage && <Footer />}
           </div>
         )}
         {shouldDisplay && showSalesIQ && <Salesiq />}
