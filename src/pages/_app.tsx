@@ -101,9 +101,12 @@ function MyApp({ Component, pageProps }) {
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
         <link rel='preconnect' href='https://salesiq.zohopublic.com' crossOrigin='anonymous' />
-        <link rel='preconnect' href='https://media.graphassets.com' />
+        {/* graphassets hosts CMS images; /bangladesh has none, so skip the idle handshake */}
+        {!isBangladeshPage && <link rel='preconnect' href='https://media.graphassets.com' />}
       </Head>
-      {!iuiTreatmentPage && !isYogaGuidePage && <FloatPhone presentation={true} />}
+      {!iuiTreatmentPage && !isYogaGuidePage && !isBangladeshPage && (
+        <FloatPhone presentation={true} />
+      )}
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />
@@ -117,7 +120,9 @@ function MyApp({ Component, pageProps }) {
         {shouldDisplay && showSalesIQ && <Salesiq />}
       </ThemeProvider>
       <SpeedInsights />
-      {!isParipoornaPage && !iuiTreatmentPage && !isYogaGuidePage && <FloatRequestCallBack />}
+      {!isParipoornaPage && !iuiTreatmentPage && !isYogaGuidePage && !isBangladeshPage && (
+        <FloatRequestCallBack />
+      )}
       {/* {isReady && !iuiTreatmentPage && !ivfHomePage && <FloatWhatsApp />} */}
     </RootLayout>
   );
