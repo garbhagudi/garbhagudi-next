@@ -8,7 +8,7 @@ const Hero = () => {
         <div className='text-white/85 mb-7 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-[0.78rem] font-medium uppercase tracking-[0.06em]'>
           🇧🇩 For Patients from Bangladesh
         </div>
-        <h1 className='mb-[22px] font-[family-name:var(--font-playfair)] text-[clamp(2.6rem,4.5vw,4rem)] font-bold leading-[1.14] text-white'>
+        <h1 className='mb-[22px]  text-[clamp(2.6rem,4.5vw,4rem)] font-bold leading-[1.14] text-white'>
           Parenthood is <span className='not-italic text-[#FFD54F]'>Possible.</span> Let Us Prove
           It.
         </h1>
@@ -36,14 +36,14 @@ const Hero = () => {
           <div className='mx-auto mb-3.5 flex h-20 w-20 items-center justify-center rounded-full border-[3px] border-white/20 bg-[radial-gradient(circle_at_45%_50%,#C62828_60%,transparent_60%)] text-[3rem]'>
             🇧🇩
           </div>
-          <div className='text-center font-[family-name:var(--font-playfair)] text-[2rem] font-bold text-white'>
+          <div className='text-center  text-[2rem] font-bold text-white'>
             Bangladesh
           </div>
           <div className='mb-7 text-center text-[1.2rem] text-white/50'>বাংলাদেশ</div>
           <div className='grid grid-cols-2 gap-3.5'>
             {heroKpis.map((kpi) => (
               <div key={kpi.lbl} className='rounded-xl bg-white/10 p-4 text-center'>
-                <div className='font-[family-name:var(--font-playfair)] text-[1.8rem] font-bold text-[#FFD54F]'>
+                <div className=' text-[1.8rem] font-bold text-[#FFD54F]'>
                   {kpi.val}
                 </div>
                 <div className='mt-0.5 text-[0.7rem] uppercase tracking-[0.05em] text-white/60'>

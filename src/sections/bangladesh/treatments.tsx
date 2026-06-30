@@ -6,7 +6,7 @@ const Treatments = () => {
       <span className='mb-3 inline-block text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-[#2E7D32]'>
         Treatments
       </span>
-      <h2 className='mb-3.5 font-[family-name:var(--font-playfair)] text-[clamp(1.9rem,3vw,2.8rem)] font-semibold leading-[1.2] text-[#1A2332]'>
+      <h2 className='mb-3.5  text-[clamp(1.9rem,3vw,2.8rem)] font-semibold leading-[1.2] text-[#1A2332]'>
         Full-Spectrum <span className='not-italic text-[#1B5E20]'>Fertility Care</span>
       </h2>
       <p className='max-w-[580px] text-[0.98rem] leading-[1.75] text-[#637082]'>

@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { Playfair_Display, Inter } from 'next/font/google';
 import { generateFAQSchema, generateBreadcrumbSchema } from 'lib/schema-utils';
 import { faqs } from 'sections/bangladesh/data';
 import Nav from 'sections/bangladesh/nav';
@@ -15,20 +14,6 @@ import Faq from 'sections/bangladesh/faq';
 import Cta from 'sections/bangladesh/cta';
 import Footer from 'sections/bangladesh/footer';
 
-// Self-hosted via next/font — no render-blocking external Google Fonts request.
-// Loaded once here; the CSS variables inherit into every nested section.
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-playfair',
-  display: 'swap',
-});
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  variable: '--font-inter',
-  display: 'swap',
-});
 
 const Bangladesh = () => {
   const faqSchema = generateFAQSchema(faqs.map((f) => ({ question: f.q, answer: f.a })));
@@ -45,7 +30,7 @@ const Bangladesh = () => {
 
   return (
     <div
-      className={`${playfair.variable} ${inter.variable} scroll-smooth bg-white font-[family-name:var(--font-inter)] leading-[1.6] text-[#1A2332]`}
+      className="scroll-smooth bg-white font-[family-name:var(--font-inter)] leading-[1.6] text-[#1A2332]"
     >
       <Head>
         <title>{title}</title>

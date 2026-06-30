@@ -8,7 +8,7 @@ const WhyIndia = () => {
           <span className='mb-3 inline-block text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-[#2E7D32]'>
             Why Choose India
           </span>
-          <h2 className='mb-3.5 font-[family-name:var(--font-playfair)] text-[clamp(1.9rem,3vw,2.8rem)] font-semibold leading-[1.2] text-[#1A2332]'>
+          <h2 className='mb-3.5  text-[clamp(1.9rem,3vw,2.8rem)] font-semibold leading-[1.2] text-[#1A2332]'>
             World-Class IVF,{' '}
             <span className='not-italic text-[#1B5E20]'>Closer Than You Think</span>
           </h2>
@@ -34,7 +34,7 @@ const WhyIndia = () => {
         </div>
         <div>
           <div className='rounded-[20px] bg-[#1A2332] p-9'>
-            <h3 className='mb-6 font-[family-name:var(--font-playfair)] text-[1.5rem] text-white'>
+            <h3 className='mb-6  text-[1.5rem] text-white'>
               Cost Comparison: IVF Treatment
             </h3>
             <table className='w-full border-collapse'>
@@ -44,7 +44,7 @@ const WhyIndia = () => {
                     <td className='border-b border-white/[0.07] py-3 text-[0.875rem] text-white/[0.68]'>
                       {row.country}
                     </td>
-                    <td className='border-b border-white/[0.07] py-3 text-right font-[family-name:var(--font-playfair)] text-[1.2rem] font-semibold text-white'>
+                    <td className='border-b border-white/[0.07] py-3 text-right  text-[1.2rem] font-semibold text-white'>
                       {row.price}
                     </td>
                   </tr>
@@ -52,7 +52,7 @@ const WhyIndia = () => {
                 <tr>
                   <td className='py-3 text-[0.875rem] text-white/[0.68]'>🇮🇳 GarbhaGudi, India</td>
                   <td className='py-3 text-right'>
-                    <span className='font-[family-name:var(--font-playfair)] text-[1.2rem] font-semibold text-[#FFD54F]'>
+                    <span className=' text-[1.2rem] font-semibold text-[#FFD54F]'>
                       $2,500–4,000
                     </span>
                     <span className='ml-2 inline-block rounded-[20px] bg-[#E53935] px-2.5 py-[3px] align-middle text-[0.68rem] font-semibold text-white'>
