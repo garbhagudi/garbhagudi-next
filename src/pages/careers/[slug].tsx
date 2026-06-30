@@ -8,6 +8,7 @@ import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import glowStyles from 'styles/glow.module.css';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 export const getStaticProps = async ({ params }) => {
@@ -213,7 +214,9 @@ const Career = ({ career }) => {
                     Experience: {career?.experience}
                   </p>
                   <p className='font-qs text-base font-semibold'>Location: {career?.location}</p>
-                  <div className='glow mt-4 px-4 py-2 font-content font-semibold text-white'>
+                  <div
+                    className={`${glowStyles.glow} mt-4 px-4 py-2 font-content font-semibold text-white`}
+                  >
                     <span></span>
                     <span></span>
                     <span></span>

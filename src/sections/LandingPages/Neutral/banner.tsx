@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { MOTHERS_DAY_BANNER_ALT, MOTHERS_DAY_BANNER_IMAGES } from 'data/mothersDayBanners';
+import glowStyles from 'styles/glow.module.css';
 
 const Banner = () => {
   const path = usePathname();
@@ -76,7 +77,9 @@ const Banner = () => {
                     <span className=''> across all our branches</span>
                   </div>
                 </div>
-                <div className='glow my-6 w-72 px-3 py-2 text-center hover:shadow-sm hover:shadow-brandPink dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gg-500'>
+                <div
+                  className={`${glowStyles.glow} my-6 w-72 px-3 py-2 text-center hover:shadow-sm hover:shadow-brandPink dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gg-500`}
+                >
                   <span></span>
                   <span></span>
                   <span></span>
