@@ -3,9 +3,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className='text-white/45 bg-[#0D1F0E] px-[5%] py-9 text-center text-[0.8rem] leading-[1.7]'>
-      <div className='mb-2.5  text-[1.3rem] font-semibold text-white'>
-        GarbhaGudi IVF Centre
-      </div>
+      <div className='mb-2.5 text-[1.3rem] font-semibold text-white'>GarbhaGudi IVF Centre</div>
       <p>
         Banashankari · Hanumanthanagar · Kalyan Nagar · HRBR Layout · Electronic City · Jayanagar ·
         and more across Bangalore, India

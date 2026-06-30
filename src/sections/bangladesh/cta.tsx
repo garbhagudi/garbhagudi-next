@@ -7,7 +7,7 @@ const Cta = () => {
       id='enquire'
       className='bg-gradient-to-br from-[#2E7D32] to-[#1B5E20] px-[5%] py-[90px] text-center'
     >
-      <h2 className='mx-auto mb-3.5 max-w-[640px]  text-[clamp(1.9rem,3vw,2.8rem)] font-semibold leading-[1.2] text-white'>
+      <h2 className='mx-auto mb-3.5 max-w-[640px] text-[clamp(1.9rem,3vw,2.8rem)] font-semibold leading-[1.2] text-white'>
         Start Your Journey to Parenthood Today
       </h2>
       <p className='mx-auto mb-9 max-w-[480px] text-[0.98rem] leading-[1.75] text-white/70'>

@@ -6,7 +6,7 @@ const Services = () => {
       <span className='mb-3 inline-block text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-[#FFD54F]'>
         For Bangladeshi Patients
       </span>
-      <h2 className='mb-3.5  text-[clamp(1.9rem,3vw,2.8rem)] font-semibold leading-[1.2] text-white'>
+      <h2 className='mb-3.5 text-[clamp(1.9rem,3vw,2.8rem)] font-semibold leading-[1.2] text-white'>
         We Handle <span className='not-italic text-[#FFD54F]'>Every Detail</span>
       </h2>
       <p className='text-white/65 max-w-[580px] text-[0.98rem] leading-[1.75]'>

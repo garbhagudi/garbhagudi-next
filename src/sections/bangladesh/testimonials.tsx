@@ -7,7 +7,7 @@ const Testimonials = () => {
         <span className='mb-3 inline-block text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-[#2E7D32]'>
           Patient Stories
         </span>
-        <h2 className='mb-3.5  text-[clamp(1.9rem,3vw,2.8rem)] font-semibold leading-[1.2] text-[#1A2332]'>
+        <h2 className='mb-3.5 text-[clamp(1.9rem,3vw,2.8rem)] font-semibold leading-[1.2] text-[#1A2332]'>
           Families From Bangladesh,{' '}
           <span className='not-italic text-[#1B5E20]'>Dreams Fulfilled</span>
         </h2>

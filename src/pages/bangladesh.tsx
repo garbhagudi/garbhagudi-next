@@ -14,7 +14,6 @@ import Faq from 'sections/bangladesh/faq';
 import Cta from 'sections/bangladesh/cta';
 import Footer from 'sections/bangladesh/footer';
 
-
 const Bangladesh = () => {
   const faqSchema = generateFAQSchema(faqs.map((f) => ({ question: f.q, answer: f.a })));
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -29,9 +28,7 @@ const Bangladesh = () => {
     'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp';
 
   return (
-    <div
-      className="scroll-smooth bg-white font-[family-name:var(--font-inter)] leading-[1.6] text-[#1A2332]"
-    >
+    <div className='scroll-smooth bg-white font-[family-name:var(--font-inter)] leading-[1.6] text-[#1A2332]'>
       <Head>
         <title>{title}</title>
         <meta name='title' content={title} />
