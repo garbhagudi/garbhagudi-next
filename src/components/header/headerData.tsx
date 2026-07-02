@@ -207,6 +207,12 @@ export const Resources = [
     href: '/solutions',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg',
   },
+  {
+    name: 'Fertility Lexicon',
+    description: 'Infertility and Fertility Care',
+    href: '/resources/fertility-lexicon',
+    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1782979161/Icons/Resources/fertility-lexicon_fqyuvm.png',
+  },
 ];
 
 export const Location = [
