@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import Carousel from 'nuka-carousel';
 
@@ -19,6 +18,13 @@ interface doctorListProps {
     },
   ];
 }
+
+/* Landing-page behaviour: profile clicks convert to the on-page lead form
+ * (#form) instead of navigating away to /fertility-experts/[slug]. */
+const scrollToForm = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  e.preventDefault();
+  document.getElementById('form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
 
 const DoctorList = (doctorList: doctorListProps) => {
   const defaultControlsConfig = {
@@ -48,7 +54,7 @@ const DoctorList = (doctorList: doctorListProps) => {
               {doctorList?.doctors.map((item) => {
                 return (
                   <div key={item?.id} className='transition-all duration-300 hover:scale-115'>
-                    <Link href={`/fertility-experts/${item?.slug}`} passHref>
+                    <a href='#form' onClick={scrollToForm}>
                       <div className='space-y-4'>
                         <div className='relative mx-auto h-44 w-44'>
                           <div className='bg-[length: 400%] absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 dark:bg-gray-400'></div>
@@ -73,7 +79,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                           </div>
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 );
               })}
@@ -107,7 +113,7 @@ const DoctorList = (doctorList: doctorListProps) => {
               >
                 {doctorList?.doctors.map((item) => (
                   <div className='rounded-xl transition-all duration-500' key={item.id}>
-                    <Link href={`/fertility-experts/${item?.slug}`} passHref>
+                    <a href='#form' onClick={scrollToForm}>
                       <div className='space-y-4'>
                         <div className='mx-auto flex w-64 flex-col items-center justify-center'>
                           <Image
@@ -133,7 +139,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                           </div>
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 ))}
               </Carousel>

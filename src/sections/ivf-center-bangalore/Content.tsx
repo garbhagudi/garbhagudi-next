@@ -5,7 +5,7 @@ import { HiCheckCircle } from 'react-icons/hi';
 
 const stats = [
   { value: '15,000+', label: 'Babies delivered since 2011' },
-  { value: 'Since 2011', label: 'Years of fertility expertise' },
+  { value: '16', label: 'Years of fertility expertise' },
   { value: 'Multiple', label: 'Centres across Bangalore' },
   { value: 'In-house', label: 'IVF & embryology labs' },
 ];
@@ -14,12 +14,12 @@ const whyCentre = [
   {
     icon: <BsHospital />,
     title: 'A dedicated fertility hospital, not just a clinic',
-    body: 'GarbhaGudi is built end-to-end for fertility care — consultation, diagnostics, IVF lab, andrology and recovery — so your entire treatment happens under one trusted roof.',
+    body: 'GarbhaGudi is built end-to-end for fertility care — from consultation and diagnostics to the IVF lab, andrology, and recovery — so your entire treatment happens under one trusted roof.',
   },
   {
     icon: <ImLab />,
     title: 'Advanced in-house IVF & embryology labs',
-    body: 'Our centres run modern, quality-controlled IVF laboratories so embryo handling, culture and transfer are managed by our own embryology team — never outsourced.',
+    body: 'Our centres run modern, quality-controlled IVF laboratories. So embryo handling, culture, and transfer are managed by our own embryology team — never outsourced.',
   },
   {
     icon: <CiMedicalCase />,
@@ -65,9 +65,9 @@ const Content = () => {
           <p className='mx-auto mt-4 max-w-3xl text-center font-content text-gray-700'>
             Choosing the right <span className='font-semibold'>IVF centre</span> shapes your entire
             fertility journey. As one of Bangalore&apos;s most trusted{' '}
-            <span className='font-semibold'>fertility hospitals</span>, GarbhaGudi brings advanced
-            technology, an experienced clinical team and genuinely caring support together so you
-            feel confident from your first consultation onward.
+            <span className='font-semibold'>fertility hospitals</span>, GarbhaGudi brings together
+            advanced technology, an experienced clinical team, and genuinely caring support so that
+            you feel confident from your first consultation onward.
           </p>
 
           <div className='mt-10 grid gap-5 sm:grid-cols-2'>
@@ -99,7 +99,16 @@ const Content = () => {
                 'ICSI & advanced fertilisation',
                 'Egg freezing & fertility preservation',
                 'Male infertility treatment',
+                'Female infertility treatment',
                 'Fertility evaluation & diagnostics',
+                'Laparoscopy',
+                'Hysteroscopy',
+                'Semen freezing',
+                'PESA / TESA',
+                'Varicocele treatment',
+                'Sequential transfer',
+                'Endometrial rejuvenation',
+                'MACS (sperm selection)',
               ].map((t) => (
                 <div key={t} className='flex items-center gap-2 font-content text-sm'>
                   <HiCheckCircle className='shrink-0 text-lg text-brandYellow' aria-hidden='true' />

@@ -22,6 +22,8 @@ const DoctorList = dynamic(() => import('sections/LandingPages/Performant/doctor
   ssr: false,
 });
 const Branch = dynamic(() => import('sections/LandingPages/Performant/branches'), { ssr: false });
+const Reviews = dynamic(() => import('sections/ivf-center-bangalore/Reviews'), { ssr: true });
+const Awards = dynamic(() => import('sections/ivf-center-bangalore/Awards'), { ssr: true });
 const RelatedSearches = dynamic(() => import('sections/LandingPages/Performant/relatedSearches'), {
   ssr: false,
 });
@@ -48,7 +50,7 @@ const medicalClinicSchema = generateMedicalClinicSchema({
   url: URL,
   medicalSpecialty: 'Reproductive endocrinology and infertility (IVF)',
   areaServed: 'Bangalore',
-  telephone: '+91-8951813344',
+  telephone: '+91-9108910832',
   image: OG_IMAGE,
 });
 
@@ -102,6 +104,8 @@ export default function IvfCentreLandingPage({ doctors, branches }) {
         <Content />
         <DoctorList doctors={doctors} />
         <Branch branches={branches} />
+        <Reviews />
+        <Awards />
         <Faq />
         <RelatedSearches />
       </main>
@@ -117,7 +121,16 @@ export const getStaticProps = async () => {
   const { data } = await apolloClient.query({
     query: gql`
       query IvfCentreLP {
-        doctors(orderBy: order_ASC, first: 6) {
+        # Same order as the website's doctor listing (order_ASC, no limit),
+        # minus the Davanagere (Dr. Manasa K A, Dr. Harshita Guruprasad) and
+        # Hosur (Dr. Radha) doctors — this LP is Bangalore-only.
+        doctors(
+          orderBy: order_ASC
+          first: 100
+          where: {
+            slug_not_in: ["dr-manasa-k-a", "dr-harshita-guruprasad", "dr-radha-puchalapalli"]
+          }
+        ) {
           id
           name
           slug

@@ -16,14 +16,17 @@ import { HiOutlineCalendar } from 'react-icons/hi';
 import {
   PHONE_DISPLAY,
   PHONE_DIGITS,
+  WA_DIGITS,
   WA_MESSAGE_DEFAULT,
 } from 'sections/ivf-center-bangalore/constants';
 
 export interface StickyCtaProps {
-  /** Display + tel number, e.g. "+91 89518 13344" */
+  /** Display + tel number, e.g. "+91 91089 10832" */
   phoneDisplay?: string;
-  /** Digits only for tel:/wa.me, e.g. "918951813344" */
+  /** Digits only for tel:, e.g. "919108910832" */
   phoneDigits?: string;
+  /** Digits only for wa.me, e.g. "918951813344" */
+  waDigits?: string;
   /** Pre-filled WhatsApp message */
   waMessage?: string;
   /** Anchor id of the on-page form (defaults to "form") */
@@ -33,11 +36,12 @@ export interface StickyCtaProps {
 const StickyCta = ({
   phoneDisplay = PHONE_DISPLAY,
   phoneDigits = PHONE_DIGITS,
+  waDigits = WA_DIGITS,
   waMessage = WA_MESSAGE_DEFAULT,
   formAnchor = 'form',
 }: StickyCtaProps) => {
   const tel = `tel:+${phoneDigits}`;
-  const wa = `https://wa.me/${phoneDigits}?text=${encodeURIComponent(waMessage)}`;
+  const wa = `https://wa.me/${waDigits}?text=${encodeURIComponent(waMessage)}`;
 
   const scrollToForm = () => {
     if (typeof document === 'undefined') return;

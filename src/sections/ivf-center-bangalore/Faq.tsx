@@ -25,7 +25,7 @@ export const ivfCentreFaqs = [
     id: 4,
     question: 'How do I book an appointment at GarbhaGudi IVF Centre?',
     answer:
-      'You can book a free consultation by filling the enquiry form on this page, calling +91 89518 13344, or messaging us on WhatsApp. Our team will help you schedule a visit at the centre most convenient for you.',
+      'You can book a free consultation by filling the enquiry form on this page, calling +91 91089 10832, or messaging us on WhatsApp. Our team will help you schedule a visit at the centre most convenient for you.',
   },
   {
     id: 5,
