@@ -177,7 +177,7 @@ export function KnowledgeCenter() {
                         onClick={() => close()}
                         role='none'
                       >
-                        <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12 rounded-md'>
+                        <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12'>
                           <Image
                             src={item.icon}
                             alt={item.name}

@@ -21,6 +21,7 @@ const nextConfig = {
       'avatars.dicebear.com',
       'app.unbounce.com',
       'https://yogachallenge.in/',
+      'upload.wikimedia.org',
     ],
   },
 
