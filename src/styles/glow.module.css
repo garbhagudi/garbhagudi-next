@@ -1,0 +1,98 @@
+/* Animated "glow" button border. Moved out of the global render-blocking
+   stylesheet (globals.css) — only used by careers/[slug].tsx and the Neutral
+   landing banner, so it now ships with those chunks, not every page. */
+.glow {
+  position: relative;
+  display: block;
+  color: #ea4b6a;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.glow:hover {
+  background: #ea4b6a;
+  color: white;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.glow:nth-child(1) {
+  filter: hue-rotate(270deg);
+}
+.glow span {
+  position: absolute;
+  display: block;
+}
+.glow span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ea4b6a);
+  animation: animate1 4s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+.glow span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ea4b6a);
+  animation: animate2 4s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+.glow span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #ea4b6a);
+  animation: animate3 4s linear infinite;
+  animation-delay: 2s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.glow span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #ea4b6a);
+  animation: animate4 4s linear infinite;
+  animation-delay: 3s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}

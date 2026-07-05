@@ -31,12 +31,15 @@ function MyApp({ Component, pageProps }) {
     '/lp/itwmedia/enquiry',
     '/lp/egg-freezing',
     '/treatments/iui-treatment-in-bangalore',
+    '/bangladesh',
   ];
 
   const iuiTreatmentPage = router.pathname === '/treatments/iui-treatment-in-bangalore';
   // const ivfHomePage = router.pathname === '/ivf/home';
   const isParipoornaPage = router.pathname === '/features/paripoorna';
   const isYogaGuidePage = router.pathname === '/yoga/guide';
+  // Standalone landing page — renders its own nav/footer, so suppress the global Footer.
+  const isBangladeshPage = router.pathname === '/bangladesh';
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
@@ -98,9 +101,12 @@ function MyApp({ Component, pageProps }) {
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
         />
         <link rel='preconnect' href='https://salesiq.zohopublic.com' crossOrigin='anonymous' />
-        <link rel='preconnect' href='https://media.graphassets.com' />
+        {/* graphassets hosts CMS images; /bangladesh has none, so skip the idle handshake */}
+        {!isBangladeshPage && <link rel='preconnect' href='https://media.graphassets.com' />}
       </Head>
-      {!iuiTreatmentPage && !isYogaGuidePage && <FloatPhone presentation={true} />}
+      {!iuiTreatmentPage && !isYogaGuidePage && !isBangladeshPage && (
+        <FloatPhone presentation={true} />
+      )}
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />
@@ -108,13 +114,15 @@ function MyApp({ Component, pageProps }) {
           <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
             {shouldDisplay && <Nav />}
             <Component {...pageProps} />
-            {!iuiTreatmentPage && <Footer />}
+            {!iuiTreatmentPage && !isBangladeshPage && <Footer />}
           </div>
         )}
         {shouldDisplay && showSalesIQ && <Salesiq />}
       </ThemeProvider>
       <SpeedInsights />
-      {!isParipoornaPage && !iuiTreatmentPage && !isYogaGuidePage && <FloatRequestCallBack />}
+      {!isParipoornaPage && !iuiTreatmentPage && !isYogaGuidePage && !isBangladeshPage && (
+        <FloatRequestCallBack />
+      )}
       {/* {isReady && !iuiTreatmentPage && !ivfHomePage && <FloatWhatsApp />} */}
     </RootLayout>
   );
