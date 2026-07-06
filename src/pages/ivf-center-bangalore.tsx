@@ -171,11 +171,14 @@ export const getStaticProps = async () => {
     `,
   });
 
-  const all: { designation?: string }[] = data.doctors ?? [];
-  // Uro-Andrologists have low `order` values, so order_ASC places them near the
-  // top. Move them to the end so the fertility specialists lead the section.
+  // Drop the male Uro-Andrologists from this LP's fertility experts section.
   const isUro = (d: { designation?: string }) => /uro-?androlog/i.test(d.designation ?? '');
-  const doctors = [...all.filter((d) => !isUro(d)), ...all.filter((d) => isUro(d))];
+  const all: { name?: string; designation?: string }[] = (data.doctors ?? []).filter(
+    (d: { designation?: string }) => !isUro(d)
+  );
+  // Dr. Asha should lead the fertility experts section.
+  const isAsha = (d: { name?: string }) => /\basha\b/i.test(d.name ?? '');
+  const doctors = [...all.filter(isAsha), ...all.filter((d) => !isAsha(d))];
 
   return {
     props: {

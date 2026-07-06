@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import Carousel from 'nuka-carousel';
@@ -46,6 +46,30 @@ const DoctorList = (doctorList: doctorListProps) => {
     return () => window.removeEventListener('resize', update);
   }, []);
 
+  /* Start auto-scrolling 3s after the section first scrolls into view
+   * (not on page load). */
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [autoplay, setAutoplay] = useState(false);
+  useEffect(() => {
+    const el = sliderRef.current;
+    if (!el) return undefined;
+    let timer: ReturnType<typeof setTimeout>;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          timer = setTimeout(() => setAutoplay(true), 3000);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <div>
       <div
@@ -64,10 +88,10 @@ const DoctorList = (doctorList: doctorListProps) => {
                 most challenging fertility cases.
               </p>
             </div>
-            <div className='relative mx-auto w-full'>
+            <div ref={sliderRef} className='relative mx-auto w-full'>
               <Carousel
-                autoplay
-                autoplayInterval={5000}
+                autoplay={autoplay}
+                autoplayInterval={3000}
                 slidesToShow={slidesToShow}
                 slidesToScroll={1}
                 cellAlign='left'
