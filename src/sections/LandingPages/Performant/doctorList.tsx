@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import Carousel from 'nuka-carousel';
@@ -32,6 +32,20 @@ const DoctorList = (doctorList: doctorListProps) => {
       display: 'none',
     },
   };
+
+  /* nuka-carousel v7 takes a single numeric slidesToShow, so we size it to the
+   * viewport ourselves: 1 on mobile, 2 on tablet, 4 on desktop. */
+  const [slidesToShow, setSlidesToShow] = useState(1);
+  useEffect(() => {
+    const update = () => {
+      const w = window.innerWidth;
+      setSlidesToShow(w >= 1024 ? 4 : w >= 640 ? 2 : 1);
+    };
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+
   return (
     <div>
       <div
@@ -50,46 +64,15 @@ const DoctorList = (doctorList: doctorListProps) => {
                 most challenging fertility cases.
               </p>
             </div>
-            <div className='mx-auto hidden grid-cols-2 space-y-0 sm:gap-8 sm:space-y-0 lg:grid lg:grid-cols-6'>
-              {doctorList?.doctors.map((item) => {
-                return (
-                  <div key={item?.id} className='transition-all duration-300 hover:scale-115'>
-                    <a href='#form' onClick={scrollToForm}>
-                      <div className='space-y-4'>
-                        <div className='relative mx-auto h-44 w-44'>
-                          <div className='bg-[length: 400%] absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 dark:bg-gray-400'></div>
-                          <Image
-                            className='shadow-champaigne rounded-full bg-transparent drop-shadow-2xl'
-                            src={item?.image?.url}
-                            alt={item?.imageAlt || item?.name}
-                            width={400}
-                            height={400}
-                            loading='lazy'
-                          />
-                        </div>
-                        <div className='space-y-0.5'>
-                          <h3 className='font-heading text-lg font-bold text-gray-800 dark:text-gray-200'>
-                            {item?.name}
-                          </h3>
-                          <p className='font-content text-xs text-purple-900 dark:text-purple-200'>
-                            {item?.qualification}
-                          </p>
-                          <div className='pb-2 font-content text-sm text-gg-500 shadow-black drop-shadow-2xl dark:text-gg-300'>
-                            {item?.designation}
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                );
-              })}
-            </div>
-            <div className='relative mx-auto flex flex-row items-center justify-center lg:hidden'>
+            <div className='relative mx-auto w-full'>
               <Carousel
                 autoplay
                 autoplayInterval={5000}
+                slidesToShow={slidesToShow}
+                slidesToScroll={1}
+                cellAlign='left'
                 defaultControlsConfig={defaultControlsConfig}
-                className='mx-auto max-w-xs sm:max-w-sm md:max-w-md'
+                className='mx-auto w-full'
                 wrapAround
                 dragging
                 enableKeyboardControls
@@ -97,6 +80,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                 renderCenterLeftControls={({ previousSlide }) => (
                   <button
                     onClick={previousSlide}
+                    aria-label='Previous doctor'
                     className='ml-3 flex h-10 w-10 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-3xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 dark:bg-brandPurple'
                   >
                     <HiChevronLeft className='mr-1' />
@@ -105,6 +89,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                 renderCenterRightControls={({ nextSlide }) => (
                   <button
                     onClick={nextSlide}
+                    aria-label='Next doctor'
                     className='mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-3xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 dark:bg-brandPurple'
                   >
                     <HiChevronRight className='ml-1' />
@@ -112,31 +97,27 @@ const DoctorList = (doctorList: doctorListProps) => {
                 )}
               >
                 {doctorList?.doctors.map((item) => (
-                  <div className='rounded-xl transition-all duration-500' key={item.id}>
+                  <div className='px-3 py-2' key={item.id}>
                     <a href='#form' onClick={scrollToForm}>
-                      <div className='space-y-4'>
-                        <div className='mx-auto flex w-64 flex-col items-center justify-center'>
-                          <Image
-                            className='h-52 w-52 rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 shadow-2xl drop-shadow-2xl dark:bg-gray-400'
-                            src={item?.image?.url}
-                            alt={item?.imageAlt || item?.name}
-                            width={500}
-                            height={500}
-                            loading='lazy'
-                          />
-                          <div className='mt-12 flex items-center justify-center space-y-4 text-center'>
-                            <div className='space-y-1 text-lg font-medium leading-6'>
-                              <h3 className='font-content text-gray-800 dark:text-white'>
-                                {item?.name}
-                              </h3>
-                              <p className='font-content text-sm text-brandPurpleDark dark:text-purple-300'>
-                                {item?.qualification}
-                              </p>
-                              <p className='pb-2 font-content text-sm text-gg-500 dark:text-gg-300'>
-                                {item?.designation}
-                              </p>
-                            </div>
-                          </div>
+                      <div className='mx-auto flex w-full flex-col items-center justify-center'>
+                        <Image
+                          className='h-44 w-44 rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 object-cover shadow-2xl drop-shadow-2xl dark:bg-gray-400'
+                          src={item?.image?.url}
+                          alt={item?.imageAlt || item?.name}
+                          width={500}
+                          height={500}
+                          loading='lazy'
+                        />
+                        <div className='mt-8 space-y-1 text-center'>
+                          <h3 className='font-heading text-lg font-bold text-gray-800 dark:text-white'>
+                            {item?.name}
+                          </h3>
+                          <p className='font-content text-xs text-purple-900 dark:text-purple-300'>
+                            {item?.qualification}
+                          </p>
+                          <p className='pb-2 font-content text-sm text-gg-500 dark:text-gg-300'>
+                            {item?.designation}
+                          </p>
                         </div>
                       </div>
                     </a>

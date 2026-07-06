@@ -12,7 +12,6 @@
  */
 
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
-import { HiOutlineCalendar } from 'react-icons/hi';
 import {
   PHONE_DISPLAY,
   PHONE_DIGITS,
@@ -29,8 +28,6 @@ export interface StickyCtaProps {
   waDigits?: string;
   /** Pre-filled WhatsApp message */
   waMessage?: string;
-  /** Anchor id of the on-page form (defaults to "form") */
-  formAnchor?: string;
 }
 
 const StickyCta = ({
@@ -38,15 +35,9 @@ const StickyCta = ({
   phoneDigits = PHONE_DIGITS,
   waDigits = WA_DIGITS,
   waMessage = WA_MESSAGE_DEFAULT,
-  formAnchor = 'form',
 }: StickyCtaProps) => {
   const tel = `tel:+${phoneDigits}`;
   const wa = `https://wa.me/${waDigits}?text=${encodeURIComponent(waMessage)}`;
-
-  const scrollToForm = () => {
-    if (typeof document === 'undefined') return;
-    document.getElementById(formAnchor)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
 
   return (
     <div
@@ -54,7 +45,7 @@ const StickyCta = ({
       role='region'
       aria-label='Contact GarbhaGudi'
     >
-      <div className='mx-auto grid max-w-md grid-cols-3 gap-px md:flex md:max-w-none md:items-center md:gap-2'>
+      <div className='mx-auto grid max-w-md grid-cols-2 gap-px md:flex md:max-w-none md:items-center md:gap-2'>
         <a
           href={tel}
           aria-label={`Call GarbhaGudi at ${phoneDisplay}`}
@@ -70,23 +61,12 @@ const StickyCta = ({
           target='_blank'
           rel='noopener noreferrer'
           aria-label='Chat with GarbhaGudi on WhatsApp'
-          className='flex flex-col items-center justify-center gap-1 border-x border-gg-100 py-3 font-content text-xs font-semibold text-green-700 transition hover:bg-green-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-600 md:flex-row md:rounded-full md:border-0 md:bg-[#25D366] md:px-5 md:py-2.5 md:text-sm md:text-white md:hover:brightness-95'
+          className='flex flex-col items-center justify-center gap-1 border-x border-gg-100 py-3 font-content text-xs font-semibold text-green-700 transition hover:bg-green-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-600 md:flex-row md:rounded-full md:border-0 md:bg-[#25D366] md:px-5 md:py-2.5 md:text-sm md:text-white md:hover:bg-[#1EBE57]'
         >
           <FaWhatsapp className='text-lg' aria-hidden='true' />
           <span className='md:hidden'>WhatsApp</span>
           <span className='hidden md:inline'>WhatsApp</span>
         </a>
-
-        <button
-          type='button'
-          onClick={scrollToForm}
-          aria-label='Book a free consultation'
-          className='flex flex-col items-center justify-center gap-1 py-3 font-content text-xs font-bold text-brandPurpleDark transition hover:bg-purple-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brandPurpleDark md:flex-row md:rounded-full md:bg-brandPurpleDark md:px-5 md:py-2.5 md:text-sm md:text-white md:hover:brightness-110'
-        >
-          <HiOutlineCalendar className='text-lg' aria-hidden='true' />
-          <span className='md:hidden'>Book</span>
-          <span className='hidden md:inline'>Book consult</span>
-        </button>
       </div>
     </div>
   );

@@ -132,6 +132,7 @@ export const getStaticProps = async () => {
           orderBy: order_ASC
           first: 100
           where: {
+            designation_not: "Consultant"
             slug_not_in: [
               "dr-manasa-k-a"
               "dr-harshita-guruprasad"
@@ -170,9 +171,9 @@ export const getStaticProps = async () => {
     `,
   });
 
+  const all: { designation?: string }[] = data.doctors ?? [];
   // Uro-Andrologists have low `order` values, so order_ASC places them near the
   // top. Move them to the end so the fertility specialists lead the section.
-  const all: { designation?: string }[] = data.doctors ?? [];
   const isUro = (d: { designation?: string }) => /uro-?androlog/i.test(d.designation ?? '');
   const doctors = [...all.filter((d) => !isUro(d)), ...all.filter((d) => isUro(d))];
 
