@@ -6,8 +6,8 @@
  * Migrating those is a SEPARATE, larger follow-up — intentionally out of
  * scope here; this file is scoped to the campaign LPs only. */
 
-export const PHONE_DISPLAY = '+91 91089 10832';
-export const PHONE_DIGITS = '919108910832';
+export const PHONE_DISPLAY = '+91 90712 34006';
+export const PHONE_DIGITS = '919071234006';
 export const PHONE_TEL = `tel:+${PHONE_DIGITS}`;
 
 /* WhatsApp stays on the site-wide WA number (different from the call CTA). */
