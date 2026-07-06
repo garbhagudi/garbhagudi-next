@@ -1,7 +1,6 @@
 import { BsBuildings, BsHospital } from 'react-icons/bs';
 import { CiMedicalCase } from 'react-icons/ci';
 import { ImLab } from 'react-icons/im';
-import { HiCheckCircle } from 'react-icons/hi';
 
 const stats = [
   { value: '15,000+', label: 'Babies delivered since 2011' },
@@ -87,35 +86,6 @@ const Content = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Treatments offered — supports "clinic / hospital" intent breadth */}
-          <div className='mt-12 rounded-2xl bg-brandPurpleDark px-6 py-8 text-white sm:px-10'>
-            <h3 className='font-heading text-2xl font-bold'>Fertility treatments under one roof</h3>
-            <div className='mt-5 grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3'>
-              {[
-                'IVF (In-Vitro Fertilisation)',
-                'IUI (Intrauterine Insemination)',
-                'ICSI & advanced fertilisation',
-                'Egg freezing & fertility preservation',
-                'Male infertility treatment',
-                'Female infertility treatment',
-                'Fertility evaluation & diagnostics',
-                'Laparoscopy',
-                'Hysteroscopy',
-                'Semen freezing',
-                'PESA / TESA',
-                'Varicocele treatment',
-                'Sequential transfer',
-                'Endometrial rejuvenation',
-                'MACS (sperm selection)',
-              ].map((t) => (
-                <div key={t} className='flex items-center gap-2 font-content text-sm'>
-                  <HiCheckCircle className='shrink-0 text-lg text-brandYellow' aria-hidden='true' />
-                  <span>{t}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
