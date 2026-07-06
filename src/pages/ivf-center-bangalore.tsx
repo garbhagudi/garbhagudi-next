@@ -18,6 +18,7 @@ import { ivfCentreFaqs } from 'sections/ivf-center-bangalore/Faq';
 /* Below-the-fold sections are code-split so the hero + form paint fast
  * (better Core Web Vitals = better landing page experience). */
 const Faq = dynamic(() => import('sections/ivf-center-bangalore/Faq'), { ssr: true });
+const Gallery = dynamic(() => import('sections/ivf-center-bangalore/Gallery'), { ssr: true });
 const DoctorList = dynamic(() => import('sections/LandingPages/Performant/doctorList'), {
   ssr: false,
 });
@@ -102,6 +103,7 @@ export default function IvfCentreLandingPage({ doctors, branches }) {
       <main>
         <Hero />
         <Content />
+        <Gallery />
         <DoctorList doctors={doctors} />
         <Branch branches={branches} />
         <Reviews />
@@ -124,11 +126,25 @@ export const getStaticProps = async () => {
         # Same order as the website's doctor listing (order_ASC, no limit),
         # minus the Davanagere (Dr. Manasa K A, Dr. Harshita Guruprasad) and
         # Hosur (Dr. Radha) doctors — this LP is Bangalore-only.
+        # Also drops non-fertility-consultant staff (Embryology, Yoga,
+        # Psychiatry) so the "fertility experts" section stays focused.
         doctors(
           orderBy: order_ASC
           first: 100
           where: {
-            slug_not_in: ["dr-manasa-k-a", "dr-harshita-guruprasad", "dr-radha-puchalapalli"]
+            slug_not_in: [
+              "dr-manasa-k-a"
+              "dr-harshita-guruprasad"
+              "dr-radha-puchalapalli"
+              "fyzullah-syed"
+              "vidyalakshmi-a"
+              "aishwarya-d-s"
+              "suraksha-b"
+              "dr-jala"
+              "dr-meghana-suresh"
+              "dr-ganavi-ks"
+              "dr-varsha-vijay"
+            ]
           }
         ) {
           id
@@ -154,9 +170,15 @@ export const getStaticProps = async () => {
     `,
   });
 
+  // Uro-Andrologists have low `order` values, so order_ASC places them near the
+  // top. Move them to the end so the fertility specialists lead the section.
+  const all: { designation?: string }[] = data.doctors ?? [];
+  const isUro = (d: { designation?: string }) => /uro-?androlog/i.test(d.designation ?? '');
+  const doctors = [...all.filter((d) => !isUro(d)), ...all.filter((d) => isUro(d))];
+
   return {
     props: {
-      doctors: data.doctors,
+      doctors,
       branches: data.branches,
     },
     revalidate: 180,

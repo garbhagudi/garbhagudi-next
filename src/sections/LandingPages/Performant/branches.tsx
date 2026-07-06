@@ -11,7 +11,7 @@ const scrollToForm = (e: React.MouseEvent<HTMLAnchorElement>) => {
 const Branch = ({ branches }) => {
   return (
     <div>
-      <h1 className='text-center font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 lg:text-4xl'>
+      <h1 className='pt-12 text-center font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 lg:pt-16 lg:text-4xl'>
         Our Branches
       </h1>
       <div className='mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-6 py-10 lg:py-16'>
