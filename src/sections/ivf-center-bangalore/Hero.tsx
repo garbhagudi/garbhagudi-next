@@ -55,7 +55,7 @@ const Hero = () => {
           </h1>
 
           <p className='mt-4 max-w-xl font-content text-base text-gray-700 sm:text-lg'>
-            GarbhaGudi is a chain of advanced infertility hospitals offering IVF, IUI and complete
+            GarbhaGudi is a chain of new generation infertility treatment hospitals offering IVF, IUI and complete
             fertility care under one roof — with state-of-the-art labs, experienced specialists and
             compassionate support at every step.
           </p>
