@@ -55,7 +55,7 @@ const medicalClinicSchema = generateMedicalClinicSchema({
   image: OG_IMAGE,
 });
 
-export default function IvfCentreLandingPage({ doctors, branches }) {
+export default function IvfCentreLandingPage({ doctors, branches, awards }) {
   return (
     <div className='pb-20 md:pb-0'>
       <Head>
@@ -107,7 +107,7 @@ export default function IvfCentreLandingPage({ doctors, branches }) {
         <DoctorList doctors={doctors} />
         <Branch branches={branches} />
         <Reviews />
-        <Awards />
+        <Awards awards={awards} />
         <Faq />
         <RelatedSearches />
       </main>
@@ -167,6 +167,15 @@ export const getStaticProps = async () => {
           }
           branchPictureUrl
         }
+        awards(orderBy: createdAt_DESC) {
+          id
+          title
+          slug
+          image {
+            url
+          }
+          imageUrl
+        }
       }
     `,
   });
@@ -184,6 +193,7 @@ export const getStaticProps = async () => {
     props: {
       doctors,
       branches: data.branches,
+      awards: data.awards,
     },
     revalidate: 180,
   };

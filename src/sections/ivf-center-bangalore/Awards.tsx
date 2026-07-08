@@ -1,74 +1,59 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
-const awards = [
-  {
-    id: 1,
-    img: 'https://media.graphassets.com/cZCpRhM0Snm4T5prE2EH',
-    title: 'Best IVF and Fertility Hospital in India',
-    desc: 'National Quality Achievement Awards - 2021',
-  },
-  {
-    id: 2,
-    img: 'https://media.graphassets.com/k78093VmTjGWSA2LN5JU',
-    title: 'Among Top 10 IVF Centres in India',
-    desc: 'Times Health Survey - 2021',
-  },
-  {
-    id: 3,
-    img: 'https://media.graphassets.com/eDbmNcAUTOSyWhDpPu2Z',
-    title: 'Best IVF Clinic of the Year - South',
-    desc: 'National Fertility Awards - Economic Times Health - 2022',
-  },
-  {
-    id: 4,
-    img: 'https://media.graphassets.com/luwGzhRUSUKaEwJAQDrQ',
-    title: 'Certified Healthy Workplace',
-    desc: 'Arogya World - 2022',
-  },
-  {
-    id: 5,
-    img: 'https://media.graphassets.com/Q3M7VqroRJmeY8YdfPgJ',
-    title: 'ICON of the Year - IVF - Dr Asha S Vijay',
-    desc: 'National Fertility Awards - ET HealthWorld - 2023',
-  },
-];
+interface AwardsProps {
+  awards: {
+    id: string;
+    title: string;
+    slug: string;
+    image?: {
+      url: string;
+    };
+    imageUrl?: string;
+  }[];
+}
 
-const Awards = () => {
+const Awards = ({ awards }: AwardsProps) => {
+  if (!awards?.length) return null;
+
   return (
-    <section
-      className='bg-gradient-to-b from-gg-50/40 to-white'
-      aria-labelledby='lp-awards-heading'
-    >
-      <div className='mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16'>
-        <h2
-          id='lp-awards-heading'
-          className='text-center font-heading text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'
-        >
-          Awards &amp; recognition
-        </h2>
-        <p className='mx-auto mt-4 max-w-3xl text-center font-content text-gray-700'>
-          GarbhaGudi has won numerous awards from various organisations for its exceptional service
-          and high success rates.
-        </p>
-
-        <div className='mt-10 flex flex-wrap items-stretch justify-center gap-5'>
+    <section className='relative' aria-labelledby='lp-awards-heading'>
+      <div className='relative mx-auto max-w-7xl px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24'>
+        <div className='text-center'>
+          <h2
+            id='lp-awards-heading'
+            className='font-heading text-3xl font-extrabold tracking-tight text-gray-800 drop-shadow-xl dark:text-gray-200 sm:text-4xl'
+          >
+            Awards and Accolades
+          </h2>
+        </div>
+        <div className='mx-auto mt-12 grid max-w-xl gap-8 lg:max-w-none lg:grid-cols-3'>
           {awards.map((award) => (
             <div
               key={award.id}
-              className='flex w-64 flex-col items-center rounded-xl border border-gg-100 bg-white p-4 shadow-sm transition hover:shadow-lg'
+              className='flex flex-col overflow-hidden rounded-lg shadow-lg duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-2xl hover:transition-all'
             >
-              <Image
-                src={award.img}
-                alt={award.title}
-                className='rounded-lg'
-                width={400}
-                height={400}
-                loading='lazy'
-              />
-              <h3 className='mt-3 text-center font-heading text-base font-bold leading-snug text-gray-900'>
-                {award.title}
-              </h3>
-              <p className='mt-1 text-center font-content text-sm text-gray-600'>{award.desc}</p>
+              <Link href={`/about/awards-and-accolades/${award.slug}`} passHref>
+                <div className='flex-shrink-0'>
+                  <Image
+                    className='h-38 w-full cursor-pointer rounded-t-lg object-contain'
+                    src={award.image?.url ?? award.imageUrl ?? ''}
+                    alt={award.title}
+                    width={360}
+                    height={180}
+                    loading='lazy'
+                  />
+                </div>
+              </Link>
+              <div className='flex flex-1 flex-col justify-between p-6 text-gray-800 dark:bg-gray-700 dark:text-gray-200'>
+                <div className='flex-1'>
+                  <Link href={`/about/awards-and-accolades/${award.slug}`} passHref>
+                    <p className='cursor-pointer font-heading text-lg font-semibold'>
+                      {award.title}
+                    </p>
+                  </Link>
+                </div>
+              </div>
             </div>
           ))}
         </div>
