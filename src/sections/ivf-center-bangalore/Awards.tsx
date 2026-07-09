@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 interface AwardsProps {
   awards: {
@@ -33,25 +32,19 @@ const Awards = ({ awards }: AwardsProps) => {
               key={award.id}
               className='flex flex-col overflow-hidden rounded-lg shadow-lg duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:shadow-2xl hover:transition-all'
             >
-              <Link href={`/about/awards-and-accolades/${award.slug}`} passHref>
-                <div className='flex-shrink-0'>
-                  <Image
-                    className='h-38 w-full cursor-pointer rounded-t-lg object-contain'
-                    src={award.image?.url ?? award.imageUrl ?? ''}
-                    alt={award.title}
-                    width={360}
-                    height={180}
-                    loading='lazy'
-                  />
-                </div>
-              </Link>
+              <div className='flex-shrink-0'>
+                <Image
+                  className='h-38 w-full rounded-t-lg object-contain'
+                  src={award.image?.url ?? award.imageUrl ?? ''}
+                  alt={award.title}
+                  width={360}
+                  height={180}
+                  loading='lazy'
+                />
+              </div>
               <div className='flex flex-1 flex-col justify-between p-6 text-gray-800 dark:bg-gray-700 dark:text-gray-200'>
                 <div className='flex-1'>
-                  <Link href={`/about/awards-and-accolades/${award.slug}`} passHref>
-                    <p className='cursor-pointer font-heading text-lg font-semibold'>
-                      {award.title}
-                    </p>
-                  </Link>
+                  <p className='font-heading text-lg font-semibold'>{award.title}</p>
                 </div>
               </div>
             </div>

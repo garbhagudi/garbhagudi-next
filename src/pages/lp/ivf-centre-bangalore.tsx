@@ -32,7 +32,7 @@ const RelatedSearches = dynamic(() => import('sections/LandingPages/Performant/r
 const TITLE = 'Best IVF Centre & Fertility Hospital in Bangalore | GarbhaGudi';
 const DESCRIPTION =
   'Looking for the best IVF centre in Bangalore? GarbhaGudi is a trusted fertility hospital with advanced IVF labs, expert specialists & multiple branches. Book a free consultation.';
-const URL = 'https://www.garbhagudi.com/ivf-center-bangalore';
+const URL = 'https://www.garbhagudi.com/lp/ivf-centre-bangalore';
 const OG_IMAGE =
   'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp';
 

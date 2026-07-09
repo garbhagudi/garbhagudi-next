@@ -31,14 +31,14 @@ function MyApp({ Component, pageProps }) {
     '/lp/itwmedia/enquiry',
     '/lp/egg-freezing',
     '/treatments/iui-treatment-in-bangalore',
-    '/ivf-center-bangalore',
+    '/lp/ivf-centre-bangalore',
   ];
 
   const iuiTreatmentPage = router.pathname === '/treatments/iui-treatment-in-bangalore';
   // const ivfHomePage = router.pathname === '/ivf/home';
   const isParipoornaPage = router.pathname === '/features/paripoorna';
   const isYogaGuidePage = router.pathname === '/yoga/guide';
-  const isIvfCentreLp = router.pathname === '/ivf-center-bangalore';
+  const isIvfCentreLp = router.pathname === '/lp/ivf-centre-bangalore';
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname);
   const [loading, setLoading] = useState(false);
