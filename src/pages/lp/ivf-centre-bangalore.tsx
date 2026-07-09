@@ -28,6 +28,9 @@ const Awards = dynamic(() => import('sections/ivf-center-bangalore/Awards'), { s
 const RelatedSearches = dynamic(() => import('sections/LandingPages/Performant/relatedSearches'), {
   ssr: false,
 });
+const OfferPopup = dynamic(() => import('sections/ivf-center-bangalore/OfferPopup'), {
+  ssr: false,
+});
 
 const TITLE = 'Best IVF Centre & Fertility Hospital in Bangalore | GarbhaGudi';
 const DESCRIPTION =
@@ -115,6 +118,8 @@ export default function IvfCentreLandingPage({ doctors, branches, awards }) {
       <Footer />
 
       <StickyCta />
+
+      <OfferPopup branches={branches} />
     </div>
   );
 }
