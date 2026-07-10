@@ -97,9 +97,12 @@ function MyApp({ Component, pageProps }) {
           content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover'
         />
         <meta httpEquiv='content-language' content='en-gb' />
+        {/* `key` lets pages override this with their own robots directive
+         * (e.g. noindex on ads landing pages). */}
         <meta
           name='robots'
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
+          key='robots'
         />
         <link rel='preconnect' href='https://salesiq.zohopublic.com' crossOrigin='anonymous' />
         <link rel='preconnect' href='https://media.graphassets.com' />
