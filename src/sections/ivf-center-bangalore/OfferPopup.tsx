@@ -178,6 +178,7 @@ const OfferPopup = ({ branches }: OfferPopupProps) => {
                 >
                   Submit
                 </button>
+                <input type='hidden' id="zc_gad" name="zc_gad" value=""/>
               </form>
             </div>
           </DialogPanel>
