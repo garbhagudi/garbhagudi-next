@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import { useMemo } from 'react';
 import { gql } from '@apollo/client';
 
 import apolloClient from 'lib/apollo-graphcms';
@@ -38,26 +39,30 @@ const URL = 'https://www.garbhagudi.com/lp/ivf-centre-bangalore';
 const OG_IMAGE =
   'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp';
 
-const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: 'Home', url: 'https://www.garbhagudi.com/' },
-  { name: 'IVF Centre in Bangalore', url: URL },
-]);
-
 const faqSchema = generateFAQSchema(
   ivfCentreFaqs.map((f) => ({ question: f.question, answer: f.answer }))
 );
 
-const medicalClinicSchema = generateMedicalClinicSchema({
-  name: 'GarbhaGudi IVF Centre',
-  description: DESCRIPTION,
-  url: URL,
-  medicalSpecialty: 'Reproductive endocrinology and infertility (IVF)',
-  areaServed: 'Bangalore',
-  telephone: '+91-9108910832',
-  image: OG_IMAGE,
+/* Breadcrumb/clinic schemas embed the page URL, so they're built per page —
+ * this LP is also served as-is at /lp/ivf-treatment. */
+const buildSchemas = (url: string) => ({
+  breadcrumbSchema: generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.garbhagudi.com/' },
+    { name: 'IVF Centre in Bangalore', url },
+  ]),
+  medicalClinicSchema: generateMedicalClinicSchema({
+    name: 'GarbhaGudi IVF Centre',
+    description: DESCRIPTION,
+    url,
+    medicalSpecialty: 'Reproductive endocrinology and infertility (IVF)',
+    areaServed: 'Bangalore',
+    telephone: '+91-9108910832',
+    image: OG_IMAGE,
+  }),
 });
 
-export default function IvfCentreLandingPage({ doctors, branches, awards }) {
+export default function IvfCentreLandingPage({ doctors, branches, awards, pageUrl = URL }) {
+  const { breadcrumbSchema, medicalClinicSchema } = useMemo(() => buildSchemas(pageUrl), [pageUrl]);
   return (
     <div className='pb-20 md:pb-0'>
       <Head>
@@ -65,14 +70,17 @@ export default function IvfCentreLandingPage({ doctors, branches, awards }) {
         <title>{TITLE}</title>
         <meta name='title' content={TITLE} />
         <meta name='description' content={DESCRIPTION} />
-        <link rel='canonical' href={URL} key='canonical' />
-        <link rel='alternate' href={URL} hrefLang='en-IN' />
-        <link rel='alternate' href={URL} hrefLang='x-default' />
+        {/* Ads LP — keep out of search results; `key` overrides the global
+         * index directive from _app. */}
+        <meta name='robots' content='noindex, nofollow' key='robots' />
+        <link rel='canonical' href={pageUrl} key='canonical' />
+        <link rel='alternate' href={pageUrl} hrefLang='en-IN' />
+        <link rel='alternate' href={pageUrl} hrefLang='x-default' />
 
         {/* Open Graph / Facebook */}
         <meta property='og:title' content={TITLE} />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
-        <meta property='og:url' content={URL} />
+        <meta property='og:url' content={pageUrl} />
         <meta property='og:description' content={DESCRIPTION} />
         <meta property='og:type' content='website' />
         <meta property='og:image' content={OG_IMAGE} />

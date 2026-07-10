@@ -76,110 +76,114 @@ const OfferPopup = ({ branches }: OfferPopupProps) => {
         <div className='flex min-h-full items-center justify-center px-3 py-8'>
           <DialogPanel
             transition
-            className='data-[closed]:transform-[scale(95%)] w-full max-w-md rounded-xl bg-white pb-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] transition duration-300 ease-out data-[closed]:opacity-0 dark:bg-gray-800'
+            className='data-[closed]:transform-[scale(95%)] relative w-full max-w-md rounded-xl bg-white pb-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] transition duration-300 ease-out data-[closed]:opacity-0 dark:bg-gray-800 md:max-w-3xl md:pb-0'
           >
-            <div className='relative w-full'>
-              <Image
-                src={OFFER_IMAGE}
-                alt='GarbhaGudi fertility screening offer'
-                className='h-auto w-full rounded-t-xl object-contain'
-                width={720}
-                height={400}
-                priority
-              />
-              <CloseButton
-                aria-label='Close offer popup'
-                className='absolute right-2 top-2 rounded-full bg-white p-1 text-gray-800 shadow-md hover:bg-gray-100'
-              >
-                <IoClose fontSize={22} />
-              </CloseButton>
-            </div>
+            <CloseButton
+              aria-label='Close offer popup'
+              className='absolute right-2 top-2 z-10 rounded-full bg-white p-1 text-gray-800 shadow-md hover:bg-gray-100'
+            >
+              <IoClose fontSize={22} />
+            </CloseButton>
 
-            <div className='px-6 pt-5'>
-              <h3 className='font-heading text-2xl font-bold text-gray-800 dark:text-gray-100'>
-                Register Now
-              </h3>
+            {/* Stacked on mobile; image | form columns on desktop. */}
+            <div className='md:flex md:items-stretch'>
+              <div className='relative w-full md:w-1/2 md:shrink-0'>
+                <Image
+                  src={OFFER_IMAGE}
+                  alt='GarbhaGudi fertility screening offer'
+                  className='h-auto w-full rounded-t-xl object-contain md:h-full md:rounded-l-xl md:rounded-tr-none md:object-cover'
+                  width={720}
+                  height={400}
+                  priority
+                />
+              </div>
 
-              <form noValidate onSubmit={handleSubmit}>
-                <div className='mt-5'>
-                  <label htmlFor='offer-popup-name' className='sr-only'>
-                    Name
-                  </label>
-                  <input
-                    type='text'
-                    id='offer-popup-name'
-                    name='name'
-                    placeholder='Name'
-                    autoComplete='name'
-                    maxLength={255}
-                    className={inputClass}
-                    aria-invalid={errors.name ? 'true' : 'false'}
-                    onInput={() => clearFieldError('name')}
-                  />
-                  {errors.name && <p className='mt-1 text-sm text-red-500'>{errors.name}</p>}
-                </div>
+              <div className='px-6 pt-5 md:flex md:w-1/2 md:flex-col md:justify-center md:py-6'>
+                <h3 className='font-heading text-2xl font-bold text-gray-800 dark:text-gray-100'>
+                  Register Now
+                </h3>
 
-                <div className='mt-4'>
-                  <label htmlFor='offer-popup-phone' className='sr-only'>
-                    Mobile No.
-                  </label>
-                  <input
-                    type='text'
-                    inputMode='numeric'
-                    pattern='\d{10}'
-                    id='offer-popup-phone'
-                    name='phone'
-                    placeholder='Mobile No.'
-                    autoComplete='tel'
-                    maxLength={10}
-                    className={inputClass}
-                    aria-invalid={errors.phone ? 'true' : 'false'}
-                    onInput={(e) => {
-                      const el = e.currentTarget;
-                      const digits = el.value.replace(/\D/g, '').slice(0, 10);
-                      if (el.value !== digits) {
-                        el.value = digits;
-                      }
-                      clearFieldError('phone');
-                    }}
-                  />
-                  {errors.phone && <p className='mt-1 text-sm text-red-500'>{errors.phone}</p>}
-                </div>
+                <form noValidate onSubmit={handleSubmit}>
+                  <div className='mt-5'>
+                    <label htmlFor='offer-popup-name' className='sr-only'>
+                      Name
+                    </label>
+                    <input
+                      type='text'
+                      id='offer-popup-name'
+                      name='name'
+                      placeholder='Name'
+                      autoComplete='name'
+                      maxLength={255}
+                      className={inputClass}
+                      aria-invalid={errors.name ? 'true' : 'false'}
+                      onInput={() => clearFieldError('name')}
+                    />
+                    {errors.name && <p className='mt-1 text-sm text-red-500'>{errors.name}</p>}
+                  </div>
 
-                <div className='mt-4'>
-                  <label htmlFor='offer-popup-centre' className='sr-only'>
-                    Preferred Centre
-                  </label>
-                  <select
-                    id='offer-popup-centre'
-                    name='preferred_centre'
-                    defaultValue=''
-                    aria-invalid={errors.centre ? 'true' : 'false'}
-                    className={inputClass}
-                    onChange={() => clearFieldError('centre')}
+                  <div className='mt-4'>
+                    <label htmlFor='offer-popup-phone' className='sr-only'>
+                      Mobile No.
+                    </label>
+                    <input
+                      type='text'
+                      inputMode='numeric'
+                      pattern='\d{10}'
+                      id='offer-popup-phone'
+                      name='phone'
+                      placeholder='Mobile No.'
+                      autoComplete='tel'
+                      maxLength={10}
+                      className={inputClass}
+                      aria-invalid={errors.phone ? 'true' : 'false'}
+                      onInput={(e) => {
+                        const el = e.currentTarget;
+                        const digits = el.value.replace(/\D/g, '').slice(0, 10);
+                        if (el.value !== digits) {
+                          el.value = digits;
+                        }
+                        clearFieldError('phone');
+                      }}
+                    />
+                    {errors.phone && <p className='mt-1 text-sm text-red-500'>{errors.phone}</p>}
+                  </div>
+
+                  <div className='mt-4'>
+                    <label htmlFor='offer-popup-centre' className='sr-only'>
+                      Preferred Centre
+                    </label>
+                    <select
+                      id='offer-popup-centre'
+                      name='preferred_centre'
+                      defaultValue=''
+                      aria-invalid={errors.centre ? 'true' : 'false'}
+                      className={inputClass}
+                      onChange={() => clearFieldError('centre')}
+                    >
+                      <option value=''>Preferred Centre*</option>
+                      {branches
+                        ?.filter(
+                          (branch) => !EXCLUDED_CENTRES.includes(branch.title.trim().toLowerCase())
+                        )
+                        .map((branch) => (
+                          <option key={branch.id} value={branch.title}>
+                            {branch.title}
+                          </option>
+                        ))}
+                    </select>
+                    {errors.centre && <p className='mt-1 text-sm text-red-500'>{errors.centre}</p>}
+                  </div>
+
+                  <button
+                    type='submit'
+                    className='mt-5 w-full rounded-lg bg-gg-500 py-3 text-base font-bold text-white hover:bg-gg-400'
                   >
-                    <option value=''>Preferred Centre*</option>
-                    {branches
-                      ?.filter(
-                        (branch) => !EXCLUDED_CENTRES.includes(branch.title.trim().toLowerCase())
-                      )
-                      .map((branch) => (
-                        <option key={branch.id} value={branch.title}>
-                          {branch.title}
-                        </option>
-                      ))}
-                  </select>
-                  {errors.centre && <p className='mt-1 text-sm text-red-500'>{errors.centre}</p>}
-                </div>
-
-                <button
-                  type='submit'
-                  className='mt-5 w-full rounded-lg bg-gg-500 py-3 text-base font-bold text-white hover:bg-gg-400'
-                >
-                  Submit
-                </button>
-                <input type='hidden' id='zc_gad' name='zc_gad' value='' />
-              </form>
+                    Submit
+                  </button>
+                  <input type='hidden' id='zc_gad' name='zc_gad' value='' />
+                </form>
+              </div>
             </div>
           </DialogPanel>
         </div>
