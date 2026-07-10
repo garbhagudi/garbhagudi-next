@@ -4,7 +4,6 @@ interface AwardsProps {
   awards: {
     id: string;
     title: string;
-    slug: string;
     image?: {
       url: string;
     };

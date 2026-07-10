@@ -1,12 +1,5 @@
-import React from 'react';
 import Image from 'next/image';
-
-/* Landing-page behaviour: centre clicks convert to the on-page lead form
- * (#form) instead of navigating away to /locations/[slug]. */
-const scrollToForm = (e: React.MouseEvent<HTMLAnchorElement>) => {
-  e.preventDefault();
-  document.getElementById('form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-};
+import { scrollToForm } from 'sections/ivf-center-bangalore/constants';
 
 const Branch = ({ branches }) => {
   return (

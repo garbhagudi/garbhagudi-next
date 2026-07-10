@@ -31,16 +31,18 @@ function MyApp({ Component, pageProps }) {
     '/lp/itwmedia/enquiry',
     '/lp/egg-freezing',
     '/treatments/iui-treatment-in-bangalore',
-    '/lp/ivf-centre-bangalore',
   ];
 
   const iuiTreatmentPage = router.pathname === '/treatments/iui-treatment-in-bangalore';
   // const ivfHomePage = router.pathname === '/ivf/home';
   const isParipoornaPage = router.pathname === '/features/paripoorna';
   const isYogaGuidePage = router.pathname === '/yoga/guide';
-  const isIvfCentreLp = router.pathname === '/lp/ivf-centre-bangalore';
+  /* Pages (e.g. campaign LPs) opt out of all global chrome — nav, footer,
+   * floating widgets, SalesIQ — by setting `Page.hideChrome = true`,
+   * instead of adding another pathname check here. */
+  const hideChrome = Component.hideChrome === true;
 
-  const shouldDisplay = !noRenderPaths.includes(router.pathname);
+  const shouldDisplay = !noRenderPaths.includes(router.pathname) && !hideChrome;
   const [loading, setLoading] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   // const [isReady, setIsReady] = useState(false);
@@ -89,7 +91,7 @@ function MyApp({ Component, pageProps }) {
         />
         {/* End Google Tag Manager */}
         <link rel='alternate' href={`https://www.garbhagudi.com${path}`} hrefLang='en-us' />
-        <link rel='canonical' href={`https://www.garbhagudi.com${path}`} />
+        <link rel='canonical' href={`https://www.garbhagudi.com${path}`} key='canonical' />
         <meta
           name='viewport'
           content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover'
@@ -102,9 +104,7 @@ function MyApp({ Component, pageProps }) {
         <link rel='preconnect' href='https://salesiq.zohopublic.com' crossOrigin='anonymous' />
         <link rel='preconnect' href='https://media.graphassets.com' />
       </Head>
-      {!iuiTreatmentPage && !isYogaGuidePage && !isIvfCentreLp && (
-        <FloatPhone presentation={true} />
-      )}
+      {!iuiTreatmentPage && !isYogaGuidePage && !hideChrome && <FloatPhone presentation={true} />}
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />
@@ -112,13 +112,13 @@ function MyApp({ Component, pageProps }) {
           <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
             {shouldDisplay && <Nav />}
             <Component {...pageProps} />
-            {!iuiTreatmentPage && !isIvfCentreLp && <Footer />}
+            {!iuiTreatmentPage && !hideChrome && <Footer />}
           </div>
         )}
         {shouldDisplay && showSalesIQ && <Salesiq />}
       </ThemeProvider>
       <SpeedInsights />
-      {!isParipoornaPage && !iuiTreatmentPage && !isYogaGuidePage && !isIvfCentreLp && (
+      {!isParipoornaPage && !iuiTreatmentPage && !isYogaGuidePage && !hideChrome && (
         <FloatRequestCallBack />
       )}
       {/* {isReady && !iuiTreatmentPage && !ivfHomePage && <FloatWhatsApp />} */}

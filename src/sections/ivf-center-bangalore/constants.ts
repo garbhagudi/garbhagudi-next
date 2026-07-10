@@ -16,3 +16,10 @@ export const WA_MESSAGE_DEFAULT = 'Hi GarbhaGudi, I would like to book a fertili
 
 export const waLink = (message: string = WA_MESSAGE_DEFAULT) =>
   `https://wa.me/${WA_DIGITS}?text=${encodeURIComponent(message)}`;
+
+/* Landing-page behaviour: CTA clicks convert to the on-page lead form
+ * (#form) instead of navigating away. */
+export const scrollToForm = (e?: { preventDefault: () => void }) => {
+  e?.preventDefault();
+  document.getElementById('form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};

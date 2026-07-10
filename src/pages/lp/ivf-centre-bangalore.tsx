@@ -13,18 +13,17 @@ import Hero from 'sections/ivf-center-bangalore/Hero';
 import Content from 'sections/ivf-center-bangalore/Content';
 import Footer from 'sections/ivf-center-bangalore/Footer';
 import StickyCta from 'sections/ivf-center-bangalore/StickyCta';
-import { ivfCentreFaqs } from 'sections/ivf-center-bangalore/Faq';
+import Faq, { ivfCentreFaqs } from 'sections/ivf-center-bangalore/Faq';
+import Gallery from 'sections/ivf-center-bangalore/Gallery';
+import Reviews from 'sections/ivf-center-bangalore/Reviews';
+import Awards from 'sections/ivf-center-bangalore/Awards';
 
-/* Below-the-fold sections are code-split so the hero + form paint fast
- * (better Core Web Vitals = better landing page experience). */
-const Faq = dynamic(() => import('sections/ivf-center-bangalore/Faq'), { ssr: true });
-const Gallery = dynamic(() => import('sections/ivf-center-bangalore/Gallery'), { ssr: true });
+/* Client-only sections are code-split with ssr:false so the hero + form
+ * HTML stays lean and hydration isn't blocked on them. */
 const DoctorList = dynamic(() => import('sections/LandingPages/Performant/doctorList'), {
   ssr: false,
 });
 const Branch = dynamic(() => import('sections/LandingPages/Performant/branches'), { ssr: false });
-const Reviews = dynamic(() => import('sections/ivf-center-bangalore/Reviews'), { ssr: true });
-const Awards = dynamic(() => import('sections/ivf-center-bangalore/Awards'), { ssr: true });
 const RelatedSearches = dynamic(() => import('sections/LandingPages/Performant/relatedSearches'), {
   ssr: false,
 });
@@ -66,7 +65,7 @@ export default function IvfCentreLandingPage({ doctors, branches, awards }) {
         <title>{TITLE}</title>
         <meta name='title' content={TITLE} />
         <meta name='description' content={DESCRIPTION} />
-        <link rel='canonical' href={URL} />
+        <link rel='canonical' href={URL} key='canonical' />
         <link rel='alternate' href={URL} hrefLang='en-IN' />
         <link rel='alternate' href={URL} hrefLang='x-default' />
 
@@ -124,6 +123,9 @@ export default function IvfCentreLandingPage({ doctors, branches, awards }) {
   );
 }
 
+/* Ads LP: no global nav/footer/floating widgets — see hideChrome in _app. */
+IvfCentreLandingPage.hideChrome = true;
+
 export const getStaticProps = async () => {
   const { data } = await apolloClient.query({
     query: gql`
@@ -155,7 +157,6 @@ export const getStaticProps = async () => {
         ) {
           id
           name
-          slug
           designation
           qualification
           image {
@@ -166,16 +167,13 @@ export const getStaticProps = async () => {
         branches {
           id
           title
-          slug
           branchPicture {
             url
           }
-          branchPictureUrl
         }
         awards(orderBy: createdAt_DESC) {
           id
           title
-          slug
           image {
             url
           }

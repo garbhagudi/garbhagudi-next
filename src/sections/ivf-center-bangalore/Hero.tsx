@@ -26,9 +26,6 @@ const proofPoints = [
 ];
 
 const Hero = () => {
-  const tel = PHONE_TEL;
-  const wa = waLink();
-
   return (
     <section
       className='relative overflow-hidden bg-gradient-to-br from-gg-50 via-white to-purple-50'
@@ -71,13 +68,13 @@ const Hero = () => {
 
           <div className='mt-7 flex flex-col gap-3 sm:flex-row'>
             <a
-              href={tel}
+              href={PHONE_TEL}
               className='inline-flex items-center justify-center gap-2 rounded-full bg-gg-600 px-6 py-3 font-content text-base font-bold text-white shadow-lg transition hover:bg-gg-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gg-700'
             >
               <FaPhoneAlt aria-hidden='true' /> Call {PHONE_DISPLAY}
             </a>
             <a
-              href={wa}
+              href={waLink()}
               target='_blank'
               rel='noopener noreferrer'
               className='inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] px-6 py-3 font-content text-base font-bold text-[#1da851] transition hover:bg-green-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]'

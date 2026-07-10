@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { HiChevronLeft, HiChevronRight, HiCheckCircle } from 'react-icons/hi';
 import Carousel from 'nuka-carousel';
+import useInViewAutoplay from 'lib/useInViewAutoplay';
 
 /* NOTE: placeholder images — replace these URLs with the real Cloudinary uploads.
  * Just edit this array (and each `alt`); nothing else needs to change. */
@@ -52,6 +53,9 @@ const Gallery = () => {
     },
   };
 
+  /* Cycle images only while the gallery is on screen. */
+  const { ref: galleryRef, autoplay } = useInViewAutoplay();
+
   return (
     <section
       aria-label='A glimpse of GarbhaGudi'
@@ -61,9 +65,12 @@ const Gallery = () => {
         <div className='grid items-stretch gap-8 lg:grid-cols-2'>
           {/* Left half — image gallery */}
           <div className='flex flex-col'>
-            <div className='overflow-hidden rounded-2xl shadow-2xl drop-shadow-2xl'>
+            <div
+              ref={galleryRef}
+              className='overflow-hidden rounded-2xl shadow-2xl drop-shadow-2xl'
+            >
               <Carousel
-                autoplay
+                autoplay={autoplay}
                 autoplayInterval={5000}
                 className='border-0'
                 defaultControlsConfig={defaultControlsConfig}

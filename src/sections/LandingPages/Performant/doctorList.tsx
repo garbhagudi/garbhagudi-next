@@ -1,14 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import Carousel from 'nuka-carousel';
+import useInViewAutoplay from 'lib/useInViewAutoplay';
+import { scrollToForm } from 'sections/ivf-center-bangalore/constants';
 
 interface doctorListProps {
   doctors: [
     {
       id: string;
       name: string;
-      slug: string;
       qualification: string;
       designation: string;
       image: {
@@ -19,12 +20,9 @@ interface doctorListProps {
   ];
 }
 
-/* Landing-page behaviour: profile clicks convert to the on-page lead form
- * (#form) instead of navigating away to /fertility-experts/[slug]. */
-const scrollToForm = (e: React.MouseEvent<HTMLAnchorElement>) => {
-  e.preventDefault();
-  document.getElementById('form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-};
+/* nuka-carousel v7 takes a single numeric slidesToShow, so we size it to the
+ * viewport ourselves: 1 on mobile, 2 on tablet, 4 on desktop. */
+const slidesForWidth = (w: number) => (w >= 1024 ? 4 : w >= 640 ? 2 : 1);
 
 const DoctorList = (doctorList: doctorListProps) => {
   const defaultControlsConfig = {
@@ -33,42 +31,24 @@ const DoctorList = (doctorList: doctorListProps) => {
     },
   };
 
-  /* nuka-carousel v7 takes a single numeric slidesToShow, so we size it to the
-   * viewport ourselves: 1 on mobile, 2 on tablet, 4 on desktop. */
-  const [slidesToShow, setSlidesToShow] = useState(1);
+  const [slidesToShow, setSlidesToShow] = useState(() =>
+    typeof window === 'undefined' ? 1 : slidesForWidth(window.innerWidth)
+  );
   useEffect(() => {
-    const update = () => {
-      const w = window.innerWidth;
-      setSlidesToShow(w >= 1024 ? 4 : w >= 640 ? 2 : 1);
-    };
-    update();
-    window.addEventListener('resize', update);
-    return () => window.removeEventListener('resize', update);
+    /* Breakpoint media queries fire only when a breakpoint is crossed,
+     * unlike a resize listener that fires per pixel. */
+    const queries = [
+      window.matchMedia('(min-width: 1024px)'),
+      window.matchMedia('(min-width: 640px)'),
+    ];
+    const update = () => setSlidesToShow(slidesForWidth(window.innerWidth));
+    queries.forEach((q) => q.addEventListener('change', update));
+    return () => queries.forEach((q) => q.removeEventListener('change', update));
   }, []);
 
-  /* Start auto-scrolling 3s after the section first scrolls into view
-   * (not on page load). */
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const [autoplay, setAutoplay] = useState(false);
-  useEffect(() => {
-    const el = sliderRef.current;
-    if (!el) return undefined;
-    let timer: ReturnType<typeof setTimeout>;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          timer = setTimeout(() => setAutoplay(true), 3000);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0 }
-    );
-    observer.observe(el);
-    return () => {
-      observer.disconnect();
-      clearTimeout(timer);
-    };
-  }, []);
+  /* Auto-scroll only while the section is on screen, starting 3s after it
+   * first becomes visible (not on page load). */
+  const { ref: sliderRef, autoplay } = useInViewAutoplay(3000);
 
   return (
     <div>
