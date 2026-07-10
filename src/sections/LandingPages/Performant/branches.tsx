@@ -1,27 +1,29 @@
-import Link from 'next/link';
-import React from 'react';
 import Image from 'next/image';
+import { scrollToForm } from 'sections/ivf-center-bangalore/constants';
 
 const Branch = ({ branches }) => {
   return (
     <div>
-      <h1 className='text-center font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 lg:text-4xl'>
+      <h1 className='pt-12 text-center font-heading text-3xl font-bold text-gray-800 dark:text-gray-200 lg:pt-16 lg:text-4xl'>
         Our Branches
       </h1>
       <div className='mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-6 py-10 lg:py-16'>
         {branches?.map((items) => (
-          <Link
-            href={`/locations/${items?.slug}`}
+          <a
+            href='#form'
+            onClick={scrollToForm}
             key={items?.id}
             className='rounded-xl transition-all duration-150 hover:shadow-2xl'
           >
-            <div className='mx-auto flex max-w-sm flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-gg-500 dark:border-gray-600'>
-              <div className='overflow-hidden'>
+            <div className='mx-auto flex w-72 flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-gg-500 dark:border-gray-600'>
+              {/* Fixed-size frame + object-cover keeps every centre image the same shape */}
+              <div className='relative h-44 w-full overflow-hidden'>
                 <Image
                   src={items?.branchPicture?.url}
                   alt={items?.title}
-                  width={250}
-                  height={100}
+                  fill
+                  sizes='288px'
+                  className='object-cover'
                   loading='lazy'
                 />
               </div>
@@ -31,7 +33,7 @@ const Branch = ({ branches }) => {
                 </div>
               </div>
             </div>
-          </Link>
+          </a>
         ))}
       </div>
     </div>

@@ -21,7 +21,7 @@ const FloatRequestCallBack = () => {
       >
         <p className='text-base font-bold'>Request Call Back</p>
       </div>
-      <Dialog open={isOpen} as='div' className='relative z-10 focus:outline-none' onClose={close}>
+      <Dialog open={isOpen} as='div' className='relative z-[60] focus:outline-none' onClose={close}>
         {/* Faded background */}
         <div
           className='fixed inset-0 bg-black/80 transition-opacity duration-300 ease-out'
@@ -29,12 +29,12 @@ const FloatRequestCallBack = () => {
         ></div>
 
         <div className='fixed inset-0 z-10 w-screen overflow-y-auto'>
-          <div className='flex min-h-full items-center justify-center px-3 pt-8'>
+          <div className='flex min-h-full items-center justify-center px-3 py-4'>
             <DialogPanel
               transition
-              className='data-[closed]:transform-[scale(95%)] max-w-md rounded-xl bg-gray-800 pb-4 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] transition-shadow duration-300 ease-out hover:shadow-[0_0_25px_10px_rgba(0,0,0,0.5)] data-[closed]:opacity-0'
+              className='data-[closed]:transform-[scale(95%)] flex max-h-[calc(100dvh-2rem)] max-w-md flex-col overflow-hidden rounded-xl bg-gray-800 pb-4 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] transition-shadow duration-300 ease-out hover:shadow-[0_0_25px_10px_rgba(0,0,0,0.5)] data-[closed]:opacity-0'
             >
-              <div className='relative h-32 w-full'>
+              <div className='relative h-32 w-full shrink-0'>
                 <Image
                   src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1757330189/GG_Popup_Image-01_ykvac7.webp'
                   alt='formBanner'
@@ -48,7 +48,7 @@ const FloatRequestCallBack = () => {
                   <IoIosCloseCircleOutline fontSize={24} />
                 </CloseButton>
               </div>
-              <div className='px-0'>
+              <div className='min-h-0 flex-1 overflow-y-auto px-0'>
                 <div className='flex justify-center'>
                   <div className='mx-5 mt-5 w-fit self-center rounded-md bg-brandPink px-4 py-1 text-center text-[13px] font-semibold text-white shadow-sm'>
                     Book your Consultation

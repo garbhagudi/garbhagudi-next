@@ -207,6 +207,12 @@ const Form = () => {
     const phoneEl = form.elements.namedItem('PhoneNumber_countrycode') as HTMLInputElement | null;
     if (phoneEl) phoneEl.value = values.phone;
 
+    const zcGadEl = form.elements.namedItem('zc_gad') as HTMLInputElement | null;
+    if (zcGadEl && !zcGadEl.value) {
+      const filled = document.getElementById('zc_gad') as HTMLInputElement | null;
+      zcGadEl.value = filled?.value || fresh.gclid;
+    }
+
     /* Native browser POST — bypasses this React handler so we don't loop
      * back through validation, and Zoho's redirect (`zf_redirect_url`)
      * fires the same way it does on dash-ivf-next. */
@@ -245,7 +251,9 @@ const Form = () => {
           value={hidden.zf_redirect_url}
           onChange={NOOP_ONCHANGE}
         />
-        <input type='hidden' name='zc_gad' value={hidden.gclid} onChange={NOOP_ONCHANGE} />
+        {/* Uncontrolled so Zoho's zcga.js (loaded in _document) can populate
+         * it by id; handleSubmit backfills from the gclid cookie if empty. */}
+        <input type='hidden' id='zc_gad' name='zc_gad' defaultValue='' />
         <input type='hidden' name='utm_source' value={hidden.utm_source} onChange={NOOP_ONCHANGE} />
         <input type='hidden' name='utm_medium' value={hidden.utm_medium} onChange={NOOP_ONCHANGE} />
         <input

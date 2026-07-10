@@ -112,6 +112,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/ivf-center-bangalore',
+        destination: '/lp/ivf-centre-bangalore',
+        permanent: true,
+      },
+      {
         source: '/resources/fertility-glossary',
         destination: '/resources/fertility-lexicon',
         permanent: true,
