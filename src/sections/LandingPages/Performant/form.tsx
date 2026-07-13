@@ -83,7 +83,7 @@ function computeHidden(
   if (typeof window !== 'undefined') {
     const path = pageVisitPath || window.location.pathname || '/';
     referrer = `${window.location.origin}${path.startsWith('/') ? path : `/${path}`}`;
-    redirectUrl = zohoFormRedirectUrl || `${window.location.origin}/thank-you`;
+    redirectUrl = zohoFormRedirectUrl || `${window.location.origin}/lp/thank-you`;
   }
 
   return {
