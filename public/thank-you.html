@@ -745,15 +745,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <script>
+      /* Allowlist of embeddable video ids — the iframe URL is always built
+         from this constant array (never from the DOM), so page markup can't
+         influence what gets embedded. */
+      var VIDEO_IDS = ['Kbjz_vYlijA', 'FUjol4w5uEo', 'LeZbAzvIGr8'];
       document.querySelectorAll('.lite-yt').forEach(function (el) {
         el.addEventListener(
           'click',
           function () {
-            var id = el.getAttribute('data-id');
-            if (!/^[A-Za-z0-9_-]{11}$/.test(id || '')) return;
+            var idx = VIDEO_IDS.indexOf(el.getAttribute('data-id'));
+            if (idx === -1) return;
             var title = el.getAttribute('data-title') || 'YouTube video';
             var iframe = document.createElement('iframe');
-            iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1';
+            iframe.src = 'https://www.youtube-nocookie.com/embed/' + VIDEO_IDS[idx] + '?autoplay=1';
             iframe.title = title;
             iframe.setAttribute('frameborder', '0');
             iframe.setAttribute(
