@@ -122,6 +122,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/ivf/thank-you',
+        destination: '/lp/thank-you',
+        permanent: true,
+      },
+      {
         source: '/resources/fertility-glossary',
         destination: '/resources/fertility-lexicon',
         permanent: true,
