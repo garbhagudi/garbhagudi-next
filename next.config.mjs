@@ -105,7 +105,7 @@ const nextConfig = {
       },
       {
         source: '/public/thank-you.html',
-        destination: '/thank-you',
+        destination: '/lp/thank-you',
       },
     ];
   },
@@ -114,6 +114,16 @@ const nextConfig = {
       {
         source: '/ivf-center-bangalore',
         destination: '/lp/ivf-centre-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/thank-you',
+        destination: '/lp/thank-you',
+        permanent: true,
+      },
+      {
+        source: '/ivf/thank-you',
+        destination: '/lp/thank-you',
         permanent: true,
       },
       {

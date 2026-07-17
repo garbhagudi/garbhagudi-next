@@ -266,7 +266,7 @@ const Blog = ({ article }: BlogProps) => {
           </div>
         </div>
       </div>
-      <FAQs data={article?.faq} activeIndex={article?.faq[0]?.id} />
+      <FAQs data={article?.faq} activeIndex={article?.faq?.[0]?.id} />
       <Cta />
     </div>
   );
