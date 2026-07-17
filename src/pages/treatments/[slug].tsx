@@ -170,10 +170,10 @@ const Treatment = ({ treatment, accordionSections }) => {
           ?.map(
             (item: { question: string; answer: { text: string } }) => `{
               "@type": "Question",
-              "name": "${item.question.replace(/"/g, '\\"')}",
+              "name": "${(item.question || '').replace(/"/g, '\\"')}",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "${item.answer.text.replace(/"/g, '\\"')}"
+                "text": "${(item.answer?.text || '').replace(/"/g, '\\"')}"
               } 
             }`
           )

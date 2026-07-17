@@ -301,7 +301,7 @@ const Blog = ({ blog }) => {
           <meta property='og:type' content='article' />
           <meta property='og:article:published_time' content={blog?.publishedOn} />
           <meta property='og:article:author' content={blog?.doctor?.name} />
-          <meta property='og:image' content={blog?.image.url} />
+          <meta property='og:image' content={blog?.image?.url} />
           {/* Twitter*/}
           <meta name='twitter:card' content='summary_large_image' />
           <meta name='twitter:site' content='@garbhagudiivf' />
@@ -508,7 +508,7 @@ const Blog = ({ blog }) => {
                   <Share pinmedia={blog?.image?.url} />
                   {blog?.faq?.length > 0 && (
                     <div className='mt-6'>
-                      <FAQs data={blog?.faq} activeIndex={blog?.faq[0]?.id} />
+                      <FAQs data={blog?.faq} activeIndex={blog?.faq?.[0]?.id} />
                     </div>
                   )}
                   <BlogFooter />

@@ -270,7 +270,7 @@ const Vas = ({ valueAddedService }) => {
             </div>
             {valueAddedService?.faq?.length > 0 && (
               <div className='mt-6'>
-                <FAQs data={valueAddedService?.faq} activeIndex={valueAddedService?.faq[0]?.id} />
+                <FAQs data={valueAddedService?.faq} activeIndex={valueAddedService?.faq?.[0]?.id} />
               </div>
             )}
             <div></div>

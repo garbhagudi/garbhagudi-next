@@ -173,15 +173,15 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
                     imageComponent={
                       <ImageComponent
                         name={items.name}
-                        image={items.image.url}
+                        image={items?.image?.url}
                         designation={items.designation}
                         imageAlt={items.imageAlt}
                       />
                     }
                     activeIndex={activeIndex}
-                    docpic={items.image.url}
+                    docpic={items?.image?.url}
                     name={items.name}
-                    bio={items.bio.raw.children}
+                    bio={items?.bio?.raw?.children}
                     setActiveIndex={setActiveIndex}
                   />
                 ))}

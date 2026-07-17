@@ -105,6 +105,9 @@ interface BlogProps {
   };
 }
 
+const DEFAULT_IMAGE =
+  'https://res.cloudinary.com/decyl0nmm/image/upload/v1762938523/Best_IVF_Center_GarbhaGudi-1_shyb2u.webp';
+
 const Blog = ({ article }: BlogProps) => {
   const [isMounted, setIsMounted] = useState(false);
 
@@ -116,6 +119,7 @@ const Blog = ({ article }: BlogProps) => {
   if (router.isFallback) {
     return <Loading />;
   }
+  const imageUrl = article?.image?.url || DEFAULT_IMAGE;
   function addBreadcrumbsJsonLd() {
     return {
       __html: `{
@@ -153,11 +157,11 @@ const Blog = ({ article }: BlogProps) => {
           ?.map(
             (item: { question: string; answer: { text: string } }) => `{
               "@type": "Question",
-              "name": "${item.question.replace(/"/g, '\\"')}",
+              "name": "${(item.question || '').replace(/"/g, '\\"')}",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "${item.answer.text.replace(/"/g, '\\"')}"
-              } 
+                "text": "${(item.answer?.text || '').replace(/"/g, '\\"')}"
+              }
             }`
           )
           .join(',')}]
@@ -172,7 +176,7 @@ const Blog = ({ article }: BlogProps) => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='preload' href={article?.image?.url} as='image' />
+        <link rel='preload' href={imageUrl} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={`${article?.metaTitle}`} />
@@ -186,7 +190,7 @@ const Blog = ({ article }: BlogProps) => {
         <meta property='og:url' content='https://garbhagudi.com' />
         <meta property='og:description' content={article?.metaDescription} />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content={article?.image.url} />
+        <meta property='og:image' content={imageUrl} />
 
         {/* Twitter*/}
 
@@ -194,7 +198,7 @@ const Blog = ({ article }: BlogProps) => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={`${article?.metaTitle} | GarbhaGudi IVF Centre`} />
         <meta name='twitter:description' content={article?.metaDescription} />
-        <meta name='twitter:image' content={article?.image.url} />
+        <meta name='twitter:image' content={imageUrl} />
 
         {/* Ld+JSON Data */}
         <script
@@ -308,7 +312,7 @@ const Blog = ({ article }: BlogProps) => {
             </h1>
             <Image
               className='mb-5 mt-10 w-full rounded-lg'
-              src={article?.image?.url}
+              src={imageUrl}
               alt={article?.imageAlt}
               width={1310}
               height={873}
@@ -329,11 +333,11 @@ const Blog = ({ article }: BlogProps) => {
                 />
               )}
             </div>
-            <Share pinmedia={article?.image?.url} />
+            <Share pinmedia={imageUrl} />
           </div>
         </div>
       </div>
-      <FAQs data={article?.faq} activeIndex={article?.faq[0]?.id} />
+      <FAQs data={article?.faq} activeIndex={article?.faq?.[0]?.id} />
       <Cta />
     </div>
   );

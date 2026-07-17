@@ -73,7 +73,7 @@ export const getStaticPaths = async () => {
 
 const Vas = ({ valueAddedService }) => {
   const title = `${valueAddedService?.title} | GarbhaGudi IVF Centre}`;
-  const desc = `${valueAddedService?.content.text.slice(0, 169)}`;
+  const desc = `${valueAddedService?.content?.text?.slice(0, 169) || ''}`;
   const image = `${valueAddedService?.image?.url}`;
   function addBreadcrumbsJsonLd() {
     return {
@@ -142,7 +142,7 @@ const Vas = ({ valueAddedService }) => {
         />
         <section className='text-justify text-gray-800 dark:text-gray-200'>
           <RichText
-            content={valueAddedService?.content.raw.children}
+            content={valueAddedService?.content?.raw?.children}
             renderers={{
               p: ({ children }) => <p className='text-justify'>{children}</p>,
               a: ({ children, href }) => (
@@ -165,7 +165,7 @@ const Vas = ({ valueAddedService }) => {
         </section>
         {valueAddedService?.faq?.length > 0 && (
           <div className='mt-6'>
-            <FAQs data={valueAddedService?.faq} activeIndex={valueAddedService?.faq[0]?.id} />
+            <FAQs data={valueAddedService?.faq} activeIndex={valueAddedService?.faq?.[0]?.id} />
           </div>
         )}
       </article>

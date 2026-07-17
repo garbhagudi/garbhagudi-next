@@ -153,10 +153,10 @@ const Blog = ({ article }: BlogProps) => {
           ?.map(
             (item: { question: string; answer: { text: string } }) => `{
               "@type": "Question",
-              "name": "${item.question.replace(/"/g, '\\"')}",
+              "name": "${(item.question || '').replace(/"/g, '\\"')}",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "${item.answer.text.replace(/"/g, '\\"')}"
+                "text": "${(item.answer?.text || '').replace(/"/g, '\\"')}"
               } 
             }`
           )
@@ -339,7 +339,7 @@ const Blog = ({ article }: BlogProps) => {
           </div>
         </div>
       </div>
-      <FAQs data={article?.faq} activeIndex={article?.faq[0]?.id} />
+      <FAQs data={article?.faq} activeIndex={article?.faq?.[0]?.id} />
       <Cta />
     </div>
   );
