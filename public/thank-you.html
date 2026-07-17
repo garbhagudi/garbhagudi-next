@@ -750,6 +750,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           'click',
           function () {
             var id = el.getAttribute('data-id');
+            if (!/^[A-Za-z0-9_-]{11}$/.test(id || '')) return;
             var title = el.getAttribute('data-title') || 'YouTube video';
             var iframe = document.createElement('iframe');
             iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1';

@@ -11,9 +11,18 @@ const nav: {
       name: 'Hysteroscopy',
       href: 'https://www.garbhagudi.com/treatments/hysteroscopy-treatment-in-bangalore',
     },
-    { name: 'ICSI Treatment', href: 'https://www.garbhagudi.com/treatments/icsi-treatment-in-bangalore' },
-    { name: 'IUI Treatment', href: 'https://www.garbhagudi.com/treatments/iui-treatment-in-bangalore' },
-    { name: 'IVF Treatment', href: 'https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore' },
+    {
+      name: 'ICSI Treatment',
+      href: 'https://www.garbhagudi.com/treatments/icsi-treatment-in-bangalore',
+    },
+    {
+      name: 'IUI Treatment',
+      href: 'https://www.garbhagudi.com/treatments/iui-treatment-in-bangalore',
+    },
+    {
+      name: 'IVF Treatment',
+      href: 'https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore',
+    },
     {
       name: 'Laparoscopy',
       href: 'https://www.garbhagudi.com/treatments/laparoscopy-treatment-in-bangalore',
