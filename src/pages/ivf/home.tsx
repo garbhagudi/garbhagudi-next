@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import apolloClient from 'lib/apollo-graphcms';
+import { filterExcludedVideos } from 'lib/excluded-videos';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
@@ -264,7 +265,7 @@ export const getStaticProps = async () => {
     `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=5&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
-  const testimonials = await testimonialsData.json();
+  const testimonials = filterExcludedVideos(await testimonialsData.json());
 
   return {
     props: {
