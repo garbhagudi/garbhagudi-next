@@ -111,6 +111,7 @@ export const contactData = {
       name: 'Appointments & Queries',
       email: 'dreams@garbhagudi.com',
       phone: '+91 9108 9108 32',
+      
     },
     {
       id: 2,
@@ -142,7 +143,7 @@ export const contactData = {
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560050</p>
         </div>
       ),
-      phone: '+91 9886 9155 56',
+      phone: '+91 9108 9108 32',
       directionLink: 'https://g.page/GG1-HN?share',
     },
     {
@@ -157,7 +158,7 @@ export const contactData = {
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560043</p>
         </div>
       ),
-      phone: '+91 8861 4333 39',
+      phone: '+91 9108 9108 32',
       directionLink: 'https://g.page/GarbhaGudi-IVF-Bangalore?share',
     },
     {
@@ -172,7 +173,7 @@ export const contactData = {
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560004</p>
         </div>
       ),
-      phone: '+91 9972 4633 55',
+      phone: '+91 9108 9108 32',
       directionLink: 'https://g.page/ggivf?share',
     },
     {
@@ -187,7 +188,7 @@ export const contactData = {
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560100</p>
         </div>
       ),
-      phone: '+91 8861 8111 16',
+      phone: '+91 9108 9108 32',
       directionLink: 'https://g.page/GG4-EC?share',
     },
     {
@@ -204,7 +205,7 @@ export const contactData = {
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560037</p>
         </div>
       ),
-      phone: '+91 8105 1815 15',
+      phone: '+91 9108 9108 32',
       directionLink: 'https://goo.gl/maps/kxhfM5SCZuq6EDnE9',
     },
     {
@@ -219,7 +220,7 @@ export const contactData = {
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560094</p>
         </div>
       ),
-      phone: '+91 9108 9108 25',
+      phone: '+91 9108 9108 32',
       directionLink: 'https://goo.gl/maps/Fmiwn4ZCsSTxehnq9',
     },
     {
@@ -231,7 +232,7 @@ export const contactData = {
           <p className='mb-5 mt-1'>Bengaluru, Karnataka 560072</p>
         </div>
       ),
-      phone: '+91 9886 9886 65',
+      phone: '+91 9108 9108 32',
       directionLink: 'https://goo.gl/maps/6ZCKzTrmE3UzgFuS7',
     },
     {
