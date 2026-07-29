@@ -2,6 +2,7 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import HomeComponent from 'sections/home';
 import apolloClient from 'lib/apollo-graphcms';
+import { filterExcludedVideos } from 'lib/excluded-videos';
 import { gql } from '@apollo/client';
 import BannerComponent from 'sections/home/bannerComponent';
 const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
@@ -218,7 +219,7 @@ export const getStaticProps = async () => {
     `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 
-  const testimonials = await testimonialsData.json();
+  const testimonials = filterExcludedVideos(await testimonialsData.json());
 
   return {
     props: {

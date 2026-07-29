@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Tab, TabGroup, TabList, TabPanels, TabPanel } from '@headlessui/react';
+import { filterExcludedVideos } from 'lib/excluded-videos';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import Head from 'next/head';
@@ -32,7 +33,7 @@ export async function getServerSideProps() {
   const recommended = await recommendedData.json();
   const garbhasandesha = await garbhasandeshaData.json();
   const tvAppearance = await tvAppearanceData.json();
-  const testimonials = await testimonialData.json();
+  const testimonials = filterExcludedVideos(await testimonialData.json());
 
   return {
     props: {
@@ -48,7 +49,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
   const [url, setUrl] = useState(recommended?.items[0].snippet.resourceId.videoId);
   const [url2, setUrl2] = useState(garbhasandesha?.items[0].snippet.resourceId.videoId);
   const [url3, setUrl3] = useState(tvAppearance?.items[0].snippet.resourceId.videoId);
-  const [url4, setUrl4] = useState(testimonials?.items[0].snippet.resourceId.videoId);
+  const [url4, setUrl4] = useState(testimonials?.items?.[0]?.snippet?.resourceId?.videoId);
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', url: 'https://www.garbhagudi.com/' },
     { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },

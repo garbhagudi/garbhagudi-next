@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import BreadCrumbs from 'components/breadcrumbs';
 import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import { filterExcludedVideos } from 'lib/excluded-videos';
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 interface VideoItem {
   id: string;
@@ -35,7 +36,7 @@ const IndexPage = () => {
       const successStories = await fetch(
         `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=6&pageToken=${pageToken}&key=AIzaSyAuDHAmd-s4jYNwqYg1AHSJDwIOgM9k0rU`
       );
-      const successStoriesRes = await successStories.json();
+      const successStoriesRes = filterExcludedVideos(await successStories.json());
 
       setSuccessStoriesData(successStoriesRes);
     };
