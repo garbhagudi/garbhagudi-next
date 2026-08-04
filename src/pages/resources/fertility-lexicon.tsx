@@ -18,8 +18,8 @@ const LexiconPage = () => {
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='robots' content='noindex, nofollow' />
-        <title>Lexicon | GarbhaGudi</title>
-        <meta name='title' content='Lexicon | GarbhaGudi IVF Centre' />
+        <title>Fertility Lexicon | GarbhaGudi</title>
+        <meta name='title' content='Fertility Lexicon | GarbhaGudi IVF Centre' />
         <meta
           name='description'
           content='Browse fertility and IVF lexicon terms with clear definitions. A quick reference guide from GarbhaGudi for patients and partners.'
@@ -29,7 +29,7 @@ const LexiconPage = () => {
           dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
           id='breadcrumbs-jsonld'
         />
-        <meta property='og:title' content='Lexicon | GarbhaGudi IVF Centre' />
+        <meta property='og:title' content='Fertility Lexicon | GarbhaGudi IVF Centre' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://www.garbhagudi.com/resources/fertility-lexicon' />
         <meta
@@ -43,7 +43,7 @@ const LexiconPage = () => {
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta name='twitter:title' content='Lexicon | GarbhaGudi IVF Centre' />
+        <meta name='twitter:title' content='Fertility Lexicon | GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
           content='Browse fertility and IVF lexicon terms with clear definitions. A quick reference guide from GarbhaGudi.'

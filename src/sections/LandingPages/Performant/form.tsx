@@ -99,9 +99,14 @@ function computeHidden(
   };
 }
 
-type FieldErrors = { name?: string; phone?: string; email?: string };
+type FieldErrors = { name?: string; phone?: string; email?: string; consent?: string };
 
-function validateFields(values: { name: string; phone: string; email: string }): FieldErrors {
+function validateFields(values: {
+  name: string;
+  phone: string;
+  email: string;
+  consent: boolean;
+}): FieldErrors {
   const err: FieldErrors = {};
   if (!values.name || values.name.length < 2) {
     err.name = 'Full Name is required';
@@ -115,10 +120,13 @@ function validateFields(values: { name: string; phone: string; email: string }):
   if (emailTrimmed && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailTrimmed)) {
     err.email = 'Invalid email format';
   }
+  if (!values.consent) {
+    err.consent = 'Please accept to be contacted before submitting';
+  }
   return err;
 }
 
-const FIELD_ERROR_ORDER: (keyof FieldErrors)[] = ['name', 'phone', 'email'];
+const FIELD_ERROR_ORDER: (keyof FieldErrors)[] = ['name', 'phone', 'email', 'consent'];
 
 function focusFirstFieldError(next: FieldErrors, suffix: string) {
   const firstKey = FIELD_ERROR_ORDER.find((k) => next[k]);
@@ -126,6 +134,7 @@ function focusFirstFieldError(next: FieldErrors, suffix: string) {
     name: `SingleLine-${suffix}`,
     phone: `PhoneNumber-${suffix}`,
     email: `Email-${suffix}`,
+    consent: `Consent-${suffix}`,
   };
   const el = firstKey ? document.getElementById(idMap[firstKey]) : null;
   el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -140,7 +149,8 @@ function readFormValues(form: HTMLFormElement) {
     (form.elements.namedItem('PhoneNumber_countrycode') as HTMLInputElement | null)?.value ?? '';
   const phone = phoneRaw.replace(/\D/g, '');
   const email = ((form.elements.namedItem('Email') as HTMLInputElement | null)?.value ?? '').trim();
-  return { name, phone, email };
+  const consent = (form.elements.namedItem('Consent') as HTMLInputElement | null)?.checked ?? false;
+  return { name, phone, email, consent };
 }
 
 const Form = () => {
@@ -361,8 +371,9 @@ const Form = () => {
               id={`Consent-${suffix}`}
               name='Consent'
               value='Yes'
-              defaultChecked
               className='h-6 w-6 cursor-pointer accent-gg-500 checked:border-gg-500 checked:bg-gg-500'
+              aria-invalid={errors.consent ? 'true' : 'false'}
+              onChange={() => clearFieldError('consent')}
             />
             <span className='text-justify text-sm text-gray-500'>
               By submitting this form I agree to be contacted by GarbhaGudi IVF Centre using the
@@ -376,6 +387,9 @@ const Form = () => {
               </Link>
             </span>
           </label>
+          {errors.consent && (
+            <p className='mt-2 text-center text-sm text-red-500'>{errors.consent}</p>
+          )}
         </div>
 
         <div className='mb-6 mt-6 flex items-center justify-center space-x-4'>

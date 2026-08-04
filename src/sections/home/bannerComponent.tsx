@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { getImageProps } from 'next/image';
 import Link from 'next/link';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import Carousel from 'nuka-carousel';
@@ -12,10 +12,48 @@ interface bannerProps {
       image: {
         url: string;
       };
+      mobileImage?: {
+        url: string;
+        width: number;
+        height: number;
+      } | null;
       imageUrl: string;
     },
   ];
 }
+
+// Art-directed banner: desktop creative ≥768px (Tailwind `md`), mobile
+// creative below — the browser downloads only the matching source.
+const BannerImage = ({ banner }: { banner: bannerProps['banners'][number] }) => {
+  const common = { alt: banner?.title, priority: true };
+  const { props: desktop } = getImageProps({
+    ...common,
+    src: banner?.image?.url,
+    width: 1920,
+    height: 1080,
+  });
+  const { props: mobile } = getImageProps({
+    ...common,
+    src: banner?.mobileImage?.url || banner?.image?.url,
+    width: banner?.mobileImage?.width || 1920,
+    height: banner?.mobileImage?.height || 1080,
+  });
+
+  return (
+    <picture>
+      {/* images.unoptimized is on, so srcSet is absent — fall back to src */}
+      <source
+        media='(min-width: 768px)'
+        srcSet={desktop.srcSet || desktop.src}
+        sizes={desktop.sizes}
+        width={desktop.width}
+        height={desktop.height}
+      />
+      {/* eslint-disable-next-line jsx-a11y/alt-text */}
+      <img {...mobile} className='h-full w-full object-cover' />
+    </picture>
+  );
+};
 
 const BannerComponent = (bannerData: bannerProps) => {
   const defaultControlsConfig = {
@@ -55,14 +93,7 @@ const BannerComponent = (bannerData: bannerProps) => {
         {bannerData ? (
           bannerData.banners.map((banner) => (
             <Link href={banner?.url || '#'} target='_blank' rel='noreferrer' key={banner.id}>
-              <Image
-                src={banner?.image?.url}
-                alt={banner?.title}
-                width={1920}
-                height={1080}
-                className='h-full w-full object-cover'
-                priority
-              />
+              <BannerImage banner={banner} />
             </Link>
           ))
         ) : (
