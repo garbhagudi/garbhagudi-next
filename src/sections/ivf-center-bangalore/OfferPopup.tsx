@@ -7,7 +7,7 @@ import { IoClose } from 'react-icons/io5';
 import { scrollToForm } from 'sections/ivf-center-bangalore/constants';
 
 const OFFER_IMAGE =
-  'https://res.cloudinary.com/garbhagudiivf/image/upload/v1783582858/ivf-center-bangalore/July_2026_-Offer_Icon_Eng_atuyfq.png';
+  'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmscznfgtbjob06o4469gs7ra';
 const OPEN_DELAY_MS = 10000;
 
 /* Centres not offering this promotion. */

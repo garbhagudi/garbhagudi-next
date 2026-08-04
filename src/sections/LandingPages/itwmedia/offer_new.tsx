@@ -7,7 +7,7 @@ const Offer = () => {
       {/* Background Image Section */}
       <div className='h-100 mx-auto w-full bg-cover bg-center object-cover md:w-1/2'>
         <Image
-          src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1732969307/paripoorna/IVF_WebP_Compression_p0cbco.webp'
+          src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedi358uf07plo082pq51'
           alt='Banner Image'
           width={400}
           height={400}

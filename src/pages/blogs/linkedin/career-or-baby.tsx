@@ -12,7 +12,7 @@ const CareerOrBaby = () => {
         {/* Primary Tags */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.webp'
+          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1d93plq07plyvlrxm66'
           as='image'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -39,7 +39,7 @@ const CareerOrBaby = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1d93plq07plyvlrxm66'
         />
 
         {/* Twitter*/}
@@ -55,7 +55,7 @@ const CareerOrBaby = () => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1d93plq07plyvlrxm66'
         />
       </Head>
       <div className='mx-auto px-4 pt-16 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-8'>
@@ -66,7 +66,7 @@ const CareerOrBaby = () => {
           <div>
             <Image
               className='h-64 w-full rounded-2xl object-cover shadow-lg sm:h-[360px]'
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.webp'
+              src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1d93plq07plyvlrxm66'
               alt='Career or Baby ?'
               width={500}
               height={500}
@@ -128,7 +128,7 @@ const CareerOrBaby = () => {
           </div>
           <div className='max-w-xl'>
             <Image
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/Male_infertility-min_xt4ouj.webp'
+              src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1dz3plu07plrqgv404y'
               alt='Male Infertility'
               className='rounded-3xl'
               width={500}
@@ -145,7 +145,7 @@ const CareerOrBaby = () => {
         <div className='grid lg:grid-cols-2'>
           <div className='max-w-xl'>
             <Image
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/Female_fertility-min_yvazig.webp'
+              src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1ep3ply07plh5m1zqr0'
               alt='Female Infertility'
               className='rounded-3xl'
               width={500}
@@ -225,7 +225,7 @@ const CareerOrBaby = () => {
           <div className='relative w-full'>
             <Image
               className='h-56 w-full rounded-3xl object-cover shadow-lg transition-shadow duration-300 hover:shadow-xl sm:h-64 md:h-80 lg:h-96'
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/ART_The_Real_Boon_-min_lqxqex.webp'
+              src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmc83prp07plteu9qg1j'
               alt='ART - The Real Boon!'
               width={500}
               height={500}
@@ -279,7 +279,7 @@ const CareerOrBaby = () => {
           </div>
           <div className='max-w-xl'>
             <Image
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215523/blogs/Egg_Freezing-min_zyhjfb.webp'
+              src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmdp3prx07pl07w7dllx'
               alt='Sperm Freezing'
               className='rounded-3xl'
               width={500}
@@ -296,7 +296,7 @@ const CareerOrBaby = () => {
         <div className='grid lg:grid-cols-2'>
           <div className='max-w-xl'>
             <Image
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/Sperm_Freezing-min_atfspg.webp'
+              src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmsczhh2zbani07pfbvspuz4q'
               alt='Egg Freezing'
               className='rounded-3xl'
               width={500}
@@ -334,7 +334,7 @@ const CareerOrBaby = () => {
         </p>
         <Share
           pinmedia={
-            'https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.webp'
+            'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1d93plq07plyvlrxm66'
           }
         />
         <BlogFooter />

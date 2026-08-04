@@ -48,7 +48,7 @@ const WhyGarbhaGudi = () => {
           <div className='mx-auto'>
             <Image
               src={
-                'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742986482/landing-page/why-garbhagudi_pa4rxa.webp'
+                'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vlpnr59p608pkpy5nsyoj'
               }
               alt='Why GarbhaGudi Image'
               width={500}

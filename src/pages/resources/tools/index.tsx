@@ -36,7 +36,7 @@ const IndexPage = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedkk58uv07plx6jvslfz'
         />
 
         {/* Twitter*/}
@@ -50,7 +50,7 @@ const IndexPage = () => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedkk58uv07plx6jvslfz'
         />
         <script
           type='application/ld+json'
@@ -148,14 +148,14 @@ const Data = [
     id: 1,
     name: 'Ovulation Calculator',
     link: 'ovulation-calculator',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1654849032/Icons/Resources/Calendar_tvq9bm.svg',
+    icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedlw58uz07plg2j59pex',
     description: 'Know your next menstrual cycle and fertile window',
   },
   {
     id: 1,
     name: 'Fertility Quotient Calculator',
     link: 'fertility-quotient-calculator',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1654849032/Icons/Resources/Calculator_bxkdl9.svg',
+    icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8kwi0s3zaf07pl53bjg4wy',
     description: 'Calculate your Fertility Quotient',
   },
 ];

@@ -235,7 +235,7 @@ const Doctor = ({ doctor, accordionSections }) => {
             className='absolute top-0 h-full w-full bg-cover bg-center'
             style={{
               backgroundImage:
-                "url('https://res.cloudinary.com/garbhagudiivf/image/upload/v1643286880/Banner/Behind_Doctors_fssazq.webp')",
+                "url('https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8od585p07plknvgx4ja')",
             }}
           >
             <span

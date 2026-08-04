@@ -47,7 +47,7 @@ export default function Fertility() {
       <div className='mt-32 flex h-[45rem] w-screen flex-col items-start gap-4 pl-5 md:mt-0 md:h-screen md:w-[70%] md:justify-center md:pl-20'>
         <Image
           src={
-            'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568598/eggFreezing/azpbdaygrirxycn4jiwh.webp'
+            'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgw8h58sg08pkdsc4rd46'
           }
           width={100}
           height={100}
@@ -85,7 +85,7 @@ export default function Fertility() {
         <div className='absolute bottom-0 right-0 z-10'>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568616/eggFreezing/cdla1ahl9d9vfikelqwl.webp'
+              'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgw9558sk08pknua93x0e'
             }
             width={300}
             height={100}
@@ -94,7 +94,7 @@ export default function Fertility() {
           />
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568605/eggFreezing/xi4vevxycdv9wpiceby5.webp'
+              'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgw9q58so08pk74cfpz4e'
             }
             width={220}
             height={220}
@@ -103,7 +103,7 @@ export default function Fertility() {
           />
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568605/eggFreezing/xv4atl9mjysjoxnhv1oh.webp'
+              'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgwab58ss08pkgypcy01q'
             }
             width={250}
             height={250}

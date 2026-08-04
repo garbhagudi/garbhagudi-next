@@ -33,7 +33,7 @@ const Stat = () => {
           <div className='h-full xl:relative xl:col-start-2'>
             <Image
               className='h-full w-full object-cover opacity-70 xl:absolute xl:inset-0'
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722501966/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0_1_i7oozx.webp'
+              src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6m708va08pkgt5xrll1'
               alt='Successful IVF Treatment In Banglore'
               height={1024}
               width={1024}

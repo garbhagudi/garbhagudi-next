@@ -18,6 +18,7 @@ const nextConfig = {
     domains: [
       'res.cloudinary.com',
       'media.graphassets.com',
+      'ap-south-1.graphassets.com',
       'avatars.dicebear.com',
       'app.unbounce.com',
       'https://yogachallenge.in/',
@@ -3129,4 +3130,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-

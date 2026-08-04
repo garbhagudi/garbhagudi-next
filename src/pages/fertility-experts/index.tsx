@@ -60,7 +60,7 @@ const IndexPage = ({ branches }: Branches) => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='preconnect' href='https://res.cloudinary.com' />
+        <link rel='preconnect' href='https://ap-south-1.graphassets.com' />
         <link rel='preconnect' href='https://maps.googleapis.com' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Best IVF Specialist in Bangalore</title>
@@ -82,7 +82,7 @@ const IndexPage = ({ branches }: Branches) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
 
         {/* Twitter*/}
@@ -96,7 +96,7 @@ const IndexPage = ({ branches }: Branches) => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
 
         <script

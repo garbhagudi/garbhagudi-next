@@ -17,7 +17,7 @@ const IndexPage = () => {
         <link rel='alternate' href='https://garbhagudi.com/enquiry' hrefLang='x-default' />
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1757330189/GG_Popup_Image-01_ykvac7.webp'
+          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmf63ps507pl13e62vkv'
           as='image'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -39,7 +39,7 @@ const IndexPage = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1757330189/GG_Popup_Image-01_ykvac7.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmf63ps507pl13e62vkv'
         />
 
         {/* Twitter*/}
@@ -52,7 +52,7 @@ const IndexPage = () => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1757330189/GG_Popup_Image-01_ykvac7.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmf63ps507pl13e62vkv'
         />
         <script
           type='application/ld+json'
@@ -73,7 +73,7 @@ const IndexPage = () => {
       <div className='flex w-full items-center justify-center px-3 py-8'>
         <div className='w-fit'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1757330189/GG_Popup_Image-01_ykvac7.webp'
+            src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmf63ps507pl13e62vkv'
             alt='formBanner'
             className='mx-auto mt-4 rounded-t-md md:max-w-2xl'
             width={1024}

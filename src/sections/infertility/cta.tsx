@@ -24,7 +24,7 @@ const CTA: React.FC = () => {
     <div
       className='relative flex h-screen max-h-64 items-center justify-center bg-cover bg-center shadow-xl'
       style={{
-        backgroundImage: `url('https://res.cloudinary.com/garbhagudiivf/image/upload/v1691232590/Misc/happy-smiling-mother-playing-with-newborn-child-comfy-light-bedroom-front-window-moments-motherhood-happiness-with-kids-family-concept-min_txfdml.webp')`,
+        backgroundImage: `url('https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6km08v208pk1e4c8z0p')`,
       }}
     >
       <div className='absolute h-full w-full bg-gray-800 opacity-30 dark:opacity-60'></div>

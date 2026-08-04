@@ -29,7 +29,7 @@ export default function LandingPage({ doctors, branches }) {
       <Head>
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1732969307/paripoorna/IVF_WebP_Compression_p0cbco.webp'
+          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedi358uf07plo082pq51'
           as='image'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -58,7 +58,7 @@ export default function LandingPage({ doctors, branches }) {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
 
         {/* Twitter*/}
@@ -75,7 +75,7 @@ export default function LandingPage({ doctors, branches }) {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
       </Head>
       <Header />

@@ -11,15 +11,15 @@ const Gallery = () => {
   };
 
   const images = [
-    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973573/Events/1_shz9cp.webp',
-    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973573/Events/3_zu4h7b.webp',
-    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973573/Events/6_m6u9hz.webp',
-    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973574/Events/8_fj2i1t.webp',
-    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973573/Events/9_n7zlqe.webp',
-    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973573/Events/10_ovuzma.webp',
-    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973575/Events/13_olf4js.webp',
-    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973573/Events/15_amskll.webp',
-    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742973573/Events/17_kfbprg.webp',
+    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vnte65ahp07pl2xhp97kf',
+    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vntes5aht07pl3em3fydg',
+    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vntff5ahx07pl74ydkwn2',
+    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8voskl5ady08pkg00zabnm',
+    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vosl75ae208pk3nle7qhh',
+    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vosls5ae608pkh5kv2l6h',
+    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vosmd5aea08pkqna3mxys',
+    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vosmx5aee08pkayvmsxth',
+    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vosng5aei08pkqfz3kwkw',
   ];
   return (
     <div>

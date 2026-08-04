@@ -48,7 +48,7 @@ export default function ThankYouHero() {
 
         <div className='hero-image'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742214671/GGIRHR/Images/Couple-01_iiwu8i.png'
+            src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms75y8q9h0xl07pnxcag7v7i'
             alt='Happy couple at GarbhaGudi'
             width={560}
             height={680}

@@ -58,7 +58,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
 
         {/* Twitter*/}
@@ -72,7 +72,7 @@ const IndexPage = ({ articles }: Article) => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
       </Head>
       <BreadCrumbs text1='Solutions' link1='/solutions' text2='' link2='' />
@@ -93,7 +93,7 @@ const IndexPage = ({ articles }: Article) => {
                     className='h-24 w-24 rounded-lg object-cover transition-all duration-300 group-hover:grayscale-0 dark:grayscale'
                     src={
                       item?.logoUrl ||
-                      'https://res.cloudinary.com/decyl0nmm/image/upload/v1762938141/Fertility_Center_mc7y9x.svg'
+                      'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedmm58v307plpau6ntfd'
                     }
                     alt={item?.title}
                     width={100}

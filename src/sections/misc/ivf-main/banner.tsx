@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Banner = () => {
   return (
     <div>
-      <section className='relative bg-[url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1672381537/Misc/happy-pregnant-woman-late-pregnancy-stage-sitting-grass-lawn-min_11zon_xkeac0.webp)] bg-cover bg-right bg-no-repeat sm:bg-center'>
+      <section className='relative bg-[url(https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8qj586507pl03hfxicv)] bg-cover bg-right bg-no-repeat sm:bg-center'>
         <div className='to-white/15 absolute inset-0 bg-gradient-to-r from-white/90 dark:from-gray-800/90 dark:to-gray-800/30 sm:bg-transparent'></div>
         <div className='relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8'>
           <div className='max-w-xl text-center sm:text-left'>

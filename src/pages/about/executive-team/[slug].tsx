@@ -124,7 +124,7 @@ const ExecutiveTeam = ({ director }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Directors_jbvcep.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87rf57ny07plvgs5r62x'
         />
 
         {/* Twitter*/}
@@ -135,7 +135,7 @@ const ExecutiveTeam = ({ director }) => {
         <meta name='twitter:description' content={director?.bio?.text.slice(0, 160)} />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Directors_jbvcep.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87rf57ny07plvgs5r62x'
         />
         {/* Ld+JSON Data */}
         <script
@@ -161,7 +161,7 @@ const ExecutiveTeam = ({ director }) => {
               <Image
                 alt='content'
                 className='h-full w-full object-cover'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643287945/Banner/1200x500_4Directors_nqn9eg.webp'
+                src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1co3plm07pltvxsmg5z'
                 width={1200}
                 height={500}
               />

@@ -18,7 +18,7 @@ const StatsPC = () => {
                 onMouseLeave={() => setTooltipStatus(0)}
               >
                 <Image
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830364/Icons/Why%20GarbhaGudi/11-Years_bvg1gg.webp'
+                  src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6od08vm08pkbu54elhs'
                   alt='11+ years'
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
@@ -37,7 +37,7 @@ const StatsPC = () => {
               <div className='absolute -z-40 h-[450px] w-[450px] animate-spinSlow rounded-full border-2 border-dashed border-gg-500 bg-transparent dark:border-gg-400'></div>
               <div className='flex h-96 w-96 items-center justify-center rounded-full p-10 shadow-2xl ring-brandPink4 dark:bg-gray-700'>
                 <Image
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1752831446/GG_384x384_xhc6u4.webp'
+                  src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vl0oy59za07pljtz5ha73'
                   alt='garbhagudi logo'
                   className='h-full w-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert'
                   width={256}
@@ -53,7 +53,7 @@ const StatsPC = () => {
                 onMouseLeave={() => setTooltipStatus(0)}
               >
                 <Image
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Holistic-Approach_timeda.webp'
+                  src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6po08vu08pkw8qrq5lo'
                   alt='Holostic Approach'
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
@@ -72,7 +72,7 @@ const StatsPC = () => {
                 onMouseLeave={() => setTooltipStatus(0)}
               >
                 <Image
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Humane-Touch_qvniyh.webp'
+                  src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6qg08vy08pkkptynjq8'
                   alt='Humane Touch'
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
@@ -89,7 +89,7 @@ const StatsPC = () => {
                 onMouseLeave={() => setTooltipStatus(0)}
               >
                 <Image
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830505/Icons/Why%20GarbhaGudi/Successful-Pregnancy_1_xw1hbe.webp'
+                  src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6r708w208pk0ok4tc0d'
                   alt='High Success Rate'
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
@@ -108,7 +108,7 @@ const StatsPC = () => {
                 onMouseLeave={() => setTooltipStatus(0)}
               >
                 <Image
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Reknowed-Doctor_x52vlx.webp'
+                  src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in18n3pky07pl537v57hy'
                   alt='Top Fertility Specialists'
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
@@ -127,7 +127,7 @@ const StatsPC = () => {
                 onMouseLeave={() => setTooltipStatus(0)}
               >
                 <Image
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Trasparent-Billing_rbt5lj.webp'
+                  src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in19g3pl207plhoea2w49'
                   alt='Transparent Pricing'
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
@@ -147,7 +147,7 @@ const StatsPC = () => {
                 onMouseLeave={() => setTooltipStatus(0)}
               >
                 <Image
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/World-Class-Lab_yerlf1.webp'
+                  src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1a63pl607plcz55wsz8'
                   alt='World Class Labs'
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
@@ -166,7 +166,7 @@ const StatsPC = () => {
                 onMouseLeave={() => setTooltipStatus(0)}
               >
                 <Image
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Cutting-Edge_qpqb9w.webp'
+                  src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1ax3pla07plwitixgei'
                   alt='Cutting Edge Technologies'
                   className='transition-all duration-500 hover:scale-115'
                   width={200}

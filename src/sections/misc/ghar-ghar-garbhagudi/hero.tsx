@@ -5,7 +5,7 @@ const Hero = () => {
         className='bg-cover bg-center bg-no-repeat'
         style={{
           backgroundImage:
-            'url("https://res.cloudinary.com/garbhagudiivf/image/upload/v1691234829/Misc/young-wife-husband-have-problems-family-life-min_csilul.webp")',
+            'url("https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmho3psl07plazzvsr0o")',
         }}
       >
         <div className='h-full bg-black bg-opacity-50 py-16 text-gray-200 lg:py-40'>

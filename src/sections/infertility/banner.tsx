@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <div className='bg-[url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1691229236/Misc/pregnant-woman-min_wvchfc.webp)] bg-cover bg-right bg-no-repeat shadow-2xl sm:bg-center'>
+    <div className='bg-[url(https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vednb58v707plopapzgdk)] bg-cover bg-right bg-no-repeat shadow-2xl sm:bg-center'>
       <div className='h-full w-full bg-black bg-opacity-70 py-6'>
         <div className='mx-auto flex h-[50vh] max-w-5xl items-center'>
           <div className='absolute z-10'>

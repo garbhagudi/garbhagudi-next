@@ -9,21 +9,21 @@ export default function Banner() {
       id: '1',
       title: 'Egg Freezing info Web Banner--01',
       image: {
-        url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--01_easb3r.webp',
+        url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgw7658s808pkg81hvoeh',
       },
     },
     {
       id: '2',
       title: 'Egg Freezing info Web Banner--02',
       image: {
-        url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--02_legcno.webp',
+        url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgwc458t408pkrclc1mq6',
       },
     },
     {
       id: '3',
       title: 'Egg Freezing info Web Banner--03',
       image: {
-        url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--03_g0czqu.webp',
+        url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedhg58ub07ple4tn45ni',
       },
     },
   ];

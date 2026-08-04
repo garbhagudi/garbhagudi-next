@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const CTA = () => {
   return (
-    <div className='relative bg-[url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1643286880/Banner/Behind_Doctors_fssazq.webp)] bg-cover bg-center'>
+    <div className='relative bg-[url(https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8od585p07plknvgx4ja)] bg-cover bg-center'>
       <div className='bg-black bg-opacity-25 py-16 text-center dark:bg-opacity-40 lg:py-24'>
         <div className='z-10 flex justify-center px-4 py-6 font-lexend text-2xl'>
           <div className='rounded-lg bg-gray-200 bg-opacity-90 px-3 py-4 font-bold text-gray-900 dark:bg-gray-800 dark:text-gray-200'>

@@ -43,7 +43,7 @@ const Hero = () => {
             <div className='sm:mx-auto sm:w-full sm:max-w-md sm:overflow-hidden sm:rounded-lg'>
               <div className='my-6'>
                 <Image
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1691232590/Misc/happy-smiling-mother-playing-with-newborn-child-comfy-light-bedroom-front-window-moments-motherhood-happiness-with-kids-family-concept-min_txfdml.webp'
+                  src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6km08v208pk1e4c8z0p'
                   alt='Experience the joy of being complete with the Best IVF Centre in Bangalore'
                   className='rounded-2xl object-cover shadow-xl'
                   width={1024}

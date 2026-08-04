@@ -19,7 +19,7 @@ const EndForm = () => {
           <div>
             <Image
               src={
-                'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742986480/landing-page/footer-form_ikr1ye.webp'
+                'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vl0u55a0c07pltyxlbd3m'
               }
               alt='EndForm Image'
               width={500}

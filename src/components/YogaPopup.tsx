@@ -53,7 +53,7 @@ export default function YogaPopUp() {
               </CloseButton>
               <Link href={'/yoga'} target='_blank' className='relative h-96 w-full'>
                 <Image
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1752758910/Swastya_Sapthaha_SMP_Eng_s7rqyd.webp'
+                  src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8kwhuo3z9f07plcxurw8lw'
                   alt='formBanner'
                   className='h-full w-full rounded-md'
                   width={380}

@@ -242,7 +242,7 @@ const Blog = ({ article }: BlogProps) => {
               className='mb-5 mt-10 w-full rounded-lg'
               src={
                 article?.image?.url ||
-                'https://res.cloudinary.com/decyl0nmm/image/upload/v1762938523/Best_IVF_Center_GarbhaGudi-1_shyb2u.webp'
+                'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87uj57oi07pl2iu2n68l'
               }
               alt={article?.imageAlt}
               width={800}

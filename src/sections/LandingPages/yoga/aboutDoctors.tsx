@@ -67,8 +67,7 @@ const doctors = [
     name: 'Ms. Suraksha B',
     qualification: 'M.Sc Yogic Science, PGCND',
     designation: 'Senior Yoga Therapist',
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984824/Yoga/Suraksha_mrkjqi.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vlpod59pa08pkdh0a99tp',
     content:
       'Ms. Suraksha B, a dedicated Senior Yoga Therapist with a profound passion for promoting holistic well-being and inner harmony. Suraksha holds a Master of Science degree in Yogic Science from Mangalore University and Post Graduate certificate in Clinical Diet and Nutrition, KSOU, Mysuru. She has been a coach and manager in prestigious events like the All-India Inter-University Yoga Competition, representing the Department of Human Consciousness & Yogic Science.',
   },
@@ -77,8 +76,7 @@ const doctors = [
     name: 'Dr. Jala R',
     qualification: 'BNYS',
     designation: 'Yoga Therapist',
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1752581983/Yoga/Dr._Jala_q6pmbd.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vlpoy59pe08pkx2v5s9kg',
     content:
       'Dr. Jala R is a dedicated yoga therapist with a strong academic foundation, holding a Bachelor’s degree in Naturopathic and Yogic Sciences and pursuing an MD in Acupuncture. With a deep passion for holistic healing, she blends the ancient wisdom of yoga with the principles of naturopathy to support individuals on their journey to better health. Known for her empathetic nature and personalized therapeutic approach, she empowers people to take charge of their well-being. Her work continues to make a meaningful impact in the field of wellness and preventive health.',
   },

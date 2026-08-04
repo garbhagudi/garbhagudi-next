@@ -32,62 +32,52 @@ export default SocialMediaTemplates;
 const data = [
   {
     id: 1,
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1704887643/brandResources/720-min_mnne1y.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vnae15a0k08pkw0edi0pz',
     desccription: '16x9 - Vertical Logo',
   },
   {
     id: 2,
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1704887642/brandResources/720H-min_vao9ir.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vnael5a0o08pk3hix0hb6',
     desccription: '16x9 - Horizontal Logo',
   },
   {
     id: 3,
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1704887641/brandResources/9x16-min_ewmooo.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vnaf65a0s08pkq4eh82xc',
     desccription: '9x16 - Verical Logo',
   },
   {
     id: 4,
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1704887641/brandResources/1x1-min_dzk8ga.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vnafx5a0w08pkxd4ixv7s',
     desccription: '1x1 - Vertical Logo',
   },
   {
     id: 5,
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1704887641/brandResources/9x16H-min_lmfqg1.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vnt9s5agx07pl5z6z4awe',
     desccription: '9x16 - Horizontal Logo',
   },
   {
     id: 6,
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1704887641/brandResources/1x192H-min_lvymqt.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vntab5ah107plgdr2occb',
     desccription: '16x8 - Horizontal Logo',
   },
   {
     id: 7,
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1704887641/brandResources/3x4-min_ogl2w6.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vntb05ah507plnyfmbfl5',
     desccription: '1x1.25 - Vertical Logo',
   },
   {
     id: 8,
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1704887641/brandResources/1x192-min_hzrd2e.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vntbk5ah907plpxu8l2as',
     desccription: '16x8 - Vertical Logo',
   },
   {
     id: 9,
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1704887641/brandResources/1-1H-min_z3ugwj.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vntc55ahd07plw466c73o',
     desccription: '1x1 - Horizontal Logo',
   },
   {
     id: 10,
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1704887641/brandResources/3x4H-min_atmtkr.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vntcu5ahh07pl3uhgldri',
     desccription: '1x1.25 - Horizontal Logo',
   },
 ];

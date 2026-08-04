@@ -7,9 +7,7 @@ export default function PlannedSteps() {
         Guided Support – Step by Step
       </div>
       <Image
-        src={
-          'https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Creatives-02_pryj4u.webp'
-        }
+        src={'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vjtc259d208pkingtmdx5'}
         alt={'Guided'}
         width={100}
         height={100}

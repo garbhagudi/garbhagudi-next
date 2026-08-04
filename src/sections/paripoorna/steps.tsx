@@ -79,7 +79,7 @@ const Steps = () => {
             className='inset-0 w-full rounded object-cover object-bottom shadow-lg'
             width={1024}
             height={1024}
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1700052783/paripoorna/mother-with-daughter-lie-bed-dog-looking-them-min_uecuvg.webp'
+            src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8ne585h07pl2ajrkjsk'
             alt='couple with baby picture'
             loading='lazy'
           />

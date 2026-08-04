@@ -7,7 +7,7 @@ export const ContentOne = () => {
       <section className='my-10 flex flex-col items-center md:flex-row'>
         <div className='md:w-1/2'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1694509085/Misc/GGG_Logo_eng_thb8cv.webp'
+            src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87td57oa07pluqj7nfxw'
             alt='Ghar Ghar GarbhaGudi Logo'
             className='h-auto w-full rounded-lg bg-brandPink p-3'
             width={500}
@@ -102,7 +102,7 @@ export const ContentTwo = () => {
         </div>
         <div className='flex items-center justify-center md:w-1/2'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1694513639/Misc/ss-min_mt1fic.webp'
+            src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vntdi5ahl07plg8bx3noh'
             alt='How can you Help?'
             className='h-auto w-full rounded-lg object-cover object-center'
             width={500}

@@ -108,10 +108,10 @@ const Career = ({ career }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='dns-prefetch' href='https://res.cloudinary.com' />
+        <link rel='dns-prefetch' href='https://ap-south-1.graphassets.com' />
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1657979955/Banner/Argoya_Silver_Award_Web_Bnr-min_bx7xeo.webp'
+          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmee3ps107pl57mgs6ms'
           as='image'
         />
         <link rel='preload' href={career?.image?.url} as='image' />
@@ -135,7 +135,7 @@ const Career = ({ career }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Careers_vpudat.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87su57o607pl1ryd58m2'
         />
 
         {/* Twitter*/}
@@ -149,7 +149,7 @@ const Career = ({ career }) => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Careers_vpudat.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87su57o607pl1ryd58m2'
         />
 
         {/* Ld+JSON Data */}
@@ -181,7 +181,7 @@ const Career = ({ career }) => {
                   <Image
                     width={1200}
                     height={320}
-                    src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1657979955/Banner/Argoya_Silver_Award_Web_Bnr-min_bx7xeo.webp'
+                    src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmee3ps107pl57mgs6ms'
                     alt='arogya world banner'
                     className='rounded-xl'
                     priority={true}

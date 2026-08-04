@@ -45,7 +45,7 @@ const Overview = () => {
             <div className='relative overflow-hidden rounded-2xl pb-10 pt-64 shadow-xl'>
               <Image
                 className='absolute inset-0 h-full w-full object-cover'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1670926732/Home/Why_GarbhaGudi_oa1nv7-min_z7p9jv.webp'
+                src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6lj08v608pknr66yszg'
                 alt='Dr Asha S Vijay - IVF Specialist in Bangalore'
                 width={360}
                 height={640}

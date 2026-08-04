@@ -46,7 +46,7 @@ const ParagraphSection = () => {
           width={350}
           className='mb-5 mt-10 rounded-lg'
           src={
-            'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984797/Yoga/21-Days-Yoga-Challenge-Logo_fup9qy.webp'
+            'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8voso05aem08pk23d57hgr'
           }
           alt='Holistic approach to fertility - Section Image'
           loading='lazy'

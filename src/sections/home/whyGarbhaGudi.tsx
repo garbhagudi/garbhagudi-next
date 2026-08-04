@@ -13,7 +13,7 @@ const WhyGG = () => {
                 <Image
                   width={100}
                   height={100}
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1677492148/Misc/coup-min_g3kq4k.webp'
+                  src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6ni08vi08pkegct0cz2'
                   alt='Why choose garbhagudi as the Best IVF Centre in Bangalore'
                   className='w-full rounded-t-lg lg:rounded-bl-lg lg:rounded-tr-none'
                 />

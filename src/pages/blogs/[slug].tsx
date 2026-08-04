@@ -194,7 +194,7 @@ const Blog = ({ blog }) => {
         name: 'GarbhaGudi IVF Centre',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1751352018/GG_New-Hori_Logo_ziwur1.svg',
+          url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms76155yh1on07pnqpdnqyzk',
         },
       },
       datePublished: new Date(blog?.publishedOn).toISOString(),

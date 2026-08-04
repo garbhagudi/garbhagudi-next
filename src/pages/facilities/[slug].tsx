@@ -106,7 +106,7 @@ interface BlogProps {
 }
 
 const DEFAULT_IMAGE =
-  'https://res.cloudinary.com/decyl0nmm/image/upload/v1762938523/Best_IVF_Center_GarbhaGudi-1_shyb2u.webp';
+  'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87uj57oi07pl2iu2n68l';
 
 const Blog = ({ article }: BlogProps) => {
   const [isMounted, setIsMounted] = useState(false);
