@@ -211,7 +211,7 @@ export const Resources = [
     name: 'Fertility Lexicon',
     description: 'Infertility and Fertility Care',
     href: '/resources/fertility-lexicon',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1782979161/Icons/Resources/fertility-lexicon_fqyuvm.png',
+    icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmsh7c6pb4ji206mrjr5af8ya',
   },
 ];
 
