@@ -29,30 +29,30 @@ const stories = [
 
 export default function StoriesSection() {
   return (
-    <section className='py-12 px-5 bg-[#7B1B2E] md:py-[4.5rem] md:px-8'>
+    <section className='bg-[#7B1B2E] px-5 py-12 md:px-8 md:py-[4.5rem]'>
       <SectionHeader
         eyebrow='Real Families · Real Stories'
         title='ஓசூர் குடும்பங்களின் வெற்றிக் கதைகள்'
         subtitle='இவர்களுக்கு நடந்தது உங்களுக்கும் நடக்கும்'
         variant='dark'
       />
-      <div className='grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-5 max-w-[960px] mx-auto'>
+      <div className='mx-auto grid max-w-[960px] grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-5'>
         {stories.map((s) => (
           <div
             key={s.initials}
-            className='bg-white/[0.07] border border-white/[0.12] rounded-[14px] p-5 md:p-7'
+            className='rounded-[14px] border border-white/[0.12] bg-white/[0.07] p-5 md:p-7'
           >
-            <div className='w-[52px] h-[52px] rounded-full bg-[#C9861A] flex items-center justify-center font-bold text-[18px] text-[#1C1C1E] mb-4'>
+            <div className='mb-4 flex h-[52px] w-[52px] items-center justify-center rounded-full bg-[#C9861A] text-[18px] font-bold text-[#1C1C1E]'>
               {s.initials}
             </div>
-            <div className='font-[family-name:var(--font-noto-sans-tamil)] font-semibold text-[#FFD98A] text-[15px]'>
+            <div className='font-[family-name:var(--font-noto-sans-tamil)] text-[15px] font-semibold text-[#FFD98A]'>
               {s.name}
             </div>
-            <div className='text-[13px] text-white/[0.55] mb-3'>📍 {s.location}</div>
-            <span className='inline-block bg-[#C9861A]/20 text-[#FFD98A] text-[12px] px-2.5 py-[3px] rounded-full mb-3'>
+            <div className='mb-3 text-[13px] text-white/[0.55]'>📍 {s.location}</div>
+            <span className='mb-3 inline-block rounded-full bg-[#C9861A]/20 px-2.5 py-[3px] text-[12px] text-[#FFD98A]'>
               {s.tag}
             </span>
-            <p className='text-white/[0.82] text-[14px] leading-[1.7] italic'>{s.quote}</p>
+            <p className='text-[14px] italic leading-[1.7] text-white/[0.82]'>{s.quote}</p>
           </div>
         ))}
       </div>

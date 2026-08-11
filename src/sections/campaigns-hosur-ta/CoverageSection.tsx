@@ -12,33 +12,33 @@ const areas = [
 
 export default function CoverageSection() {
   return (
-    <section className='py-12 px-5 bg-white md:py-[4.5rem] md:px-8'>
+    <section className='bg-white px-5 py-12 md:px-8 md:py-[4.5rem]'>
       <SectionHeader
         eyebrow='Service Area'
         title='ஓசூருக்கு அருகிலேயே உலகத் தரமான சிகிச்சை'
         subtitle='நாங்கள் சேவை வழங்கும் பகுதிகள்'
       />
-      <div className='grid grid-cols-[repeat(auto-fit,minmax(130px,1fr))] gap-3 max-w-[800px] mx-auto mb-8'>
+      <div className='mx-auto mb-8 grid max-w-[800px] grid-cols-[repeat(auto-fit,minmax(130px,1fr))] gap-3'>
         {areas.map((a) => (
           <div
             key={a.en}
-            className='border border-[#7B1B2E]/[0.12] rounded-[10px] p-4 text-center hover:bg-[#F5E6EA] hover:border-[#C0435A] transition-all'
+            className='rounded-[10px] border border-[#7B1B2E]/[0.12] p-4 text-center transition-all hover:border-[#C0435A] hover:bg-[#F5E6EA]'
           >
-            <strong className='font-[family-name:var(--font-noto-sans-tamil)] block text-[14px] text-[#7B1B2E] font-semibold break-words leading-snug'>
+            <strong className='block break-words font-[family-name:var(--font-noto-sans-tamil)] text-[14px] font-semibold leading-snug text-[#7B1B2E]'>
               {a.ta}
             </strong>
-            <span className='text-[12px] text-[#6B6860] break-words'>{a.en}</span>
+            <span className='break-words text-[12px] text-[#6B6860]'>{a.en}</span>
           </div>
         ))}
       </div>
-      <div className='max-w-[800px] mx-auto bg-[#F7F5F3] border border-[#7B1B2E]/[0.12] rounded-[14px] h-[160px] flex items-center justify-center flex-col gap-2 sm:h-[220px]'>
+      <div className='mx-auto flex h-[160px] max-w-[800px] flex-col items-center justify-center gap-2 rounded-[14px] border border-[#7B1B2E]/[0.12] bg-[#F7F5F3] sm:h-[220px]'>
         <span className='text-[32px] leading-none'>🗺️</span>
         <p className='text-[14px] text-[#6B6860]'>Google Maps — Hosur Clinic Location</p>
         <a
           href='https://maps.google.com/?q=GarbhaGudi+Hosur'
           target='_blank'
           rel='noopener noreferrer'
-          className='mt-1 inline-block bg-[#7B1B2E] text-white px-7 py-3 rounded-lg font-bold text-[14px] hover:opacity-90 transition-opacity font-[family-name:var(--font-noto-sans-tamil)]'
+          className='mt-1 inline-block rounded-lg bg-[#7B1B2E] px-7 py-3 font-[family-name:var(--font-noto-sans-tamil)] text-[14px] font-bold text-white transition-opacity hover:opacity-90'
         >
           Directions பெறுக
         </a>

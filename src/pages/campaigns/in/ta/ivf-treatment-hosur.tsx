@@ -50,7 +50,7 @@ export default function IvfTreatmentHosurTaLandingPage() {
      * no font-family or line-height, unlike the source project's globals. */
     <div
       lang='ta'
-      className={`${notoSansTamil.className} ${notoSansTamil.variable} ${notoSerifTamil.variable} bg-white text-[#1C1C1E] text-base leading-[1.7] scroll-smooth`}
+      className={`${notoSansTamil.className} ${notoSansTamil.variable} ${notoSerifTamil.variable} scroll-smooth bg-white text-base leading-[1.7] text-[#1C1C1E]`}
     >
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />

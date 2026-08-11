@@ -4,7 +4,7 @@ export default function WhatsAppFloat() {
   return (
     <a
       href={WHATSAPP_HREF}
-      className='fixed bottom-6 right-6 z-[999] w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.45)] hover:scale-110 transition-transform'
+      className='fixed bottom-6 right-6 z-[999] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_20px_rgba(37,211,102,0.45)] transition-transform hover:scale-110'
       title='WhatsApp'
       target='_blank'
       rel='noopener noreferrer'

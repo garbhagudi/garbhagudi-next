@@ -32,25 +32,22 @@ export default function FaqAccordion() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className='py-12 px-5 bg-[#F7F5F3] md:py-[4.5rem] md:px-8'>
-      <SectionHeader
-        eyebrow='Your Questions Answered'
-        title='அடிக்கடி கேட்கப்படும் கேள்விகள்'
-      />
-      <div className='max-w-[720px] mx-auto'>
+    <section className='bg-[#F7F5F3] px-5 py-12 md:px-8 md:py-[4.5rem]'>
+      <SectionHeader eyebrow='Your Questions Answered' title='அடிக்கடி கேட்கப்படும் கேள்விகள்' />
+      <div className='mx-auto max-w-[720px]'>
         {faqs.map((faq, i) => (
           <div
             key={faq.q}
-            className='bg-white border border-[#7B1B2E]/[0.12] rounded-[10px] mb-2.5 overflow-hidden'
+            className='mb-2.5 overflow-hidden rounded-[10px] border border-[#7B1B2E]/[0.12] bg-white'
           >
             <button
-              className='w-full px-5 py-4 font-semibold text-[15px] text-[#1C1C1E] flex justify-between items-center text-left select-none'
+              className='flex w-full select-none items-center justify-between px-5 py-4 text-left text-[15px] font-semibold text-[#1C1C1E]'
               onClick={() => setOpen(open === i ? null : i)}
               aria-expanded={open === i}
             >
               <span>{faq.q}</span>
               <span
-                className={`text-[18px] text-[#7B1B2E] transition-transform duration-200 flex-shrink-0 ml-3 ${
+                className={`ml-3 flex-shrink-0 text-[18px] text-[#7B1B2E] transition-transform duration-200 ${
                   open === i ? 'rotate-45' : ''
                 }`}
               >
@@ -62,7 +59,7 @@ export default function FaqAccordion() {
                 open === i ? 'max-h-[400px]' : 'max-h-0'
               }`}
             >
-              <p className='px-5 pb-4 text-[14px] text-[#6B6860] leading-[1.75]'>{faq.a}</p>
+              <p className='px-5 pb-4 text-[14px] leading-[1.75] text-[#6B6860]'>{faq.a}</p>
             </div>
           </div>
         ))}

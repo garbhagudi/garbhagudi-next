@@ -19,19 +19,19 @@ const languages = [
 
 export default function DoctorSection() {
   return (
-    <section className='py-12 px-5 bg-[#FDF3E3] md:py-[4.5rem] md:px-8'>
-      <div className='max-w-[860px] mx-auto grid grid-cols-1 gap-6 items-center md:grid-cols-[1fr_1.6fr] md:gap-12'>
-        <div className='relative max-w-[260px] mx-auto sm:max-w-none'>
-          <div className='bg-[#7B1B2E] rounded-xl overflow-hidden relative'>
+    <section className='bg-[#FDF3E3] px-5 py-12 md:px-8 md:py-[4.5rem]'>
+      <div className='mx-auto grid max-w-[860px] grid-cols-1 items-center gap-6 md:grid-cols-[1fr_1.6fr] md:gap-12'>
+        <div className='relative mx-auto max-w-[260px] sm:max-w-none'>
+          <div className='relative overflow-hidden rounded-xl bg-[#7B1B2E]'>
             <Image
               src='https://ap-south-1.graphassets.com/cmekvksn30ksu07o5fl5q801f/cmequuvod57fd07oagac62d2w'
               alt='டாக்டர் ராதா புச்சலபள்ளி'
               width={480}
               height={640}
               sizes='(min-width: 768px) 320px, 260px'
-              className='w-full h-auto object-cover object-top'
+              className='h-auto w-full object-cover object-top'
             />
-            <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-4 pt-8 pb-4 text-white text-center font-[family-name:var(--font-noto-sans-tamil)]'>
+            <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-4 pb-4 pt-8 text-center font-[family-name:var(--font-noto-sans-tamil)] text-white'>
               <span className='block text-[15px] font-bold'>டாக்டர். ராதா. பி</span>
               <span className='block text-[12px] opacity-[0.85]'>Dr. Radha P</span>
             </div>
@@ -39,26 +39,26 @@ export default function DoctorSection() {
         </div>
 
         <div>
-          <span className='text-[12px] tracking-[0.1em] uppercase text-[#C9861A] font-semibold block mb-2'>
+          <span className='mb-2 block text-[12px] font-semibold uppercase tracking-[0.1em] text-[#C9861A]'>
             Meet Your Doctor
           </span>
-          <h2 className='font-[family-name:var(--font-noto-serif-tamil)] text-[1.3rem] text-[#7B1B2E] font-bold mb-3 leading-[1.35] md:text-[1.6rem]'>
+          <h2 className='mb-3 font-[family-name:var(--font-noto-serif-tamil)] text-[1.3rem] font-bold leading-[1.35] text-[#7B1B2E] md:text-[1.6rem]'>
             உங்கள் கருத்தரிப்பு
             <br />
             நிபுணரை சந்தியுங்கள்
           </h2>
-          <div className='flex gap-2 flex-wrap mb-4'>
+          <div className='mb-4 flex flex-wrap gap-2'>
             {languages.map((lang) => (
               <span
                 key={lang.en}
-                className='inline-flex items-center gap-2 bg-[#F5E6EA] text-[#7B1B2E] px-3.5 py-1.5 rounded-full border border-[#7B1B2E]/[0.18]'
+                className='inline-flex items-center gap-2 rounded-full border border-[#7B1B2E]/[0.18] bg-[#F5E6EA] px-3.5 py-1.5 text-[#7B1B2E]'
               >
                 <span className='text-[13px]' aria-hidden='true'>
                   🗣️
                 </span>
                 <span className='leading-tight'>
                   <span className='block text-[13px] font-semibold'>{lang.en}</span>
-                  <span className='block text-[11px] text-[#7B1B2E]/70 font-[family-name:var(--font-noto-sans-tamil)]'>
+                  <span className='block font-[family-name:var(--font-noto-sans-tamil)] text-[11px] text-[#7B1B2E]/70'>
                     {lang.ta}
                   </span>
                 </span>
@@ -69,17 +69,17 @@ export default function DoctorSection() {
             {specialties.map((s) => (
               <li
                 key={s}
-                className='py-2 border-b border-[#7B1B2E]/[0.12] text-[14px] text-[#1C1C1E] flex items-center gap-2 last:border-b-0'
+                className='flex items-center gap-2 border-b border-[#7B1B2E]/[0.12] py-2 text-[14px] text-[#1C1C1E] last:border-b-0'
               >
-                <span className='text-[#C9861A] text-[10px]'>✦</span>
+                <span className='text-[10px] text-[#C9861A]'>✦</span>
                 {s}
               </li>
             ))}
           </ul>
-          <div className='mt-6 flex gap-3 flex-wrap'>
+          <div className='mt-6 flex flex-wrap gap-3'>
             <a
               href={WHATSAPP_HREF}
-              className='inline-flex items-center gap-2 bg-[#7B1B2E] text-white px-7 py-3.5 rounded-lg font-bold text-[15px] hover:opacity-90 transition-opacity font-[family-name:var(--font-noto-sans-tamil)]'
+              className='inline-flex items-center gap-2 rounded-lg bg-[#7B1B2E] px-7 py-3.5 font-[family-name:var(--font-noto-sans-tamil)] text-[15px] font-bold text-white transition-opacity hover:opacity-90'
             >
               <span>📅 டாக்டரை சந்தியுங்கள்</span>
             </a>

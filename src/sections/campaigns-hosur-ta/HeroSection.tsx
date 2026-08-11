@@ -11,7 +11,7 @@ const stats = [
 
 export default function HeroSection() {
   return (
-    <section className='relative overflow-hidden bg-gradient-to-br from-[#2C1016] via-[#7B1B2E] to-[#A33048] text-white py-14 px-5 text-center md:py-20 md:px-8'>
+    <section className='relative overflow-hidden bg-gradient-to-br from-[#2C1016] via-[#7B1B2E] to-[#A33048] px-5 py-14 text-center text-white md:px-8 md:py-20'>
       <div
         className='absolute inset-0 opacity-50'
         style={{ backgroundImage: svgPattern }}
@@ -19,43 +19,43 @@ export default function HeroSection() {
       />
 
       <div className='relative z-10'>
-        <span className='inline-block bg-[#C9861A]/25 border border-[#C9861A]/50 text-[#FFD98A] text-[13px] px-4 py-1.5 rounded-full mb-6 max-w-[280px] sm:max-w-none mx-auto'>
+        <span className='mx-auto mb-6 inline-block max-w-[280px] rounded-full border border-[#C9861A]/50 bg-[#C9861A]/25 px-4 py-1.5 text-[13px] text-[#FFD98A] sm:max-w-none'>
           ஓசூரில் இப்போது திறந்துள்ளது · Bangalore&apos;s Most Trusted IVF Centre
         </span>
 
-        <h1 className='font-[family-name:var(--font-noto-serif-tamil)] text-[clamp(1.6rem,4vw,2.6rem)] max-w-[720px] mx-auto mb-5 font-bold leading-[1.35]'>
+        <h1 className='mx-auto mb-5 max-w-[720px] font-[family-name:var(--font-noto-serif-tamil)] text-[clamp(1.6rem,4vw,2.6rem)] font-bold leading-[1.35]'>
           குழந்தைக்காக காத்திருக்கும் உங்கள் பயணத்தில்...
           <br />
-          <em className='text-[#FFD98A] not-italic'>நீங்கள் மட்டும் இல்லை.</em>
+          <em className='not-italic text-[#FFD98A]'>நீங்கள் மட்டும் இல்லை.</em>
         </h1>
 
-        <p className='text-[0.95rem] max-w-[560px] mx-auto mb-10 opacity-[0.88] leading-[1.75] md:text-[1.05rem]'>
+        <p className='mx-auto mb-10 max-w-[560px] text-[0.95rem] leading-[1.75] opacity-[0.88] md:text-[1.05rem]'>
           15 ஆண்டுகளாக ஆயிரக்கணக்கான குடும்பங்களுக்கு பெற்றோராகும் கனவை நனவாக்கிய கர்பகுடி, இப்போது
           ஓசூரிலும் உங்களுக்காக காத்திருக்கிறது.
         </p>
 
-        <div className='flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:flex-wrap'>
+        <div className='flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center'>
           <a
             href={WHATSAPP_HREF}
-            className='w-full sm:w-auto bg-[#C9861A] text-[#1C1C1E] px-5 py-3 rounded-lg font-bold text-[15px] transition-transform hover:-translate-y-0.5 font-[family-name:var(--font-noto-sans-tamil)] sm:px-7 sm:py-3.5 text-center'
+            className='w-full rounded-lg bg-[#C9861A] px-5 py-3 text-center font-[family-name:var(--font-noto-sans-tamil)] text-[15px] font-bold text-[#1C1C1E] transition-transform hover:-translate-y-0.5 sm:w-auto sm:px-7 sm:py-3.5'
           >
             🟢 WhatsApp இல் பேசுங்கள்
           </a>
           <a
             href={PHONE_HREF}
-            className='w-full sm:w-auto bg-white/[0.12] border border-white/40 text-white px-5 py-3 rounded-lg font-semibold text-[15px] hover:bg-white/20 transition-colors font-[family-name:var(--font-noto-sans-tamil)] sm:px-7 sm:py-3.5 text-center'
+            className='w-full rounded-lg border border-white/40 bg-white/[0.12] px-5 py-3 text-center font-[family-name:var(--font-noto-sans-tamil)] text-[15px] font-semibold text-white transition-colors hover:bg-white/20 sm:w-auto sm:px-7 sm:py-3.5'
           >
             📞 இலவச ஆலோசனை
           </a>
           <a
             href={WHATSAPP_HREF}
-            className='w-full sm:w-auto bg-white/[0.12] border border-white/40 text-white px-5 py-3 rounded-lg font-semibold text-[15px] hover:bg-white/20 transition-colors font-[family-name:var(--font-noto-sans-tamil)] sm:px-7 sm:py-3.5 text-center'
+            className='w-full rounded-lg border border-white/40 bg-white/[0.12] px-5 py-3 text-center font-[family-name:var(--font-noto-sans-tamil)] text-[15px] font-semibold text-white transition-colors hover:bg-white/20 sm:w-auto sm:px-7 sm:py-3.5'
           >
             📅 சந்திப்பு பதிவு செய்க
           </a>
         </div>
 
-        <div className='flex gap-6 justify-center mt-14 pt-8 border-t border-white/[0.15] flex-wrap md:gap-8'>
+        <div className='mt-14 flex flex-wrap justify-center gap-6 border-t border-white/[0.15] pt-8 md:gap-8'>
           {stats.map((s) => (
             <div key={s.label} className='text-center'>
               <strong className='block text-[1.8rem] font-bold text-[#FFD98A]'>{s.value}</strong>

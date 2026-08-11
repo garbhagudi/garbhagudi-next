@@ -2,20 +2,20 @@ import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_HREF } from 'sections/campaigns-hos
 
 export default function Footer() {
   return (
-    <footer className='bg-[#1C1C1E] text-white/60 py-10 px-5 text-center text-[14px] md:px-8'>
+    <footer className='bg-[#1C1C1E] px-5 py-10 text-center text-[14px] text-white/60 md:px-8'>
       <p className='mb-3'>
         <strong className='text-white/90'>கர்பகுடி IVF மையம் — ஓசூர்</strong>
       </p>
-      <div className='flex flex-col items-center gap-2 md:flex-row md:justify-center md:gap-0 md:flex-wrap'>
-        <a href={PHONE_HREF} className='hover:text-white/90 transition-colors'>
+      <div className='flex flex-col items-center gap-2 md:flex-row md:flex-wrap md:justify-center md:gap-0'>
+        <a href={PHONE_HREF} className='transition-colors hover:text-white/90'>
           📞 {PHONE_DISPLAY}
         </a>
         <span className='hidden md:inline'>&nbsp;|&nbsp;</span>
-        <a href={WHATSAPP_HREF} className='hover:text-white/90 transition-colors'>
+        <a href={WHATSAPP_HREF} className='transition-colors hover:text-white/90'>
           🟢 WhatsApp
         </a>
         <span className='hidden md:inline'>&nbsp;|&nbsp;</span>
-        <a href='mailto:info@garbhagudi.com' className='hover:text-white/90 transition-colors'>
+        <a href='mailto:info@garbhagudi.com' className='transition-colors hover:text-white/90'>
           📧 info@garbhagudi.com
         </a>
       </div>

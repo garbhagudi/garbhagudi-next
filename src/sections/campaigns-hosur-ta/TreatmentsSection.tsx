@@ -11,19 +11,19 @@ const treatments: { icon: string; label: string }[] = [
 
 export default function TreatmentsSection() {
   return (
-    <section className='py-12 px-5 bg-white md:py-[4.5rem] md:px-8'>
+    <section className='bg-white px-5 py-12 md:px-8 md:py-[4.5rem]'>
       <SectionHeader
         eyebrow='Our Services'
         title='எங்கள் சிகிச்சைகள்'
         subtitle='உங்களுக்கு தேவையான சிகிச்சையை நாங்கள் வழங்குகிறோம்'
       />
-      <div className='grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-3.5 max-w-[900px] mx-auto'>
+      <div className='mx-auto grid max-w-[900px] grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-3.5'>
         {treatments.map((t) => (
           <div
             key={t.label}
-            className='border-[1.5px] border-[#7B1B2E]/[0.12] rounded-xl py-[1.1rem] px-3 text-center hover:border-[#C0435A] hover:bg-[#F5E6EA] transition-all'
+            className='rounded-xl border-[1.5px] border-[#7B1B2E]/[0.12] px-3 py-[1.1rem] text-center transition-all hover:border-[#C0435A] hover:bg-[#F5E6EA]'
           >
-            <span className='text-[22px] block mb-1.5'>{t.icon}</span>
+            <span className='mb-1.5 block text-[22px]'>{t.icon}</span>
             <p className='text-[13px] font-semibold text-[#7B1B2E]'>{t.label}</p>
           </div>
         ))}

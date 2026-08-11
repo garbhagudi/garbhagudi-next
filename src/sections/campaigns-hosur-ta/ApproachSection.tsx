@@ -30,22 +30,22 @@ const steps = [
 
 export default function ApproachSection() {
   return (
-    <section className='py-12 px-5 bg-white md:py-[4.5rem] md:px-8'>
+    <section className='bg-white px-5 py-12 md:px-8 md:py-[4.5rem]'>
       <SectionHeader
         eyebrow='Our Difference'
         title='கர்பகுடி முறையின் வித்தியாசம்'
         subtitle='நாங்கள் வெறும் மருத்துவம் மட்டுமல்ல, ஒரு முழுமையான அனுபவம் வழங்குகிறோம்'
       />
-      <div className='grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-5 max-w-[960px] mx-auto'>
+      <div className='mx-auto grid max-w-[960px] grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-5'>
         {steps.map((s) => (
           <div
             key={s.num}
-            className='relative border border-[#7B1B2E]/[0.12] rounded-[14px] p-4 overflow-hidden md:p-6'
+            className='relative overflow-hidden rounded-[14px] border border-[#7B1B2E]/[0.12] p-4 md:p-6'
           >
-            <div className='absolute top-[-8px] right-3 font-[family-name:var(--font-noto-serif-tamil)] text-[2.5rem] font-bold text-[#F5E6EA] leading-none select-none md:text-[3.5rem]'>
+            <div className='absolute right-3 top-[-8px] select-none font-[family-name:var(--font-noto-serif-tamil)] text-[2.5rem] font-bold leading-none text-[#F5E6EA] md:text-[3.5rem]'>
               {s.num}
             </div>
-            <h3 className='font-semibold text-[#7B1B2E] mb-2 text-[1rem]'>{s.title}</h3>
+            <h3 className='mb-2 text-[1rem] font-semibold text-[#7B1B2E]'>{s.title}</h3>
             <p className='text-[14px] text-[#6B6860]'>{s.desc}</p>
           </div>
         ))}
