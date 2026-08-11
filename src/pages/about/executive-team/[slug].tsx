@@ -3,6 +3,7 @@ import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
+import RichTextIframe from 'components/RichTextIframe';
 import dynamic from 'next/dynamic';
 const Share = dynamic(() => import('components/share'), { ssr: false });
 const Loading = dynamic(() => import('components/Loading'), { ssr: false });
@@ -23,8 +24,10 @@ export const getStaticProps = async ({ params }) => {
           director(where: { slug: $slug }) {
             id
             name
+            slug
             details
             link
+            youtubeUrl
             image {
               url
             }
@@ -203,9 +206,15 @@ const ExecutiveTeam = ({ director }) => {
                           {children}
                         </a>
                       ),
+                      iframe: (props) => <RichTextIframe {...props} />,
                     }}
                   />
                 </div>
+                {director?.youtubeUrl && (
+                  <div className='mt-6'>
+                    <RichTextIframe url={director.youtubeUrl} />
+                  </div>
+                )}
               </div>
             </div>
           </div>
