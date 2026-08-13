@@ -49,7 +49,7 @@ const Content = () => {
                 <div>Here is a general overview of the steps involved in a typical IVF cycle:</div>
               </div>
               <div className='-right-0 mx-auto mt-4 lg:p-4'>
-                <div className='relative w-full h-full'>
+                <div className='relative h-full w-full'>
                   <Image
                     quality={85}
                     src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vospq5aey08pkcpmehdae'
