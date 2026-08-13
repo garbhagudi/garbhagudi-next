@@ -217,6 +217,7 @@ const ImageComponent = ({ name, image, designation, imageAlt }: ImageComponentPr
       <div className='relative h-44 w-44'>
         <div className='bg-[length: 400%] absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
         <Image
+          quality={85}
           className='rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
           src={image}
           alt={imageAlt || name}

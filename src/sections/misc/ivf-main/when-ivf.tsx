@@ -7,6 +7,7 @@ const WhenIvf = () => {
       <div className='grid grid-cols-1 lg:grid-cols-2'>
         <div className='mx-auto flex max-w-lg items-center justify-center p-3 lg:p-10'>
           <Image
+            quality={85}
             src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vp43y5aq307pl499q92ni'
             alt='When is IVF Treatment Recommended?'
             className='relative w-full dark:bg-white/10 dark:brightness-75 dark:invert'

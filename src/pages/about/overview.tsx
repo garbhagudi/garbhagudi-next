@@ -81,11 +81,12 @@ const Overview = ({ directors }) => {
                       <div className='space-y-4'>
                         <div className='aspect-square'>
                           <Image
+                            quality={85}
                             className='object-fit h-96 w-96 rounded-3xl shadow-2xl'
                             src={item?.image?.url}
                             alt={item.name}
-                            width={500}
-                            height={500}
+                            width={1000}
+                            height={700}
                             loading='lazy'
                           />
                         </div>

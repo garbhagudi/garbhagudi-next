@@ -74,8 +74,9 @@ const Page = () => {
               Discover the confluence of science and Indic wisdom to enhance fertility.
             </p>
             <Image
-              height={100}
-              width={100}
+              quality={85}
+              height={600}
+              width={1280}
               className='mb-5 mt-10 w-full rounded-lg'
               src={
                 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87tz57oe07pl5qc9vaov'

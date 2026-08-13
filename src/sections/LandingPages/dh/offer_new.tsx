@@ -7,6 +7,7 @@ const Offer = () => {
       {/* Background Image Section */}
       <div className='h-100 mx-auto w-full bg-cover bg-center object-cover md:w-1/2'>
         <Image
+          quality={85}
           src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vl0tj5a0807pl9sf2kx3f'
           alt='Banner Image'
           width={400}

@@ -9,8 +9,9 @@ export default function PlannedSteps() {
       <Image
         src={'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vjtc259d208pkingtmdx5'}
         alt={'Guided'}
-        width={100}
-        height={100}
+        width={1200}
+        height={720}
+        quality={85}
         className='mx-auto h-full w-full rounded-lg lg:w-10/12'
         loading='lazy'
       />

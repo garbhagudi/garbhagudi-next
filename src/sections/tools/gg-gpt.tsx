@@ -108,6 +108,7 @@ const ChatComponent = ({ apiKey }) => {
         onClick={() => setShowChatbot(!showChatbot)}
       >
         <Image
+          quality={85}
           src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8kwhvd3z9j07plhwzi0tdb'
           alt='GG Care Bot'
           className='h-12 w-12 rounded-full'

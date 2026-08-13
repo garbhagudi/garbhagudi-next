@@ -16,6 +16,7 @@ export default function Content() {
       <div className='w-10/12 md:w-8/12'>
         <div className='relative my-5 h-[180px] lg:my-16 lg:h-[350px]'>
           <Image
+            quality={85}
             src={
               'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgwcs58t808pkbbapapom'
             }
@@ -28,6 +29,7 @@ export default function Content() {
 
           {/* Second Image (middle layer) */}
           <Image
+            quality={85}
             src={
               'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vjt8059ce08pk6ymu0kgr'
             }
@@ -40,6 +42,7 @@ export default function Content() {
 
           {/* Third Image (top layer) */}
           <Image
+            quality={85}
             src={
               'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vjt8q59ci08pkvebg50fn'
             }

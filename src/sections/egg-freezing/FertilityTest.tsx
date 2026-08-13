@@ -48,12 +48,13 @@ export default function FertilityTest() {
       </div>
       <div className='flex flex-col justify-center gap-5 px-5 md:px-10 lg:flex-row lg:gap-0'>
         <Image
+          quality={85}
           src={
             'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vjtbc59cy08pkpj1ic9s2'
           }
           alt={'Fertility Test'}
-          width={100}
-          height={100}
+          width={800}
+          height={500}
           className='h-full w-full rounded-md md:h-[24em]'
         />
         <div className='px-5 lg:pl-5'>
@@ -116,6 +117,7 @@ export default function FertilityTest() {
                 className='mb-4 flex flex-col items-center gap-4 rounded-lg border p-2 lg:flex-row'
               >
                 <Image
+                  quality={85}
                   src={pkg.image}
                   width={100}
                   height={100}

@@ -76,6 +76,7 @@ const Steps = () => {
         </div>
         <div className='flex w-full items-center justify-center md:w-5/12'>
           <Image
+            quality={85}
             className='inset-0 w-full rounded object-cover object-bottom shadow-lg'
             width={1024}
             height={1024}

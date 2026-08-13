@@ -17,6 +17,7 @@ const TreatmentOptions = () => {
             >
               <div className='mx-auto -mt-14 flex h-28 w-28 items-center justify-center rounded-full'>
                 <Image
+                  quality={85}
                   src={items?.image}
                   alt={items?.treatent}
                   width={100}

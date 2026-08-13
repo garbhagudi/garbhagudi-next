@@ -122,6 +122,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                             <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-all duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-700 dark:hover:border-gg-400 dark:hover:bg-gray-600 md:w-96'>
                               <div className='w-1/3'>
                                 <Image
+                                  quality={85}
                                   className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
                                   src={
                                     item?.iconUrl ||
@@ -150,6 +151,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                       <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-all duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-700 dark:hover:border-gg-400 dark:hover:bg-gray-600 md:w-96'>
                         <div className='w-1/3'>
                           <Image
+                            quality={85}
                             className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
                             src='https://media.graphassets.com/EwdJCRdtRiKDXeWF4toB'
                             alt='IVF Icon'
@@ -171,6 +173,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                       <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-all duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-700 dark:hover:border-gg-400 dark:hover:bg-gray-600 md:w-96'>
                         <div className='w-1/3'>
                           <Image
+                            quality={85}
                             className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
                             src='https://media.graphassets.com/CpcAosCyRImJVMN1xA9O'
                             alt='IUI Icon'
@@ -199,6 +202,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                             <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white md:w-96'>
                               <div className='w-1/3'>
                                 <Image
+                                  quality={85}
                                   className='h-16 w-16 rounded-full object-cover'
                                   src={
                                     item?.iconUrl ||
@@ -232,6 +236,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                             <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white md:w-96'>
                               <div className='w-1/3'>
                                 <Image
+                                  quality={85}
                                   className='h-16 w-16 rounded-full object-cover'
                                   src={
                                     item?.iconUrl ||

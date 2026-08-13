@@ -8,6 +8,7 @@ import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import baseRichTextRenderers from 'components/richTextRenderers';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 export const getStaticProps = async ({ params }) => {
@@ -179,6 +180,7 @@ const Career = ({ career }) => {
               <Link href='/about/awards-and-accolades/garbhagudi-certified-healthy-workplace'>
                 <div>
                   <Image
+                    quality={85}
                     width={1200}
                     height={320}
                     src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmee3ps107pl57mgs6ms'
@@ -193,6 +195,7 @@ const Career = ({ career }) => {
               <div className='text-center sm:w-1/3 sm:py-8 sm:pr-8'>
                 <div className='inline-flex h-44 w-44 animate-shine items-center justify-center rounded-full bg-gradient-to-br from-brandPurple via-white to-brandPink4 bg-[length:400%] shadow-2xl drop-shadow-2xl lg:h-48 lg:w-48'>
                   <Image
+                    quality={85}
                     src={career?.image?.url}
                     alt={career?.position}
                     className='h-44 w-44 rounded-full'
@@ -232,12 +235,7 @@ const Career = ({ career }) => {
                   <RichText
                     content={career?.jobDescription?.raw?.children}
                     renderers={{
-                      p: ({ children }) => <p className='text-justify'>{children}</p>,
-                      a: ({ children, href }) => (
-                        <a href={href} className='text-gg-500 underline'>
-                          {children}
-                        </a>
-                      ),
+                      ...baseRichTextRenderers,
                     }}
                   />
                 </div>

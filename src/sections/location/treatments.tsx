@@ -12,6 +12,7 @@ const TreatmentOptions = ({ branch, image }: TreatmentOptionsProps) => {
       {image && (
         <div className='mx-auto mt-16 flex max-w-fit items-center justify-center space-x-3 rounded-lg border px-2.5 py-2.5 dark:border-gray-600'>
           <Image
+            quality={85}
             src={image}
             alt='IVF Treatment'
             width={100}
@@ -33,6 +34,7 @@ const TreatmentOptions = ({ branch, image }: TreatmentOptionsProps) => {
           >
             <div className='mx-auto -mt-14 flex h-28 w-28 items-center justify-center rounded-full'>
               <Image
+                quality={85}
                 src={items?.image}
                 alt={items?.treatent}
                 width={100}

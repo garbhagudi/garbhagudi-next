@@ -10,6 +10,7 @@ const About = () => {
         <div className='grid grid-cols-1 gap-5 md:grid-cols-5'>
           <div className='col-span-2 mx-auto hidden items-center justify-center rounded-lg md:flex'>
             <Image
+              quality={85}
               src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vl0pf59ze07pla3652upc'
               alt='logo'
               width={500}

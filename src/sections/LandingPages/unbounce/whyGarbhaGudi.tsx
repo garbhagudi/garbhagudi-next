@@ -47,6 +47,7 @@ const WhyGarbhaGudi = () => {
           </div>
           <div className='mx-auto'>
             <Image
+              quality={85}
               src={
                 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vlpnr59p608pkpy5nsyoj'
               }

@@ -17,6 +17,7 @@ const Plans = () => {
                 alt='IVF Treatment - Services Image'
                 width={80}
                 height={80}
+                quality={85}
                 className='pb-8'
                 loading='lazy'
               />
@@ -34,6 +35,7 @@ const Plans = () => {
                 alt='ICSI - Services Image'
                 width={80}
                 height={80}
+                quality={85}
                 className='pb-8'
                 fetchPriority='low'
                 loading='lazy'
@@ -53,6 +55,7 @@ const Plans = () => {
                 alt='IUI - Services Image'
                 width={80}
                 height={80}
+                quality={85}
                 className='pb-8'
                 fetchPriority='low'
                 loading='lazy'
@@ -71,6 +74,7 @@ const Plans = () => {
                 alt='Infertility Treatment - Services Image'
                 width={80}
                 height={80}
+                quality={85}
                 className='pb-8'
                 fetchPriority='low'
                 loading='lazy'

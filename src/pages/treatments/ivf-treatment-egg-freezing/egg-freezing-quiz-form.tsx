@@ -370,6 +370,7 @@ export default function FertilityForm() {
         {submit.isSubmited ? (
           <div className='flex min-h-screen items-center justify-center bg-[#FCFAF7]'>
             <Image
+              quality={85}
               src={
                 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgw7r58sc08pkz311rog9'
               }

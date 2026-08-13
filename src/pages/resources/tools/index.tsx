@@ -79,6 +79,7 @@ const IndexPage = () => {
               <div className='flex w-96 cursor-pointer rounded-2xl border-2 border-solid border-gg-500 px-4 py-3 text-gray-800 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-gray-200 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gg-500 dark:hover:bg-gray-600'>
                 <div className='w-1/3'>
                   <Image
+                    quality={85}
                     className='h-24 w-24 rounded-2xl object-cover transition-all duration-150 group-hover:grayscale-0 dark:grayscale'
                     src={item.icon}
                     alt={item.name}

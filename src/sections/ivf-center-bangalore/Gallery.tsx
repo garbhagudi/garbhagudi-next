@@ -100,6 +100,7 @@ const Gallery = () => {
                 {images.map((image) => (
                   <div key={image.src} className='relative h-64 w-full sm:h-80 lg:h-[460px]'>
                     <Image
+                      quality={85}
                       src={image.src}
                       alt={image.alt}
                       fill

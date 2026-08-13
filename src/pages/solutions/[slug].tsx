@@ -7,6 +7,7 @@ import Loading from 'components/Loading';
 import Image from 'next/image';
 import type { RichTextContent } from '@graphcms/rich-text-types';
 import dynamic from 'next/dynamic';
+import baseRichTextRenderers from 'components/richTextRenderers';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 const FAQs = dynamic(() => import('components/FAQs'), { ssr: false });
@@ -354,26 +355,22 @@ const Blog = ({ article }: BlogProps) => {
               </span>
             </h1>
             <Image
+              quality={85}
               className='mb-5 mt-10 w-full rounded-lg'
               src={
                 article?.image?.url ||
                 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87uj57oi07pl2iu2n68l'
               }
               alt={article?.imageAlt}
-              width={800}
-              height={500}
+              width={1300}
+              height={550}
               priority={true}
             />
             <div className='text-justify text-gray-800 dark:text-gray-200'>
               <RichText
                 content={article?.content?.raw?.children}
                 renderers={{
-                  p: ({ children }) => <p className='text-justify'>{children}</p>,
-                  a: ({ children, href }) => (
-                    <a href={href} className='text-gg-500 underline'>
-                      {children}
-                    </a>
-                  ),
+                  ...baseRichTextRenderers,
                 }}
               />
             </div>

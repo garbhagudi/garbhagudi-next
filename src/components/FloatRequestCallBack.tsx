@@ -41,6 +41,7 @@ const FloatRequestCallBack = () => {
                   className='h-full w-full rounded-t-md'
                   width={380}
                   height={220}
+                  quality={85}
                 />
                 <CloseButton
                   className={'absolute right-2 top-1 h-fit w-fit rounded-2xl bg-white text-gg-500'}

@@ -176,6 +176,7 @@ export const InfertilityTreatmentOptions = () => {
       <div className='mx-auto flex max-w-7xl flex-col items-center justify-center pb-4 lg:flex-row lg:pb-8'>
         <div className='flex h-full items-center justify-center overflow-hidden rounded-lg lg:w-1/2'>
           <Image
+            quality={85}
             src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmh13psh07plnnci7dhn'
             alt='Infertility Treatment'
             className='w-full object-cover lg:h-96'
@@ -240,6 +241,7 @@ export const Causes = () => {
         </div>
         <div className='mt-3 overflow-hidden rounded-lg lg:mt-0 lg:w-1/2'>
           <Image
+            quality={85}
             src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmho3psl07plazzvsr0o'
             alt='Causes of Infertility'
             className='h-auto w-full'

@@ -11,6 +11,7 @@ const WhoIsThisFor = () => {
             <div key={item.category} className='flex flex-col gap-4'>
               <div className=''>
                 <Image
+                  quality={85}
                   src={item.image}
                   alt={item.category}
                   height={40}

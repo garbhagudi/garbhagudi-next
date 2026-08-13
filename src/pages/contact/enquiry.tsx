@@ -73,6 +73,7 @@ const IndexPage = () => {
       <div className='flex w-full items-center justify-center px-3 py-8'>
         <div className='w-fit'>
           <Image
+            quality={85}
             src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmf63ps507pl13e62vkv'
             alt='formBanner'
             className='mx-auto mt-4 rounded-t-md md:max-w-2xl'

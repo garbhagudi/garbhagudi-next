@@ -48,6 +48,7 @@ export default function ThankYouHero() {
 
         <div className='hero-image'>
           <Image
+            quality={85}
             src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms75y8q9h0xl07pnxcag7v7i'
             alt='Happy couple at GarbhaGudi'
             width={560}

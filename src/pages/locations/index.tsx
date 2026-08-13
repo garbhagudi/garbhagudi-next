@@ -83,6 +83,7 @@ const Locations = ({ branches }) => {
               <div className='mx-auto flex max-w-sm flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-brandPink'>
                 <div className='overflow-hidden'>
                   <Image
+                    quality={85}
                     src={items?.branchPictureUrl}
                     alt={items?.title}
                     width={480}

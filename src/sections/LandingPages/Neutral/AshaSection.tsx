@@ -17,6 +17,7 @@ const AshaSection = () => {
                 <div className='relative -mt-32'>
                   <div className='bg-[length: 400%] absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3 to-purple-500'></div>
                   <Image
+                    quality={85}
                     className='h-56 w-56 rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
                     alt='Dr Asha'
                     src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vl0pz59zi07pls5ypl5ek'

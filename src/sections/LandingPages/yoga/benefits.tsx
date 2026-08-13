@@ -11,6 +11,7 @@ const Benefits = () => {
           {benefits.map((benefit) => (
             <div key={benefit.id} className='flex flex-col items-center justify-center'>
               <Image
+                quality={85}
                 width={300}
                 height={300}
                 src={benefit.image}

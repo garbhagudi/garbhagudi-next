@@ -59,6 +59,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
     return (
       <div className='flex items-center justify-start border-b pb-4 font-sans md:border-none md:pb-0'>
         <Image
+          quality={85}
           src={image}
           alt={label}
           className='col-span-1 max-w-[200px] rounded-lg sm:w-32 md:max-w-[230px] xl:w-48'
@@ -90,6 +91,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
     return (
       <div className='flex items-center justify-start font-sans'>
         <Image
+          quality={85}
           src={image}
           alt={label}
           className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'
@@ -121,6 +123,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
     return (
       <div className='flex items-center justify-start font-sans'>
         <Image
+          quality={85}
           src={image}
           alt={label}
           className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'
@@ -152,6 +155,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
     return (
       <div className='flex items-center justify-start font-sans'>
         <Image
+          quality={85}
           src={image}
           alt={label}
           className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'

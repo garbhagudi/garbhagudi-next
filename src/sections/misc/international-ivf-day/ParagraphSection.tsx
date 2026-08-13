@@ -42,6 +42,7 @@ const ParagraphSection = () => {
       </p>
       <div className='mt-2 flex items-center justify-center rounded-lg'>
         <Image
+          quality={85}
           height={350}
           width={350}
           className='mb-5 mt-10 rounded-lg'

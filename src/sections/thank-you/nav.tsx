@@ -7,7 +7,14 @@ export default function ThankYouNav() {
   return (
     <nav>
       <a href='https://www.garbhagudi-ivf.com/'>
-        <Image src={logoUrl} alt='GarbhaGudi IVF Centre' width={214} height={44} priority />
+        <Image
+          src={logoUrl}
+          alt='GarbhaGudi IVF Centre'
+          width={214}
+          height={44}
+          priority
+          quality={85}
+        />
       </a>
       <a className='phone' href='tel:+919108910832'>
         <LuPhone size={16} strokeWidth={2} />

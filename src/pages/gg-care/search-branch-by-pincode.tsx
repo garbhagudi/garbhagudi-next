@@ -204,6 +204,7 @@ const NearestZipcodeFinder: React.FC = () => {
                 >
                   <div className='w-full px-3 md:w-6/12 md:px-0'>
                     <Image
+                      quality={85}
                       src={items.image}
                       alt={items.name}
                       className='rounded-lg'

@@ -97,6 +97,7 @@ const Features2 = () => {
                       <div>
                         <span className='inline-flex items-center justify-center rounded-full bg-brandPink p-2 shadow-xl'>
                           <Image
+                            quality={85}
                             src={feature.icon}
                             alt={feature.name}
                             width={48}

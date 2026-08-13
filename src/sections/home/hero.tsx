@@ -43,6 +43,7 @@ const Hero = () => {
             <div className='sm:mx-auto sm:w-full sm:max-w-md sm:overflow-hidden sm:rounded-lg'>
               <div className='my-6'>
                 <Image
+                  quality={85}
                   src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6km08v208pk1e4c8z0p'
                   alt='Experience the joy of being complete with the Best IVF Centre in Bangalore'
                   className='rounded-2xl object-cover shadow-xl'

@@ -107,6 +107,7 @@ const IndexPage = ({ medias }) => {
               >
                 <div>
                   <Image
+                    quality={85}
                     src={items?.thumbnail?.url}
                     alt={items?.title}
                     className='mx-auto aspect-video w-full rounded-lg'

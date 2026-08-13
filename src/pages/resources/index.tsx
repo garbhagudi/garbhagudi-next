@@ -73,6 +73,7 @@ const IndexPage = () => {
               <Link key={items.id} href={items.link}>
                 <div className='flex flex-col items-center justify-center rounded-xl py-3'>
                   <Image
+                    quality={85}
                     src={items.icon}
                     alt={items.title}
                     className='h-20 w-20 transition-all duration-300 dark:grayscale dark:hover:grayscale-0'

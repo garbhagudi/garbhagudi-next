@@ -65,6 +65,7 @@ const CareerOrBaby = () => {
         <div className='grid gap-4 lg:grid-cols-2'>
           <div>
             <Image
+              quality={85}
               className='h-64 w-full rounded-2xl object-cover shadow-lg sm:h-[360px]'
               src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1d93plq07plyvlrxm66'
               alt='Career or Baby ?'
@@ -128,6 +129,7 @@ const CareerOrBaby = () => {
           </div>
           <div className='max-w-xl'>
             <Image
+              quality={85}
               src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1dz3plu07plrqgv404y'
               alt='Male Infertility'
               className='rounded-3xl'
@@ -145,6 +147,7 @@ const CareerOrBaby = () => {
         <div className='grid lg:grid-cols-2'>
           <div className='max-w-xl'>
             <Image
+              quality={85}
               src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1ep3ply07plh5m1zqr0'
               alt='Female Infertility'
               className='rounded-3xl'
@@ -224,6 +227,7 @@ const CareerOrBaby = () => {
         <div className='mx-auto lg:max-w-2xl'>
           <div className='relative w-full'>
             <Image
+              quality={85}
               className='h-56 w-full rounded-3xl object-cover shadow-lg transition-shadow duration-300 hover:shadow-xl sm:h-64 md:h-80 lg:h-96'
               src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmc83prp07plteu9qg1j'
               alt='ART - The Real Boon!'
@@ -279,6 +283,7 @@ const CareerOrBaby = () => {
           </div>
           <div className='max-w-xl'>
             <Image
+              quality={85}
               src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmdp3prx07pl07w7dllx'
               alt='Sperm Freezing'
               className='rounded-3xl'
@@ -296,6 +301,7 @@ const CareerOrBaby = () => {
         <div className='grid lg:grid-cols-2'>
           <div className='max-w-xl'>
             <Image
+              quality={85}
               src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmsczhh2zbani07pfbvspuz4q'
               alt='Egg Freezing'
               className='rounded-3xl'
@@ -339,6 +345,7 @@ const CareerOrBaby = () => {
         />
         <BlogFooter />
         <Image
+          quality={85}
           height='1'
           width='1'
           style={{ display: 'none' }}

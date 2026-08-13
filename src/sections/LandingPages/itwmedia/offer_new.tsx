@@ -11,6 +11,7 @@ const Offer = () => {
           alt='Banner Image'
           width={400}
           height={400}
+          quality={85}
           className='mx-auto h-full w-full'
           priority={true}
         />

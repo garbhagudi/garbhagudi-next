@@ -1,6 +1,5 @@
 import { SlArrowRight } from 'react-icons/sl';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
@@ -8,8 +7,8 @@ const Form = dynamic(() => import('sections/LandingPages/eggFreezing/form'), { s
 
 export default function Expects() {
   const [isOpen, setIsOpen] = useState(false);
-  const path = usePathname();
   const router = useRouter();
+  const path = router.asPath;
   const handleClose = () => {
     setIsOpen(false);
   };

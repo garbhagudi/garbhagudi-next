@@ -11,6 +11,13 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "JSXOpeningElement[name.name='Image']:not(:has(JSXAttribute[name.name='quality']))",
+        "message": "next/image defaults to quality 75 and Next 15 has no global override (images.qualities is an allowlist, not a default). Add quality={85} — see the comment above `images` in next.config.mjs."
+      }
+    ],
     "react/no-unescaped-entities": "off",
     "@next/next/no-page-custom-font": "off",
     "react/jsx-filename-extension": ["error", { "extensions": [".tsx", ".jsx"] }],

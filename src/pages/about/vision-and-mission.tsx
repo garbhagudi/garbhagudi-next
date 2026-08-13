@@ -102,6 +102,7 @@ const VisionMission = () => {
               </h2>
               <div className='h-64 overflow-hidden rounded-lg'>
                 <Image
+                  quality={85}
                   alt='content'
                   className='mb-2 h-full w-full object-cover object-center'
                   src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1bg3ple07plyuim0she'
@@ -132,6 +133,7 @@ const VisionMission = () => {
               </h2>
               <div className='h-64 overflow-hidden rounded-lg'>
                 <Image
+                  quality={85}
                   alt='content'
                   className='mb-2 h-full w-full object-cover object-center'
                   src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1c33pli07pl9dmbstur'

@@ -31,6 +31,7 @@ const Treatments = () => {
                       <div className='flex cursor-pointer rounded-lg border px-2 py-2 transition-all duration-300 ease-linear hover:border-transparent hover:bg-gg-500 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600 md:px-3 md:py-3 lg:px-4'>
                         <div className='w-1/3'>
                           <Image
+                            quality={85}
                             className='h-10 w-10 rounded-lg object-cover transition-all duration-300 ease-linear group-hover:grayscale-0 dark:grayscale md:h-12 md:w-12'
                             src={items.icon}
                             alt={items.name}
@@ -55,6 +56,7 @@ const Treatments = () => {
                       <div className='flex cursor-pointer rounded-lg border px-2 py-2 transition-all duration-300 ease-linear hover:border-transparent hover:bg-gg-500 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600 md:px-3 md:py-3 lg:px-4'>
                         <div className='w-1/3'>
                           <Image
+                            quality={85}
                             className='h-10 w-10 rounded-lg object-cover transition-all duration-300 ease-linear group-hover:grayscale-0 dark:grayscale md:h-12 md:w-12'
                             src={items.icon}
                             alt={items.name}
@@ -79,6 +81,7 @@ const Treatments = () => {
                       <div className='flex cursor-pointer rounded-lg border px-2 py-2 transition-all duration-300 ease-linear hover:border-transparent hover:bg-gg-500 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600 md:px-3 md:py-3 lg:px-4'>
                         <div className='w-1/3'>
                           <Image
+                            quality={85}
                             className='h-10 w-10 rounded-lg object-cover transition-all duration-300 ease-linear group-hover:grayscale-0 dark:grayscale md:h-12 md:w-12'
                             src={items.icon}
                             alt={items.name}

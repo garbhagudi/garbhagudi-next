@@ -28,6 +28,7 @@ function HeroHome() {
             {Data.map((items) => (
               <div className='flex items-center justify-center' key={items.id}>
                 <Image
+                  quality={85}
                   src={items.img}
                   alt={items.title}
                   className='w-full transition-all duration-200 hover:scale-150 dark:brightness-200 dark:contrast-125 dark:grayscale'

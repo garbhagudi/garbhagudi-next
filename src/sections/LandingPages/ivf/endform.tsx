@@ -40,6 +40,7 @@ const EndForm = () => {
           </div>
           <div>
             <Image
+              quality={85}
               src={
                 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vl0u55a0c07pltyxlbd3m'
               }

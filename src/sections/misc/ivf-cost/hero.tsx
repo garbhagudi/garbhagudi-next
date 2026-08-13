@@ -65,6 +65,7 @@ const Banner = () => {
                   />
                 </svg>
                 <Image
+                  quality={85}
                   src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vosp75aeu08pkou404pot'
                   alt='girl with pregnancy kit'
                   className='relative'

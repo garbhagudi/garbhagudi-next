@@ -13,6 +13,7 @@ const SocialMediaTemplates = () => {
                 alt={item.desccription}
                 height={500}
                 width={500}
+                quality={85}
                 className='object-cover'
                 loading='lazy'
               />

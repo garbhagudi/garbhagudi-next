@@ -6,6 +6,7 @@ const PoseCard = ({ pose }: { pose: Pose }) => (
     {/* image */}
     <div className='relative aspect-[4/3] w-full overflow-hidden bg-gray-100 dark:bg-gray-700'>
       <Image
+        quality={85}
         src={pose.image}
         alt={`${pose.sanskrit} — ${pose.english}`}
         fill

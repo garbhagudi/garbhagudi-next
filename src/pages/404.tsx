@@ -49,6 +49,7 @@ const FourOhFour = () => {
         <main className='mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8'>
           <div className='flex-shrink-0 pt-16'>
             <Image
+              quality={85}
               className='mx-auto h-16 w-auto'
               src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87q557nq07pls65nzuhg'
               alt='Workflow'
@@ -82,6 +83,7 @@ const FourOhFour = () => {
                     <div className='flex-shrink-0'>
                       <span className='flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-50'>
                         <Image
+                          quality={85}
                           src={link.icon}
                           alt={link.title}
                           className=''

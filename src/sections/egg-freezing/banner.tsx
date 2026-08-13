@@ -66,6 +66,7 @@ export default function Banner() {
           >
             {banners.map((banner) => (
               <Image
+                quality={85}
                 src={banner.image.url}
                 alt={banner.title}
                 width={1920}

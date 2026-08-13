@@ -23,6 +23,7 @@ const StatsPC = () => {
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
                   height={200}
+                  quality={85}
                   loading='lazy'
                 />
 
@@ -42,6 +43,7 @@ const StatsPC = () => {
                   className='h-full w-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert'
                   width={256}
                   height={256}
+                  quality={85}
                   loading='lazy'
                 />
               </div>
@@ -58,6 +60,7 @@ const StatsPC = () => {
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
                   height={200}
+                  quality={85}
                   loading='lazy'
                 />
                 {tooltipStatus == 2 && (
@@ -77,6 +80,7 @@ const StatsPC = () => {
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
                   height={200}
+                  quality={85}
                   loading='lazy'
                 />
                 {tooltipStatus == 3 && <div className='absolute mt-44 text-sm'>Humane Touch</div>}
@@ -94,6 +98,7 @@ const StatsPC = () => {
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
                   height={200}
+                  quality={85}
                   loading='lazy'
                 />
                 {tooltipStatus == 4 && (
@@ -113,6 +118,7 @@ const StatsPC = () => {
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
                   height={200}
+                  quality={85}
                   loading='lazy'
                 />
                 {tooltipStatus == 5 && (
@@ -132,6 +138,7 @@ const StatsPC = () => {
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
                   height={200}
+                  quality={85}
                   loading='lazy'
                 />
                 {tooltipStatus == 6 && (
@@ -152,6 +159,7 @@ const StatsPC = () => {
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
                   height={200}
+                  quality={85}
                   loading='lazy'
                 />
                 {tooltipStatus == 7 && (
@@ -171,6 +179,7 @@ const StatsPC = () => {
                   className='transition-all duration-500 hover:scale-115'
                   width={200}
                   height={200}
+                  quality={85}
                   loading='lazy'
                 />
                 {tooltipStatus == 8 && (

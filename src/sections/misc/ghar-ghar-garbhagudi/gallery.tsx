@@ -43,6 +43,7 @@ const ImageGallery: React.FC<{
       {images.map((imageUrl, index) => (
         <div key={index} className='relative' onClick={() => onClick(imageUrl)}>
           <Image
+            quality={85}
             src={imageUrl}
             alt={`Image ${index + 1}`}
             className='h-56 w-full cursor-pointer rounded-md object-cover object-center'
@@ -69,6 +70,7 @@ const LightBox: React.FC<{ imageUrl: string; onClose: () => void }> = ({ imageUr
               &times;
             </button>
             <Image
+              quality={85}
               src={imageUrl}
               alt='Full-screen'
               className='h-auto w-full md:scale-125'

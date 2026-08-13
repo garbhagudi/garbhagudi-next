@@ -38,11 +38,12 @@ const ContentXtra = () => {
         </div>
         <div className='px-3'>
           <Image
+            quality={85}
             src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8voson5aeq08pkmp2b5w2x'
             alt='IUI treatment Process'
             className='w-full rounded-lg'
-            width={320}
-            height={320}
+            width={650}
+            height={450}
             loading='lazy'
           />
         </div>

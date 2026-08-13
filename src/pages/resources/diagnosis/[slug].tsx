@@ -8,6 +8,7 @@ import { gql } from '@apollo/client';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import RichTextIframe from 'components/RichTextIframe';
+import baseRichTextRenderers from 'components/richTextRenderers';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 export const getStaticProps = async ({ params }) => {
@@ -302,10 +303,11 @@ const Diagnosis = ({ diagnosis }) => {
             </h1>
             <figure>
               <Image
+                quality={85}
                 className='mb-5 mt-10 w-full rounded-lg'
                 src={diagnosis?.image?.url}
                 alt={diagnosis?.title}
-                width={800}
+                width={1300}
                 height={500}
                 priority={true}
               />
@@ -314,12 +316,7 @@ const Diagnosis = ({ diagnosis }) => {
               <RichText
                 content={diagnosis?.content?.raw?.children}
                 renderers={{
-                  p: ({ children }) => <p className='text-justify'>{children}</p>,
-                  a: ({ children, href }) => (
-                    <a href={href} className='text-gg-500 underline'>
-                      {children}
-                    </a>
-                  ),
+                  ...baseRichTextRenderers,
                   iframe: (props) => <RichTextIframe {...props} />,
                 }}
               />

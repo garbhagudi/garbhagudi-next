@@ -26,6 +26,7 @@ const Doctor = () => {
               <div className='relative mx-auto h-44 w-44'>
                 <div className='absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 bg-[length:400%] dark:bg-gray-400'></div>
                 <Image
+                  quality={85}
                   className='shadow-champaigne rounded-full bg-transparent drop-shadow-2xl'
                   src={doctor.image}
                   alt={doctor.name}

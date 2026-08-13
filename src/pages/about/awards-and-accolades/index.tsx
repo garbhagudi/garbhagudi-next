@@ -148,11 +148,12 @@ const Awards = ({ award }: Award) => {
                 <Link href={`/about/awards-and-accolades/${item?.slug}`} passHref>
                   <div className='flex-shrink-0'>
                     <Image
+                      quality={85}
                       className='h-38 w-full cursor-pointer rounded-t-lg object-contain'
                       src={item?.image?.url}
                       alt={item?.title}
-                      width={360}
-                      height={180}
+                      width={500}
+                      height={200}
                       priority
                     />
                   </div>

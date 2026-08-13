@@ -6,6 +6,7 @@ import type { RichTextContent } from '@graphcms/rich-text-types';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import dynamic from 'next/dynamic';
+import baseRichTextRenderers from 'components/richTextRenderers';
 const Share = dynamic(() => import('components/share'), { ssr: false });
 const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
 const Error = dynamic(() => import('next/error'), { ssr: false });
@@ -278,11 +279,12 @@ const AwardPage = ({ award }: AwardProps) => {
               </h1>
               <figure>
                 <Image
+                  quality={85}
                   className='mb-5 mt-10 w-full rounded-lg'
                   src={award?.image?.url}
                   alt={award?.title}
-                  width={500}
-                  height={320}
+                  width={1300}
+                  height={500}
                   priority
                 />
               </figure>
@@ -290,12 +292,7 @@ const AwardPage = ({ award }: AwardProps) => {
                 <RichText
                   content={award?.content?.raw.children}
                   renderers={{
-                    p: ({ children }) => <p className='text-justify'>{children}</p>,
-                    a: ({ children, href }) => (
-                      <a href={href} className='text-gg-500 underline'>
-                        {children}
-                      </a>
-                    ),
+                    ...baseRichTextRenderers,
                   }}
                 />
               </div>

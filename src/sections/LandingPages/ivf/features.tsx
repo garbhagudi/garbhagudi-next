@@ -36,6 +36,7 @@ const Features = () => {
 
             <div className='my-5 flex justify-center md:my-0 md:w-1/3'>
               <Image
+                quality={85}
                 height={350}
                 width={350}
                 src={

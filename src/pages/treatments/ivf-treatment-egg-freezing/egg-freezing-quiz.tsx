@@ -46,6 +46,7 @@ export default function Fertility() {
       </Head>
       <div className='mt-32 flex h-[45rem] w-screen flex-col items-start gap-4 pl-5 md:mt-0 md:h-screen md:w-[70%] md:justify-center md:pl-20'>
         <Image
+          quality={85}
           src={
             'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgw8h58sg08pkdsc4rd46'
           }
@@ -70,6 +71,7 @@ export default function Fertility() {
         </div>
         <div className='flex items-center justify-start gap-2'>
           <Image
+            quality={85}
             src={Timer.src}
             alt='timer_icon'
             className='h-5 w-5 md:h-6 md:w-6'
@@ -84,6 +86,7 @@ export default function Fertility() {
 
         <div className='absolute bottom-0 right-0 z-10'>
           <Image
+            quality={85}
             src={
               'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgw9558sk08pknua93x0e'
             }
@@ -93,6 +96,7 @@ export default function Fertility() {
             className='-z-10'
           />
           <Image
+            quality={85}
             src={
               'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgw9q58so08pk74cfpz4e'
             }
@@ -102,6 +106,7 @@ export default function Fertility() {
             className='absolute bottom-40 right-0 z-[-1]'
           />
           <Image
+            quality={85}
             src={
               'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgwab58ss08pkgypcy01q'
             }

@@ -15,6 +15,7 @@ const BlogFooter = () => {
             <div className='mx-auto hidden max-w-md px-8 sm:max-w-max lg:block lg:max-w-none lg:p-0'>
               <div className='overflow-hidden rounded-3xl border bg-white dark:border-gray-600 dark:bg-gray-800'>
                 <Image
+                  quality={85}
                   className='object-fit h-64 rounded-3xl object-center shadow-2xl dark:fill-white dark:brightness-0 dark:grayscale dark:invert lg:h-96'
                   src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6oz08vq08pk9nuarsth'
                   alt='gg logo'

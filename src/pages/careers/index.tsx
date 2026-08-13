@@ -114,6 +114,7 @@ const IndexPage = ({ careers }) => {
           <Link href='/about/awards-and-accolades/garbhagudi-certified-healthy-workplace'>
             <div>
               <Image
+                quality={85}
                 src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmee3ps107pl57mgs6ms'
                 alt='arogya world banner'
                 className='rounded-xl'
@@ -152,6 +153,7 @@ const IndexPage = ({ careers }) => {
                   <div className='flex flex-col justify-between p-4 leading-normal'>
                     <div className='flex items-center space-x-2'>
                       <Image
+                        quality={85}
                         src={items?.image?.url}
                         alt={items?.position}
                         className='h-24 w-24 rounded-full object-cover'

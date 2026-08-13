@@ -19,6 +19,7 @@ const Branch = ({ branches }) => {
               {/* Fixed-size frame + object-cover keeps every centre image the same shape */}
               <div className='relative h-44 w-full overflow-hidden'>
                 <Image
+                  quality={85}
                   src={items?.branchPicture?.url}
                   alt={items?.title}
                   fill

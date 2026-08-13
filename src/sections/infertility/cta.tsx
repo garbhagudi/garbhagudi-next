@@ -1,12 +1,12 @@
 import dynamic from 'next/dynamic';
-import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 const Form = dynamic(() => import('sections/LandingPages/eggFreezing/form'), { ssr: false });
 
 const CTA: React.FC = () => {
-  const path = usePathname();
   const router = useRouter();
+  const path = router.asPath;
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = () => {
@@ -21,12 +21,16 @@ const CTA: React.FC = () => {
     }
   };
   return (
-    <div
-      className='relative flex h-screen max-h-64 items-center justify-center bg-cover bg-center shadow-xl'
-      style={{
-        backgroundImage: `url('https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6km08v208pk1e4c8z0p')`,
-      }}
-    >
+    <div className='relative flex h-screen max-h-64 items-center justify-center shadow-xl'>
+      <Image
+        quality={85}
+        src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6km08v208pk1e4c8z0p'
+        alt=''
+        aria-hidden='true'
+        fill
+        sizes='100vw'
+        className='object-cover object-center'
+      />
       <div className='absolute h-full w-full bg-gray-800 opacity-30 dark:opacity-60'></div>
       <div className='z-10 max-w-lg rounded-lg bg-white bg-opacity-75 p-8 shadow-md dark:bg-gray-800'>
         <h2 className='mb-2 font-heading text-2xl font-bold'>Get Started Today!</h2>

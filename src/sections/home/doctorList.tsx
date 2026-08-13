@@ -127,6 +127,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                                   <div className='relative mx-auto h-44 w-44'>
                                     <div className='absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 bg-[length:400%] dark:bg-gray-400'></div>
                                     <Image
+                                      quality={85}
                                       className='shadow-champaigne rounded-full bg-transparent drop-shadow-2xl'
                                       src={doctor?.image?.url}
                                       alt={doctor.imageAlt || doctor.name}
@@ -190,6 +191,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                       <div className='space-y-4'>
                         <div className='mx-auto flex w-64 flex-col items-center justify-center'>
                           <Image
+                            quality={85}
                             className='h-52 w-52 rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 shadow-2xl drop-shadow-2xl dark:bg-gray-400'
                             src={item?.image?.url}
                             alt={item?.imageAlt || item?.name}

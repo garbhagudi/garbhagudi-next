@@ -127,6 +127,7 @@ const Home = () => {
                 Foundation, has initiated this program called{' '}
                 <span className='font-bold underline'>PARIPOORNA. </span>
                 <Image
+                  quality={85}
                   src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vp44h5aq707pl7oyfbuqd'
                   alt='pp logo'
                   width={500}
@@ -158,6 +159,7 @@ const Home = () => {
             </div>
             <div className='hidden flex-col items-center justify-center gap-5 md:flex lg:ml-10'>
               <Image
+                quality={85}
                 src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vp44h5aq707pl7oyfbuqd'
                 alt='pp logo'
                 width={500}

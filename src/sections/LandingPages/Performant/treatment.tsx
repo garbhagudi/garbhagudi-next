@@ -16,6 +16,7 @@ const TreatmentOptions = ({ branch }) => {
           >
             <div className='mx-auto -mt-10 flex items-center justify-center rounded-full md:-mt-12 md:h-24 md:w-24'>
               <Image
+                quality={85}
                 src={items?.image}
                 alt={items?.treatent}
                 width={80}
