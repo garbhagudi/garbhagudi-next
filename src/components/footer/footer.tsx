@@ -51,8 +51,8 @@ const navigation = {
     { name: 'GG care', href: '/gg-care' },
   ],
   legal: [
-    { name: 'Privacy', href: '/legal/privacy-policy' },
-    { name: 'Terms', href: '/legal/terms-and-conditions' },
+    { name: 'Privacy policy', href: '/legal/privacy-policy' },
+    { name: 'Terms & conditions', href: '/legal/terms-and-conditions' },
   ],
 };
 
@@ -76,7 +76,7 @@ export default function Footer() {
         {isIvfHome ? null : (
           <div className='xl:grid xl:grid-cols-2 xl:gap-8'>
             <div className='mt-12 grid grid-cols-1 gap-8 text-center antialiased xl:col-span-full xl:mt-0 xl:grid-cols-1'>
-              <div className='grid grid-cols-3 gap-5 md:grid-cols-6'>
+              <div className='grid grid-cols-3 gap-4 md:grid-cols-6'>
                 <div className=''>
                   <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
                     Treatments

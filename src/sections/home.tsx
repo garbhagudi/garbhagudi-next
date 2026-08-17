@@ -22,7 +22,7 @@ const HomeComponent = ({ testimonialPassthrough, blogsPassthrough }) => {
       <Overview />
       <Video testimonials={testimonialPassthrough} />
       <Features />
-      <Stats />
+      {/* <Stats /> */}
       <WhyGG />
       <Stat />
       <BlogsSnip posts={blogsPassthrough} />

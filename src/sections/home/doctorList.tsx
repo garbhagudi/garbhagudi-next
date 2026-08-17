@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
@@ -40,6 +40,9 @@ const CATEGORY_ORDER = [
   'consultants',
 ] as const;
 
+/** Doctors shown per category tab before "Load More" is clicked. */
+const INITIAL_VISIBLE = 4;
+
 function orderCategoryKeys(keys: string[]): string[] {
   const keySet = new Set(keys);
   const ordered = CATEGORY_ORDER.filter((c) => keySet.has(c));
@@ -54,6 +57,19 @@ const DoctorList = (doctorList: doctorListProps) => {
     pagingDotsStyle: {
       display: 'none',
     },
+  };
+
+  const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const toggleCategory = (category: string) => {
+    const willExpand = !expandedCategories[category];
+    setExpandedCategories((prev) => ({ ...prev, [category]: willExpand }));
+    // Collapsing drops several rows from above the button, which would otherwise leave the
+    // viewport stranded in the next section — bring the tabs back into view.
+    if (!willExpand) {
+      sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
   const groupedDoctors = doctorList.doctors.reduce(
     (acc, doctor) => {
@@ -74,6 +90,7 @@ const DoctorList = (doctorList: doctorListProps) => {
   return (
     <div>
       <div
+        ref={sectionRef}
         className='bg-purple-100/70 dark:bg-gradient-to-br dark:from-gray-800 dark:via-gray-700 dark:to-gray-800'
         id='ourTeam'
       >
@@ -109,51 +126,70 @@ const DoctorList = (doctorList: doctorListProps) => {
                   ))}
                 </TabList>
                 <TabPanels className='mt-8'>
-                  {categories.map((category) => (
-                    <TabPanel key={category}>
-                      {groupedDoctors[category].length === 0 ? (
-                        <p className='font-content text-gray-600 dark:text-gray-300'>
-                          Expert profiles in this category will appear here soon.
-                        </p>
-                      ) : (
-                        <div className='grid grid-cols-2 gap-8 lg:grid-cols-4'>
-                          {groupedDoctors[category].map((doctor) => (
-                            <div
-                              key={doctor.id}
-                              className='transition-all duration-300 hover:scale-105'
-                            >
-                              <Link href={`/fertility-experts/${doctor.slug}`} passHref>
-                                <div className='space-y-4'>
-                                  <div className='relative mx-auto h-44 w-44'>
-                                    <div className='absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 bg-[length:400%] dark:bg-gray-400'></div>
-                                    <Image
-                                      className='shadow-champaigne rounded-full bg-transparent drop-shadow-2xl'
-                                      src={doctor.image.url}
-                                      alt={doctor.imageAlt || doctor.name}
-                                      width={400}
-                                      height={400}
-                                      loading='lazy'
-                                    />
+                  {categories.map((category) => {
+                    const doctorsInCategory = groupedDoctors[category];
+                    const isExpanded = expandedCategories[category];
+                    const visibleDoctors = isExpanded
+                      ? doctorsInCategory
+                      : doctorsInCategory.slice(0, INITIAL_VISIBLE);
+                    const isExpandable = doctorsInCategory.length > INITIAL_VISIBLE;
+
+                    return (
+                      <TabPanel key={category}>
+                        {groupedDoctors[category].length === 0 ? (
+                          <p className='font-content text-gray-600 dark:text-gray-300'>
+                            Expert profiles in this category will appear here soon.
+                          </p>
+                        ) : (
+                          <div className='grid grid-cols-2 gap-8 lg:grid-cols-4'>
+                            {visibleDoctors.map((doctor) => (
+                              <div
+                                key={doctor.id}
+                                className='transition-all duration-300 hover:scale-105'
+                              >
+                                <Link href={`/fertility-experts/${doctor.slug}`} passHref>
+                                  <div className='space-y-4'>
+                                    <div className='relative mx-auto h-44 w-44'>
+                                      <div className='absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 bg-[length:400%] dark:bg-gray-400'></div>
+                                      <Image
+                                        className='shadow-champaigne rounded-full bg-transparent drop-shadow-2xl'
+                                        src={doctor.image.url}
+                                        alt={doctor.imageAlt || doctor.name}
+                                        width={400}
+                                        height={400}
+                                        loading='lazy'
+                                      />
+                                    </div>
+                                    <div className='space-y-0.5'>
+                                      <h3 className='font-heading text-lg font-bold text-gray-800 dark:text-gray-200'>
+                                        {doctor.name}
+                                      </h3>
+                                      <p className='text-sm text-purple-900 dark:text-purple-200'>
+                                        {doctor.qualification}
+                                      </p>
+                                      <p className='text-sm text-gg-500 dark:text-gg-300'>
+                                        {doctor.designation}
+                                      </p>
+                                    </div>
                                   </div>
-                                  <div className='space-y-0.5'>
-                                    <h3 className='font-heading text-lg font-bold text-gray-800 dark:text-gray-200'>
-                                      {doctor.name}
-                                    </h3>
-                                    <p className='text-sm text-purple-900 dark:text-purple-200'>
-                                      {doctor.qualification}
-                                    </p>
-                                    <p className='text-sm text-gg-500 dark:text-gg-300'>
-                                      {doctor.designation}
-                                    </p>
-                                  </div>
-                                </div>
-                              </Link>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </TabPanel>
-                  ))}
+                                </Link>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        {isExpandable && (
+                          <button
+                            type='button'
+                            onClick={() => toggleCategory(category)}
+                            aria-expanded={!!isExpanded}
+                            className='mx-auto mt-10 flex w-32 items-center justify-center rounded-lg border-2 border-gg-500 bg-transparent px-3 py-2 text-center font-content font-bold text-gg-500 duration-300 hover:-translate-y-1 hover:bg-gg-500 hover:text-white hover:shadow-2xl hover:shadow-gg-500 hover:transition-all dark:border-gg-400 dark:text-gg-400 dark:hover:bg-gg-400 dark:hover:text-gray-800'
+                          >
+                            {isExpanded ? 'Show Less' : 'Load More'}
+                          </button>
+                        )}
+                      </TabPanel>
+                    );
+                  })}
                 </TabPanels>
               </TabGroup>
             </div>
