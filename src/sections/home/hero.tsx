@@ -35,7 +35,7 @@ const Hero = () => {
                 >
                   Dr. Asha S Vijay
                 </Link>
-                , a renowned gynaecologist and fertility specialist. it is not hospital
+                , a renowned gynaecologist and fertility specialist. it is not hospital.
               </p>
             </div>
           </div>

@@ -42,9 +42,12 @@ const Overview = () => {
             </svg>
           </div>
           <div className='relative mx-auto h-full max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20'>
-            <div className='relative flex h-full flex-col justify-end overflow-hidden rounded-2xl pb-10 pt-64 shadow-xl sm:aspect-[3/2] lg:aspect-auto lg:pt-0'>
+            <Link
+              href='/fertility-experts/dr-asha-s-vijay'
+              className='group relative flex h-full flex-col justify-end overflow-hidden rounded-2xl pb-10 pt-64 shadow-xl sm:aspect-[3/2] lg:aspect-auto lg:pt-0'
+            >
               <Image
-                className='object-cover'
+                className='object-cover transition-transform duration-500 group-hover:scale-105'
                 src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1670926732/Home/Why_GarbhaGudi_oa1nv7-min_z7p9jv.webp'
                 alt='Dr Asha S Vijay - IVF Specialist in Bangalore'
                 fill
@@ -59,7 +62,7 @@ const Overview = () => {
                   </p>
                 </footer>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
 
