@@ -59,7 +59,7 @@ const Ivf = () => {
   function addReviewJsonLd() {
     const title = 'IVF Treatment in Bangalore: Trusted Fertility Solutions';
     const image =
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1672381537/Misc/happy-pregnant-woman-late-pregnancy-stage-sitting-grass-lawn-min_11zon_xkeac0.webp';
+      'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8qj586507pl03hfxicv';
     const description =
       'Explore the best IVF treatment in Bangalore at GarbhaGudi IVF Centre. High success rates, expert care & affordable costs. Book a consultation today!';
 
@@ -177,7 +177,7 @@ const Ivf = () => {
       <Head>
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1672381537/Misc/happy-pregnant-woman-late-pregnancy-stage-sitting-grass-lawn-min_11zon_xkeac0.webp'
+          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8qj586507pl03hfxicv'
           as='image'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />

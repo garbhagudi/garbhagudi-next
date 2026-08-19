@@ -58,7 +58,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Cau_Diag_Treat_d0t3vx.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedk058ur07plss16dp50'
         />
 
         {/* Twitter*/}
@@ -72,7 +72,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Cau_Diag_Treat_d0t3vx.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedk058ur07plss16dp50'
         />
       </Head>
       <BreadCrumbs
@@ -122,11 +122,12 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                             <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-all duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-700 dark:hover:border-gg-400 dark:hover:bg-gray-600 md:w-96'>
                               <div className='w-1/3'>
                                 <Image
+                                  quality={85}
                                   className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
                                   src={
                                     item?.iconUrl ||
                                     item?.icon?.url ||
-                                    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264858/Icons/Resources/FAQs_x8rsvf.svg'
+                                    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8m4n6545xh07pl3ackkkc5'
                                   }
                                   alt={item?.title}
                                   width={100}
@@ -150,6 +151,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                       <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-all duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-700 dark:hover:border-gg-400 dark:hover:bg-gray-600 md:w-96'>
                         <div className='w-1/3'>
                           <Image
+                            quality={85}
                             className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
                             src='https://media.graphassets.com/EwdJCRdtRiKDXeWF4toB'
                             alt='IVF Icon'
@@ -171,6 +173,7 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                       <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-all duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-700 dark:hover:border-gg-400 dark:hover:bg-gray-600 md:w-96'>
                         <div className='w-1/3'>
                           <Image
+                            quality={85}
                             className='h-16 w-16 rounded-md object-cover transition-all duration-500 ease-in-out group-hover:grayscale-0 dark:grayscale'
                             src='https://media.graphassets.com/CpcAosCyRImJVMN1xA9O'
                             alt='IUI Icon'
@@ -199,11 +202,12 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                             <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white md:w-96'>
                               <div className='w-1/3'>
                                 <Image
+                                  quality={85}
                                   className='h-16 w-16 rounded-full object-cover'
                                   src={
                                     item?.iconUrl ||
                                     item?.icon?.url ||
-                                    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264858/Icons/Resources/FAQs_x8rsvf.svg'
+                                    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8m4n6545xh07pl3ackkkc5'
                                   }
                                   alt={item?.title}
                                   width={100}
@@ -232,11 +236,12 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
                             <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white md:w-96'>
                               <div className='w-1/3'>
                                 <Image
+                                  quality={85}
                                   className='h-16 w-16 rounded-full object-cover'
                                   src={
                                     item?.iconUrl ||
                                     item?.icon?.url ||
-                                    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643264858/Icons/Resources/FAQs_x8rsvf.svg'
+                                    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8m4n6545xh07pl3ackkkc5'
                                   }
                                   alt={item?.title}
                                   width={100}

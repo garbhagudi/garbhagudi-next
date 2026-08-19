@@ -19,7 +19,7 @@ export default function LandingPage_call() {
       <Head>
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1725183349/Ads%20and%20offers/Web_Banner-min_rgm3ts.webp'
+          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8rq586d07plsiue972s'
           as='image'
         />
 
@@ -48,7 +48,7 @@ export default function LandingPage_call() {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
 
         {/* Twitter*/}
@@ -64,7 +64,7 @@ export default function LandingPage_call() {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
       </Head>
       <h1>Redirect....</h1>

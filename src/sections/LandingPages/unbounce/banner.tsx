@@ -8,8 +8,9 @@ const Banner = () => {
         <div className='grid pt-8 lg:grid-cols-2 lg:pt-16'>
           <div className='flex items-end justify-center pb-6 lg:pb-0'>
             <Image
+              quality={85}
               src={
-                'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742986481/landing-page/Offer-Logo_r3rnce.webp'
+                'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8pi585x07pl91f16ahb'
               }
               alt='Banner Image'
               width={400}

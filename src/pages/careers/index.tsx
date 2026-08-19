@@ -47,11 +47,11 @@ const IndexPage = ({ careers }) => {
         {/* Preload main image */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Careers_vpudat.webp'
+          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87su57o607pl1ryd58m2'
           as='image'
         />
         {/* Preconnect to external resources */}
-        <link rel='dns-prefetch' href='https://res.cloudinary.com' />
+        <link rel='dns-prefetch' href='https://ap-south-1.graphassets.com' />
         {/* Primary Tags */}
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Careers | GarbhaGudi</title>
@@ -73,7 +73,7 @@ const IndexPage = ({ careers }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Careers_vpudat.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87su57o607pl1ryd58m2'
         />
 
         {/* Twitter*/}
@@ -87,7 +87,7 @@ const IndexPage = ({ careers }) => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Careers_vpudat.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87su57o607pl1ryd58m2'
         />
 
         <script
@@ -114,7 +114,8 @@ const IndexPage = ({ careers }) => {
           <Link href='/about/awards-and-accolades/garbhagudi-certified-healthy-workplace'>
             <div>
               <Image
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1657979955/Banner/Argoya_Silver_Award_Web_Bnr-min_bx7xeo.webp'
+                quality={85}
+                src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmee3ps107pl57mgs6ms'
                 alt='arogya world banner'
                 className='rounded-xl'
                 width={1524}
@@ -152,6 +153,7 @@ const IndexPage = ({ careers }) => {
                   <div className='flex flex-col justify-between p-4 leading-normal'>
                     <div className='flex items-center space-x-2'>
                       <Image
+                        quality={85}
                         src={items?.image?.url}
                         alt={items?.position}
                         className='h-24 w-24 rounded-full object-cover'

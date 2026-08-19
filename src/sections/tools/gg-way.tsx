@@ -45,6 +45,7 @@ const GarbhaGudiCard = memo(({ item }: GarbhaGudiCardProps) => {
             </div>
           </div>
           <Image
+            quality={85}
             className='h-full w-full rounded-xl object-cover shadow-xl shadow-black/50'
             src={item.bgImage}
             alt={item.title}

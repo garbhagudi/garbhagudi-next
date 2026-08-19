@@ -25,7 +25,10 @@ interface bannerProps {
 // Art-directed banner: desktop creative ≥768px (Tailwind `md`), mobile
 // creative below — the browser downloads only the matching source.
 const BannerImage = ({ banner }: { banner: bannerProps['banners'][number] }) => {
-  const common = { alt: banner?.title, priority: true };
+  // `sizes` is required: without it getImageProps emits x-descriptors at
+  // [width, width*2], so a phone would pull the 1920/3840-wide banner. Each
+  // <source> is media-scoped to one breakpoint, so 100vw is accurate for both.
+  const common = { alt: banner?.title, priority: true, quality: 85, sizes: '100vw' };
   const { props: desktop } = getImageProps({
     ...common,
     src: banner?.image?.url,
@@ -41,10 +44,9 @@ const BannerImage = ({ banner }: { banner: bannerProps['banners'][number] }) => 
 
   return (
     <picture>
-      {/* images.unoptimized is on, so srcSet is absent — fall back to src */}
       <source
         media='(min-width: 768px)'
-        srcSet={desktop.srcSet || desktop.src}
+        srcSet={desktop.srcSet}
         sizes={desktop.sizes}
         width={desktop.width}
         height={desktop.height}

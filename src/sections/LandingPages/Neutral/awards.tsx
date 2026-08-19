@@ -23,6 +23,7 @@ function FeaturesBlocks() {
                 key={items.id}
               >
                 <Image
+                  quality={85}
                   src={items.img}
                   alt={items.title}
                   className='rounded-lg'

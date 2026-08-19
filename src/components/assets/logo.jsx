@@ -3,7 +3,8 @@ import Image from 'next/image';
 const Logo = () => {
   return (
     <Image
-      src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1751352018/GG_New-Hori_Logo_ziwur1.svg'
+      quality={85}
+      src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms76155yh1on07pnqpdnqyzk'
       id='svg'
       width='400'
       height='84'

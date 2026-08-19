@@ -7,23 +7,23 @@ import useInViewAutoplay from 'lib/useInViewAutoplay';
  * Just edit this array (and each `alt`); nothing else needs to change. */
 const images = [
   {
-    src: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1783312881/ivf-center-bangalore/IMG_0233_nih2sj.jpg',
+    src: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmsczhh3rbanm07pf0dymfp1r',
     alt: 'GarbhaGudi IVF centre in Bangalore',
   },
   {
-    src: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1783312873/ivf-center-bangalore/IMG_0362_kny9kj.jpg',
+    src: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmsczhh4lbanq07pfniw8a52n',
     alt: 'Advanced IVF and embryology lab',
   },
   {
-    src: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1783312872/ivf-center-bangalore/IMG_0191_nla49a.jpg',
+    src: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmsczhh55banu07pfpe3ki2o3',
     alt: 'World-class fertility care',
   },
   {
-    src: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1783312872/ivf-center-bangalore/IMG_0427_xsew8h.jpg',
+    src: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmsczhh5ubany07pfxoezpsbc',
     alt: 'Experienced fertility specialists',
   },
   {
-    src: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1783312872/ivf-center-bangalore/IMG_0373_qg9o1s.jpg',
+    src: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmsczhh6ibao207pf8lh9m9l8',
     alt: 'Experienced fertility specialists',
   },
 ];
@@ -100,6 +100,7 @@ const Gallery = () => {
                 {images.map((image) => (
                   <div key={image.src} className='relative h-64 w-full sm:h-80 lg:h-[460px]'>
                     <Image
+                      quality={85}
                       src={image.src}
                       alt={image.alt}
                       fill

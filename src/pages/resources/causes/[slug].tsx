@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import baseRichTextRenderers from 'components/richTextRenderers';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 
@@ -292,10 +293,11 @@ const Blog = ({ cause }) => {
             </h1>
             <figure>
               <Image
+                quality={85}
                 className='mb-5 mt-10 w-full rounded-lg'
                 src={cause?.image?.url}
                 alt={cause?.title}
-                width={800}
+                width={1280}
                 height={500}
                 priority={true}
               />
@@ -304,12 +306,7 @@ const Blog = ({ cause }) => {
               <RichText
                 content={cause?.content?.raw?.children}
                 renderers={{
-                  p: ({ children }) => <p className='text-justify'>{children}</p>,
-                  a: ({ children, href }) => (
-                    <a href={href} className='text-gg-500 underline'>
-                      {children}
-                    </a>
-                  ),
+                  ...baseRichTextRenderers,
                 }}
               />
             </div>

@@ -48,7 +48,7 @@ const Yoga: NextPage = () => {
         />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1752754782/Swastya_Sapthaha-WA_Thumbnail_q3jirl.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgwbi58t008pkf3hyp2n0'
         />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />

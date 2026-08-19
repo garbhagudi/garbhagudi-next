@@ -36,8 +36,9 @@ const Header = () => {
         </div>
         <div className='lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
           <Image
+            quality={85}
             className='h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full'
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/q_auto:eco/v1643461022/Banner/About_us_xg1b1l.webp'
+            src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmfq3ps907pl5szpszch'
             alt='GarbhaGudi IVF Centre'
             width={500}
             height={500}

@@ -5,6 +5,8 @@ import { RichText } from '@graphcms/rich-text-react-renderer';
 import Image from 'next/image';
 import { useState } from 'react';
 import type { RichTextContent } from '@graphcms/rich-text-types';
+import baseRichTextRenderers from 'components/richTextRenderers';
+import RichTextImage from 'components/RichTextImage';
 
 interface MapSectionProps {
   maplink: string;
@@ -102,12 +104,7 @@ const MapSection = ({
               <RichText
                 content={description}
                 renderers={{
-                  p: ({ children }) => <p className='text-justify'>{children}</p>,
-                  a: ({ children, href }) => (
-                    <a href={href} className='text-gg-500 underline'>
-                      {children}
-                    </a>
-                  ),
+                  ...baseRichTextRenderers,
                 }}
               />
 
@@ -136,12 +133,7 @@ const MapSection = ({
                 <RichText
                   content={areasDescription}
                   renderers={{
-                    p: ({ children }) => <p className='text-justify'>{children}</p>,
-                    a: ({ children, href }) => (
-                      <a href={href} className='text-gg-500 underline'>
-                        {children}
-                      </a>
-                    ),
+                    ...baseRichTextRenderers,
                   }}
                 />
               </div>
@@ -152,6 +144,7 @@ const MapSection = ({
                   <RichText
                     content={areasServed?.raw}
                     renderers={{
+                      img: (props) => <RichTextImage {...props} />,
                       table: ({ children }) => (
                         <table className='w-full min-w-full border-collapse text-xs md:text-sm lg:text-base'>
                           {children}
@@ -195,6 +188,7 @@ const MapSection = ({
                     <div className='relative mx-auto h-40 w-40'>
                       <div className='bg-[length: 400%] absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
                       <Image
+                        quality={85}
                         className='rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
                         src={item?.image?.url}
                         alt={item?.name}

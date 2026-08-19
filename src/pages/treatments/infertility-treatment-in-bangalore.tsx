@@ -172,7 +172,7 @@ const InfertilityPage = ({ doctors }) => {
   function addReviewJsonLd() {
     const title = 'Infertility Treatment';
     const image =
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1691229236/Misc/pregnant-woman-min_wvchfc.webp';
+      'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vednb58v707plopapzgdk';
     const description =
       'Explore top-notch infertility treatment in Bangalore at GarbhaGudi IVF Centre. Expert care, advanced procedures & high success rates. Book a consultation!';
 
@@ -201,7 +201,7 @@ const InfertilityPage = ({ doctors }) => {
         {/* Primary Tags */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1691229236/Misc/pregnant-woman-min_wvchfc.webp'
+          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vednb58v707plopapzgdk'
           as='image'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -230,7 +230,7 @@ const InfertilityPage = ({ doctors }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
 
         {/* Twitter*/}
@@ -247,7 +247,7 @@ const InfertilityPage = ({ doctors }) => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
 
         <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
@@ -356,6 +356,7 @@ const ImageComponent = ({ name, image, designation, imageAlt }) => {
       <div className='relative h-44 w-44'>
         <div className='bg-[length: 400%] absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
         <Image
+          quality={85}
           className='rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
           src={image}
           alt={imageAlt || name}

@@ -13,6 +13,7 @@ const LogosIconsColours = () => {
             <div className='mt-4 grid grid-cols-1 gap-x-5 md:grid-cols-3'>
               <div className='flex items-center justify-center rounded-md bg-white'>
                 <Image
+                  quality={85}
                   src={assets.img}
                   alt={assets.title}
                   width={320}

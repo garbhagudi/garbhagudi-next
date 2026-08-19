@@ -11,17 +11,27 @@ const nextConfig = {
     // removeConsole: process.env.NODE_ENV === 'production',
   },
   transpilePackages: ['some-es6-library', 'zod', 'framer-motion'],
+  // Every <Image> in src/ passes quality={85} explicitly. Next hardcodes a
+  // default of 75 (get-img-props.js: `quality: qualityInt || 75`) and 15.1.9
+  // offers no global override — `images.qualities` is an allowlist, not a
+  // default — so the value has to be repeated at each call site. A new <Image>
+  // without the prop silently renders at 75; the no-restricted-syntax rule in
+  // .eslintrc.json guards against that.
   images: {
     dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     minimumCacheTTL: 60 * 60 * 24 * 30,
-    unoptimized: true,
-    domains: [
-      'res.cloudinary.com',
-      'media.graphassets.com',
-      'avatars.dicebear.com',
-      'app.unbounce.com',
-      'https://yogachallenge.in/',
-      'upload.wikimedia.org',
+    remotePatterns: [
+      // Hygraph — primary asset host
+      { protocol: 'https', hostname: 'ap-south-1.graphassets.com' },
+      // Hygraph — legacy asset host, still referenced by older CMS entries
+      { protocol: 'https', hostname: 'media.graphassets.com' },
+      // Cloudinary — code migrated off it, but CMS entries still return these URLs
+      { protocol: 'https', hostname: 'res.cloudinary.com' },
+      { protocol: 'https', hostname: 'app.unbounce.com' },
+      { protocol: 'https', hostname: 'unsplash.it' },
+      { protocol: 'https', hostname: 'yoga-satvicmovement-org.b-cdn.net' },
+      { protocol: 'https', hostname: 'encrypted-tbn0.gstatic.com' },
     ],
   },
 
@@ -3129,4 +3139,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-
