@@ -2,10 +2,45 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { gql } from '@apollo/client';
+import apolloClient from 'lib/apollo-graphcms';
 const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 
-const CareerOrBaby = () => {
+const BLOG_SLUG = 'career-or-baby';
+const FALLBACK_HEADING = 'Career or Baby ?';
+const FALLBACK_TITLE = 'Career or Baby? | GarbhaGudi IVF Centre';
+const FALLBACK_DESCRIPTION =
+  'Today’s women and men are successful beyond imagination, and there comes a time when they have to choose between parenthood and a career.';
+
+export const getStaticProps = async () => {
+  try {
+    const { data } = await apolloClient.query({
+      query: gql`
+        query ($slug: String!) {
+          blog(where: { slug: $slug }) {
+            title
+            metaTitle
+            metaDescription
+            ogTitle
+            ogDescription
+          }
+        }
+      `,
+      variables: { slug: BLOG_SLUG },
+    });
+    return { props: { blog: data?.blog ?? null }, revalidate: 180 };
+  } catch {
+    // The page renders fully from the fallbacks above, so a CMS outage must not fail the build.
+    return { props: { blog: null }, revalidate: 180 };
+  }
+};
+
+const CareerOrBaby = ({ blog }) => {
+  const heading = blog?.title || FALLBACK_HEADING;
+  const title = blog?.metaTitle || FALLBACK_TITLE;
+  const description = blog?.metaDescription || FALLBACK_DESCRIPTION;
+
   return (
     <div>
       <Head>
@@ -16,26 +51,16 @@ const CareerOrBaby = () => {
           as='image'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>Career or Baby? | GarbhaGudi IVF Centre</title>
-        <meta name='title' content={`Career or Baby? | GarbhaGudi IVF Centre`} />
-        <meta
-          name='description'
-          content='Today’s women and men are successful beyond imagination, and there
-          comes a time when they have to choose between parenthood and a
-          career. '
-        />
+        <title>{title}</title>
+        <meta name='title' content={title} />
+        <meta name='description' content={description} />
 
         {/* Open Graph / Facebook */}
 
-        <meta property='og:title' content={`Career or Baby? | GarbhaGudi IVF Centre`} />
+        <meta property='og:title' content={blog?.ogTitle || title} />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
-        <meta
-          property='og:description'
-          content='Today’s women and men are successful beyond imagination, and there
-          comes a time when they have to choose between parenthood and a
-          career. '
-        />
+        <meta property='og:description' content={blog?.ogDescription || description} />
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
@@ -46,13 +71,8 @@ const CareerOrBaby = () => {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
-        <meta name='twitter:title' content={`Career or Baby? | GarbhaGudi IVF Centre`} />
-        <meta
-          name='twitter:description'
-          content='Today’s women and men are successful beyond imagination, and there
-          comes a time when they have to choose between parenthood and a
-          career. '
-        />
+        <meta name='twitter:title' content={title} />
+        <meta name='twitter:description' content={description} />
         <meta
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.webp'
@@ -60,7 +80,7 @@ const CareerOrBaby = () => {
       </Head>
       <div className='mx-auto px-4 pt-16 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-8'>
         <h5 className='mb-10 mt-6 text-center font-heading text-4xl font-extrabold leading-none md:text-5xl'>
-          Career or Baby ?
+          {heading}
         </h5>
         <div className='grid gap-4 lg:grid-cols-2'>
           <div>
