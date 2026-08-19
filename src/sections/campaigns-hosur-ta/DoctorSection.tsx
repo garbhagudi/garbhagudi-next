@@ -24,6 +24,7 @@ export default function DoctorSection() {
         <div className='relative mx-auto max-w-[260px] sm:max-w-none'>
           <div className='relative overflow-hidden rounded-xl bg-[#7B1B2E]'>
             <Image
+              quality={85}
               src='https://ap-south-1.graphassets.com/cmekvksn30ksu07o5fl5q801f/cmequuvod57fd07oagac62d2w'
               alt='டாக்டர் ராதா புச்சலபள்ளி'
               width={480}
