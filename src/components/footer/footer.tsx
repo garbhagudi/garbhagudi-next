@@ -56,6 +56,26 @@ const navigation = {
   ],
 };
 
+/* Headings are not derived from the `navigation` keys — `company` renders as "Companies". */
+const FOOTER_COLUMNS = [
+  { title: 'Treatments', items: navigation.treatments },
+  { title: 'Locations', items: navigation.locations },
+  { title: 'Resources', items: navigation.resources },
+  { title: 'Companies', items: navigation.company },
+  { title: 'Contact', items: navigation.contact },
+  { title: 'Legal', items: navigation.legal },
+];
+
+const footerHeadingClass =
+  'text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white';
+
+/* Zoom on hover with a transform, not a bigger font size — growing the text
+ * reflows the whole column and makes the list jitter. The padding is the room
+ * the scaled link grows into, and `inline-block` is required for `transform`
+ * to apply at all. */
+const footerLinkClass =
+  'inline-block cursor-pointer px-2 py-0.5 text-xs text-gray-800 transition-transform duration-200 hover:scale-110 hover:text-brandPink hover:underline dark:text-white md:text-sm';
+
 export default function Footer() {
   const router = useRouter();
   const isYogaPage = router.pathname === '/yoga';
@@ -77,102 +97,20 @@ export default function Footer() {
           <div className='xl:grid xl:grid-cols-2 xl:gap-8'>
             <div className='mt-12 grid grid-cols-1 gap-8 text-center antialiased xl:col-span-full xl:mt-0 xl:grid-cols-1'>
               <div className='grid grid-cols-3 gap-4 md:grid-cols-6'>
-                <div className=''>
-                  <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
-                    Treatments
-                  </h3>
-                  <ul className='mt-4 space-y-1'>
-                    {navigation.treatments.map((item) => (
-                      <li key={item.name}>
-                        <Link href={item.href} passHref>
-                          <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
-                            {item.name}
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className=''>
-                  <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
-                    Locations
-                  </h3>
-                  <ul className='mt-4 space-y-1'>
-                    {navigation.locations.map((item) => (
-                      <li key={item.name}>
-                        <Link passHref href={item.href}>
-                          <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
-                            {item.name}
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className=''>
-                  <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
-                    Resources
-                  </h3>
-                  <ul className='mt-4 space-y-1'>
-                    {navigation.resources.map((item) => (
-                      <li key={item.name}>
-                        <Link passHref href={item.href}>
-                          <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
-                            {item.name}
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className=''>
-                  <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
-                    Companies
-                  </h3>
-                  <ul className='mt-4 space-y-1'>
-                    {navigation.company.map((item) => (
-                      <li key={item.name}>
-                        <Link passHref href={item.href}>
-                          <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
-                            {item.name}
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className=''>
-                  <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
-                    Contact
-                  </h3>
-                  <ul className='mt-4 space-y-1'>
-                    {navigation.contact.map((item) => (
-                      <li key={item.name}>
-                        <Link href={item.href} passHref>
-                          <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
-                            {item.name}
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className=''>
-                  <h3 className='text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white'>
-                    Legal
-                  </h3>
-                  <ul className='mt-4 space-y-1'>
-                    {navigation.legal.map((item) => (
-                      <li key={item.name}>
-                        <Link passHref href={item.href}>
-                          <span className='cursor-pointer text-xs text-gray-800 hover:text-sm hover:text-brandPink hover:underline dark:text-white md:text-sm md:hover:text-base'>
-                            {item.name}
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {FOOTER_COLUMNS.map((column) => (
+                  <div key={column.title}>
+                    <h3 className={footerHeadingClass}>{column.title}</h3>
+                    <ul className='mt-4 space-y-1'>
+                      {column.items.map((item) => (
+                        <li key={item.name}>
+                          <Link href={item.href} passHref>
+                            <span className={footerLinkClass}>{item.name}</span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
