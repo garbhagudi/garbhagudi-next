@@ -59,7 +59,7 @@ function BlogPage({
   authorSlug,
 }: BlogProps) {
   const router = useRouter();
-  const title = `Blogs | Page ${currentPageNumber} | GarbhaGudi IVF Centre`;
+  const title = `Blogs | Page ${currentPageNumber} | GarbhaGudi`;
   function addBreadcrumbsJsonLd() {
     return {
       __html: `{
