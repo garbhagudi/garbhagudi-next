@@ -4,6 +4,7 @@ import { RichText } from '@graphcms/rich-text-react-renderer';
 import { Fragment, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import baseRichTextRenderers from 'components/richTextRenderers';
 const DoctorLayout = ({
   name,
   index,
@@ -72,6 +73,7 @@ const DoctorLayout = ({
                       <div className='relative'>
                         <div className='bg-[length: 400%] absolute h-full w-full animate-rotate rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
                         <Image
+                          quality={85}
                           className='rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
                           src={docpic}
                           alt={name}
@@ -85,12 +87,7 @@ const DoctorLayout = ({
                       <RichText
                         content={bio}
                         renderers={{
-                          p: ({ children }) => <p className='text-justify'>{children}</p>,
-                          a: ({ children, href }) => (
-                            <a href={href} className='text-gg-500 underline'>
-                              {children}
-                            </a>
-                          ),
+                          ...baseRichTextRenderers,
                         }}
                       />
                     </div>

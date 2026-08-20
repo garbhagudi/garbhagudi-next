@@ -5,14 +5,14 @@ const features = [
   {
     id: 1,
     name: 'High Success Rate',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840283/Icons/Features/Success_Rate_lig6sq.svg',
+    icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vjtcq59d608pk178mwz9s',
     content: 'GarbhaGudi has one of the highest IVF treatments success rates in the industry.',
     link: '/features/success-rates-of-ivf',
   },
   {
     id: 2,
     name: 'World Class Fertility Care',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840286/Icons/Features/World_Class_Fertility_Care_un83f6.svg',
+    icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8m4n9g45y107plnrfnbx4v',
     content:
       'GarbhaGudi is Proud to have played a key role in bringing more than 15,000+ babies into the world since 2011.',
     link: '/features/world-class-fertility-care',
@@ -20,7 +20,7 @@ const features = [
   {
     id: 3,
     name: 'Top Fertility Specialists',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840305/Icons/Features/Top_Fertility_Specialists_zkyl9x.svg',
+    icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8m4na445y507pllgyhyjjs',
     content:
       'Team of fertility specialists like gynecologists, embryologists, technicians and staff to help you conceive.',
     link: '/fertility-experts',
@@ -28,7 +28,7 @@ const features = [
   {
     id: 4,
     name: 'Affordable Treatments',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840310/Icons/Features/Affordable_Treatment_lwaaku.svg',
+    icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/SHnkyCbHSlC4ViCU9J7a',
     content:
       'GarbhaGudi offers Affordable Infertility treatment without any compromise on service or quality of medicines or services',
     link: '/features/affordable-treatments',
@@ -36,7 +36,7 @@ const features = [
   {
     id: 5,
     name: 'Free Second Opinion',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840323/Icons/Features/Free_Second_Opinion_lkihbz.svg',
+    icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vjtdc59da08pkkmgw2io3',
     content:
       'Patients can come and meet our doctors and understand if the advised treatment is the best thing for the patient couple.',
     link: 'https://garbhagudi-ivf.com/contact-us',
@@ -44,7 +44,7 @@ const features = [
   {
     id: 6,
     name: 'Financing Options',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840329/Icons/Features/Financial_Options_rrv8hi.svg',
+    icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8m4nbz45yh07pl47sdn9h6',
     content:
       '0% interest for patients when they cannot manage the finances to meet the cost of procedures.',
     link: '/features/financing-options',
@@ -52,7 +52,7 @@ const features = [
   {
     id: 7,
     name: 'Holistic Approach',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840338/Icons/Features/Holistic_Approach_pcqyr1.svg',
+    icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vjtdx59de08pkwdg0rjhy',
     content:
       'At GarbhaGudi we are committed to Treating infertility through the holistic mind-body-soul programs.',
     link: '/features/holistic-approach',
@@ -60,7 +60,7 @@ const features = [
   {
     id: 8,
     name: 'Treatment Protocols',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840352/Icons/Features/Treatment_Protocols_hll4cu.svg',
+    icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8m8s6p465z07plihrpu576',
     content:
       'Regularly enhanced and upgraded to incorporate the latest advancements in process, technology and clinical research.',
     link: '/features/treatment-protocols',
@@ -68,7 +68,7 @@ const features = [
   {
     id: 9,
     name: 'Best in Class Facilities',
-    icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840357/Icons/Features/Best_in_Class_Facilities_fchmjr.svg',
+    icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8m8s7x466707plgbbzq1d4',
     content:
       'Our IVF Centers in Bangalore are equipped to handle the most challenging cases with state of the art technology at our disposal',
     link: '/features/best-in-class-facilities',
@@ -97,6 +97,7 @@ const Features2 = () => {
                       <div>
                         <span className='inline-flex items-center justify-center rounded-full bg-brandPink p-2 shadow-xl'>
                           <Image
+                            quality={85}
                             src={feature.icon}
                             alt={feature.name}
                             width={48}

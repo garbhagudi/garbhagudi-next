@@ -35,10 +35,10 @@ const Page = () => {
       <Head>
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742985537/Yoga/Landing-Page-Banners_gd388z.webp'
+          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87tz57oe07pl5qc9vaov'
           as='image'
         />
-        <link rel='dns-prefetch' href='https://res.cloudinary.com/' />
+        <link rel='dns-prefetch' href='https://ap-south-1.graphassets.com' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={title} />
@@ -74,11 +74,12 @@ const Page = () => {
               Discover the confluence of science and Indic wisdom to enhance fertility.
             </p>
             <Image
-              height={100}
-              width={100}
+              quality={85}
+              height={600}
+              width={1280}
               className='mb-5 mt-10 w-full rounded-lg'
               src={
-                'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742985537/Yoga/Landing-Page-Banners_gd388z.webp'
+                'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87tz57oe07pl5qc9vaov'
               }
               alt='Section Image'
               priority

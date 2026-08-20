@@ -7,10 +7,11 @@ const Offer = () => {
       {/* Background Image Section */}
       <div className='h-100 mx-auto w-full bg-cover bg-center object-cover md:w-1/2'>
         <Image
-          src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1725183349/Ads%20and%20offers/Web_Banner-min_rgm3ts.webp'
+          src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8rq586d07plsiue972s'
           alt='Banner Image'
           width={400}
           height={400}
+          quality={85}
           className='mx-auto h-full w-full'
           priority={true}
         />

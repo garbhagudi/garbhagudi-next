@@ -4,6 +4,7 @@ import { RichText } from '@graphcms/rich-text-react-renderer';
 import type { RichTextContent } from '@graphcms/rich-text-types';
 import { useState } from 'react';
 import AccordionLayout from 'sections/Faq/FaqLayout';
+import RichTextImage from 'components/RichTextImage';
 
 type BranchFaq = {
   id: string;
@@ -44,6 +45,7 @@ const Faq = ({ data }: FaqProps) => {
               <RichText
                 content={item.answer.raw.children}
                 renderers={{
+                  img: (props) => <RichTextImage {...props} />,
                   p: ({ children }) => (
                     <p className='mb-1 text-justify text-gray-700 dark:text-gray-300'>{children}</p>
                   ),

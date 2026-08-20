@@ -58,7 +58,7 @@ const IndexPage = ({ articles }: Article) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
 
         {/* Twitter*/}
@@ -72,7 +72,7 @@ const IndexPage = ({ articles }: Article) => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
       </Head>
       <BreadCrumbs text1='Solutions' link1='/solutions' text2='' link2='' />
@@ -90,10 +90,11 @@ const IndexPage = ({ articles }: Article) => {
               <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-600 dark:hover:bg-gray-600 md:w-96'>
                 <div className='w-1/3'>
                   <Image
+                    quality={85}
                     className='h-24 w-24 rounded-lg object-cover transition-all duration-300 group-hover:grayscale-0 dark:grayscale'
                     src={
                       item?.logoUrl ||
-                      'https://res.cloudinary.com/decyl0nmm/image/upload/v1762938141/Fertility_Center_mc7y9x.svg'
+                      'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedmm58v307plpau6ntfd'
                     }
                     alt={item?.title}
                     width={100}

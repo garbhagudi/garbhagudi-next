@@ -141,6 +141,7 @@ const EventDetails = () => {
                 className='flex flex-col items-center justify-center space-x-2 py-4 md:flex-row lg:space-x-5'
               >
                 <Image
+                  quality={85}
                   src={item.image}
                   alt={item.title}
                   width={40}

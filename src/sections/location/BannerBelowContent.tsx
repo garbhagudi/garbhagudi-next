@@ -8,6 +8,7 @@ const BannerBelowContent = ({ branchTitle }) => {
     <div>
       <div className='h-full w-full'>
         <Image
+          quality={85}
           src={bannerImage[branchTitle]}
           alt='GarbhaGudi IVF Centre - Bangalore'
           className='mx-auto h-full w-full'

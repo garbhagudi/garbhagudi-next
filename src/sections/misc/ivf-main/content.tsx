@@ -48,15 +48,16 @@ const Content = () => {
                 </h2>
                 <div>Here is a general overview of the steps involved in a typical IVF cycle:</div>
               </div>
-              <div className='-right-0 mx-auto mt-4 max-w-[50rem] lg:p-4'>
-                <div className='relative w-full'>
+              <div className='-right-0 mx-auto mt-4 lg:p-4'>
+                <div className='relative h-full w-full'>
                   <Image
-                    src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722510346/Misc/PNG_25_yoa08y_1_cr2fpg.webp'
+                    quality={85}
+                    src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vospq5aey08pkcpmehdae'
                     className='relative w-full bg-white/10 dark:brightness-75 dark:invert'
                     alt='Process of IVF Treatment in Bangalore'
                     loading='lazy'
-                    width={100}
-                    height={100}
+                    width={800}
+                    height={800}
                   />
                 </div>
               </div>

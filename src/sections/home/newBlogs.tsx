@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface postsProps {
@@ -33,10 +34,18 @@ const BlogsSnip = ({ posts, slug }: postsProps) => {
               className='mx-auto max-w-xs transition duration-300 ease-in-out sm:max-w-none'
             >
               <div className='mt-6 flex items-center justify-center'>
-                <div
-                  className='group relative h-52 w-[400px] overflow-hidden rounded-lg bg-cover bg-center shadow-lg drop-shadow-lg transition duration-300 ease-in-out hover:shadow-2xl hover:drop-shadow-2xl'
-                  style={{ backgroundImage: `url(${post?.image?.url})` }}
-                >
+                <div className='group relative h-52 w-[400px] overflow-hidden rounded-lg shadow-lg drop-shadow-lg transition duration-300 ease-in-out hover:shadow-2xl hover:drop-shadow-2xl'>
+                  {post?.image?.url && (
+                    <Image
+                      quality={85}
+                      src={post.image.url}
+                      alt=''
+                      aria-hidden='true'
+                      fill
+                      sizes='400px'
+                      className='object-cover object-center'
+                    />
+                  )}
                   <div className='group-hover:opacity-60S absolute inset-0 bg-black bg-opacity-60 transition duration-300 ease-in-out dark:bg-gray-800 dark:bg-opacity-60'></div>
                   <div className='relative flex h-full w-full items-center justify-center px-4 sm:px-6 lg:px-4'>
                     <h3 className='text-center'>

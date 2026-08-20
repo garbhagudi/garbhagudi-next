@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -5,8 +6,18 @@ const Banner = ({ branchTitle }) => {
   const path = usePathname();
   return (
     <div>
-      <div className='bg-[url(https://res.cloudinary.com/garbhagudiivf/image/upload/v1770374577/Pregnant_Lady.jpg_zvlxr3.jpg)] bg-cover bg-right bg-no-repeat shadow-2xl sm:bg-center'>
-        <div className='h-full w-full bg-gradient-to-r from-white to-transparent py-6 dark:from-gray-800 dark:to-gray-800/10'>
+      <div className='relative shadow-2xl'>
+        <Image
+          quality={85}
+          src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8pz586107pldfljrjaq'
+          alt=''
+          aria-hidden='true'
+          fill
+          priority
+          sizes='100vw'
+          className='object-cover object-right sm:object-center'
+        />
+        <div className='relative h-full w-full bg-gradient-to-r from-white to-transparent py-6 dark:from-gray-800 dark:to-gray-800/10'>
           <div className='mx-auto flex h-[50vh] max-w-5xl items-center'>
             <div className='absolute z-10'>
               <div className='mx-auto w-full px-3 text-center text-base text-gray-800 dark:text-gray-200 md:max-w-lg md:text-left'>

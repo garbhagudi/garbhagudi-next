@@ -11,6 +11,7 @@ const Benefits = () => {
           {benefits.map((benefit) => (
             <div key={benefit.id} className='flex flex-col items-center justify-center'>
               <Image
+                quality={85}
                 width={300}
                 height={300}
                 src={benefit.image}
@@ -33,19 +34,16 @@ const benefits = [
   {
     id: 1,
     title: 'Experience higher energy levels',
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984693/Yoga/Benefits-You-Will-Gain_Img01_oyo60c.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgwav58sw08pkiyi0pwlr',
   },
   {
     id: 2,
     title: 'Understand your thoughts & emotions',
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984694/Yoga/Benefits-You-Will-Gain_Img02_pjyfbp.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vlppj59pi08pkb37qja74',
   },
   {
     id: 3,
     title: 'Feel more stable',
-    image:
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984694/Yoga/Benefits-You-Will-Gain_Img03_pda7p0.webp',
+    image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vlppy59pm08pk1qyfj0tr',
   },
 ];

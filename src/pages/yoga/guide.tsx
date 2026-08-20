@@ -25,7 +25,7 @@ const YogaGuidePage = () => {
         />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742984693/Yoga/Benefits-You-Will-Gain_Img01_oyo60c.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgwav58sw08pkiyi0pwlr'
         />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://www.garbhagudi.com/yoga/guide' />

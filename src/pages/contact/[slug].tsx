@@ -5,6 +5,7 @@ import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import Image from 'next/image';
 import FAQs from 'components/FAQs';
+import baseRichTextRenderers from 'components/richTextRenderers';
 
 export const getStaticProps = async ({ params }) => {
   const { data } = await apolloClient.query({
@@ -248,6 +249,7 @@ const Vas = ({ valueAddedService }) => {
               </span>
             </h1>
             <Image
+              quality={85}
               className='mb-5 mt-10 w-full rounded-lg'
               src={valueAddedService?.image?.url}
               alt={valueAddedService?.title}
@@ -259,12 +261,7 @@ const Vas = ({ valueAddedService }) => {
               <RichText
                 content={valueAddedService?.content?.raw?.children}
                 renderers={{
-                  p: ({ children }) => <p className='text-justify'>{children}</p>,
-                  a: ({ children, href }) => (
-                    <a href={href} className='text-gg-500 underline'>
-                      {children}
-                    </a>
-                  ),
+                  ...baseRichTextRenderers,
                 }}
               />
             </div>

@@ -105,6 +105,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                     <a href='#form' onClick={scrollToForm}>
                       <div className='mx-auto flex w-full flex-col items-center justify-center'>
                         <Image
+                          quality={85}
                           className='h-44 w-44 rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40 object-cover shadow-2xl drop-shadow-2xl dark:bg-gray-400'
                           src={item?.image?.url}
                           alt={item?.imageAlt || item?.name}

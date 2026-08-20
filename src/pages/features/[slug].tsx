@@ -6,6 +6,7 @@ import BreadCrumbs from 'components/breadcrumbs';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import FAQs from 'components/FAQs';
+import baseRichTextRenderers from 'components/richTextRenderers';
 const Cta = dynamic(() => import('sections/gg-care/cta'), {
   ssr: false,
   loading: () => null,
@@ -133,6 +134,7 @@ const Vas = ({ valueAddedService }) => {
           {valueAddedService?.title}
         </h1>
         <Image
+          quality={85}
           className='mb-5 mt-10 w-full rounded-lg'
           src={valueAddedService?.image?.url}
           alt={valueAddedService?.title}
@@ -144,12 +146,7 @@ const Vas = ({ valueAddedService }) => {
           <RichText
             content={valueAddedService?.content?.raw?.children}
             renderers={{
-              p: ({ children }) => <p className='text-justify'>{children}</p>,
-              a: ({ children, href }) => (
-                <a href={href} className='text-gg-500 underline'>
-                  {children}
-                </a>
-              ),
+              ...baseRichTextRenderers,
               iframe: ({ url, width }) => (
                 <iframe
                   src={url || ''}

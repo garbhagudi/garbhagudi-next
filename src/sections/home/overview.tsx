@@ -47,11 +47,12 @@ const Overview = () => {
               className='group relative flex h-full flex-col justify-end overflow-hidden rounded-2xl pb-10 pt-64 shadow-xl sm:aspect-[3/2] lg:aspect-auto lg:pt-0'
             >
               <Image
-                className='object-cover transition-transform duration-500 group-hover:scale-105'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1670926732/Home/Why_GarbhaGudi_oa1nv7-min_z7p9jv.webp'
+                quality={85}
+                className='absolute inset-0 h-full w-full object-cover'
+                src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6lj08v608pknr66yszg'
                 alt='Dr Asha S Vijay - IVF Specialist in Bangalore'
-                fill
-                sizes='(max-width: 1024px) 100vw, 50vw'
+                width={600}
+                height={600}
               />
               <div className='absolute inset-0 bg-gray-200 mix-blend-multiply' />
               <div className='absolute inset-0 bg-gradient-to-t from-brandPink via-gray-400 mix-blend-multiply dark:from-gray-700' />

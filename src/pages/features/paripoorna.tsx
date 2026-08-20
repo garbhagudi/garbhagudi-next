@@ -20,7 +20,7 @@ const Paripoorna = () => {
         {/* Primary Tags */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1669643962/Banner/Bunting_kgdona.webp'
+          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87v657om07pl8iixbxn0'
           as='image'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -45,7 +45,7 @@ const Paripoorna = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1731247437/paripoorna/Paripoorna_English_tfrujt.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vp44h5aq707pl7oyfbuqd'
         />
 
         {/* Twitter*/}
@@ -62,7 +62,7 @@ const Paripoorna = () => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1700052783/paripoorna/mother-with-daughter-lie-bed-dog-looking-them-min_uecuvg.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8ne585h07pl2ajrkjsk'
         />
         <link rel='canonical' href='https://garbhagudi.com/features/paripoorna' />
         <script
@@ -81,7 +81,7 @@ const Paripoorna = () => {
         link4={''}
         text4={''}
       />
-      <div className="overflow-x-hidden bg-[url('https://res.cloudinary.com/garbhagudiivf/image/upload/v1669643962/Banner/Bunting_kgdona.webp')] bg-contain bg-no-repeat">
+      <div className="overflow-x-hidden bg-[url('https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87v657om07pl8iixbxn0')] bg-contain bg-no-repeat">
         <Home />
         <Steps />
         <FAQ />

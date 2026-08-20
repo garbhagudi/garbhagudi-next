@@ -111,7 +111,7 @@ export default function fertility() {
   function addReviewJsonLd() {
     const title = 'IVF Treatment & Egg Freezing in Bangalore: Expert Fertility Care';
     const image =
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--01_easb3r.webp';
+      'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgw7658s808pkg81hvoeh';
     const description =
       'Explore advanced IVF treatment & egg freezing at GarbhaGudi IVF. Boost your fertility journey with expert care. Book a consultation today!';
 
@@ -140,7 +140,7 @@ export default function fertility() {
         {/* Preload the main image */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--01_easb3r.webp'
+          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgw7658s808pkg81hvoeh'
           as='image'
         />
         <link rel='dns-prefetch' href='https://media.graphassets.com' />
@@ -192,7 +192,7 @@ export default function fertility() {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1733303389/Egg_Freezing_info_Web_Banner--01_easb3r.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgw7658s808pkg81hvoeh'
         />
 
         <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />

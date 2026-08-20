@@ -5,6 +5,7 @@ import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import RichTextIframe from 'components/RichTextIframe';
 import dynamic from 'next/dynamic';
+import baseRichTextRenderers from 'components/richTextRenderers';
 const Share = dynamic(() => import('components/share'), { ssr: false });
 const Loading = dynamic(() => import('components/Loading'), { ssr: false });
 import { useRouter } from 'next/router';
@@ -127,7 +128,7 @@ const ExecutiveTeam = ({ director }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Directors_jbvcep.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87rf57ny07plvgs5r62x'
         />
 
         {/* Twitter*/}
@@ -138,7 +139,7 @@ const ExecutiveTeam = ({ director }) => {
         <meta name='twitter:description' content={director?.bio?.text.slice(0, 160)} />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Directors_jbvcep.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87rf57ny07plvgs5r62x'
         />
         {/* Ld+JSON Data */}
         <script
@@ -162,22 +163,27 @@ const ExecutiveTeam = ({ director }) => {
           <div className='mx-auto lg:w-4/6'>
             <div className='h-56 overflow-hidden rounded-lg md:h-96'>
               <Image
+                quality={85}
                 alt='content'
                 className='h-full w-full object-cover'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643287945/Banner/1200x500_4Directors_nqn9eg.webp'
+                src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1co3plm07pltvxsmg5z'
                 width={1200}
                 height={500}
+                priority
+                sizes='(max-width: 1024px) 100vw, 800px'
               />
             </div>
             <div className='mt-10 flex flex-col sm:flex-row'>
               <div className='text-center sm:w-1/3 sm:py-8 sm:pr-8'>
                 <div className='inline-flex w-72 items-center justify-center rounded-full md:w-64'>
                   <Image
+                    quality={85}
                     src={director?.image?.url}
                     alt={director?.name}
                     className='rounded-full'
-                    width={500}
-                    height={500}
+                    width={288}
+                    height={288}
+                    sizes='(max-width: 768px) 288px, 256px'
                   />
                 </div>
                 <div className='flex flex-col items-center justify-center text-center'>
@@ -200,12 +206,7 @@ const ExecutiveTeam = ({ director }) => {
                   <RichText
                     content={director?.bio?.raw.children}
                     renderers={{
-                      p: ({ children }) => <p className='text-justify'>{children}</p>,
-                      a: ({ children, href }) => (
-                        <a href={href} className='text-gg-500 underline'>
-                          {children}
-                        </a>
-                      ),
+                      ...baseRichTextRenderers,
                       iframe: (props) => <RichTextIframe {...props} />,
                     }}
                   />

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import {
   BsYoutube,
@@ -79,8 +78,7 @@ const footerLinkClass =
 export default function Footer() {
   const router = useRouter();
   const isYogaPage = router.pathname === '/yoga';
-  const path = usePathname();
-  const isIvfHome = path.includes('/ivf/home');
+  const isIvfHome = router.pathname.includes('/ivf/home');
   return (
     <footer
       className='bg-neutral-50 font-content dark:bg-gray-800'

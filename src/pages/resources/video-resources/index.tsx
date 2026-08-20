@@ -59,6 +59,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
     return (
       <div className='flex items-center justify-start border-b pb-4 font-sans md:border-none md:pb-0'>
         <Image
+          quality={85}
           src={image}
           alt={label}
           className='col-span-1 max-w-[200px] rounded-lg sm:w-32 md:max-w-[230px] xl:w-48'
@@ -90,6 +91,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
     return (
       <div className='flex items-center justify-start font-sans'>
         <Image
+          quality={85}
           src={image}
           alt={label}
           className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'
@@ -121,6 +123,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
     return (
       <div className='flex items-center justify-start font-sans'>
         <Image
+          quality={85}
           src={image}
           alt={label}
           className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'
@@ -152,6 +155,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
     return (
       <div className='flex items-center justify-start font-sans'>
         <Image
+          quality={85}
           src={image}
           alt={label}
           className='col-span-1 max-w-[230px] rounded-lg sm:w-32 xl:w-48'
@@ -204,7 +208,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1658492748/SEO/SEO_Website_image-min_wjkpwk.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedip58uj07pl77zu9att'
         />
 
         {/* Twitter*/}
@@ -218,7 +222,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1658492748/SEO/SEO_Website_image-min_wjkpwk.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedip58uj07pl77zu9att'
         />
         <script
           type='application/ld+json'

@@ -19,7 +19,7 @@ const Locations = ({ branches }) => {
         {/* Primary Tags */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1672381537/Misc/happy-pregnant-woman-late-pregnancy-stage-sitting-grass-lawn-min_11zon_xkeac0.webp'
+          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8qj586507pl03hfxicv'
           as='image'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -63,7 +63,7 @@ const Locations = ({ branches }) => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277077/Locations/1280x500_HN_wql2mm.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/OcUgBsZ5SLu7zAASMeqt'
         />
         <link rel='canonical' href='https://garbhagudi.com/locations' />
       </Head>
@@ -83,6 +83,7 @@ const Locations = ({ branches }) => {
               <div className='mx-auto flex max-w-sm flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-brandPink'>
                 <div className='overflow-hidden'>
                   <Image
+                    quality={85}
                     src={items?.branchPictureUrl}
                     alt={items?.title}
                     width={480}
