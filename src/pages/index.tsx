@@ -36,7 +36,7 @@ const Home = ({ data, testimonials }) => {
         "@type": "MedicalOrganization",
         "name": "GarbhaGudi IVF Centre Pvt Ltd",
         "url": "https://garbhagudi.com",
-        "logo": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
+        "logo": "https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87q557nq07pls65nzuhg",
         "alternateName": "GarbhaGudi",
         "sameAs": [
           "https://twitter.com/garbhagudiivf",
@@ -137,7 +137,7 @@ const Home = ({ data, testimonials }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
 
         {/* Twitter*/}
@@ -154,7 +154,7 @@ const Home = ({ data, testimonials }) => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
 
         {/* Google */}

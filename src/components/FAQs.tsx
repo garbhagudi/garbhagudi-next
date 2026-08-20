@@ -2,6 +2,7 @@ import { RichText } from '@graphcms/rich-text-react-renderer';
 import { RichTextContent } from '@graphcms/rich-text-types';
 import { useState } from 'react';
 import AccordionLayout from 'sections/Faq/FaqLayout';
+import RichTextImage from 'components/RichTextImage';
 
 interface FaqProps {
   id: string;
@@ -34,6 +35,7 @@ const FAQs = ({ data, activeIndex }: { data: FaqProps[]; activeIndex: string }) 
                 <RichText
                   content={items?.answer?.raw?.children}
                   renderers={{
+                    img: (props) => <RichTextImage {...props} />,
                     p: ({ children }) => <p className='text-justify'>{children}</p>,
                     a: ({ children }) => <a className='text-gg-500 underline'>{children}</a>,
                   }}

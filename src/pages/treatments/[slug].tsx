@@ -8,6 +8,7 @@ import Loading from 'components/Loading';
 import Image from 'next/image';
 import { throttledFetch } from 'lib/throttle';
 import dynamic from 'next/dynamic';
+import baseRichTextRenderers from 'components/richTextRenderers';
 const FAQs = dynamic(() => import('components/FAQs'), { ssr: false });
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
@@ -264,10 +265,11 @@ const Treatment = ({ treatment, accordionSections }) => {
             </h1>
             <figure>
               <Image
+                quality={85}
                 className='mb-5 mt-10 w-full rounded-lg'
                 src={treatment?.image?.url}
                 alt={treatment?.imageAlt || treatment?.title}
-                width={800}
+                width={1280}
                 height={500}
                 priority={true}
               />
@@ -277,12 +279,7 @@ const Treatment = ({ treatment, accordionSections }) => {
                 <RichText
                   content={treatment.content.raw.children}
                   renderers={{
-                    p: ({ children }) => <p className='text-justify'>{children}</p>,
-                    a: ({ children, href }) => (
-                      <a href={href} className='text-gg-500 underline'>
-                        {children}
-                      </a>
-                    ),
+                    ...baseRichTextRenderers,
                     iframe: ({ url, width }) => (
                       <iframe
                         src={url || ''}

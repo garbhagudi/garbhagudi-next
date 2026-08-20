@@ -119,7 +119,7 @@ const Iui = () => {
   function addReviewJsonLd() {
     const title = 'IUI Treatment in Bangalore: Trusted Fertility Solutions';
     const image =
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp';
+      'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vednv58vb07pl82ss9vk1';
     const description =
       'Explore the best IUI treatment in Bangalore at GarbhaGudi IVF Centre. High success rates, affordable costs & expert care. Book a consultation today!';
 
@@ -188,7 +188,7 @@ const Iui = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vednv58vb07pl82ss9vk1'
         />
 
         {/* Twitter*/}
@@ -202,7 +202,7 @@ const Iui = () => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vednv58vb07pl82ss9vk1'
         />
       </Head>
       <Header />

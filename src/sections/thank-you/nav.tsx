@@ -3,11 +3,18 @@ import { LuPhone } from 'react-icons/lu';
 
 export default function ThankYouNav() {
   const logoUrl =
-    'https://res.cloudinary.com/garbhagudiivf/image/upload/w_256,h_56/v1751352018/GG_New-Hori_Logo_ziwur1.svg';
+    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms76155yh1on07pnqpdnqyzk';
   return (
     <nav>
       <a href='https://www.garbhagudi-ivf.com/'>
-        <Image src={logoUrl} alt='GarbhaGudi IVF Centre' width={214} height={44} priority />
+        <Image
+          src={logoUrl}
+          alt='GarbhaGudi IVF Centre'
+          width={214}
+          height={44}
+          priority
+          quality={85}
+        />
       </a>
       <a className='phone' href='tel:+919108910832'>
         <LuPhone size={16} strokeWidth={2} />

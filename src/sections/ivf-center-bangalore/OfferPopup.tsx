@@ -94,6 +94,7 @@ const OfferPopup = ({ branches }: OfferPopupProps) => {
                   className='h-auto w-full rounded-t-xl object-contain md:h-full md:rounded-l-xl md:rounded-tr-none md:object-cover'
                   width={720}
                   height={400}
+                  quality={85}
                   priority
                 />
               </div>

@@ -122,7 +122,7 @@ function BlogPage({
           <meta property='og:type' content='website' />
           <meta
             property='og:image'
-            content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Blog_Index_nqj7cm.webp'
+            content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87s457o207plsrdmjpc6'
           />
 
           {/* Twitter*/}
@@ -136,7 +136,7 @@ function BlogPage({
           />
           <meta
             name='twitter:image'
-            content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Blog_Index_nqj7cm.webp'
+            content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87s457o207plsrdmjpc6'
           />
 
           <script
@@ -171,16 +171,24 @@ function BlogPage({
                 >
                   <Link href={`/blogs/${item.node.slug}`} passHref>
                     <div className='flex-shrink-0'>
-                      <Image
-                        src={item?.node?.image?.url || 'https://via.placeholder.com/380x214'}
-                        alt={item.node.title}
-                        width={380}
-                        height={214}
-                        sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 380px'
-                        className='h-60 w-full rounded-t-lg object-cover'
-                        priority={index < 3}
-                        fetchPriority={index < 1 ? 'high' : 'auto'}
-                      />
+                      {item?.node?.image?.url ? (
+                        <Image
+                          quality={85}
+                          src={item.node.image.url}
+                          alt={item.node.title}
+                          width={600}
+                          height={400}
+                          sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px'
+                          className='h-60 w-full rounded-t-lg object-cover'
+                          priority={index < 3}
+                          fetchPriority={index < 1 ? 'high' : 'auto'}
+                        />
+                      ) : (
+                        <div
+                          aria-hidden='true'
+                          className='h-60 w-full rounded-t-lg bg-gray-200 dark:bg-gray-700'
+                        />
+                      )}
                     </div>
                   </Link>
                   <div className='flex flex-1 flex-col justify-between bg-gradient-to-bl from-gg-200 via-gg-100 to-gg-50 p-6 dark:from-gray-800 dark:to-gray-700'>
@@ -197,11 +205,12 @@ function BlogPage({
                           <div className=''>
                             <span className='sr-only'>By: GarbhaGudi IVF Centre</span>
                             <Image
+                              quality={85}
                               className='h-12 w-12 scale-150 rounded-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert md:h-16 md:w-16'
                               src={GGLogo}
                               alt={'GarbhaGudi IVF Centre'}
-                              width={50}
-                              height={50}
+                              width={100}
+                              height={100}
                             />
                           </div>
                         </Link>

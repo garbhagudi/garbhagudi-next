@@ -9,6 +9,7 @@ import { SiGooglemaps } from 'react-icons/si';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import BlogsSnip from 'sections/home/newBlogs';
+import baseRichTextRenderers from 'components/richTextRenderers';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 const FAQs = dynamic(() => import('components/FAQs'), { ssr: false });
@@ -231,18 +232,20 @@ const Doctor = ({ doctor, accordionSections }) => {
       />
       <main className='profile-page'>
         <section className='relative block' style={{ height: '500px' }}>
-          <div
-            className='absolute top-0 h-full w-full bg-cover bg-center'
-            style={{
-              backgroundImage:
-                "url('https://res.cloudinary.com/garbhagudiivf/image/upload/v1643286880/Banner/Behind_Doctors_fssazq.webp')",
-            }}
-          >
-            <span
-              id='blackOverlay'
-              className='absolute h-full w-full bg-black opacity-30 dark:opacity-70'
-            ></span>
-          </div>
+          <Image
+            quality={85}
+            src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8od585p07plknvgx4ja'
+            alt=''
+            aria-hidden='true'
+            fill
+            priority
+            sizes='100vw'
+            className='object-cover object-center'
+          />
+          <span
+            id='blackOverlay'
+            className='absolute inset-0 bg-black opacity-30 dark:opacity-70'
+          ></span>
           <div
             className='pointer-events-none absolute bottom-0 left-0 right-0 top-auto w-full overflow-hidden'
             style={{ height: '70px' }}
@@ -271,6 +274,7 @@ const Doctor = ({ doctor, accordionSections }) => {
                   <div className='flex w-full justify-center px-4 lg:order-2 lg:w-3/12'>
                     <div className='relative'>
                       <Image
+                        quality={85}
                         width={340}
                         height={340}
                         alt={doctor?.name}
@@ -432,12 +436,7 @@ const Doctor = ({ doctor, accordionSections }) => {
                         <RichText
                           content={doctor?.bio?.raw?.children}
                           renderers={{
-                            p: ({ children }) => <p className='text-justify'>{children}</p>,
-                            a: ({ children, href }) => (
-                              <a href={href} className='text-gg-500 underline'>
-                                {children}
-                              </a>
-                            ),
+                            ...baseRichTextRenderers,
                           }}
                         />
                       </div>
@@ -449,12 +448,7 @@ const Doctor = ({ doctor, accordionSections }) => {
                           <RichText
                             content={doctor?.educationCredentials?.raw?.children}
                             renderers={{
-                              p: ({ children }) => <p className='text-justify'>{children}</p>,
-                              a: ({ children, href }) => (
-                                <a href={href} className='text-gg-500 underline'>
-                                  {children}
-                                </a>
-                              ),
+                              ...baseRichTextRenderers,
                             }}
                           />
                         </div>
@@ -467,12 +461,7 @@ const Doctor = ({ doctor, accordionSections }) => {
                           <RichText
                             content={doctor?.experienceExpertise?.raw?.children}
                             renderers={{
-                              p: ({ children }) => <p className='text-justify'>{children}</p>,
-                              a: ({ children, href }) => (
-                                <a href={href} className='text-gg-500 underline'>
-                                  {children}
-                                </a>
-                              ),
+                              ...baseRichTextRenderers,
                             }}
                           />
                         </div>

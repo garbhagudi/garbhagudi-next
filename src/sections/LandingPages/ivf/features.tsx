@@ -36,10 +36,11 @@ const Features = () => {
 
             <div className='my-5 flex justify-center md:my-0 md:w-1/3'>
               <Image
+                quality={85}
                 height={350}
                 width={350}
                 src={
-                  'https://res.cloudinary.com/garbhagudiivf/image/upload/v1742986482/landing-page/why-garbhagudi_pa4rxa.webp'
+                  'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vlpnr59p608pkpy5nsyoj'
                 }
                 alt='Water Purifier'
                 className='max-w-full rounded-lg'

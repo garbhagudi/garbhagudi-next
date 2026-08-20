@@ -60,11 +60,12 @@ const FloatPhone = ({ presentation }: { presentation?: boolean }) => {
             >
               <div className='relative h-32 w-full'>
                 <Image
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1757330189/GG_Popup_Image-01_ykvac7.webp'
+                  src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmf63ps507pl13e62vkv'
                   alt='formBanner'
                   className='h-full w-full rounded-t-md'
                   width={380}
                   height={220}
+                  quality={85}
                   fetchPriority='high'
                 />
                 <CloseButton className='absolute right-2 top-1 rounded-2xl bg-white text-gg-500'>

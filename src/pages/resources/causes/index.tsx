@@ -59,7 +59,7 @@ const IndexPage = ({ causes }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Cau_Diag_Treat_d0t3vx.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedk058ur07plss16dp50'
         />
 
         {/* Twitter*/}
@@ -73,7 +73,7 @@ const IndexPage = ({ causes }) => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Cau_Diag_Treat_d0t3vx.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedk058ur07plss16dp50'
         />
         <script
           id='breadcrumbs-jsonld'
@@ -106,6 +106,7 @@ const IndexPage = ({ causes }) => {
               <div className='mx-auto flex w-80 cursor-pointer rounded-2xl border-2 border-solid border-brandPink px-4 py-3 transition-colors duration-100 hover:border-transparent hover:bg-brandPink hover:text-white dark:border-gray-600 dark:hover:bg-gray-600 md:w-96'>
                 <div className='w-1/3'>
                   <Image
+                    quality={85}
                     className='h-24 w-24 rounded-lg object-cover transition-all duration-300 group-hover:grayscale-0 dark:grayscale'
                     src={item.iconUrl}
                     alt={item.title}

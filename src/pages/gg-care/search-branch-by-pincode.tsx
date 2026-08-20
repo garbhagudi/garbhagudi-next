@@ -149,7 +149,7 @@ const NearestZipcodeFinder: React.FC = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8oy585t07plz0qahkka'
         />
 
         {/* Twitter*/}
@@ -163,7 +163,7 @@ const NearestZipcodeFinder: React.FC = () => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_GGCare_qclgw8.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8oy585t07plz0qahkka'
         />
       </Head>
       <BreadCrumbs text1='GG Care' link1='/gg-care' text2='Search Branch by Pincode' link2='' />
@@ -204,6 +204,7 @@ const NearestZipcodeFinder: React.FC = () => {
                 >
                   <div className='w-full px-3 md:w-6/12 md:px-0'>
                     <Image
+                      quality={85}
                       src={items.image}
                       alt={items.name}
                       className='rounded-lg'

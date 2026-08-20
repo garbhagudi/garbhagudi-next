@@ -38,11 +38,12 @@ const Hero = () => {
       <div className='relative pb-32'>
         <div className='absolute inset-0'>
           <Image
+            quality={85}
             className='h-full w-full object-cover'
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1644049097/Banner/GG_Care_Web_Banner-6_iyxanu.webp'
+            src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmgf3psd07pl3frcbfe7'
             alt='gg care'
-            width={500}
-            height={500}
+            width={1500}
+            height={600}
             priority={true}
           />
           <div

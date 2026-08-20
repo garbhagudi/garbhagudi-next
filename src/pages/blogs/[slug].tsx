@@ -8,6 +8,7 @@ import dynamic from 'next/dynamic';
 import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import baseRichTextRenderers from 'components/richTextRenderers';
 const Error = dynamic(() => import('next/error'));
 const BlogFooter = dynamic(() => import('components/blogFooter'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
@@ -194,7 +195,7 @@ const Blog = ({ blog }) => {
         name: 'GarbhaGudi IVF Centre',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1751352018/GG_New-Hori_Logo_ziwur1.svg',
+          url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms76155yh1on07pnqpdnqyzk',
         },
       },
       datePublished: new Date(blog?.publishedOn).toISOString(),
@@ -438,11 +439,12 @@ const Blog = ({ blog }) => {
                             <div className='mr-3 h-12 w-12 md:mr-5 md:h-16 md:w-16'>
                               <span className='sr-only'>By: GarbhaGudi IVF Centre</span>
                               <Image
+                                quality={85}
                                 className='h-full w-full scale-150 rounded-full dark:fill-white dark:brightness-0 dark:grayscale dark:invert'
                                 src={blog?.author?.image?.url}
                                 alt={blog?.author?.imageAlt}
-                                width={50}
-                                height={50}
+                                width={200}
+                                height={200}
                                 priority
                               />
                             </div>
@@ -470,11 +472,12 @@ const Blog = ({ blog }) => {
                 </div>
                 <div className='relative my-8 w-full rounded-lg'>
                   <Image
+                    quality={85}
                     src={blog?.image?.url}
                     alt={blog?.title}
-                    width={800}
-                    height={450}
-                    sizes='(max-width: 768px) 100vw, 800px'
+                    width={1280}
+                    height={720}
+                    sizes='(max-width: 768px) 100vw, 1280px'
                     className='h-auto w-full rounded-lg object-cover'
                     priority
                     fetchPriority='high'
@@ -485,12 +488,7 @@ const Blog = ({ blog }) => {
                   <RichText
                     content={blog?.content?.raw?.children}
                     renderers={{
-                      p: ({ children }) => <p className='text-justify'>{children}</p>,
-                      a: ({ children, href }) => (
-                        <a href={href} className='text-gg-500 underline'>
-                          {children}
-                        </a>
-                      ),
+                      ...baseRichTextRenderers,
                       iframe: ({ url, width }) => (
                         <iframe
                           src={url || ''}

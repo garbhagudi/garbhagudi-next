@@ -33,6 +33,7 @@ const Awards = ({ awards }: AwardsProps) => {
             >
               <div className='flex-shrink-0'>
                 <Image
+                  quality={85}
                   className='h-38 w-full rounded-t-lg object-contain'
                   src={award.image?.url ?? award.imageUrl ?? ''}
                   alt={award.title}

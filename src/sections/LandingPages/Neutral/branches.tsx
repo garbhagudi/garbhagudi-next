@@ -17,6 +17,7 @@ const Branch = ({ branches }) => {
             <div className='mx-auto flex max-w-sm flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-gg-500 dark:border-gray-600'>
               <div className='overflow-hidden'>
                 <Image
+                  quality={85}
                   src={items?.branchPicture?.url}
                   alt={items?.title}
                   width={480}

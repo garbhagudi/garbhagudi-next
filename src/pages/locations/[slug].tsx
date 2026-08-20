@@ -68,7 +68,7 @@ const Branch = ({ branch, accordionSections }) => {
         {/* Primary Tags */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1770374577/Pregnant_Lady.jpg_zvlxr3.jpg'
+          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8pz586107pldfljrjaq'
           as='image'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />

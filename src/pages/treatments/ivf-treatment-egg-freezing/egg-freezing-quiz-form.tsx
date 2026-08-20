@@ -370,8 +370,9 @@ export default function FertilityForm() {
         {submit.isSubmited ? (
           <div className='flex min-h-screen items-center justify-center bg-[#FCFAF7]'>
             <Image
+              quality={85}
               src={
-                'https://res.cloudinary.com/garbhagudiivf/image/upload/v1731568598/eggFreezing/z3jyuyfnzutxoup7yx27.webp'
+                'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgw7r58sc08pkz311rog9'
               }
               alt='timer_icon'
               width={100}

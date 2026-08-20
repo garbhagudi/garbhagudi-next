@@ -58,6 +58,7 @@ export function About() {
                       >
                         <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12'>
                           <Image
+                            quality={85}
                             src={item.icon}
                             alt={item.name}
                             loading='lazy'
@@ -119,6 +120,7 @@ export function WhyGarbhaGudi() {
                       >
                         <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12'>
                           <Image
+                            quality={85}
                             src={item.icon}
                             alt={item.name}
                             loading='lazy'
@@ -179,6 +181,7 @@ export function KnowledgeCenter() {
                       >
                         <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12'>
                           <Image
+                            quality={85}
                             src={item.icon}
                             alt={item.name}
                             loading='lazy'
@@ -243,6 +246,7 @@ export function Contacts() {
                       >
                         <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center text-white transition-all duration-150 ease-in-out dark:grayscale dark:group-hover:grayscale-0 sm:h-12 sm:w-12'>
                           <Image
+                            quality={85}
                             src={item.icon}
                             alt={item.name}
                             loading='lazy'
@@ -451,6 +455,7 @@ export function Treatments() {
                           <Link href={items.link} key={items.id} className='group'>
                             <div className='flex flex-col items-center justify-center rounded-xl py-2 hover:bg-gg-200 dark:hover:bg-gray-600'>
                               <Image
+                                quality={85}
                                 src={items.icon}
                                 alt={items.name}
                                 loading='lazy'
@@ -472,6 +477,7 @@ export function Treatments() {
                           <Link href={items.link} key={items.id} className='group'>
                             <div className='flex flex-col items-center justify-center rounded-xl py-2 hover:bg-gg-200 dark:hover:bg-gray-600'>
                               <Image
+                                quality={85}
                                 src={items.icon}
                                 alt={items.name}
                                 loading='lazy'
@@ -493,6 +499,7 @@ export function Treatments() {
                           <Link href={items.link} key={items.id} className='group'>
                             <div className='flex flex-col items-center justify-center rounded-xl py-2 hover:bg-gg-200 dark:hover:bg-gray-600'>
                               <Image
+                                quality={85}
                                 src={items.icon}
                                 alt={items.name}
                                 loading='lazy'

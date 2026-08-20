@@ -28,6 +28,7 @@ function HeroHome() {
             {Data.map((items) => (
               <div className='flex items-center justify-center' key={items.id}>
                 <Image
+                  quality={85}
                   src={items.img}
                   alt={items.title}
                   className='w-full transition-all duration-200 hover:scale-150 dark:brightness-200 dark:contrast-125 dark:grayscale'
@@ -51,31 +52,31 @@ const Data = [
   {
     id: 1,
     title: 'Public TV',
-    img: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1655207790/logos/public_56-01_kd8fqm.svg',
+    img: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmsczhh74bao607pfgk2m6olz',
   },
   {
     id: 2,
     title: 'Daily Hunt',
-    img: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1655206796/logos/01_logo-04_ozhtg1.svg',
+    img: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vl0qk59zm07pla1dobrv7',
   },
   {
     id: 3,
     title: 'Suvarna News',
-    img: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1655206796/logos/01_logo-06_r15yoj.svg',
+    img: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vl0r659zq07plob60guuc',
   },
   {
     id: 4,
     title: 'Times Health',
-    img: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1655206796/logos/01_logo-02_ngqfla.svg',
+    img: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vl0rq59zu07pl36o622uq',
   },
   {
     id: 5,
     title: 'TV9',
-    img: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1655206796/logos/01_logo-01_we8wae.svg',
+    img: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vl0sc59zy07pl5x0sbytl',
   },
   {
     id: 6,
     title: 'ET Health World',
-    img: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1655206796/logos/01_logo-03_okxrv1.svg',
+    img: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vl0sy5a0407plodyfd0gr',
   },
 ];

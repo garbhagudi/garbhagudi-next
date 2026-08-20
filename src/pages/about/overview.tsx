@@ -46,7 +46,7 @@ const Overview = ({ directors }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
 
         {/* Twitter*/}
@@ -60,7 +60,7 @@ const Overview = ({ directors }) => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.webp'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
       </Head>
       <BreadCrumbs text1='About' link1='/about/overview' text2='' link2='' />
@@ -81,11 +81,12 @@ const Overview = ({ directors }) => {
                       <div className='space-y-4'>
                         <div className='aspect-square'>
                           <Image
+                            quality={85}
                             className='object-fit h-96 w-96 rounded-3xl shadow-2xl'
                             src={item?.image?.url}
                             alt={item.name}
-                            width={500}
-                            height={500}
+                            width={1000}
+                            height={700}
                             loading='lazy'
                           />
                         </div>

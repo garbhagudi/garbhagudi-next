@@ -216,74 +216,74 @@ function generateSiteMap(
     {
       loc: '/',
       image: [
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1691232590/Misc/happy-smiling-mother-playing-with-newborn-child-comfy-light-bedroom-front-window-moments-motherhood-happiness-with-kids-family-concept-min_txfdml.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1670926732/Home/Why_GarbhaGudi_oa1nv7-min_z7p9jv.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1722501966/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0_1_i7oozx.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1677492148/Misc/coup-min_g3kq4k.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830364/Icons/Why%20GarbhaGudi/11-Years_bvg1gg.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1659164257/logos/GG_Vertical_Logo_nrcl5h.svg',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Holistic-Approach_timeda.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Humane-Touch_qvniyh.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830505/Icons/Why%20GarbhaGudi/Successful-Pregnancy_1_xw1hbe.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Reknowed-Doctor_x52vlx.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Trasparent-Billing_rbt5lj.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/World-Class-Lab_yerlf1.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1660830350/Icons/Why%20GarbhaGudi/Cutting-Edge_qpqb9w.webp',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6km08v208pk1e4c8z0p',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6lj08v608pknr66yszg',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6m708va08pkgt5xrll1',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6ni08vi08pkegct0cz2',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6od08vm08pkbu54elhs',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6oz08vq08pk9nuarsth',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6po08vu08pkw8qrq5lo',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6qg08vy08pkkptynjq8',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6r708w208pk0ok4tc0d',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in18n3pky07pl537v57hy',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in19g3pl207plhoea2w49',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1a63pl607plcz55wsz8',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1ax3pla07plwitixgei',
       ],
     },
     {
       loc: '/about/vision-and-mission',
       image: [
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643278927/About/1201x501_Vision_c6ds1h.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643278945/About/1201x501_Mission_wcctgt.webp',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1bg3ple07plyuim0she',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1c33pli07pl9dmbstur',
       ],
     },
     {
       loc: '/about/executive-team',
       image: [
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1643287945/Banner/1200x500_4Directors_nqn9eg.webp',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1co3plm07pltvxsmg5z',
       ],
     },
     {
       loc: '/blogs/linkedin/career-or-baby',
       image: [
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/carrier_or_baby-min_uso9ey.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/Male_infertility-min_xt4ouj.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/Female_fertility-min_yvazig.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/ART_The_Real_Boon_-min_lqxqex.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215523/blogs/Egg_Freezing-min_zyhjfb.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1651215522/blogs/Sperm_Freezing-min_atfspg.webp',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1d93plq07plyvlrxm66',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1dz3plu07plrqgv404y',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8in1ep3ply07plh5m1zqr0',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmc83prp07plteu9qg1j',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmdp3prx07pl07w7dllx',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmsczhh2zbani07pfbvspuz4q',
       ],
     },
     {
       loc: '/careers',
       image: [
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1657979955/Banner/Argoya_Silver_Award_Web_Bnr-min_bx7xeo.webp',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmee3ps107pl57mgs6ms',
       ],
     },
     {
       loc: '/contact/enquiry',
       image: [
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1757330189/GG_Popup_Image-01_ykvac7.webp',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmf63ps507pl13e62vkv',
       ],
     },
     {
       loc: '/about/overview',
       image: [
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/q_auto:eco/v1643461022/Banner/About_us_xg1b1l.webp',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmfq3ps907pl5szpszch',
       ],
     },
     {
       loc: '/gg-care',
       image: [
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1644049097/Banner/GG_Care_Web_Banner-6_iyxanu.webp',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmgf3psd07pl3frcbfe7',
       ],
     },
     {
       loc: '/treatments/infertility-treatment-in-bangalore',
       image: [
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1691234594/Misc/gynecologist-performing-ultrasound-consultation-min_qb43zc.webp',
-        'https://res.cloudinary.com/garbhagudiivf/image/upload/v1691234829/Misc/young-wife-husband-have-problems-family-life-min_csilul.webp',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmh13psh07plnnci7dhn',
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmho3psl07plazzvsr0o',
       ],
     },
   ];
@@ -333,7 +333,7 @@ function generateSiteMap(
     addUrl(`${BASE_URL}/careers/${slug}`, image?.url);
     addUrl(
       `${BASE_URL}/careers/${slug}`,
-      'https://res.cloudinary.com/garbhagudiivf/image/upload/v1657979955/Banner/Argoya_Silver_Award_Web_Bnr-min_bx7xeo.webp'
+      'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmee3ps107pl57mgs6ms'
     );
   });
 
