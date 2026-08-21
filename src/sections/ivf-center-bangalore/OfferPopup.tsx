@@ -7,7 +7,7 @@ import { IoClose } from 'react-icons/io5';
 import { scrollToForm } from 'sections/ivf-center-bangalore/constants';
 
 const OFFER_IMAGE =
-  'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmsfrbdwe1rd506mrj2up51g3';
+  'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmt2v7e6p53rn06o350gplwp3';
 const OPEN_DELAY_MS = 10000;
 
 /* Centres not offering this promotion. */
