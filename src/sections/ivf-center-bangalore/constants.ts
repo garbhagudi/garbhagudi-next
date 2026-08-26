@@ -1,4 +1,3 @@
-
 export const PHONE_DISPLAY = '+91 90712 34006';
 export const PHONE_DIGITS = '919071234006';
 export const PHONE_TEL = `tel:+${PHONE_DIGITS}`;
