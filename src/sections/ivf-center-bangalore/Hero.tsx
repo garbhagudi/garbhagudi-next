@@ -13,10 +13,20 @@
  * /thank-you redirect behave exactly like the rest of the site.
  */
 
+import Image from 'next/image';
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import { HiCheckCircle } from 'react-icons/hi';
 import Form from 'sections/LandingPages/Performant/form';
-import { PHONE_DISPLAY, PHONE_TEL, waLink } from 'sections/ivf-center-bangalore/constants';
+import {
+  OFFER_IMAGE,
+  OFFER_IMAGE_ALT,
+  OFFER_IMAGE_HEIGHT,
+  OFFER_IMAGE_SIZES,
+  OFFER_IMAGE_WIDTH,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  waLink,
+} from 'sections/ivf-center-bangalore/constants';
 
 const proofPoints = [
   '15,000+ babies delivered since 2011',
@@ -90,17 +100,23 @@ const Hero = () => {
 
         {/* Right — primary conversion: the lead form */}
         <div id='form' className='scroll-mt-24'>
-          <div className='mx-auto w-full max-w-md rounded-2xl border border-gg-100 bg-white shadow-2xl'>
-            <div className='rounded-t-2xl bg-brandPurpleDark px-6 py-5 text-center'>
-              <h2 className='font-lexend text-xl font-bold text-white sm:text-2xl'>
-                Book a Free Consultation
-              </h2>
-              <p className='mt-1 font-content text-sm text-purple-100'>
-                Talk to a GarbhaGudi fertility specialist today
-              </p>
+          <div className='mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-gg-100 bg-white shadow-2xl'>
+            <div className='border-b border-gg-100 bg-gg-50/60 px-3 pb-2 pt-3'>
+              <Image
+                src={OFFER_IMAGE}
+                alt={OFFER_IMAGE_ALT}
+                className='h-auto w-full rounded-lg'
+                width={OFFER_IMAGE_WIDTH}
+                height={OFFER_IMAGE_HEIGHT}
+                sizes={OFFER_IMAGE_SIZES}
+                quality={85}
+                priority
+              />
             </div>
-            <div className='px-2 pb-2 pt-1 sm:px-4'>
-              <Form />
+
+            {/* Bottom half — the lead form. */}
+            <div className='px-3 pb-5 pt-2 sm:px-5'>
+              <Form showEmail={false} variant='card' />
             </div>
           </div>
         </div>
