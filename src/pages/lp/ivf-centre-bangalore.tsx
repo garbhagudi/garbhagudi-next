@@ -19,14 +19,12 @@ import Gallery from 'sections/ivf-center-bangalore/Gallery';
 import Reviews from 'sections/ivf-center-bangalore/Reviews';
 import Awards from 'sections/ivf-center-bangalore/Awards';
 
-/* Client-only sections are code-split with ssr:false so the hero + form
- * HTML stays lean and hydration isn't blocked on them. */
+const Branch = dynamic(() => import('sections/LandingPages/Performant/branches'));
+const RelatedSearches = dynamic(() => import('sections/LandingPages/Performant/relatedSearches'));
+
 const DoctorList = dynamic(() => import('sections/LandingPages/Performant/doctorList'), {
   ssr: false,
-});
-const Branch = dynamic(() => import('sections/LandingPages/Performant/branches'), { ssr: false });
-const RelatedSearches = dynamic(() => import('sections/LandingPages/Performant/relatedSearches'), {
-  ssr: false,
+  loading: () => <div className='min-h-[632px] lg:min-h-[588px]' aria-hidden='true' />,
 });
 const OfferPopup = dynamic(() => import('sections/ivf-center-bangalore/OfferPopup'), {
   ssr: false,

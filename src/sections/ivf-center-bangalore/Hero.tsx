@@ -34,6 +34,14 @@ const proofPoints = [
   'In-house IVF labs & embryology team',
   'Personalised, holistic fertility care',
 ];
+const TrustBadge = ({ className }: { className: string }) => (
+  <span
+    className={`inline-flex items-center gap-2 rounded-full bg-gg-100 px-4 py-1.5 font-content text-sm font-semibold text-gg-700 ${className}`}
+  >
+    <span className='h-2 w-2 rounded-full bg-gg-500' aria-hidden='true' />
+    Trusted IVF &amp; Fertility Centre · Since 2011
+  </span>
+);
 
 const Hero = () => {
   return (
@@ -46,13 +54,10 @@ const Hero = () => {
         aria-hidden='true'
         className='pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brandPink3/20 blur-3xl'
       />
-      <div className='mx-auto grid max-w-7xl items-center gap-10 px-4 pb-24 pt-10 sm:px-6 md:pb-16 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:pt-16'>
+      <div className='mx-auto grid max-w-7xl items-center gap-10 px-4 pb-4 pt-10 sm:px-6 md:pb-16 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:pb-24 lg:pt-16'>
         {/* Left — message-matched headline + trust + direct CTAs */}
-        <div>
-          <span className='inline-flex items-center gap-2 rounded-full bg-gg-100 px-4 py-1.5 font-content text-sm font-semibold text-gg-700'>
-            <span className='h-2 w-2 rounded-full bg-gg-500' aria-hidden='true' />
-            Trusted IVF &amp; Fertility Centre · Since 2011
-          </span>
+        <div className='order-last lg:order-none'>
+          <TrustBadge className='hidden lg:inline-flex' />
 
           <h1
             id='lp-hero-heading'
@@ -99,7 +104,10 @@ const Hero = () => {
         </div>
 
         {/* Right — primary conversion: the lead form */}
-        <div id='form' className='scroll-mt-24'>
+        <div id='form' className='order-first scroll-mt-24 lg:order-none'>
+          <div className='mx-auto w-full max-w-md'>
+            <TrustBadge className='mb-4 lg:hidden' />
+          </div>
           <div className='mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-gg-100 bg-white shadow-2xl'>
             <div className='border-b border-gg-100 bg-gg-50/60 px-3 pb-2 pt-3'>
               <Image
