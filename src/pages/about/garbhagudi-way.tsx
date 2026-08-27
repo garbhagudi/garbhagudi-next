@@ -1,13 +1,13 @@
 import GarbhaGudiWay from 'sections/tools/gg-way';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 
 const GGWays = () => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'About', url: 'https://www.garbhagudi.com/about/overview' },
-    { name: 'GarbhaGudi Way', url: 'https://www.garbhagudi.com/about/garbhagudi-way' },
+  const schema = buildBreadcrumb('/about/garbhagudi-way', [
+    { text: 'About', link: '/about/overview' },
+    { text: 'GarbhaGudi Way' },
   ]);
 
   return (
@@ -24,11 +24,7 @@ const GGWays = () => {
         />
 
         {/* Breadcrumb Schema */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
 

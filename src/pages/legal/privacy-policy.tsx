@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import dynamic from 'next/dynamic';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Policy = () => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Legal', url: 'https://www.garbhagudi.com/legal' },
-    { name: 'Privacy Policy', url: 'https://www.garbhagudi.com/legal/privacy-policy' },
+  const schema = buildBreadcrumb('/legal/privacy-policy', [
+    { text: 'Legal', link: '/legal' },
+    { text: 'Privacy Policy' },
   ]);
 
   return (
@@ -24,11 +24,7 @@ const Policy = () => {
         />
 
         {/* Breadcrumb Schema */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
 

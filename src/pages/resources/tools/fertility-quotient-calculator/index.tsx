@@ -2,7 +2,8 @@ import { useState, useCallback, useMemo } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 
 // Dynamically import components with SSR disabled
 const Poor = dynamic(() => import('sections/tools/fqc/results').then((mod) => mod.Poor), {
@@ -145,14 +146,10 @@ const IndexPage: React.FC = () => {
     return ResultComponent ? <ResultComponent /> : null;
   };
 
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
-    { name: 'Tools', url: 'https://www.garbhagudi.com/resources/tools' },
-    {
-      name: 'Fertility Quotient Calculator',
-      url: 'https://www.garbhagudi.com/resources/tools/fertility-quotient-calculator',
-    },
+  const schema = buildBreadcrumb('/resources/tools/fertility-quotient-calculator', [
+    { text: 'Resources', link: '/resources' },
+    { text: 'Tools', link: '/resources/tools' },
+    { text: 'Fertility Quotient Calculator' },
   ]);
   return (
     <div>
@@ -196,11 +193,7 @@ const IndexPage: React.FC = () => {
           name='twitter:image'
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedkk58uv07plx6jvslfz'
         />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <BreadCrumbs
         link1='/resources'

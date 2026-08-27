@@ -2,14 +2,21 @@ import Head from 'next/head';
 import Form from 'sections/LandingPages/Performant/form';
 import Image from 'next/image';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { ORG_ID, buildBreadcrumb, buildContactPage, schemaGraph } from 'lib/schema';
 
 const IndexPage = () => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Contact', url: 'https://www.garbhagudi.com/contact' },
-    { name: 'Enquiry', url: 'https://www.garbhagudi.com/contact/enquiry' },
-  ]);
+  const pageUrl = '/contact/enquiry';
+  // References the master organization by @id rather than restating it, and
+  // does not duplicate branch data (guide section 18).
+  const schema = schemaGraph(
+    buildContactPage({
+      url: pageUrl,
+      name: 'Enquiry | GarbhaGudi IVF Centre',
+      aboutId: ORG_ID,
+    }),
+    buildBreadcrumb(pageUrl, [{ text: 'Contact', link: '/contact/enquiry' }, { text: 'Enquiry' }])
+  );
   return (
     <div>
       <Head>
@@ -27,6 +34,9 @@ const IndexPage = () => {
           name='description'
           content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art cutting-edge technology to address infertility.'
         />
+
+        {/* Structured data */}
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
         <meta property='og:title' content='Enquiry Form' />
@@ -53,11 +63,6 @@ const IndexPage = () => {
         <meta
           name='twitter:image'
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmf63ps507pl13e62vkv'
-        />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
         />
       </Head>
       <BreadCrumbs

@@ -1,38 +1,17 @@
 import React from 'react';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const VisionMission = () => {
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "Home",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "About",
-              "item": "https://www.garbhagudi.com/about/overview"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "Mission & Vision",
-              "item": "https://www.garbhagudi.com/about/vision-and-mission"
-            }
-          ]
-        }`,
-    };
-  }
+  const pageUrl = '/about/vision-and-mission';
+  const schema = buildBreadcrumb(pageUrl, [
+    { text: 'About', link: '/about/overview' },
+    { text: 'Mission & Vision' },
+  ]);
   return (
     <div>
       <Head>
@@ -45,6 +24,9 @@ const VisionMission = () => {
           name='description'
           content='GarbhaGudi has served as a beacon of hope to thousands of infertile couples. Our experienced specialists, nurses, & embryologists work to cater for your needs'
         />
+
+        {/* Structured data */}
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
 
@@ -73,11 +55,6 @@ const VisionMission = () => {
         <meta
           name='twitter:image'
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
-        />
-        <script
-          id='breadcrumbs-jsonld'
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
         />
       </Head>
       <BreadCrumbs

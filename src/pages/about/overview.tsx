@@ -5,14 +5,18 @@ import { gql } from '@apollo/client';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { ORG_ID, buildAboutPage, buildBreadcrumb, schemaGraph } from 'lib/schema';
 const Header = dynamic(() => import('sections/about/header'), { ssr: true });
 const CoreVision = dynamic(() => import('sections/about/coreVision'), { ssr: false });
 const Overview = ({ directors }) => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'About', url: 'https://www.garbhagudi.com/about/overview' },
-  ]);
+  const pageUrl = '/about/overview';
+  // References the master organization by @id rather than restating it,
+  // and does not duplicate branch data (guide section 18).
+  const schema = schemaGraph(
+    buildAboutPage({ url: pageUrl, name: 'About | GarbhaGudi IVF Centre', aboutId: ORG_ID }),
+    buildBreadcrumb(pageUrl, [{ text: 'About' }])
+  );
 
   return (
     <div>
@@ -27,12 +31,8 @@ const Overview = ({ directors }) => {
           content='GarbhaGudi is a chain of new generation infertility treatment hospitals equipped with state-of-the-art cutting-edge technology to address infertility.'
         />
 
-        {/* Breadcrumb Schema */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        {/* Structured data */}
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
 

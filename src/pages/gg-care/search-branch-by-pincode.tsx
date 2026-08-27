@@ -3,7 +3,8 @@ import { FaSpinner } from 'react-icons/fa';
 import Head from 'next/head';
 import Image from 'next/image';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 
 // List of available zipcodes
 const availableZipcodes = [
@@ -108,13 +109,9 @@ const NearestZipcodeFinder: React.FC = () => {
     return deg * (Math.PI / 180);
   };
 
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'GG Care', url: 'https://www.garbhagudi.com/gg-care' },
-    {
-      name: 'Search Branch by Pincode',
-      url: 'https://www.garbhagudi.com/gg-care/search-branch-by-pincode',
-    },
+  const schema = buildBreadcrumb('/gg-care/search-branch-by-pincode', [
+    { text: 'GG Care', link: '/gg-care' },
+    { text: 'Search Branch by Pincode' },
   ]);
 
   return (
@@ -131,11 +128,7 @@ const NearestZipcodeFinder: React.FC = () => {
         />
 
         {/* Breadcrumb Schema */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
 

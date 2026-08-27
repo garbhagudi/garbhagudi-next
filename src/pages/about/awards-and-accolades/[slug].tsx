@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 import { useRouter } from 'next/router';
 import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
@@ -103,34 +105,13 @@ const AwardPage = ({ award }: AwardProps) => {
   if (router.isFallback) {
     return <Loading />;
   }
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "HOME",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Awards & Accolades",
-              "item": "https://www.garbhagudi.com/about/awards-and-accolades"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "${award?.title}",
-              "item": "https://www.garbhagudi.com/about/awards-and-accolades/${award?.slug}"
-            }
-          ]
-        }`,
-    };
-  }
+  const pageUrl = `/about/awards-and-accolades/${award?.slug}`;
+  // Labels must match the visible <BreadCrumbs> trail below (guide section 6).
+  const schema = buildBreadcrumb(pageUrl, [
+    { text: 'About', link: '/about/overview' },
+    { text: 'Awards & Accolades', link: '/about/awards-and-accolades' },
+    { text: award?.title },
+  ]);
   return (
     <div>
       <Head>
@@ -160,12 +141,8 @@ const AwardPage = ({ award }: AwardProps) => {
         <meta name='twitter:description' content={award?.content?.text.slice(0, 160)} />
         <meta name='twitter:image' content={award?.image?.url} />
 
-        {/* Ld+JSON Data */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-          key='breadcrumbs-jsonld'
-        />
+        {/* Structured data */}
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <BreadCrumbs
         link1='/about/'

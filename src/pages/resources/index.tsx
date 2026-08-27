@@ -2,13 +2,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 
 const IndexPage = () => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
-  ]);
+  const schema = buildBreadcrumb('/resources', [{ text: 'Resources' }]);
 
   return (
     <div>
@@ -25,11 +23,7 @@ const IndexPage = () => {
           />
 
           {/* Breadcrumb Schema */}
-          <script
-            type='application/ld+json'
-            dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-            id='breadcrumbs-jsonld'
-          />
+          <JsonLd id='page-jsonld' data={schema} />
 
           {/* Open Graph / Facebook */}
 

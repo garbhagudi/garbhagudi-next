@@ -4,7 +4,8 @@ import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 
 // Shape returned by the Hygraph query in getStaticProps.
 interface CmsArticle {
@@ -32,10 +33,7 @@ interface Article {
 }
 
 const IndexPage = ({ articles }: Article) => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Fertility Consultants', url: 'https://www.garbhagudi.com/fertility-consultants' },
-  ]);
+  const schema = buildBreadcrumb('/fertility-consultants', [{ text: 'Fertility Consultants' }]);
   return (
     <div>
       <Head>
@@ -77,11 +75,7 @@ const IndexPage = ({ articles }: Article) => {
           name='twitter:image'
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
         />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <BreadCrumbs
         link1='/fertility-consultants'

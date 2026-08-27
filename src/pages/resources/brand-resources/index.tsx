@@ -3,13 +3,13 @@ import Head from 'next/head';
 import Header from 'sections/mediaKit/brandResources/header';
 import BRComponent from 'sections/mediaKit/main';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const IndexPage = () => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
-    { name: 'Brand Resources', url: 'https://www.garbhagudi.com/resources/brand-resources' },
+  const schema = buildBreadcrumb('/resources/brand-resources', [
+    { text: 'Resources', link: '/resources' },
+    { text: 'Brand Resources' },
   ]);
   return (
     <div className='min-h-screen'>
@@ -26,11 +26,7 @@ const IndexPage = () => {
           name='og:description'
           content="Explore our Brand Resources for logos, guidelines, and more. Elevate your brand with GarbhaGudi's trusted assets. Download now and stay consistent!"
         />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <BreadCrumbs
         link1='/resources'

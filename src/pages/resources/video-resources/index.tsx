@@ -9,7 +9,8 @@ import { VscVerified } from 'react-icons/vsc';
 import moment from 'moment';
 import Image from 'next/image';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
@@ -50,10 +51,9 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
   const [url2, setUrl2] = useState(garbhasandesha?.items[0].snippet.resourceId.videoId);
   const [url3, setUrl3] = useState(tvAppearance?.items[0].snippet.resourceId.videoId);
   const [url4, setUrl4] = useState(testimonials?.items?.[0]?.snippet?.resourceId?.videoId);
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
-    { name: 'Video Resources', url: 'https://www.garbhagudi.com/resources/video-resources' },
+  const schema = buildBreadcrumb('/resources/video-resources', [
+    { text: 'Resources', link: '/resources' },
+    { text: 'Video Resources' },
   ]);
   const renderRecommended = (image: string, url: string, label: string, by: string) => {
     return (
@@ -224,11 +224,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
           name='twitter:image'
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedip58uj07pl77zu9att'
         />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <BreadCrumbs
         link1='/resources'

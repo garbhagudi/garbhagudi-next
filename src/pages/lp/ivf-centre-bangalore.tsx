@@ -4,11 +4,15 @@ import { useMemo } from 'react';
 import { gql } from '@apollo/client';
 
 import apolloClient from 'lib/apollo-graphcms';
+import JsonLd from 'components/json-ld';
 import {
-  generateBreadcrumbSchema,
-  generateFAQSchema,
-  generateMedicalClinicSchema,
-} from 'lib/schema-utils';
+  ORG_ID,
+  buildFaqPage,
+  buildService,
+  buildWebPage,
+  schemaGraph,
+  serviceId,
+} from 'lib/schema';
 
 import Hero from 'sections/ivf-center-bangalore/Hero';
 import Content from 'sections/ivf-center-bangalore/Content';
@@ -39,30 +43,40 @@ const URL = 'https://www.garbhagudi.com/lp/ivf-centre-bangalore';
 const OG_IMAGE =
   'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs';
 
-const faqSchema = generateFAQSchema(
-  ivfCentreFaqs.map((f) => ({ question: f.question, answer: f.answer }))
-);
+/* Schema embeds the page URL, so it's built per page — this LP is also served
+ * as-is at /lp/ivf-treatment.
+ *
+ * This page is a landing page, not a branch, so it does not mint a
+ * MedicalClinic entity: branch pages own branch-level data (guide section 18).
+ * It describes the fertility service and references the master organization. */
+const buildSchemas = (url: string) =>
+  schemaGraph(
+    buildWebPage({
+      // This page renders no visible breadcrumb, so it emits no
+      // BreadcrumbList and claims no breadcrumb (guide section 6).
+      hasBreadcrumb: false,
+      url,
+      name: TITLE,
+      description: DESCRIPTION,
+      aboutId: ORG_ID,
+      mainEntityId: serviceId(url),
+      primaryImageUrl: OG_IMAGE,
+    }),
+    buildService({
+      url,
+      name: 'IVF and Fertility Treatment',
+      description: DESCRIPTION,
+      serviceType: 'Reproductive endocrinology and infertility (IVF)',
+    }),
 
-/* Breadcrumb/clinic schemas embed the page URL, so they're built per page —
- * this LP is also served as-is at /lp/ivf-treatment. */
-const buildSchemas = (url: string) => ({
-  breadcrumbSchema: generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'IVF Centre in Bangalore', url },
-  ]),
-  medicalClinicSchema: generateMedicalClinicSchema({
-    name: 'GarbhaGudi IVF Centre',
-    description: DESCRIPTION,
-    url,
-    medicalSpecialty: 'Reproductive endocrinology and infertility (IVF)',
-    areaServed: 'Bangalore',
-    telephone: '+91-9108910832',
-    image: OG_IMAGE,
-  }),
-});
+    buildFaqPage(
+      url,
+      ivfCentreFaqs.map((f) => ({ question: f.question, answer: f.answer }))
+    )
+  );
 
 export default function IvfCentreLandingPage({ doctors, branches, awards, pageUrl = URL }) {
-  const { breadcrumbSchema, medicalClinicSchema } = useMemo(() => buildSchemas(pageUrl), [pageUrl]);
+  const schema = useMemo(() => buildSchemas(pageUrl), [pageUrl]);
   return (
     <div className='pb-20 md:pb-0'>
       <Head>
@@ -93,21 +107,7 @@ export default function IvfCentreLandingPage({ doctors, branches, awards, pageUr
         <meta name='twitter:image' content={OG_IMAGE} />
 
         {/* Structured data */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: medicalClinicSchema }}
-          id='medicalclinic-jsonld'
-        />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: faqSchema }}
-          id='faq-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
 
       <main>

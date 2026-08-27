@@ -5,13 +5,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb, buildDirectoryPage, schemaGraph } from 'lib/schema';
 
 const Locations = ({ branches }) => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Locations', url: 'https://www.garbhagudi.com/locations' },
-  ]);
+  const pageUrl = '/locations';
+  const schema = schemaGraph(
+    ...buildDirectoryPage(
+      pageUrl,
+      'Locations',
+      (branches || []).map((b) => ({ name: b?.title, url: `/locations/${b?.slug}` }))
+    ),
+    buildBreadcrumb(pageUrl, [{ text: 'Locations' }])
+  );
 
   return (
     <div>
@@ -30,12 +36,8 @@ const Locations = ({ branches }) => {
           content='GarbhaGudi is where dreams come alive, hopes never fade and possibilities never end. We work to help you cherish the golden moment of holding your bundle of joy'
         />
 
-        {/* Breadcrumb Schema */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        {/* Structured data */}
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
 

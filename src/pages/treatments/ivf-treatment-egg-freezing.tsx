@@ -1,4 +1,6 @@
 import dynamic from 'next/dynamic';
+import JsonLd from 'components/json-ld';
+import { buildProcedurePage, schemaGraph } from 'lib/schema';
 import Head from 'next/head';
 import Banner from 'sections/egg-freezing/banner';
 const Faq = dynamic(() => import('sections/egg-freezing/faq'), { ssr: false });
@@ -11,129 +13,15 @@ const PlannedSteps = dynamic(() => import('sections/egg-freezing/PlannedSteps'),
 const CreativeVideo = dynamic(() => import('sections/egg-freezing/creativeVideo'), { ssr: false });
 
 export default function fertility() {
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "HOME",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Treatments",
-              "item": "https://www.garbhagudi.com/treatments/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "IVF Treatment & Egg Freezing",
-              "item": "https://www.garbhagudi.com/treatments/ivf-treatment-egg-freezing"
-            }
-          ]
-        }`,
-    };
-  }
+  const pageUrl = '/treatments/ivf-treatment-egg-freezing';
+  const schema = schemaGraph(
+    ...buildProcedurePage({
+      url: pageUrl,
+      name: 'Egg Freezing',
+      description: 'Oocyte cryopreservation (egg freezing) at GarbhaGudi IVF Centre, Bangalore.',
+    })
+  );
 
-  function addFaqJsonLd() {
-    return {
-      __html: `{
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [{
-          "@type": "Question",
-          "name": "What is egg freezing?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Egg freezing, or oocyte cryopreservation, is a process where a woman's eggs are extracted, frozen, and stored, essentially preserving her fertility for future use."
-          }
-        },{
-          "@type": "Question",
-          "name": "Who should consider egg freezing?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Women who wish to delay pregnancy, those facing medical treatments that could affect fertility, or those with other personal reasons for wanting to preserve their eggs at a younger age."
-          }
-        },{
-          "@type": "Question",
-          "name": "What is the ideal age to freeze eggs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The best time to freeze eggs is typically in a woman's late 20s to early 30s. While it's possible to freeze eggs in later years, success rates tend to decrease as age impacts egg quality and quantity."
-          }
-        },{
-          "@type": "Question",
-          "name": "How does egg freezing work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The process involves ovarian stimulation (hormone injections), egg retrieval, and then freezing the eggs using a rapid freezing technique called vitrification."
-          }
-        },{
-          "@type": "Question",
-          "name": "Are frozen eggs as good as fresh eggs for IVF?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, advanced freezing methods like vitrification have achieved the same IVF success rates with frozen eggs as with fresh eggs."
-          }
-        },{
-          "@type": "Question",
-          "name": "How long can eggs be stored frozen?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Frozen eggs can be stored indefinitely without a significant decrease in quality."
-          }
-        }]
-      }`,
-    };
-  }
-
-  function addDocJsonLd() {
-    return {
-      __html: `{
-  "name": "IVF Treatment & Egg Freezing",
-  "@type": "Product",
-  "@context": "https://schema.org/",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingCount": "604",
-    "ratingValue": "4.9",
-    "reviewCount": "1200"
-  }
-}`,
-    };
-  }
-
-  function addReviewJsonLd() {
-    const title = 'IVF Treatment & Egg Freezing in Bangalore: Expert Fertility Care';
-    const image =
-      'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgw7658s808pkg81hvoeh';
-    const description =
-      'Explore advanced IVF treatment & egg freezing at GarbhaGudi IVF. Boost your fertility journey with expert care. Book a consultation today!';
-
-    return {
-      __html: `{
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "${title}",
-      "image": "${image}",
-      "description": "${description}",
-      "brand": {
-        "@type": "Brand",
-        "name": "GarbhaGudi IVF Centre"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "604"
-      }
-    }`,
-    };
-  }
   return (
     <div>
       <Head>
@@ -164,6 +52,7 @@ export default function fertility() {
         />
 
         {/* Ld+JSON Data */}
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
         <meta
@@ -193,26 +82,6 @@ export default function fertility() {
         <meta
           name='twitter:image'
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vgw7658s808pkg81hvoeh'
-        />
-
-        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
-
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-          key='breadcrumbs-jsonld'
-        />
-
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addFaqJsonLd()}
-          key='howto-jsonld'
-        />
-
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addReviewJsonLd()}
-          key='review-jsonld'
         />
       </Head>
       <Banner />

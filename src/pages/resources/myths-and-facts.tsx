@@ -2,14 +2,14 @@ import MythsFacts from 'sections/myth-and-facts';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 
 const MythsAndFacts = () => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
-    { name: 'Myths and Facts', url: 'https://www.garbhagudi.com/resources/myths-and-facts' },
+  const schema = buildBreadcrumb('/resources/myths-and-facts', [
+    { text: 'Resources', link: '/resources' },
+    { text: 'Myths and Facts' },
   ]);
   return (
     <div>
@@ -53,11 +53,7 @@ const MythsAndFacts = () => {
           name='twitter:image'
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedjb58un07pl4jrnnojz'
         />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <BreadCrumbs
         link1='/resources'
