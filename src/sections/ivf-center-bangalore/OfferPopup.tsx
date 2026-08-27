@@ -4,10 +4,15 @@ import { CloseButton, Dialog, DialogPanel } from '@headlessui/react';
 import Image from 'next/image';
 import { type FormEvent, useEffect, useState } from 'react';
 import { IoClose } from 'react-icons/io5';
-import { scrollToForm } from 'sections/ivf-center-bangalore/constants';
+import {
+  OFFER_IMAGE,
+  OFFER_IMAGE_ALT,
+  OFFER_IMAGE_HEIGHT,
+  OFFER_IMAGE_SIZES,
+  OFFER_IMAGE_WIDTH,
+  scrollToForm,
+} from 'sections/ivf-center-bangalore/constants';
 
-const OFFER_IMAGE =
-  'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmt2v7e6p53rn06o350gplwp3';
 const OPEN_DELAY_MS = 10000;
 
 /* Centres not offering this promotion. */
@@ -90,12 +95,12 @@ const OfferPopup = ({ branches }: OfferPopupProps) => {
               <div className='relative w-full md:w-1/2 md:shrink-0'>
                 <Image
                   src={OFFER_IMAGE}
-                  alt='GarbhaGudi fertility screening offer'
+                  alt={OFFER_IMAGE_ALT}
                   className='h-auto w-full rounded-t-xl object-contain md:h-full md:rounded-l-xl md:rounded-tr-none md:object-cover'
-                  width={720}
-                  height={400}
+                  width={OFFER_IMAGE_WIDTH}
+                  height={OFFER_IMAGE_HEIGHT}
+                  sizes={OFFER_IMAGE_SIZES}
                   quality={85}
-                  priority
                 />
               </div>
 

@@ -153,7 +153,56 @@ function readFormValues(form: HTMLFormElement) {
   return { name, phone, email, consent };
 }
 
-const Form = () => {
+const STYLES = {
+  default: {
+    root: 'zcwf_lblLeft crmWebToEntityForm mx-auto h-auto w-full rounded-lg bg-transparent py-8',
+    fields: 'mx-auto flex flex-col space-y-5 px-3',
+    fieldWrap: 'mx-auto max-w-sm',
+    fieldRow: 'flex items-center justify-start',
+    fieldPill: 'w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left',
+    fieldInput:
+      'w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none',
+    fieldError: 'absolute ml-[1.2em] text-sm text-red-500',
+    consentWrap: 'mx-auto mt-4 max-w-md px-6',
+    consentLabel: 'mt-4 flex justify-center space-x-3',
+    consentBox: 'h-6 w-6 cursor-pointer accent-gg-500 checked:border-gg-500 checked:bg-gg-500',
+    consentText: 'text-justify text-sm text-gray-500',
+    legalLink: 'px-1 text-gg-400',
+    buttonWrap: 'mb-6 mt-6 flex items-center justify-center space-x-4',
+    button:
+      'flex items-center justify-center gap-2 rounded-md bg-gg-500 px-6 py-2 text-base font-bold text-white',
+  },
+
+  card: {
+    root: 'zcwf_lblLeft crmWebToEntityForm mx-auto h-auto w-full rounded-lg bg-transparent py-4',
+    fields: 'mx-auto flex flex-col space-y-3 px-3',
+    fieldWrap: 'w-full',
+    fieldRow:
+      'flex items-center justify-start overflow-hidden rounded-full border border-gray-300 bg-white transition focus-within:border-gg-500',
+    fieldPill:
+      'w-[7.5em] shrink-0 rounded-es-full rounded-ss-full bg-gray-200 px-4 py-2.5 text-left text-sm font-medium text-gray-700',
+    fieldInput:
+      'w-full min-w-0 rounded-ee-full rounded-se-full px-3 py-2.5 text-sm focus:outline-none active:outline-none',
+    fieldError: 'mt-1 pl-4 text-xs text-red-500',
+    consentWrap: 'mx-auto mt-3 max-w-md px-3',
+    consentLabel: 'flex justify-center space-x-2',
+    consentBox:
+      'mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-gg-500 checked:border-gg-500 checked:bg-gg-500',
+    consentText: 'text-left text-[11px] leading-relaxed text-gray-500',
+    legalLink: 'px-1 text-gg-400 underline',
+    buttonWrap: 'mt-4 px-3',
+    button:
+      'w-full rounded-full bg-gg-500 py-3 text-base font-bold text-white shadow-md transition hover:bg-gg-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gg-700',
+  },
+} as const;
+
+interface FormProps {
+  showEmail?: boolean;
+  variant?: 'default' | 'card';
+}
+
+const Form = ({ showEmail = true, variant = 'default' }: FormProps) => {
+  const cx = STYLES[variant];
   const router = useRouter();
   const path = usePathname();
   const suffix = useId().replace(/:/g, '');
@@ -165,9 +214,6 @@ const Form = () => {
   const [errors, setErrors] = useState<FieldErrors>({});
   const [hidden, setHidden] = useState<HiddenState>(EMPTY_HIDDEN);
 
-  /* Populate hidden marketing/attribution state from the URL/router/cookies.
-   * Re-run on every router-query identity change so SPA navigations refresh
-   * the values that will be POSTed. */
   useIsoLayoutEffect(() => {
     setHidden(
       computeHidden(router.isReady ? (router.query as Record<string, unknown>) : {}, pageVisitPath)
@@ -219,12 +265,8 @@ const Form = () => {
     form.submit();
   };
 
-  const fieldPill = 'w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left';
-  const fieldInput =
-    'w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none';
-
   return (
-    <div className='zcwf_lblLeft crmWebToEntityForm mx-auto h-auto w-full rounded-lg bg-transparent py-8'>
+    <div className={cx.root}>
       <form
         ref={formRef}
         action={zohoFormActionUrl}
@@ -238,7 +280,7 @@ const Form = () => {
       >
         {/* Hidden marketing/attribution fields — controlled so the values
          * React renders are the values the browser POSTs (no race with
-         * hydration). */}
+         * hydration)*/}
         <input
           type='hidden'
           name='zf_referrer_name'
@@ -288,10 +330,10 @@ const Form = () => {
           onChange={NOOP_ONCHANGE}
         />
 
-        <div className='mx-auto flex flex-col space-y-5 px-3'>
-          <div className='mx-auto max-w-sm'>
-            <label htmlFor={`SingleLine-${suffix}`} className='flex items-center justify-start'>
-              <span className={fieldPill}>Full Name</span>
+        <div className={cx.fields}>
+          <div className={cx.fieldWrap}>
+            <label htmlFor={`SingleLine-${suffix}`} className={cx.fieldRow}>
+              <span className={cx.fieldPill}>Full Name</span>
               <input
                 type='text'
                 id={`SingleLine-${suffix}`}
@@ -300,19 +342,17 @@ const Form = () => {
                 autoComplete='name'
                 maxLength={255}
                 defaultValue=''
-                className={fieldInput}
+                className={cx.fieldInput}
                 aria-invalid={errors.name ? 'true' : 'false'}
                 onInput={() => clearFieldError('name')}
               />
             </label>
-            {errors.name && (
-              <p className='absolute ml-[1.2em] text-sm text-red-500'>{errors.name}</p>
-            )}
+            {errors.name && <p className={cx.fieldError}>{errors.name}</p>}
           </div>
 
-          <div className='mx-auto max-w-sm'>
-            <label htmlFor={`PhoneNumber-${suffix}`} className='flex items-center justify-start'>
-              <span className={fieldPill}>Phone</span>
+          <div className={cx.fieldWrap}>
+            <label htmlFor={`PhoneNumber-${suffix}`} className={cx.fieldRow}>
+              <span className={cx.fieldPill}>Phone</span>
               <input
                 type='text'
                 inputMode='numeric'
@@ -324,7 +364,7 @@ const Form = () => {
                 autoComplete='tel'
                 maxLength={10}
                 defaultValue=''
-                className={fieldInput}
+                className={cx.fieldInput}
                 aria-invalid={errors.phone ? 'true' : 'false'}
                 aria-required='true'
                 onInput={(e) => {
@@ -337,52 +377,52 @@ const Form = () => {
                 }}
               />
             </label>
-            {errors.phone && (
-              <p className='absolute ml-[1.2em] text-sm text-red-500'>{errors.phone}</p>
-            )}
+            {errors.phone && <p className={cx.fieldError}>{errors.phone}</p>}
           </div>
 
-          <div className='mx-auto max-w-sm'>
-            <label htmlFor={`Email-${suffix}`} className='flex items-center justify-start'>
-              <span className={fieldPill}>Email ID</span>
-              <input
-                type='email'
-                id={`Email-${suffix}`}
-                name='Email'
-                placeholder='Enter email'
-                autoComplete='email'
-                maxLength={255}
-                defaultValue=''
-                className={fieldInput}
-                aria-invalid={errors.email ? 'true' : 'false'}
-                onInput={() => clearFieldError('email')}
-              />
-            </label>
-            {errors.email && (
-              <p className='absolute ml-[1.2em] text-sm text-red-500'>{errors.email}</p>
-            )}
-          </div>
+          {showEmail ? (
+            <div className={cx.fieldWrap}>
+              <label htmlFor={`Email-${suffix}`} className={cx.fieldRow}>
+                <span className={cx.fieldPill}>Email ID</span>
+                <input
+                  type='email'
+                  id={`Email-${suffix}`}
+                  name='Email'
+                  placeholder='Enter email'
+                  autoComplete='email'
+                  maxLength={255}
+                  defaultValue=''
+                  className={cx.fieldInput}
+                  aria-invalid={errors.email ? 'true' : 'false'}
+                  onInput={() => clearFieldError('email')}
+                />
+              </label>
+              {errors.email && <p className={cx.fieldError}>{errors.email}</p>}
+            </div>
+          ) : (
+            <input type='hidden' id={`Email-${suffix}`} name='Email' defaultValue='' />
+          )}
         </div>
 
-        <div className='mx-auto mt-4 max-w-md px-6'>
-          <label className='mt-4 flex justify-center space-x-3'>
+        <div className={cx.consentWrap}>
+          <label className={cx.consentLabel}>
             <input
               type='checkbox'
               id={`Consent-${suffix}`}
               name='Consent'
               value='Yes'
-              className='h-6 w-6 cursor-pointer accent-gg-500 checked:border-gg-500 checked:bg-gg-500'
+              className={cx.consentBox}
               aria-invalid={errors.consent ? 'true' : 'false'}
               onChange={() => clearFieldError('consent')}
             />
-            <span className='text-justify text-sm text-gray-500'>
+            <span className={cx.consentText}>
               By submitting this form I agree to be contacted by GarbhaGudi IVF Centre using the
               contact details through SMS, WhatsApp and Phone Calls. I also agree to the
-              <Link href='/legal/terms-and-conditions' className='px-1 text-gg-400'>
+              <Link href='/legal/terms-and-conditions' className={cx.legalLink}>
                 Terms and Conditions
               </Link>
               and
-              <Link href='/legal/privacy-policy' className='px-1 text-gg-400'>
+              <Link href='/legal/privacy-policy' className={cx.legalLink}>
                 Privacy Policy.
               </Link>
             </span>
@@ -392,11 +432,8 @@ const Form = () => {
           )}
         </div>
 
-        <div className='mb-6 mt-6 flex items-center justify-center space-x-4'>
-          <button
-            type='submit'
-            className='flex items-center justify-center gap-2 rounded-md bg-gg-500 px-6 py-2 text-base font-bold text-white'
-          >
+        <div className={cx.buttonWrap}>
+          <button type='submit' className={cx.button}>
             Get a call back
           </button>
         </div>

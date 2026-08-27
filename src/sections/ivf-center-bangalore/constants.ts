@@ -1,11 +1,3 @@
-/* Shared contact details for the campaign landing pages.
- *
- * NOTE: site-wide this number is also hardcoded in ~9 other files
- * (components/FloatWhatsapp, components/LPACta, sections/gg-care/cta,
- * pages/fertility-experts, sections/misc/ghar-ghar-garbhagudi, …).
- * Migrating those is a SEPARATE, larger follow-up — intentionally out of
- * scope here; this file is scoped to the campaign LPs only. */
-
 export const PHONE_DISPLAY = '+91 90712 34006';
 export const PHONE_DIGITS = '919071234006';
 export const PHONE_TEL = `tel:+${PHONE_DIGITS}`;
@@ -23,3 +15,13 @@ export const scrollToForm = (e?: { preventDefault: () => void }) => {
   e?.preventDefault();
   document.getElementById('form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
+
+export const OFFER_IMAGE =
+  'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmt2v7e6p53rn06o350gplwp3';
+export const OFFER_IMAGE_ALT =
+  'Free first fertility specialist consultation, semen analysis and TVUS scan at GarbhaGudi';
+
+export const OFFER_IMAGE_WIDTH = 720;
+export const OFFER_IMAGE_HEIGHT = 633;
+
+export const OFFER_IMAGE_SIZES = '(max-width: 480px) 100vw, 448px';
