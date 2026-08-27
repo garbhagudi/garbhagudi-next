@@ -42,7 +42,6 @@ const navigation = {
     { name: 'GarbhaGudi', href: '/about/overview' },
     { name: 'GGIRHR', href: 'https://ggirhr.com' },
     { name: 'GarbhaGnan', href: 'https://garbhagnan.org' },
-    { name: 'Pharmacy', href: '#' },
   ],
   contact: [
     { name: 'Paripoorna', href: '/features/paripoorna' },
