@@ -1,27 +1,26 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
+import { HiOutlineUserGroup, HiOutlineSpeakerphone, HiOutlineOfficeBuilding } from 'react-icons/hi';
 
 const metrics = [
   {
     id: 1,
-    stat: '15,000+',
-    emphasis: 'Happy Families',
+    value: '15,000+',
+    label: 'Happy Families',
+    icon: <HiOutlineUserGroup />,
   },
   {
     id: 2,
-    stat: '500+',
-    emphasis: 'Free Fertility Awareness Camps',
+    value: '500+',
+    label: 'Free Fertility Awareness Camps',
+    icon: <HiOutlineSpeakerphone />,
   },
   {
     id: 3,
-    stat: '10',
-    emphasis: 'Infertility Centres in Karnataka and Tamil Nadu',
-  },
-  {
-    id: 4,
-    stat: '',
-    emphasis: 'Excellent IVF Success Rate',
+    value: '10',
+    label: 'Infertility Centres in Karnataka and Tamil Nadu',
+    icon: <HiOutlineOfficeBuilding />,
   },
 ];
 
@@ -34,7 +33,7 @@ const Stat = () => {
             <Image
               quality={85}
               className='h-full w-full object-cover opacity-70 xl:absolute xl:inset-0'
-              src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6m708va08pkgt5xrll1'
+              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722501966/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0_1_i7oozx.webp'
               alt='Successful IVF Treatment In Banglore'
               height={1024}
               width={1024}
@@ -65,14 +64,14 @@ const Stat = () => {
           <div className='mt-12 flex flex-col gap-x-6 gap-y-8'>
             {metrics.map((item) => (
               <p key={item.id}>
-                {item?.stat && (
+                {item.value && (
                   <span className='block font-heading text-2xl font-bold text-gray-800 dark:text-gray-200'>
-                    {item.stat}
+                    {item.value}
                   </span>
                 )}
                 <span className='mt-1 block text-base text-gray-800 dark:text-gray-200'>
                   <span className='font-content font-medium text-gray-800 dark:text-gray-200'>
-                    {item.emphasis}
+                    {item.label}
                   </span>{' '}
                 </span>
               </p>
