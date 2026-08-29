@@ -4,7 +4,8 @@ import BreadCrumbs from 'components/breadcrumbs';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 
 interface Article {
   articles: {
@@ -22,10 +23,7 @@ interface Article {
 }
 
 const IndexPage = ({ articles }: Article) => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Facilities', url: 'https://www.garbhagudi.com/facilities' },
-  ]);
+  const schema = buildBreadcrumb('/facilities', [{ text: 'Facilities' }]);
 
   return (
     <div>
@@ -41,11 +39,7 @@ const IndexPage = ({ articles }: Article) => {
         />
 
         {/* Breadcrumb Schema */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
 

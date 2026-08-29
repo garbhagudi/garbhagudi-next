@@ -5,7 +5,8 @@ import Head from 'next/head';
 import { HiChevronRight } from 'react-icons/hi';
 import Image from 'next/image';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 
 export const getStaticProps = async () => {
   const { data } = await apolloClient.query({
@@ -33,10 +34,7 @@ export const getStaticProps = async () => {
 };
 
 const IndexPage = ({ medias }) => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Publications', url: 'https://www.garbhagudi.com/publications' },
-  ]);
+  const schema = buildBreadcrumb('/publications', [{ text: 'Publications' }]);
   return (
     <div>
       <Head>
@@ -78,11 +76,7 @@ const IndexPage = ({ medias }) => {
           name='twitter:image'
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedip58uj07pl77zu9att'
         />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <BreadCrumbs
         link1='/publications'

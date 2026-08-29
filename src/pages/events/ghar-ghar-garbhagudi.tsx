@@ -1,7 +1,8 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 const Hero = dynamic(() => import('sections/misc/ghar-ghar-garbhagudi/hero'), { ssr: true });
 const Gallery = dynamic(() => import('sections/misc/ghar-ghar-garbhagudi/gallery'), { ssr: false });
 const EventInfo = dynamic(() => import('sections/misc/ghar-ghar-garbhagudi/eventInfo'), {
@@ -19,10 +20,9 @@ const ContentTwo = dynamic(
 );
 
 const IndexPage = () => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Events', url: 'https://www.garbhagudi.com/events' },
-    { name: 'Ghar Ghar GarbhaGudi', url: 'https://www.garbhagudi.com/events/ghar-ghar-garbhagudi' },
+  const schema = buildBreadcrumb('/events/ghar-ghar-garbhagudi', [
+    { text: 'Events', link: '/events' },
+    { text: 'Ghar Ghar GarbhaGudi' },
   ]);
   return (
     <div>
@@ -65,11 +65,7 @@ const IndexPage = () => {
           name='twitter:image'
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87td57oa07pluqj7nfxw'
         />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <BreadCrumbs
         link1='/events'

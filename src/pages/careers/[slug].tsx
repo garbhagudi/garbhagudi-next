@@ -1,4 +1,6 @@
 import { RichText } from '@graphcms/rich-text-react-renderer';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import { useRouter } from 'next/router';
@@ -16,6 +18,7 @@ export const getStaticProps = async ({ params }) => {
     query: gql`
       query ($slug: String!) {
         career(where: { slug: $slug }) {
+          slug
           position
           jobDescription {
             raw
@@ -76,35 +79,11 @@ const Career = ({ career }) => {
 
   const title = `${career.position}`;
 
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "HOME",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Careers",
-              "item": "https://www.garbhagudi.com/careers/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "${career?.position}",
-              "item": "https://www.garbhagudi.com/careers/${career?.slug}"
-            }
-          ]
-        }`,
-    };
-  }
-
+  const pageUrl = `/careers/${career?.slug}`;
+  const schema = buildBreadcrumb(pageUrl, [
+    { text: 'Careers', link: '/careers' },
+    { text: career?.position },
+  ]);
   return (
     <div>
       <Head>
@@ -153,12 +132,8 @@ const Career = ({ career }) => {
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87su57o607pl1ryd58m2'
         />
 
-        {/* Ld+JSON Data */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-          key='breadcrumbs-jsonld'
-        />
+        {/* Structured data */}
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <BreadCrumbs
         text1='Careers'

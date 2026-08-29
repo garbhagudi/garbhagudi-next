@@ -7,7 +7,8 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 interface VideoItem {
   id: string;
@@ -42,10 +43,7 @@ const IndexPage = () => {
   }, [currentPageNumber, pageToken]);
   const description =
     'Doctors at GarbhaGudi IVF Centre provide information about male and female fertility concerns, as well as the therapies required for a healthy pregnancy.';
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Doctors Speak', url: 'https://www.garbhagudi.com/doctors-speak' },
-  ]);
+  const schema = buildBreadcrumb('/doctors-speak', [{ text: 'Doctors Speak' }]);
   return (
     <>
       {doctorsSpeakData ? (
@@ -73,11 +71,7 @@ const IndexPage = () => {
             <meta name='twitter:site' content='@garbhagudiivf' />
             <meta name='twitter:title' content='Doctors Speak | GarbhaGudi IVF' />
             <meta name='twitter:description' content={description} />
-            <script
-              type='application/ld+json'
-              dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-              id='breadcrumbs-jsonld'
-            />
+            <JsonLd id='page-jsonld' data={schema} />
           </Head>
           <BreadCrumbs
             link1='/doctors-speak'

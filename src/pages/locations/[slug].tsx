@@ -7,6 +7,17 @@ import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import dynamic from 'next/dynamic';
 import BreadCrumbs from 'components/breadcrumbs';
+import JsonLd from 'components/json-ld';
+import {
+  buildBranchClinic,
+  buildBreadcrumb,
+  buildFaqPage,
+  buildWebPage,
+  clinicId,
+  schemaGraph,
+  toFaqEntries,
+} from 'lib/schema';
+import { branchServices } from 'data/branchTreatments';
 
 const MapSection = dynamic(() => import('sections/location/mapSection'), { ssr: false });
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
@@ -24,43 +35,28 @@ const Branch = ({ branch, accordionSections }) => {
   if (router.isFallback) {
     return <Loading />;
   }
-  function addDocJsonLd() {
-    if (!branch?.docJsonLd) return { __html: '' };
-    const jsonLD =
-      typeof branch.docJsonLd === 'string' ? JSON.parse(branch.docJsonLd) : branch.docJsonLd;
-    return {
-      __html: JSON.stringify(jsonLD, null, 2),
-    };
-  }
+  const pageUrl = `/locations/${branch?.slug}`;
+  const clinic = buildBranchClinic({
+    slug: branch?.slug,
+    title: branch?.title,
+    docJsonLd: branch?.docJsonLd,
+    mapLink: branch?.mapLink,
+    imageUrl: branch?.branchPicture?.url,
+    availableService: branchServices,
+  });
 
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "HOME",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Branches",
-              "item": "https://www.garbhagudi.com/locations/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "${branch?.title}",
-              "item": "https://www.garbhagudi.com/locations/${branch?.slug}"
-            }
-          ]
-        }`,
-    };
-  }
+  const schema = schemaGraph(
+    buildWebPage({
+      url: pageUrl,
+      name: branch?.metaTitle || branch?.title,
+      description: branch?.metaDescription,
+      aboutId: clinic ? clinicId(pageUrl) : undefined,
+    }),
+    clinic,
+    // Labels must match the visible <BreadCrumbs> trail below (guide section 6).
+    buildBreadcrumb(pageUrl, [{ text: 'Locations', link: '/locations' }, { text: branch?.title }]),
+    buildFaqPage(pageUrl, toFaqEntries(branch?.faq))
+  );
 
   return (
     <div>
@@ -76,17 +72,7 @@ const Branch = ({ branch, accordionSections }) => {
         <meta name='title' content={branch?.metaTitle} />
         <meta name='description' content={branch?.metaDescription} />
 
-        <script
-          type='application/ld+json'
-          data-next-head=''
-          dangerouslySetInnerHTML={addDocJsonLd()}
-          key='org-jsonld'
-        />
-        <script
-          id='breadcrumbs-jsonld'
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-        />
+        <JsonLd id='branch-jsonld' data={schema} />
         {/* Open Graph / Facebook */}
 
         <meta property='og:title' content={branch?.metaTitle} />

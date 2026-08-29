@@ -1,13 +1,13 @@
 import Faq from 'sections/Faq/faq';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 
 const faq = () => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
-    { name: 'FAQ', url: 'https://www.garbhagudi.com/resources/faq' },
+  const schema = buildBreadcrumb('/resources/faq', [
+    { text: 'Resources', link: '/resources' },
+    { text: 'FAQ' },
   ]);
 
   return (
@@ -24,11 +24,7 @@ const faq = () => {
         />
 
         {/* Breadcrumb Schema */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
 

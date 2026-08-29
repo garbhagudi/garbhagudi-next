@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb, buildDirectoryPage, schemaGraph } from 'lib/schema';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import apolloClient from 'lib/apollo-graphcms';
@@ -6,34 +8,15 @@ import { gql } from '@apollo/client';
 import Image from 'next/image';
 
 const IndexPage = ({ diagnoses }) => {
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "Home",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Resources",
-              "item": "https://www.garbhagudi.com/resources"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "Diagnosis",
-              "item": "https://www.garbhagudi.com/resources/diagnosis"
-            }
-          ]
-        }`,
-    };
-  }
+  const pageUrl = '/resources/diagnosis';
+  const listed = (diagnoses || [])
+    .filter((item) => item?.title && item?.slug)
+    .map((item) => ({ name: item.title, url: `/resources/diagnosis/${item.slug}` }));
+
+  const schema = schemaGraph(
+    ...buildDirectoryPage(pageUrl, 'Diagnosis', listed),
+    buildBreadcrumb(pageUrl, [{ text: 'Resources', link: '/resources' }, { text: 'Diagnosis' }])
+  );
   return (
     <div>
       <div>
@@ -46,6 +29,9 @@ const IndexPage = ({ diagnoses }) => {
             name='description'
             content='Treatment options, procedure details and advanced treatment options for male and female infertility treatment available at GarbhaGudi'
           />
+
+          {/* Structured data */}
+          <JsonLd id='page-jsonld' data={schema} />
 
           {/* Open Graph / Facebook */}
 
@@ -74,11 +60,6 @@ const IndexPage = ({ diagnoses }) => {
           <meta
             name='twitter:image'
             content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedk058ur07plss16dp50'
-          />
-          <script
-            id='breadcrumbs-jsonld'
-            type='application/ld+json'
-            dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
           />
         </Head>
         <BreadCrumbs

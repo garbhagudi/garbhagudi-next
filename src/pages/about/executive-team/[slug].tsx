@@ -1,4 +1,6 @@
 import apolloClient from 'lib/apollo-graphcms';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Head from 'next/head';
@@ -84,28 +86,11 @@ const ExecutiveTeam = ({ director }) => {
 
   const title = `${director.name} | GarbhaGudi IVF Centre`;
 
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "About",
-              "item": "https://www.garbhagudi.com/about/overview"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "${director?.name}",
-              "item": "https://www.garbhagudi.com/about/executive-team/${director?.slug}"
-            }
-          ]
-        }`,
-    };
-  }
+  const pageUrl = `/about/executive-team/${director?.slug}`;
+  const schema = buildBreadcrumb(pageUrl, [
+    { text: 'About', link: '/about/overview' },
+    { text: director?.name },
+  ]);
   return (
     <div>
       <Head>
@@ -141,12 +126,8 @@ const ExecutiveTeam = ({ director }) => {
           name='twitter:image'
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87rf57ny07plvgs5r62x'
         />
-        {/* Ld+JSON Data */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-          key='breadcrumbs-jsonld'
-        />
+        {/* Structured data */}
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <BreadCrumbs
         text1='About'

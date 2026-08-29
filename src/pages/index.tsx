@@ -5,6 +5,8 @@ import apolloClient from 'lib/apollo-graphcms';
 import { filterExcludedVideos } from 'lib/excluded-videos';
 import { gql } from '@apollo/client';
 import BannerComponent from 'sections/home/bannerComponent';
+import JsonLd from 'components/json-ld';
+import { buildOrganization, buildWebSite, schemaGraph } from 'lib/schema';
 const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
 const DoctorList = dynamic(() => import('sections/home/doctorList'), { ssr: false });
 const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false });
@@ -12,83 +14,28 @@ const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false }
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
 const Home = ({ data, testimonials }) => {
-  function addBreadcrumbJsonLd() {
-    return {
-      __html: `{
-        "@context": "https://schema.org/",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://garbhagudi.com"
-          }
-        ]
-      }`,
-    };
-  }
+  // The two master entities for the whole site. Every other template references
+  // these by @id rather than re-declaring them (guide section 4).
+  const homeSchema = schemaGraph(
+    buildWebSite(),
+    buildOrganization({
+      logoUrl:
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87q557nq07pls65nzuhg',
+      description:
+        'GarbhaGudi is one of the best IVF clinics in Bangalore, offering advanced fertility treatment and expertise to address the increasing problem of infertility.',
+      telephone: '+919108910832',
+      email: 'dreams@garbhagudi.com',
+      sameAs: [
+        'https://www.facebook.com/garbhagudiIVF/',
+        'https://www.instagram.com/garbhagudiivfcentre/',
+        'https://www.youtube.com/c/GarbhaGudiIVFCentre',
+        'https://www.linkedin.com/company/garbagudi',
+        'https://twitter.com/garbhagudiivf',
+      ],
+      availableLanguage: ['English', 'Kannada', 'Hindi', 'Malayalam', 'Telugu', 'Tamil'],
+    })
+  );
 
-  function addOrgJsonLd() {
-    return {
-      __html: `{
-        "@context": "https://schema.org",
-        "@type": "MedicalOrganization",
-        "name": "GarbhaGudi IVF Centre Pvt Ltd",
-        "url": "https://garbhagudi.com",
-        "logo": "https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87q557nq07pls65nzuhg",
-        "alternateName": "GarbhaGudi",
-        "sameAs": [
-          "https://twitter.com/garbhagudiivf",
-          "https://www.youtube.com/c/GarbhaGudiIVFCentre",
-          "https://www.linkedin.com/company/garbagudi",
-          "https://www.facebook.com/garbhagudiIVF/",
-          "https://api.whatsapp.com/send/?phone=918884183338&text=Hi."
-        ],
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+91 9108 9108 32",
-            "contactType": "customer service",
-            "email": "dreams@garbhagudi.com",
-            "areaServed": "IN",
-            "availableLanguage": [
-              "en",
-              "hi",
-              "kn",
-              "ml",
-              "te",
-              "ta"
-            ]
-          }
-        ]
-      }`,
-    };
-  }
-
-  function addWebJsonLd() {
-    return {
-      __html: `{
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        "name": "In-vitro Fertilization (IVF)",
-        "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
-        "description": "What is IVF and how does it work. IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
-        "brand": {
-          "@type": "Brand",
-          "name": "GarbhaGudi IVF Centre"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "604"
-
-        }
-      }`,
-    };
-  }
   return (
     <div>
       <Head>
@@ -107,21 +54,7 @@ const Home = ({ data, testimonials }) => {
         <link rel='canonical' href='https://www.garbhagudi.com/' />
         {/* Ld+JSON Data */}
 
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addOrgJsonLd()}
-          key='org-jsonld'
-        />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addWebJsonLd()}
-          key='web-jsonld'
-        />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbJsonLd()}
-          key='breadcrumb-jsonld'
-        />
+        <JsonLd id='home-jsonld' data={homeSchema} />
         {/* Open Graph / Facebook */}
 
         <meta

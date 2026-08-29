@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import JsonLd from 'components/json-ld';
+import { buildFaqPage, buildMedicalWebPage, schemaGraph, toFaqEntries } from 'lib/schema';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
@@ -121,57 +123,22 @@ const Blog = ({ article }: BlogProps) => {
     return <Loading />;
   }
   const imageUrl = article?.image?.url || DEFAULT_IMAGE;
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "HOME",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Facilities",
-              "item": "https://www.garbhagudi.com/fertility-center/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "${article?.title}",
-              "item": "https://www.garbhagudi.com/facilities/${article?.slug}"
-            }
-          ]
-        }`,
-    };
-  }
-  function faqJsonLd() {
-    return {
-      __html: `{
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [${article?.faq
-          ?.map(
-            (item: { question: string; answer: { text: string } }) => `{
-              "@type": "Question",
-              "name": "${(item.question || '').replace(/"/g, '\\"')}",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "${(item.answer?.text || '').replace(/"/g, '\\"')}"
-              }
-            }`
-          )
-          .join(',')}]
-          
-      }
-      `,
-    };
-  }
   const title = `${article?.title} | GarbhaGudi`;
+
+  const pageUrl = `/facilities/${article?.slug}`;
+  const schema = schemaGraph(
+    buildMedicalWebPage({
+      // This page renders no visible breadcrumb, so it emits no
+      // BreadcrumbList and claims no breadcrumb (guide section 6).
+      hasBreadcrumb: false,
+      url: pageUrl,
+      name: article?.metaTitle || article?.title,
+      description: article?.metaDescription || article?.content?.text?.slice(0, 160),
+      primaryImageUrl: article?.image?.url,
+    }),
+
+    buildFaqPage(pageUrl, toFaqEntries(article?.faq))
+  );
 
   return (
     <div>
@@ -202,18 +169,7 @@ const Blog = ({ article }: BlogProps) => {
         <meta name='twitter:image' content={imageUrl} />
 
         {/* Ld+JSON Data */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-          key='breadcrumbs-jsonld'
-        />
-        {article?.faq?.length > 0 && (
-          <script
-            type='application/ld+json'
-            dangerouslySetInnerHTML={faqJsonLd()}
-            id='faq-jsonld'
-          />
-        )}
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <div className='relative overflow-hidden bg-white py-16 dark:bg-gray-800'>
         <div className='hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full'>

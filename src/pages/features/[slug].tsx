@@ -3,6 +3,16 @@ import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
+import JsonLd from 'components/json-ld';
+import {
+  buildBreadcrumb,
+  buildFaqPage,
+  buildService,
+  buildWebPage,
+  schemaGraph,
+  serviceId,
+  toFaqEntries,
+} from 'lib/schema';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import FAQs from 'components/FAQs';
@@ -76,34 +86,27 @@ const Vas = ({ valueAddedService }) => {
   const title = `${valueAddedService?.title} | GarbhaGudi IVF Centre}`;
   const desc = `${valueAddedService?.content?.text?.slice(0, 169) || ''}`;
   const image = `${valueAddedService?.image?.url}`;
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "HOME",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Features",
-              "item": "https://www.garbhagudi.com/features"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "${valueAddedService?.title}",
-              "item": "https://www.garbhagudi.com/features/${valueAddedService?.slug}"
-            }
-          ]
-        }`,
-    };
-  }
+  const pageUrl = `/features/${valueAddedService?.slug}`;
+  const schema = schemaGraph(
+    buildWebPage({
+      url: pageUrl,
+      name: valueAddedService?.title,
+      description: valueAddedService?.metaDescription,
+      mainEntityId: serviceId(pageUrl),
+      primaryImageUrl: valueAddedService?.image?.url,
+    }),
+    buildService({
+      url: pageUrl,
+      name: valueAddedService?.title,
+      description: valueAddedService?.content?.text?.slice(0, 300),
+    }),
+    buildBreadcrumb(pageUrl, [
+      { text: 'Features', link: '/features' },
+      { text: valueAddedService?.title },
+    ]),
+    buildFaqPage(pageUrl, toFaqEntries(valueAddedService?.faq))
+  );
+
   return (
     <main className='bg-white py-16 dark:bg-gray-800'>
       <Head>
@@ -116,11 +119,7 @@ const Vas = ({ valueAddedService }) => {
         <meta name='twitter:card' content='summary_large_image' />
 
         {/* Ld+JSON Data */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-          key='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <BreadCrumbs
         link1='/features'

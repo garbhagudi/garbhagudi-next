@@ -1,4 +1,15 @@
 import { useRouter } from 'next/router';
+import JsonLd from 'components/json-ld';
+import {
+  articleId,
+  buildBlogPosting,
+  buildBreadcrumb,
+  buildFaqPage,
+  buildVideo,
+  buildWebPage,
+  schemaGraph,
+  toFaqEntries,
+} from 'lib/schema';
 import { gql } from '@apollo/client';
 import Image from 'next/image';
 import Head from 'next/head';
@@ -6,7 +17,7 @@ import apolloClient from 'lib/apollo-graphcms';
 import { throttledFetch } from 'lib/throttle';
 import dynamic from 'next/dynamic';
 import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import baseRichTextRenderers from 'components/richTextRenderers';
 const Error = dynamic(() => import('next/error'));
@@ -98,6 +109,9 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       blog: data.blog,
+      // Extracted at build time rather than in a useEffect so the VideoObject
+      // is present in the initial HTML (guide section 1).
+      youtubeURL: getYouTubeFromRichText(data.blog?.content?.raw) || null,
     },
     revalidate: 180,
   };
@@ -148,19 +162,12 @@ export function getYouTubeFromRichText(richText) {
   return extract(richText);
 }
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, youtubeURL }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [youtubeURL, setYoutubeURL] = useState<string | null>('');
   const title = `${blog?.metaTitle || blog?.title}`;
   const description = `${blog?.metaDescription || blog?.content?.text.slice(0, 160)}`;
   const keywords = `${blog?.metaKeywords || blog?.title}`;
   const router = useRouter();
-  useEffect(() => {
-    if (blog) {
-      const url = getYouTubeFromRichText(blog?.content?.raw);
-      setYoutubeURL(url);
-    }
-  }, [blog]);
 
   if (router.isFallback) {
     return <Loading />;
@@ -173,66 +180,50 @@ const Blog = ({ blog }) => {
   function close() {
     setIsOpen(false);
   }
-  function addDocJsonLd() {
-    const docJsonLd = {
-      '@context': 'https://schema.org',
-      '@type': 'BlogPosting',
-      mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': `https://www.garbhagudi.com/blogs/${blog?.slug}`,
-      },
+  const pageUrl = `/blogs/${blog?.slug}`;
+  // The author field is a union of Author and Doctor. A Doctor has a canonical
+  // profile page, so reference that Person entity by @id; an Author has no
+  // profile page, so the byline is emitted inline (guide section 12).
+  const authorDoctorSlug = blog?.author?.name ? blog?.author?.slug : undefined;
+  const authorName = blog?.author?.authorName || blog?.author?.name;
+  const toIso = (value) => {
+    if (!value) return undefined;
+    const date = new Date(value);
+    return Number.isNaN(date.getTime()) ? undefined : date.toISOString();
+  };
+
+  const schema = schemaGraph(
+    buildWebPage({
+      url: pageUrl,
+      name: title,
+      description,
+      mainEntityId: articleId(pageUrl),
+    }),
+    buildBlogPosting({
+      url: pageUrl,
       headline: blog?.title,
-      image: blog?.image?.url,
-      author: {
-        '@type': blog?.author?.authorName || blog?.author?.name ? 'Person' : 'Organization',
-        name: blog?.author?.authorName || blog?.author?.name || 'GarbhaGudi IVF Centre',
-        url: blog?.author?.name
-          ? `https://www.garbhagudi.com/fertility-experts/${blog?.author?.slug}`
-          : 'https://www.garbhagudi.com',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'GarbhaGudi IVF Centre',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms76155yh1on07pnqpdnqyzk',
-        },
-      },
-      datePublished: new Date(blog?.publishedOn).toISOString(),
-      dateModified: new Date(blog?.updatedAt).toISOString(),
-    };
-    return {
-      __html: JSON.stringify(docJsonLd, null, 2),
-    };
-  }
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "Home",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Blogs",
-              "item": "https://www.garbhagudi.com/blogs/page/1"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "${blog?.title}",
-              "item": "https://www.garbhagudi.com/blogs/${blog?.slug}"
-            }
-          ]
-        }`,
-    };
-  }
+      description,
+      images: [blog?.image?.url],
+      datePublished: toIso(blog?.publishedOn),
+      dateModified: toIso(blog?.updatedAt),
+      authorDoctorSlug,
+      authorName,
+    }),
+    buildBreadcrumb(pageUrl, [{ text: 'Blogs', link: '/blogs/page/1' }, { text: blog?.title }]),
+    youtubeURL
+      ? buildVideo({
+          pageUrl,
+          id: 'main',
+          name: blog?.title,
+          description,
+          thumbnailUrl: blog?.image?.url,
+          uploadDate: toIso(blog?.publishedOn),
+          embedUrl: youtubeURL,
+        })
+      : undefined,
+    buildFaqPage(pageUrl, toFaqEntries(blog?.faq))
+  );
+
   return (
     <>
       <div>
@@ -266,33 +257,7 @@ const Blog = ({ blog }) => {
           <meta name='keywords' content={keywords} />
 
           {/* Ld+JSON Data */}
-          <script
-            id='breadcrumbs-jsonld'
-            type='application/ld+json'
-            dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-          />
-          <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
-          {/* Video Schema if video found */}
-          {youtubeURL && (
-            <script
-              type='application/ld+json'
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                  '@context': 'https://schema.org',
-                  '@type': 'VideoObject',
-                  name: blog?.title,
-                  description: description,
-                  thumbnailUrl: blog?.image?.url,
-                  uploadDate: new Date(blog?.publishedOn).toISOString(),
-                  embedUrl: youtubeURL,
-                  potentialAction: {
-                    '@type': 'WatchAction',
-                    target: youtubeURL,
-                  },
-                }),
-              }}
-            />
-          )}
+          <JsonLd id='blog-jsonld' data={schema} />
 
           {/* Open Graph / Facebook */}
           <meta property='og:title' content={blog?.ogTitle || title} />
@@ -301,7 +266,7 @@ const Blog = ({ blog }) => {
           <meta property='og:description' content={blog?.ogDescription || description} />
           <meta property='og:type' content='article' />
           <meta property='og:article:published_time' content={blog?.publishedOn} />
-          <meta property='og:article:author' content={blog?.doctor?.name} />
+          {authorName && <meta property='og:article:author' content={authorName} />}
           <meta property='og:image' content={blog?.image?.url} />
           {/* Twitter*/}
           <meta name='twitter:card' content='summary_large_image' />

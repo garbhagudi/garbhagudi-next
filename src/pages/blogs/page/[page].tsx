@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 import Image from 'next/image';
 import { gql } from '@apollo/client';
 import apolloClient from 'lib/apollo-graphcms';
@@ -60,37 +62,14 @@ function BlogPage({
 }: BlogProps) {
   const router = useRouter();
   const title = `Blogs | Page ${currentPageNumber} | GarbhaGudi`;
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "Home",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Blogs",
-              "item": "https://www.garbhagudi.com/blogs/page/1"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "Page ${currentPageNumber}",
-              "item": "https://www.garbhagudi.com/blogs/page/${currentPageNumber}"
-            }
-          ]
-        }`,
-    };
-  }
   if (router.isFallback) {
     return <Loading />;
   }
+  const pageUrl = `/blogs/page/${currentPageNumber}`;
+  const schema = buildBreadcrumb(pageUrl, [
+    { text: 'Blogs', link: '/blogs/page/1' },
+    { text: `Page ${currentPageNumber}` },
+  ]);
   return (
     <Fragment>
       <div>
@@ -109,6 +88,9 @@ function BlogPage({
             property='og:description'
             content='Stay up to date with the advancements in the field of Infertility treatment, get pregnancy tips and more with our blogs written by our doctors'
           />
+
+          {/* Structured data */}
+          <JsonLd id='page-jsonld' data={schema} />
 
           {/* Open Graph / Facebook */}
 
@@ -137,12 +119,6 @@ function BlogPage({
           <meta
             name='twitter:image'
             content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87s457o207plsrdmjpc6'
-          />
-
-          <script
-            id='breadcrumbs-jsonld'
-            type='application/ld+json'
-            dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
           />
         </Head>
         <BreadCrumbs

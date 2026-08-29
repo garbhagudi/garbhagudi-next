@@ -1,6 +1,15 @@
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
+import JsonLd from 'components/json-ld';
+import {
+  buildBreadcrumb,
+  buildFaqPage,
+  buildPerson,
+  buildProfilePage,
+  schemaGraph,
+  toFaqEntries,
+} from 'lib/schema';
 import Link from 'next/link';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
@@ -56,7 +65,6 @@ export const getStaticProps = async ({ params }) => {
             raw
             text
           }
-          docJsonLd
           blogs {
             id
             title
@@ -122,55 +130,77 @@ export async function getStaticPaths() {
     fallback: true,
   };
 }
-const doctorRegistration = (slug: string) => {
-  if (slug === 'dr-radha-puchalapalli') {
-    return '(TNMC)';
-  } else if (slug === 'dr-jala') {
-    return '(KAUPB)';
-  }
-  return '(KMC)';
+/** Councils keyed by the abbreviation shown next to the registration number. */
+const REGISTRATION_COUNCILS = {
+  TNMC: 'Tamil Nadu Medical Council',
+  KAUPB: 'Karnataka Ayurvedic and Unani Practitioners Board',
+  KMC: 'Karnataka Medical Council',
+};
+
+/**
+ * Which council a doctor is registered with. Belongs on the Hygraph Doctor
+ * model; until then the exceptions are listed here.
+ */
+const KNOWN_COUNCILS: Record<string, keyof typeof REGISTRATION_COUNCILS> = {
+  'dr-radha-puchalapalli': 'TNMC',
+  'dr-jala': 'KAUPB',
+};
+
+const registrationCouncil = (slug: string) => KNOWN_COUNCILS[slug] ?? 'KMC';
+
+/** The abbreviation shown beside the number on the page, e.g. "(KMC)". */
+const doctorRegistration = (slug: string) => `(${registrationCouncil(slug)})`;
+
+/** The same council spelled out, for the schema identifier. */
+const registrationAuthority = (slug: string) =>
+  `${REGISTRATION_COUNCILS[registrationCouncil(slug)]} registration number`;
+
+/**
+ * Splits a CMS free-text list ("English, Kannada") into discrete values.
+ *
+ * `&` only separates items in the languages field ("Tamil & Malayalam"). In
+ * qualifications it belongs to the degree itself — splitting
+ * "M.Ch Reproductive Medicine & Surgery" would invent a credential the doctor
+ * does not hold, so it stays joined there.
+ */
+const splitList = (value?: string, splitAmpersand = false): string[] | undefined => {
+  if (!value || typeof value !== 'string') return undefined;
+  const parts = value
+    .split(splitAmpersand ? /[,/|&]|\band\b/i : /[,/|]/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+  return parts.length ? parts : undefined;
 };
 
 const Doctor = ({ doctor, accordionSections }) => {
   const router = useRouter();
   const defaultMetaTile = `${doctor?.name} | ${doctor?.designation} | ${doctor?.location[0]?.title} | GarbhaGudi `;
-  function addDocJsonLd() {
-    if (!doctor?.docJsonLd) return { __html: '' };
-    const jsonLD =
-      typeof doctor.docJsonLd === 'string' ? JSON.parse(doctor.docJsonLd) : doctor.docJsonLd;
-    return {
-      __html: JSON.stringify(jsonLD, null, 2),
-    };
-  }
+  // ProfilePage + Person, built from the fields the profile actually renders
+  // (guide section 7). The CMS docJsonLd field is unset for every doctor, so it
+  // was emitting an empty script block and is no longer read here.
+  const pageUrl = `/fertility-experts/${doctor?.slug}`;
+  const doctorSchema = {
+    url: pageUrl,
+    name: doctor?.name,
+    jobTitle: doctor?.designation,
+    description: doctor?.bio?.text?.slice(0, 300),
+    imageUrl: doctor?.image?.url || doctor?.imageUrl,
+    branchSlug: doctor?.location?.[0]?.slug,
+    languages: splitList(doctor?.languages, true),
+    qualifications: splitList(doctor?.qualification),
+    registrationNumber: doctor?.medicalRegNo,
+    registrationAuthority: doctor?.medicalRegNo ? registrationAuthority(doctor?.slug) : undefined,
+  };
 
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "Home",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Our Fertility Experts",
-              "item": "https://www.garbhagudi.com/treatments/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "${doctor?.name}",
-              "item": "https://www.garbhagudi.com/fertility-experts/${doctor?.slug}"
-            }
-          ]
-        }`,
-    };
-  }
+  const schema = schemaGraph(
+    buildProfilePage(doctorSchema),
+    buildPerson(doctorSchema),
+    buildBreadcrumb(pageUrl, [
+      { text: 'Our Fertility Experts', link: '/fertility-experts' },
+      { text: doctor?.name },
+    ]),
+    buildFaqPage(pageUrl, toFaqEntries(doctor?.faq))
+  );
 
   if (router.isFallback) {
     return (
@@ -192,16 +222,7 @@ const Doctor = ({ doctor, accordionSections }) => {
 
         {/* Ld+JSON Data */}
 
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addDocJsonLd()}
-          key='org-jsonld'
-        />
-        <script
-          id='breadcrumbs-jsonld'
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-        />
+        <JsonLd id='doctor-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
 

@@ -3,6 +3,14 @@ import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
+import JsonLd from 'components/json-ld';
+import {
+  buildBreadcrumb,
+  buildCondition,
+  buildMedicalWebPage,
+  conditionId,
+  schemaGraph,
+} from 'lib/schema';
 import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import Image from 'next/image';
@@ -17,6 +25,7 @@ export const getStaticProps = async ({ params }) => {
       query ($slug: String!) {
         cause(where: { slug: $slug }) {
           id
+          slug
           title
           image {
             url
@@ -70,78 +79,26 @@ const Blog = ({ cause }) => {
     return <Loading />;
   }
 
-  function addReviewJsonLd() {
-    if (!cause?.title || !cause?.image?.url) {
-      return { __html: '' };
-    }
-
-    const title = cause.title.replace(/"/g, '\\"');
-    const image = cause.image.url;
-    const description = cause?.content?.text?.slice(0, 160)?.replace(/"/g, '\\"') || '';
-
-    return {
-      __html: `{
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "${title}",
-      "image": "${image}",
-      "description": "${description}",
-      "brand": {
-        "@type": "Brand",
-        "name": "GarbhaGudi IVF Centre"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "604"
-      }
-    }`,
-    };
-  }
-
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "Resources",
-              "item": "https://www.garbhagudi.com/resources"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Causes",
-              "item": "https://www.garbhagudi.com/resources/causes"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "${cause?.title}",
-              "item": "https://www.garbhagudi.com/resources/causes/${cause?.slug}"
-            }
-          ]
-        }`,
-    };
-  }
-  function addDocJsonLd() {
-    return {
-      __html: `{
-  "name": "${cause?.title}",
-  "@type": "Product",
-  "@context": "https://schema.org/",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingCount": "604",
-    "ratingValue": "4.9",
-    "reviewCount": "1200"
-  }
-}`,
-    };
-  }
+  const pageUrl = `/resources/causes/${cause?.slug}`;
+  const schema = schemaGraph(
+    buildMedicalWebPage({
+      url: pageUrl,
+      name: cause?.title,
+      description: cause?.content?.text?.slice(0, 160),
+      mainEntityId: conditionId(pageUrl),
+      primaryImageUrl: cause?.image?.url,
+    }),
+    buildCondition({
+      url: pageUrl,
+      name: cause?.title,
+      description: cause?.content?.text?.slice(0, 300),
+    }),
+    buildBreadcrumb(pageUrl, [
+      { text: 'Resources', link: '/resources' },
+      { text: 'Causes', link: '/resources/causes' },
+      { text: cause?.title },
+    ])
+  );
 
   const title = `${cause?.title} | GarbhaGudi`;
   return (
@@ -173,17 +130,7 @@ const Blog = ({ cause }) => {
         <meta name='twitter:image' content={cause?.image?.url} />
 
         {/* Ld+JSON Data */}
-        <script
-          id='breadcrumbs-jsonld'
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-        />
-        <script
-          id='review-jsonld'
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addReviewJsonLd()}
-        />
-        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <BreadCrumbs
         link1='/resources/causes'

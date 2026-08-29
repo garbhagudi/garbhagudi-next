@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb, buildDirectoryPage, schemaGraph } from 'lib/schema';
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
@@ -34,28 +36,22 @@ const IndexPage = ({ branches }: Branches) => {
   if (router.isFallback) {
     return <Loading />;
   }
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "Home",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Our Fertility Experts",
-              "item": "https://www.garbhagudi.com/fertility-experts"
-            }
-          ]
-        }`,
-    };
-  }
+  const pageUrl = '/fertility-experts';
+  // Doctors are nested under branches in the CMS; flatten and de-duplicate so
+  // each doctor is listed once (guide section 16).
+  const listedDoctors = Array.from(
+    new Map(
+      (branches || [])
+        .flatMap((branch) => branch?.doctors || [])
+        .filter((doctor) => doctor?.name && doctor?.slug)
+        .map((doctor) => [doctor.slug, doctor])
+    ).values()
+  ).map((doctor) => ({ name: doctor.name, url: `/fertility-experts/${doctor.slug}` }));
+
+  const schema = schemaGraph(
+    ...buildDirectoryPage(pageUrl, 'Our Fertility Experts', listedDoctors),
+    buildBreadcrumb(pageUrl, [{ text: 'Our Fertility Experts' }])
+  );
   return (
     <div>
       <Head>
@@ -69,6 +65,9 @@ const IndexPage = ({ branches }: Branches) => {
           name='description'
           content='GarbhaGudi Hospital has the best team of highly experienced IVF doctors in Bangalore. Our Ivf specialists provide a High Success Rate. Book an appointment with the best IVF doctors in Bangalore today!'
         />
+
+        {/* Structured data */}
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
 
@@ -97,12 +96,6 @@ const IndexPage = ({ branches }: Branches) => {
         <meta
           name='twitter:image'
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
-        />
-
-        <script
-          id='breadcrumbs-jsonld'
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
         />
       </Head>
       <BreadCrumbs

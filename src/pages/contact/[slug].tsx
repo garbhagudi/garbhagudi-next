@@ -3,6 +3,16 @@ import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
+import JsonLd from 'components/json-ld';
+import {
+  buildBreadcrumb,
+  buildFaqPage,
+  buildService,
+  buildWebPage,
+  schemaGraph,
+  serviceId,
+  toFaqEntries,
+} from 'lib/schema';
 import Image from 'next/image';
 import FAQs from 'components/FAQs';
 import baseRichTextRenderers from 'components/richTextRenderers';
@@ -67,34 +77,27 @@ export const getStaticPaths = async () => {
 };
 
 const Vas = ({ valueAddedService }) => {
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "HOME",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Contact Us",
-              "item": "https://www.garbhagudi.com/contact/enquiry"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "${valueAddedService?.title}",
-              "item": "https://www.garbhagudi.com/contact/${valueAddedService?.slug}"
-            }
-          ]
-        }`,
-    };
-  }
+  const pageUrl = `/contact/${valueAddedService?.slug}`;
+  const schema = schemaGraph(
+    buildWebPage({
+      url: pageUrl,
+      name: valueAddedService?.title,
+      description: valueAddedService?.metaDescription,
+      mainEntityId: serviceId(pageUrl),
+      primaryImageUrl: valueAddedService?.image?.url,
+    }),
+    buildService({
+      url: pageUrl,
+      name: valueAddedService?.title,
+      description: valueAddedService?.content?.text?.slice(0, 300),
+    }),
+    buildBreadcrumb(pageUrl, [
+      { text: 'Contact Us', link: '/contact/enquiry' },
+      { text: valueAddedService?.title },
+    ]),
+    buildFaqPage(pageUrl, toFaqEntries(valueAddedService?.faq))
+  );
+
   return (
     <div>
       <Head>
@@ -136,11 +139,7 @@ const Vas = ({ valueAddedService }) => {
         <meta name='twitter:image' content={valueAddedService?.image?.url} />
 
         {/* Ld+JSON Data */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-          key='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <BreadCrumbs
         link1='/gg-care'

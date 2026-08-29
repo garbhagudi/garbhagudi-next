@@ -2,7 +2,8 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Hero from 'sections/gg-care/hero';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 const Contact = dynamic(() => import('sections/gg-care/content'), { ssr: false });
 const Stats = dynamic(() => import('sections/gg-care/stats'), { ssr: false });
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
@@ -11,10 +12,7 @@ const FindBranch = dynamic(() => import('sections/gg-care/find-branch'), { ssr: 
 const Share = dynamic(() => import('components/share'), { ssr: false });
 
 const IndexPage = () => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'GG Care', url: 'https://www.garbhagudi.com/gg-care' },
-  ]);
+  const schema = buildBreadcrumb('/gg-care', [{ text: 'GG Care' }]);
 
   return (
     <div>
@@ -37,11 +35,7 @@ const IndexPage = () => {
         />
 
         {/* Breadcrumb Schema */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
 

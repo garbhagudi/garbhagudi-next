@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import JsonLd from 'components/json-ld';
+import { buildProcedurePage, schemaGraph } from 'lib/schema';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -43,158 +45,21 @@ const Faq = dynamic(() => import('sections/infertility/faq'), { ssr: false });
 const DoctorLayout = dynamic(() => import('components/doctorsLayout'), { ssr: false });
 
 const InfertilityPage = ({ doctors }) => {
+  const pageUrl = '/treatments/infertility-treatment-in-bangalore';
+  const schema = schemaGraph(
+    ...buildProcedurePage({
+      url: pageUrl,
+      name: 'Infertility Treatment in Bangalore',
+      description: 'Infertility diagnosis and treatment at GarbhaGudi IVF Centre, Bangalore.',
+    })
+  );
+
   const [activeIndex, setActiveIndex] = useState(1);
   const defaultControlsConfig = {
     pagingDotsStyle: {
       display: 'none',
     },
   };
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "HOME",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Treatments",
-              "item": "https://www.garbhagudi.com/treatments/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "Infertility Treatment in Bangalore",
-              "item": "https://www.garbhagudi.com/treatments/infertility-treatment-in-bangalore"
-            }
-          ]
-        }`,
-    };
-  }
-
-  function addFaqJsonLd() {
-    return {
-      __html: `{
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [{
-          "@type": "Question",
-          "name": "What is infertility?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Infertility is a medical condition where a couple is unable to conceive despite regular unprotected intercourse for at least a year."
-          }
-        },{
-          "@type": "Question",
-          "name": "What are the common causes of infertility in women?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Common causes of infertility in women include hormonal imbalances, ovulation disorders, uterine or fallopian tube abnormalities, endometriosis, and age-related factors."
-          }
-        },{
-          "@type": "Question",
-          "name": "What are the common causes of infertility in men?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Common causes of infertility in men include sperm abnormalities, low sperm count, issues with sperm motility, and genetic factors."
-          }
-        },{
-          "@type": "Question",
-          "name": "When should I consider seeking infertility treatment?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If you have been trying to conceive for at least a year (or six months if the woman is over 35) without success, it's recommended to seek infertility evaluation and treatment."
-          }
-        },{
-          "@type": "Question",
-          "name": "What are the treatment options for infertility?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Infertility treatment options may include Intrauterine Insemination (IUI), In Vitro Fertilization (IVF), Intracytoplasmic Sperm Injection (ICSI), and other assisted reproductive technologies, depending on the specific cause of infertility."
-          }
-        },{
-          "@type": "Question",
-          "name": "How successful is infertility treatment?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Success rates of infertility treatment vary depending on factors such as age, the cause of infertility, and the treatment method. Our fertility experts work closely with patients to achieve the best possible outcomes."
-          }
-        },{
-          "@type": "Question",
-          "name": "Does age impact fertility?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, age can significantly impact fertility. Fertility tends to decline as a person gets older, particularly for women. Women are born with a finite number of eggs, and their quality and quantity decrease over time. This can lead to difficulties in conceiving and a higher risk of miscarriages and birth defects as age increases. Men also experience a gradual decline in fertility with age, with potential impacts on sperm quality and reproductive function."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does fertility treatment cost in Bangalore?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Fertility treatment costs in Bangalore, as well as anywhere else, can vary widely depending on the specific treatment, the clinic or hospital, and the individual circumstances of the patient. It's essential to consult with a fertility specialist and the chosen clinic to get a more accurate cost estimate based on your situation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does it take to get pregnant after fertility treatment?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The time it takes to get pregnant after fertility treatment can vary widely depending on the specific treatment, individual factors, and the success of the treatment. Some couples may achieve pregnancy in the first treatment cycle, while others may require multiple cycles. For example, in IVF, it typically takes a few weeks for the entire treatment cycle, from ovarian stimulation to embryo transfer. After the embryo transfer, it can take around 10-14 days to determine if the treatment was successful through a pregnancy test. However, it's important to note that not all fertility treatments result in pregnancy, and some individuals or couples may require more time or adjustments to their treatment plan."
-          }
-        }]
-      }`,
-    };
-  }
-
-  function addDocJsonLd() {
-    return {
-      __html: `{
-  "name": "Infertility Treatment",
-  "@type": "Product",
-  "@context": "https://schema.org/",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingCount": "604",
-    "ratingValue": "4.9",
-    "reviewCount": "1200"
-  }
-}`,
-    };
-  }
-
-  function addReviewJsonLd() {
-    const title = 'Infertility Treatment';
-    const image =
-      'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vednb58v707plopapzgdk';
-    const description =
-      'Explore top-notch infertility treatment in Bangalore at GarbhaGudi IVF Centre. Expert care, advanced procedures & high success rates. Book a consultation!';
-
-    return {
-      __html: `{
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "${title}",
-      "image": "${image}",
-      "description": "${description}",
-      "brand": {
-        "@type": "Brand",
-        "name": "GarbhaGudi IVF Centre"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "604"
-      }
-    }`,
-    };
-  }
   return (
     <div>
       <Head>
@@ -216,6 +81,7 @@ const InfertilityPage = ({ doctors }) => {
         />
 
         {/* Open Graph / Facebook */}
+        <JsonLd id='page-jsonld' data={schema} />
 
         <meta
           property='og:title'
@@ -248,25 +114,6 @@ const InfertilityPage = ({ doctors }) => {
         <meta
           name='twitter:image'
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87qr57nu07plks7j7nzs'
-        />
-
-        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
-
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-          key='breadcrumbs-jsonld'
-        />
-
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addFaqJsonLd()}
-          key='howto-jsonld'
-        />
-        <script
-          id='review-jsonld'
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addReviewJsonLd()}
         />
       </Head>
       <Banner />

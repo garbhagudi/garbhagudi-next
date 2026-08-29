@@ -2,17 +2,17 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const FAQ = dynamic(() => import('sections/paripoorna/faq'), { ssr: false });
 const Home = dynamic(() => import('sections/paripoorna/home'), { ssr: true });
 const Steps = dynamic(() => import('sections/paripoorna/steps'), { ssr: false });
 const TermsConditions = dynamic(() => import('sections/paripoorna/tandc'), { ssr: false });
 const Paripoorna = () => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Features', url: 'https://www.garbhagudi.com/features' },
-    { name: 'Paripoorna', url: 'https://www.garbhagudi.com/features/paripoorna' },
+  const schema = buildBreadcrumb('/features/paripoorna', [
+    { text: 'Features', link: '/features' },
+    { text: 'Paripoorna' },
   ]);
   return (
     <div className='text-justify'>
@@ -65,11 +65,7 @@ const Paripoorna = () => {
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8ne585h07pl2ajrkjsk'
         />
         <link rel='canonical' href='https://garbhagudi.com/features/paripoorna' />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
       </Head>
       <BreadCrumbs
         link1='/features'

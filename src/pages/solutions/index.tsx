@@ -5,7 +5,8 @@ import { gql } from '@apollo/client';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb, buildDirectoryPage, schemaGraph } from 'lib/schema';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 interface Article {
   articles: {
@@ -21,10 +22,15 @@ interface Article {
 }
 
 const IndexPage = ({ articles }: Article) => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Solutions', url: 'https://www.garbhagudi.com/solutions' },
-  ]);
+  const pageUrl = '/solutions';
+  const schema = schemaGraph(
+    ...buildDirectoryPage(
+      pageUrl,
+      'Solutions',
+      (articles || []).map((a) => ({ name: a?.title, url: `/solutions/${a?.slug}` }))
+    ),
+    buildBreadcrumb(pageUrl, [{ text: 'Solutions' }])
+  );
 
   return (
     <div>
@@ -39,12 +45,8 @@ const IndexPage = ({ articles }: Article) => {
           content='Explore advanced fertility solutions at GarbhaGudi IVF. Personalized treatments, high success rates & compassionate care. Book a consultation today!'
         />
 
-        {/* Breadcrumb Schema */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        {/* Structured data */}
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
 

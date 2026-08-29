@@ -3,6 +3,16 @@ import { gql } from '@apollo/client';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
+import JsonLd from 'components/json-ld';
+import {
+  buildBreadcrumb,
+  buildFaqPage,
+  buildMedicalWebPage,
+  buildProcedure,
+  procedureId,
+  schemaGraph,
+  toFaqEntries,
+} from 'lib/schema';
 import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import Image from 'next/image';
@@ -38,7 +48,6 @@ export const getStaticProps = async ({ params }) => {
               raw
               text
             }
-            docJsonLd
             faq {
               id
               question
@@ -104,98 +113,28 @@ const Treatment = ({ treatment, accordionSections }) => {
     return <Loading />;
   }
 
-  function addReviewJsonLd() {
-    if (!treatment?.title || !treatment?.image?.url) {
-      return { __html: '' };
-    }
-
-    const title = treatment.title.replace(/"/g, '\\"');
-    const image = treatment.image?.url;
-    const description = treatment?.content?.text?.slice(0, 160)?.replace(/"/g, '\\"') || '';
-
-    return {
-      __html: `{
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "${title}",
-      "image": "${image}",
-      "description": "${description}",
-      "brand": {
-        "@type": "Brand",
-        "name": "GarbhaGudi IVF Centre"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "604"
-      }
-    }`,
-    };
-  }
-
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "HOME",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "treatments",
-              "item": "https://www.garbhagudi.com/treatments/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "${treatment?.title}",
-              "item": "https://www.garbhagudi.com/treatments/${treatment?.slug}"
-            }
-          ]
-        }`,
-    };
-  }
-
-  function faqJsonLd() {
-    return {
-      __html: `{
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [${treatment?.faq
-          ?.map(
-            (item: { question: string; answer: { text: string } }) => `{
-              "@type": "Question",
-              "name": "${(item.question || '').replace(/"/g, '\\"')}",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "${(item.answer?.text || '').replace(/"/g, '\\"')}"
-              } 
-            }`
-          )
-          .join(',')}]
-          
-      }
-      `,
-    };
-  }
-  function addDocJsonLd() {
-    if (!treatment?.docJsonLd) return { __html: '' };
-    const jsonLD =
-      typeof treatment.docJsonLd === 'string'
-        ? JSON.parse(treatment.docJsonLd)
-        : treatment.docJsonLd;
-    return {
-      __html: JSON.stringify(jsonLD, null, 2),
-    };
-  }
-
   const metaDescription = treatment?.metaDescription || treatment?.content?.text?.slice(0, 160);
+
+  const pageUrl = `/treatments/${treatment?.slug}`;
+  const schema = schemaGraph(
+    buildMedicalWebPage({
+      url: pageUrl,
+      name: treatment?.metaTitle || treatment?.title,
+      description: metaDescription,
+      mainEntityId: procedureId(pageUrl),
+      primaryImageUrl: treatment?.image?.url,
+    }),
+    buildProcedure({
+      url: pageUrl,
+      name: treatment?.title,
+      description: treatment?.content?.text?.slice(0, 300),
+    }),
+    buildBreadcrumb(pageUrl, [
+      { text: 'Treatments', link: '/treatments' },
+      { text: treatment?.title },
+    ]),
+    buildFaqPage(pageUrl, toFaqEntries(treatment?.faq))
+  );
 
   return (
     <div>
@@ -208,30 +147,7 @@ const Treatment = ({ treatment, accordionSections }) => {
         <meta name='description' content={metaDescription} />
         <meta name='keywords' content={treatment?.metaKeywords} />
         {/* Ld+JSON Data */}
-        {treatment && (
-          <>
-            <script
-              id='review-jsonld'
-              type='application/ld+json'
-              dangerouslySetInnerHTML={addReviewJsonLd()}
-            />
-            <script
-              id='breadcrumbs-jsonld'
-              type='application/ld+json'
-              dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
-            />
-            {treatment?.docJsonLd && (
-              <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
-            )}
-            {treatment?.faq?.length > 0 && (
-              <script
-                type='application/ld+json'
-                dangerouslySetInnerHTML={faqJsonLd()}
-                id='faq-jsonld'
-              />
-            )}
-          </>
-        )}
+        <JsonLd id='page-jsonld' data={schema} />
         {/* Open Graph / Facebook */}
 
         <meta property='og:title' content={`${treatment?.title} | GarbhaGudi IVF Centre`} />

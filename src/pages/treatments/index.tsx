@@ -5,7 +5,8 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
 import Image from 'next/image';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb, buildDirectoryPage, schemaGraph } from 'lib/schema';
 
 interface TreatmentProps {
   treatments: {
@@ -21,10 +22,15 @@ interface TreatmentProps {
 }
 
 const IndexPage = ({ treatments }: TreatmentProps) => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Treatments', url: 'https://www.garbhagudi.com/treatments' },
-  ]);
+  const pageUrl = '/treatments';
+  const schema = schemaGraph(
+    ...buildDirectoryPage(
+      pageUrl,
+      'Treatments',
+      (treatments || []).map((t) => ({ name: t?.title, url: `/treatments/${t?.slug}` }))
+    ),
+    buildBreadcrumb(pageUrl, [{ text: 'Treatments' }])
+  );
 
   return (
     <div>
@@ -39,12 +45,8 @@ const IndexPage = ({ treatments }: TreatmentProps) => {
           content='Treatment options, procedure details and advanced treatment options for male and female infertility treatment available at GarbhaGudi'
         />
 
-        {/* Breadcrumb Schema */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        {/* Structured data */}
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
 

@@ -1,16 +1,13 @@
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 import GlossaryContent from 'sections/resources/fertilityGlossary/GlossaryContent';
 
 const LexiconPage = () => {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Resources', url: 'https://www.garbhagudi.com/resources' },
-    {
-      name: 'Fertility Lexicon',
-      url: 'https://www.garbhagudi.com/resources/fertility-lexicon',
-    },
+  const schema = buildBreadcrumb('/resources/fertility-lexicon', [
+    { text: 'Resources', link: '/resources' },
+    { text: 'Fertility Lexicon' },
   ]);
 
   return (
@@ -24,11 +21,7 @@ const LexiconPage = () => {
           name='description'
           content='Browse fertility and IVF lexicon terms with clear definitions. A quick reference guide from GarbhaGudi for patients and partners.'
         />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-          id='breadcrumbs-jsonld'
-        />
+        <JsonLd id='page-jsonld' data={schema} />
         <meta property='og:title' content='Fertility Lexicon | GarbhaGudi IVF Centre' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://www.garbhagudi.com/resources/fertility-lexicon' />

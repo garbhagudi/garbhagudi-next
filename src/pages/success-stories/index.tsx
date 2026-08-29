@@ -7,7 +7,8 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Loading from 'components/Loading';
 import BreadCrumbs from 'components/breadcrumbs';
-import { generateBreadcrumbSchema } from 'lib/schema-utils';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 import { filterExcludedVideos } from 'lib/excluded-videos';
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 interface VideoItem {
@@ -44,10 +45,7 @@ const IndexPage = () => {
   }, [currentPageNumber, pageToken]);
   const description =
     'GarbhaGudi IVF is the #1 choice for the best IVF Centre. It is leading chain of infertility treatment & has vision to be the best-in-class for infertility clinics';
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.garbhagudi.com/' },
-    { name: 'Success Stories', url: 'https://www.garbhagudi.com/success-stories' },
-  ]);
+  const schema = buildBreadcrumb('/success-stories', [{ text: 'Success Stories' }]);
   return (
     <>
       {successStoriesData ? (
@@ -75,11 +73,7 @@ const IndexPage = () => {
             <meta name='twitter:site' content='@garbhagudiivf' />
             <meta name='twitter:title' content='GarbhaGudi IVF Success Stories' />
             <meta name='twitter:description' content={description} />
-            <script
-              type='application/ld+json'
-              dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-              id='breadcrumbs-jsonld'
-            />
+            <JsonLd id='page-jsonld' data={schema} />
           </Head>
           <BreadCrumbs
             link1='/success-stories'

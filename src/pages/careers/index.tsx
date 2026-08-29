@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import JsonLd from 'components/json-ld';
+import { buildBreadcrumb } from 'lib/schema';
 import { gql } from '@apollo/client';
 import Head from 'next/head';
 import BreadCrumbs from 'components/breadcrumbs';
@@ -19,28 +21,8 @@ interface CareerProps {
   };
 }
 const IndexPage = ({ careers }) => {
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "Home",
-              "item": "https://www.garbhagudi.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Careers",
-              "item": "https://www.garbhagudi.com/careers"
-            }
-          ]
-        }`,
-    };
-  }
+  const pageUrl = '/careers';
+  const schema = buildBreadcrumb(pageUrl, [{ text: 'Careers' }]);
   return (
     <div>
       <Head>
@@ -60,6 +42,9 @@ const IndexPage = ({ careers }) => {
           name='description'
           content='We’re all on a mission to transform the way infertility is treated. If you feel that you need an organization where you can do your best work, call us now!'
         />
+
+        {/* Structured data */}
+        <JsonLd id='page-jsonld' data={schema} />
 
         {/* Open Graph / Facebook */}
 
@@ -88,12 +73,6 @@ const IndexPage = ({ careers }) => {
         <meta
           name='twitter:image'
           content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8v87su57o607pl1ryd58m2'
-        />
-
-        <script
-          id='breadcrumbs-jsonld'
-          type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
         />
       </Head>
       <BreadCrumbs
