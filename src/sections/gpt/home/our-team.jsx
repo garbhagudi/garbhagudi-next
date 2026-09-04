@@ -3,7 +3,6 @@ import Image from 'components/gpt/image';
 import { doctors } from 'components/gpt/doctors';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import Carousel from 'nuka-carousel';
-import useInViewAutoplay from 'lib/useInViewAutoplay';
 import dynamic from 'next/dynamic';
 const ContentModal = dynamic(() => import('components/gpt/contentModal'), {
   ssr: false,
@@ -34,8 +33,6 @@ export default function TeamSection() {
     return () => query.removeEventListener('change', update);
   }, []);
 
-  const { ref: sliderRef, autoplay } = useInViewAutoplay(3000);
-
   return (
     <div className='bg-gradient-to-br from-pink-300 to-purple-100 py-6'>
       <div className='mx-auto max-w-7xl px-3 pb-12'>
@@ -50,10 +47,12 @@ export default function TeamSection() {
           </p>
         </div>
 
-        <div ref={sliderRef} className='relative mx-auto w-full'>
+        {/* No autoplay: dash's own swiper config only registers the
+         * Navigation module (not Autoplay), so its `autoplay` prop is
+         * silently inert there too — matching the real reference site,
+         * which never auto-advances this carousel. */}
+        <div className='relative mx-auto w-full'>
           <Carousel
-            autoplay={autoplay}
-            autoplayInterval={3000}
             slidesToShow={slidesToShow}
             slidesToScroll={1}
             cellAlign='left'
