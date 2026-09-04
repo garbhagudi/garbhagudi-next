@@ -1,0 +1,147 @@
+import Image from 'next/image';
+import Head from 'next/head';
+import dynamic from 'next/dynamic';
+import Carousel from 'nuka-carousel';
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import { Fragment, useEffect, useState } from 'react';
+/*
+ * Same Zoho-form POST flow as `/landing-next` — see
+ * `src/components/landing-next-zoho-html-form.jsx`. The `banner` variant
+ * keeps the home hero layout (gray-pill labels, "Get a Call Back").
+ */
+const FormComponent = dynamic(() => import('components/gpt/landing-next-zoho-html-form'), {
+  ssr: true,
+});
+
+const Banner = () => {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  return (
+    <div>
+      <Head>
+        {/* Preload Fonts */}
+        {/* <link
+          rel='preload'
+          href='/path-to-font.woff2'
+          as='font'
+          type='font/woff2'
+          crossOrigin='anonymous'
+        /> // because we are already using the next/font/google no preload required here */}
+      </Head>
+
+      <div className='grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
+        <div className='relative col-span-2 h-fit'>
+          <Carousel
+            autoplay
+            autoplayInterval={3000}
+            className='border-0 shadow-2xl drop-shadow-2xl'
+            wrapAround
+            dragging
+            enableKeyboardControls
+            pauseOnHover
+            renderCenterLeftControls={({ previousSlide }) => (
+              <button
+                onClick={previousSlide}
+                className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 md:flex'
+              >
+                <HiChevronLeft className='mr-1' />
+              </button>
+            )}
+            renderCenterRightControls={({ nextSlide }) => (
+              <button
+                onClick={nextSlide}
+                className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 md:flex'
+              >
+                <HiChevronRight className='ml-1' />
+              </button>
+            )}
+          >
+            {bannerData.length > 0 ? (
+              bannerData.map((banner) => (
+                // <Link
+                //   href={banner.url || '#'}
+                //   target='_blank'
+                //   rel='noreferrer'
+                //   key={banner.id}
+                //   className='min-h-full min-w-full'
+                // >
+                <Fragment key={banner.id}>
+                  <Image
+                    src={banner.image.desktop}
+                    alt={banner.alt}
+                    width={1024}
+                    height={536}
+                    sizes='(max-width: 1023px) 100vw, 66vw'
+                    className='hidden h-full w-full object-cover md:block'
+                    quality={85}
+                  />
+                  <Image
+                    src={banner.image.mobile}
+                    width={731}
+                    height={1024}
+                    alt={banner.alt}
+                    sizes='100vw'
+                    className='w-full object-fill md:hidden lg:h-[65vh]'
+                    quality={85}
+                  />
+                </Fragment>
+                // </Link>
+              ))
+            ) : (
+              <div>No banners available</div>
+            )}
+          </Carousel>
+          {/* <div className='absolute -bottom-6 flex w-full justify-center p-1 font-semibold text-white md:hidden'>
+            <h1 className='w-full rounded-md bg-gg-500 p-1 text-center text-[13px] shadow-sm'>
+              Best IVF & Fertility Clinic - Affordable IVF Treatment
+            </h1>
+          </div> */}
+        </div>
+        {isClient ? (
+          <div
+            className='flex min-h-fit justify-center bg-[#005e7e] md:min-h-[500px]'
+            id='leadForm'
+          >
+            <div className='flex h-full w-full items-center justify-center'>
+              <FormComponent
+                variant='banner'
+                title='Book Free Fertility Consultation Today'
+                submitLabel='Get a Call Back'
+              />
+            </div>
+          </div>
+        ) : (
+          ''
+        )}
+      </div>
+      <div className='mx-auto mb-3 hidden w-full flex-col justify-center rounded-md bg-gg-500 p-2 px-4 font-semibold text-white shadow-sm md:flex'>
+        <h1 className='w-full text-center text-base'>
+          Best IVF & Fertility Clinic - Affordable IVF Treatment
+        </h1>
+      </div>
+      <div className='mb-3 flex w-full flex-col justify-center rounded-md bg-brandPurpleDark p-2 px-5 font-semibold text-white shadow-sm md:hidden'>
+        <h1 className='w-full text-center text-base'>
+          Best IVF & Fertility Clinic - Affordable IVF Treatment
+        </h1>
+      </div>
+    </div>
+  );
+};
+
+export default Banner;
+
+const bannerData = [
+  {
+    url: 'https://www.garbhagudi.com/features/paripoorna',
+    id: '3',
+    title: 'Web_Banner_3',
+    alt: 'GarbhaGudi IVF offer: free first fertility expert consultation and baseline fertility (TVUS) scan, plus 50% off on 24 fertility tests. Valid until July 31, 2026. Call 9108 9108 32.',
+    image: {
+      desktop:
+        'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmtmrhmgp2gnq06o331vcg8tx',
+      mobile: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmtmrhmcq2fp406o2s2zefimq',
+    },
+  },
+];

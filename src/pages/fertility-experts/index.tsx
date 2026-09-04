@@ -119,7 +119,7 @@ const IndexPage = ({ branches }: Branches) => {
         <h1 className='pt-12 text-center font-heading text-4xl font-semibold'>
           Our Fertility Experts
         </h1>
-        <p className='text-md text-brandDark mx-auto mt-4 max-w-4xl text-center font-content'>
+        <p className='text-md mx-auto mt-4 max-w-4xl text-center font-content text-brandDark'>
           Our team of fertility specialists are known for their extensive clinical experience and
           research contributions and their success in treating the most challenging fertility cases.
         </p>
@@ -217,7 +217,7 @@ const IndexPage = ({ branches }: Branches) => {
                                       loading='lazy'
                                     />
                                     <div className='space-y-0.5 text-base font-medium leading-6'>
-                                      <h3 className='text-brandDark font-heading font-bold'>
+                                      <h3 className='font-heading font-bold text-brandDark'>
                                         {doctor?.name}
                                       </h3>
                                       <p className='font-content text-xs text-brandPurpleDark dark:text-brandPurple'>
