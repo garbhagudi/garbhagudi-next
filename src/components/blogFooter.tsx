@@ -107,7 +107,7 @@ const BlogFooter = () => {
                 sexual problems
               </p>
               <Link
-                className='text-brandDark hover:bg-brandDark block w-full rounded-md bg-white px-5 py-3 text-center font-content text-base font-semibold hover:text-black sm:inline-block sm:w-auto'
+                className='block w-full rounded-md bg-white px-5 py-3 text-center font-content text-base font-semibold text-brandDark hover:bg-brandDark hover:text-black sm:inline-block sm:w-auto'
                 href={`/contact/enquiry?pageVisit=${path}`}
               >
                 Contact Us

@@ -242,7 +242,7 @@ const IndexPage = ({ recommended, garbhasandesha, tvAppearance, testimonials }) 
       />
       <div className='mx-auto'>
         <div>
-          <h1 className='text-brandDark py-6 text-center font-heading text-2xl font-bold sm:text-4xl'>
+          <h1 className='py-6 text-center font-heading text-2xl font-bold text-brandDark sm:text-4xl'>
             Video Resources
           </h1>
         </div>

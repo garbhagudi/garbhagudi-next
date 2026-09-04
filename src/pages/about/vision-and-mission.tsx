@@ -111,7 +111,7 @@ const VisionMission = () => {
                 />
               </div>
 
-              <p className='text-brandDark mt-2 text-left font-content text-lg leading-relaxed'>
+              <p className='mt-2 text-left font-content text-lg leading-relaxed text-brandDark'>
                 A mission followed by dedication and hard work turns into a vision. Enormous amount
                 of hard work goes into reaching out to more and more people and create an awareness
                 about infertility and{' '}
@@ -142,7 +142,7 @@ const VisionMission = () => {
                 />
               </div>
 
-              <p className='text-brandDark mt-2 text-left font-content text-lg leading-relaxed'>
+              <p className='mt-2 text-left font-content text-lg leading-relaxed text-brandDark'>
                 <Link href='/fertility-experts/dr-asha-s-vijay' className='text-gg-500 underline'>
                   Dr. Asha S. Vijay
                 </Link>
