@@ -5,5 +5,11 @@ module.exports = {
   generateIndexSitemap: false,
   generateRobotsTxt: false,
   generateSitemaps: false,
-  exclude: ['/admin/*', '/api/*', '/lp/ivf-centre-bangalore', '/lp/ivf-treatment'],
+  exclude: [
+    '/admin/*',
+    '/api/*',
+    '/lp/ivf-centre-bangalore',
+    '/lp/ivf-treatment',
+    '/lp/ivf-chat-gpt',
+  ],
 };
