@@ -199,9 +199,13 @@ const STYLES = {
 interface FormProps {
   showEmail?: boolean;
   variant?: 'default' | 'card';
+  /* When given, the validated values are handed to this instead of the
+   * native POST, so a campaign page can route this same UI to its own Zoho
+   * form. Omitted everywhere else, which keeps the default POST unchanged. */
+  onSubmitLead?: (lead: { name: string; phone: string; email: string }) => void;
 }
 
-const Form = ({ showEmail = true, variant = 'default' }: FormProps) => {
+const Form = ({ showEmail = true, variant = 'default', onSubmitLead }: FormProps) => {
   const cx = STYLES[variant];
   const router = useRouter();
   const path = usePathname();
@@ -245,6 +249,13 @@ const Form = ({ showEmail = true, variant = 'default' }: FormProps) => {
     setErrors(next);
     if (Object.keys(next).length > 0) {
       focusFirstFieldError(next, suffix);
+      return;
+    }
+
+    /* Campaign override: hand the values off and let the caller do the
+     * posting, rather than submitting this form element. */
+    if (onSubmitLead) {
+      onSubmitLead({ name: values.name, phone: values.phone, email: values.email });
       return;
     }
 

@@ -13,6 +13,17 @@ const DEFAULT_ACTION =
 export const zohoFormActionUrl =
   process.env.NEXT_PUBLIC_ZOHO_FORM_ACTION_URL?.trim() || DEFAULT_ACTION;
 
+const DEFAULT_CHATGPT_ACTION =
+  'https://forms.zohopublic.com/GarbhaGudiIVFCentre/form/BookyourConsultationlpchatgpt/formperma/uh3ioJD8syT-PtbhK4XRkaojmneCaYFC_HI2tctU5e0/htmlRecords/submit';
+
+export const zohoChatGptFormActionUrl =
+  process.env.NEXT_PUBLIC_ZOHO_CHATGPT_FORM_ACTION_URL?.trim() || DEFAULT_CHATGPT_ACTION;
+
+/* Separate from `zohoFormRedirectUrl` below so the shared form's override
+ * can't hijack this campaign. Empty falls back to the campaign thank-you. */
+export const zohoChatGptFormRedirectUrl =
+  process.env.NEXT_PUBLIC_ZOHO_CHATGPT_FORM_REDIRECT_URL?.trim() || '';
+
 /**
  * Optional post-submit redirect (`zf_redirect_url`). Leave empty to fall
  * back to `<origin>/thank-you` at runtime. If the value here is set it

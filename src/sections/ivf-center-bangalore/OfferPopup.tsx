@@ -4,6 +4,7 @@ import { CloseButton, Dialog, DialogPanel } from '@headlessui/react';
 import Image from 'next/image';
 import { type FormEvent, useEffect, useState } from 'react';
 import { IoClose } from 'react-icons/io5';
+import { useZohoGptSubmit } from 'sections/LandingPages/Performant/zohoFormGpt';
 import {
   OFFER_IMAGE,
   OFFER_IMAGE_ALT,
@@ -23,13 +24,15 @@ interface OfferPopupProps {
     id: string;
     title: string;
   }[];
+  useGptForm?: boolean;
 }
 
 type FieldErrors = { name?: string; phone?: string; centre?: string };
 
-const OfferPopup = ({ branches }: OfferPopupProps) => {
+const OfferPopup = ({ branches, useGptForm = false }: OfferPopupProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [errors, setErrors] = useState<FieldErrors>({});
+  const submitToZoho = useZohoGptSubmit();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -60,6 +63,11 @@ const OfferPopup = ({ branches }: OfferPopupProps) => {
     if (!centre) next.centre = 'Please select a preferred centre';
     setErrors(next);
     if (Object.keys(next).length > 0) return;
+
+    if (useGptForm) {
+      submitToZoho({ name, phone });
+      return;
+    }
 
     /* No backend integration yet — close and take the visitor to the main
      * lead form (same #form anchor the branch cards scroll to). */

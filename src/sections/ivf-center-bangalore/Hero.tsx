@@ -10,13 +10,16 @@
  *
  * The form itself is the existing attribution-ready Zoho form
  * (sections/LandingPages/Performant/form) so UTM + gclid capture and the
- * /thank-you redirect behave exactly like the rest of the site.
+ * /thank-you redirect behave exactly like the rest of the site. A campaign
+ * page can keep this exact UI but route the submission to its own Zoho
+ * form via `useGptForm`.
  */
 
 import Image from 'next/image';
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import { HiCheckCircle } from 'react-icons/hi';
 import Form from 'sections/LandingPages/Performant/form';
+import { useZohoGptSubmit } from 'sections/LandingPages/Performant/zohoFormGpt';
 import {
   OFFER_IMAGE,
   OFFER_IMAGE_ALT,
@@ -43,7 +46,14 @@ const TrustBadge = ({ className }: { className: string }) => (
   </span>
 );
 
-const Hero = () => {
+interface HeroProps {
+  /* Route the lead to the chat-gpt campaign's Zoho form instead of the
+   * shared site-wide one. The UI is identical either way. */
+  useGptForm?: boolean;
+}
+
+const Hero = ({ useGptForm = false }: HeroProps) => {
+  const submitToZoho = useZohoGptSubmit();
   return (
     <section
       className='relative overflow-hidden bg-gradient-to-br from-gg-50 via-white to-purple-50'
@@ -124,7 +134,11 @@ const Hero = () => {
 
             {/* Bottom half — the lead form. */}
             <div className='px-3 pb-5 pt-2 sm:px-5'>
-              <Form showEmail={false} variant='card' />
+              <Form
+                showEmail={false}
+                variant='card'
+                onSubmitLead={useGptForm ? submitToZoho : undefined}
+              />
             </div>
           </div>
         </div>
