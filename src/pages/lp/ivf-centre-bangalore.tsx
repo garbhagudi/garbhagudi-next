@@ -42,7 +42,7 @@ const faqSchema = generateFAQSchema(
 );
 
 /* Breadcrumb/clinic schemas embed the page URL, so they're built per page —
- * this LP is also served as-is at /lp/ivf-treatment. */
+ * this LP is also served as-is at /lp/ivf-treatment and /lp/ivf-chat-gpt. */
 const buildSchemas = (url: string) => ({
   breadcrumbSchema: generateBreadcrumbSchema([
     { name: 'Home', url: 'https://www.garbhagudi.com/' },
@@ -59,7 +59,16 @@ const buildSchemas = (url: string) => ({
   }),
 });
 
-export default function IvfCentreLandingPage({ doctors, branches, awards, pageUrl = URL }) {
+/* `useGptForm` is opt-in per page: when set, the hero form and the offer
+ * popup post to the chat-gpt campaign's Zoho form instead of the shared
+ * one. Only /lp/ivf-chat-gpt passes it. */
+export default function IvfCentreLandingPage({
+  doctors,
+  branches,
+  awards,
+  pageUrl = URL,
+  useGptForm = false,
+}) {
   const { breadcrumbSchema, medicalClinicSchema } = useMemo(() => buildSchemas(pageUrl), [pageUrl]);
   return (
     <div className='pb-20 md:pb-0'>
@@ -109,7 +118,7 @@ export default function IvfCentreLandingPage({ doctors, branches, awards, pageUr
       </Head>
 
       <main>
-        <Hero />
+        <Hero useGptForm={useGptForm} />
         <Content />
         <Gallery />
         <DoctorList doctors={doctors} />
@@ -124,7 +133,7 @@ export default function IvfCentreLandingPage({ doctors, branches, awards, pageUr
 
       <StickyCta />
 
-      <OfferPopup branches={branches} />
+      <OfferPopup branches={branches} useGptForm={useGptForm} />
     </div>
   );
 }
