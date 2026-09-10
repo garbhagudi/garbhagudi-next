@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 
-import { zohoChatGptFormActionUrl, zohoFormRedirectUrl } from 'data/zohoForm';
+import { zohoChatGptFormActionUrl, zohoChatGptFormRedirectUrl } from 'data/zohoForm';
 import { gclidFromCookies, utmFromCookies, utmFromWindowLocation } from 'lib/zohoFormUtm';
 
 export interface ZohoGptLead {
@@ -50,7 +50,8 @@ function buildHiddenFields(pageVisitPath: string): Record<string, string> {
     utm_content: utm.utm_content || '',
     zc_gad: readZcGad(),
     zf_referrer_name: referrer,
-    zf_redirect_url: zohoFormRedirectUrl || `${window.location.origin}/lp/thank-you`,
+    zf_redirect_url:
+      zohoChatGptFormRedirectUrl || `${window.location.origin}/lp/ivf-chat-gpt/thank-you`,
   };
 }
 

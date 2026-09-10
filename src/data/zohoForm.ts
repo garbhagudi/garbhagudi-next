@@ -19,6 +19,11 @@ const DEFAULT_CHATGPT_ACTION =
 export const zohoChatGptFormActionUrl =
   process.env.NEXT_PUBLIC_ZOHO_CHATGPT_FORM_ACTION_URL?.trim() || DEFAULT_CHATGPT_ACTION;
 
+/* Separate from `zohoFormRedirectUrl` below so the shared form's override
+ * can't hijack this campaign. Empty falls back to the campaign thank-you. */
+export const zohoChatGptFormRedirectUrl =
+  process.env.NEXT_PUBLIC_ZOHO_CHATGPT_FORM_REDIRECT_URL?.trim() || '';
+
 /**
  * Optional post-submit redirect (`zf_redirect_url`). Leave empty to fall
  * back to `<origin>/thank-you` at runtime. If the value here is set it
