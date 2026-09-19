@@ -1,9 +1,9 @@
-export const PHONE_DISPLAY = '+91 90712 34006';
-export const PHONE_DIGITS = '919071234006';
+export const PHONE_DISPLAY = '+91 9108 9108 32';
+export const PHONE_DIGITS = '919108910832';
 export const PHONE_TEL = `tel:+${PHONE_DIGITS}`;
 
-/* WhatsApp stays on the site-wide WA number (different from the call CTA). */
-export const WA_DIGITS = '918951813344';
+/* WhatsApp uses the same number as the call CTA. */
+export const WA_DIGITS = '919108910832';
 export const WA_MESSAGE_DEFAULT = 'Hi GarbhaGudi, I would like to book a fertility consultation.';
 
 export const waLink = (message: string = WA_MESSAGE_DEFAULT) =>
