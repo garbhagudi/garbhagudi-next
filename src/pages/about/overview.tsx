@@ -91,7 +91,7 @@ const Overview = ({ directors }) => {
                           />
                         </div>
                         <div className='space-y-2 text-lg font-medium leading-6'>
-                          <h3 className='text-brandDark font-heading text-2xl font-semibold'>
+                          <h3 className='font-heading text-2xl font-semibold text-brandDark'>
                             {item.name}
                           </h3>
                           <p className='font-qs text-sm font-semibold text-gg-500 dark:text-gg-400'>

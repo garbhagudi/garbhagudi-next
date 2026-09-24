@@ -58,7 +58,7 @@ const Features = () => {
   return (
     <div className='sm:py-18 relative bg-white py-8' id='features'>
       <div className='mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8'>
-        <h2 className='text-brandDark mt-2 text-center font-heading text-3xl font-extrabold tracking-tight sm:text-4xl'>
+        <h2 className='mt-2 text-center font-heading text-3xl font-extrabold tracking-tight text-brandDark sm:text-4xl'>
           Our Versatile Approach
         </h2>
         <div className='mx-auto max-w-7xl px-3'>
@@ -97,10 +97,10 @@ const Features = () => {
                       <div className='text-4xl font-bold text-white'>{feature.icon}</div>
                     </div>
                     <div className='col-span-5 flex flex-col rounded-br-lg rounded-tr-lg border-2 border-brandPink px-2'>
-                      <h3 className='text-brandDark mt-3 font-heading text-base font-semibold tracking-tight'>
+                      <h3 className='mt-3 font-heading text-base font-semibold tracking-tight text-brandDark'>
                         {feature.name}
                       </h3>
-                      <p className='text-brandDark mt-2 pb-3 font-content text-sm font-medium antialiased'>
+                      <p className='mt-2 pb-3 font-content text-sm font-medium text-brandDark antialiased'>
                         {feature.content}
                       </p>
                     </div>

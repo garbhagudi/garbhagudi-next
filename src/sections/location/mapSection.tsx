@@ -198,7 +198,7 @@ const MapSection = ({
                     </div>
                     <div className='space-y-4'>
                       <div className='space-y-1 text-lg font-medium leading-6'>
-                        <h3 className='text-brandDark font-content text-gray-800 dark:text-gray-200'>
+                        <h3 className='font-content text-brandDark text-gray-800 dark:text-gray-200'>
                           {item?.name}
                         </h3>
                         <p className='font-content text-sm text-gg-500 dark:text-gg-400'>

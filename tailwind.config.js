@@ -71,6 +71,7 @@ module.exports = {
       brandPurpleDark: '#612a7b',
       brandPurple: '#b67e9f',
       brandPurple2: '#d3b4d7',
+      brandDark: '#363636',
       BlueDark: '#0D4b6',
       blue2: '4c95b2',
       blue3: '#78b6e2',
@@ -419,6 +420,10 @@ module.exports = {
       qs: ['var(--font-nunito), sans-serif'],
       heading: ['var(--font-b612), sans-serif'],
       content: ['var(--font-nunito), sans-serif'],
+      // dash-ivf-next's own house font — used only by the /lp/gpt port (see gpt.jsx) so its
+      // ported classNames (which carry dash's `font-heading`/`font-qs`/`font-content`/`font-dm`
+      // meanings) don't pick up this repo's B612/Nunito instead.
+      dmSans: ['var(--font-dm-sans), sans-serif'],
       benne: ['var(--font-benne), sans-serif'],
       lexend: ['var(--font-lexend), sans-serif'],
       'nunito-Sans': ['Nunito Sans'],

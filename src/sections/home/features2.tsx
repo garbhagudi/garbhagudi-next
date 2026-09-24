@@ -79,10 +79,10 @@ const Features2 = () => {
   return (
     <div className='sm:py-18 relative bg-white py-8' id='features'>
       <div className='mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8'>
-        <h1 className='text-brandDark mt-2 font-heading text-3xl font-extrabold tracking-tight sm:text-4xl'>
+        <h1 className='mt-2 font-heading text-3xl font-extrabold tracking-tight text-brandDark sm:text-4xl'>
           Our Versatile Approach
         </h1>
-        <p className='text-md text-brandDark mx-auto mt-5 max-w-prose font-content'>
+        <p className='text-md mx-auto mt-5 max-w-prose font-content text-brandDark'>
           At GarbhaGudi, we understand that fertility treatments can be mentally and physically
           stressful. We are always committed to providing a world of options and bringing a new ray
           of hope to many who are trying to conceive. So, you can expect:
@@ -108,10 +108,10 @@ const Features2 = () => {
                           />
                         </span>
                       </div>
-                      <h3 className='text-brandDark mt-5 font-heading text-lg font-semibold tracking-tight'>
+                      <h3 className='mt-5 font-heading text-lg font-semibold tracking-tight text-brandDark'>
                         {feature.name}
                       </h3>
-                      <p className='text-brandDark mt-5 min-h-[60px] font-content text-sm font-medium antialiased'>
+                      <p className='mt-5 min-h-[60px] font-content text-sm font-medium text-brandDark antialiased'>
                         {feature.content}
                       </p>
                     </div>

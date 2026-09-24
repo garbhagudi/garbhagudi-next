@@ -54,7 +54,7 @@ const GarbhaGudiCard = memo(({ item }: GarbhaGudiCardProps) => {
             priority // Prioritize loading for important images
           />
         </div>
-        <div className='bg-brandDark/70 absolute inset-0 h-full w-full rounded-xl px-3 py-1 text-center text-white [backface-visibility:hidden] [transform:rotateY(180deg)] md:px-12'>
+        <div className='absolute inset-0 h-full w-full rounded-xl bg-brandDark/70 px-3 py-1 text-center text-white [backface-visibility:hidden] [transform:rotateY(180deg)] md:px-12'>
           <div className='flex min-h-full flex-col items-center justify-center font-lexend text-lg md:text-xl'>
             {item.way}
           </div>

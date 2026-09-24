@@ -23,7 +23,7 @@ const Header = () => {
                 <h1 className='font-content text-4xl font-bold tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl md:text-6xl'>
                   <span className='block xl:inline'>About GarbhaGudi</span>
                 </h1>
-                <p className='text-brandDark z-10 mt-3 overflow-visible font-content text-base text-gray-800 dark:text-gray-200 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0'>
+                <p className='z-10 mt-3 overflow-visible font-content text-base text-brandDark text-gray-800 dark:text-gray-200 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0'>
                   GarbhaGudi is a chain of new generation infertility treatment hospitals equipped
                   with state-of-the-art infrastructure and cutting-edge technology to address this
                   ever-increasing problem of infertility. It was founded by a team of committed

@@ -31,7 +31,7 @@ const OtherServices = () => {
           </div>
           <div className='mx-auto max-w-lg'>
             <div className='mt-2'>
-              <h4 className='text-brandDark border-brandDark mx-auto mb-5 w-56 rounded-lg border px-3 py-1 text-center text-lg font-bold'>
+              <h4 className='mx-auto mb-5 w-56 rounded-lg border border-brandDark px-3 py-1 text-center text-lg font-bold text-brandDark'>
                 Industry Average*
               </h4>
               <div className='h-5 w-full rounded-full bg-brandPurple'>
