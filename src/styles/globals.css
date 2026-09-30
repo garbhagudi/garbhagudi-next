@@ -269,3 +269,31 @@ body {
   background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
   background-size: 20px 20px;
 }
+
+/* Home page floating stack (bottom-right): the round phone button (FloatPhoneRound) sits at
+ * the bottom and the SalesIQ chat bubble sits directly above it. Same 56px size and same
+ * right edge so both line up on mobile and desktop. Enabled by `gg-home-floats` on <html>. */
+html.gg-home-floats #zsiq_float {
+  top: auto !important;
+  left: auto !important;
+  right: 20px !important;
+  bottom: 88px !important;
+  width: 56px !important;
+  height: 56px !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 767px) {
+  html.gg-home-floats #zsiq_float {
+    bottom: 80px !important;
+  }
+}
+
+/* Desktop: the chat window opens above the bubble/close button (which stays in place at the
+ * top of the stack) instead of covering it. Mobile is full screen, so it is left alone. */
+@media (min-width: 768px) {
+  html.gg-home-floats #zsiq_chat_wrap {
+    bottom: 156px !important;
+    max-height: calc(100vh - 176px) !important;
+  }
+}

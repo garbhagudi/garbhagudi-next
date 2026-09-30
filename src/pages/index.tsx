@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import HomeComponent from 'sections/home';
@@ -8,10 +9,18 @@ import BannerComponent from 'sections/home/bannerComponent';
 const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
 const DoctorList = dynamic(() => import('sections/home/doctorList'), { ssr: false });
 const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false });
+const FloatPhoneRound = dynamic(() => import('components/FloatPhoneRound'), { ssr: false });
+const FloatWhatsappPill = dynamic(() => import('components/FloatWhatsappPill'), { ssr: false });
 
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
 const Home = ({ data, testimonials }) => {
+  /* Lets globals.css align the SalesIQ bubble under FloatPhoneRound on the home page only. */
+  useEffect(() => {
+    document.documentElement.classList.add('gg-home-floats');
+    return () => document.documentElement.classList.remove('gg-home-floats');
+  }, []);
+
   function addBreadcrumbJsonLd() {
     return {
       __html: `{
@@ -164,6 +173,8 @@ const Home = ({ data, testimonials }) => {
         />
       </Head>
       <FloatPhone presentation={false} />
+      <FloatPhoneRound />
+      <FloatWhatsappPill />
       <BannerComponent banners={data.banners} />
       <HomeComponent testimonialPassthrough={testimonials} blogsPassthrough={data.blogs} />
       <DoctorList doctors={data.doctors} />
