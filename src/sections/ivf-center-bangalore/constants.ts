@@ -17,7 +17,7 @@ export const scrollToForm = (e?: { preventDefault: () => void }) => {
 };
 
 export const OFFER_IMAGE =
-  'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmt2v7e6p53rn06o350gplwp3';
+  'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmuplizxw0pam07ppjbhuwqsg';
 export const OFFER_IMAGE_ALT =
   'Free first fertility specialist consultation, semen analysis and TVUS scan at GarbhaGudi';
 
