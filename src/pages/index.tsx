@@ -6,9 +6,16 @@ import apolloClient from 'lib/apollo-graphcms';
 import { filterExcludedVideos } from 'lib/excluded-videos';
 import { gql } from '@apollo/client';
 import BannerComponent from 'sections/home/bannerComponent';
+import LazyMount from 'components/LazyMount';
 const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
 const DoctorList = dynamic(() => import('sections/home/doctorList'), { ssr: false });
-const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false });
+// Client-only, but in normal flow on mobile (the "Book Appointment / call" bar above the
+// hero). Reserve its height in the server HTML (68px, hidden from md up like the real bar)
+// so the hero is not pushed down when it mounts (CLS).
+const FloatPhone = dynamic(() => import('components/FloatPhone'), {
+  ssr: false,
+  loading: () => <div aria-hidden='true' className='h-[68px] md:hidden' />,
+});
 const FloatPhoneRound = dynamic(() => import('components/FloatPhoneRound'), { ssr: false });
 const FloatWhatsappPill = dynamic(() => import('components/FloatWhatsappPill'), { ssr: false });
 
@@ -177,8 +184,12 @@ const Home = ({ data, testimonials }) => {
       <FloatWhatsappPill />
       <BannerComponent banners={data.banners} />
       <HomeComponent testimonialPassthrough={testimonials} blogsPassthrough={data.blogs} />
-      <DoctorList doctors={data.doctors} />
-      <Faq />
+      <LazyMount minHeight={600}>
+        <DoctorList doctors={data.doctors} />
+      </LazyMount>
+      <LazyMount minHeight={500}>
+        <Faq />
+      </LazyMount>
     </div>
   );
 };

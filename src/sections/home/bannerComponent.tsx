@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
 import { getImageProps } from 'next/image';
 import Link from 'next/link';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
@@ -24,11 +26,21 @@ interface bannerProps {
 
 // Art-directed banner: desktop creative ≥768px (Tailwind `md`), mobile
 // creative below — the browser downloads only the matching source.
-const BannerImage = ({ banner }: { banner: bannerProps['banners'][number] }) => {
+const BannerImage = ({
+  banner,
+  isFirst,
+}: {
+  banner: bannerProps['banners'][number];
+  isFirst: boolean;
+}) => {
   // `sizes` is required: without it getImageProps emits x-descriptors at
   // [width, width*2], so a phone would pull the 1920/3840-wide banner. Each
   // <source> is media-scoped to one breakpoint, so 100vw is accurate for both.
-  const common = { alt: banner?.title, priority: true, quality: 85, sizes: '100vw' };
+  // Only the first slide is the LCP candidate. The carousel mounts every slide,
+  // so marking all of them `priority` made slides 2..n compete with slide 1 for
+  // bandwidth on the critical path. The rest load lazily (they are still
+  // fetched right after, being adjacent to the viewport).
+  const common = { alt: banner?.title, priority: isFirst, quality: 85, sizes: '100vw' };
   const { props: desktop } = getImageProps({
     ...common,
     src: banner?.image?.url,
@@ -42,6 +54,10 @@ const BannerImage = ({ banner }: { banner: bannerProps['banners'][number] }) => 
     height: banner?.mobileImage?.height || 1080,
   });
 
+  // getImageProps (unlike <Image>) adds no fetchpriority or preload, so add them for the
+  // first banner (the LCP image). Head dedupes the preload links across the cloned slides.
+  const priorityAttrs = isFirst ? ({ fetchpriority: 'high' } as Record<string, string>) : {};
+
   return (
     <picture>
       <source
@@ -52,12 +68,40 @@ const BannerImage = ({ banner }: { banner: bannerProps['banners'][number] }) => 
         height={desktop.height}
       />
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
-      <img {...mobile} className='h-full w-full object-cover' />
+      <img {...mobile} {...priorityAttrs} className='h-full w-full object-cover' />
+      {isFirst && (
+        <Head>
+          <link
+            key='banner-preload-mobile'
+            rel='preload'
+            as='image'
+            media='(max-width: 767px)'
+            imageSrcSet={mobile.srcSet}
+            imageSizes={mobile.sizes}
+            {...priorityAttrs}
+          />
+          <link
+            key='banner-preload-desktop'
+            rel='preload'
+            as='image'
+            media='(min-width: 768px)'
+            imageSrcSet={desktop.srcSet}
+            imageSizes={desktop.sizes}
+            {...priorityAttrs}
+          />
+        </Head>
+      )}
     </picture>
   );
 };
 
 const BannerComponent = (bannerData: bannerProps) => {
+  // Autoplay starts after load so a slide change does not compete with the first paint.
+  const [autoplay, setAutoplay] = useState(false);
+  useEffect(() => {
+    const t = window.setTimeout(() => setAutoplay(true), 10000);
+    return () => window.clearTimeout(t);
+  }, []);
   const defaultControlsConfig = {
     pagingDotsStyle: {
       display: 'none',
@@ -67,7 +111,7 @@ const BannerComponent = (bannerData: bannerProps) => {
   return (
     <div>
       <Carousel
-        autoplay
+        autoplay={autoplay}
         autoplayInterval={5000}
         className='border-0 shadow-2xl drop-shadow-2xl'
         defaultControlsConfig={defaultControlsConfig}
@@ -93,9 +137,9 @@ const BannerComponent = (bannerData: bannerProps) => {
         )}
       >
         {bannerData ? (
-          bannerData.banners.map((banner) => (
+          bannerData.banners.map((banner, index) => (
             <Link href={banner?.url || '#'} target='_blank' rel='noreferrer' key={banner.id}>
-              <BannerImage banner={banner} />
+              <BannerImage banner={banner} isFirst={index === 0} />
             </Link>
           ))
         ) : (
