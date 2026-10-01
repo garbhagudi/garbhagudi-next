@@ -195,7 +195,10 @@ const OfferPopup = ({ branches, useGptForm = false }: OfferPopupProps) => {
                   >
                     Submit
                   </button>
-                  <input type='hidden' id='zc_gad' name='zc_gad' value='' />
+                  {/* Uncontrolled so Zoho's zcga.js (loaded in _document) can
+                   * populate it by id — `value=''` here was a controlled
+                   * input pinned to empty, silently discarding the gclid. */}
+                  <input type='hidden' id='zc_gad' name='zc_gad' defaultValue='' />
                 </form>
               </div>
             </div>

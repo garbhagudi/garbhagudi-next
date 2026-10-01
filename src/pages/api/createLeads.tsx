@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+import { errorMessage } from 'lib/errorMessage';
 import { appendMissedLeadToSheet } from 'lib/missedLeadsSheet';
 
 function extractLeadData(req: NextApiRequest): Record<string, unknown> {
@@ -19,11 +20,6 @@ function extractLeadData(req: NextApiRequest): Record<string, unknown> {
     }
   }
   return {};
-}
-
-function errorMessage(error: unknown): string {
-  if (error instanceof Error) return error.message;
-  return String(error);
 }
 
 type ZohoLeadResult = {

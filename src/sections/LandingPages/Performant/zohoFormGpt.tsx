@@ -6,6 +6,10 @@ import { useCallback } from 'react';
 
 import { zohoChatGptFormActionUrl, zohoChatGptFormRedirectUrl } from 'data/zohoForm';
 import { gclidFromCookies, utmFromCookies, utmFromWindowLocation } from 'lib/zohoFormUtm';
+import {
+  generateConversionOrderId,
+  reportGoogleAdsConversion,
+} from 'lib/reportGoogleAdsConversion';
 
 export interface ZohoGptLead {
   name: string;
@@ -66,8 +70,10 @@ export function useZohoGptSubmit() {
       const pageVisitPath =
         (router.query?.pageVisit as string | undefined) || path || router.asPath || '/';
 
+      const hiddenFields = buildHiddenFields(pageVisitPath);
+
       const payload: Record<string, string> = {
-        ...buildHiddenFields(pageVisitPath),
+        ...hiddenFields,
         [ZOHO_FIELD.name]: lead.name.trim(),
         [ZOHO_FIELD.phone]: lead.phone.replace(/\D/g, ''),
         [ZOHO_FIELD.email]: (lead.email ?? '').trim(),
@@ -86,6 +92,16 @@ export function useZohoGptSubmit() {
         input.name = name;
         input.value = value;
         form.appendChild(input);
+      });
+
+      /* Fire the Google Ads click-conversion upload before the page
+       * navigates away — `form.submit()` below is a native POST, so a
+       * regular (non-keepalive) fetch here could get cancelled mid-flight. */
+      reportGoogleAdsConversion({
+        gclid: hiddenFields.zc_gad,
+        orderId: generateConversionOrderId(),
+        phone: lead.phone,
+        email: lead.email,
       });
 
       document.body.appendChild(form);
