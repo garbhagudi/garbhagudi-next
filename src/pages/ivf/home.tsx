@@ -63,10 +63,10 @@ const IndexPage = ({ doctors, testimonials, branches }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='preload' href='/images/mothers-day-offer-banner-mobile.png' as='image' />
+        <link rel='preload' href='/images/oct 26 banner mobile.jpg' as='image' />
         <link
           rel='preload'
-          href='/images/mothers-day-offer-banner-desktop.png'
+          href='/images/oct 26 banner desktop.jpg'
           as='image'
           media='(min-width: 640px)'
         />
