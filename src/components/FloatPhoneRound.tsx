@@ -5,7 +5,7 @@ import { HiPhone } from 'react-icons/hi';
  * (see `html.gg-home-floats #zsiq_float` in globals.css). Chat bubble sits above at bottom 88px (desktop) / 80px (mobile). */
 const FloatPhoneRound = () => {
   return (
-    <div className='fixed bottom-5 right-6 z-50 h-12 w-12 rounded-full bg-[#005e7e] md:right-5 md:h-14 md:w-14'>
+    <div className='fixed bottom-5 right-6 z-50 h-12 w-12 rounded-full bg-[#25D366] md:right-5 md:h-14 md:w-14'>
       <Link
         href='tel:+919108910832'
         aria-label='Call GarbhaGudi'
