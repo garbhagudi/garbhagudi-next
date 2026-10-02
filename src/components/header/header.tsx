@@ -80,10 +80,9 @@ const Nav = () => {
                 className='h-full w-16 dark:fill-white dark:brightness-0 dark:grayscale dark:invert'
                 src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms7ai6oz08vq08pk9nuarsth'
                 alt='logo'
-                width={50}
-                height={50}
-                priority={false}
-                loading='lazy'
+                width={64}
+                height={84}
+                loading='eager'
               />
             </Link>
             <div className='flex items-center lg:order-2'>

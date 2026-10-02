@@ -8,6 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 // import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
+import LazyMount from 'components/LazyMount';
 // import FloatWhatsApp from 'components/FloatWhatsapp';
 
 // Dynamically import components
@@ -19,6 +20,21 @@ const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false }
 const FloatRequestCallBack = dynamic(() => import('components/FloatRequestCallBack'), {
   ssr: false,
 });
+
+// Unchanged original bootstrap, still used on every route except the home page.
+const GTM_IMMEDIATE_BOOTSTRAP =
+  "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NSZH8N9M');";
+
+/**
+ * Home page only: same official GTM bootstrap (GTM-NSZH8N9M), but started once the page is
+ * usable instead of at HTML parse time. GTM pulls in gtag, Meta Pixel, Clarity
+ * etc. (~700KB of script + main-thread work) which otherwise competes with the
+ * hero image and hydration. It starts on the first real interaction, or 8s
+ * after the window `load` event, whichever comes first. `dataLayer` is created
+ * immediately so any push made before GTM starts is queued and replayed.
+ */
+const GTM_DEFERRED_BOOTSTRAP =
+  "window.dataLayer=window.dataLayer||[];(function(){var started=false;var evs=['scroll','pointerdown','keydown','touchstart'];function start(){if(started)return;started=true;evs.forEach(function(e){window.removeEventListener(e,start)});(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NSZH8N9M');}evs.forEach(function(e){window.addEventListener(e,start,{passive:true})});function arm(){setTimeout(start,8000)}if(document.readyState==='complete'){arm()}else{window.addEventListener('load',arm)}})();";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -84,8 +100,7 @@ function MyApp({ Component, pageProps }) {
         {/* eslint-disable-next-line @next/next/next-script-for-ga -- official GTM inline bootstrap */}
         <script
           dangerouslySetInnerHTML={{
-            __html:
-              "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NSZH8N9M');",
+            __html: router.pathname === '/' ? GTM_DEFERRED_BOOTSTRAP : GTM_IMMEDIATE_BOOTSTRAP,
           }}
           suppressHydrationWarning
         />
@@ -115,7 +130,11 @@ function MyApp({ Component, pageProps }) {
           <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
             {shouldDisplay && <Nav />}
             <Component {...pageProps} />
-            {!iuiTreatmentPage && !hideChrome && <Footer />}
+            {!iuiTreatmentPage && !hideChrome && (
+              <LazyMount minHeight={600} margin='1200px 0px'>
+                <Footer />
+              </LazyMount>
+            )}
           </div>
         )}
         {shouldDisplay && showSalesIQ && <Salesiq />}

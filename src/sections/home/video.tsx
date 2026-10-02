@@ -3,6 +3,39 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import { MdOutlineSwipeLeft } from 'react-icons/md';
 import Carousel from 'nuka-carousel';
+import { useEffect, useRef, useState } from 'react';
+import { useNearViewport } from 'components/LazyMount';
+
+/**
+ * LiteYouTubeEmbed paints its poster as a CSS background-image, so every
+ * carousel slide (including clipped, off-screen ones) downloaded a
+ * ~140KB maxresdefault.jpg up front (~840KB for the six videos). Instead the
+ * embeds are mounted once the carousel is near the viewport, staggered
+ * (`delay`) so the posters do not arrive in one burst. Each wrapper keeps the
+ * same box as before, so there is no layout shift, and every slide is ready
+ * before it can be swiped into view.
+ */
+const LazyYouTube = ({ id, near, delay }: { id: string; near: boolean; delay: number }) => {
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    if (!near) return;
+    const timer = window.setTimeout(() => setReady(true), delay);
+    return () => window.clearTimeout(timer);
+  }, [near, delay]);
+
+  return (
+    <div className='h-full w-full'>
+      {ready && (
+        <LiteYouTubeEmbed
+          id={id}
+          title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
+          poster='maxresdefault'
+        />
+      )}
+    </div>
+  );
+};
 
 interface testimonialProps {
   testimonials: {
@@ -20,6 +53,8 @@ interface testimonialProps {
 }
 
 const Video = ({ testimonials }: testimonialProps) => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const near = useNearViewport(sectionRef, '400px 0px');
   const defaultControlsConfig = {
     pagingDotsStyle: {
       display: 'none',
@@ -31,7 +66,10 @@ const Video = ({ testimonials }: testimonialProps) => {
         <h2 className='flex items-center justify-center text-center font-heading text-2xl font-extrabold text-gray-800 dark:text-gray-200 lg:text-4xl'>
           Testimonials from our happy couples
         </h2>
-        <div className='mx-auto flex max-w-7xl flex-row items-center justify-center px-3 sm:px-0'>
+        <div
+          ref={sectionRef}
+          className='mx-auto flex max-w-7xl flex-row items-center justify-center px-3 sm:px-0'
+        >
           <Carousel
             defaultControlsConfig={defaultControlsConfig}
             autoplayInterval={5000}
@@ -57,16 +95,16 @@ const Video = ({ testimonials }: testimonialProps) => {
               </button>
             )}
           >
-            {testimonials?.items?.map((item) => {
+            {testimonials?.items?.map((item, index) => {
               return (
                 <div
                   className='mx-auto mt-8 aspect-video w-screen max-w-xs overflow-hidden rounded-lg border border-transparent sm:max-w-sm sm:px-0 md:max-w-md lg:max-w-3xl'
                   key={item?.id}
                 >
-                  <LiteYouTubeEmbed
+                  <LazyYouTube
                     id={item?.snippet?.resourceId.videoId}
-                    title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
-                    poster='maxresdefault'
+                    near={near}
+                    delay={index * 300}
                   />
                 </div>
               );
