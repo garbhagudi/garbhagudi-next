@@ -16,6 +16,7 @@ const Nav = dynamic(() => import('components/header/header'), { ssr: true });
 const Salesiq = dynamic(() => import('components/SalesIQ'), { ssr: false });
 const Loading = dynamic(() => import('components/Loading'), { ssr: true });
 const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false });
+const FloatPhoneRound = dynamic(() => import('components/FloatPhoneRound'), { ssr: false });
 const FloatRequestCallBack = dynamic(() => import('components/FloatRequestCallBack'), {
   ssr: false,
 });
@@ -56,6 +57,14 @@ function MyApp({ Component, pageProps }) {
   const showSalesIQ =
     !(router.pathname === '/contact/enquiry' && isMobile) &&
     !hideSalesIQPaths.includes(router.pathname);
+
+  const showFloatPhoneRound = !iuiTreatmentPage && !isYogaGuidePage && !hideChrome;
+  /* Lets globals.css align the SalesIQ bubble under FloatPhoneRound whenever both are shown. */
+  useEffect(() => {
+    const shouldAlign = showFloatPhoneRound && shouldDisplay && showSalesIQ;
+    document.documentElement.classList.toggle('gg-phone-round-floats', shouldAlign);
+    return () => document.documentElement.classList.remove('gg-phone-round-floats');
+  }, [showFloatPhoneRound, shouldDisplay, showSalesIQ]);
 
   // useEffect(() => {
   //   TagManager.initialize({ gtmId: 'GTM-5T77DVZ' });
@@ -108,6 +117,7 @@ function MyApp({ Component, pageProps }) {
         <link rel='preconnect' href='https://media.graphassets.com' />
       </Head>
       {!iuiTreatmentPage && !isYogaGuidePage && !hideChrome && <FloatPhone presentation={true} />}
+      {showFloatPhoneRound && <FloatPhoneRound />}
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />
