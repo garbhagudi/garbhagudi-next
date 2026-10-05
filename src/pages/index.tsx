@@ -8,7 +8,6 @@ import BannerComponent from 'sections/home/bannerComponent';
 const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
 const DoctorList = dynamic(() => import('sections/home/doctorList'), { ssr: false });
 const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false });
-const FloatWhatsappPill = dynamic(() => import('components/FloatWhatsappPill'), { ssr: false });
 
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
@@ -165,7 +164,6 @@ const Home = ({ data, testimonials }) => {
         />
       </Head>
       <FloatPhone presentation={false} />
-      <FloatWhatsappPill />
       <BannerComponent banners={data.banners} />
       <HomeComponent testimonialPassthrough={testimonials} blogsPassthrough={data.blogs} />
       <DoctorList doctors={data.doctors} />

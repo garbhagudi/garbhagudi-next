@@ -4,7 +4,8 @@ import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import Head from 'next/head';
 import Header from 'sections/LandingPages/unbounce/header';
-import FloatWhatsApp from 'components/FloatWhatsapp';
+// Replaced by the global FloatWhatsappPill rendered from _app.tsx
+// import FloatWhatsApp from 'components/FloatWhatsapp';
 
 // Dynamic imports
 const Banner = dynamic(() => import('sections/LandingPages/unbounce/banner'), {
@@ -102,7 +103,8 @@ const Landing = ({ doctors }) => {
         <Doctors doctors={doctors} />
         <Testimonial />
         <Faq />
-        <FloatWhatsApp />
+        {/* Replaced by the global FloatWhatsappPill rendered from _app.tsx */}
+        {/* <FloatWhatsApp /> */}
         <EndForm />
       </>
     </div>

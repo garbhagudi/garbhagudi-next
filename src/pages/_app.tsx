@@ -17,6 +17,7 @@ const Salesiq = dynamic(() => import('components/SalesIQ'), { ssr: false });
 const Loading = dynamic(() => import('components/Loading'), { ssr: true });
 const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false });
 const FloatPhoneRound = dynamic(() => import('components/FloatPhoneRound'), { ssr: false });
+const FloatWhatsappPill = dynamic(() => import('components/FloatWhatsappPill'), { ssr: false });
 const FloatRequestCallBack = dynamic(() => import('components/FloatRequestCallBack'), {
   ssr: false,
 });
@@ -36,35 +37,37 @@ function MyApp({ Component, pageProps }) {
 
   const iuiTreatmentPage = router.pathname === '/treatments/iui-treatment-in-bangalore';
   // const ivfHomePage = router.pathname === '/ivf/home';
-  const isParipoornaPage = router.pathname === '/features/paripoorna';
-  const isYogaGuidePage = router.pathname === '/yoga/guide';
-  /* Pages (e.g. campaign LPs) opt out of all global chrome — nav, footer,
-   * floating widgets, SalesIQ — by setting `Page.hideChrome = true`,
-   * instead of adding another pathname check here. */
+  // const isParipoornaPage = router.pathname === '/features/paripoorna';
+  // const isYogaGuidePage = router.pathname === '/yoga/guide';
+  /* Pages (e.g. campaign LPs) opt out of nav/footer by setting `Page.hideChrome = true`.
+   * (The floating CTAs and SalesIQ bot are no longer gated by this — see below — only Nav/Footer are.) */
   const hideChrome = Component.hideChrome === true;
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname) && !hideChrome;
   const [loading, setLoading] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
   // const [isReady, setIsReady] = useState(false);
-  useEffect(() => {
-    const userAgent = typeof window !== 'undefined' ? navigator.userAgent : '';
-    setIsMobile(/Mobi|Android/i.test(userAgent));
-    // setIsReady(true);
-  }, []);
+  // useEffect(() => {
+  //   const userAgent = typeof window !== 'undefined' ? navigator.userAgent : '';
+  //   setIsMobile(/Mobi|Android/i.test(userAgent));
+  //   // setIsReady(true);
+  // }, []);
 
-  const hideSalesIQPaths = ['/yoga/guide'];
-  const showSalesIQ =
-    !(router.pathname === '/contact/enquiry' && isMobile) &&
-    !hideSalesIQPaths.includes(router.pathname);
+  // Previously: const hideSalesIQPaths = ['/yoga/guide'];
+  // Previously: showSalesIQ = !(router.pathname === '/contact/enquiry' && isMobile) && !hideSalesIQPaths.includes(router.pathname);
+  // The bot CTA is now forced on every page, same as the other floating CTAs below.
+  const showSalesIQ = true;
 
-  const showFloatPhoneRound = !iuiTreatmentPage && !isYogaGuidePage && !hideChrome;
-  /* Lets globals.css align the SalesIQ bubble under FloatPhoneRound whenever both are shown. */
+  // Previously: showFloatPhoneRound = !iuiTreatmentPage && !isYogaGuidePage && !hideChrome;
+  const showFloatPhoneRound = true;
+  // Previously: showFloatWhatsappPill = showFloatPhoneRound && router.pathname !== '/ivf/landing'
+  // (that avoided duplicating /ivf/landing's own WhatsApp button — its own button is now commented out instead, see ivf/landing.tsx).
+  const showFloatWhatsappPill = true;
+  /* Lets globals.css align the SalesIQ bubble under FloatPhoneRound (both are always shown now). */
   useEffect(() => {
-    const shouldAlign = showFloatPhoneRound && shouldDisplay && showSalesIQ;
-    document.documentElement.classList.toggle('gg-phone-round-floats', shouldAlign);
+    document.documentElement.classList.add('gg-phone-round-floats');
     return () => document.documentElement.classList.remove('gg-phone-round-floats');
-  }, [showFloatPhoneRound, shouldDisplay, showSalesIQ]);
+  }, []);
 
   // useEffect(() => {
   //   TagManager.initialize({ gtmId: 'GTM-5T77DVZ' });
@@ -116,8 +119,10 @@ function MyApp({ Component, pageProps }) {
         <link rel='preconnect' href='https://salesiq.zohopublic.com' crossOrigin='anonymous' />
         <link rel='preconnect' href='https://media.graphassets.com' />
       </Head>
-      {!iuiTreatmentPage && !isYogaGuidePage && !hideChrome && <FloatPhone presentation={true} />}
+      {/* Previously: !iuiTreatmentPage && !isYogaGuidePage && !hideChrome */}
+      <FloatPhone presentation={true} />
       {showFloatPhoneRound && <FloatPhoneRound />}
+      {showFloatWhatsappPill && <FloatWhatsappPill />}
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />
@@ -128,12 +133,12 @@ function MyApp({ Component, pageProps }) {
             {!iuiTreatmentPage && !hideChrome && <Footer />}
           </div>
         )}
-        {shouldDisplay && showSalesIQ && <Salesiq />}
+        {/* Previously: shouldDisplay && showSalesIQ */}
+        {showSalesIQ && <Salesiq />}
       </ThemeProvider>
       <SpeedInsights />
-      {!isParipoornaPage && !iuiTreatmentPage && !isYogaGuidePage && !hideChrome && (
-        <FloatRequestCallBack />
-      )}
+      {/* Previously: !isParipoornaPage && !iuiTreatmentPage && !isYogaGuidePage && !hideChrome */}
+      <FloatRequestCallBack />
       {/* {isReady && !iuiTreatmentPage && !ivfHomePage && <FloatWhatsApp />} */}
     </RootLayout>
   );
