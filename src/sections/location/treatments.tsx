@@ -77,14 +77,14 @@ const Data = [
   {
     id: 2,
     treatent: 'ICSI',
-    desc: "Experience the joy of parenthood with GarbhaGudi's IUI treatment, designed to increase your chances of pregnancy in a natural way.",
+    desc: "Take the first step towards parenthood with GarbhaGudi's state-of-the-art ICSI treatment, which offers a high success rate for couples struggling with infertility.",
     link: '/treatments/icsi-treatment-in-bangalore',
     image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms75xwgsh0v407pnuirvx6v1',
   },
   {
     id: 3,
     treatent: 'IUI',
-    desc: "Take the first step towards parenthood with GarbhaGudi's state-of-the-art ICSI treatment, which offers a high success rate for couples struggling with infertility.",
+    desc: "Experience the joy of parenthood with GarbhaGudi's IUI treatment, designed to increase your chances of pregnancy in a natural way.",
     link: '/treatments/iui-treatment-in-bangalore',
     image: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms75xwhhh0v807pn6j9p68jj',
   },
