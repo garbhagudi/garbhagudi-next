@@ -39,7 +39,7 @@ const LexiconPage = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmv811oks0wdx06pdyv2iv57o'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmv93zsnv7dw207o4gttjmni5'
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
@@ -50,7 +50,7 @@ const LexiconPage = () => {
         />
         <meta
           name='twitter:image'
-          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmv811oks0wdx06pdyv2iv57o'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmv93zsnv7dw207o4gttjmni5'
         />
       </Head>
       <BreadCrumbs text1='Resources' link1='/resources' text2='Fertility Lexicon' link2='' />
