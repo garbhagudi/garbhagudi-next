@@ -13,16 +13,14 @@ const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 export const getStaticProps = async ({ params }) => {
   if (!params?.slug || params.slug === '[slug]' || params.slug === 'undefined') {
-    return {
-      notFound: true,
-      revalidate: 60,
-    };
+    return { redirect: { destination: '/', permanent: false } };
   }
   const { data } = await apolloClient.query({
     query: gql`
       query ($slug: String!) {
         diagnosis(where: { slug: $slug }) {
           id
+          slug
           title
           image {
             url
@@ -40,9 +38,7 @@ export const getStaticProps = async ({ params }) => {
     },
   });
   if (data?.error || !data.diagnosis) {
-    return {
-      notFound: true,
-    };
+    return { redirect: { destination: '/', permanent: false } };
   }
   return {
     props: {
@@ -77,100 +73,62 @@ const Diagnosis = ({ diagnosis }) => {
     return <Loading />;
   }
 
-  function addReviewJsonLd() {
-    if (!diagnosis?.title || !diagnosis?.image?.url) {
-      return { __html: '' };
-    }
+  const pageUrl = `https://www.garbhagudi.com/resources/diagnosis/${diagnosis?.slug}`;
+  const description = diagnosis?.content?.text?.slice(0, 160) || '';
+  const imageUrl = diagnosis?.image?.url;
 
-    const title = diagnosis.title.replace(/"/g, '\\"');
-    const image = diagnosis.image.url;
-    const description = diagnosis?.content?.text?.slice(0, 160)?.replace(/"/g, '\\"') || '';
+  // JSON.stringify escapes quotes; "<" is escaped so content can't close the script tag
+  const toJsonLd = (data: object) => ({
+    __html: JSON.stringify(data).replace(/</g, '\\u003c'),
+  });
 
-    return {
-      __html: `{
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "${title}",
-      "image": "${image}",
-      "description": "${description}",
-      "brand": {
-        "@type": "Brand",
-        "name": "GarbhaGudi IVF Centre"
+  const breadcrumbsJsonLd = toJsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Resources',
+        item: 'https://www.garbhagudi.com/resources',
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "604"
-      }
-    }`,
-    };
-  }
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Diagnosis',
+        item: 'https://www.garbhagudi.com/resources/diagnosis',
+      },
+      { '@type': 'ListItem', position: 3, name: diagnosis?.title, item: pageUrl },
+    ],
+  });
 
-  function addBreadcrumbsJsonLd() {
-    return {
-      __html: `{
-          "@context": "https://schema.org/",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": "1",
-              "name": "Resources",
-              "item": "https://www.garbhagudi.com/resources"
-            },
-            {
-              "@type": "ListItem",
-              "position": "2",
-              "name": "Diagnosis",
-              "item": "https://www.garbhagudi.com/resources/diagnosis"
-            },
-            {
-              "@type": "ListItem",
-              "position": "3",
-              "name": "${diagnosis?.title}",
-              "item": "https://www.garbhagudi.com/resources/diagnosis/${diagnosis?.slug}"
-            }
-          ]
-        }`,
-    };
-  }
-  function addDocJsonLd() {
-    return {
-      __html: `{
-  "name": "${diagnosis?.title}",
-  "@type": "Product",
-  "@context": "https://schema.org/",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingCount": "604",
-    "ratingValue": "4.9",
-    "reviewCount": "1200"
-  }
-}`,
-    };
-  }
+  const productJsonLd = toJsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: diagnosis?.title,
+    ...(imageUrl && { image: imageUrl }),
+    description,
+    brand: { '@type': 'Brand', name: 'GarbhaGudi IVF Centre' },
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '604' },
+  });
 
   const title = `${diagnosis?.title} | GarbhaGudi`;
   return (
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='preload' href={diagnosis?.image?.url} as='image' />
-        <link
-          rel='canonical'
-          href={`https://www.garbhagudi.com/resources/diagnosis/${diagnosis?.slug}`}
-        />
+        <link rel='canonical' href={pageUrl} />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={`${diagnosis?.title} | GarbhaGudi IVF Centre`} />
-        <meta name='description' content={diagnosis?.content?.text.slice(0, 160)} />
+        <meta name='description' content={description} />
 
         {/* Open Graph / Facebook */}
 
         <meta property='og:title' content={`${diagnosis?.title} | GarbhaGudi IVF Centre`} />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
-        <meta property='og:url' content='https://garbhagudi.com' />
-        <meta property='og:description' content={diagnosis?.content?.text.slice(0, 160)} />
+        <meta property='og:url' content={pageUrl} />
+        <meta property='og:description' content={description} />
         <meta property='og:type' content='website' />
         <meta property='og:image' content={diagnosis?.image?.url} />
 
@@ -179,21 +137,20 @@ const Diagnosis = ({ diagnosis }) => {
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={`${diagnosis?.title} | GarbhaGudi IVF Centre`} />
-        <meta name='twitter:description' content={diagnosis?.content?.text.slice(0, 160)} />
+        <meta name='twitter:description' content={description} />
         <meta name='twitter:image' content={diagnosis?.image?.url} />
 
         {/* Ld+JSON Data */}
         <script
           id='breadcrumbs-jsonld'
           type='application/ld+json'
-          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+          dangerouslySetInnerHTML={breadcrumbsJsonLd}
         />
         <script
           id='review-jsonld'
           type='application/ld+json'
-          dangerouslySetInnerHTML={addReviewJsonLd()}
+          dangerouslySetInnerHTML={productJsonLd}
         />
-        <script type='application/ld+json' dangerouslySetInnerHTML={addDocJsonLd()} />
       </Head>
       <BreadCrumbs
         link1='/resources/diagnosis'
@@ -303,7 +260,7 @@ const Diagnosis = ({ diagnosis }) => {
             </h1>
             <figure>
               <Image
-                quality={85}
+                quality={75}
                 className='mb-5 mt-10 w-full rounded-lg'
                 src={diagnosis?.image?.url}
                 alt={diagnosis?.title}

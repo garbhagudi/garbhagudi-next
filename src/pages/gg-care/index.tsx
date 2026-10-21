@@ -20,11 +20,6 @@ const IndexPage = () => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link
-          rel='preload'
-          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmgf3psd07pl3frcbfe7'
-          as='image'
-        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>GG CARE - Committed to Couple Delight</title>
         <meta

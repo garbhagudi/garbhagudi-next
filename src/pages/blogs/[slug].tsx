@@ -472,7 +472,7 @@ const Blog = ({ blog }) => {
                 </div>
                 <div className='relative my-8 w-full rounded-lg'>
                   <Image
-                    quality={85}
+                    quality={75}
                     src={blog?.image?.url}
                     alt={blog?.title}
                     width={1280}

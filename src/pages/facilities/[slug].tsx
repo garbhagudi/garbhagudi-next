@@ -177,7 +177,6 @@ const Blog = ({ article }: BlogProps) => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link rel='preload' href={imageUrl} as='image' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
         <meta name='title' content={`${article?.metaTitle}`} />
@@ -312,7 +311,7 @@ const Blog = ({ article }: BlogProps) => {
               </span>
             </h1>
             <Image
-              quality={85}
+              quality={75}
               className='mb-5 mt-10 w-full rounded-lg'
               src={imageUrl}
               alt={article?.imageAlt}

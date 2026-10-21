@@ -121,6 +121,17 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Broken links built from missing data (e.g. /resources/diagnosis/undefined) -> home
+      {
+        source: '/:path*/:bad(undefined|null)',
+        destination: '/',
+        permanent: false,
+      },
+      {
+        source: '/:path*/:bad(undefined|null)/:rest*',
+        destination: '/',
+        permanent: false,
+      },
       {
         source: '/ivf-center-bangalore',
         destination: '/lp/ivf-centre-bangalore',

@@ -175,11 +175,6 @@ const Ivf = () => {
   return (
     <div>
       <Head>
-        <link
-          rel='preload'
-          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8qj586507pl03hfxicv'
-          as='image'
-        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Best IVF Treatment In Bangalore</title>
         <meta name='title' content='Best IVF Treatment In Bangalore' />

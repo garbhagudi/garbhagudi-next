@@ -6,7 +6,7 @@ const Banner = () => {
     <div>
       <section className='relative'>
         <Image
-          quality={85}
+          quality={70}
           src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8qj586507pl03hfxicv'
           alt=''
           aria-hidden='true'
