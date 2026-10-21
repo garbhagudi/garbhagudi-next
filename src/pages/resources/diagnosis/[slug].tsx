@@ -79,7 +79,7 @@ const Diagnosis = ({ diagnosis }) => {
 
   // JSON.stringify escapes quotes; "<" is escaped so content can't close the script tag
   const toJsonLd = (data: object) => ({
-    __html: JSON.stringify(data).replace(/</g, '\u003c'),
+    __html: JSON.stringify(data).replace(/</g, '\\u003c'),
   });
 
   const breadcrumbsJsonLd = toJsonLd({
