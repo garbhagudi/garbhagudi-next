@@ -199,11 +199,6 @@ const InfertilityPage = ({ doctors }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link
-          rel='preload'
-          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vednb58v707plopapzgdk'
-          as='image'
-        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Best Infertility Treatment In Bangalore</title>
         <meta

@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <div className='relative shadow-2xl'>
       <Image
-        quality={85}
+        quality={70}
         src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vednb58v707plopapzgdk'
         alt=''
         aria-hidden='true'

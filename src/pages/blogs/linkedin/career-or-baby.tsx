@@ -9,7 +9,7 @@ const Share = dynamic(() => import('components/share'), { ssr: false });
 
 const BLOG_SLUG = 'career-or-baby';
 const FALLBACK_HEADING = 'Career or Baby ?';
-const FALLBACK_TITLE = 'Career or Baby? | GarbhaGudi IVF Centre';
+const FALLBACK_TITLE = 'Career or Baby? | GarbhaGudi';
 const FALLBACK_DESCRIPTION =
   'Today’s women and men are successful beyond imagination, and there comes a time when they have to choose between parenthood and a career.';
 

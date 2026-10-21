@@ -17,7 +17,7 @@ const Banner = () => {
             alt={MOTHERS_DAY_BANNER_ALT}
             width={731}
             height={1024}
-            quality={85}
+            quality={20}
             priority
             fetchPriority='high'
             sizes='100vw'

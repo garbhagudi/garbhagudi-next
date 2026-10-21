@@ -17,11 +17,6 @@ const Locations = ({ branches }) => {
     <div>
       <Head>
         {/* Primary Tags */}
-        <link
-          rel='preload'
-          href='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vb8qj586507pl03hfxicv'
-          as='image'
-        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Locations | GarbhaGudi IVF Centre</title>
         <meta name='title' content='Locations | GarbhaGudi IVF Centre' />
@@ -83,7 +78,7 @@ const Locations = ({ branches }) => {
               <div className='mx-auto flex max-w-sm flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-brandPink'>
                 <div className='overflow-hidden'>
                   <Image
-                    quality={85}
+                    quality={50}
                     src={items?.branchPictureUrl}
                     alt={items?.title}
                     width={480}
