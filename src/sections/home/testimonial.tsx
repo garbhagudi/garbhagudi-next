@@ -32,6 +32,7 @@ const Testimonial = () => {
             renderCenterLeftControls={({ previousSlide }) => (
               <button
                 onClick={previousSlide}
+                aria-label='Previous testimonial'
                 className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 dark:bg-brandPurple lg:flex'
               >
                 <HiChevronLeft className='mr-1' />
@@ -40,6 +41,7 @@ const Testimonial = () => {
             renderCenterRightControls={({ nextSlide }) => (
               <button
                 onClick={nextSlide}
+                aria-label='Next testimonial'
                 className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 dark:bg-brandPurple lg:flex'
               >
                 <HiChevronRight className='ml-1' />

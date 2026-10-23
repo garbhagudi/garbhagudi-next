@@ -60,7 +60,9 @@ const BlogsSnip = ({ posts, slug }: postsProps) => {
           ))}
         </div>
         <div className='mx-auto mb-6 mt-6 flex w-32 items-center justify-center rounded-lg border-2 border-gg-500 bg-transparent px-3 py-2 text-center font-content font-bold text-gg-500 duration-300 hover:-translate-y-1 hover:bg-gg-500 hover:text-white hover:shadow-2xl hover:shadow-gg-500 hover:transition-all dark:border-gg-400 dark:text-gg-400 dark:hover:bg-gg-400 dark:hover:text-gray-800'>
-          <Link href={`/blogs/page/1?author=${slug}`}>Read More</Link>
+          <Link href={`/blogs/page/1?author=${slug}`}>
+            Read More<span className='sr-only'> Articles</span>
+          </Link>
         </div>
       </div>
     </div>

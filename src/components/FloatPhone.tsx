@@ -20,7 +20,7 @@ const FloatPhone = ({ presentation }: { presentation?: boolean }) => {
       <div
         className={`${
           presentation && 'fixed left-0 top-20'
-        } z-10 grid w-full animate-shake cursor-pointer grid-cols-2 items-center justify-center bg-gg-500 px-2 font-content font-bold text-white transition-opacity ease-in hover:opacity-100 md:hidden`}
+        } z-10 grid w-full animate-shake cursor-pointer grid-cols-2 items-center justify-center bg-gg-600 px-2 font-content font-bold text-white transition-opacity ease-in hover:opacity-100 md:hidden`}
       >
         {/* Book Appointment Button */}
         <button

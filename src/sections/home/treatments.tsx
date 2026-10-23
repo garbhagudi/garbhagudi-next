@@ -31,12 +31,12 @@ const TreatmentOptions = () => {
                 </div>
                 <div className='px-3 text-center text-base'>{items?.desc}</div>
               </div>
-              <div className='w-full rounded-b-xl border bg-gg-500 py-1 text-center dark:border-gray-800 dark:bg-gray-500'>
+              <div className='w-full rounded-b-xl border bg-gg-600 text-center dark:border-gray-800 dark:bg-gray-500'>
                 <Link
                   href={items?.link}
-                  className='font-content font-bold text-white dark:text-white'
+                  className='block py-1 font-content font-bold text-white dark:text-white'
                 >
-                  Learn More
+                  Learn More<span className='sr-only'> about {items?.treatent}</span>
                 </Link>
               </div>
             </div>
@@ -46,7 +46,7 @@ const TreatmentOptions = () => {
           href={'/treatments'}
           className='mx-auto mb-6 flex w-32 items-center justify-center rounded-lg border-2 border-gg-500 bg-transparent px-3 py-2 text-center font-content font-bold text-gg-500 duration-300 hover:-translate-y-1 hover:bg-gg-500 hover:shadow-2xl hover:shadow-gg-500 hover:transition-all dark:border-gg-400 dark:text-gg-400 dark:hover:bg-gg-400 dark:hover:text-gray-800'
         >
-          See More
+          See More<span className='sr-only'> Services</span>
         </Link>
       </div>
     </div>
