@@ -11,5 +11,6 @@ module.exports = {
     '/lp/ivf-centre-bangalore',
     '/lp/ivf-treatment',
     '/lp/ivf-chat-gpt',
+    '/lp/hosur',
   ],
 };
