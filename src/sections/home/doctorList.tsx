@@ -171,6 +171,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                 renderCenterLeftControls={({ previousSlide }) => (
                   <button
                     onClick={previousSlide}
+                    aria-label='Previous doctor'
                     className='ml-3 flex h-10 w-10 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-3xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 dark:bg-brandPurple'
                   >
                     <HiChevronLeft className='mr-1' />
@@ -179,6 +180,7 @@ const DoctorList = (doctorList: doctorListProps) => {
                 renderCenterRightControls={({ nextSlide }) => (
                   <button
                     onClick={nextSlide}
+                    aria-label='Next doctor'
                     className='mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-3xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 dark:bg-brandPurple'
                   >
                     <HiChevronRight className='ml-1' />

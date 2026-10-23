@@ -167,7 +167,7 @@ const STYLES = {
     consentLabel: 'mt-4 flex justify-center space-x-3',
     consentBox: 'h-6 w-6 cursor-pointer accent-gg-500 checked:border-gg-500 checked:bg-gg-500',
     consentText: 'text-justify text-sm text-gray-500',
-    legalLink: 'px-1 text-gg-400',
+    legalLink: 'px-1 text-gg-400 underline',
     buttonWrap: 'mb-6 mt-6 flex items-center justify-center space-x-4',
     button:
       'flex items-center justify-center gap-2 rounded-md bg-gg-500 px-6 py-2 text-base font-bold text-white',

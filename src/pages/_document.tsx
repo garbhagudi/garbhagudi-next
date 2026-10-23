@@ -31,7 +31,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           /> */}
           <Script
             id='hotjar'
-            strategy='afterInteractive'
+            strategy='lazyOnload'
             dangerouslySetInnerHTML={{
               __html: `
             (function(h,o,t,j,a,r){
@@ -53,7 +53,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }}
           /> */}
           <Main />
-          <script async src='https://crm.zoho.com/crm/javascript/zcga.js'></script>
+          <Script
+            id='zoho-zcga'
+            src='https://crm.zoho.com/crm/javascript/zcga.js'
+            strategy='lazyOnload'
+          />
           <NextScript />
         </body>
       </Html>
