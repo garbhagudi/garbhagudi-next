@@ -18,13 +18,14 @@ interface doctorListProps {
       imageAlt: string;
     },
   ];
+  city?: string;
 }
 
 /* nuka-carousel v7 takes a single numeric slidesToShow, so we size it to the
  * viewport ourselves: 1 on mobile, 2 on tablet, 4 on desktop. */
 const slidesForWidth = (w: number) => (w >= 1024 ? 4 : w >= 640 ? 2 : 1);
 
-const DoctorList = (doctorList: doctorListProps) => {
+const DoctorList = ({ city = 'Bangalore', ...doctorList }: doctorListProps) => {
   const defaultControlsConfig = {
     pagingDotsStyle: {
       display: 'none',
@@ -63,9 +64,9 @@ const DoctorList = (doctorList: doctorListProps) => {
                 Meet our Fertility Experts
               </h2>
               <p className='text-md font-content text-gray-800 dark:text-gray-200'>
-                Our team of IVF specialists in Bangalore have been known for their extensive
-                clinical experience and research contributions and their success in treating the
-                most challenging fertility cases.
+                Our team of IVF specialists in {city} have been known for their extensive clinical
+                experience and research contributions and their success in treating the most
+                challenging fertility cases.
               </p>
             </div>
             <div ref={sliderRef} className='relative mx-auto w-full'>

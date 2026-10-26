@@ -1,6 +1,21 @@
 import React from 'react';
 
-const RelatedSearches = () => {
+interface RelatedSearchesProps {
+  city?: string;
+}
+
+const SEARCH_LABELS = [
+  'Fertility Hospital in',
+  'Fertility Doctor in',
+  'Infertility Treatment in',
+  'Fertility Clinic in',
+  'IVF Treatment in',
+  'Low Cost IVF Treatment in',
+];
+
+const RelatedSearches = ({ city = 'Bangalore' }: RelatedSearchesProps) => {
+  const list = SEARCH_LABELS.map((label, i) => ({ id: i + 1, item: `${label} ${city}` }));
+
   return (
     <div className='mx-auto max-w-7xl'>
       <h2 className='py-8 text-center font-heading text-4xl font-bold lg:py-14'>
@@ -21,30 +36,3 @@ const RelatedSearches = () => {
 };
 
 export default RelatedSearches;
-
-const list = [
-  {
-    id: 1,
-    item: 'Fertility Hospital in Bangalore',
-  },
-  {
-    id: 2,
-    item: 'Fertility Doctor in Bangalore',
-  },
-  {
-    id: 3,
-    item: 'Infertility Treatment in Bangalore',
-  },
-  {
-    id: 4,
-    item: 'Fertility Clinic in Bangalore',
-  },
-  {
-    id: 5,
-    item: 'IVF Treatment in Bangalore',
-  },
-  {
-    id: 6,
-    item: 'Low Cost IVF Treatment in Bangalore',
-  },
-];
