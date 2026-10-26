@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import { useAfterLoad } from 'lib/useAfterLoad';
 import HomeComponent from 'sections/home';
 import apolloClient from 'lib/apollo-graphcms';
 import { filterExcludedVideos } from 'lib/excluded-videos';
@@ -17,6 +18,7 @@ const FloatPhone = dynamic(() => import('components/FloatPhone'), {
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
 const Home = ({ data, testimonials }) => {
+  const afterLoad = useAfterLoad();
   function addBreadcrumbJsonLd() {
     return {
       __html: `{
@@ -171,8 +173,8 @@ const Home = ({ data, testimonials }) => {
       <FloatPhone presentation={false} />
       <BannerComponent banners={data.banners} />
       <HomeComponent testimonialPassthrough={testimonials} blogsPassthrough={data.blogs} />
-      <DoctorList doctors={data.doctors} />
-      <Faq />
+      {afterLoad && <DoctorList doctors={data.doctors} />}
+      {afterLoad && <Faq />}
     </div>
   );
 };

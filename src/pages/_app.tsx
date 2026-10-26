@@ -8,6 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 // import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
+import { useAfterLoad } from 'lib/useAfterLoad';
 // import FloatWhatsApp from 'components/FloatWhatsapp';
 
 // Dynamically import components
@@ -45,6 +46,8 @@ function MyApp({ Component, pageProps }) {
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname) && !hideChrome;
   const [loading, setLoading] = useState(false);
+  // Floating widgets and the footer are client-only and non-critical: mount them after load.
+  const afterLoad = useAfterLoad();
   // const [isMobile, setIsMobile] = useState(false);
   // const [isReady, setIsReady] = useState(false);
   // useEffect(() => {
@@ -119,8 +122,8 @@ function MyApp({ Component, pageProps }) {
       </Head>
       {/* Previously: !iuiTreatmentPage && !isYogaGuidePage && !hideChrome */}
       <FloatPhone presentation={true} />
-      {showFloatPhoneRound && <FloatPhoneRound />}
-      {showFloatWhatsappPill && <FloatWhatsappPill />}
+      {afterLoad && showFloatPhoneRound && <FloatPhoneRound />}
+      {afterLoad && showFloatWhatsappPill && <FloatWhatsappPill />}
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />
@@ -128,7 +131,7 @@ function MyApp({ Component, pageProps }) {
           <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
             {shouldDisplay && <Nav />}
             <Component {...pageProps} />
-            {!iuiTreatmentPage && !hideChrome && <Footer />}
+            {afterLoad && !iuiTreatmentPage && !hideChrome && <Footer />}
           </div>
         )}
         {/* Previously: shouldDisplay && showSalesIQ */}
@@ -136,7 +139,7 @@ function MyApp({ Component, pageProps }) {
       </ThemeProvider>
       <SpeedInsights />
       {/* Previously: !isParipoornaPage && !iuiTreatmentPage && !isYogaGuidePage && !hideChrome */}
-      <FloatRequestCallBack />
+      {afterLoad && <FloatRequestCallBack />}
       {/* {isReady && !iuiTreatmentPage && !ivfHomePage && <FloatWhatsApp />} */}
     </RootLayout>
   );
