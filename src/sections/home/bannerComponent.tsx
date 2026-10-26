@@ -30,16 +30,10 @@ interface bannerProps {
 const BannerImage = ({
   banner,
   first,
-  deferred,
 }: {
   banner: bannerProps['banners'][number];
   first?: boolean;
-  deferred?: boolean;
 }) => {
-  // Slides after the first (and their carousel clones) wait for the page load so their
-  // images don't compete with the LCP image for bandwidth.
-  if (deferred) return null;
-
   // `sizes` is required: without it getImageProps emits x-descriptors at
   // [width, width*2], so a phone would pull the 1920/3840-wide banner. Each
   // <source> is media-scoped to one breakpoint, so 100vw is accurate for both.
@@ -92,6 +86,22 @@ const BannerComponent = (bannerData: bannerProps) => {
     return () => window.removeEventListener('load', onLoad);
   }, []);
 
+  // Until the page has loaded, only the first slide is rendered as plain markup (no carousel
+  // JS to wait for); the full carousel then takes over, so the LCP image can paint early and
+  // the other slides' images don't compete with it.
+  if (!pageLoaded && bannerData?.banners?.length) {
+    const firstBanner = bannerData.banners[0];
+    return (
+      <div>
+        <div className='relative w-full overflow-hidden border-0 shadow-2xl drop-shadow-2xl'>
+          <Link href={firstBanner?.url || '#'} target='_blank' rel='noreferrer'>
+            <BannerImage banner={firstBanner} first />
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   const defaultControlsConfig = {
     pagingDotsStyle: {
       display: 'none',
@@ -131,11 +141,7 @@ const BannerComponent = (bannerData: bannerProps) => {
         {bannerData ? (
           bannerData.banners.map((banner, index) => (
             <Link href={banner?.url || '#'} target='_blank' rel='noreferrer' key={banner.id}>
-              <BannerImage
-                banner={banner}
-                first={index === 0}
-                deferred={index > 0 && !pageLoaded}
-              />
+              <BannerImage banner={banner} first={index === 0} />
             </Link>
           ))
         ) : (
