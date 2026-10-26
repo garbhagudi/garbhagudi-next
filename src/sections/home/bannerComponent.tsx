@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { getImageProps } from 'next/image';
 import Link from 'next/link';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
@@ -29,10 +30,16 @@ interface bannerProps {
 const BannerImage = ({
   banner,
   first,
+  deferred,
 }: {
   banner: bannerProps['banners'][number];
   first?: boolean;
+  deferred?: boolean;
 }) => {
+  // Slides after the first (and their carousel clones) wait for the page load so their
+  // images don't compete with the LCP image for bandwidth.
+  if (deferred) return null;
+
   // `sizes` is required: without it getImageProps emits x-descriptors at
   // [width, width*2], so a phone would pull the 1920/3840-wide banner. Each
   // <source> is media-scoped to one breakpoint, so 100vw is accurate for both.
@@ -74,6 +81,17 @@ const BannerImage = ({
 };
 
 const BannerComponent = (bannerData: bannerProps) => {
+  const [pageLoaded, setPageLoaded] = useState(false);
+  useEffect(() => {
+    if (document.readyState === 'complete') {
+      setPageLoaded(true);
+      return;
+    }
+    const onLoad = () => setPageLoaded(true);
+    window.addEventListener('load', onLoad);
+    return () => window.removeEventListener('load', onLoad);
+  }, []);
+
   const defaultControlsConfig = {
     pagingDotsStyle: {
       display: 'none',
@@ -113,7 +131,11 @@ const BannerComponent = (bannerData: bannerProps) => {
         {bannerData ? (
           bannerData.banners.map((banner, index) => (
             <Link href={banner?.url || '#'} target='_blank' rel='noreferrer' key={banner.id}>
-              <BannerImage banner={banner} first={index === 0} />
+              <BannerImage
+                banner={banner}
+                first={index === 0}
+                deferred={index > 0 && !pageLoaded}
+              />
             </Link>
           ))
         ) : (
