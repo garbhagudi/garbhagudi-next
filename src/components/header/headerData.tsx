@@ -127,17 +127,13 @@ export const Contact = [
   {
     name: 'Training Program',
     href: 'https://ggirhr.com',
+    newTab: true,
     icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8kwhwf3z9r07ple7jfk7np',
   },
   {
     name: 'Partnership',
     href: '/contact/partnership',
     icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8kwhy33z9v07pl4hh5l11s',
-  },
-  {
-    name: 'Media Kit',
-    href: '/contact/media-kit',
-    icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8kwhyo3z9z07plu7dwlnef',
   },
 ];
 
@@ -212,6 +208,11 @@ export const Resources = [
     description: 'Infertility and Fertility Care',
     href: '/resources/fertility-lexicon',
     icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmsh7c6pb4ji206mrjr5af8ya',
+  },
+  {
+    name: 'Media Kit',
+    href: '/contact/media-kit',
+    icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8kwhyo3z9z07plu7dwlnef',
   },
 ];
 
