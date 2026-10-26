@@ -35,6 +35,10 @@ import {
   utmFromWindowLocation,
   type UtmMap,
 } from 'lib/zohoFormUtm';
+import {
+  generateConversionOrderId,
+  reportGoogleAdsConversion,
+} from 'lib/reportGoogleAdsConversion';
 
 /* `useLayoutEffect` would warn during SSR; this falls back to `useEffect`
  * on the server so hidden state is synced as soon as the DOM exists. */
@@ -269,6 +273,16 @@ const Form = ({ showEmail = true, variant = 'default', onSubmitLead }: FormProps
       const filled = document.getElementById('zc_gad') as HTMLInputElement | null;
       zcGadEl.value = filled?.value || fresh.gclid;
     }
+
+    /* Fire the Google Ads click-conversion upload before the page
+     * navigates away — `form.submit()` below is a native POST, so a
+     * regular (non-keepalive) fetch here could get cancelled mid-flight. */
+    reportGoogleAdsConversion({
+      gclid: zcGadEl?.value || fresh.gclid,
+      orderId: generateConversionOrderId(),
+      phone: values.phone,
+      email: values.email,
+    });
 
     /* Native browser POST — bypasses this React handler so we don't loop
      * back through validation, and Zoho's redirect (`zf_redirect_url`)
