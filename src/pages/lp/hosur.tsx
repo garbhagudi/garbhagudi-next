@@ -89,11 +89,9 @@ export default function HosurLandingPage() {
 
 /* No site nav/footer — see hideChrome in _app. The page brings its own link-free Header. */
 HosurLandingPage.hideChrome = true;
+/* The site's mobile FloatPhone bar shows the Bangalore number; this page uses the Hosur one. */
+HosurLandingPage.hideFloatPhone = true;
 
-/* Only these two doctors exist in the Tamil site's Hygraph project, which this repo's
- * ENDPOINT can't query (this repo's CMS has the full ~25-doctor roster). Pinned like the
- * banner, with Tamil names and assets as tamil.garbhagudi.com shows them. Both slugs
- * resolve to /fertility-experts/* pages on this site. */
 const DOCTORS = [
   {
     id: 'cmep8bb5445vn07plz0chd8mf',

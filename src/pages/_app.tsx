@@ -36,26 +36,11 @@ function MyApp({ Component, pageProps }) {
   ];
 
   const iuiTreatmentPage = router.pathname === '/treatments/iui-treatment-in-bangalore';
-  // const ivfHomePage = router.pathname === '/ivf/home';
-  // const isParipoornaPage = router.pathname === '/features/paripoorna';
-  // const isYogaGuidePage = router.pathname === '/yoga/guide';
-  /* Pages (e.g. campaign LPs) opt out of nav/footer by setting `Page.hideChrome = true`.
-   * (The floating CTAs and SalesIQ bot are no longer gated by this — see below — only Nav/Footer are.) */
   const hideChrome = Component.hideChrome === true;
+  const showFloatPhone = Component.hideFloatPhone !== true;
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname) && !hideChrome;
   const [loading, setLoading] = useState(false);
-  // const [isMobile, setIsMobile] = useState(false);
-  // const [isReady, setIsReady] = useState(false);
-  // useEffect(() => {
-  //   const userAgent = typeof window !== 'undefined' ? navigator.userAgent : '';
-  //   setIsMobile(/Mobi|Android/i.test(userAgent));
-  //   // setIsReady(true);
-  // }, []);
-
-  // Previously: const hideSalesIQPaths = ['/yoga/guide'];
-  // Previously: showSalesIQ = !(router.pathname === '/contact/enquiry' && isMobile) && !hideSalesIQPaths.includes(router.pathname);
-  // The bot CTA is now forced on every page, same as the other floating CTAs below.
   const showSalesIQ = true;
 
   // Previously: showFloatPhoneRound = !iuiTreatmentPage && !isYogaGuidePage && !hideChrome;
@@ -68,10 +53,6 @@ function MyApp({ Component, pageProps }) {
     document.documentElement.classList.add('gg-phone-round-floats');
     return () => document.documentElement.classList.remove('gg-phone-round-floats');
   }, []);
-
-  // useEffect(() => {
-  //   TagManager.initialize({ gtmId: 'GTM-5T77DVZ' });
-  // }, [router.asPath]);
 
   useEffect(() => {
     const start = () => setLoading(true);
@@ -120,7 +101,7 @@ function MyApp({ Component, pageProps }) {
         <link rel='preconnect' href='https://media.graphassets.com' />
       </Head>
       {/* Previously: !iuiTreatmentPage && !isYogaGuidePage && !hideChrome */}
-      <FloatPhone presentation={true} />
+      {showFloatPhone && <FloatPhone presentation={true} />}
       {showFloatPhoneRound && <FloatPhoneRound />}
       {showFloatWhatsappPill && <FloatWhatsappPill />}
       <ThemeProvider attribute='class' defaultTheme='light'>
