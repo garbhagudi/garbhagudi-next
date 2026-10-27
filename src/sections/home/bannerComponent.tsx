@@ -77,18 +77,34 @@ const BannerImage = ({
 const BannerComponent = (bannerData: bannerProps) => {
   const [pageLoaded, setPageLoaded] = useState(false);
   useEffect(() => {
-    if (document.readyState === 'complete') {
+    // The carousel remounts the first slide's <img>, and PageSpeed reported that new element
+    // (not the static one) as the LCP at 5.6s, with 1.6s of render delay. So the swap waits
+    // until the visitor interacts, or a fallback timer, which lets the static image settle as
+    // the LCP and keeps carousel JS off the critical path. The 5s autoplay interval is why
+    // the delay isn't noticeable.
+    const events = ['pointerdown', 'touchstart', 'keydown', 'scroll', 'mousemove'] as const;
+    let timer: ReturnType<typeof setTimeout>;
+    const start = () => {
+      cleanup();
       setPageLoaded(true);
-      return;
-    }
-    const onLoad = () => setPageLoaded(true);
-    window.addEventListener('load', onLoad);
-    return () => window.removeEventListener('load', onLoad);
+    };
+    const cleanup = () => {
+      clearTimeout(timer);
+      events.forEach((e) => window.removeEventListener(e, start));
+      window.removeEventListener('load', onLoad);
+    };
+    const onLoad = () => {
+      timer = setTimeout(start, 6000);
+    };
+    events.forEach((e) => window.addEventListener(e, start, { passive: true, once: true }));
+    if (document.readyState === 'complete') onLoad();
+    else window.addEventListener('load', onLoad);
+    return cleanup;
   }, []);
 
-  // Until the page has loaded, only the first slide is rendered as plain markup (no carousel
-  // JS to wait for); the full carousel then takes over, so the LCP image can paint early and
-  // the other slides' images don't compete with it.
+  // Until then, only the first slide is rendered as plain markup (no carousel JS to wait for);
+  // the full carousel then takes over, so the LCP image can paint early and the other slides'
+  // images don't compete with it.
   if (!pageLoaded && bannerData?.banners?.length) {
     const firstBanner = bannerData.banners[0];
     return (
