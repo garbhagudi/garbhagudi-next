@@ -27,9 +27,12 @@ const benne = Benne({
   weight: ['400'],
 });
 
+// Not used on most pages (Figtree overrides it on the wrapper), so skip the preload;
+// it still loads on demand where something actually uses it.
 const nunitoSans = Nunito_Sans({
   weight: ['400', '500', '600', '800'],
   subsets: ['latin'],
+  preload: false,
 });
 
 const figtree = Figtree({

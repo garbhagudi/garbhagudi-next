@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { getImageProps } from 'next/image';
 import Link from 'next/link';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
@@ -11,6 +12,8 @@ interface bannerProps {
       url: string;
       image: {
         url: string;
+        width?: number | null;
+        height?: number | null;
       };
       mobileImage?: {
         url: string;
@@ -24,22 +27,36 @@ interface bannerProps {
 
 // Art-directed banner: desktop creative ≥768px (Tailwind `md`), mobile
 // creative below — the browser downloads only the matching source.
-const BannerImage = ({ banner }: { banner: bannerProps['banners'][number] }) => {
+const BannerImage = ({
+  banner,
+  first,
+}: {
+  banner: bannerProps['banners'][number];
+  first?: boolean;
+}) => {
   // `sizes` is required: without it getImageProps emits x-descriptors at
   // [width, width*2], so a phone would pull the 1920/3840-wide banner. Each
   // <source> is media-scoped to one breakpoint, so 100vw is accurate for both.
-  const common = { alt: banner?.title, priority: true, quality: 85, sizes: '100vw' };
+  // getImageProps adds no priority hint or preload, so the first (LCP) slide asks for
+  // high priority itself and the other slides yield bandwidth to it.
+  const common = {
+    alt: banner?.title,
+    priority: true,
+    quality: 85,
+    sizes: '100vw',
+    fetchPriority: first ? ('high' as const) : ('low' as const),
+  };
   const { props: desktop } = getImageProps({
     ...common,
     src: banner?.image?.url,
-    width: 1920,
-    height: 1080,
+    width: banner?.image?.width || 1920,
+    height: banner?.image?.height || 1080,
   });
   const { props: mobile } = getImageProps({
     ...common,
     src: banner?.mobileImage?.url || banner?.image?.url,
-    width: banner?.mobileImage?.width || 1920,
-    height: banner?.mobileImage?.height || 1080,
+    width: banner?.mobileImage?.width || banner?.image?.width || 1920,
+    height: banner?.mobileImage?.height || banner?.image?.height || 1080,
   });
 
   return (
@@ -58,6 +75,49 @@ const BannerImage = ({ banner }: { banner: bannerProps['banners'][number] }) => 
 };
 
 const BannerComponent = (bannerData: bannerProps) => {
+  const [pageLoaded, setPageLoaded] = useState(false);
+  useEffect(() => {
+    // The carousel remounts the first slide's <img>, and PageSpeed reported that new element
+    // (not the static one) as the LCP at 5.6s, with 1.6s of render delay. So the swap waits
+    // until the visitor interacts, or a fallback timer, which lets the static image settle as
+    // the LCP and keeps carousel JS off the critical path. The 5s autoplay interval is why
+    // the delay isn't noticeable.
+    const events = ['pointerdown', 'touchstart', 'keydown', 'scroll', 'mousemove'] as const;
+    let timer: ReturnType<typeof setTimeout>;
+    const start = () => {
+      cleanup();
+      setPageLoaded(true);
+    };
+    const cleanup = () => {
+      clearTimeout(timer);
+      events.forEach((e) => window.removeEventListener(e, start));
+      window.removeEventListener('load', onLoad);
+    };
+    const onLoad = () => {
+      timer = setTimeout(start, 6000);
+    };
+    events.forEach((e) => window.addEventListener(e, start, { passive: true, once: true }));
+    if (document.readyState === 'complete') onLoad();
+    else window.addEventListener('load', onLoad);
+    return cleanup;
+  }, []);
+
+  // Until then, only the first slide is rendered as plain markup (no carousel JS to wait for);
+  // the full carousel then takes over, so the LCP image can paint early and the other slides'
+  // images don't compete with it.
+  if (!pageLoaded && bannerData?.banners?.length) {
+    const firstBanner = bannerData.banners[0];
+    return (
+      <div>
+        <div className='relative w-full overflow-hidden border-0 shadow-2xl drop-shadow-2xl'>
+          <Link href={firstBanner?.url || '#'} target='_blank' rel='noreferrer'>
+            <BannerImage banner={firstBanner} first />
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   const defaultControlsConfig = {
     pagingDotsStyle: {
       display: 'none',
@@ -78,6 +138,7 @@ const BannerComponent = (bannerData: bannerProps) => {
         renderCenterLeftControls={({ previousSlide }) => (
           <button
             onClick={previousSlide}
+            aria-label='Previous banner'
             className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 md:flex'
           >
             <HiChevronLeft className='mr-1' />
@@ -86,6 +147,7 @@ const BannerComponent = (bannerData: bannerProps) => {
         renderCenterRightControls={({ nextSlide }) => (
           <button
             onClick={nextSlide}
+            aria-label='Next banner'
             className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 md:flex'
           >
             <HiChevronRight className='ml-1' />
@@ -93,9 +155,9 @@ const BannerComponent = (bannerData: bannerProps) => {
         )}
       >
         {bannerData ? (
-          bannerData.banners.map((banner) => (
+          bannerData.banners.map((banner, index) => (
             <Link href={banner?.url || '#'} target='_blank' rel='noreferrer' key={banner.id}>
-              <BannerImage banner={banner} />
+              <BannerImage banner={banner} first={index === 0} />
             </Link>
           ))
         ) : (

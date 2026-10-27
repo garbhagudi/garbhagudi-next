@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import { useAfterLoad } from 'lib/useAfterLoad';
 import HomeComponent from 'sections/home';
 import apolloClient from 'lib/apollo-graphcms';
 import { filterExcludedVideos } from 'lib/excluded-videos';
@@ -7,11 +8,17 @@ import { gql } from '@apollo/client';
 import BannerComponent from 'sections/home/bannerComponent';
 const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
 const DoctorList = dynamic(() => import('sections/home/doctorList'), { ssr: false });
-const FloatPhone = dynamic(() => import('components/FloatPhone'), { ssr: false });
+// The in-flow bar is 68px tall on mobile (hidden from md up); reserving that space
+// while it loads stops it pushing the banner down (layout shift).
+const FloatPhone = dynamic(() => import('components/FloatPhone'), {
+  ssr: false,
+  loading: () => <div className='h-[68px] md:hidden' aria-hidden='true' />,
+});
 
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
 const Home = ({ data, testimonials }) => {
+  const afterLoad = useAfterLoad();
   function addBreadcrumbJsonLd() {
     return {
       __html: `{
@@ -166,8 +173,8 @@ const Home = ({ data, testimonials }) => {
       <FloatPhone presentation={false} />
       <BannerComponent banners={data.banners} />
       <HomeComponent testimonialPassthrough={testimonials} blogsPassthrough={data.blogs} />
-      <DoctorList doctors={data.doctors} />
-      <Faq />
+      {afterLoad && <DoctorList doctors={data.doctors} />}
+      {afterLoad && <Faq />}
     </div>
   );
 };
@@ -199,6 +206,8 @@ export const getStaticProps = async () => {
           url
           image {
             url
+            width
+            height
           }
           mobileImage {
             url

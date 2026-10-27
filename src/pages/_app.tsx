@@ -8,6 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeProvider from 'styles/theme-provider';
 // import TagManager from 'react-gtm-module';
 import RootLayout from 'components/layout';
+import { useAfterLoad } from 'lib/useAfterLoad';
 // import FloatWhatsApp from 'components/FloatWhatsapp';
 
 // Dynamically import components
@@ -45,6 +46,8 @@ function MyApp({ Component, pageProps }) {
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname) && !hideChrome;
   const [loading, setLoading] = useState(false);
+  // Floating widgets and the footer are client-only and non-critical: mount them after load.
+  const afterLoad = useAfterLoad();
   // const [isMobile, setIsMobile] = useState(false);
   // const [isReady, setIsReady] = useState(false);
   // useEffect(() => {
@@ -97,7 +100,7 @@ function MyApp({ Component, pageProps }) {
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NSZH8N9M');",
+              "window.dataLayer=window.dataLayer||[];(function(w,d,s,l,i){var loaded=false;function load(){if(loaded)return;loaded=true;['scroll','pointerdown','keydown','touchstart'].forEach(function(e){w.removeEventListener(e,load)});w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);}['scroll','pointerdown','keydown','touchstart'].forEach(function(e){w.addEventListener(e,load,{passive:true,once:true})});setTimeout(load,6000);})(window,document,'script','dataLayer','GTM-NSZH8N9M');",
           }}
           suppressHydrationWarning
         />
@@ -116,13 +119,11 @@ function MyApp({ Component, pageProps }) {
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:standard'
           key='robots'
         />
-        <link rel='preconnect' href='https://salesiq.zohopublic.com' crossOrigin='anonymous' />
-        <link rel='preconnect' href='https://media.graphassets.com' />
       </Head>
       {/* Previously: !iuiTreatmentPage && !isYogaGuidePage && !hideChrome */}
       <FloatPhone presentation={true} />
-      {showFloatPhoneRound && <FloatPhoneRound />}
-      {showFloatWhatsappPill && <FloatWhatsappPill />}
+      {afterLoad && showFloatPhoneRound && <FloatPhoneRound />}
+      {afterLoad && showFloatWhatsappPill && <FloatWhatsappPill />}
       <ThemeProvider attribute='class' defaultTheme='light'>
         {loading ? (
           <Loading />
@@ -130,7 +131,7 @@ function MyApp({ Component, pageProps }) {
           <div className='min-h-screen selection:bg-gg-500 selection:text-white dark:bg-gray-800'>
             {shouldDisplay && <Nav />}
             <Component {...pageProps} />
-            {!iuiTreatmentPage && !hideChrome && <Footer />}
+            {afterLoad && !iuiTreatmentPage && !hideChrome && <Footer />}
           </div>
         )}
         {/* Previously: shouldDisplay && showSalesIQ */}
@@ -138,7 +139,7 @@ function MyApp({ Component, pageProps }) {
       </ThemeProvider>
       <SpeedInsights />
       {/* Previously: !isParipoornaPage && !iuiTreatmentPage && !isYogaGuidePage && !hideChrome */}
-      <FloatRequestCallBack />
+      {afterLoad && <FloatRequestCallBack />}
       {/* {isReady && !iuiTreatmentPage && !ivfHomePage && <FloatWhatsApp />} */}
     </RootLayout>
   );

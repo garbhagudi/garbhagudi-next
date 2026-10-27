@@ -11,11 +11,11 @@
     "generate-image-sitemap": "node src/scripts/generate-image-sitemap.mjs"
   },
   "browserslist": [
-    ">0.5%",
-    "last 2 versions",
-    "not dead",
-    "not IE 11",
-    "supports es6-module"
+    "chrome >= 100",
+    "edge >= 100",
+    "firefox >= 100",
+    "safari >= 15.4",
+    "ios_saf >= 15.4"
   ],
   "dependencies": {
     "@apollo/client": "^3.12.11",

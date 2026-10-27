@@ -34,6 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             strategy='afterInteractive'
             dangerouslySetInnerHTML={{
               __html: `
+            (function(f){var d=false,t;var E=['scroll','pointerdown','keydown','touchstart'];function g(){if(d)return;d=true;clearTimeout(t);E.forEach(function(e){window.removeEventListener(e,g)});f()}E.forEach(function(e){window.addEventListener(e,g,{passive:true,once:true})});t=setTimeout(g,6000)})(function(){
             (function(h,o,t,j,a,r){
               h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
               h._hjSettings={hjid:6673096,hjsv:6};
@@ -42,6 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
               a.appendChild(r);
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+            });
           `,
             }}
           />
@@ -53,7 +55,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }}
           /> */}
           <Main />
-          <script async src='https://crm.zoho.com/crm/javascript/zcga.js'></script>
+          {/* Zoho CRM analytics — loaded on first interaction or after 6s, like Hotjar. */}
+          <Script
+            id='zoho-zcga'
+            strategy='afterInteractive'
+            dangerouslySetInnerHTML={{
+              __html: `(function(f){var d=false,t;var E=['scroll','pointerdown','keydown','touchstart'];function g(){if(d)return;d=true;clearTimeout(t);E.forEach(function(e){window.removeEventListener(e,g)});f()}E.forEach(function(e){window.addEventListener(e,g,{passive:true,once:true})});t=setTimeout(g,6000)})(function(){var s=document.createElement('script');s.async=true;s.src='https://crm.zoho.com/crm/javascript/zcga.js';document.body.appendChild(s)});`,
+            }}
+          />
           <NextScript />
         </body>
       </Html>

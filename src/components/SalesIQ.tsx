@@ -1,4 +1,5 @@
-import Script from 'next/script';
+import { useEffect } from 'react';
+import { runOnInteraction } from 'lib/runOnInteraction';
 
 const SALESIQ_WIDGET_SRC =
   'https://salesiq.zohopublic.com/widget?wc=siq972f5d7b03057cc80029ab10323f5bbf044b7286b067ba3d6c1e851505d4c958';
@@ -39,15 +40,23 @@ $zoho.salesiq=$zoho.salesiq||{ready:function(){}};
 })();
 `;
 
-const SalesIQ = () => (
-  <>
-    <Script
-      id='zoho-salesiq-bootstrap'
-      strategy='lazyOnload'
-      dangerouslySetInnerHTML={{ __html: SALESIQ_BOOTSTRAP }}
-    />
-    <Script id='zsiqscript' src={SALESIQ_WIDGET_SRC} strategy='lazyOnload' defer />
-  </>
-);
+const SalesIQ = () => {
+  /* Loads the chat on first scroll/tap/keypress or after 6s so it stays off the load path. */
+  useEffect(() => {
+    if (document.getElementById('zsiqscript')) return;
+    return runOnInteraction(() => {
+      const bootstrap = document.createElement('script');
+      bootstrap.id = 'zoho-salesiq-bootstrap';
+      bootstrap.text = SALESIQ_BOOTSTRAP;
+      document.body.appendChild(bootstrap);
+      const widget = document.createElement('script');
+      widget.id = 'zsiqscript';
+      widget.src = SALESIQ_WIDGET_SRC;
+      widget.defer = true;
+      document.body.appendChild(widget);
+    }, 6000);
+  }, []);
+  return null;
+};
 
 export default SalesIQ;

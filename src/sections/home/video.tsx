@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+import { runOnInteraction } from 'lib/runOnInteraction';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
@@ -20,6 +22,10 @@ interface testimonialProps {
 }
 
 const Video = ({ testimonials }: testimonialProps) => {
+  // Only the first slide is visible on load; the other thumbnails (~35 KiB each, from
+  // i.ytimg.com with a 2h cache) are fetched once the visitor scrolls or taps.
+  const [showAll, setShowAll] = useState(false);
+  useEffect(() => runOnInteraction(() => setShowAll(true), 8000), []);
   const defaultControlsConfig = {
     pagingDotsStyle: {
       display: 'none',
@@ -43,6 +49,7 @@ const Video = ({ testimonials }: testimonialProps) => {
             renderCenterLeftControls={({ previousSlide }) => (
               <button
                 onClick={previousSlide}
+                aria-label='Previous video'
                 className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 dark:bg-brandPurple lg:flex'
               >
                 <HiChevronLeft className='mr-1' />
@@ -51,23 +58,27 @@ const Video = ({ testimonials }: testimonialProps) => {
             renderCenterRightControls={({ nextSlide }) => (
               <button
                 onClick={nextSlide}
+                aria-label='Next video'
                 className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 dark:bg-brandPurple lg:flex'
               >
                 <HiChevronRight className='ml-1' />
               </button>
             )}
           >
-            {testimonials?.items?.map((item) => {
+            {testimonials?.items?.map((item, index) => {
               return (
                 <div
                   className='mx-auto mt-8 aspect-video w-screen max-w-xs overflow-hidden rounded-lg border border-transparent sm:max-w-sm sm:px-0 md:max-w-md lg:max-w-3xl'
                   key={item?.id}
                 >
-                  <LiteYouTubeEmbed
-                    id={item?.snippet?.resourceId.videoId}
-                    title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
-                    poster='maxresdefault'
-                  />
+                  {index === 0 || showAll ? (
+                    <LiteYouTubeEmbed
+                      id={item?.snippet?.resourceId.videoId}
+                      title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
+                      poster='sddefault'
+                      webp
+                    />
+                  ) : null}
                 </div>
               );
             })}

@@ -93,7 +93,7 @@ const Nav = () => {
                   href={`/contact/enquiry?pageVisit=${path || ''}`}
                   target={'_blank'}
                   rel='noreferrer'
-                  className='duration-2 cursor-pointer rounded-lg bg-gg-500 px-3 py-2 font-lexend text-xs text-gray-200 transition-all ease-in hover:bg-brandPink3 dark:bg-gg-500 dark:hover:bg-gg-600 sm:text-sm'
+                  className='duration-2 cursor-pointer rounded-lg bg-gg-600 px-3 py-2 font-lexend text-xs text-white transition-all ease-in hover:bg-brandPink3 dark:bg-gg-600 dark:hover:bg-gg-700 sm:text-sm'
                 >
                   Book <span className='hidden sm:inline-block'>Appointment</span>{' '}
                   <span className='inline-block sm:hidden'>Now</span>
