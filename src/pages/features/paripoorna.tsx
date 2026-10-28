@@ -12,7 +12,7 @@ import { generateBreadcrumbSchema } from 'lib/schema-utils';
  * The HTML's own header/footer are removed; the site's Nav/Footer are used.
  */
 
-const TITLE = 'Paripoorna | ₹1,75,000* for IVF cycle';
+const TITLE = 'Paripoorna 2026 | ₹1,75,000* for IVF cycle';
 const DESCRIPTION =
   'Paripoorna 2026 by GarbhaGudi IVF Centre — understand your fertility journey and, when IVF is advised, clearly defined IVF care with medication included. Call 9108 9108 32.';
 const OG_IMAGE =
