@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import Head from 'next/head';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { Dialog, DialogPanel } from '@headlessui/react';
+import Form from 'sections/LandingPages/Performant/form';
 import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
 /*
@@ -27,6 +29,7 @@ export async function getStaticProps() {
 }
 
 const Paripoorna = ({ html }: { html: string }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', url: 'https://www.garbhagudi.com/' },
     { name: 'Features', url: 'https://www.garbhagudi.com/features' },
@@ -38,6 +41,16 @@ const Paripoorna = ({ html }: { html: string }) => {
     const root = document.querySelector('.pp-lp');
     if (!root) return;
     const cleanups: Array<() => void> = [];
+
+    // Any [data-open-form] link opens the enquiry popup instead of navigating (href is the no-JS fallback)
+    const onClick = (e: Event) => {
+      const trigger = (e.target as HTMLElement).closest('[data-open-form]');
+      if (!trigger) return;
+      e.preventDefault();
+      setIsOpen(true);
+    };
+    root.addEventListener('click', onClick);
+    cleanups.push(() => root.removeEventListener('click', onClick));
 
     const io = new IntersectionObserver(
       (entries) =>
@@ -110,6 +123,27 @@ const Paripoorna = ({ html }: { html: string }) => {
         />
       </Head>
       <div className='pp-lp' dangerouslySetInnerHTML={{ __html: html }} />
+      <Dialog
+        open={isOpen}
+        as='div'
+        className='relative z-[100] focus:outline-none'
+        onClose={() => setIsOpen(false)}
+      >
+        <div
+          className='fixed inset-0 bg-black/80 transition-opacity duration-300 ease-out'
+          onClick={() => setIsOpen(false)}
+        ></div>
+        <div className='fixed inset-0 z-10 w-screen overflow-y-auto'>
+          <div className='flex min-h-full items-center justify-center px-3 pt-8'>
+            <DialogPanel
+              transition
+              className='max-w-md rounded-xl bg-gray-800 pb-4 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] transition-shadow duration-300 ease-out hover:shadow-[0_0_25px_10px_rgba(0,0,0,0.5)] data-[closed]:scale-95 data-[closed]:opacity-0'
+            >
+              <Form />
+            </DialogPanel>
+          </div>
+        </div>
+      </Dialog>
     </>
   );
 };
