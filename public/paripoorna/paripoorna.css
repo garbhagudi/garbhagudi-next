@@ -5134,20 +5134,23 @@
   }
 }
 
-/* Desktop (>1040px): original logo placement and sizes, top-left of the banner.
+/* Desktop (>1040px): exactly as in the original landing page - both logos together at the
+   top-right of the banner (right edge aligned to the 1120px content width), Paripoorna then GarbhaGnan.
    The left/right split above applies to tablet/mobile only. */
 @media (min-width: 1041px) {
   .pp-lp .stamp {
-    left: max(24px, calc((100vw - 1120px) / 2)) !important;
-    right: auto !important;
+    left: auto !important;
+    right: max(24px, calc((100vw - 1120px) / 2)) !important;
+    top: 24px !important;
     justify-content: flex-start;
+    gap: 14px !important;
   }
   .pp-lp .stamp-ink {
-    order: 0;
+    order: 1;
     width: clamp(140px, 11vw, 180px) !important;
   }
   .pp-lp .gg-logo {
-    order: 0;
+    order: 2;
     width: clamp(120px, 9.5vw, 150px) !important;
   }
 }
