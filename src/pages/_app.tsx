@@ -43,6 +43,7 @@ function MyApp({ Component, pageProps }) {
   /* Pages (e.g. campaign LPs) opt out of nav/footer by setting `Page.hideChrome = true`.
    * (The floating CTAs and SalesIQ bot are no longer gated by this — see below — only Nav/Footer are.) */
   const hideChrome = Component.hideChrome === true;
+  const showFloatPhone = Component.hideFloatPhone !== true;
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname) && !hideChrome;
   const [loading, setLoading] = useState(false);
@@ -121,7 +122,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       {/* Previously: !iuiTreatmentPage && !isYogaGuidePage && !hideChrome */}
-      <FloatPhone presentation={true} />
+      {showFloatPhone && <FloatPhone presentation={true} />}
       {afterLoad && showFloatPhoneRound && <FloatPhoneRound />}
       {afterLoad && showFloatWhatsappPill && <FloatWhatsappPill />}
       <ThemeProvider attribute='class' defaultTheme='light'>
