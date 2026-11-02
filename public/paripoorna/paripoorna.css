@@ -5047,15 +5047,6 @@
   }
 }
 
-/* Mobile: the site's fixed 'Book Appointment / phone' bar (FloatPhone, md:hidden) overlays the top of the page,
-   so start the content below it. Logos stay on top of the banner as before. */
-@media (max-width: 767px) {
-  .pp-lp {
-    padding-top: 66px;
-    background: #efe7e0; /* matches the hero so any leftover gap is invisible */
-  }
-}
-
 /* Logos sit at the top-left of the banner */
 .pp-lp .stamp {
   right: auto !important;
