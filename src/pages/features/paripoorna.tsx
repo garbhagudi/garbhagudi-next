@@ -6,7 +6,6 @@ import { Dialog, DialogPanel } from '@headlessui/react';
 import Form from 'sections/LandingPages/Performant/form';
 import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
-
 const TITLE = 'Paripoorna 2026 | ₹1,75,000* for IVF cycle';
 const DESCRIPTION =
   'Paripoorna 2026 by GarbhaGudi IVF Centre — understand your fertility journey and, when IVF is advised, clearly defined IVF care with medication included. Call 9108 9108 32.';
