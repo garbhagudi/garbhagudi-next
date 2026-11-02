@@ -6,13 +6,6 @@ import { Dialog, DialogPanel } from '@headlessui/react';
 import Form from 'sections/LandingPages/Performant/form';
 import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
-/*
- * Paripoorna 2026 landing page.
- *  - Markup:  src/content/paripoorna/landing.html  (replace this file to change the page)
- *  - Styles:  public/paripoorna/paripoorna.css     (every rule is scoped under `.pp-lp`)
- *  - Images:  public/paripoorna/*
- * The HTML's own header/footer are removed; the site's Nav/Footer are used.
- */
 
 const TITLE = 'Paripoorna 2026 | ₹1,75,000* for IVF cycle';
 const DESCRIPTION =
@@ -147,5 +140,6 @@ const Paripoorna = ({ html }: { html: string }) => {
     </>
   );
 };
+Paripoorna.hideChrome = true;
 
 export default Paripoorna;
