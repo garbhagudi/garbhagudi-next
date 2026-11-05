@@ -4132,6 +4132,19 @@
 .pp-lp .price-orb .what {
   font-size: 1.2rem;
 }
+/* "EMI options available" shown as a bullet point */
+.pp-lp .price-orb .what.emi::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 9px;
+  border-radius: 50%;
+  background: var(--pink);
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
 .pp-lp .price-orb .btn {
   margin-top: 20px;
 }
@@ -4195,6 +4208,11 @@
   .pp-lp .track li {
     position: relative;
     padding: 0 0 0 0 !important;
+    /* title + line centred under the icon (overrides the earlier left-aligned grid rules) */
+    text-align: center !important;
+  }
+  .pp-lp .track .dot.ill {
+    margin: 0 auto !important;
   }
   .pp-lp .track li + li::after {
     content: '';
@@ -5044,15 +5062,6 @@
   }
   .pp-lp .gg-logo {
     width: 46px !important;
-  }
-}
-
-/* Mobile: the site's fixed 'Book Appointment / phone' bar (FloatPhone, md:hidden) overlays the top of the page,
-   so start the content below it. Logos stay on top of the banner as before. */
-@media (max-width: 767px) {
-  .pp-lp {
-    padding-top: 66px;
-    background: #efe7e0; /* matches the hero so any leftover gap is invisible */
   }
 }
 
