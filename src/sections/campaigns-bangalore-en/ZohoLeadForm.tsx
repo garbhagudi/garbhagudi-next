@@ -281,6 +281,9 @@ export default function ZohoLeadForm({ campaign }: { campaign: Campaign }) {
     }
 
     if (phoneEl) phoneEl.value = values.phone;
+    
+    const zcGadEl = field('zc_gad');
+    if (zcGadEl) zcGadEl.value = cleanGclid(zcGadEl.value) || fresh.gclid;
     if (!actionUrl) {
       // Not connected yet: validate as normal but post nowhere.
       console.warn(
