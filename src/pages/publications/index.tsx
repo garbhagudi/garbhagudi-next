@@ -36,7 +36,7 @@ export const getStaticProps = async () => {
   const { data } = await apolloClient.query({
     query: gql`
       query {
-        medias {
+        medias(orderBy: order_ASC) {
           id
           title
           description
