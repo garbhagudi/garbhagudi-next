@@ -53,6 +53,11 @@ export default function Banner({ campaign }: { campaign: Campaign }) {
           media='(min-width: 768px)'
           fetchPriority='high'
         />
+        {/* dash's tailwind `animate-marquee`, defined here rather than in the
+         * shared tailwind.config. */}
+        <style key='gg-emi-marquee'>
+          {`@keyframes gg-emi-marquee{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}`}
+        </style>
       </Head>
 
       <div className='grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
@@ -77,7 +82,18 @@ export default function Banner({ campaign }: { campaign: Campaign }) {
           id='leadForm'
         >
           {/* Server-rendered so the lead form paints with the hero, not after hydration. */}
-          <div className='flex h-full w-full items-center justify-center'>
+          <div className='flex h-full w-full flex-col items-center justify-center gap-3'>
+            <div className='w-full overflow-hidden'>
+              <div className='flex w-full justify-center motion-safe:animate-[gg-emi-marquee_16s_linear_infinite] motion-safe:justify-start'>
+                <span className='flex items-center gap-2 whitespace-nowrap rounded-full bg-gradient-to-r from-gg-500 to-gg-600 px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg'>
+                  <span className='relative flex h-2 w-2'>
+                    <span className='absolute inline-flex h-full w-full rounded-full bg-white opacity-75 motion-safe:animate-ping' />
+                    <span className='relative inline-flex h-2 w-2 rounded-full bg-white' />
+                  </span>
+                  EMI options available
+                </span>
+              </div>
+            </div>
             <ZohoLeadForm campaign={campaign} />
           </div>
         </div>
