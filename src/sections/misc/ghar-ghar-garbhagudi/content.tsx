@@ -78,7 +78,7 @@ export const ContentTwo = () => {
               them on social media using hashtags #GharGharGarbhaGudi and #GarbhaGudiIVFCentre.
               Additionally, send your content to us via WhatsApp at{' '}
               <a
-                href='https://wa.me/918951813344'
+                href='https://wa.me/919108910832'
                 className='font-semibold hover:text-brandPink hover:underline'
               >
                 +91 89518 13344
