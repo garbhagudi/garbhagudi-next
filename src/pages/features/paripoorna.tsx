@@ -12,8 +12,8 @@ const DESCRIPTION =
   'Paripoorna 2026 by GarbhaGudi IVF Centre — understand your fertility journey and, when IVF is advised, clearly defined IVF care with medication included. Call 9108 9108 32.';
 const OG_IMAGE =
   'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vp44h5aq707pl7oyfbuqd';
-// Placeholder (GarbhaGudi intro, also used in sections/thank-you/videos.tsx) – swap for the Paripoorna video
-const VIDEO_ID = 'Kbjz_vYlijA';
+// Paripoorna reel: https://www.instagram.com/reel/DfjoWqUyjqL/
+const REEL_EMBED_URL = 'https://www.instagram.com/reel/DfjoWqUyjqL/embed';
 
 export async function getStaticProps() {
   const html = fs.readFileSync(
@@ -175,7 +175,6 @@ const Paripoorna = ({ html }: { html: string }) => {
           className='fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 ease-out data-[closed]:opacity-0 data-[leave]:duration-200 data-[leave]:ease-in'
         />
         <div className='fixed inset-0 flex items-center justify-center p-3 md:p-6'>
-          {/* Pop-in: grows from 85% with a slight overshoot, shrinks and fades on close */}
           <DialogPanel
             transition
             className='w-full max-w-4xl overflow-hidden rounded-xl bg-white shadow-2xl transition duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] data-[closed]:translate-y-8 data-[closed]:scale-[0.85] data-[closed]:opacity-0 data-[leave]:duration-200 data-[leave]:ease-in'
@@ -188,15 +187,12 @@ const Paripoorna = ({ html }: { html: string }) => {
                 <IoIosCloseCircleOutline fontSize={28} />
               </CloseButton>
             </div>
-            {/* Muted: browsers block autoplay with sound when it isn't started by a click.
-             * The Dialog unmounts this once the close animation ends, which stops playback. */}
             <iframe
-              src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&mute=1&playsinline=1&rel=0`}
+              src={REEL_EMBED_URL}
               title='Paripoorna 2026'
-              className='aspect-video w-full border-0 bg-black'
+              className='h-[min(680px,calc(100vh-8rem))] w-full border-0 bg-white'
               allow='autoplay; encrypted-media; picture-in-picture; fullscreen'
               allowFullScreen
-              referrerPolicy='strict-origin-when-cross-origin'
             />
           </DialogPanel>
         </div>
