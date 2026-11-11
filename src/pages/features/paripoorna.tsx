@@ -12,8 +12,7 @@ const DESCRIPTION =
   'Paripoorna 2026 by GarbhaGudi IVF Centre — understand your fertility journey and, when IVF is advised, clearly defined IVF care with medication included. Call 9108 9108 32.';
 const OG_IMAGE =
   'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vp44h5aq707pl7oyfbuqd';
-// Paripoorna reel: https://www.instagram.com/reel/DfjoWqUyjqL/
-const REEL_EMBED_URL = 'https://www.instagram.com/reel/DfjoWqUyjqL/embed';
+const SHORT_ID = '7LJ9LlGClMY';
 
 export async function getStaticProps() {
   const html = fs.readFileSync(
@@ -175,9 +174,10 @@ const Paripoorna = ({ html }: { html: string }) => {
           className='fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 ease-out data-[closed]:opacity-0 data-[leave]:duration-200 data-[leave]:ease-in'
         />
         <div className='fixed inset-0 flex items-center justify-center p-3 md:p-6'>
+          {/* Width follows the screen height so the whole 9:16 Short fits (title bar + padding ≈ 7rem) */}
           <DialogPanel
             transition
-            className='w-full max-w-4xl overflow-hidden rounded-xl bg-white shadow-2xl transition duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] data-[closed]:translate-y-8 data-[closed]:scale-[0.85] data-[closed]:opacity-0 data-[leave]:duration-200 data-[leave]:ease-in'
+            className='w-[min(400px,calc((100vh_-_7rem)_*_9_/_16))] overflow-hidden rounded-xl bg-white shadow-2xl transition duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] data-[closed]:translate-y-8 data-[closed]:scale-[0.85] data-[closed]:opacity-0 data-[leave]:duration-200 data-[leave]:ease-in'
           >
             <div className='flex items-center justify-between gap-3 border-b px-4 py-3'>
               <DialogTitle className='line-clamp-1 font-heading text-lg font-bold'>
@@ -187,12 +187,14 @@ const Paripoorna = ({ html }: { html: string }) => {
                 <IoIosCloseCircleOutline fontSize={28} />
               </CloseButton>
             </div>
+            {/* Muted: browsers block autoplay with sound when it isn't started by a click */}
             <iframe
-              src={REEL_EMBED_URL}
+              src={`https://www.youtube-nocookie.com/embed/${SHORT_ID}?autoplay=1&mute=1&playsinline=1&loop=1&playlist=${SHORT_ID}&rel=0`}
               title='Paripoorna 2026'
-              className='h-[min(680px,calc(100vh-8rem))] w-full border-0 bg-white'
+              className='aspect-[9/16] w-full border-0 bg-black'
               allow='autoplay; encrypted-media; picture-in-picture; fullscreen'
               allowFullScreen
+              referrerPolicy='strict-origin-when-cross-origin'
             />
           </DialogPanel>
         </div>
