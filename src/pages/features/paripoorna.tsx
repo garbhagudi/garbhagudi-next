@@ -178,7 +178,6 @@ const Paripoorna = ({ html }: { html: string }) => {
           className='fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 ease-out data-[closed]:opacity-0 data-[leave]:duration-200 data-[leave]:ease-in'
         />
         <div className='fixed inset-0 flex items-center justify-center p-3 md:p-6'>
-          {/* Width follows the screen height so the whole 9:16 Short fits (title bar + padding ≈ 7rem) */}
           <DialogPanel
             transition
             className='w-[min(400px,calc((100vh_-_7rem)_*_9_/_16))] overflow-hidden rounded-xl bg-white shadow-2xl transition duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] data-[closed]:translate-y-8 data-[closed]:scale-[0.85] data-[closed]:opacity-0 data-[leave]:duration-200 data-[leave]:ease-in'
