@@ -25,6 +25,9 @@ export async function getStaticProps() {
 const Paripoorna = ({ html }: { html: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
+  // Browsers only autoplay with sound once the visitor has clicked/tapped the page (scrolling
+  // doesn't count), so start with sound when that has happened and muted otherwise.
+  const [videoMuted, setVideoMuted] = useState(true);
   // Lets the scroll observer below skip the video while the enquiry form is open
   const formOpenRef = useRef(false);
   formOpenRef.current = isOpen;
@@ -78,6 +81,7 @@ const Paripoorna = ({ html }: { html: string }) => {
           const fullyVisible =
             e.intersectionRatio >= 0.98 || e.intersectionRect.height >= viewportH * 0.9;
           if (!fullyVisible || formOpenRef.current) return;
+          setVideoMuted(!navigator.userActivation?.hasBeenActive);
           setVideoOpen(true);
           videoIo.disconnect();
         },
@@ -187,9 +191,8 @@ const Paripoorna = ({ html }: { html: string }) => {
                 <IoIosCloseCircleOutline fontSize={28} />
               </CloseButton>
             </div>
-            {/* Muted: browsers block autoplay with sound when it isn't started by a click */}
             <iframe
-              src={`https://www.youtube-nocookie.com/embed/${SHORT_ID}?autoplay=1&mute=1&playsinline=1&loop=1&playlist=${SHORT_ID}&rel=0`}
+              src={`https://www.youtube-nocookie.com/embed/${SHORT_ID}?autoplay=1&mute=${videoMuted ? 1 : 0}&playsinline=1&loop=1&playlist=${SHORT_ID}&rel=0`}
               title='Paripoorna 2026'
               className='aspect-[9/16] w-full border-0 bg-black'
               allow='autoplay; encrypted-media; picture-in-picture; fullscreen'
