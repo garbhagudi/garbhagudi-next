@@ -132,7 +132,7 @@ export const Contact = [
   },
   {
     name: 'Collaboration',
-    href: '/contact/partnership',
+    href: '/contact/collaboration',
     icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8kwhy33z9v07pl4hh5l11s',
   },
 ];
