@@ -131,7 +131,7 @@ export const Contact = [
     icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8kwhwf3z9r07ple7jfk7np',
   },
   {
-    name: 'Partnership',
+    name: 'Collaboration',
     href: '/contact/partnership',
     icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8kwhy33z9v07pl4hh5l11s',
   },
