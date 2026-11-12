@@ -125,7 +125,7 @@ export const contactData = {
     },
     {
       id: 4,
-      name: 'Partnership',
+      name: 'Collaboration',
       email: 'drgirish.bv@ggirhr.com',
     },
   ],
