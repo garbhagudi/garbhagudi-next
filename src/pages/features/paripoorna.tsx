@@ -34,7 +34,6 @@ const Paripoorna = ({ html }: { html: string }) => {
     if (!root) return;
     const cleanups: Array<() => void> = [];
 
-    // Any [data-open-form] link opens the enquiry popup instead of navigating (href is the no-JS fallback)
     const onClick = (e: Event) => {
       const trigger = (e.target as HTMLElement).closest('[data-open-form]');
       if (!trigger) return;
