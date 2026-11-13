@@ -6,6 +6,7 @@ import apolloClient from 'lib/apollo-graphcms';
 import { filterExcludedVideos } from 'lib/excluded-videos';
 import { gql } from '@apollo/client';
 import BannerComponent from 'sections/home/bannerComponent';
+import ParipoornaPromo from 'sections/home/paripoorna';
 const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
 const DoctorList = dynamic(() => import('sections/home/doctorList'), { ssr: false });
 // The in-flow bar is 68px tall on mobile (hidden from md up); reserving that space
@@ -172,6 +173,7 @@ const Home = ({ data, testimonials }) => {
       </Head>
       <FloatPhone presentation={false} />
       <BannerComponent banners={data.banners} />
+      <ParipoornaPromo />
       <HomeComponent testimonialPassthrough={testimonials} blogsPassthrough={data.blogs} />
       {afterLoad && <DoctorList doctors={data.doctors} />}
       {afterLoad && <Faq />}
