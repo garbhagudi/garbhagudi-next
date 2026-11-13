@@ -12,7 +12,7 @@ const DESCRIPTION =
   'Paripoorna 2026 by GarbhaGudi IVF Centre — understand your fertility journey and, when IVF is advised, clearly defined IVF care with medication included. Call 9108 9108 32.';
 const OG_IMAGE =
   'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vp44h5aq707pl7oyfbuqd';
-const SHORT_ID = '7LJ9LlGClMY';
+const SHORT_ID = 'wNLJ1Ef3Q0s';
 
 export async function getStaticProps() {
   const html = fs.readFileSync(
