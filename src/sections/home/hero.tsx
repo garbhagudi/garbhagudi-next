@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import Paripoorna from 'sections/home/paripoorna';
 
-// Columns stretch to the same height and push their buttons to the bottom so those line up.
 const column = 'lg:row-start-1 lg:flex lg:flex-col';
 const cta =
   'rounded-md bg-gg-500 px-3 py-2 text-sm font-bold text-white hover:bg-gg-600 dark:bg-gg-400 dark:text-gray-800 dark:hover:bg-gg-500';
