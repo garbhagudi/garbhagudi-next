@@ -25,10 +25,7 @@ export async function getStaticProps() {
 const Paripoorna = ({ html }: { html: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
-  // Browsers only autoplay with sound once the visitor has clicked/tapped the page (scrolling
-  // doesn't count), so start with sound when that has happened and muted otherwise.
   const [videoMuted, setVideoMuted] = useState(true);
-  // Lets the scroll observer below skip the video while the enquiry form is open
   const formOpenRef = useRef(false);
   formOpenRef.current = isOpen;
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -43,7 +40,6 @@ const Paripoorna = ({ html }: { html: string }) => {
     if (!root) return;
     const cleanups: Array<() => void> = [];
 
-    // Any [data-open-form] link opens the enquiry popup instead of navigating (href is the no-JS fallback)
     const onClick = (e: Event) => {
       const trigger = (e.target as HTMLElement).closest('[data-open-form]');
       if (!trigger) return;
