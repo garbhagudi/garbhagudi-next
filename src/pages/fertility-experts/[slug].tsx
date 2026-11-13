@@ -188,7 +188,7 @@ const Doctor = ({ doctor, accordionSections }) => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{doctor?.metaTitle || defaultMetaTile}</title>
         <meta name='title' content={doctor?.metaTitle || defaultMetaTile} />
-        <meta name='description' content={doctor?.bio?.text.slice(0, 160)} />
+        <meta name='description' content={doctor?.bio?.text?.slice(0, 160)} />
 
         {/* Ld+JSON Data */}
 
@@ -208,7 +208,7 @@ const Doctor = ({ doctor, accordionSections }) => {
         <meta property='og:title' content={doctor?.metaTitle || defaultMetaTile} />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
         <meta property='og:url' content='https://garbhagudi.com' />
-        <meta property='og:description' content={doctor?.bio?.text.slice(0, 160)} />
+        <meta property='og:description' content={doctor?.bio?.text?.slice(0, 160)} />
         <meta property='og:type' content='website' />
         <meta property='og:image' content={doctor?.image?.url} />
 
@@ -217,7 +217,7 @@ const Doctor = ({ doctor, accordionSections }) => {
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta name='twitter:title' content={doctor?.metaTitle || defaultMetaTile} />
-        <meta name='twitter:description' content={doctor?.bio?.text.slice(0, 160)} />
+        <meta name='twitter:description' content={doctor?.bio?.text?.slice(0, 160)} />
         <meta name='twitter:image' content={doctor?.image?.url} />
       </Head>
       <BreadCrumbs
@@ -428,25 +428,15 @@ const Doctor = ({ doctor, accordionSections }) => {
                 </div>
                 <div className='mt-10 border-t border-gray-300 py-10'>
                   <div className='flex flex-col items-center justify-center gap-y-2'>
-                    <div className='w-full px-4 lg:w-9/12'>
-                      <h2 className='text-2xl font-bold text-gray-900 dark:text-gray-100'>
-                        About {doctor?.name} - {doctor?.designation}
-                      </h2>
-                      <div className='prose mb-4 text-justify text-gray-800 dark:text-gray-200'>
-                        <RichText
-                          content={doctor?.bio?.raw?.children}
-                          renderers={{
-                            ...baseRichTextRenderers,
-                          }}
-                        />
-                      </div>
-                    </div>
-                    {doctor?.educationCredentials?.text && (
+                    {/* RichText throws on missing content, which fails the whole build for a doctor without a bio */}
+                    {doctor?.bio?.raw?.children && (
                       <div className='w-full px-4 lg:w-9/12'>
-                        <h2 className='text-2xl font-bold'>Education & Credentials</h2>
+                        <h2 className='text-2xl font-bold text-gray-900 dark:text-gray-100'>
+                          About {doctor?.name} - {doctor?.designation}
+                        </h2>
                         <div className='prose mb-4 text-justify text-gray-800 dark:text-gray-200'>
                           <RichText
-                            content={doctor?.educationCredentials?.raw?.children}
+                            content={doctor?.bio?.raw?.children}
                             renderers={{
                               ...baseRichTextRenderers,
                             }}
@@ -454,19 +444,34 @@ const Doctor = ({ doctor, accordionSections }) => {
                         </div>
                       </div>
                     )}
-                    {doctor?.experienceExpertise?.text && (
-                      <div className='w-full px-4 lg:w-9/12'>
-                        <h2 className='text-2xl font-bold'>Experience & Expertise</h2>
-                        <div className='prose mb-4 text-justify text-gray-800 dark:text-gray-200'>
-                          <RichText
-                            content={doctor?.experienceExpertise?.raw?.children}
-                            renderers={{
-                              ...baseRichTextRenderers,
-                            }}
-                          />
+                    {doctor?.educationCredentials?.text &&
+                      doctor?.educationCredentials?.raw?.children && (
+                        <div className='w-full px-4 lg:w-9/12'>
+                          <h2 className='text-2xl font-bold'>Education & Credentials</h2>
+                          <div className='prose mb-4 text-justify text-gray-800 dark:text-gray-200'>
+                            <RichText
+                              content={doctor?.educationCredentials?.raw?.children}
+                              renderers={{
+                                ...baseRichTextRenderers,
+                              }}
+                            />
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
+                    {doctor?.experienceExpertise?.text &&
+                      doctor?.experienceExpertise?.raw?.children && (
+                        <div className='w-full px-4 lg:w-9/12'>
+                          <h2 className='text-2xl font-bold'>Experience & Expertise</h2>
+                          <div className='prose mb-4 text-justify text-gray-800 dark:text-gray-200'>
+                            <RichText
+                              content={doctor?.experienceExpertise?.raw?.children}
+                              renderers={{
+                                ...baseRichTextRenderers,
+                              }}
+                            />
+                          </div>
+                        </div>
+                      )}
 
                     {doctor?.approachToIvfTreatment && (
                       <div className='w-full px-4 lg:w-9/12'>

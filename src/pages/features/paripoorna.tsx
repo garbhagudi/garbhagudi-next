@@ -1,8 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
-import { Dialog, DialogPanel } from '@headlessui/react';
+import { useEffect, useRef, useState } from 'react';
+import { CloseButton, Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
+import { IoIosCloseCircleOutline } from 'react-icons/io';
 import Form from 'sections/LandingPages/Performant/form';
 import { generateBreadcrumbSchema } from 'lib/schema-utils';
 
@@ -11,6 +12,7 @@ const DESCRIPTION =
   'Paripoorna 2026 by GarbhaGudi IVF Centre — understand your fertility journey and, when IVF is advised, clearly defined IVF care with medication included. Call 9108 9108 32.';
 const OG_IMAGE =
   'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vp44h5aq707pl7oyfbuqd';
+const SHORT_ID = 'wNLJ1Ef3Q0s';
 
 export async function getStaticProps() {
   const html = fs.readFileSync(
@@ -22,6 +24,10 @@ export async function getStaticProps() {
 
 const Paripoorna = ({ html }: { html: string }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [videoOpen, setVideoOpen] = useState(false);
+  const [videoMuted, setVideoMuted] = useState(true);
+  const formOpenRef = useRef(false);
+  formOpenRef.current = isOpen;
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', url: 'https://www.garbhagudi.com/' },
     { name: 'Features', url: 'https://www.garbhagudi.com/features' },
@@ -59,6 +65,25 @@ const Paripoorna = ({ html }: { html: string }) => {
       io.observe(el);
     });
     cleanups.push(() => io.disconnect());
+    const ppSection = root.querySelector('#paripoorna');
+    if (ppSection) {
+      const videoIo = new IntersectionObserver(
+        (entries) => {
+          const e = entries[entries.length - 1];
+          const viewportH = e.rootBounds?.height ?? window.innerHeight;
+          const fullyVisible =
+            e.intersectionRatio >= 0.98 || e.intersectionRect.height >= viewportH * 0.9;
+          if (!fullyVisible || formOpenRef.current) return;
+          setVideoMuted(!navigator.userActivation?.hasBeenActive);
+          setVideoOpen(true);
+          videoIo.disconnect();
+        },
+        // top margin keeps the part hidden under the fixed header from counting as visible
+        { threshold: Array.from({ length: 21 }, (_, i) => i / 20), rootMargin: '-80px 0px 0px 0px' }
+      );
+      videoIo.observe(ppSection);
+      cleanups.push(() => videoIo.disconnect());
+    }
 
     // FAQ: one open at a time
     const faqs = Array.from(root.querySelectorAll<HTMLDetailsElement>('.faq-list details'));
@@ -133,6 +158,40 @@ const Paripoorna = ({ html }: { html: string }) => {
               <Form />
             </DialogPanel>
           </div>
+        </div>
+      </Dialog>
+      <Dialog
+        open={videoOpen}
+        as='div'
+        className='relative z-[100]'
+        onClose={() => setVideoOpen(false)}
+      >
+        <DialogBackdrop
+          transition
+          className='fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 ease-out data-[closed]:opacity-0 data-[leave]:duration-200 data-[leave]:ease-in'
+        />
+        <div className='fixed inset-0 flex items-center justify-center p-3 md:p-6'>
+          <DialogPanel
+            transition
+            className='w-[min(400px,calc((100vh_-_7rem)_*_9_/_16))] overflow-hidden rounded-xl bg-white shadow-2xl transition duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] data-[closed]:translate-y-8 data-[closed]:scale-[0.85] data-[closed]:opacity-0 data-[leave]:duration-200 data-[leave]:ease-in'
+          >
+            <div className='flex items-center justify-between gap-3 border-b px-4 py-3'>
+              <DialogTitle className='line-clamp-1 font-heading text-lg font-bold'>
+                Paripoorna 2026
+              </DialogTitle>
+              <CloseButton aria-label='Close' className='text-gray-600 hover:text-brandPink'>
+                <IoIosCloseCircleOutline fontSize={28} />
+              </CloseButton>
+            </div>
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${SHORT_ID}?autoplay=1&mute=${videoMuted ? 1 : 0}&playsinline=1&loop=1&playlist=${SHORT_ID}&rel=0`}
+              title='Paripoorna 2026'
+              className='aspect-[9/16] w-full border-0 bg-black'
+              allow='autoplay; encrypted-media; picture-in-picture; fullscreen'
+              allowFullScreen
+              referrerPolicy='strict-origin-when-cross-origin'
+            />
+          </DialogPanel>
         </div>
       </Dialog>
     </>
