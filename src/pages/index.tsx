@@ -3,10 +3,8 @@ import dynamic from 'next/dynamic';
 import { useAfterLoad } from 'lib/useAfterLoad';
 import HomeComponent from 'sections/home';
 import apolloClient from 'lib/apollo-graphcms';
-import { filterExcludedVideos } from 'lib/excluded-videos';
 import { gql } from '@apollo/client';
 import BannerComponent from 'sections/home/bannerComponent';
-import ParipoornaPromo from 'sections/home/paripoorna';
 const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
 const DoctorList = dynamic(() => import('sections/home/doctorList'), { ssr: false });
 // The in-flow bar is 68px tall on mobile (hidden from md up); reserving that space
@@ -16,9 +14,7 @@ const FloatPhone = dynamic(() => import('components/FloatPhone'), {
   loading: () => <div className='h-[68px] md:hidden' aria-hidden='true' />,
 });
 
-const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
-
-const Home = ({ data, testimonials }) => {
+const Home = ({ data }) => {
   const afterLoad = useAfterLoad();
   function addBreadcrumbJsonLd() {
     return {
@@ -173,8 +169,7 @@ const Home = ({ data, testimonials }) => {
       </Head>
       <FloatPhone presentation={false} />
       <BannerComponent banners={data.banners} />
-      <ParipoornaPromo />
-      <HomeComponent testimonialPassthrough={testimonials} blogsPassthrough={data.blogs} />
+      <HomeComponent blogsPassthrough={data.blogs} />
       {afterLoad && <DoctorList doctors={data.doctors} />}
       {afterLoad && <Faq />}
     </div>
@@ -231,16 +226,9 @@ export const getStaticProps = async () => {
     `,
   });
 
-  const testimonialsData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
-  );
-
-  const testimonials = filterExcludedVideos(await testimonialsData.json());
-
   return {
     props: {
       data,
-      testimonials,
     },
     revalidate: 180,
   };
