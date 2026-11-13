@@ -65,9 +65,6 @@ const Paripoorna = ({ html }: { html: string }) => {
       io.observe(el);
     });
     cleanups.push(() => io.disconnect());
-
-    // Video modal: auto-opens once per page load when the whole Paripoorna section is on screen
-    // (or, where the section is taller than the screen, e.g. on phones, when it fills the screen)
     const ppSection = root.querySelector('#paripoorna');
     if (ppSection) {
       const videoIo = new IntersectionObserver(
