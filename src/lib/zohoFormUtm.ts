@@ -14,7 +14,7 @@ const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_c
 export type UtmKey = (typeof UTM_KEYS)[number];
 export type UtmMap = Partial<Record<UtmKey, string>>;
 
-function firstQueryValue(value: unknown): string {
+export function firstQueryValue(value: unknown): string {
   if (value == null) return '';
   if (Array.isArray(value)) return String(value[0] ?? '').trim();
   return String(value).trim();
