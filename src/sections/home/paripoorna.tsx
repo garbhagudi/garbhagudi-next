@@ -27,8 +27,7 @@ const Paripoorna = ({ className = '' }: { className?: string }) => {
   return (
     <section className={`text-center ${className}`}>
       <h2 className='font-heading text-xl font-extrabold tracking-tight text-gray-800 dark:text-gray-200 max-sm:text-3xl sm:leading-none lg:text-3xl'>
-        Paripoorna 2026 :{' '}
-        <span className='text-gg-500 dark:text-gg-400'>IVF @ ₹1,75,000</span>
+        Paripoorna 2026 : <span className='text-gg-500 dark:text-gg-400'>IVF @ ₹1,75,000</span>
       </h2>
       <div
         ref={playerRef}
