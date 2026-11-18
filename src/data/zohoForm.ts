@@ -24,6 +24,14 @@ export const zohoChatGptFormActionUrl =
 export const zohoChatGptFormRedirectUrl =
   process.env.NEXT_PUBLIC_ZOHO_CHATGPT_FORM_REDIRECT_URL?.trim() || '';
 
+/* "Webinar By Raajam M" form used on /in/ta/webinar. Its fields differ from
+ * the shared form: Name_First / Name_Last, and `SingleLine` is the City. */
+const DEFAULT_WEBINAR_ACTION =
+  'https://forms.zohopublic.com/GarbhaGudiIVFCentre/form/WebinarByRaajamM/formperma/m-Cb66PtG-RlyS2JscWNBct1BYylH4hZvv_dzxE3jcg/htmlRecords/submit';
+
+export const zohoWebinarFormActionUrl =
+  process.env.NEXT_PUBLIC_ZOHO_WEBINAR_FORM_ACTION_URL?.trim() || DEFAULT_WEBINAR_ACTION;
+
 /**
  * Optional post-submit redirect (`zf_redirect_url`). Leave empty to fall
  * back to `<origin>/thank-you` at runtime. If the value here is set it
