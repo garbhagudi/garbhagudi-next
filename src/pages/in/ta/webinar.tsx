@@ -131,7 +131,7 @@ const TamilWebinar = ({ data }) => {
         />
       </Head>
       <FloatPhone presentation={false} />
-      <WebinarBanner banners={data.banners} />
+      <WebinarBanner />
       {/* Tamil body font scoped to these sections so DoctorList/Faq keep the site font */}
       <div className='font-[family-name:var(--font-noto-sans-tamil)]'>
         <HeroSection />
@@ -172,22 +172,6 @@ export const getStaticProps = async () => {
           medicalRegNo
           id
           designation
-        }
-        banners(orderBy: order_ASC) {
-          title
-          id
-          url
-          image {
-            url
-            width
-            height
-          }
-          mobileImage {
-            url
-            width
-            height
-          }
-          imageUrl
         }
       }
     `,

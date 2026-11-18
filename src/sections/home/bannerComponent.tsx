@@ -27,7 +27,7 @@ interface bannerProps {
 
 // Art-directed banner: desktop creative ≥768px (Tailwind `md`), mobile
 // creative below — the browser downloads only the matching source.
-const BannerImage = ({
+export const BannerImage = ({
   banner,
   first,
 }: {
