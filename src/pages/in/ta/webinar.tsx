@@ -148,9 +148,8 @@ const TamilWebinar = ({ data }) => {
   );
 };
 
-/* Webinar LP: no global nav/footer — see hideChrome in _app. The banner already has the
- * webinar form, so the side "Request Call Back" tab is dropped too. */
-TamilWebinar.hideChrome = true;
+/* Webinar LP keeps the global nav/footer. The banner already has the webinar form,
+ * so the side "Request Call Back" tab is dropped. */
 TamilWebinar.hideRequestCallBack = true;
 
 export default TamilWebinar;
