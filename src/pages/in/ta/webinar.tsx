@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import { Noto_Sans_Tamil, Noto_Serif_Tamil, Inter } from 'next/font/google';
-import { useAfterLoad } from 'lib/useAfterLoad';
 import apolloClient from 'lib/apollo-graphcms';
 import { gql } from '@apollo/client';
 import WebinarBanner from 'sections/hosur-home/WebinarBanner';
@@ -39,8 +38,7 @@ const FloatPhone = dynamic(() => import('components/FloatPhone'), {
   loading: () => <div className='h-[68px] md:hidden' aria-hidden='true' />,
 });
 
-const TamilWebinar = ({ data }) => {
-  const afterLoad = useAfterLoad();
+const TamilWebinar = () => {
   function addBreadcrumbJsonLd() {
     return {
       __html: `{
