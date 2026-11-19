@@ -45,6 +45,8 @@ function MyApp({ Component, pageProps }) {
   const hideChrome = Component.hideChrome === true;
   /* Pages with their own call/booking header can drop the mobile FloatPhone bar with `Page.hideFloatPhone = true`. */
   const hideFloatPhone = Component.hideFloatPhone === true;
+  /* Pages with their own lead form up top can drop the side "Request Call Back" tab with `Page.hideRequestCallBack = true`. */
+  const hideRequestCallBack = Component.hideRequestCallBack === true;
 
   const shouldDisplay = !noRenderPaths.includes(router.pathname) && !hideChrome;
   const [loading, setLoading] = useState(false);
@@ -141,7 +143,7 @@ function MyApp({ Component, pageProps }) {
       </ThemeProvider>
       <SpeedInsights />
       {/* Previously: !isParipoornaPage && !iuiTreatmentPage && !isYogaGuidePage && !hideChrome */}
-      {afterLoad && <FloatRequestCallBack />}
+      {afterLoad && !hideRequestCallBack && <FloatRequestCallBack />}
       {/* {isReady && !iuiTreatmentPage && !ivfHomePage && <FloatWhatsApp />} */}
     </RootLayout>
   );

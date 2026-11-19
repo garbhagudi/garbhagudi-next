@@ -131,6 +131,11 @@ const doctorRegistration = (slug: string) => {
   return '(KMC)';
 };
 
+const appointmentLink = (doctor) =>
+  /^https?:\/\//i.test(doctor?.bookAnAppointment?.trim() ?? '')
+    ? doctor.bookAnAppointment.trim()
+    : `/contact/enquiry?pageVisit=/fertility-experts/${doctor?.slug}`;
+
 const Doctor = ({ doctor, accordionSections }) => {
   const router = useRouter();
   const defaultMetaTile = `${doctor?.name} | ${doctor?.designation} | ${doctor?.location[0]?.title} | GarbhaGudi `;
@@ -315,13 +320,7 @@ const Doctor = ({ doctor, accordionSections }) => {
                   {doctor?.slug === 'dr-asha-s-vijay' ? (
                     <div>
                       <button className='mt-6 rounded-md bg-brandPink px-4 py-2 font-content font-bold text-white hover:bg-brandPink3'>
-                        <a
-                          href={
-                            doctor?.bookAnAppointment ||
-                            `/contact/enquiry?pageVisit=/fertility-experts/${doctor?.slug}`
-                          }
-                          hrefLang='en-us'
-                        >
+                        <a href={appointmentLink(doctor)} hrefLang='en-us'>
                           Book an Appointment
                         </a>
                       </button>
@@ -376,10 +375,7 @@ const Doctor = ({ doctor, accordionSections }) => {
                                               <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                                 <button>
                                                   <a
-                                                    href={
-                                                      doctor?.bookAnAppointment ||
-                                                      `/contact/enquiry?pageVisit=/fertility-experts/${doctor?.slug}`
-                                                    }
+                                                    href={appointmentLink(doctor)}
                                                     className='font-semibold hover:underline'
                                                     hrefLang='en-us'
                                                     target='_blank'
@@ -394,10 +390,7 @@ const Doctor = ({ doctor, accordionSections }) => {
                                               <div className='text-left font-medium text-gg-500 dark:text-gg-400'>
                                                 <button>
                                                   <a
-                                                    href={
-                                                      doctor?.bookAnAppointment ||
-                                                      `/contact/enquiry?pageVisit=/fertility-experts/${doctor?.slug}`
-                                                    }
+                                                    href={appointmentLink(doctor)}
                                                     className='font-semibold hover:underline'
                                                     target='_blank'
                                                     hrefLang='en-us'

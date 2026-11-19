@@ -27,6 +27,17 @@ body {
   }
 }
 
+@keyframes blink {
+  0%,
+  70%,
+  100% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.35;
+  }
+}
+
 .glow {
   position: relative;
   display: block;
