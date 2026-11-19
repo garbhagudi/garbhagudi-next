@@ -15,20 +15,14 @@ import { flushSync } from 'react-dom';
 import { zohoWebinarFormActionUrl } from 'data/zohoForm';
 import { gclidFromCookies } from 'lib/zohoFormUtm';
 
-/* `useLayoutEffect` would warn during SSR; this falls back to `useEffect`
- * on the server so hidden state is synced as soon as the DOM exists. */
 const useIsoLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
-/* React requires `value` + `onChange` together, so hidden controlled inputs
- * point at this no-op. */
 const NOOP_ONCHANGE = () => {};
 
 type HiddenState = { zf_referrer_name: string; zf_redirect_url: string };
 
 const EMPTY_HIDDEN: HiddenState = { zf_referrer_name: '', zf_redirect_url: '' };
 
-/* The form has no UTM fields, so the full URL (query string included) goes
- * in as the referrer to keep campaign params visible in Zoho. */
 function computeHidden(): HiddenState {
   if (typeof window === 'undefined') return EMPTY_HIDDEN;
   return {
@@ -37,8 +31,6 @@ function computeHidden(): HiddenState {
   };
 }
 
-/* GTM sets `gclid=undefined` and writes "undefined" into zc_gad inputs when
- * the URL has no gclid, so treat those strings as empty. */
 function cleanGclid(value: string | null | undefined): string {
   const v = (value ?? '').trim();
   return v && v !== 'undefined' && v !== 'null' ? v : '';
@@ -82,11 +74,10 @@ function validateFields(
 const FIELD_ERROR_ORDER: (keyof FieldErrors)[] = ['firstName', 'phone', 'email', 'consent'];
 
 const STYLES = {
-  /* Teal hero panel, matching the dash-ivf-next homepage banner form. */
   banner: {
     root: 'zcwf_lblLeft crmWebToEntityForm mx-auto h-auto w-full rounded-lg bg-transparent',
     title:
-      'px-3 pb-4 pt-2 text-center font-[family-name:var(--font-noto-serif-tamil)] text-xl font-bold leading-snug text-white lg:text-2xl',
+      'px-3 pb-4 pt-2 text-center font-[family-name:var(--font-noto-serif-tamil)] text-xl font-bold leading-snug text-brandPink animate-[blink_2.5s_ease-in-out_infinite] motion-reduce:animate-none lg:text-2xl',
     fields: 'mx-auto flex flex-col space-y-4 px-3',
     fieldWrap: 'relative mx-auto w-full max-w-sm',
     fieldRow: 'flex items-center justify-start',
@@ -99,7 +90,6 @@ const STYLES = {
     button:
       'flex items-center justify-center gap-2 rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88]',
   },
-  /* White card in the bottom form section — same look as Performant/form's `card`. */
   card: {
     root: 'zcwf_lblLeft crmWebToEntityForm mx-auto h-auto w-full rounded-lg bg-transparent py-4',
     title: '',
@@ -127,10 +117,9 @@ interface WebinarFormProps {
 const WebinarForm = ({
   variant = 'card',
   title,
-  submitLabel = 'பதிவு செய்யுங்கள்',
+  submitLabel = ' பதிவு செய்ய க்ளிக் பண்ணவும்',
 }: WebinarFormProps) => {
   const cx = STYLES[variant];
-  /* The banner panel follows dash-ivf-next and skips the consent checkbox. */
   const showConsent = variant === 'card';
   const suffix = useId().replace(/:/g, '');
   const formRef = useRef<HTMLFormElement>(null);
