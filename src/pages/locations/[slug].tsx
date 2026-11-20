@@ -119,30 +119,13 @@ const Branch = ({ branch, accordionSections }) => {
       <MapSection
         maplink={branch?.mapLink}
         address={branch?.address}
+        phone={branch?.phone}
         description={branch?.about?.raw?.children}
         doctors={branch?.doctors}
         title={branch?.title}
         areasDescription={branch?.areasDescription?.raw?.children}
         areasServed={branch?.areasServed}
       />
-      {/* {branch?.slug == 'marathahalli' && (
-        <ExtraSlot
-          effectiveDate='Effective From 2nd March 2026. You may book your appointment at your convenience'
-          timings={[
-            { doctorName: 'Dr. P. V. Vasavi Devi', timing: '9AM to 12PM' },
-            { doctorName: 'Dr. Vandana Ramanathan', timing: '12PM to 7PM' },
-          ]}
-        />
-      )} */}
-      {/* {branch?.slug == 'kalyan-nagar' && (
-        <ExtraSlot
-          effectiveDate='Effective From 2nd March 2026. You may book your appointment at your convenience'
-          timings={[
-            { doctorName: 'Dr. Aparna N', timing: '8:00 am - 4:00 pm' },
-            { doctorName: 'Dr. P. V. Vasavi Devi', timing: '4:00 pm - 7:00 pm' },
-          ]}
-        />
-      )} */}
       <Cta />
       <Faq data={branch?.faq || []} />
       <AccordionSection sections={accordionSections} />
@@ -168,6 +151,7 @@ export const getStaticProps = async ({ params }) => {
           }
           title
           address
+          phone
           about {
             raw
           }
