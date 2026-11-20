@@ -11,6 +11,7 @@ import RichTextImage from 'components/RichTextImage';
 interface MapSectionProps {
   maplink: string;
   address: string;
+  phone?: string;
   description: RichTextContent;
   doctors: {
     id: string;
@@ -29,9 +30,17 @@ interface MapSectionProps {
   };
 }
 
+// Hygraph values may carry a trunk 0 after the country code ("+91 088800 00909"),
+// which must be dropped for the tel: link to dial correctly.
+const toTelHref = (phone: string) => {
+  const digits = phone.replace(/\D/g, '').replace(/^910/, '91');
+  return `tel:+${digits}`;
+};
+
 const MapSection = ({
   maplink,
   address,
+  phone,
   description,
   doctors,
   title,
@@ -39,6 +48,7 @@ const MapSection = ({
   areasServed,
 }: MapSectionProps) => {
   const [showFullText, setShowFullText] = useState(false);
+  const phoneNumber = phone?.trim();
 
   return (
     <div className='px-3'>
@@ -77,14 +87,16 @@ const MapSection = ({
                     dreams@garbhagudi.com
                   </Link>
                 </div>
-                <div className='mt-4 font-qs text-xs font-semibold tracking-widest text-gray-800 dark:text-gray-200'>
-                  PHONE
-                </div>
-                <p className='font-qs text-sm leading-relaxed text-gray-800 dark:text-gray-200'>
-                  <Link href={title === 'Davanagere' ? 'tel:+919108910832' : 'tel:+918880000909'}>
-                    {title === 'Davanagere' ? '+91 9108 9108 32' : '+91 8880 0009 09'}
-                  </Link>
-                </p>
+                {phoneNumber && (
+                  <>
+                    <div className='mt-4 font-qs text-xs font-semibold tracking-widest text-gray-800 dark:text-gray-200'>
+                      PHONE
+                    </div>
+                    <p className='font-qs text-sm leading-relaxed text-gray-800 dark:text-gray-200'>
+                      <Link href={toTelHref(phoneNumber)}>{phoneNumber}</Link>
+                    </p>
+                  </>
+                )}
               </div>
             </div>
           </div>
