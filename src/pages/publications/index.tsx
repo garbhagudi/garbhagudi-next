@@ -80,7 +80,7 @@ const IndexPage = ({ medias }) => {
 
         <meta property='og:title' content='Publications | GarbhaGudi IVF Centre' />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
-        <meta property='og:url' content='https://garbhagudi.com' />
+        <meta property='og:url' content='https://www.garbhagudi.com/publications' />
         <meta
           property='og:description'
           content='News articles and announcements from GarbhaGudi IVF Centre. Get the latest information in the world of IVF here'
@@ -88,7 +88,7 @@ const IndexPage = ({ medias }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmw4xkr4i5biy06pjd46b5yjx'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/resize=fit:max,width:1200/output=format:jpg/quality=value:80/cmw4xkr4i5biy06pjd46b5yjx'
         />
 
         {/* Twitter*/}
@@ -102,7 +102,7 @@ const IndexPage = ({ medias }) => {
         />
         <meta
           name='twitter:image'
-          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmw4xkr4i5biy06pjd46b5yjx'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/resize=fit:max,width:1200/output=format:jpg/quality=value:80/cmw4xkr4i5biy06pjd46b5yjx'
         />
         <script
           type='application/ld+json'
