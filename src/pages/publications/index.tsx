@@ -88,7 +88,7 @@ const IndexPage = ({ medias }) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedip58uj07pl77zu9att'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmw4xkr4i5biy06pjd46b5yjx'
         />
 
         {/* Twitter*/}
@@ -102,7 +102,7 @@ const IndexPage = ({ medias }) => {
         />
         <meta
           name='twitter:image'
-          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8vedip58uj07pl77zu9att'
+          content='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmw4xkr4i5biy06pjd46b5yjx'
         />
         <script
           type='application/ld+json'
