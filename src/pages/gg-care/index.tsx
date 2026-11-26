@@ -3,10 +3,11 @@ import Head from 'next/head';
 import Hero from 'sections/gg-care/hero';
 import BreadCrumbs from 'components/breadcrumbs';
 import { generateBreadcrumbSchema } from 'lib/schema-utils';
-const Contact = dynamic(() => import('sections/gg-care/content'), { ssr: false });
-const Stats = dynamic(() => import('sections/gg-care/stats'), { ssr: false });
+// Static imports so the #loc anchor in Contact exists in the server HTML and on client navigation
+import Video from 'sections/gg-care/workflow';
+import Stats from 'sections/gg-care/stats';
+import Contact from 'sections/gg-care/content';
 const Cta = dynamic(() => import('sections/gg-care/cta'), { ssr: false });
-const Video = dynamic(() => import('sections/gg-care/workflow'), { ssr: false });
 const FindBranch = dynamic(() => import('sections/gg-care/find-branch'), { ssr: false });
 const Share = dynamic(() => import('components/share'), { ssr: false });
 
