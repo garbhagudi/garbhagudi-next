@@ -45,7 +45,7 @@ const Contact = () => {
               ))}
             </div>
           </div>
-          <div className='mt-16 pt-16 lg:grid lg:grid-cols-2 lg:gap-8'>
+          <div id='loc' className='mt-16 scroll-mt-24 pt-16 lg:grid lg:grid-cols-2 lg:gap-8'>
             <div className='mt-8 grid grid-cols-1 gap-12 font-content sm:grid-cols-3 sm:gap-x-8 sm:gap-y-12 lg:col-span-2 lg:mt-0'>
               <h2 className='font-heading text-2xl font-extrabold text-gray-800 dark:text-gray-200 sm:text-3xl'>
                 Locations
