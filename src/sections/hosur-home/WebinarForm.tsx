@@ -77,7 +77,7 @@ const STYLES = {
   banner: {
     root: 'zcwf_lblLeft crmWebToEntityForm mx-auto h-auto w-full rounded-lg bg-transparent',
     title:
-      'px-3 pb-4 pt-2 text-center font-semibold font-[family-name:var(--font-noto-serif-tamil)] text-xl font-bold leading-snug text-white animate-[blink_2.5s_ease-in-out_infinite] motion-reduce:animate-none lg:text-2xl',
+      'px-3 pb-4 pt-2 text-center font-semibold text-xl font-bold leading-snug text-white animate-[blink_2.5s_ease-in-out_infinite] motion-reduce:animate-none lg:text-2xl',
     fields: 'mx-auto flex flex-col space-y-4 px-3',
     fieldWrap: 'relative mx-auto w-full max-w-sm',
     fieldRow: 'flex items-center justify-start',
@@ -117,7 +117,7 @@ interface WebinarFormProps {
 const WebinarForm = ({
   variant = 'card',
   title,
-  submitLabel = ' பதிவு செய்ய க்ளிக் பண்ணவும்',
+  submitLabel = 'Click to Register',
 }: WebinarFormProps) => {
   const cx = STYLES[variant];
   const showConsent = variant === 'card';
